@@ -31,8 +31,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DevExpress.Data.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -41,6 +45,40 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="enums\AdresTuru.cs" />
+    <Compile Include="enums\Aylar.cs" />
+    <Compile Include="enums\BankaHesapTuru.cs" />
+    <Compile Include="enums\BelgeDurumu.cs" />
+    <Compile Include="enums\Cinsiyet.cs" />
+    <Compile Include="enums\DokumSekli.cs" />
+    <Compile Include="enums\DosyaTuru.cs" />
+    <Compile Include="enums\EposKartTuru.cs" />
+    <Compile Include="enums\EvetHayir.cs" />
+    <Compile Include="enums\GeriOdemeHesapTuru.cs" />
+    <Compile Include="enums\GruplamaTuru.cs" />
+    <Compile Include="enums\HizmetAlimDurumu.cs" />
+    <Compile Include="enums\HizmetTipi.cs" />
+    <Compile Include="enums\IptalDurumu.cs" />
+    <Compile Include="enums\IslemTuru.cs" />
+    <Compile Include="enums\KanGrubu.cs" />
+    <Compile Include="enums\KartTuru.cs" />
+    <Compile Include="enums\KayitDurumu.cs" />
+    <Compile Include="enums\KayitSekli.cs" />
+    <Compile Include="enums\KdvSekli.cs" />
+    <Compile Include="enums\MakbuzHesapTuru.cs" />
+    <Compile Include="enums\MakbuzTuru.cs" />
+    <Compile Include="enums\OdemeTipi.cs" />
+    <Compile Include="enums\OzelKodTuru.cs" />
+    <Compile Include="enums\RaporBolumTuru.cs" />
+    <Compile Include="enums\RaporuKagidaSigdirmaTuru.cs" />
+    <Compile Include="enums\SonrakiDonemKayitDurumu.cs" />
+    <Compile Include="enums\VeriDegisimYeri.cs" />
+    <Compile Include="enums\YazdirmaSekli.cs" />
+    <Compile Include="enums\YazdirmaYonu.cs" />
+    <Compile Include="enums\YetkilendirmeTuru.cs" />
+    <Compile Include="enums\YetkiTuru.cs" />
+    <Compile Include="functions\EnumFunctions.cs" />
+    <Compile Include="message\Messages.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
