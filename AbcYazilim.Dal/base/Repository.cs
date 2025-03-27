@@ -3,11 +3,9 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
 using AbcYazilim.Dal.Interfaces;
-//using AbcYazilim.OgrenciTakip.Common.Enums;
-//using AbcYazilim.OgrenciTakip.Common.Functions;
+using AbcYazilim.OgrenciTakip.Common.Enums;
+using AbcYazilim.OgrenciTakip.Common.Functions;
 
 namespace AbcYazilim.Dal.Base
 {
@@ -86,53 +84,53 @@ namespace AbcYazilim.Dal.Base
             
         }
 
-        //public string YeniKodVer(KartTuru kartTuru, Expression<Func<T, string>> filter,
-        //    Expression<Func<T, bool>> where = null)
-        //{
-        //    string Kod()
-        //    {
-        //        string kod = null;
-        //        var kodDizi = kartTuru.ToName().Split(' ');
+        public string YeniKodVer(KartTuru kartTuru, Expression<Func<T, string>> filter,
+            Expression<Func<T, bool>> where = null)
+        {
+            string Kod()
+            {
+                string kod = null;
+                var kodDizi = kartTuru.ToName().Split(' ');
 
-        //        for (int i = 0; i < kodDizi.Length - 1; i++)
-        //        {
-        //            kod += kodDizi[i];
+                for (int i = 0; i < kodDizi.Length - 1; i++)
+                {
+                    kod += kodDizi[i];
 
-        //            if (i + 1 < kodDizi.Length - 1)
-        //                kod += " ";
-        //        }
+                    if (i + 1 < kodDizi.Length - 1)
+                        kod += " ";
+                }
 
-        //        return kod += "-0001";
-        //    }
+                return kod += "-0001";
+            }
 
 
-        //    string YeniKodVer(string kod)
-        //    {
-        //        var sayisalDegerlar = "";
+            string YeniKodVer(string kod)
+            {
+                var sayisalDegerlar = "";
 
-        //        foreach (var karakter in kod)
-        //        {
-        //            if (char.IsDigit(karakter))
-        //                sayisalDegerlar += karakter;
-        //            else
-        //                sayisalDegerlar = "";
+                foreach (var karakter in kod)
+                {
+                    if (char.IsDigit(karakter))
+                        sayisalDegerlar += karakter;
+                    else
+                        sayisalDegerlar = "";
 
-        //        }
+                }
 
-        //        var artisSonrasiDeger = (int.Parse(sayisalDegerlar) + 1).ToString();
-        //        var fark = kod.Length - artisSonrasiDeger.Length;
-        //        if (fark < 0)
-        //            fark = 0;
+                var artisSonrasiDeger = (int.Parse(sayisalDegerlar) + 1).ToString();
+                var fark = kod.Length - artisSonrasiDeger.Length;
+                if (fark < 0)
+                    fark = 0;
 
-        //        var yeniDeger = kod.Substring(0, fark);
-        //        yeniDeger += artisSonrasiDeger;
+                var yeniDeger = kod.Substring(0, fark);
+                yeniDeger += artisSonrasiDeger;
 
-        //        return yeniDeger;
-        //    }
+                return yeniDeger;
+            }
 
-        //    var maxKod = where == null ? _dbSet.Max(filter) : _dbSet.Where(where).Max(filter);
-        //    return maxKod == null ? Kod() : YeniKodVer(maxKod);
-        //}
+            var maxKod = where == null ? _dbSet.Max(filter) : _dbSet.Where(where).Max(filter);
+            return maxKod == null ? Kod() : YeniKodVer(maxKod);
+        }
 
         #region Dispose
 

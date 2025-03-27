@@ -5,17 +5,17 @@ using AbcYazilim.OgrenciTakip.Model.Entities.Base;
 
 namespace AbcYazilim.OgrenciTakip.Model.Entities
 {
-   public class Ilce:BaseEntityDurum
+    public class IndirimTuru:BaseEntityDurum
     {
-        [Index("IX_Kod", IsUnique = false)] 
+
+        [Index("IX_Kod", IsUnique = true)]
         public override string Kod { get; set; }
-        
-        [Required,StringLength(50), ZorunluAlan("İlçe Adı", "txtIlceAdi")]
-        public string IlceAdi { get; set; }
-        public long IlId { get; set; }
+
+        [Required, StringLength(50), ZorunluAlan("İndirim Türü Adı", "txtIndirimTuruAdi")]
+        public string IndirimTuruAdi { get; set; }
 
         [StringLength(500)]
         public string Aciklama { get; set; }
-        public Il Il { get; set; }
+
     }
 }

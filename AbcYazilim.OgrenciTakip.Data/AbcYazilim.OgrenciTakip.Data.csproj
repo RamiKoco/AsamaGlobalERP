@@ -77,13 +77,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="contexts\BaseDbContext.cs" />
-    <Compile Include="contexts\OgrenciTakipContext.cs" />
-    <Compile Include="ogrencitakipmigration\Configuration.cs" />
+    <Compile Include="Contexts\BaseDbContext.cs" />
+    <Compile Include="Contexts\OgrenciTakipContext.cs" />
+    <Compile Include="Contexts\OgrenciTakipYonetimContext.cs" />
+    <Compile Include="Ogrencitakipmigration\Configuration.cs" />
+    <Compile Include="Ogrencitakipyonetimmigration\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

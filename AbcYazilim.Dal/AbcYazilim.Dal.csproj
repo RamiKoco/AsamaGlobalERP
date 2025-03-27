@@ -51,10 +51,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="base\Repository.cs" />
-    <Compile Include="base\UnitOfWork.cs" />
-    <Compile Include="interfaces\IRepository.cs" />
-    <Compile Include="interfaces\IUnitOfWork.cs" />
+    <Compile Include="Base\Repository.cs" />
+    <Compile Include="Base\UnitOfWork.cs" />
+    <Compile Include="Interfaces\IRepository.cs" />
+    <Compile Include="Interfaces\IUnitOfWork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
