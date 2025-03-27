@@ -1,13 +1,16 @@
-﻿using AbcYazilim.OgrenciTakip.UI.Win.GenelForms;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System;
+using System.Configuration;
+using System.Globalization;
+using System.Threading;
 using System.Windows.Forms;
+using AbcYazilim.OgrenciTakip.UI.Win.GenelForms;
+using DevExpress.LookAndFeel;
+using DevExpress.UserSkins;
+
 
 namespace AbcYazilim.OgrenciTakip.UI.Win
 {
-    internal static class Program
+    static class Program
     {
         /// <summary>
         /// The main entry point for the application.
@@ -15,9 +18,17 @@ namespace AbcYazilim.OgrenciTakip.UI.Win
         [STAThread]
         static void Main()
         {
+            Functions.GeneralFunctions.EncryptConfigFile(AppDomain.CurrentDomain.SetupInformation.ApplicationName, "connectionStrings", "appSettings");
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new AnaForm());
+
+            Thread.CurrentThread.CurrentCulture = new CultureInfo("tr-TR");
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo("tr-TR");
+
+            //BonusSkins.Register();
+            UserLookAndFeel.Default.SetSkinStyle(ConfigurationManager.AppSettings["Skin"], ConfigurationManager.AppSettings["Palette"]);
+            Application.Run(new GirisForm());
         }
     }
 }

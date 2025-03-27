@@ -1,0 +1,35 @@
+﻿using System;
+using System.Globalization;
+using System.Threading;
+using System.Windows.Forms;
+using AbcYazilim.OgrenciTakip.UI.Yonetim.Forms.GenelForms;
+using DevExpress.LookAndFeel;
+using DevExpress.Skins;
+using DevExpress.UserSkins;
+
+namespace AbcYazilim.OgrenciTakip.UI.Yonetim
+{
+    internal static class Program
+    {
+        /// <summary>
+        /// The main entry point for the application.
+        /// </summary>
+        [STAThread]
+        static void Main()
+        {
+            Win.Functions.GeneralFunctions.EncryptConfigFile(AppDomain.CurrentDomain.SetupInformation.ApplicationName, "connectionStrings", "appSettings");
+
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+
+            Thread.CurrentThread.CurrentCulture = new CultureInfo("tr-TR");
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo("tr-TR");
+
+            BonusSkins.Register();
+            SkinManager.EnableFormSkins();
+            Application.SetCompatibleTextRenderingDefault(false);
+            //UserLookAndFeel.Default.SetSkinStyle("Office 2016 Colorful");
+            Application.Run(new GirisForm());
+        }
+    }
+}

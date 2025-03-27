@@ -1,11 +1,11 @@
-﻿using DevExpress.Utils;
+﻿using System.ComponentModel;
+using DevExpress.Utils;
 using DevExpress.XtraEditors.Mask;
-using System.ComponentModel;
 
 namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls
 {
     [ToolboxItem(true)]
-    public class MyTcKimlikNoTextEdit : MyTextEdit
+   public class MyTcKimlikNoTextEdit:MyTextEdit
     {
         public MyTcKimlikNoTextEdit()
         {
@@ -14,6 +14,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls
             Properties.Mask.EditMask = @"\d?\d?\d? \d?\d?\d? \d?\d?\d? \d?\d?";
             Properties.Mask.AutoComplete = AutoCompleteType.None;
             StatusBarAciklama = "Tc Kimlik No Giriniz";
+
         }
     }
 }

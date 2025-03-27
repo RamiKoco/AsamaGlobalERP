@@ -6,12 +6,12 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("AbcYazilim.OgrenciTakip.Model")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Abc Yazılım")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Abc Yazılım")]
 [assembly: AssemblyProduct("AbcYazilim.OgrenciTakip.Model")]
-[assembly: AssemblyCopyright("Copyright ©  2025")]
-[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCopyright("Copyright © Abc Yazılım 2022")]
+[assembly: AssemblyTrademark("Abc Yazılım")]
 [assembly: AssemblyCulture("")]
 
 // Setting ComVisible to false makes the types in this assembly not visible
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("37f67419-7d4b-4c13-a89d-8de1d8093f1e")]
+[assembly: Guid("bb5eaa8a-8d31-4c9e-b408-31b57ef0e8c5")]
 
 // Version information for an assembly consists of the following four values:
 //
@@ -29,5 +29,8 @@ using System.Runtime.InteropServices;
 //      Build Number
 //      Revision
 //
-[assembly: AssemblyVersion("1.0.0.0")]
-[assembly: AssemblyFileVersion("1.0.0.0")]
+// You can specify all the values or you can default the Build and Revision Numbers
+// by using the '*' as shown below:
+// [assembly: AssemblyVersion("1.0.*")]
+[assembly: AssemblyVersion("23.1.0")]
+[assembly: AssemblyFileVersion("23.1.1.0")]

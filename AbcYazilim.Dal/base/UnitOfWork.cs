@@ -15,6 +15,7 @@ namespace AbcYazilim.Dal.Base
         
         #endregion
 
+
         public UnitOfWork(DbContext context)
         {
             if (context == null) return;
@@ -30,7 +31,7 @@ namespace AbcYazilim.Dal.Base
             }
             catch (DbUpdateException ex)
             {
-                var sqlEx = (SqlException)ex.InnerException?.InnerException;
+                var sqlEx = (SqlException) ex.InnerException?.InnerException;
                 if (sqlEx == null)
                 {
                     Messages.HataMesaji(ex.Message);

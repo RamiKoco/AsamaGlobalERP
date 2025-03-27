@@ -1,12 +1,12 @@
-﻿using AbcYazilim.OgrenciTakip.UI.Win.Interfaces;
-using DevExpress.XtraEditors;
-using System.ComponentModel;
+﻿using System.ComponentModel;
 using System.Drawing;
+using AbcYazilim.OgrenciTakip.UI.Win.Interfaces;
+using DevExpress.XtraEditors;
 
 namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls
 {
     [ToolboxItem(true)]
-    public class MySimpleButton : SimpleButton, IStatusBarAciklama
+   public class MySimpleButton:SimpleButton,IStatusBarAciklama
     {
         public MySimpleButton()
         {

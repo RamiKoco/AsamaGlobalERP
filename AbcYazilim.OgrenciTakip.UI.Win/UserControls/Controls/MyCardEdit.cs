@@ -4,9 +4,9 @@ using DevExpress.XtraEditors.Mask;
 
 namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls
 {
-    [ToolboxItem(true)]
     public class MyCardEdit : MyTextEdit
     {
+        [ToolboxItem(true)]
         public MyCardEdit()
         {
             Properties.Appearance.TextOptions.HAlignment = HorzAlignment.Center;
@@ -14,6 +14,11 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls
             Properties.Mask.EditMask = @"\d?\d?\d?\d?-\d?\d?\d?\d?-\d?\d?\d?\d?-\d?\d?\d?\d?";
             Properties.Mask.AutoComplete = AutoCompleteType.None;
             StatusBarAciklama = "Kart No Giriniz.";
+            
+
+
         }
+
+
     }
 }

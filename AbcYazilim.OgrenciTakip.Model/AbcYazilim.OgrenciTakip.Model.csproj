@@ -1,11 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="..\packages\EntityFramework.6.5.1\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{37F67419-7D4B-4C13-A89D-8DE1D8093F1E}</ProjectGuid>
+    <ProjectGuid>{BB5EAA8A-8D31-4C9E-B408-31B57EF0E8C5}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>AbcYazilim.OgrenciTakip.Model</RootNamespace>
@@ -13,8 +12,6 @@
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
-    <NuGetPackageImportStamp>
-    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -34,41 +31,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DevExpress.CodeParser.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <HintPath>..\packages\DevExpress.CodeParser.24.1.3\lib\net452\DevExpress.CodeParser.v24.1.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.Data.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <HintPath>..\packages\DevExpress.Data.24.1.3\lib\net452\DevExpress.Data.v24.1.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.DataAccess.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <HintPath>..\packages\DevExpress.DataAccess.24.1.3\lib\net452\DevExpress.DataAccess.v24.1.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.Drawing.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <HintPath>..\packages\DevExpress.Drawing.24.1.3\lib\net452\DevExpress.Drawing.v24.1.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.Office.v24.1.Core, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <HintPath>..\packages\DevExpress.Office.Core.24.1.3\lib\net452\DevExpress.Office.v24.1.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.Pdf.v24.1.Core, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <HintPath>..\packages\DevExpress.Pdf.Core.24.1.3\lib\net452\DevExpress.Pdf.v24.1.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.Pdf.v24.1.Drawing, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <HintPath>..\packages\DevExpress.Pdf.Drawing.24.1.3\lib\net452\DevExpress.Pdf.v24.1.Drawing.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.Printing.v24.1.Core, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <HintPath>..\packages\DevExpress.Printing.Core.24.1.3\lib\net452\DevExpress.Printing.v24.1.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.RichEdit.v24.1.Core, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <HintPath>..\packages\DevExpress.RichEdit.Core.24.1.3\lib\net452\DevExpress.RichEdit.v24.1.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.Xpo.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <HintPath>..\packages\DevExpress.Xpo.24.1.3\lib\net452\DevExpress.Xpo.v24.1.dll</HintPath>
-    </Reference>
+    <Reference Include="DevExpress.DataAccess.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpo.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.5.1\lib\net45\EntityFramework.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.5.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -123,29 +92,29 @@
     <Compile Include="Dto\SinifDto.cs" />
     <Compile Include="Dto\SubeDto.cs" />
     <Compile Include="Dto\TahakkukDto.cs" />
+    <Compile Include="Entities\BaglantiAyarlari.cs" />
+    <Compile Include="Entities\DonemParametre.cs" />
+    <Compile Include="Entities\GecikmeAciklamalari.cs" />
     <Compile Include="Entities\AileBilgi.cs" />
     <Compile Include="Entities\AileBilgileri.cs" />
     <Compile Include="Entities\Avukat.cs" />
-    <Compile Include="Entities\BaglantiAyarlari.cs" />
     <Compile Include="Entities\Banka.cs" />
     <Compile Include="Entities\BankaHesap.cs" />
     <Compile Include="Entities\BankaSube.cs" />
-    <Compile Include="Entities\base\BaseEntity.cs" />
-    <Compile Include="Entities\base\BaseEntityDurum.cs" />
-    <Compile Include="Entities\base\BaseHareketEntity.cs" />
-    <Compile Include="Entities\base\Interfaces\IBaseEntity.cs" />
-    <Compile Include="Entities\base\Interfaces\IBaseHareketEntity.cs" />
+    <Compile Include="Entities\Base\BaseEntity.cs" />
+    <Compile Include="Entities\Base\BaseEntityDurum.cs" />
+    <Compile Include="Entities\Base\BaseHareketEntity.cs" />
+    <Compile Include="Entities\Base\Interfaces\IBaseEntity.cs" />
+    <Compile Include="Entities\Base\Interfaces\IBaseHareketEntity.cs" />
     <Compile Include="Entities\BilgiNotlari.cs" />
     <Compile Include="Entities\Cari.cs" />
     <Compile Include="Entities\DokumParametreleri.cs" />
     <Compile Include="Entities\Donem.cs" />
-    <Compile Include="Entities\DonemParametre.cs" />
     <Compile Include="Entities\EposBilgileri.cs" />
     <Compile Include="Entities\Evrak.cs" />
     <Compile Include="Entities\EvrakBilgileri.cs" />
     <Compile Include="Entities\Fatura.cs" />
     <Compile Include="Entities\Filtre.cs" />
-    <Compile Include="Entities\GecikmeAciklamalari.cs" />
     <Compile Include="Entities\GeriOdemeBilgileri.cs" />
     <Compile Include="Entities\Gorev.cs" />
     <Compile Include="Entities\Hizmet.cs" />
@@ -174,7 +143,6 @@
     <Compile Include="Entities\MakbuzHareketleri.cs" />
     <Compile Include="Entities\Meslek.cs" />
     <Compile Include="Entities\OdemeBilgileri.cs" />
-    <Compile Include="Entities\OdemeTuru.cs" />
     <Compile Include="Entities\Ogrenci.cs" />
     <Compile Include="Entities\Okul.cs" />
     <Compile Include="Entities\OzelKod.cs" />
@@ -192,6 +160,7 @@
     <Compile Include="Entities\Sube.cs" />
     <Compile Include="Entities\Tahakkuk.cs" />
     <Compile Include="Entities\Tesvik.cs" />
+    <Compile Include="Entities\OdemeTuru.cs" />
     <Compile Include="Entities\YabanciDil.cs" />
     <Compile Include="Entities\Yakinlik.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -201,17 +170,9 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AbcYazilim.OgrenciTakip.Common\AbcYazilim.OgrenciTakip.Common.csproj">
-      <Project>{1dbb2760-0192-481e-9298-e5c797ca85dd}</Project>
+      <Project>{1F1D308C-664F-4D6D-9821-1CAE074855F8}</Project>
       <Name>AbcYazilim.OgrenciTakip.Common</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
-    <PropertyGroup>
-      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
-    </PropertyGroup>
-    <Error Condition="!Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.5.1\build\EntityFramework.props'))" />
-    <Error Condition="!Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.5.1\build\EntityFramework.targets'))" />
-  </Target>
-  <Import Project="..\packages\EntityFramework.6.5.1\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.targets')" />
 </Project>

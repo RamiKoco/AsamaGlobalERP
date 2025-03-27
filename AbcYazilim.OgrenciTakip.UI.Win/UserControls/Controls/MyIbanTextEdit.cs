@@ -1,10 +1,10 @@
-﻿using DevExpress.XtraEditors.Mask;
-using System.ComponentModel;
+﻿using System.ComponentModel;
+using DevExpress.XtraEditors.Mask;
 
 namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls
 {
     [ToolboxItem(true)]
-    public class MyIbanTextEdit : MyTextEdit
+   public class MyIbanTextEdit:MyTextEdit
     {
         public MyIbanTextEdit()
         {
@@ -12,6 +12,8 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls
             Properties.Mask.EditMask = @"TR\d?\d? \d?\d?\d?\d? \d?\d?\d?\d? \d?\d?\d?\d? \d?\d?\d?\d? \d?\d?\d?\d? \d?\d?";
             Properties.Mask.AutoComplete = AutoCompleteType.None;
             StatusBarAciklama = "Iban No Giriniz.";
+
         }
+
     }
 }

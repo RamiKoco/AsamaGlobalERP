@@ -1,11 +1,11 @@
-﻿using DevExpress.Utils;
+﻿using System.ComponentModel;
+using DevExpress.Utils;
 using DevExpress.XtraEditors.Mask;
-using System.ComponentModel;
 
 namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls
 {
     [ToolboxItem(true)]
-    public class MyTelefonNoTextEdit : MyTextEdit
+   public class MyTelefonNoTextEdit: MyTextEdit
     {
         public MyTelefonNoTextEdit()
         {
@@ -17,4 +17,5 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls
         }
 
     }
+
 }

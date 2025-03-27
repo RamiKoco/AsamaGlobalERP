@@ -1,11 +1,11 @@
-﻿using DevExpress.Utils;
-using System.ComponentModel;
+﻿using System.ComponentModel;
 using System.Drawing;
+using DevExpress.Utils;
 
 namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls
 {
     [ToolboxItem(true)]
-    public class MyKodTextEdit : MyTextEdit
+   public class MyKodTextEdit:MyTextEdit
     {
         public MyKodTextEdit()
         {

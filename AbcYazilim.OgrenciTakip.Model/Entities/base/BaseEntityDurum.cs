@@ -4,5 +4,6 @@
    {
        public bool Durum { get; set; } = true;
 
+
    }
 }

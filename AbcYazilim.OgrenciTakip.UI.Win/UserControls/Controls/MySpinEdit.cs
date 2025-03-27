@@ -1,13 +1,13 @@
-﻿using AbcYazilim.OgrenciTakip.UI.Win.Interfaces;
+﻿using System.ComponentModel;
+using System.Drawing;
+using AbcYazilim.OgrenciTakip.UI.Win.Interfaces;
 using DevExpress.Utils;
 using DevExpress.XtraEditors;
-using System.ComponentModel;
-using System.Drawing;
 
 namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls
 {
     [ToolboxItem(true)]
-    public class MySpinEdit : SpinEdit, IStatusBarAciklama
+   public class MySpinEdit:SpinEdit,IStatusBarAciklama
     {
 
         public MySpinEdit()

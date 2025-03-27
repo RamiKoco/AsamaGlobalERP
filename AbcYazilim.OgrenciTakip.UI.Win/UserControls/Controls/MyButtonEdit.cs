@@ -1,19 +1,22 @@
-﻿using AbcYazilim.OgrenciTakip.UI.Win.Interfaces;
-using DevExpress.XtraEditors;
+﻿using DevExpress.XtraEditors;
 using DevExpress.XtraEditors.Controls;
+using System.Drawing;
+using AbcYazilim.OgrenciTakip.UI.Win.Interfaces;
 using System;
 using System.ComponentModel;
-using System.Drawing;
 
 namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls
 {
     [ToolboxItem(true)]
-    public class MyButtonEdit:ButtonEdit, IStatusBarKisaYol
+    public class MyButtonEdit:ButtonEdit,IStatusBarKisaYol
     {
+       
+
         public MyButtonEdit()
         {
             Properties.TextEditStyle = TextEditStyles.DisableTextEditor;
             Properties.AppearanceFocused.BackColor = Color.LightCyan;
+
         }
 
         public override bool EnterMoveNextControl { get; set; } = true;
@@ -24,7 +27,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls
         #region Events
 
         private long? _id;
-
+        
         [Browsable(false)]
         public long? Id
         {
@@ -38,27 +41,28 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls
                 if (newValue.HasValue && oldValue.HasValue && newValue == oldValue) return;
                 _id = value;
                 IdChanged(this, new IdChangedEventArgs(oldValue, newValue));
-                EnabledChange(this, EventArgs.Empty);
+                EnabledChange(this,EventArgs.Empty);
             }
         }
         public event EventHandler<IdChangedEventArgs> IdChanged = delegate { };
         public event EventHandler EnabledChange = delegate { };
 
         #endregion
+
+
     }
 
+  public class IdChangedEventArgs : EventArgs
+  {
+      public IdChangedEventArgs(long? oldValue,long? newValue)
+      {
+          OldValue = oldValue;
+          NewValue = newValue;
 
-    public class IdChangedEventArgs : EventArgs
-    {
-        public IdChangedEventArgs(long? oldValue, long? newValue)
-        {
-            OldValue = oldValue;
-            NewValue = newValue;
+      }
 
-        }
+      public long? OldValue  { get;}
+      public long? NewValue { get; }
 
-        public long? OldValue { get; }
-        public long? NewValue { get; }
-
-    }
+  }
 }

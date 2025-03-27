@@ -1,13 +1,13 @@
-﻿using AbcYazilim.OgrenciTakip.UI.Win.Interfaces;
+﻿using System.ComponentModel;
+using System.Drawing;
+using AbcYazilim.OgrenciTakip.UI.Win.Interfaces;
 using DevExpress.XtraEditors;
 using DevExpress.XtraEditors.Controls;
-using System.ComponentModel;
-using System.Drawing;
 
 namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls
 {
     [ToolboxItem(true)]
-    public class MyPictureEdit : PictureEdit, IStatusBarKisaYol
+   public class MyPictureEdit:PictureEdit,IStatusBarKisaYol
     {
         public MyPictureEdit()
         {
@@ -16,7 +16,10 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls
             Properties.NullText = "Resim Yok";
             Properties.SizeMode = PictureSizeMode.Stretch;
             Properties.ShowMenu = false;
+
+
         }
+
         public override bool EnterMoveNextControl { get; set; } = true;
         public string StatusBarKisaYol { get; set; } = "F4 :";
         public string StatusBarKisaYolAciklama { get; set; }

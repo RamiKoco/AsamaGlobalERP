@@ -1,16 +1,16 @@
-﻿using AbcYazilim.OgrenciTakip.UI.Win.Interfaces;
-using DevExpress.XtraEditors;
-using System.ComponentModel;
+﻿using System.ComponentModel;
 using System.Drawing;
+using AbcYazilim.OgrenciTakip.UI.Win.Interfaces;
+using DevExpress.XtraEditors;
 
 namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls
 {
     [ToolboxItem(true)]
-    public class MyMemoEdit : MemoEdit, IStatusBarAciklama
+   public class MyMemoEdit:MemoEdit,IStatusBarAciklama
     {
         public MyMemoEdit()
         {
-            Properties.AppearanceFocused.BackColor = Color.LightCyan;
+            Properties.AppearanceFocused.BackColor=Color.LightCyan;
             Properties.MaxLength = 500;
 
         }

@@ -14,8 +14,7 @@ namespace AbcYazilim.OgrenciTakip.Model.Entities
         public long? DefaultBankaHesapId { get; set; }
         public long? DefaultKasaHesapId { get; set; }
         public bool RaporlariOnayAlmadanKapat { get; set; }
-        public int TableViewCaptionForeColor { get; set; } =
-            Color.Maroon.ToArgb();
+        public int TableViewCaptionForeColor { get; set; } = Color.Maroon.ToArgb();
         public int TableColumnHeaderForeColor { get; set; } =  Color.Maroon.ToArgb();
         public int TableBandPanelForeColor { get; set; } = Color.DarkBlue.ToArgb();
 
