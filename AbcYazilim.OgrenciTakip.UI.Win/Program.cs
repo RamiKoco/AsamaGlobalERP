@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AbcYazilim.OgrenciTakip.UI.Win.GenelForms;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -15,7 +16,8 @@ namespace AbcYazilim.OgrenciTakip.UI.Win
         static void Main()
         {
             Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);            
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new AnaForm());
         }
     }
 }
