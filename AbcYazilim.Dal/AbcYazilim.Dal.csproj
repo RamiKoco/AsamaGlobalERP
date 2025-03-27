@@ -57,13 +57,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\AbcYazilim.OgrenciTakip.Common\AbcYazilim.OgrenciTakip.Common.csproj">
       <Project>{1f1d308c-664f-4d6d-9821-1cae074855f8}</Project>
       <Name>AbcYazilim.OgrenciTakip.Common</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
