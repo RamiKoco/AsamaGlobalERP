@@ -361,7 +361,7 @@
 
         #endregion
 
-        //private DevExpress.XtraEditors.PanelControl ustPanel;
+        private DevExpress.XtraEditors.PanelControl ustPanel;
         private UserControls.Controls.MyDateEdit txtHizmetBaslamaTarihi;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private UserControls.Navigators.LongNavigator longNavigator;
