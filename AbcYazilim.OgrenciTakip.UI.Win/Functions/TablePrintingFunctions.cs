@@ -55,7 +55,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Functions
             _tablo.OptionsView.ShowViewCaption = false;
 
             _link.Component = _tablo.GridControl;
-            _link.PaperKind = PaperKind.Letter;
+            _link.PaperKind = (DevExpress.Drawing.Printing.DXPaperKind)PaperKind.Letter;
             _link.Margins = new Margins(59,59,115,48);
             _link.CreateMarginalHeaderArea += _Link_CreateMarginalHeaderArea;
             _link.CreateDocument(_ps);

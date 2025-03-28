@@ -1334,7 +1334,7 @@
             this.Margins = new System.Drawing.Printing.Margins(51, 52, 49, 51);
             this.PageHeight = 583;
             this.PageWidth = 827;
-            this.PaperKind = System.Drawing.Printing.PaperKind.A5Rotated;
+            this.PaperKind =(DevExpress.Drawing.Printing.DXPaperKind)System.Drawing.Printing.PaperKind.A5Rotated;
             this.Version = "22.1";
             ((System.ComponentModel.ISupportInitialize)(this.Ogrenci_Bilgileri)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).EndInit();

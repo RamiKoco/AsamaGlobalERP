@@ -4,7 +4,7 @@ using AbcYazilim.OgrenciTakip.Model.Dto;
 using AbcYazilim.OgrenciTakip.Model.Entities;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Functions;
-using DevExpress.Text.Interop;
+//using DevExpress.Text.Interop;
 using DevExpress.XtraEditors;
 
 namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.CariForms
