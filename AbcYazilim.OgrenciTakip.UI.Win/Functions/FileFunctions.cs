@@ -25,7 +25,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Functions
                 var settings = new XmlWriterSettings {Indent = true};
                 var writer = XmlWriter.Create(Application.StartupPath + $@"\Şablon Dosyaları\{sablonAdi}_location.xml",settings);
                 writer.WriteStartDocument();
-                writer.WriteComment("ABC Yazılım Tarafından Oluşturuldu");
+                writer.WriteComment("ASAMA Yazılım Tarafından Oluşturuldu");
                 writer.WriteStartElement("Tablo");
                 writer.WriteStartElement("Location");
                 writer.WriteAttributeString("Left", left.ToString());
