@@ -156,6 +156,8 @@ namespace AbcYazilim.OgrenciTakip.Common.Enums
         Yetki = 75,
         [Description("Kullanıcı Kartı")]
         Kullanici = 76,
+        [Description("Deneme Kartı")]
+        Rami = 77,
 
     }
 }

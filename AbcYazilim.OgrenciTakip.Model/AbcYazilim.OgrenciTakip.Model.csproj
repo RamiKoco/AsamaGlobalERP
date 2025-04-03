@@ -176,6 +176,7 @@
     <Compile Include="Entities\OzelKod.cs" />
     <Compile Include="Entities\Promosyon.cs" />
     <Compile Include="Entities\PromosyonBilgileri.cs" />
+    <Compile Include="Entities\RamiDeneme.cs" />
     <Compile Include="Entities\Rapor.cs" />
     <Compile Include="Entities\Rehber.cs" />
     <Compile Include="Entities\Rol.cs" />

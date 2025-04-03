@@ -621,6 +621,18 @@
     <Compile Include="Forms\PromosyonForms\PromosyonListForm.Designer.cs">
       <DependentUpon>PromosyonListForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\RamiDenemeForms\RamiDenemeEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RamiDenemeForms\RamiDenemeEditForm.Designer.cs">
+      <DependentUpon>RamiDenemeEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RamiDenemeForms\RamiDenemeListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RamiDenemeForms\RamiDenemeListForm.Designer.cs">
+      <DependentUpon>RamiDenemeListForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\RaporForms\RaporEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1466,6 +1478,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\PromosyonForms\PromosyonListForm.resx">
       <DependentUpon>PromosyonListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RamiDenemeForms\RamiDenemeEditForm.resx">
+      <DependentUpon>RamiDenemeEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RamiDenemeForms\RamiDenemeListForm.resx">
+      <DependentUpon>RamiDenemeListForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\RaporForms\RaporEditForm.resx">
       <DependentUpon>RaporEditForm.cs</DependentUpon>

@@ -92,5 +92,6 @@ namespace AbcYazilim.OgrenciTakip.Data.Contexts
         public DbSet<RolYetkileri> RolYetkileri { get; set; }
         public DbSet<Kullanici> Kullanici { get; set; }
         public DbSet<KullaniciBirimYetkileri> KullaniciBirimYetkileri { get; set; }
+        public DbSet<RamiDeneme> RamiDeneme { get; set; }
     }
 }
