@@ -723,6 +723,18 @@
     <Compile Include="Forms\TahakkukForms\TopluOdemePlaniEditForm.Designer.cs">
       <DependentUpon>TopluOdemePlaniEditForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Test\TestEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Test\TestEditForm.Designer.cs">
+      <DependentUpon>TestEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Test\TestListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Test\TestListForm.Designer.cs">
+      <DependentUpon>TestListForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\TesvikForms\TesvikEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1529,6 +1541,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\TahakkukForms\TopluOdemePlaniEditForm.resx">
       <DependentUpon>TopluOdemePlaniEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Test\TestEditForm.resx">
+      <DependentUpon>TestEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Test\TestListForm.resx">
+      <DependentUpon>TestListForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\TesvikForms\TesvikEditForm.resx">
       <DependentUpon>TesvikEditForm.cs</DependentUpon>
