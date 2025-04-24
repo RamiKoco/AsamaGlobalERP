@@ -1,5 +1,4 @@
-﻿using System;
-using AbcYazilim.OgrenciTakip.Common.Enums;
+﻿using AbcYazilim.OgrenciTakip.Common.Enums;
 using AbcYazilim.OgrenciTakip.Model.Dto;
 using AbcYazilim.OgrenciTakip.Model.Entities;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.AvukatForms;
@@ -16,6 +15,7 @@ using AbcYazilim.OgrenciTakip.UI.Win.Forms.IsyeriForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.KasaForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.KontenjanForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.KullaniciForms;
+using AbcYazilim.OgrenciTakip.UI.Win.Forms.MahalleForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.MeslekForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.OdemeTuruForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.OkulForms;
@@ -28,6 +28,7 @@ using AbcYazilim.OgrenciTakip.UI.Win.Forms.TesvikForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.YabancıDilForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Show;
 using AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls;
+using System;
 
 namespace AbcYazilim.OgrenciTakip.UI.Win.Functions
 {
@@ -36,6 +37,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Functions
         #region Variables
         private MyButtonEdit _btnEdit;
         private MyButtonEdit _prmEdit;
+        private MyButtonEdit _objEdit;
         private KartTuru _kartTuru;
         private OdemeTipi _odemeTipi;
         private BankaHesapTuru _hesapTuru;
@@ -77,6 +79,13 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Functions
             SecimYap();
         }
 
+        public void Sec(MyButtonEdit btnEdit, MyButtonEdit prmEdit, MyButtonEdit objEdit)
+        {
+            _btnEdit = btnEdit;
+            _prmEdit = prmEdit;
+            _objEdit = objEdit;
+            SecimYap();
+        }
         private void SecimYap()
         {
             switch (_btnEdit.Name)
@@ -111,6 +120,22 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Functions
                     }
                 }
                     break;
+
+                case "txtMahalle":
+                    {
+                        var entity = (Mahalle)ShowListForms<MahalleListForm>.ShowDialogListForm(KartTuru.Mahalle,
+                            _btnEdit.Id,
+                            _prmEdit.Id,
+                            _objEdit.Id,
+                            _objEdit.Text);
+                        if (entity != null)
+                        {
+                            _btnEdit.Id = entity.Id;
+                            _btnEdit.EditValue = entity.MahalleAdi;
+                        }
+                    }
+                    break;
+
 
                 case "txtGrup":
                 {

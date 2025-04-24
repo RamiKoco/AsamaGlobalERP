@@ -9,9 +9,7 @@ namespace AbcYazilim.OgrenciTakip.Bll.General
   public class IlBll : BaseGenelBll<Il>, IBaseGenelBll,IBaseCommonBll
     {
         public IlBll():base(KartTuru.Il) { }
-        public IlBll(Control ctrl):base(ctrl,KartTuru.Il) { }
-
-       
+        public IlBll(Control ctrl):base(ctrl,KartTuru.Il) { }       
 
     }
 }

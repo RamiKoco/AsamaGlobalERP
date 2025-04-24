@@ -1,7 +1,8 @@
-﻿using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using AbcYazilim.OgrenciTakip.Model.Attributes;
+﻿using AbcYazilim.OgrenciTakip.Model.Attributes;
 using AbcYazilim.OgrenciTakip.Model.Entities.Base;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace AbcYazilim.OgrenciTakip.Model.Entities
 {
@@ -17,5 +18,8 @@ namespace AbcYazilim.OgrenciTakip.Model.Entities
         [StringLength(500)]
         public string Aciklama { get; set; }
         public Il Il { get; set; }
+
+        [InverseProperty("Ilce")]
+        public ICollection<Mahalle> Mahalle { get; set; }
     }
 }

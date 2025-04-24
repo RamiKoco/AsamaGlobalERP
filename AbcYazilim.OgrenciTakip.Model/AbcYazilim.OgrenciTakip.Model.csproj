@@ -120,6 +120,7 @@
     <Compile Include="Dto\SinifDto.cs" />
     <Compile Include="Dto\SubeDto.cs" />
     <Compile Include="Dto\TahakkukDto.cs" />
+    <Compile Include="Dto\YazarDto.cs" />
     <Compile Include="Entities\BaglantiAyarlari.cs" />
     <Compile Include="Entities\DonemParametre.cs" />
     <Compile Include="Entities\GecikmeAciklamalari.cs" />
@@ -160,12 +161,14 @@
     <Compile Include="Entities\Isyeri.cs" />
     <Compile Include="Entities\KardesBilgileri.cs" />
     <Compile Include="Entities\Kasa.cs" />
+    <Compile Include="Entities\KitapTuru.cs" />
     <Compile Include="Entities\Kontenjan.cs" />
     <Compile Include="Entities\Kullanici.cs" />
     <Compile Include="Entities\KullaniciBirimYetkileri.cs" />
     <Compile Include="Entities\KullaniciParametre.cs" />
     <Compile Include="Entities\Kurum.cs" />
     <Compile Include="Entities\KurumBilgileri.cs" />
+    <Compile Include="Entities\Mahalle.cs" />
     <Compile Include="Entities\MailParametre.cs" />
     <Compile Include="Entities\Makbuz.cs" />
     <Compile Include="Entities\MakbuzHareketleri.cs" />
@@ -192,6 +195,7 @@
     <Compile Include="Entities\OdemeTuru.cs" />
     <Compile Include="Entities\YabanciDil.cs" />
     <Compile Include="Entities\Yakinlik.cs" />
+    <Compile Include="Entities\Yazar.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

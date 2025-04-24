@@ -158,6 +158,12 @@ namespace AbcYazilim.OgrenciTakip.Common.Enums
         Kullanici = 76,
         [Description("Deneme Kartı")]
         Rami = 77,
+        [Description("Yazar Kartı")]
+        Yazar = 78,
+        [Description("Kurgu Kartı")]
+        Kurgu = 79,
+        [Description("Mahalle Kartı")]
+        Mahalle = 80,
 
     }
 }

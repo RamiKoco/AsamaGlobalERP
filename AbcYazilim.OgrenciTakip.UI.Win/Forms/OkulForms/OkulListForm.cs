@@ -13,8 +13,6 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.OkulForms
         {
             InitializeComponent();
             Bll = new OkulBll();
-
-
         }
 
         protected override void DegiskenleriDoldur()

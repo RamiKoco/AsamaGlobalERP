@@ -1,63 +1,64 @@
-﻿using System;
-using AbcYazilim.OgrenciTakip.Bll.General;
-using AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms;
+﻿using AbcYazilim.OgrenciTakip.Bll.General;
 using AbcYazilim.OgrenciTakip.Common.Enums;
 using AbcYazilim.OgrenciTakip.Model.Dto;
 using AbcYazilim.OgrenciTakip.Model.Entities;
+using AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Functions;
 using DevExpress.XtraEditors;
+using System;
 
-namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.OkulForms
+namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.YazarForms
 {
-    public partial class OkulEditForm : BaseEditForm
+    public partial class YazarEditForm : BaseEditForm
     {
-        public OkulEditForm()
+        public YazarEditForm()
         {
             InitializeComponent();
-
             DataLayoutControl = myDataLayoutControl;
-            Bll = new OkulBll(myDataLayoutControl);
-            BaseKartTuru = KartTuru.Okul;
+            Bll = new YazarBll(myDataLayoutControl);
+            BaseKartTuru = KartTuru.Yazar;
             EventsLoad();
         }
 
+
         public override void Yukle()
         {
-            OldEntity = BaseIslemTuru == IslemTuru.EntityInsert ? new OkulS() : ((OkulBll) Bll).Single(FilterFunctions.Filter<Okul>(Id));
+            OldEntity = BaseIslemTuru == IslemTuru.EntityInsert ? new YazarS() : ((YazarBll)Bll).Single(FilterFunctions.Filter<Yazar>(Id));
             NesneyiKontrollereBagla();
 
-            if(BaseIslemTuru!=IslemTuru.EntityInsert) return;
+            if (BaseIslemTuru != IslemTuru.EntityInsert) return;
             Id = BaseIslemTuru.IdOlustur(OldEntity);
-            txtKod.Text = ((OkulBll) Bll).YeniKodVer();
-            txtOkulAdi.Focus();
+            txtKod.Text = ((YazarBll)Bll).YeniKodVer();
+            txtYazarAdi.Focus();
         }
 
         protected override void NesneyiKontrollereBagla()
         {
-            var entity = (OkulS)OldEntity;
+            var entity = (YazarS)OldEntity;
 
             txtKod.Text = entity.Kod;
-            txtOkulAdi.Text = entity.OkulAdi;
+            txtYazarAdi.Text = entity.YazarAdi;
+            txtKitapAdi.Text = entity.KitapAdi;
+            txtTarih.DateTime = entity.Tarih.Date;
             txtIl.Id = entity.IlId;
             txtIl.Text = entity.IlAdi;
             txtIlce.Id = entity.IlceId;
             txtIlce.Text = entity.IlceAdi;
-            txtMahalle.Id = entity.MahalleId;
-            txtMahalle.Text = entity.MahalleAdi;
             txtAciklama.Text = entity.Aciklama;
             tglDurum.IsOn = entity.Durum;
         }
 
         protected override void GuncelNesneOlustur()
         {
-            CurrentEntity = new Okul
+            CurrentEntity = new Yazar
             {
                 Id = Id,
                 Kod = txtKod.Text,
-                OkulAdi = txtOkulAdi.Text,
+                YazarAdi = txtYazarAdi.Text,
+                KitapAdi= txtKitapAdi.Text,
+                Tarih = txtTarih.DateTime.Date,
                 IlId = Convert.ToInt64(txtIl.Id),
                 IlceId = Convert.ToInt64(txtIlce.Id),
-                MahalleId = Convert.ToInt64(txtMahalle.Id),
                 Aciklama = txtAciklama.Text,
                 Durum = tglDurum.IsOn
             };
@@ -68,39 +69,22 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.OkulForms
 
         protected override void SecimYap(object sender)
         {
-            if (!(sender is ButtonEdit)) return; // Eğer ButtonEdit değil ise Return Yap!!
+            if (!(sender is ButtonEdit)) return;
 
             using (var sec = new SelectFunctions())
             {
                 if (sender == txtIl)
                     sec.Sec(txtIl);
-
                 else if (sender == txtIlce)
                     sec.Sec(txtIlce, txtIl);
-
-                else if (sender == txtMahalle)
-                    sec.Sec(txtMahalle, txtIlce,txtIl);
             }
 
         }
 
         protected override void Control_EnabledChange(object sender, EventArgs e)
         {
-            //if (sender != txtIl) return;
-            //txtIl.ControlEnabledChange(txtIlce);
-            //txtIl.ControlEnabledChange(txtMahalle);
-            if (sender == txtIl)
-            {
-                txtIl.ControlEnabledChange(txtIlce); // il -> ilçe
-                txtIlce.ControlEnabledChange(txtMahalle); // ilçe -> mahalle
-            }
-            else if (sender == txtIlce)
-            {
-                txtIlce.ControlEnabledChange(txtMahalle); // sadece ilçe -> mahalle
-            }
+            if (sender != txtIl) return;
+            txtIl.ControlEnabledChange(txtIlce);
         }
-
-
-        
     }
 }

@@ -97,6 +97,8 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.GenelForms
             this.btnSifreDegistir = new DevExpress.XtraBars.BarButtonItem();
             this.btnKullaniciParametreleri = new DevExpress.XtraBars.BarButtonItem();
             this.btnHesapMakinesi = new DevExpress.XtraBars.BarButtonItem();
+            this.btnRamiDeneme = new DevExpress.XtraBars.BarButtonItem();
+            this.btnYazar = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup9 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup10 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -129,7 +131,6 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.GenelForms
             this.ribbonPage11 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPage13 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.imgArkaPlanResim = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls.MyPictureEdit();
-            this.btnRamiDeneme = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgArkaPlanResim.Properties)).BeginInit();
@@ -202,9 +203,10 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.GenelForms
             this.btnSifreDegistir,
             this.btnKullaniciParametreleri,
             this.btnHesapMakinesi,
-            this.btnRamiDeneme});
+            this.btnRamiDeneme,
+            this.btnYazar});
             this.ribbonControl.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl.MaxItemId = 64;
+            this.ribbonControl.MaxItemId = 65;
             this.ribbonControl.Name = "ribbonControl";
             this.ribbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
@@ -727,6 +729,22 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.GenelForms
             this.btnHesapMakinesi.ImageOptions.LargeImage = global::AbcYazilim.OgrenciTakip.UI.Win.Properties.Resources.calculator_32x32;
             this.btnHesapMakinesi.Name = "btnHesapMakinesi";
             // 
+            // btnRamiDeneme
+            // 
+            this.btnRamiDeneme.Caption = "Rami Deneme";
+            this.btnRamiDeneme.Id = 63;
+            this.btnRamiDeneme.ImageOptions.Image = global::AbcYazilim.OgrenciTakip.UI.Win.Properties.Resources.newgroup_16x16;
+            this.btnRamiDeneme.ImageOptions.LargeImage = global::AbcYazilim.OgrenciTakip.UI.Win.Properties.Resources.newgroup_32x32;
+            this.btnRamiDeneme.Name = "btnRamiDeneme";
+            // 
+            // btnYazar
+            // 
+            this.btnYazar.Caption = "Yazar";
+            this.btnYazar.Id = 64;
+            this.btnYazar.ImageOptions.Image = global::AbcYazilim.OgrenciTakip.UI.Win.Properties.Resources.clearformatting_16x16;
+            this.btnYazar.ImageOptions.LargeImage = global::AbcYazilim.OgrenciTakip.UI.Win.Properties.Resources.clearformatting_32x32;
+            this.btnYazar.Name = "btnYazar";
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -767,6 +785,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.GenelForms
             this.ribbonPageGroup1.ItemLinks.Add(this.btnIptalNedeniKartlari);
             this.ribbonPageGroup1.ItemLinks.Add(this.btnYabanciDilKartlari);
             this.ribbonPageGroup1.ItemLinks.Add(this.btnRamiDeneme);
+            this.ribbonPageGroup1.ItemLinks.Add(this.btnYazar);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             this.ribbonPageGroup1.Text = "Genel";
             // 
@@ -1003,12 +1022,6 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.GenelForms
             this.imgArkaPlanResim.StatusBarKisaYolAciklama = null;
             this.imgArkaPlanResim.TabIndex = 3;
             // 
-            // btnRamiDeneme
-            // 
-            this.btnRamiDeneme.Caption = "Rami Deneme";
-            this.btnRamiDeneme.Id = 63;
-            this.btnRamiDeneme.Name = "btnRamiDeneme";
-            // 
             // AnaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1128,5 +1141,6 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.GenelForms
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup16;
         private UserControls.Controls.MyPictureEdit imgArkaPlanResim;
         private DevExpress.XtraBars.BarButtonItem btnRamiDeneme;
+        private DevExpress.XtraBars.BarButtonItem btnYazar;
     }
 }

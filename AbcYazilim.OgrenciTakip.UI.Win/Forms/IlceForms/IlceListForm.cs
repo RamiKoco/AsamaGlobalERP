@@ -19,7 +19,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.IlceForms
 
             _ilId = (long) prm[0];
             _ilAdi = prm[1].ToString();
-
+            btnBagliKartlar.Caption = "Mahalle Kartları";
         }
 
         protected override void DegiskenleriDoldur()

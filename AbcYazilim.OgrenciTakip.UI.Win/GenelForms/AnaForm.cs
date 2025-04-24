@@ -41,6 +41,7 @@ using AbcYazilim.OgrenciTakip.UI.Win.Forms.TahakkukForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.TesvikForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.YabancıDilForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.YakinlikForms;
+using AbcYazilim.OgrenciTakip.UI.Win.Forms.YazarForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Reports.FormReports;
 using AbcYazilim.OgrenciTakip.UI.Win.Show;
 using DevExpress.XtraBars;
@@ -182,6 +183,8 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.GenelForms
 
             else if (e.Item == btnRamiDeneme)
                 ShowListForms<RamiDenemeListForm>.ShowListForm(KartTuru.Rami);
+            else if (e.Item == btnYazar)
+                ShowListForms<YazarListForm>.ShowListForm(KartTuru.Yazar);
 
             else if (e.Item == btnKontenjanKartlari)
                 ShowListForms<KontenjanListForm>.ShowListForm(KartTuru.Kontenjan);

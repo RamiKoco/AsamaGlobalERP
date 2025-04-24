@@ -12,7 +12,6 @@ namespace AbcYazilim.OgrenciTakip.Bll.General
         public IlceBll():base(KartTuru.Ilce) { }
 
         public IlceBll(Control ctrl) : base(ctrl,KartTuru.Ilce) { }
-
     
     }
 }

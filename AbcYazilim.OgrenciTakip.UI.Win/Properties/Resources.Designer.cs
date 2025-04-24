@@ -393,6 +393,26 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap clearformatting_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("clearformatting_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap clearformatting_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("clearformatting_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap close_16x16 {
             get {
                 object obj = ResourceManager.GetObject("close_16x16", resourceCulture);
@@ -903,6 +923,16 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap highlightfield_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("highlightfield_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap historyitem_16x16 {
             get {
                 object obj = ResourceManager.GetObject("historyitem_16x16", resourceCulture);
@@ -1096,6 +1126,26 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Properties {
         internal static System.Drawing.Bitmap network_connection_32x32 {
             get {
                 object obj = ResourceManager.GetObject("network-connection_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap newgroup_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("newgroup_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap newgroup_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("newgroup_32x32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

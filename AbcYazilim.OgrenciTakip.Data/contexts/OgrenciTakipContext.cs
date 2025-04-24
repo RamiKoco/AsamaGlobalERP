@@ -2,7 +2,6 @@ using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
 using AbcYazilim.OgrenciTakip.Data.OgrenciTakipMigration;
 using AbcYazilim.OgrenciTakip.Model.Entities;
-
 namespace AbcYazilim.OgrenciTakip.Data.Contexts
 {
     public class OgrenciTakipContext : BaseDbContext<OgrenciTakipContext,Configuration>
@@ -32,6 +31,7 @@ namespace AbcYazilim.OgrenciTakip.Data.Contexts
 
         public DbSet<Il> Il { get; set; }
         public DbSet<Ilce> Ilce { get; set; }
+        public DbSet<Mahalle> Mahalle { get; set; }
         public DbSet<Okul> Okul { get; set; }
         public DbSet<Filtre> Filtre { get; set; }
         public DbSet<AileBilgi> AileBilgi { get; set; }
@@ -93,5 +93,6 @@ namespace AbcYazilim.OgrenciTakip.Data.Contexts
         public DbSet<Kullanici> Kullanici { get; set; }
         public DbSet<KullaniciBirimYetkileri> KullaniciBirimYetkileri { get; set; }
         public DbSet<RamiDeneme> RamiDeneme { get; set; }
+        public DbSet<Yazar> Yazar { get; set; }
     }
 }
