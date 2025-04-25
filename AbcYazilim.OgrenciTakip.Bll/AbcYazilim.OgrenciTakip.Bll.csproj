@@ -119,10 +119,12 @@
     <Compile Include="General\IsyeriBll.cs" />
     <Compile Include="General\KardesBilgileriBll.cs" />
     <Compile Include="General\KasaBll.cs" />
+    <Compile Include="General\KitapTuruBll.cs" />
     <Compile Include="General\KontenjanBll.cs" />
     <Compile Include="General\KullaniciBirimYetkileriBll.cs" />
     <Compile Include="General\KullaniciBll.cs" />
     <Compile Include="General\KullaniciParametreBll.cs" />
+    <Compile Include="General\KurguBll.cs" />
     <Compile Include="General\KurumBilgileriBll.cs" />
     <Compile Include="General\KurumBll.cs" />
     <Compile Include="General\MahalleBll.cs" />

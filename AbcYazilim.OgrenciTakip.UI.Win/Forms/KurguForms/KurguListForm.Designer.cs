@@ -1,6 +1,6 @@
-﻿namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.YazarForms
+﻿namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.KurguForms
 {
-    partial class YazarListForm
+    partial class KurguListForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,18 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(YazarListForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KurguListForm));
+            this.longNavigator = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Navigators.LongNavigator();
             this.grid = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyGridControl();
             this.tablo = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyGridView();
             this.colId = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
             this.colKod = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
-            this.colYazarAdi = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
-            this.colKitapAdi = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
-            this.colTarih = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
-            this.colAciklama = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
             this.colKurguAdi = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
-            this.colKitapTuruAdi = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
-            this.longNavigator1 = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Navigators.LongNavigator();
+            this.colAciklama = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablo)).BeginInit();
@@ -70,6 +66,14 @@
             // 
             this.barSubItem8.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barSubItem8.ImageOptions.Image")));
             // 
+            // longNavigator
+            // 
+            this.longNavigator.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.longNavigator.Location = new System.Drawing.Point(0, 434);
+            this.longNavigator.Name = "longNavigator";
+            this.longNavigator.Size = new System.Drawing.Size(1058, 24);
+            this.longNavigator.TabIndex = 2;
+            // 
             // grid
             // 
             this.grid.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -78,7 +82,7 @@
             this.grid.MenuManager = this.ribbonControl;
             this.grid.Name = "grid";
             this.grid.Size = new System.Drawing.Size(1058, 299);
-            this.grid.TabIndex = 2;
+            this.grid.TabIndex = 3;
             this.grid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.tablo});
             // 
@@ -97,12 +101,8 @@
             this.tablo.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colId,
             this.colKod,
-            this.colYazarAdi,
-            this.colKitapAdi,
-            this.colTarih,
-            this.colAciklama,
             this.colKurguAdi,
-            this.colKitapTuruAdi});
+            this.colAciklama});
             this.tablo.GridControl = this.grid;
             this.tablo.Name = "tablo";
             this.tablo.OptionsMenu.EnableColumnMenu = false;
@@ -121,7 +121,7 @@
             this.tablo.StatusBarAciklama = null;
             this.tablo.StatusBarKisaYol = null;
             this.tablo.StatusBarKisaYolAciklama = null;
-            this.tablo.ViewCaption = "Yazarlar";
+            this.tablo.ViewCaption = "Kurgu Kartları";
             // 
             // colId
             // 
@@ -147,44 +147,20 @@
             this.colKod.StatusBarKisaYolAciklama = null;
             this.colKod.Visible = true;
             this.colKod.VisibleIndex = 0;
-            this.colKod.Width = 110;
+            this.colKod.Width = 115;
             // 
-            // colYazarAdi
+            // colKurguAdi
             // 
-            this.colYazarAdi.Caption = "Yazar Adı";
-            this.colYazarAdi.FieldName = "YazarAdi";
-            this.colYazarAdi.Name = "colYazarAdi";
-            this.colYazarAdi.OptionsColumn.AllowEdit = false;
-            this.colYazarAdi.StatusBarAciklama = null;
-            this.colYazarAdi.StatusBarKisaYol = null;
-            this.colYazarAdi.StatusBarKisaYolAciklama = null;
-            this.colYazarAdi.Visible = true;
-            this.colYazarAdi.VisibleIndex = 1;
-            this.colYazarAdi.Width = 150;
-            // 
-            // colKitapAdi
-            // 
-            this.colKitapAdi.Caption = "Kitap Adı";
-            this.colKitapAdi.FieldName = "KitapAdi";
-            this.colKitapAdi.Name = "colKitapAdi";
-            this.colKitapAdi.OptionsColumn.AllowEdit = false;
-            this.colKitapAdi.StatusBarAciklama = null;
-            this.colKitapAdi.StatusBarKisaYol = null;
-            this.colKitapAdi.StatusBarKisaYolAciklama = null;
-            this.colKitapAdi.Visible = true;
-            this.colKitapAdi.VisibleIndex = 2;
-            // 
-            // colTarih
-            // 
-            this.colTarih.Caption = "Tarih";
-            this.colTarih.FieldName = "Tarih";
-            this.colTarih.Name = "colTarih";
-            this.colTarih.OptionsColumn.AllowEdit = false;
-            this.colTarih.StatusBarAciklama = null;
-            this.colTarih.StatusBarKisaYol = null;
-            this.colTarih.StatusBarKisaYolAciklama = null;
-            this.colTarih.Visible = true;
-            this.colTarih.VisibleIndex = 3;
+            this.colKurguAdi.Caption = "Kurgu Adı";
+            this.colKurguAdi.FieldName = "KurguAdi";
+            this.colKurguAdi.Name = "colKurguAdi";
+            this.colKurguAdi.OptionsColumn.AllowEdit = false;
+            this.colKurguAdi.StatusBarAciklama = null;
+            this.colKurguAdi.StatusBarKisaYol = null;
+            this.colKurguAdi.StatusBarKisaYolAciklama = null;
+            this.colKurguAdi.Visible = true;
+            this.colKurguAdi.VisibleIndex = 1;
+            this.colKurguAdi.Width = 250;
             // 
             // colAciklama
             // 
@@ -196,55 +172,21 @@
             this.colAciklama.StatusBarKisaYol = null;
             this.colAciklama.StatusBarKisaYolAciklama = null;
             this.colAciklama.Visible = true;
-            this.colAciklama.VisibleIndex = 6;
-            this.colAciklama.Width = 345;
+            this.colAciklama.VisibleIndex = 2;
+            this.colAciklama.Width = 400;
             // 
-            // colKurguAdi
-            // 
-            this.colKurguAdi.Caption = "Kurgu";
-            this.colKurguAdi.FieldName = "KurguAdi";
-            this.colKurguAdi.Name = "colKurguAdi";
-            this.colKurguAdi.OptionsColumn.AllowEdit = false;
-            this.colKurguAdi.StatusBarAciklama = null;
-            this.colKurguAdi.StatusBarKisaYol = null;
-            this.colKurguAdi.StatusBarKisaYolAciklama = null;
-            this.colKurguAdi.Visible = true;
-            this.colKurguAdi.VisibleIndex = 4;
-            this.colKurguAdi.Width = 130;
-            // 
-            // colKitapTuruAdi
-            // 
-            this.colKitapTuruAdi.Caption = "Kitap Türü";
-            this.colKitapTuruAdi.FieldName = "KitapTuruAdi";
-            this.colKitapTuruAdi.Name = "colKitapTuruAdi";
-            this.colKitapTuruAdi.OptionsColumn.AllowEdit = false;
-            this.colKitapTuruAdi.StatusBarAciklama = null;
-            this.colKitapTuruAdi.StatusBarKisaYol = null;
-            this.colKitapTuruAdi.StatusBarKisaYolAciklama = null;
-            this.colKitapTuruAdi.Visible = true;
-            this.colKitapTuruAdi.VisibleIndex = 5;
-            this.colKitapTuruAdi.Width = 130;
-            // 
-            // longNavigator1
-            // 
-            this.longNavigator1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.longNavigator1.Location = new System.Drawing.Point(0, 434);
-            this.longNavigator1.Name = "longNavigator1";
-            this.longNavigator1.Size = new System.Drawing.Size(1058, 24);
-            this.longNavigator1.TabIndex = 3;
-            // 
-            // YazarListForm
+            // KurguListForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1058, 482);
             this.Controls.Add(this.grid);
-            this.Controls.Add(this.longNavigator1);
+            this.Controls.Add(this.longNavigator);
             this.IconOptions.ShowIcon = false;
-            this.Name = "YazarListForm";
-            this.Text = "Yazar Listeleri";
+            this.Name = "KurguListForm";
+            this.Text = "KurguListForm";
             this.Controls.SetChildIndex(this.ribbonControl, 0);
-            this.Controls.SetChildIndex(this.longNavigator1, 0);
+            this.Controls.SetChildIndex(this.longNavigator, 0);
             this.Controls.SetChildIndex(this.grid, 0);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grid)).EndInit();
@@ -256,16 +198,12 @@
 
         #endregion
 
+        private UserControls.Navigators.LongNavigator longNavigator;
         private UserControls.Grid.MyGridControl grid;
         private UserControls.Grid.MyGridView tablo;
         private UserControls.Grid.MyGridColumn colId;
         private UserControls.Grid.MyGridColumn colKod;
-        private UserControls.Grid.MyGridColumn colYazarAdi;
         private UserControls.Grid.MyGridColumn colKurguAdi;
-        private UserControls.Grid.MyGridColumn colKitapTuruAdi;
         private UserControls.Grid.MyGridColumn colAciklama;
-        private UserControls.Navigators.LongNavigator longNavigator1;
-        private UserControls.Grid.MyGridColumn colKitapAdi;
-        private UserControls.Grid.MyGridColumn colTarih;
     }
 }

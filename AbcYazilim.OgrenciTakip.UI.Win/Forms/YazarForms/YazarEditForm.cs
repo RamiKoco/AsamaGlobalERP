@@ -40,10 +40,10 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.YazarForms
             txtYazarAdi.Text = entity.YazarAdi;
             txtKitapAdi.Text = entity.KitapAdi;
             txtTarih.DateTime = entity.Tarih.Date;
-            txtIl.Id = entity.IlId;
-            txtIl.Text = entity.IlAdi;
-            txtIlce.Id = entity.IlceId;
-            txtIlce.Text = entity.IlceAdi;
+            txtKurgu.Id = entity.KurguId;
+            txtKurgu.Text = entity.KurguAdi;
+            txtKitapTuru.Id = entity.KitapTuruId;
+            txtKitapTuru.Text = entity.KitapTuruAdi;
             txtAciklama.Text = entity.Aciklama;
             tglDurum.IsOn = entity.Durum;
         }
@@ -57,8 +57,8 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.YazarForms
                 YazarAdi = txtYazarAdi.Text,
                 KitapAdi= txtKitapAdi.Text,
                 Tarih = txtTarih.DateTime.Date,
-                IlId = Convert.ToInt64(txtIl.Id),
-                IlceId = Convert.ToInt64(txtIlce.Id),
+                KurguId = Convert.ToInt64(txtKurgu.Id),
+                KitapTuruId = Convert.ToInt64(txtKitapTuru.Id),
                 Aciklama = txtAciklama.Text,
                 Durum = tglDurum.IsOn
             };
@@ -73,18 +73,19 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.YazarForms
 
             using (var sec = new SelectFunctions())
             {
-                if (sender == txtIl)
-                    sec.Sec(txtIl);
-                else if (sender == txtIlce)
-                    sec.Sec(txtIlce, txtIl);
+                if (sender == txtKurgu)
+                    sec.Sec(txtKurgu);
+
+                else if (sender == txtKitapTuru)
+                    sec.Sec(txtKitapTuru, txtKurgu);
             }
 
         }
 
         protected override void Control_EnabledChange(object sender, EventArgs e)
         {
-            if (sender != txtIl) return;
-            txtIl.ControlEnabledChange(txtIlce);
+            if (sender != txtKurgu) return;
+            txtKurgu.ControlEnabledChange(txtKitapTuru);
         }
     }
 }

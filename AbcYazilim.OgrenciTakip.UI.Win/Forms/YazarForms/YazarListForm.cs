@@ -4,7 +4,6 @@ using AbcYazilim.OgrenciTakip.Model.Entities;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Functions;
 using AbcYazilim.OgrenciTakip.UI.Win.Show;
-using AbcYazilim.OgrenciTakip.UI.Win.UserControls.Navigators;
 
 namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.YazarForms
 {

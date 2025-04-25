@@ -465,6 +465,18 @@
     <Compile Include="Forms\KasaForms\KasaListForm.Designer.cs">
       <DependentUpon>KasaListForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\KitapTuruForms\KitapTuruEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\KitapTuruForms\KitapTuruEditForm.Designer.cs">
+      <DependentUpon>KitapTuruEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\KitapTuruForms\KitapTuruListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\KitapTuruForms\KitapTuruListForm.Designer.cs">
+      <DependentUpon>KitapTuruListForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\KontenjanForms\KontenjanEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -524,6 +536,18 @@
     </Compile>
     <Compile Include="Forms\KullaniciForms\SifremiUnuttumEditForm.Designer.cs">
       <DependentUpon>SifremiUnuttumEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\KurguForms\KurguEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\KurguForms\KurguEditForm.Designer.cs">
+      <DependentUpon>KurguEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\KurguForms\KurguListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\KurguForms\KurguListForm.Designer.cs">
+      <DependentUpon>KurguListForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\MahalleForms\MahalleEditForm.cs">
       <SubType>Form</SubType>
@@ -1437,6 +1461,12 @@
     <EmbeddedResource Include="Forms\KasaForms\KasaListForm.resx">
       <DependentUpon>KasaListForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\KitapTuruForms\KitapTuruEditForm.resx">
+      <DependentUpon>KitapTuruEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\KitapTuruForms\KitapTuruListForm.resx">
+      <DependentUpon>KitapTuruListForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\KontenjanForms\KontenjanEditForm.resx">
       <DependentUpon>KontenjanEditForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -1466,6 +1496,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\KullaniciForms\SifremiUnuttumEditForm.resx">
       <DependentUpon>SifremiUnuttumEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\KurguForms\KurguEditForm.resx">
+      <DependentUpon>KurguEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\KurguForms\KurguListForm.resx">
+      <DependentUpon>KurguListForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MahalleForms\MahalleEditForm.resx">
       <DependentUpon>MahalleEditForm.cs</DependentUpon>

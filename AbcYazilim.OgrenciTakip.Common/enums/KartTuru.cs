@@ -164,6 +164,8 @@ namespace AbcYazilim.OgrenciTakip.Common.Enums
         Kurgu = 79,
         [Description("Mahalle Kartı")]
         Mahalle = 80,
+        [Description("Kitap Türü Kartı")]
+        KitapTuru = 81,
 
     }
 }

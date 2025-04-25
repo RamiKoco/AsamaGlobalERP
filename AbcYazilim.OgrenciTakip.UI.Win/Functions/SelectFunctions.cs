@@ -1,6 +1,7 @@
 ﻿using AbcYazilim.OgrenciTakip.Common.Enums;
 using AbcYazilim.OgrenciTakip.Model.Dto;
 using AbcYazilim.OgrenciTakip.Model.Entities;
+using AbcYazilim.OgrenciTakip.Model.Entities.KitapTuru;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.AvukatForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.BankaForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.BankaHesapForms;
@@ -13,8 +14,10 @@ using AbcYazilim.OgrenciTakip.UI.Win.Forms.IlForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.IndirimTuruForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.IsyeriForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.KasaForms;
+using AbcYazilim.OgrenciTakip.UI.Win.Forms.KitapTuruForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.KontenjanForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.KullaniciForms;
+using AbcYazilim.OgrenciTakip.UI.Win.Forms.KurguForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.MahalleForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.MeslekForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.OdemeTuruForms;
@@ -485,6 +488,29 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Functions
                                     break;
                                 }
 
+                        }
+                    }
+                    break;
+
+                case "txtKurgu":
+                    {
+                        var entity = (Kurgu)ShowListForms<KurguListForm>.ShowDialogListForm(KartTuru.Kurgu, _btnEdit.Id);
+                        if (entity != null)
+                        {
+                            _btnEdit.Id = entity.Id;
+                            _btnEdit.EditValue = entity.KurguAdi;
+                        }
+                    }
+                    break;
+
+                case "txtKitapTuru":
+                    {
+                        var entity = (KitapTuru)ShowListForms<KitapTuruListForm>.ShowDialogListForm(KartTuru.KitapTuru, _btnEdit.Id,
+                            _prmEdit.Id, _prmEdit.Text);
+                        if (entity != null)
+                        {
+                            _btnEdit.Id = entity.Id;
+                            _btnEdit.EditValue = entity.KitapTuruAdi;
                         }
                     }
                     break;
