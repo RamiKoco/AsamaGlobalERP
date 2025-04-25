@@ -12,6 +12,8 @@ namespace AbcYazilim.OgrenciTakip.Model.Dto
     {
         public string KurguAdi { get; set; }
         public string KitapTuruAdi { get; set; }
+        public string OzelKod1Adi { get; set; }
+        public string OzelKod2Adi { get; set; }
 
     }
 
@@ -22,6 +24,8 @@ namespace AbcYazilim.OgrenciTakip.Model.Dto
         public DateTime Tarih { get; set; }
         public string KurguAdi { get; set; }
         public string KitapTuruAdi { get; set; }
+        public string OzelKod1Adi { get; set; }
+        public string OzelKod2Adi { get; set; }
         public string Aciklama { get; set; }
 
     }

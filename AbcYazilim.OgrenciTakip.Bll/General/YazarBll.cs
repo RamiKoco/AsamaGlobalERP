@@ -31,6 +31,10 @@ namespace AbcYazilim.OgrenciTakip.Bll.General
                 KurguAdi = x.Kurgu.KurguAdi,
                 KitapTuruId = x.KitapTuruId,
                 KitapTuruAdi = x.KitapTuru.KitapTuruAdi,
+                OzelKod1Id = x.OzelKod1Id,
+                OzelKod1Adi = x.OzelKod1.OzelKodAdi,
+                OzelKod2Id = x.OzelKod2Id,
+                OzelKod2Adi = x.OzelKod2.OzelKodAdi,
                 Aciklama = x.Aciklama,
                 Durum = x.Durum
             });
@@ -47,6 +51,8 @@ namespace AbcYazilim.OgrenciTakip.Bll.General
                 Tarih = x.Tarih,
                 KurguAdi = x.Kurgu.KurguAdi,
                 KitapTuruAdi = x.KitapTuru.KitapTuruAdi,
+                OzelKod1Adi = x.OzelKod1.OzelKodAdi,
+                OzelKod2Adi = x.OzelKod2.OzelKodAdi,
                 Aciklama = x.Aciklama
             }).OrderBy(x => x.Kod).ToList();
         }

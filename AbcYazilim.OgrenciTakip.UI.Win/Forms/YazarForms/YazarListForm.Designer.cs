@@ -39,6 +39,8 @@
             this.colAciklama = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
             this.colKurguAdi = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
             this.colKitapTuruAdi = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
+            this.colOzelKod1Adi = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
+            this.colOzelKod2Adi = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
             this.longNavigator1 = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Navigators.LongNavigator();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grid)).BeginInit();
@@ -102,7 +104,9 @@
             this.colTarih,
             this.colAciklama,
             this.colKurguAdi,
-            this.colKitapTuruAdi});
+            this.colKitapTuruAdi,
+            this.colOzelKod1Adi,
+            this.colOzelKod2Adi});
             this.tablo.GridControl = this.grid;
             this.tablo.Name = "tablo";
             this.tablo.OptionsMenu.EnableColumnMenu = false;
@@ -225,6 +229,30 @@
             this.colKitapTuruAdi.VisibleIndex = 5;
             this.colKitapTuruAdi.Width = 130;
             // 
+            // colOzelKod1Adi
+            // 
+            this.colOzelKod1Adi.Caption = "Özel Kod-1";
+            this.colOzelKod1Adi.FieldName = "OzelKod1Adi";
+            this.colOzelKod1Adi.Name = "colOzelKod1Adi";
+            this.colOzelKod1Adi.OptionsColumn.AllowEdit = false;
+            this.colOzelKod1Adi.StatusBarAciklama = null;
+            this.colOzelKod1Adi.StatusBarKisaYol = null;
+            this.colOzelKod1Adi.StatusBarKisaYolAciklama = null;
+            this.colOzelKod1Adi.Visible = true;
+            this.colOzelKod1Adi.VisibleIndex = 7;
+            // 
+            // colOzelKod2Adi
+            // 
+            this.colOzelKod2Adi.Caption = "Özel Kod-2";
+            this.colOzelKod2Adi.FieldName = "OzelKod2Adi";
+            this.colOzelKod2Adi.Name = "colOzelKod2Adi";
+            this.colOzelKod2Adi.OptionsColumn.AllowEdit = false;
+            this.colOzelKod2Adi.StatusBarAciklama = null;
+            this.colOzelKod2Adi.StatusBarKisaYol = null;
+            this.colOzelKod2Adi.StatusBarKisaYolAciklama = null;
+            this.colOzelKod2Adi.Visible = true;
+            this.colOzelKod2Adi.VisibleIndex = 8;
+            // 
             // longNavigator1
             // 
             this.longNavigator1.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -267,5 +295,7 @@
         private UserControls.Navigators.LongNavigator longNavigator1;
         private UserControls.Grid.MyGridColumn colKitapAdi;
         private UserControls.Grid.MyGridColumn colTarih;
+        private UserControls.Grid.MyGridColumn colOzelKod1Adi;
+        private UserControls.Grid.MyGridColumn colOzelKod2Adi;
     }
 }

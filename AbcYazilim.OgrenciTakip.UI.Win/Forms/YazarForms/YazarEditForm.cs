@@ -44,6 +44,10 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.YazarForms
             txtKurgu.Text = entity.KurguAdi;
             txtKitapTuru.Id = entity.KitapTuruId;
             txtKitapTuru.Text = entity.KitapTuruAdi;
+            txtOzelKod1.Id = entity.OzelKod1Id;
+            txtOzelKod1.Text = entity.OzelKod1Adi;
+            txtOzelKod2.Id = entity.OzelKod2Id;
+            txtOzelKod2.Text = entity.OzelKod2Adi;
             txtAciklama.Text = entity.Aciklama;
             tglDurum.IsOn = entity.Durum;
         }
@@ -59,6 +63,8 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.YazarForms
                 Tarih = txtTarih.DateTime.Date,
                 KurguId = Convert.ToInt64(txtKurgu.Id),
                 KitapTuruId = Convert.ToInt64(txtKitapTuru.Id),
+                OzelKod1Id = txtOzelKod1.Id,
+                OzelKod2Id = txtOzelKod2.Id,
                 Aciklama = txtAciklama.Text,
                 Durum = tglDurum.IsOn
             };
@@ -78,6 +84,11 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.YazarForms
 
                 else if (sender == txtKitapTuru)
                     sec.Sec(txtKitapTuru, txtKurgu);
+
+                else if (sender == txtOzelKod1)
+                    sec.Sec(txtOzelKod1, KartTuru.Yazar);
+                else if (sender == txtOzelKod2)
+                    sec.Sec(txtOzelKod2, KartTuru.Yazar);
             }
 
         }

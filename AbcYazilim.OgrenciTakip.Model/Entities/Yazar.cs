@@ -13,10 +13,13 @@ namespace AbcYazilim.OgrenciTakip.Model.Entities
         //public KitapTurleri KitapTurleri { get; set; } = KitapTurleri.Fiction;
         public long? KurguId { get; set; }
         public long? KitapTuruId { get; set; }
+        public long? OzelKod1Id { get; set; }
+        public long? OzelKod2Id { get; set; }
         public string Aciklama { get; set; }
 
         public Kurgu Kurgu { get; set; }
-        public AbcYazilim.OgrenciTakip.Model.Entities.KitapTuru.KitapTuru 
-            KitapTuru { get; set; } // Fully qualify the KitapTuru type
+        public KitapTuru.KitapTuru KitapTuru { get; set; } // Fully qualify the KitapTuru type
+        public OzelKod OzelKod1 { get; set; }
+        public OzelKod OzelKod2 { get; set; }
     }
 }
