@@ -39,14 +39,14 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.TahakkukForms
             InitializeComponent();
 
             DataLayoutControls = new[] {DataLayoutGenel, DataLayoutGenelBilgiler};
-            Bll = new TahakkukBll(DataLayoutGenelBilgiler);
+            Bll = new TahakkukBll(DataLayoutGenelBilgiler);//Herhangi bir hata olduğunda bunun içerisindeki controllere odaklan demiş olacaz
             BaseKartTuru = KartTuru.Tahakkuk;
             EventsLoad();
 
-            HideItems = new BarItem[] {btnYeni};
-            ShowItems = new BarItem[] {btnYazdir};
+            HideItems = new BarItem[] {btnYeni};//btn yeni'yi gizle
+            ShowItems = new BarItem[] {btnYazdir};//btn yazdır'ı göster.
 
-            txtKayitSekli.Properties.Items.AddRange(EnumFunctions.GetEnumDescriptionList<KayitSekli>());
+            txtKayitSekli.Properties.Items.AddRange(EnumFunctions.GetEnumDescriptionList<KayitSekli>()); //combobox Kayıt şekili dolu olarak gelecek.
             txtKayitDurumu.Properties.Items.AddRange(EnumFunctions.GetEnumDescriptionList<KayitDurumu>());
             txtSonrakiDonemKayitDurumu.Properties.Items.AddRange(EnumFunctions
                 .GetEnumDescriptionList<SonrakiDonemKayitDurumu>());

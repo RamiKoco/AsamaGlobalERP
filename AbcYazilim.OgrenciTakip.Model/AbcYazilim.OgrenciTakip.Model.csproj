@@ -82,6 +82,7 @@
     <Compile Include="Attributes\Kod.cs" />
     <Compile Include="Attributes\ZorunluAlan.cs" />
     <Compile Include="Dto\AileBilgileriDto.cs" />
+    <Compile Include="Dto\AnimeDto.cs" />
     <Compile Include="Dto\AvukatDto.cs" />
     <Compile Include="Dto\BankaDto.cs" />
     <Compile Include="Dto\BankaHesapDto.cs" />
@@ -121,6 +122,7 @@
     <Compile Include="Dto\SubeDto.cs" />
     <Compile Include="Dto\TahakkukDto.cs" />
     <Compile Include="Dto\YazarDto.cs" />
+    <Compile Include="Entities\Anime.cs" />
     <Compile Include="Entities\BaglantiAyarlari.cs" />
     <Compile Include="Entities\DonemParametre.cs" />
     <Compile Include="Entities\GecikmeAciklamalari.cs" />

@@ -166,6 +166,8 @@ namespace AbcYazilim.OgrenciTakip.Common.Enums
         Mahalle = 80,
         [Description("Kitap Türü Kartı")]
         KitapTuru = 81,
+        [Description("Anime Kartı")]
+        Anime = 82,
 
     }
 }

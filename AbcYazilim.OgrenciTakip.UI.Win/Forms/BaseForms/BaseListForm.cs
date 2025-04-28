@@ -234,6 +234,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms
         }
 
         protected virtual void TahakkukYap() { }
+        protected virtual void AnimeEkle() { }
 
         protected virtual void BelgeHareketleri() { }
         protected virtual void Duzelt() { }
@@ -294,6 +295,9 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms
             
             else if (e.Item == btnTahakkukYap)
                 TahakkukYap();
+
+            else if (e.Item == btnAnimeEkle)
+                AnimeEkle();
 
             else if (e.Item == btnKolonlar)
             {

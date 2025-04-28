@@ -187,8 +187,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtSinif.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKayitDurumu.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKayitSekli.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtKayitTarihi.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKayitTarihi.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtKayitTarihi.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtOkulNo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKod.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDurum.Properties)).BeginInit();
@@ -244,15 +244,7 @@
             // ribbonControl
             // 
             this.ribbonControl.ExpandCollapseItem.Id = 0;
-            // 
-            // 
-            // 
-            this.ribbonControl.SearchEditItem.AccessibleName = "Search Item";
-            this.ribbonControl.SearchEditItem.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Left;
-            this.ribbonControl.SearchEditItem.EditWidth = 150;
-            this.ribbonControl.SearchEditItem.Id = -5000;
-            this.ribbonControl.SearchEditItem.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
-            this.ribbonControl.Size = new System.Drawing.Size(998, 109);
+            this.ribbonControl.Size = new System.Drawing.Size(998, 135);
             this.ribbonControl.Toolbar.ShowCustomizeItem = false;
             // 
             // DataLayoutGenel
@@ -266,11 +258,11 @@
             this.DataLayoutGenel.Controls.Add(this.tabAlt);
             this.DataLayoutGenel.Controls.Add(this.tabUst);
             this.DataLayoutGenel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DataLayoutGenel.Location = new System.Drawing.Point(0, 109);
+            this.DataLayoutGenel.Location = new System.Drawing.Point(0, 135);
             this.DataLayoutGenel.Name = "DataLayoutGenel";
             this.DataLayoutGenel.OptionsFocus.EnableAutoTabOrder = false;
             this.DataLayoutGenel.Root = this.Root;
-            this.DataLayoutGenel.Size = new System.Drawing.Size(998, 516);
+            this.DataLayoutGenel.Size = new System.Drawing.Size(998, 490);
             this.DataLayoutGenel.TabIndex = 0;
             this.DataLayoutGenel.Text = "myDataLayoutControl1";
             // 
@@ -438,9 +430,9 @@
             this.pageIndirimBilgileri,
             this.pageOdemeBilgileri,
             this.pageGeriÖdemeBilgileri});
-            this.tabAlt.RegularSize = new System.Drawing.Size(764, 257);
+            this.tabAlt.RegularSize = new System.Drawing.Size(764, 231);
             this.tabAlt.SelectedPage = this.pageHizmetBilgileri;
-            this.tabAlt.Size = new System.Drawing.Size(764, 257);
+            this.tabAlt.Size = new System.Drawing.Size(764, 231);
             this.tabAlt.TabIndex = 5;
             this.tabAlt.Text = "tabPane2";
             // 
@@ -453,14 +445,14 @@
             this.pageHizmetBilgileri.ItemShowMode = DevExpress.XtraBars.Navigation.ItemShowMode.ImageAndText;
             this.pageHizmetBilgileri.Name = "pageHizmetBilgileri";
             this.pageHizmetBilgileri.Properties.ShowMode = DevExpress.XtraBars.Navigation.ItemShowMode.ImageAndText;
-            this.pageHizmetBilgileri.Size = new System.Drawing.Size(764, 224);
+            this.pageHizmetBilgileri.Size = new System.Drawing.Size(764, 198);
             // 
             // hizmetBilgileriTable
             // 
             this.hizmetBilgileriTable.Dock = System.Windows.Forms.DockStyle.Fill;
             this.hizmetBilgileriTable.Location = new System.Drawing.Point(0, 0);
             this.hizmetBilgileriTable.Name = "hizmetBilgileriTable";
-            this.hizmetBilgileriTable.Size = new System.Drawing.Size(764, 224);
+            this.hizmetBilgileriTable.Size = new System.Drawing.Size(764, 198);
             this.hizmetBilgileriTable.TabIndex = 0;
             // 
             // pageIndirimBilgileri
@@ -1619,7 +1611,7 @@
             rowDefinition17,
             rowDefinition18});
             this.Root.Padding = new DevExpress.XtraLayout.Utils.Padding(10, 10, 5, 5);
-            this.Root.Size = new System.Drawing.Size(998, 516);
+            this.Root.Size = new System.Drawing.Size(998, 490);
             this.Root.TextVisible = false;
             // 
             // layoutControlItem1
@@ -1642,7 +1634,7 @@
             this.layoutControlItem2.Location = new System.Drawing.Point(0, 245);
             this.layoutControlItem2.Name = "layoutControlItem2";
             this.layoutControlItem2.OptionsTableLayoutItem.RowIndex = 1;
-            this.layoutControlItem2.Size = new System.Drawing.Size(768, 261);
+            this.layoutControlItem2.Size = new System.Drawing.Size(768, 235);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
@@ -1690,7 +1682,7 @@
             this.layoutControlGroup2.OptionsTableLayoutItem.ColumnIndex = 1;
             this.layoutControlGroup2.OptionsTableLayoutItem.RowIndex = 1;
             this.layoutControlGroup2.Padding = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
-            this.layoutControlGroup2.Size = new System.Drawing.Size(210, 261);
+            this.layoutControlGroup2.Size = new System.Drawing.Size(210, 235);
             this.layoutControlGroup2.Text = "Toplamlar";
             // 
             // layoutControlItem27
@@ -1760,7 +1752,7 @@
             this.layoutControlItem32.Location = new System.Drawing.Point(0, 120);
             this.layoutControlItem32.Name = "layoutControlItem32";
             this.layoutControlItem32.OptionsTableLayoutItem.RowIndex = 5;
-            this.layoutControlItem32.Size = new System.Drawing.Size(198, 108);
+            this.layoutControlItem32.Size = new System.Drawing.Size(198, 82);
             this.layoutControlItem32.Text = "Fark";
             this.layoutControlItem32.TextSize = new System.Drawing.Size(69, 13);
             // 

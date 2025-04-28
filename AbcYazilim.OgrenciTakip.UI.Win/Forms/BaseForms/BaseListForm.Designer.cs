@@ -106,6 +106,12 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms
             DevExpress.Utils.ToolTipItem toolTipItem29 = new DevExpress.Utils.ToolTipItem();
             DevExpress.Utils.ToolTipSeparatorItem toolTipSeparatorItem15 = new DevExpress.Utils.ToolTipSeparatorItem();
             DevExpress.Utils.ToolTipItem toolTipItem30 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip16 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem16 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipSeparatorItem toolTipSeparatorItem16 = new DevExpress.Utils.ToolTipSeparatorItem();
+            DevExpress.Utils.ToolTipItem toolTipItem31 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.ToolTipSeparatorItem toolTipSeparatorItem17 = new DevExpress.Utils.ToolTipSeparatorItem();
+            DevExpress.Utils.ToolTipItem toolTipItem32 = new DevExpress.Utils.ToolTipItem();
             this.ribbonControl = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.btnYeni = new DevExpress.XtraBars.BarButtonItem();
             this.btnSil = new DevExpress.XtraBars.BarButtonItem();
@@ -197,6 +203,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms
             this.btnParametreler = new DevExpress.XtraBars.BarButtonItem();
             this.barF4 = new DevExpress.XtraBars.BarStaticItem();
             this.barF4Aciklama = new DevExpress.XtraBars.BarStaticItem();
+            this.btnAnimeEkle = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
@@ -213,7 +220,6 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms
             this.ribbonControl.ExpandCollapseItem.Id = 0;
             this.ribbonControl.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.ribbonControl.ExpandCollapseItem,
-            this.ribbonControl.SearchEditItem,
             this.btnYeni,
             this.btnSil,
             this.btnSec,
@@ -303,9 +309,10 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms
             this.btnOgrenciIcmalRaporu,
             this.btnParametreler,
             this.barF4,
-            this.barF4Aciklama});
+            this.barF4Aciklama,
+            this.btnAnimeEkle});
             this.ribbonControl.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl.MaxItemId = 95;
+            this.ribbonControl.MaxItemId = 96;
             this.ribbonControl.Name = "ribbonControl";
             this.ribbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
@@ -317,7 +324,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms
             this.ribbonControl.ShowPageHeadersMode = DevExpress.XtraBars.Ribbon.ShowPageHeadersMode.Hide;
             this.ribbonControl.ShowQatLocationSelector = false;
             this.ribbonControl.ShowToolbarCustomizeItem = false;
-            this.ribbonControl.Size = new System.Drawing.Size(1058, 109);
+            this.ribbonControl.Size = new System.Drawing.Size(1058, 135);
             this.ribbonControl.StatusBar = this.ribbonStatusBar1;
             this.ribbonControl.Toolbar.ShowCustomizeItem = false;
             this.ribbonControl.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
@@ -1275,6 +1282,26 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms
             this.barF4Aciklama.Name = "barF4Aciklama";
             this.barF4Aciklama.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             // 
+            // btnAnimeEkle
+            // 
+            this.btnAnimeEkle.Caption = "Anime Ekle";
+            this.btnAnimeEkle.Id = 95;
+            this.btnAnimeEkle.ImageOptions.Image = global::AbcYazilim.OgrenciTakip.UI.Win.Properties.Resources.projectdirectory_16x16;
+            this.btnAnimeEkle.ImageOptions.LargeImage = global::AbcYazilim.OgrenciTakip.UI.Win.Properties.Resources.projectdirectory_32x32;
+            this.btnAnimeEkle.Name = "btnAnimeEkle";
+            toolTipTitleItem16.ImageOptions.Image = global::AbcYazilim.OgrenciTakip.UI.Win.Properties.Resources.comment_16x16;
+            toolTipTitleItem16.Text = "( Anime Ekle )";
+            toolTipItem31.ImageOptions.Image = global::AbcYazilim.OgrenciTakip.UI.Win.Properties.Resources.suggestion_16x16;
+            toolTipItem31.Text = "Anime Ekle";
+            toolTipItem32.Text = "Anime Açıklama...";
+            superToolTip16.Items.Add(toolTipTitleItem16);
+            superToolTip16.Items.Add(toolTipSeparatorItem16);
+            superToolTip16.Items.Add(toolTipItem31);
+            superToolTip16.Items.Add(toolTipSeparatorItem17);
+            superToolTip16.Items.Add(toolTipItem32);
+            this.btnAnimeEkle.SuperTip = superToolTip16;
+            this.btnAnimeEkle.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -1300,6 +1327,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms
             this.ribbonPageGroup1.ItemLinks.Add(this.btnYazdir);
             this.ribbonPageGroup1.ItemLinks.Add(this.btnGonder);
             this.ribbonPageGroup1.ItemLinks.Add(this.btnCikis);
+            this.ribbonPageGroup1.ItemLinks.Add(this.btnAnimeEkle);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             this.ribbonPageGroup1.Text = "ribbonPageGroup1";
             // 
@@ -1467,5 +1495,6 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms
         protected DevExpress.XtraBars.BarButtonItem btnParametreler;
         protected DevExpress.XtraBars.BarStaticItem barF4;
         protected DevExpress.XtraBars.BarStaticItem barF4Aciklama;
+        protected DevExpress.XtraBars.BarButtonItem btnAnimeEkle;
     }
 }

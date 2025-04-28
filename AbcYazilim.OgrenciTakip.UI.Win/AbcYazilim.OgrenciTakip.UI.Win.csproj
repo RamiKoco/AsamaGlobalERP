@@ -189,6 +189,18 @@
     <Compile Include="Forms\AileBilgiForms\AileBilgiListForm.Designer.cs">
       <DependentUpon>AileBilgiListForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\AnimeForms\AnimeEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AnimeForms\AnimeEditForm.Designer.cs">
+      <DependentUpon>AnimeEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AnimeForms\AnimeListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AnimeForms\AnimeListForm.Designer.cs">
+      <DependentUpon>AnimeListForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\AvukatForms\AvukatEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1323,6 +1335,12 @@
     <EmbeddedResource Include="Forms\AileBilgiForms\AileBilgiListForm.resx">
       <DependentUpon>AileBilgiListForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AnimeForms\AnimeEditForm.resx">
+      <DependentUpon>AnimeEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AnimeForms\AnimeListForm.resx">
+      <DependentUpon>AnimeListForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\AvukatForms\AvukatEditForm.resx">
       <DependentUpon>AvukatEditForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -2400,6 +2418,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\newgroup_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\card_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\customers_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\meeting_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\feature_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\role_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\role_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\projectdirectory_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\projectdirectory_16x16.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

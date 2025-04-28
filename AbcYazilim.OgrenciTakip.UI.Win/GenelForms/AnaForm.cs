@@ -8,6 +8,7 @@ using AbcYazilim.OgrenciTakip.Common.Message;
 using AbcYazilim.OgrenciTakip.Model.Dto;
 using AbcYazilim.OgrenciTakip.Model.Entities;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.AileBilgiForms;
+using AbcYazilim.OgrenciTakip.UI.Win.Forms.AnimeForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.AvukatForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.BankaForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.BankaHesapForms;
@@ -185,6 +186,8 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.GenelForms
                 ShowListForms<RamiDenemeListForm>.ShowListForm(KartTuru.Rami);
             else if (e.Item == btnYazar)
                 ShowListForms<YazarListForm>.ShowListForm(KartTuru.Yazar);
+            else if (e.Item == btnAnimeKartlari)
+                ShowListForms<AnimeListForm>.ShowListForm(KartTuru.Anime);
 
             else if (e.Item == btnKontenjanKartlari)
                 ShowListForms<KontenjanListForm>.ShowListForm(KartTuru.Kontenjan);

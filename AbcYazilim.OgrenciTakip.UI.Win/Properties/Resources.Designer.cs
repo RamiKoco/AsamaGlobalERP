@@ -343,6 +343,16 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap card_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("card_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cashback_32x32 {
             get {
                 object obj = ResourceManager.GetObject("cashback_32x32", resourceCulture);
@@ -516,6 +526,16 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Properties {
         internal static System.Drawing.Bitmap customer_service_32x32 {
             get {
                 object obj = ResourceManager.GetObject("customer-service_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap customers_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("customers_16x16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -871,6 +891,16 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap feature_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("feature_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
         /// </summary>
         internal static System.Drawing.Icon Graphicloads_Flat_Finance_Stat {
@@ -1103,6 +1133,16 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap meeting_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("meeting_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap mobilephone2_16x16 {
             get {
                 object obj = ResourceManager.GetObject("mobilephone2_16x16", resourceCulture);
@@ -1303,6 +1343,26 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap projectdirectory_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("projectdirectory_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap projectdirectory_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("projectdirectory_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap proximity_16x16 {
             get {
                 object obj = ResourceManager.GetObject("proximity_16x16", resourceCulture);
@@ -1446,6 +1506,26 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Properties {
         internal static System.Drawing.Bitmap reset_32x32 {
             get {
                 object obj = ResourceManager.GetObject("reset_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap role_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("role_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap role_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("role_32x32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -1,9 +1,14 @@
 ﻿using AbcYazilim.OgrenciTakip.Bll.General;
 using AbcYazilim.OgrenciTakip.Common.Enums;
+using AbcYazilim.OgrenciTakip.Model.Dto;
 using AbcYazilim.OgrenciTakip.Model.Entities;
+using AbcYazilim.OgrenciTakip.UI.Win.Forms.AnimeForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms;
+using AbcYazilim.OgrenciTakip.UI.Win.Forms.TahakkukForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Functions;
+using AbcYazilim.OgrenciTakip.UI.Win.GenelForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Show;
+using DevExpress.XtraBars;
 
 namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.YazarForms
 {
@@ -26,5 +31,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.YazarForms
         {
             Tablo.GridControl.DataSource = ((YazarBll)Bll).List(FilterFunctions.Filter<Yazar>(AktifKartlariGoster));
         }
+
+  
     }
 }
