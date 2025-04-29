@@ -477,6 +477,18 @@
     <Compile Include="Forms\KasaForms\KasaListForm.Designer.cs">
       <DependentUpon>KasaListForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\KisiForms\KisiEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\KisiForms\KisiEditForm.Designer.cs">
+      <DependentUpon>KisiEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\KisiForms\KisiListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\KisiForms\KisiListForm.Designer.cs">
+      <DependentUpon>KisiListForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\KitapTuruForms\KitapTuruEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1479,6 +1491,12 @@
     <EmbeddedResource Include="Forms\KasaForms\KasaListForm.resx">
       <DependentUpon>KasaListForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\KisiForms\KisiEditForm.resx">
+      <DependentUpon>KisiEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\KisiForms\KisiListForm.resx">
+      <DependentUpon>KisiListForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\KitapTuruForms\KitapTuruEditForm.resx">
       <DependentUpon>KitapTuruEditForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -2442,6 +2460,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\projectdirectory_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\employee_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\employee_32x32.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

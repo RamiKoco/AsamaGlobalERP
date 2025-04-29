@@ -13,6 +13,7 @@ namespace AbcYazilim.OgrenciTakip.Model.Entities
         public override string Kod { get; set; }
 
         public long OgrenciId { get; set; }
+   
 
         [StringLength(20)]
         public string OkulNo { get; set; }

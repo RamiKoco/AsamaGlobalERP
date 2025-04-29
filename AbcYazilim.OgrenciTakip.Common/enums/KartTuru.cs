@@ -168,6 +168,7 @@ namespace AbcYazilim.OgrenciTakip.Common.Enums
         KitapTuru = 81,
         [Description("Anime Kartı")]
         Anime = 82,
-
+        [Description("Kişi Kartı")]
+        Kisi = 83,
     }
 }

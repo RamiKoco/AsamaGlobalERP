@@ -25,6 +25,7 @@ using AbcYazilim.OgrenciTakip.UI.Win.Forms.IndirimTuruForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.IptalNedeniForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.IsyeriForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.KasaForms;
+using AbcYazilim.OgrenciTakip.UI.Win.Forms.KisiForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.KontenjanForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.KullaniciForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.MakbuzForms;
@@ -188,6 +189,8 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.GenelForms
                 ShowListForms<YazarListForm>.ShowListForm(KartTuru.Yazar);
             else if (e.Item == btnAnimeKartlari)
                 ShowListForms<AnimeListForm>.ShowListForm(KartTuru.Anime);
+            else if (e.Item == btnKisiKartlari)
+                ShowListForms<KisiListForm>.ShowListForm(KartTuru.Kisi);
 
             else if (e.Item == btnKontenjanKartlari)
                 ShowListForms<KontenjanListForm>.ShowListForm(KartTuru.Kontenjan);

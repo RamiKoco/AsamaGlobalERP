@@ -1,5 +1,4 @@
-﻿using System;
-using AbcYazilim.OgrenciTakip.Bll.General;
+﻿using AbcYazilim.OgrenciTakip.Bll.General;
 using AbcYazilim.OgrenciTakip.Common.Enums;
 using AbcYazilim.OgrenciTakip.Common.Functions;
 using AbcYazilim.OgrenciTakip.Model.Dto;
@@ -7,38 +6,41 @@ using AbcYazilim.OgrenciTakip.Model.Entities;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Functions;
 using AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls;
+using AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFormTable;
 using DevExpress.XtraEditors;
+using System;
 
-namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.OgrenciForms
+namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.KisiForms
 {
-    public partial class OgrenciEditForm : BaseEditForm
+    public partial class KisiEditForm : BaseEditForm
     {
-        public OgrenciEditForm()
+        public KisiEditForm()
         {
             InitializeComponent();
-
             DataLayoutControl = myDataLayoutControl;
-            Bll = new OgrenciBll(myDataLayoutControl);
+            Bll = new KisiBll(myDataLayoutControl);
             txtCinsiyet.Properties.Items.AddRange(EnumFunctions.GetEnumDescriptionList<Cinsiyet>());
             txtKanGrubu.Properties.Items.AddRange(EnumFunctions.GetEnumDescriptionList<KanGrubu>());
-            BaseKartTuru = KartTuru.Ogrenci;
+            BaseKartTuru = KartTuru.Kisi;
             EventsLoad();
+
         }
 
         public override void Yukle()
         {
-            OldEntity = BaseIslemTuru == IslemTuru.EntityInsert ? new OgrenciS() : ((OgrenciBll)Bll).Single(FilterFunctions.Filter<Ogrenci>(Id));
+            OldEntity = BaseIslemTuru == IslemTuru.EntityInsert ? new KisiS() : ((KisiBll)Bll).Single(FilterFunctions.Filter<Kisi>(Id));
             NesneyiKontrollereBagla();
             TabloYukle();
 
             if (BaseIslemTuru != IslemTuru.EntityInsert) return;
             Id = BaseIslemTuru.IdOlustur(OldEntity);
-            txtKod.Text = ((OgrenciBll)Bll).YeniKodVer();
+            txtKod.Text = ((KisiBll)Bll).YeniKodVer();
             txtTcKimlikNo.Focus();
         }
+
         protected override void NesneyiKontrollereBagla()
         {
-            var entity = (OgrenciS)OldEntity;
+            var entity = (KisiS)OldEntity;
             txtKod.Text = entity.Kod;
             txtTcKimlikNo.Text = entity.TcKimlikNo;
             txtAdi.Text = entity.Adi;
@@ -76,13 +78,13 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.OgrenciForms
             txtOzelKod4.Text = entity.OzelKod4Adi;
             txtOzelKod5.Id = entity.OzelKod5Id;
             txtOzelKod5.Text = entity.OzelKod5Adi;
-            
+
             tglDurum.IsOn = entity.Durum;
         }
 
         protected override void GuncelNesneOlustur()
         {
-            CurrentEntity = new Ogrenci
+            CurrentEntity = new Kisi
             {
                 Id = Id,
                 Kod = txtKod.Text,
@@ -108,7 +110,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.OgrenciForms
                 KimlikVerilisNedeni = txtKimlikVerilisNedeni.Text,
                 KimlikKayitNo = txtKimlikKayitNo.Text,
                 KimlikVerilisTarihi = (DateTime?)txtKimlikVerilisTarihi.EditValue,
-                Resim =(byte[])imgResim.EditValue,
+                Resim = (byte[])imgResim.EditValue,
                 OzelKod1Id = txtOzelKod1.Id,
                 OzelKod2Id = txtOzelKod2.Id,
                 OzelKod3Id = txtOzelKod3.Id,
@@ -119,12 +121,11 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.OgrenciForms
             ButonEnabledDurumu();
         }
 
-        protected override void TabloYukle()
-        {
-            tahakkukBilgileriTable.OwnerForm = this;
-            tahakkukBilgileriTable.Yukle();
-        }
-
+        //protected override void TabloYukle()
+        //{
+        //    tahakkukBilgileriTable.OwnerForm = this;
+        //    tahakkukBilgileriTable.Yukle();
+        //}
 
         protected override void SecimYap(object sender)
         {
@@ -136,19 +137,16 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.OgrenciForms
                 else if (sender == txtKimlikIlce)
                     sec.Sec(txtKimlikIlce, txtKimlikIl);
                 else if (sender == txtOzelKod1)
-                    sec.Sec(txtOzelKod1, KartTuru.Ogrenci);
+                    sec.Sec(txtOzelKod1, KartTuru.Kisi);
                 else if (sender == txtOzelKod2)
-                    sec.Sec(txtOzelKod2, KartTuru.Ogrenci);
+                    sec.Sec(txtOzelKod2, KartTuru.Kisi);
                 else if (sender == txtOzelKod3)
-                    sec.Sec(txtOzelKod3, KartTuru.Ogrenci);
+                    sec.Sec(txtOzelKod3, KartTuru.Kisi);
                 else if (sender == txtOzelKod4)
-                    sec.Sec(txtOzelKod4, KartTuru.Ogrenci);
+                    sec.Sec(txtOzelKod4, KartTuru.Kisi);
                 else if (sender == txtOzelKod5)
-                    sec.Sec(txtOzelKod5, KartTuru.Ogrenci);
+                    sec.Sec(txtOzelKod5, KartTuru.Kisi);
         }
-
-      
-
         protected override void Control_EnabledChange(object sender, EventArgs e)
         {
             if (sender != txtKimlikIl) return;
@@ -158,9 +156,10 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.OgrenciForms
 
         protected override void Control_Enter(object sender, EventArgs e)
         {
-            if(!(sender is MyPictureEdit resim)) return;
+            if (!(sender is MyPictureEdit resim)) return;
             resim.Sec(resimMenu);
 
         }
+
     }
 }
