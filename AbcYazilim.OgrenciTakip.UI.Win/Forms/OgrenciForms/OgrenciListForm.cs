@@ -3,7 +3,6 @@ using AbcYazilim.OgrenciTakip.Bll.General;
 using AbcYazilim.OgrenciTakip.Common.Enums;
 using AbcYazilim.OgrenciTakip.Model.Dto;
 using AbcYazilim.OgrenciTakip.Model.Entities;
-using AbcYazilim.OgrenciTakip.UI.Win.Forms.AnimeForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.TahakkukForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Functions;
@@ -19,7 +18,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.OgrenciForms
         {
             InitializeComponent();
             Bll = new OgrenciBll();
-            ShowItems = new BarItem[] {btnTahakkukYap, btnAnimeEkle };
+            ShowItems = new BarItem[] {btnTahakkukYap};
           
         }
 
@@ -52,20 +51,6 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.OgrenciForms
             }
         }
 
-        protected override void AnimeEkle()
-        {
-            var entity = tablo.GetRow<OgrenciL>().EntityConvert<Ogrenci>();
-
-            using (var bll = new AnimeBll())
-            {
-                var anime = bll.SingleSummary(x => x.OgrenciId == entity.Id && x.SubeId == AnaForm.SubeId && x.DonemId == AnaForm.DonemId);
-
-                if (anime != null)
-                    ShowEditForms<AnimeEditForm>.ShowDialogEditForm(KartTuru.Anime, anime.Id, null);
-                else
-                    ShowEditForms<AnimeEditForm>.ShowDialogEditForm(KartTuru.Anime, -1, entity);
-
-            }
-        }
+     
     }
 }

@@ -97,7 +97,6 @@ namespace AbcYazilim.OgrenciTakip.Data.Contexts
         public DbSet<Yazar> Yazar { get; set; }
         public DbSet<Kurgu> Kurgu { get; set; }
         public DbSet<KitapTuru> KitapTuru { get; set; }
-        public DbSet<Anime> Anime { get; set; }
         public DbSet<Kisi> Kisi { get; set; }
     }
 }

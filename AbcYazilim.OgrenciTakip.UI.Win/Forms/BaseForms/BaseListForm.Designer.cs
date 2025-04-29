@@ -1327,7 +1327,6 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms
             this.ribbonPageGroup1.ItemLinks.Add(this.btnYazdir);
             this.ribbonPageGroup1.ItemLinks.Add(this.btnGonder);
             this.ribbonPageGroup1.ItemLinks.Add(this.btnCikis);
-            this.ribbonPageGroup1.ItemLinks.Add(this.btnAnimeEkle);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             this.ribbonPageGroup1.Text = "ribbonPageGroup1";
             // 
