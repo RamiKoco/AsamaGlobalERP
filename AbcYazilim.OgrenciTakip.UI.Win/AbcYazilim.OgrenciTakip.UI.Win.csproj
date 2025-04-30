@@ -133,6 +133,10 @@
     <Reference Include="DevExpress.XtraRichEdit.v24.1.Design, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <HintPath>..\packages\DevExpress.Win.RichEdit.24.1.3\lib\net452\Design\WinForms\Server\DevExpress.XtraRichEdit.v24.1.Design.dll</HintPath>
     </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v24.1.Core, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v24.1.Core.Desktop, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v24.1.Extensions, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraTreeList.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <HintPath>..\packages\DevExpress.Win.TreeList.24.1.3\lib\net452\DevExpress.XtraTreeList.v24.1.dll</HintPath>
     </Reference>
@@ -188,6 +192,12 @@
     </Compile>
     <Compile Include="Forms\AileBilgiForms\AileBilgiListForm.Designer.cs">
       <DependentUpon>AileBilgiListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AjandaForms\Ajanda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AjandaForms\Ajanda.Designer.cs">
+      <DependentUpon>Ajanda.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\AvukatForms\AvukatEditForm.cs">
       <SubType>Form</SubType>
@@ -1197,6 +1207,9 @@
     <Compile Include="UserControls\Navigators\SmallNavigator.Designer.cs">
       <DependentUpon>SmallNavigator.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\Scheduler\MyScheduler.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="UserControls\UserControl\Base\BaseTablo.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -1329,11 +1342,19 @@
     <Compile Include="UserControls\UserControl\TahakkukEditFormTable\TahakkukBilgileriTable.Designer.cs">
       <DependentUpon>TahakkukBilgileriTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Yeni_KurumDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Yeni_KurumDataSet.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Forms\AileBilgiForms\AileBilgiEditForm.resx">
       <DependentUpon>AileBilgiEditForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AileBilgiForms\AileBilgiListForm.resx">
       <DependentUpon>AileBilgiListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AjandaForms\Ajanda.resx">
+      <DependentUpon>Ajanda.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AvukatForms\AvukatEditForm.resx">
       <DependentUpon>AvukatEditForm.cs</DependentUpon>
@@ -1881,6 +1902,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Yeni_KurumDataSet.xsc">
+      <DependentUpon>Yeni_KurumDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Yeni_KurumDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Yeni_KurumDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Yeni_KurumDataSet.xss">
+      <DependentUpon>Yeni_KurumDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -2448,6 +2480,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\employee_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\switchtimescalesto_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\switchtimescalesto_32x32.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

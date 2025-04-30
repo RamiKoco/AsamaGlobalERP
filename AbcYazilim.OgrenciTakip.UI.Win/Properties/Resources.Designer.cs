@@ -1693,6 +1693,26 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap switchtimescalesto_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("switchtimescalesto_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap switchtimescalesto_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("switchtimescalesto_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap task_16x16 {
             get {
                 object obj = ResourceManager.GetObject("task_16x16", resourceCulture);

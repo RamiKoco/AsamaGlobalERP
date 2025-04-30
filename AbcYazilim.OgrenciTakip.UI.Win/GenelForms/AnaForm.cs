@@ -1,13 +1,11 @@
-﻿using System.Collections.Generic;
-using System.Diagnostics;
-using System.Windows.Forms;
-using AbcYazilim.OgrenciTakip.Bll.Functions;
+﻿using AbcYazilim.OgrenciTakip.Bll.Functions;
 using AbcYazilim.OgrenciTakip.Bll.General;
 using AbcYazilim.OgrenciTakip.Common.Enums;
 using AbcYazilim.OgrenciTakip.Common.Message;
 using AbcYazilim.OgrenciTakip.Model.Dto;
 using AbcYazilim.OgrenciTakip.Model.Entities;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.AileBilgiForms;
+using AbcYazilim.OgrenciTakip.UI.Win.Forms.AjandaForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.AvukatForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.BankaForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.BankaHesapForms;
@@ -48,6 +46,9 @@ using AbcYazilim.OgrenciTakip.UI.Win.Show;
 using DevExpress.XtraBars;
 using DevExpress.XtraBars.Ribbon.Gallery;
 using DevExpress.XtraTabbedMdi;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Windows.Forms;
 
 namespace AbcYazilim.OgrenciTakip.UI.Win.GenelForms
 {
@@ -169,7 +170,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.GenelForms
         {
             Cursor.Current = Cursors.WaitCursor;
 
-            if (e.Item==btnOkulKartlari)
+            if (e.Item == btnOkulKartlari)
                 ShowListForms<OkulListForm>.ShowListForm(KartTuru.Okul);
             else if (e.Item == btnIlKartlari)
                 ShowListForms<IlListForm>.ShowListForm(KartTuru.Il);
@@ -186,23 +187,29 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.GenelForms
                 ShowListForms<RamiDenemeListForm>.ShowListForm(KartTuru.Rami);
             else if (e.Item == btnYazar)
                 ShowListForms<YazarListForm>.ShowListForm(KartTuru.Yazar);
-          
+
             else if (e.Item == btnKisiKartlari)
                 ShowListForms<KisiListForm>.ShowListForm(KartTuru.Kisi);
+
+            else if (e.Item == btnAjandaKartlari)
+            {
+                Ajanda ajandaForm = new Ajanda();
+                ajandaForm.Show(); // ShowDialog() kullanırsanız modal olarak açılır
+            }
 
             else if (e.Item == btnKontenjanKartlari)
                 ShowListForms<KontenjanListForm>.ShowListForm(KartTuru.Kontenjan);
             else if (e.Item == btnRehberKartlari)
                 ShowListForms<RehberListForm>.ShowListForm(KartTuru.Rehber);
-            else if(e.Item == btnSinifGrupKartlari)
+            else if (e.Item == btnSinifGrupKartlari)
                 ShowListForms<SinifGrupListForm>.ShowListForm(KartTuru.SinifGrup);
             else if (e.Item == btnMeslekKartlari)
                 ShowListForms<MeslekListForm>.ShowListForm(KartTuru.Meslek);
             else if (e.Item == btnYakinlikKartlari)
                 ShowListForms<YakinlikListForm>.ShowListForm(KartTuru.Yakinlik);
-            else if(e.Item == btnIsyeriKartlari)
+            else if (e.Item == btnIsyeriKartlari)
                 ShowListForms<IsyeriListForm>.ShowListForm(KartTuru.Isyeri);
-            else if(e.Item == btnGorevKartlari)
+            else if (e.Item == btnGorevKartlari)
                 ShowListForms<GorevListForm>.ShowListForm(KartTuru.Gorev);
             else if (e.Item == btnIndirimTuruKartlari)
                 ShowListForms<IndirimTuruListForm>.ShowListForm(KartTuru.IndirimTuru);
@@ -224,11 +231,11 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.GenelForms
                 ShowListForms<BankaListForm>.ShowListForm(KartTuru.Banka);
             else if (e.Item == btnAvukatKartlari)
                 ShowListForms<AvukatListForm>.ShowListForm(KartTuru.Avukat);
-            else if(e.Item == btnCariKartlar)
+            else if (e.Item == btnCariKartlar)
                 ShowListForms<CariListForm>.ShowListForm(KartTuru.Cari);
-            else if(e.Item == btnOdemeTuruKartlari)
+            else if (e.Item == btnOdemeTuruKartlari)
                 ShowListForms<OdemeTuruListForm>.ShowListForm(KartTuru.OdemeTuru);
-            else if(e.Item == btnBankaHesapKartlari)
+            else if (e.Item == btnBankaHesapKartlari)
                 ShowListForms<BankaHesapListForm>.ShowListForm(KartTuru.BankaHesap);
             else if (e.Item == btnIletisimKartlari)
                 ShowListForms<IletisimListForm>.ShowListForm(KartTuru.Iletisim);
