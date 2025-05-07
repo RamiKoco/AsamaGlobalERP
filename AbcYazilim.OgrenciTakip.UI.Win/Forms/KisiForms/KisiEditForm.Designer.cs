@@ -28,10 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            DevExpress.XtraScheduler.TimeRuler timeRuler1 = new DevExpress.XtraScheduler.TimeRuler();
-            DevExpress.XtraScheduler.TimeRuler timeRuler2 = new DevExpress.XtraScheduler.TimeRuler();
-            DevExpress.XtraScheduler.TimeRuler timeRuler3 = new DevExpress.XtraScheduler.TimeRuler();
             DevExpress.XtraLayout.ColumnDefinition columnDefinition1 = new DevExpress.XtraLayout.ColumnDefinition();
             DevExpress.XtraLayout.ColumnDefinition columnDefinition2 = new DevExpress.XtraLayout.ColumnDefinition();
             DevExpress.XtraLayout.ColumnDefinition columnDefinition3 = new DevExpress.XtraLayout.ColumnDefinition();
@@ -53,8 +49,6 @@
             DevExpress.XtraLayout.RowDefinition rowDefinition9 = new DevExpress.XtraLayout.RowDefinition();
             DevExpress.XtraLayout.RowDefinition rowDefinition10 = new DevExpress.XtraLayout.RowDefinition();
             this.myDataLayoutControl = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls.MyDataLayoutControl();
-            this.myScheduler1 = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Scheduler.MyScheduler();
-            this.schedulerDataStorage1 = new DevExpress.XtraScheduler.SchedulerDataStorage(this.components);
             this.dateNavigator1 = new DevExpress.XtraScheduler.DateNavigator();
             this.txtKod = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls.MyKodTextEdit();
             this.imgResim = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls.MyPictureEdit();
@@ -118,18 +112,10 @@
             this.layoutControlItem29 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem30 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem31 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem32 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.yeni_KurumDataSet = new AbcYazilim.OgrenciTakip.UI.Win.Yeni_KurumDataSet();
-            this.appointmentsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.appointmentsTableAdapter = new AbcYazilim.OgrenciTakip.UI.Win.Yeni_KurumDataSetTableAdapters.AppointmentsTableAdapter();
-            this.resourcesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.resourcesTableAdapter = new AbcYazilim.OgrenciTakip.UI.Win.Yeni_KurumDataSetTableAdapters.ResourcesTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.resimMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.myDataLayoutControl)).BeginInit();
             this.myDataLayoutControl.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.myScheduler1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.schedulerDataStorage1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateNavigator1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateNavigator1.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKod.Properties)).BeginInit();
@@ -196,10 +182,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem29)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem30)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem31)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem32)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.yeni_KurumDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.appointmentsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.resourcesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbonControl
@@ -211,7 +193,6 @@
             // 
             // myDataLayoutControl
             // 
-            this.myDataLayoutControl.Controls.Add(this.myScheduler1);
             this.myDataLayoutControl.Controls.Add(this.dateNavigator1);
             this.myDataLayoutControl.Controls.Add(this.txtKod);
             this.myDataLayoutControl.Controls.Add(this.imgResim);
@@ -248,74 +229,9 @@
             this.myDataLayoutControl.Name = "myDataLayoutControl";
             this.myDataLayoutControl.OptionsFocus.EnableAutoTabOrder = false;
             this.myDataLayoutControl.Root = this.Root;
-            this.myDataLayoutControl.Size = new System.Drawing.Size(1151, 420);
+            this.myDataLayoutControl.Size = new System.Drawing.Size(1151, 240);
             this.myDataLayoutControl.TabIndex = 0;
             this.myDataLayoutControl.Text = "myDataLayoutControl1";
-            // 
-            // myScheduler1
-            // 
-            this.myScheduler1.ActiveViewType = DevExpress.XtraScheduler.SchedulerViewType.WorkWeek;
-            this.myScheduler1.DataStorage = this.schedulerDataStorage1;
-            this.myScheduler1.Location = new System.Drawing.Point(12, 228);
-            this.myScheduler1.MenuManager = this.ribbonControl;
-            this.myScheduler1.Name = "myScheduler1";
-            this.myScheduler1.Size = new System.Drawing.Size(1127, 180);
-            this.myScheduler1.Start = new System.DateTime(2025, 4, 28, 0, 0, 0, 0);
-            this.myScheduler1.TabIndex = 31;
-            this.myScheduler1.Text = "myScheduler1";
-            this.myScheduler1.Views.DayView.TimeRulers.Add(timeRuler1);
-            this.myScheduler1.Views.FullWeekView.Enabled = true;
-            this.myScheduler1.Views.FullWeekView.TimeRulers.Add(timeRuler2);
-            this.myScheduler1.Views.WeekView.Enabled = false;
-            this.myScheduler1.Views.WorkWeekView.TimeRulers.Add(timeRuler3);
-            this.myScheduler1.Views.YearView.UseOptimizedScrolling = false;
-            // 
-            // schedulerDataStorage1
-            // 
-            // 
-            // 
-            // 
-            this.schedulerDataStorage1.AppointmentDependencies.AutoReload = false;
-            // 
-            // 
-            // 
-            this.schedulerDataStorage1.Appointments.DataSource = this.appointmentsBindingSource;
-            this.schedulerDataStorage1.Appointments.Labels.CreateNewLabel(0, "None", "&None", System.Drawing.SystemColors.Window);
-            this.schedulerDataStorage1.Appointments.Labels.CreateNewLabel(1, "Important", "&Important", System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(194)))), ((int)(((byte)(190))))));
-            this.schedulerDataStorage1.Appointments.Labels.CreateNewLabel(2, "Business", "&Business", System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(255))))));
-            this.schedulerDataStorage1.Appointments.Labels.CreateNewLabel(3, "Personal", "&Personal", System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(244)))), ((int)(((byte)(156))))));
-            this.schedulerDataStorage1.Appointments.Labels.CreateNewLabel(4, "Vacation", "&Vacation", System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(228)))), ((int)(((byte)(199))))));
-            this.schedulerDataStorage1.Appointments.Labels.CreateNewLabel(5, "Must Attend", "Must &Attend", System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(206)))), ((int)(((byte)(147))))));
-            this.schedulerDataStorage1.Appointments.Labels.CreateNewLabel(6, "Travel Required", "&Travel Required", System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(244)))), ((int)(((byte)(255))))));
-            this.schedulerDataStorage1.Appointments.Labels.CreateNewLabel(7, "Needs Preparation", "&Needs Preparation", System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(219)))), ((int)(((byte)(152))))));
-            this.schedulerDataStorage1.Appointments.Labels.CreateNewLabel(8, "Birthday", "&Birthday", System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(207)))), ((int)(((byte)(233))))));
-            this.schedulerDataStorage1.Appointments.Labels.CreateNewLabel(9, "Anniversary", "&Anniversary", System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(233)))), ((int)(((byte)(223))))));
-            this.schedulerDataStorage1.Appointments.Labels.CreateNewLabel(10, "Phone Call", "Phone &Call", System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(247)))), ((int)(((byte)(165))))));
-            this.schedulerDataStorage1.Appointments.Mappings.AllDay = "AllDay";
-            this.schedulerDataStorage1.Appointments.Mappings.Description = "Description";
-            this.schedulerDataStorage1.Appointments.Mappings.End = "EndDate";
-            this.schedulerDataStorage1.Appointments.Mappings.Label = "Label";
-            this.schedulerDataStorage1.Appointments.Mappings.Location = "Location";
-            this.schedulerDataStorage1.Appointments.Mappings.OriginalOccurrenceEnd = "QueryEndDate";
-            this.schedulerDataStorage1.Appointments.Mappings.OriginalOccurrenceStart = "QueryStartDate";
-            this.schedulerDataStorage1.Appointments.Mappings.RecurrenceInfo = "RecurrenceInfo";
-            this.schedulerDataStorage1.Appointments.Mappings.ReminderInfo = "ReminderInfo";
-            this.schedulerDataStorage1.Appointments.Mappings.Start = "StartDate";
-            this.schedulerDataStorage1.Appointments.Mappings.Status = "Status";
-            this.schedulerDataStorage1.Appointments.Mappings.Subject = "Subject";
-            this.schedulerDataStorage1.Appointments.Mappings.TimeZoneId = "TimeZoneId";
-            this.schedulerDataStorage1.Appointments.Mappings.Type = "Type";
-            // 
-            // 
-            // 
-            this.schedulerDataStorage1.Resources.DataSource = this.resourcesBindingSource;
-            this.schedulerDataStorage1.Resources.Mappings.Caption = "ResourceName";
-            this.schedulerDataStorage1.Resources.Mappings.Color = "Color";
-            this.schedulerDataStorage1.Resources.Mappings.Id = "ResourceID";
-            this.schedulerDataStorage1.Resources.Mappings.Image = "Image";
-            this.schedulerDataStorage1.AppointmentsInserted += new DevExpress.XtraScheduler.PersistentObjectsEventHandler(this.schedulerDataStorage1_AppointmentsChanged);
-            this.schedulerDataStorage1.AppointmentsChanged += new DevExpress.XtraScheduler.PersistentObjectsEventHandler(this.schedulerDataStorage1_AppointmentsChanged);
-            this.schedulerDataStorage1.AppointmentsDeleted += new DevExpress.XtraScheduler.PersistentObjectsEventHandler(this.schedulerDataStorage1_AppointmentsChanged);
             // 
             // dateNavigator1
             // 
@@ -328,7 +244,6 @@
             this.dateNavigator1.FirstDayOfWeek = System.DayOfWeek.Monday;
             this.dateNavigator1.Location = new System.Drawing.Point(866, 12);
             this.dateNavigator1.Name = "dateNavigator1";
-            this.dateNavigator1.SchedulerControl = this.myScheduler1;
             this.dateNavigator1.Size = new System.Drawing.Size(273, 212);
             this.dateNavigator1.StyleController = this.myDataLayoutControl;
             this.dateNavigator1.TabIndex = 30;
@@ -502,6 +417,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.txtKimlikVerilisTarihi.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txtKimlikVerilisTarihi.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTimeAdvancingCaret;
             this.txtKimlikVerilisTarihi.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.DateTimeMaskManager));
             this.txtKimlikVerilisTarihi.Properties.MaskSettings.Set("useAdvancingCaret", true);
             this.txtKimlikVerilisTarihi.Size = new System.Drawing.Size(118, 20);
@@ -691,6 +607,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.txtDogumTarihi.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txtDogumTarihi.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTimeAdvancingCaret;
             this.txtDogumTarihi.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.DateTimeMaskManager));
             this.txtDogumTarihi.Properties.MaskSettings.Set("useAdvancingCaret", true);
             this.txtDogumTarihi.Size = new System.Drawing.Size(108, 20);
@@ -770,6 +687,9 @@
             this.txtTelefon.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.txtTelefon.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
             this.txtTelefon.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtTelefon.Properties.Mask.AutoComplete = DevExpress.XtraEditors.Mask.AutoCompleteType.None;
+            this.txtTelefon.Properties.Mask.EditMask = "(\\d?\\d?\\d?) \\d?\\d?\\d? \\d?\\d? \\d?\\d?";
+            this.txtTelefon.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Regular;
             this.txtTelefon.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.RegularMaskManager));
             this.txtTelefon.Properties.MaskSettings.Set("mask", "(\\d?\\d?\\d?) \\d?\\d?\\d? \\d?\\d? \\d?\\d?");
             this.txtTelefon.Properties.MaskSettings.Set("isAutoComplete", false);
@@ -836,6 +756,9 @@
             this.txtTcKimlikNo.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.txtTcKimlikNo.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
             this.txtTcKimlikNo.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtTcKimlikNo.Properties.Mask.AutoComplete = DevExpress.XtraEditors.Mask.AutoCompleteType.None;
+            this.txtTcKimlikNo.Properties.Mask.EditMask = "\\d?\\d?\\d? \\d?\\d?\\d? \\d?\\d?\\d? \\d?\\d?";
+            this.txtTcKimlikNo.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Regular;
             this.txtTcKimlikNo.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.RegularMaskManager));
             this.txtTcKimlikNo.Properties.MaskSettings.Set("mask", "\\d?\\d?\\d? \\d?\\d?\\d? \\d?\\d?\\d? \\d?\\d?");
             this.txtTcKimlikNo.Properties.MaskSettings.Set("isAutoComplete", false);
@@ -881,8 +804,7 @@
             this.layoutControlItem28,
             this.layoutControlItem29,
             this.layoutControlItem30,
-            this.layoutControlItem31,
-            this.layoutControlItem32});
+            this.layoutControlItem31});
             this.Root.LayoutMode = DevExpress.XtraLayout.Utils.LayoutMode.Table;
             this.Root.Name = "Root";
             columnDefinition1.SizeType = System.Windows.Forms.SizeType.Absolute;
@@ -947,7 +869,7 @@
             rowDefinition8,
             rowDefinition9,
             rowDefinition10});
-            this.Root.Size = new System.Drawing.Size(1151, 420);
+            this.Root.Size = new System.Drawing.Size(1151, 240);
             this.Root.TextVisible = false;
             // 
             // layoutControlItem1
@@ -1407,60 +1329,21 @@
             this.layoutControlItem31.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem31.TextVisible = false;
             // 
-            // layoutControlItem32
-            // 
-            this.layoutControlItem32.AppearanceItemCaption.ForeColor = System.Drawing.Color.Maroon;
-            this.layoutControlItem32.AppearanceItemCaption.Options.UseForeColor = true;
-            this.layoutControlItem32.Control = this.myScheduler1;
-            this.layoutControlItem32.Location = new System.Drawing.Point(0, 216);
-            this.layoutControlItem32.Name = "layoutControlItem32";
-            this.layoutControlItem32.OptionsTableLayoutItem.ColumnSpan = 10;
-            this.layoutControlItem32.OptionsTableLayoutItem.RowIndex = 9;
-            this.layoutControlItem32.Size = new System.Drawing.Size(1131, 184);
-            this.layoutControlItem32.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem32.TextVisible = false;
-            // 
-            // yeni_KurumDataSet
-            // 
-            this.yeni_KurumDataSet.DataSetName = "Yeni_KurumDataSet";
-            this.yeni_KurumDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // appointmentsBindingSource
-            // 
-            this.appointmentsBindingSource.DataMember = "Appointments";
-            this.appointmentsBindingSource.DataSource = this.yeni_KurumDataSet;
-            // 
-            // appointmentsTableAdapter
-            // 
-            this.appointmentsTableAdapter.ClearBeforeFill = true;
-            // 
-            // resourcesBindingSource
-            // 
-            this.resourcesBindingSource.DataMember = "Resources";
-            this.resourcesBindingSource.DataSource = this.yeni_KurumDataSet;
-            // 
-            // resourcesTableAdapter
-            // 
-            this.resourcesTableAdapter.ClearBeforeFill = true;
-            // 
             // KisiEditForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1151, 579);
+            this.ClientSize = new System.Drawing.Size(1151, 399);
             this.Controls.Add(this.myDataLayoutControl);
             this.IconOptions.ShowIcon = false;
             this.Name = "KisiEditForm";
             this.Text = "Kişi Kartı";
-            this.Load += new System.EventHandler(this.KisiEditForm_Load);
             this.Controls.SetChildIndex(this.ribbonControl, 0);
             this.Controls.SetChildIndex(this.myDataLayoutControl, 0);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.resimMenu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.myDataLayoutControl)).EndInit();
             this.myDataLayoutControl.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.myScheduler1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.schedulerDataStorage1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateNavigator1.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateNavigator1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKod.Properties)).EndInit();
@@ -1527,10 +1410,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem29)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem30)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem31)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem32)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.yeni_KurumDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.appointmentsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.resourcesBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1602,13 +1481,5 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem30;
         private DevExpress.XtraScheduler.DateNavigator dateNavigator1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem31;
-        private DevExpress.XtraScheduler.SchedulerDataStorage schedulerDataStorage1;
-        private UserControls.Scheduler.MyScheduler myScheduler1;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem32;
-        private Yeni_KurumDataSet yeni_KurumDataSet;
-        private System.Windows.Forms.BindingSource appointmentsBindingSource;
-        private Yeni_KurumDataSetTableAdapters.AppointmentsTableAdapter appointmentsTableAdapter;
-        private System.Windows.Forms.BindingSource resourcesBindingSource;
-        private Yeni_KurumDataSetTableAdapters.ResourcesTableAdapter resourcesTableAdapter;
     }
 }

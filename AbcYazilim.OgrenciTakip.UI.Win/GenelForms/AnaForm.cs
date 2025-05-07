@@ -191,11 +191,11 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.GenelForms
             else if (e.Item == btnKisiKartlari)
                 ShowListForms<KisiListForm>.ShowListForm(KartTuru.Kisi);
 
-            else if (e.Item == btnAjandaKartlari)
-            {
-                Ajanda ajandaForm = new Ajanda();
-                ajandaForm.Show(); // ShowDialog() kullanırsanız modal olarak açılır
-            }
+            //else if (e.Item == btnAjandaKartlari)
+            //{
+            //    Ajanda ajandaForm = new Ajanda();
+            //    ajandaForm.Show(); // ShowDialog() kullanırsanız modal olarak açılır
+            //}
 
             else if (e.Item == btnKontenjanKartlari)
                 ShowListForms<KontenjanListForm>.ShowListForm(KartTuru.Kontenjan);
