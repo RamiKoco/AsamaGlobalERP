@@ -270,7 +270,7 @@
             this.simpleLabelItem1.OptionsTableLayoutItem.ColumnSpan = 2;
             this.simpleLabelItem1.OptionsTableLayoutItem.RowIndex = 1;
             this.simpleLabelItem1.Size = new System.Drawing.Size(180, 40);
-            this.simpleLabelItem1.Text = "Abc Yazılım";
+            this.simpleLabelItem1.Text = "ASAMA";
             this.simpleLabelItem1.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
             this.simpleLabelItem1.TextSize = new System.Drawing.Size(50, 20);
             // 
@@ -287,7 +287,7 @@
             this.simpleLabelItem2.OptionsTableLayoutItem.ColumnSpan = 2;
             this.simpleLabelItem2.OptionsTableLayoutItem.RowIndex = 2;
             this.simpleLabelItem2.Size = new System.Drawing.Size(180, 24);
-            this.simpleLabelItem2.Text = "Öğrenci Takip - 2022";
+            this.simpleLabelItem2.Text = "Muhasebe Takip - 2025";
             this.simpleLabelItem2.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
             this.simpleLabelItem2.TextSize = new System.Drawing.Size(50, 20);
             // 
