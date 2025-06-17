@@ -49,7 +49,6 @@
             DevExpress.XtraLayout.RowDefinition rowDefinition9 = new DevExpress.XtraLayout.RowDefinition();
             DevExpress.XtraLayout.RowDefinition rowDefinition10 = new DevExpress.XtraLayout.RowDefinition();
             this.myDataLayoutControl = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls.MyDataLayoutControl();
-            this.dateNavigator1 = new DevExpress.XtraScheduler.DateNavigator();
             this.txtKod = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls.MyKodTextEdit();
             this.imgResim = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls.MyPictureEdit();
             this.tglDurum = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls.MyToogleSwitch();
@@ -111,13 +110,10 @@
             this.layoutControlItem28 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem29 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem30 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem31 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.resimMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.myDataLayoutControl)).BeginInit();
             this.myDataLayoutControl.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dateNavigator1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateNavigator1.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKod.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgResim.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tglDurum.Properties)).BeginInit();
@@ -181,19 +177,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem28)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem29)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem30)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem31)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbonControl
             // 
             this.ribbonControl.ExpandCollapseItem.Id = 0;
             this.ribbonControl.MaxItemId = 29;
-            this.ribbonControl.Size = new System.Drawing.Size(1151, 135);
+            this.ribbonControl.Size = new System.Drawing.Size(885, 135);
             this.ribbonControl.Toolbar.ShowCustomizeItem = false;
             // 
             // myDataLayoutControl
             // 
-            this.myDataLayoutControl.Controls.Add(this.dateNavigator1);
             this.myDataLayoutControl.Controls.Add(this.txtKod);
             this.myDataLayoutControl.Controls.Add(this.imgResim);
             this.myDataLayoutControl.Controls.Add(this.tglDurum);
@@ -229,24 +223,9 @@
             this.myDataLayoutControl.Name = "myDataLayoutControl";
             this.myDataLayoutControl.OptionsFocus.EnableAutoTabOrder = false;
             this.myDataLayoutControl.Root = this.Root;
-            this.myDataLayoutControl.Size = new System.Drawing.Size(1151, 240);
+            this.myDataLayoutControl.Size = new System.Drawing.Size(885, 249);
             this.myDataLayoutControl.TabIndex = 0;
             this.myDataLayoutControl.Text = "myDataLayoutControl1";
-            // 
-            // dateNavigator1
-            // 
-            this.dateNavigator1.CalendarAppearance.DayCellSpecial.FontStyleDelta = System.Drawing.FontStyle.Bold;
-            this.dateNavigator1.CalendarAppearance.DayCellSpecial.Options.UseFont = true;
-            this.dateNavigator1.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateNavigator1.DateTime = new System.DateTime(2025, 4, 28, 0, 0, 0, 0);
-            this.dateNavigator1.EditValue = new System.DateTime(2025, 4, 28, 0, 0, 0, 0);
-            this.dateNavigator1.FirstDayOfWeek = System.DayOfWeek.Monday;
-            this.dateNavigator1.Location = new System.Drawing.Point(866, 12);
-            this.dateNavigator1.Name = "dateNavigator1";
-            this.dateNavigator1.Size = new System.Drawing.Size(273, 212);
-            this.dateNavigator1.StyleController = this.myDataLayoutControl;
-            this.dateNavigator1.TabIndex = 30;
             // 
             // txtKod
             // 
@@ -803,8 +782,7 @@
             this.layoutControlItem27,
             this.layoutControlItem28,
             this.layoutControlItem29,
-            this.layoutControlItem30,
-            this.layoutControlItem31});
+            this.layoutControlItem30});
             this.Root.LayoutMode = DevExpress.XtraLayout.Utils.LayoutMode.Table;
             this.Root.Name = "Root";
             columnDefinition1.SizeType = System.Windows.Forms.SizeType.Absolute;
@@ -869,7 +847,7 @@
             rowDefinition8,
             rowDefinition9,
             rowDefinition10});
-            this.Root.Size = new System.Drawing.Size(1151, 240);
+            this.Root.Size = new System.Drawing.Size(885, 249);
             this.Root.TextVisible = false;
             // 
             // layoutControlItem1
@@ -1316,24 +1294,11 @@
             this.layoutControlItem30.TextSize = new System.Drawing.Size(63, 20);
             this.layoutControlItem30.TextToControlDistance = 5;
             // 
-            // layoutControlItem31
-            // 
-            this.layoutControlItem31.AppearanceItemCaption.ForeColor = System.Drawing.Color.Maroon;
-            this.layoutControlItem31.AppearanceItemCaption.Options.UseForeColor = true;
-            this.layoutControlItem31.Control = this.dateNavigator1;
-            this.layoutControlItem31.Location = new System.Drawing.Point(854, 0);
-            this.layoutControlItem31.Name = "layoutControlItem31";
-            this.layoutControlItem31.OptionsTableLayoutItem.ColumnIndex = 9;
-            this.layoutControlItem31.OptionsTableLayoutItem.RowSpan = 9;
-            this.layoutControlItem31.Size = new System.Drawing.Size(277, 216);
-            this.layoutControlItem31.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem31.TextVisible = false;
-            // 
             // KisiEditForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1151, 399);
+            this.ClientSize = new System.Drawing.Size(885, 408);
             this.Controls.Add(this.myDataLayoutControl);
             this.IconOptions.ShowIcon = false;
             this.Name = "KisiEditForm";
@@ -1344,8 +1309,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.resimMenu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.myDataLayoutControl)).EndInit();
             this.myDataLayoutControl.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dateNavigator1.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateNavigator1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKod.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgResim.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tglDurum.Properties)).EndInit();
@@ -1409,7 +1372,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem28)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem29)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem30)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem31)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1479,7 +1441,5 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem29;
         private UserControls.Controls.MyKodTextEdit txtKod;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem30;
-        private DevExpress.XtraScheduler.DateNavigator dateNavigator1;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem31;
     }
 }
