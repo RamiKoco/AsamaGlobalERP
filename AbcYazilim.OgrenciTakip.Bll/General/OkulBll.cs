@@ -30,8 +30,8 @@ namespace AbcYazilim.OgrenciTakip.Bll.General
                 IlAdi = x.Il.IlAdi,
                 IlceId = x.IlceId,
                 IlceAdi = x.Ilce.IlceAdi,
-                MahalleId = x.MahalleId,
-                MahalleAdi = x.Mahalle.MahalleAdi,
+                //MahalleId = x.MahalleId,
+                //MahalleAdi = x.Mahalle.MahalleAdi,
                 Aciklama = x.Aciklama,
                 Durum = x.Durum
             });
@@ -46,7 +46,7 @@ namespace AbcYazilim.OgrenciTakip.Bll.General
                 OkulAdi = x.OkulAdi,
                 IlAdi = x.Il.IlAdi,
                 IlceAdi = x.Ilce.IlceAdi,
-                MahalleAdi = x.Mahalle.MahalleAdi,
+                //MahalleAdi = x.Mahalle.MahalleAdi,
                 Aciklama = x.Aciklama
             }).OrderBy(x => x.Kod).ToList();
         }
