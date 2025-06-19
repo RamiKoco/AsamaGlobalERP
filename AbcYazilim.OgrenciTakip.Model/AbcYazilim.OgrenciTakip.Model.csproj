@@ -114,6 +114,7 @@
     <Compile Include="Dto\OgrenciDto.cs" />
     <Compile Include="Dto\OkulDto.cs" />
     <Compile Include="Dto\PromosyonBilgileriDto.cs" />
+    <Compile Include="Dto\RamiDenemeDto.cs" />
     <Compile Include="Dto\RaporDto.cs" />
     <Compile Include="Dto\RaporlarDto.cs" />
     <Compile Include="Dto\RolYetkileriDto.cs" />

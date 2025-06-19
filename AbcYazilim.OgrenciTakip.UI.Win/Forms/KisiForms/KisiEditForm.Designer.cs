@@ -223,7 +223,7 @@
             this.myDataLayoutControl.Name = "myDataLayoutControl";
             this.myDataLayoutControl.OptionsFocus.EnableAutoTabOrder = false;
             this.myDataLayoutControl.Root = this.Root;
-            this.myDataLayoutControl.Size = new System.Drawing.Size(885, 249);
+            this.myDataLayoutControl.Size = new System.Drawing.Size(885, 240);
             this.myDataLayoutControl.TabIndex = 0;
             this.myDataLayoutControl.Text = "myDataLayoutControl1";
             // 
@@ -396,7 +396,6 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.txtKimlikVerilisTarihi.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.txtKimlikVerilisTarihi.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTimeAdvancingCaret;
             this.txtKimlikVerilisTarihi.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.DateTimeMaskManager));
             this.txtKimlikVerilisTarihi.Properties.MaskSettings.Set("useAdvancingCaret", true);
             this.txtKimlikVerilisTarihi.Size = new System.Drawing.Size(118, 20);
@@ -586,7 +585,6 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.txtDogumTarihi.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.txtDogumTarihi.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTimeAdvancingCaret;
             this.txtDogumTarihi.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.DateTimeMaskManager));
             this.txtDogumTarihi.Properties.MaskSettings.Set("useAdvancingCaret", true);
             this.txtDogumTarihi.Size = new System.Drawing.Size(108, 20);
@@ -666,9 +664,6 @@
             this.txtTelefon.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.txtTelefon.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
             this.txtTelefon.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtTelefon.Properties.Mask.AutoComplete = DevExpress.XtraEditors.Mask.AutoCompleteType.None;
-            this.txtTelefon.Properties.Mask.EditMask = "(\\d?\\d?\\d?) \\d?\\d?\\d? \\d?\\d? \\d?\\d?";
-            this.txtTelefon.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Regular;
             this.txtTelefon.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.RegularMaskManager));
             this.txtTelefon.Properties.MaskSettings.Set("mask", "(\\d?\\d?\\d?) \\d?\\d?\\d? \\d?\\d? \\d?\\d?");
             this.txtTelefon.Properties.MaskSettings.Set("isAutoComplete", false);
@@ -735,9 +730,6 @@
             this.txtTcKimlikNo.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.txtTcKimlikNo.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
             this.txtTcKimlikNo.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtTcKimlikNo.Properties.Mask.AutoComplete = DevExpress.XtraEditors.Mask.AutoCompleteType.None;
-            this.txtTcKimlikNo.Properties.Mask.EditMask = "\\d?\\d?\\d? \\d?\\d?\\d? \\d?\\d?\\d? \\d?\\d?";
-            this.txtTcKimlikNo.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Regular;
             this.txtTcKimlikNo.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.RegularMaskManager));
             this.txtTcKimlikNo.Properties.MaskSettings.Set("mask", "\\d?\\d?\\d? \\d?\\d?\\d? \\d?\\d?\\d? \\d?\\d?");
             this.txtTcKimlikNo.Properties.MaskSettings.Set("isAutoComplete", false);
@@ -847,7 +839,7 @@
             rowDefinition8,
             rowDefinition9,
             rowDefinition10});
-            this.Root.Size = new System.Drawing.Size(885, 249);
+            this.Root.Size = new System.Drawing.Size(885, 240);
             this.Root.TextVisible = false;
             // 
             // layoutControlItem1
@@ -1298,7 +1290,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(885, 408);
+            this.ClientSize = new System.Drawing.Size(885, 399);
             this.Controls.Add(this.myDataLayoutControl);
             this.IconOptions.ShowIcon = false;
             this.Name = "KisiEditForm";

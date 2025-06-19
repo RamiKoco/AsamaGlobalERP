@@ -2,20 +2,11 @@
 using AbcYazilim.OgrenciTakip.Common.Enums;
 using AbcYazilim.OgrenciTakip.Common.Message;
 using AbcYazilim.OgrenciTakip.Model.Entities;
-using AbcYazilim.OgrenciTakip.UI.Win.Forms.AileBilgiForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Show;
-using DevExpress.XtraEditors;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.RamiDenemeForms
 {
