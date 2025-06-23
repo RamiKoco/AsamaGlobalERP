@@ -189,7 +189,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.GenelForms
                 ShowListForms<YazarListForm>.ShowListForm(KartTuru.Yazar);
 
             else if (e.Item == btnKisiKartlari)
-                ShowListForms<KisiListForm>.ShowListForm(KartTuru.Kisi);
+                ShowListForms<KisiListForm>.ShowListForm(KartTuru.KisiTest);
 
             //else if (e.Item == btnAjandaKartlari)
             //{

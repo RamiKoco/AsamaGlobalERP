@@ -103,7 +103,7 @@
     <Compile Include="Dto\IndiriminUygulanacagiHizmetBilgileriDto.cs" />
     <Compile Include="Dto\KardesBilgileriDto.cs" />
     <Compile Include="Dto\KasaDto.cs" />
-    <Compile Include="Dto\KisiDto.cs" />
+    <Compile Include="Dto\KisiTestDto.cs" />
     <Compile Include="Dto\KullaniciBirimYetkileriDto.cs" />
     <Compile Include="Dto\KullaniciDto.cs" />
     <Compile Include="Dto\KullaniciParametreDto.cs" />
@@ -163,7 +163,7 @@
     <Compile Include="Entities\Isyeri.cs" />
     <Compile Include="Entities\KardesBilgileri.cs" />
     <Compile Include="Entities\Kasa.cs" />
-    <Compile Include="Entities\Kisi.cs" />
+    <Compile Include="Entities\KisiTest.cs" />
     <Compile Include="Entities\KitapTuru.cs" />
     <Compile Include="Entities\Kontenjan.cs" />
     <Compile Include="Entities\Kullanici.cs" />

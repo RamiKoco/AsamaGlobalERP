@@ -12,14 +12,14 @@ using System.Windows.Forms;
 
 namespace AbcYazilim.OgrenciTakip.Bll.General
 {
-    public class KisiBll : BaseGenelBll<Kisi>, IBaseGenelBll, IBaseCommonBll
+    public class KisiTestBll : BaseGenelBll<KisiTest>, IBaseGenelBll, IBaseCommonBll
     {
-        public KisiBll() : base(KartTuru.Kisi) { }
-        public KisiBll(Control ctrl) : base(ctrl, KartTuru.Kisi) { }
+        public KisiTestBll() : base(KartTuru.KisiTest) { }
+        public KisiTestBll(Control ctrl) : base(ctrl, KartTuru.KisiTest) { }
 
-        public override BaseEntity Single(Expression<Func<Kisi, bool>> filter)
+        public override BaseEntity Single(Expression<Func<KisiTest, bool>> filter)
         {
-            return BaseSingle(filter, x => new KisiS
+            return BaseSingle(filter, x => new KisiTestS
             {
                 Id = x.Id,
                 Kod = x.Kod,
@@ -63,9 +63,9 @@ namespace AbcYazilim.OgrenciTakip.Bll.General
             });
         }
 
-        public override IEnumerable<BaseEntity> List(Expression<Func<Kisi, bool>> filter)
+        public override IEnumerable<BaseEntity> List(Expression<Func<KisiTest, bool>> filter)
         {
-            return BaseList(filter, x => new KisiL
+            return BaseList(filter, x => new KisiTestL
             {
                 Id = x.Id,
                 Kod = x.Kod,

@@ -7,7 +7,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace AbcYazilim.OgrenciTakip.Model.Entities
 {
-    public class Kisi : BaseEntityDurum
+    public class KisiTest : BaseEntityDurum
     {
 
         [Index("IX_Kod", IsUnique = true)]

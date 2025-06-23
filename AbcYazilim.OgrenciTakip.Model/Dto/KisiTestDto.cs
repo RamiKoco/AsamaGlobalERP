@@ -9,7 +9,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace AbcYazilim.OgrenciTakip.Model.Dto
 {
     [NotMapped]
-    public class KisiS:Kisi
+    public class KisiTestS:KisiTest
     {
         public string KimlikIlAdi { get; set; }
         public string KimlikIlceAdi { get; set; }
@@ -20,7 +20,7 @@ namespace AbcYazilim.OgrenciTakip.Model.Dto
         public string OzelKod5Adi { get; set; }
     }
 
-    public class KisiL : BaseEntity
+    public class KisiTestL : BaseEntity
     {
         public string TcKimlikNo { get; set; }
         public string Adi { get; set; }
@@ -52,7 +52,7 @@ namespace AbcYazilim.OgrenciTakip.Model.Dto
 
     }
     [HighlightedClass]
-    public class KisiR : IBaseEntity
+    public class KisiTestR : IBaseEntity
     {
         public string OgrenciNo { get; set; }
         public string OkulNo { get; set; }

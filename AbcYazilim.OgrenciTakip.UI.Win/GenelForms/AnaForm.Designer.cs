@@ -759,7 +759,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.GenelForms
             // 
             // btnKisiKartlari
             // 
-            this.btnKisiKartlari.Caption = "Kişi Kartları";
+            this.btnKisiKartlari.Caption = "Kişi Test Kartları";
             this.btnKisiKartlari.Id = 66;
             this.btnKisiKartlari.ImageOptions.Image = global::AbcYazilim.OgrenciTakip.UI.Win.Properties.Resources.employee_16x16;
             this.btnKisiKartlari.ImageOptions.LargeImage = global::AbcYazilim.OgrenciTakip.UI.Win.Properties.Resources.employee_32x32;

@@ -18,7 +18,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.KisiForms
         {
             InitializeComponent();
             DataLayoutControl = myDataLayoutControl;
-            Bll = new KisiBll(myDataLayoutControl);
+            Bll = new KisiTestBll(myDataLayoutControl);
             txtCinsiyet.Properties.Items.AddRange(EnumFunctions.GetEnumDescriptionList<Cinsiyet>());
             txtKanGrubu.Properties.Items.AddRange(EnumFunctions.GetEnumDescriptionList<KanGrubu>());
             BaseKartTuru = KartTuru.Kisi;
@@ -28,19 +28,19 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.KisiForms
 
         public override void Yukle()
         {
-            OldEntity = BaseIslemTuru == IslemTuru.EntityInsert ? new KisiS() : ((KisiBll)Bll).Single(FilterFunctions.Filter<Kisi>(Id));
+            OldEntity = BaseIslemTuru == IslemTuru.EntityInsert ? new KisiTestS() : ((KisiTestBll)Bll).Single(FilterFunctions.Filter<KisiTest>(Id));
             NesneyiKontrollereBagla();
             TabloYukle();
 
             if (BaseIslemTuru != IslemTuru.EntityInsert) return;
             Id = BaseIslemTuru.IdOlustur(OldEntity);
-            txtKod.Text = ((KisiBll)Bll).YeniKodVer();
+            txtKod.Text = ((KisiTestBll)Bll).YeniKodVer();
             txtTcKimlikNo.Focus();
         }
 
         protected override void NesneyiKontrollereBagla()
         {
-            var entity = (KisiS)OldEntity;
+            var entity = (KisiTestS)OldEntity;
             txtKod.Text = entity.Kod;
             txtTcKimlikNo.Text = entity.TcKimlikNo;
             txtAdi.Text = entity.Adi;
@@ -84,7 +84,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.KisiForms
 
         protected override void GuncelNesneOlustur()
         {
-            CurrentEntity = new Kisi
+            CurrentEntity = new KisiTest
             {
                 Id = Id,
                 Kod = txtKod.Text,
@@ -137,15 +137,15 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.KisiForms
                 else if (sender == txtKimlikIlce)
                     sec.Sec(txtKimlikIlce, txtKimlikIl);
                 else if (sender == txtOzelKod1)
-                    sec.Sec(txtOzelKod1, KartTuru.Kisi);
+                    sec.Sec(txtOzelKod1, KartTuru.KisiTest);
                 else if (sender == txtOzelKod2)
-                    sec.Sec(txtOzelKod2, KartTuru.Kisi);
+                    sec.Sec(txtOzelKod2, KartTuru.KisiTest);
                 else if (sender == txtOzelKod3)
-                    sec.Sec(txtOzelKod3, KartTuru.Kisi);
+                    sec.Sec(txtOzelKod3, KartTuru.KisiTest);
                 else if (sender == txtOzelKod4)
-                    sec.Sec(txtOzelKod4, KartTuru.Kisi);
+                    sec.Sec(txtOzelKod4, KartTuru.KisiTest);
                 else if (sender == txtOzelKod5)
-                    sec.Sec(txtOzelKod5, KartTuru.Kisi);
+                    sec.Sec(txtOzelKod5, KartTuru.KisiTest);
         }
         protected override void Control_EnabledChange(object sender, EventArgs e)
         {

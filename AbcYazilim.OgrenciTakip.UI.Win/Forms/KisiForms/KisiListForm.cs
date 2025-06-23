@@ -13,7 +13,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.KisiForms
         public KisiListForm()
         {
             InitializeComponent();
-            Bll = new KisiBll();
+            Bll = new KisiTestBll();
             ShowItems = new BarItem[] { btnTahakkukYap, btnAnimeEkle };
         }
 
@@ -27,7 +27,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.KisiForms
 
         protected override void Listele()
         {
-            Tablo.GridControl.DataSource = ((KisiBll)Bll).List(FilterFunctions.Filter<Kisi>(AktifKartlariGoster));
+            Tablo.GridControl.DataSource = ((KisiTestBll)Bll).List(FilterFunctions.Filter<KisiTest>(AktifKartlariGoster));
         }
 
 
