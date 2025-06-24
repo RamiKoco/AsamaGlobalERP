@@ -75,9 +75,9 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.KisiForms
 
             using (var sec = new SelectFunctions())
                 if (sender == txtOzelKod1)
-                    sec.Sec(txtOzelKod1, KartTuru.KisiTest);
+                    sec.Sec(txtOzelKod1, KartTuru.Kisi);
                 else if (sender == txtOzelKod2)
-                    sec.Sec(txtOzelKod2, KartTuru.KisiTest);
+                    sec.Sec(txtOzelKod2, KartTuru.Kisi);
               
         }      
     }

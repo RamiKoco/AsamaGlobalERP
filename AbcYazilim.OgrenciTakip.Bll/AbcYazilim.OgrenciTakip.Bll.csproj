@@ -120,7 +120,6 @@
     <Compile Include="General\KardesBilgileriBll.cs" />
     <Compile Include="General\KasaBll.cs" />
     <Compile Include="General\KisiBll.cs" />
-    <Compile Include="General\KisiTestBll.cs" />
     <Compile Include="General\KitapTuruBll.cs" />
     <Compile Include="General\KontenjanBll.cs" />
     <Compile Include="General\KullaniciBirimYetkileriBll.cs" />

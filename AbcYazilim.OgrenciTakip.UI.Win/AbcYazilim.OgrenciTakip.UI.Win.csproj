@@ -487,18 +487,6 @@
     <Compile Include="Forms\KisiForms\KisiListForm.Designer.cs">
       <DependentUpon>KisiListForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\KisiTestForms\KisiTestEditForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\KisiTestForms\KisiTestEditForm.Designer.cs">
-      <DependentUpon>KisiTestEditForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\KisiTestForms\KisiTestListForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\KisiTestForms\KisiTestListForm.Designer.cs">
-      <DependentUpon>KisiTestListForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\KitapTuruForms\KitapTuruEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1511,12 +1499,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\KisiForms\KisiListForm.resx">
       <DependentUpon>KisiListForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\KisiTestForms\KisiTestEditForm.resx">
-      <DependentUpon>KisiTestEditForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\KisiTestForms\KisiTestListForm.resx">
-      <DependentUpon>KisiTestListForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\KitapTuruForms\KitapTuruEditForm.resx">
       <DependentUpon>KitapTuruEditForm.cs</DependentUpon>
