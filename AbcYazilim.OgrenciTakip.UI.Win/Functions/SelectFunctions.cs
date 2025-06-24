@@ -14,6 +14,7 @@ using AbcYazilim.OgrenciTakip.UI.Win.Forms.IlForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.IndirimTuruForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.IsyeriForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.KasaForms;
+using AbcYazilim.OgrenciTakip.UI.Win.Forms.KayitKaynakForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.KitapTuruForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.KontenjanForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.KullaniciForms;
@@ -259,6 +260,20 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Functions
                     }
                 }
                     break;
+
+
+                case "txtKayitKaynak":
+                    {
+                        var entity = (KayitKaynak)ShowListForms<KayitKaynakListForm>.ShowDialogListForm(KartTuru.KayitKaynak, _btnEdit.Id);
+                        if (entity != null)
+                        {
+                            _btnEdit.Id = entity.Id;
+                            _btnEdit.EditValue = entity.KayitKaynakAdi;
+                        }
+                    }
+                    break;
+
+
 
                 case "txtIsyeri":
                 {

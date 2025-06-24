@@ -22,6 +22,7 @@ using AbcYazilim.OgrenciTakip.UI.Win.Forms.IndirimTuruForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.IptalNedeniForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.IsyeriForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.KasaForms;
+using AbcYazilim.OgrenciTakip.UI.Win.Forms.KayitKaynakForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.KisiForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.KontenjanForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.KullaniciForms;
@@ -189,6 +190,8 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.GenelForms
                 ShowListForms<YazarListForm>.ShowListForm(KartTuru.Yazar);            
             else if (e.Item == btnKisiKartlari)
                 ShowListForms<KisiListForm>.ShowListForm(KartTuru.Kisi);
+            else if (e.Item == btnKayitKaynakKartlari)
+                ShowListForms<KayitKaynakListForm>.ShowListForm(KartTuru.KayitKaynak);
             //else if (e.Item == btnAjandaKartlari)
             //{
             //    Ajanda ajandaForm = new Ajanda();

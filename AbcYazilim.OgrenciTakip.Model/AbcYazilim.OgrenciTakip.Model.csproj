@@ -163,6 +163,7 @@
     <Compile Include="Entities\Isyeri.cs" />
     <Compile Include="Entities\KardesBilgileri.cs" />
     <Compile Include="Entities\Kasa.cs" />
+    <Compile Include="Entities\KayitKaynak.cs" />
     <Compile Include="Entities\Kisi.cs" />
     <Compile Include="Entities\KitapTuru.cs" />
     <Compile Include="Entities\Kontenjan.cs" />

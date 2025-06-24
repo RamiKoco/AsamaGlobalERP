@@ -43,6 +43,7 @@ namespace AbcYazilim.OgrenciTakip.Data.Contexts
         public DbSet<Rehber> Rehber { get; set; }
         public DbSet<SinifGrup> SinifGrup { get; set; }
         public DbSet<Meslek> Meslek { get; set; }
+        public DbSet<KayitKaynak> KayitKaynak { get; set; }
         public DbSet<Yakinlik> Yakinlik { get; set; }
         public DbSet<Isyeri> Isyeri { get; set; }
         public DbSet<Gorev> Gorev { get; set; }

@@ -8,8 +8,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace AbcYazilim.OgrenciTakip.Bll.General
@@ -29,6 +27,8 @@ namespace AbcYazilim.OgrenciTakip.Bll.General
                 Cinsiyet = x.Cinsiyet,
                 DogumTarihi = x.DogumTarihi,
                 Aciklama = x.Aciklama,
+                KayitKaynakId = x.KayitKaynakId,
+                KayitKaynakAdi = x.KayitKaynak.KayitKaynakAdi,
                 MeslekId = x.MeslekId,
                 MeslekAdi = x.Meslek.MeslekAdi,
                 OzelKod1Id = x.OzelKod1Id,
@@ -50,6 +50,7 @@ namespace AbcYazilim.OgrenciTakip.Bll.General
                 Cinsiyet = x.Cinsiyet,               
                 DogumTarihi = x.DogumTarihi,
                 Aciklama = x.Aciklama,
+                KayitKaynakAdi = x.KayitKaynak.KayitKaynakAdi,
                 MeslekAdi = x.Meslek.MeslekAdi,
                 OzelKod1Adi = x.OzelKod1.OzelKodAdi,
                 OzelKod2Adi = x.OzelKod2.OzelKodAdi,

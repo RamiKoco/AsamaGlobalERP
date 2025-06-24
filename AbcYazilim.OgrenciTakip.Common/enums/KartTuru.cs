@@ -170,5 +170,7 @@ namespace AbcYazilim.OgrenciTakip.Common.Enums
         Anime = 82,
         [Description("Kişi Kartı")]
         Kisi = 83,
+        [Description("Kaynak Kartı")]
+        KayitKaynak = 84,
     }
 }
