@@ -165,6 +165,7 @@
     <Compile Include="Entities\Kasa.cs" />
     <Compile Include="Entities\KayitKaynak.cs" />
     <Compile Include="Entities\Kisi.cs" />
+    <Compile Include="Entities\KisiGrubu.cs" />
     <Compile Include="Entities\KitapTuru.cs" />
     <Compile Include="Entities\Kontenjan.cs" />
     <Compile Include="Entities\Kullanici.cs" />

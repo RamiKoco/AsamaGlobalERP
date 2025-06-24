@@ -61,7 +61,7 @@
             this.txtAciklama = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls.MyMemoEdit();
             this.txtMeslek = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls.MyButtonEdit();
             this.txtSorumlu = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls.MyButtonEdit();
-            this.txtGrup = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls.MyButtonEdit();
+            this.txtKisiGrubu = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls.MyButtonEdit();
             this.txtOzelKod2 = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls.MyButtonEdit();
             this.txtOzelKod1 = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls.MyButtonEdit();
             this.txtDogumTarihi = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls.MyDateEdit();
@@ -109,7 +109,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtAciklama.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMeslek.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSorumlu.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtGrup.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtKisiGrubu.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtOzelKod2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtOzelKod1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDogumTarihi.Properties)).BeginInit();
@@ -251,7 +251,7 @@
             this.DataLayoutGenelBilgiler.Controls.Add(this.txtAciklama);
             this.DataLayoutGenelBilgiler.Controls.Add(this.txtMeslek);
             this.DataLayoutGenelBilgiler.Controls.Add(this.txtSorumlu);
-            this.DataLayoutGenelBilgiler.Controls.Add(this.txtGrup);
+            this.DataLayoutGenelBilgiler.Controls.Add(this.txtKisiGrubu);
             this.DataLayoutGenelBilgiler.Controls.Add(this.txtOzelKod2);
             this.DataLayoutGenelBilgiler.Controls.Add(this.txtOzelKod1);
             this.DataLayoutGenelBilgiler.Controls.Add(this.txtDogumTarihi);
@@ -352,24 +352,24 @@
             this.txtSorumlu.StyleController = this.DataLayoutGenelBilgiler;
             this.txtSorumlu.TabIndex = 5;
             // 
-            // txtGrup
+            // txtKisiGrubu
             // 
-            this.txtGrup.EnterMoveNextControl = true;
-            this.txtGrup.Id = null;
-            this.txtGrup.Location = new System.Drawing.Point(318, 28);
-            this.txtGrup.MenuManager = this.ribbonControl;
-            this.txtGrup.Name = "txtGrup";
-            this.txtGrup.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
-            this.txtGrup.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtGrup.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.txtKisiGrubu.EnterMoveNextControl = true;
+            this.txtKisiGrubu.Id = null;
+            this.txtKisiGrubu.Location = new System.Drawing.Point(318, 28);
+            this.txtKisiGrubu.MenuManager = this.ribbonControl;
+            this.txtKisiGrubu.Name = "txtKisiGrubu";
+            this.txtKisiGrubu.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
+            this.txtKisiGrubu.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtKisiGrubu.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.txtGrup.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.txtGrup.Size = new System.Drawing.Size(136, 20);
-            this.txtGrup.StatusBarAciklama = "Grup Seçiniz";
-            this.txtGrup.StatusBarKisaYol = "F4 :";
-            this.txtGrup.StatusBarKisaYolAciklama = "Seçim Yap";
-            this.txtGrup.StyleController = this.DataLayoutGenelBilgiler;
-            this.txtGrup.TabIndex = 4;
+            this.txtKisiGrubu.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.txtKisiGrubu.Size = new System.Drawing.Size(136, 20);
+            this.txtKisiGrubu.StatusBarAciklama = "Grup Seçiniz";
+            this.txtKisiGrubu.StatusBarKisaYol = "F4 :";
+            this.txtKisiGrubu.StatusBarKisaYolAciklama = "Seçim Yap";
+            this.txtKisiGrubu.StyleController = this.DataLayoutGenelBilgiler;
+            this.txtKisiGrubu.TabIndex = 4;
             // 
             // txtOzelKod2
             // 
@@ -425,7 +425,6 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.txtDogumTarihi.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.txtDogumTarihi.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTimeAdvancingCaret;
             this.txtDogumTarihi.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.DateTimeMaskManager));
             this.txtDogumTarihi.Properties.MaskSettings.Set("useAdvancingCaret", true);
             this.txtDogumTarihi.Size = new System.Drawing.Size(97, 20);
@@ -651,7 +650,7 @@
             // 
             this.layoutControlItem10.AppearanceItemCaption.ForeColor = System.Drawing.Color.Maroon;
             this.layoutControlItem10.AppearanceItemCaption.Options.UseForeColor = true;
-            this.layoutControlItem10.Control = this.txtGrup;
+            this.layoutControlItem10.Control = this.txtKisiGrubu;
             this.layoutControlItem10.Location = new System.Drawing.Point(254, 24);
             this.layoutControlItem10.Name = "layoutControlItem10";
             this.layoutControlItem10.OptionsTableLayoutItem.ColumnIndex = 3;
@@ -927,7 +926,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtAciklama.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMeslek.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSorumlu.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtGrup.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtKisiGrubu.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtOzelKod2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtOzelKod1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDogumTarihi.Properties.CalendarTimeProperties)).EndInit();
@@ -993,7 +992,7 @@
         private UserControls.Controls.MyButtonEdit txtOzelKod1;
         private UserControls.Controls.MyButtonEdit txtMeslek;
         private UserControls.Controls.MyButtonEdit txtSorumlu;
-        private UserControls.Controls.MyButtonEdit txtGrup;
+        private UserControls.Controls.MyButtonEdit txtKisiGrubu;
         private UserControls.Controls.MyMemoEdit txtAciklama;
         private UserControls.Controls.MyToogleSwitch tglDurum;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem10;

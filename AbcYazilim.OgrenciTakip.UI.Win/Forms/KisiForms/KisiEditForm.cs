@@ -47,9 +47,11 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.KisiForms
 
             txtKayitKaynak.Id = entity.KayitKaynakId;
             txtKayitKaynak.Text = entity.KayitKaynakAdi;
+
             txtMeslek.Id = entity.MeslekId;
             txtMeslek.Text = entity.MeslekAdi;
-
+            txtKisiGrubu.Id = entity.KisiGrubuId;
+            txtKisiGrubu.Text = entity.KisiGrubuAdi;
             txtOzelKod1.Id = entity.OzelKod1Id;
             txtOzelKod1.Text = entity.OzelKod1Adi;
             txtOzelKod2.Id = entity.OzelKod2Id;
@@ -70,6 +72,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.KisiForms
                 Aciklama = txtAciklama.Text,
                 KayitKaynakId = txtKayitKaynak.Id,
                 MeslekId = txtMeslek.Id,
+                KisiGrubuId = txtKisiGrubu.Id,
                 OzelKod1Id = txtOzelKod1.Id,
                 OzelKod2Id = txtOzelKod2.Id,                
                 Durum = tglDurum.IsOn
@@ -84,6 +87,8 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.KisiForms
             using (var sec = new SelectFunctions())
                 if (sender == txtMeslek)
                     sec.Sec(txtMeslek);
+                else if (sender == txtKisiGrubu)
+                    sec.Sec(txtKisiGrubu);
                 else if (sender == txtKayitKaynak)
                     sec.Sec(txtKayitKaynak);
                 else if (sender == txtOzelKod1)

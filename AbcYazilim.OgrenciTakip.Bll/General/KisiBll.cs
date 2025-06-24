@@ -29,6 +29,8 @@ namespace AbcYazilim.OgrenciTakip.Bll.General
                 Aciklama = x.Aciklama,
                 KayitKaynakId = x.KayitKaynakId,
                 KayitKaynakAdi = x.KayitKaynak.KayitKaynakAdi,
+                KisiGrubuId = x.KisiGrubuId,
+                KisiGrubuAdi = x.KisiGrubu.GrupAdi,
                 MeslekId = x.MeslekId,
                 MeslekAdi = x.Meslek.MeslekAdi,
                 OzelKod1Id = x.OzelKod1Id,
@@ -52,6 +54,7 @@ namespace AbcYazilim.OgrenciTakip.Bll.General
                 Aciklama = x.Aciklama,
                 KayitKaynakAdi = x.KayitKaynak.KayitKaynakAdi,
                 MeslekAdi = x.Meslek.MeslekAdi,
+                KisiGrubuAdi = x.KisiGrubu.GrupAdi,
                 OzelKod1Adi = x.OzelKod1.OzelKodAdi,
                 OzelKod2Adi = x.OzelKod2.OzelKodAdi,
               

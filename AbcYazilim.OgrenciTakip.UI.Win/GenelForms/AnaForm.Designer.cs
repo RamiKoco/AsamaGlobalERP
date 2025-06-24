@@ -135,6 +135,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.GenelForms
             this.ribbonPage11 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPage13 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.imgArkaPlanResim = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls.MyPictureEdit();
+            this.btnKisiGrubuKartlari = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgArkaPlanResim.Properties)).BeginInit();
@@ -212,9 +213,10 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.GenelForms
             this.btnAnimeKartlari,
             this.btnKisiTestKartlari,
             this.btnKisiKartlari,
-            this.btnKayitKaynakKartlari});
+            this.btnKayitKaynakKartlari,
+            this.btnKisiGrubuKartlari});
             this.ribbonControl.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl.MaxItemId = 70;
+            this.ribbonControl.MaxItemId = 71;
             this.ribbonControl.Name = "ribbonControl";
             this.ribbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
@@ -846,6 +848,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.GenelForms
             this.ribbonPageGroup3.ItemLinks.Add(this.btnGorevKartlari);
             this.ribbonPageGroup3.ItemLinks.Add(this.btnIletisimKartlari);
             this.ribbonPageGroup3.ItemLinks.Add(this.btnKayitKaynakKartlari);
+            this.ribbonPageGroup3.ItemLinks.Add(this.btnKisiGrubuKartlari);
             this.ribbonPageGroup3.Name = "ribbonPageGroup3";
             this.ribbonPageGroup3.Text = "Veli";
             // 
@@ -1064,6 +1067,14 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.GenelForms
             this.imgArkaPlanResim.StatusBarKisaYolAciklama = null;
             this.imgArkaPlanResim.TabIndex = 3;
             // 
+            // btnKisiGrubuKartlari
+            // 
+            this.btnKisiGrubuKartlari.Caption = "Grup Kartları";
+            this.btnKisiGrubuKartlari.Id = 70;
+            this.btnKisiGrubuKartlari.ImageOptions.Image = global::AbcYazilim.OgrenciTakip.UI.Win.Properties.Resources.contentarrangeinrows_16x16;
+            this.btnKisiGrubuKartlari.ImageOptions.LargeImage = global::AbcYazilim.OgrenciTakip.UI.Win.Properties.Resources.contentarrangeinrows_32x32;
+            this.btnKisiGrubuKartlari.Name = "btnKisiGrubuKartlari";
+            // 
             // AnaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1188,5 +1199,6 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.GenelForms
         private DevExpress.XtraBars.BarButtonItem btnKisiTestKartlari;
         private DevExpress.XtraBars.BarButtonItem btnKisiKartlari;
         private DevExpress.XtraBars.BarButtonItem btnKayitKaynakKartlari;
+        private DevExpress.XtraBars.BarButtonItem btnKisiGrubuKartlari;
     }
 }

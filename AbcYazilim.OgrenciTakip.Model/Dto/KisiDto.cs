@@ -9,6 +9,7 @@ namespace AbcYazilim.OgrenciTakip.Model.Dto
     [NotMapped]
     public class KisiS : Kisi
     {
+        public string KisiGrubuAdi { get; set; }
         public string KayitKaynakAdi { get; set; }
         public string MeslekAdi { get; set; }
         public string OzelKod1Adi { get; set; }
@@ -21,6 +22,7 @@ namespace AbcYazilim.OgrenciTakip.Model.Dto
         public Cinsiyet Cinsiyet { get; set; }
         public DateTime? DogumTarihi { get; set; }
         public string Aciklama { get; set; }
+        public string KisiGrubuAdi { get; set; }
         public string KayitKaynakAdi { get; set; }
         public string MeslekAdi { get; set; }
         public string OzelKod1Adi { get; set; }

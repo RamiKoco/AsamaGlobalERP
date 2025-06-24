@@ -501,6 +501,18 @@
     <Compile Include="Forms\KisiForms\KisiListForm.Designer.cs">
       <DependentUpon>KisiListForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\KisiGrubuForms\KisiGrubuEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\KisiGrubuForms\KisiGrubuEditForm.Designer.cs">
+      <DependentUpon>KisiGrubuEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\KisiGrubuForms\KisiGrubuListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\KisiGrubuForms\KisiGrubuListForm.Designer.cs">
+      <DependentUpon>KisiGrubuListForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\KitapTuruForms\KitapTuruEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1520,6 +1532,12 @@
     <EmbeddedResource Include="Forms\KisiForms\KisiListForm.resx">
       <DependentUpon>KisiListForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\KisiGrubuForms\KisiGrubuEditForm.resx">
+      <DependentUpon>KisiGrubuEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\KisiGrubuForms\KisiGrubuListForm.resx">
+      <DependentUpon>KisiGrubuListForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\KitapTuruForms\KitapTuruEditForm.resx">
       <DependentUpon>KitapTuruEditForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -2536,6 +2554,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\replace_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\contentarrangeinrows_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\contentarrangeinrows_16x16.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

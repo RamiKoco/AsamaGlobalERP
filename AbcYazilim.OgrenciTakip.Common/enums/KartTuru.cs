@@ -172,5 +172,7 @@ namespace AbcYazilim.OgrenciTakip.Common.Enums
         Kisi = 83,
         [Description("Kaynak Kartı")]
         KayitKaynak = 84,
+        [Description("Grup Kartı")]
+        KisiGrubu = 85,
     }
 }
