@@ -13,10 +13,8 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.KisiForms
         public KisiListForm()
         {
             InitializeComponent();
-            Bll = new KisiTestBll();
-            ShowItems = new BarItem[] { btnTahakkukYap, btnAnimeEkle };
+            Bll = new KisiBll();
         }
-
         protected override void DegiskenleriDoldur()
         {
             Tablo = tablo;
@@ -27,24 +25,8 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.KisiForms
 
         protected override void Listele()
         {
-            Tablo.GridControl.DataSource = ((KisiTestBll)Bll).List(FilterFunctions.Filter<KisiTest>(AktifKartlariGoster));
+            Tablo.GridControl.DataSource = ((KisiBll)Bll).List(FilterFunctions.Filter<Kisi>(AktifKartlariGoster));
         }
 
-
-        //protected override void AnimeEkle()
-        //{
-        //    var entity = tablo.GetRow<KisiL>().EntityConvert<Kisi>();
-
-        //    using (var bll = new AnimeBll())
-        //    {
-        //        var anime = bll.SingleSummary(x => x.OgrenciId == entity.Id && x.SubeId == AnaForm.SubeId && x.DonemId == AnaForm.DonemId);
-
-        //        if (anime != null)
-        //            ShowEditForms<AnimeEditForm>.ShowDialogEditForm(KartTuru.Anime, anime.Id, null);
-        //        else
-        //            ShowEditForms<AnimeEditForm>.ShowDialogEditForm(KartTuru.Anime, -1, entity);
-
-        //    }
-        //}
     }
 }

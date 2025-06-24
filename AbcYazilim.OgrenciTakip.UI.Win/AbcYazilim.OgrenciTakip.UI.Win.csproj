@@ -487,6 +487,18 @@
     <Compile Include="Forms\KisiForms\KisiListForm.Designer.cs">
       <DependentUpon>KisiListForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\KisiTestForms\KisiTestEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\KisiTestForms\KisiTestEditForm.Designer.cs">
+      <DependentUpon>KisiTestEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\KisiTestForms\KisiTestListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\KisiTestForms\KisiTestListForm.Designer.cs">
+      <DependentUpon>KisiTestListForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\KitapTuruForms\KitapTuruEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1500,6 +1512,12 @@
     <EmbeddedResource Include="Forms\KisiForms\KisiListForm.resx">
       <DependentUpon>KisiListForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\KisiTestForms\KisiTestEditForm.resx">
+      <DependentUpon>KisiTestEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\KisiTestForms\KisiTestListForm.resx">
+      <DependentUpon>KisiTestListForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\KitapTuruForms\KitapTuruEditForm.resx">
       <DependentUpon>KitapTuruEditForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -2486,6 +2504,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\switchtimescalesto_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\newemployee_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\newemployee_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\doctor_16x161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\country_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mobilephone2_16x161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\textbox_16x161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chart_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paste_16x16.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

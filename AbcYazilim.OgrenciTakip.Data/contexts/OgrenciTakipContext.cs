@@ -98,5 +98,6 @@ namespace AbcYazilim.OgrenciTakip.Data.Contexts
         public DbSet<Kurgu> Kurgu { get; set; }
         public DbSet<KitapTuru> KitapTuru { get; set; }
         public DbSet<KisiTest> KisiTest { get; set; }
+        public DbSet<Kisi> Kisi { get; set; }
     }
 }
