@@ -29,6 +29,8 @@ namespace AbcYazilim.OgrenciTakip.Bll.General
                 Cinsiyet = x.Cinsiyet,
                 DogumTarihi = x.DogumTarihi,
                 Aciklama = x.Aciklama,
+                MeslekId = x.MeslekId,
+                MeslekAdi = x.Meslek.MeslekAdi,
                 OzelKod1Id = x.OzelKod1Id,
                 OzelKod1Adi = x.OzelKod1.OzelKodAdi,
                 OzelKod2Id = x.OzelKod2Id,
@@ -48,6 +50,7 @@ namespace AbcYazilim.OgrenciTakip.Bll.General
                 Cinsiyet = x.Cinsiyet,               
                 DogumTarihi = x.DogumTarihi,
                 Aciklama = x.Aciklama,
+                MeslekAdi = x.Meslek.MeslekAdi,
                 OzelKod1Adi = x.OzelKod1.OzelKodAdi,
                 OzelKod2Adi = x.OzelKod2.OzelKodAdi,
               

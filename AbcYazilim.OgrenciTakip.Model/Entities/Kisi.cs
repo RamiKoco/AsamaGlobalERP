@@ -23,14 +23,14 @@ namespace AbcYazilim.OgrenciTakip.Model.Entities
         [StringLength(500)]
         public string Aciklama { get; set; }
         //public long? KayitKaynakId { get; set; }
-        //public long? SorumluPersonelId { get; set; }
-        //public long? MeslekId { get; set; }
+        //public long? SorumluPersonelId { get; set; }        
         //public long? EtiketId { get; set; }
         //public long? GrupId { get; set; }
+        public long? MeslekId { get; set; }
         public long? OzelKod1Id { get; set; }
         public long? OzelKod2Id { get; set; }
 
-        //public Meslek Meslek { get; set; }
+        public Meslek Meslek { get; set; }
         public OzelKod OzelKod1 { get; set; }
         public OzelKod OzelKod2 { get; set; }
     }

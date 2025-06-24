@@ -39,8 +39,9 @@
             this.colDogumTarihi = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colOzelKod1Adi = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colOzelKod2Adi = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
-            this.colId = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.colAciklama = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
+            this.colId = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.colMeslekAdi = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.gridBand1 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.gridBand2 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.gridBand3 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
@@ -125,6 +126,7 @@
             this.colCinsiyet,
             this.colDogumTarihi,
             this.colAciklama,
+            this.colMeslekAdi,
             this.colOzelKod1Adi,
             this.colOzelKod2Adi});
             this.tablo.GridControl = this.grid;
@@ -227,14 +229,6 @@
             this.colOzelKod2Adi.StatusBarKisaYolAciklama = null;
             this.colOzelKod2Adi.Visible = true;
             // 
-            // colId
-            // 
-            this.colId.Caption = "Id";
-            this.colId.FieldName = "Id";
-            this.colId.Name = "colId";
-            this.colId.OptionsColumn.AllowEdit = false;
-            this.colId.OptionsColumn.ShowInCustomizationForm = false;
-            // 
             // colAciklama
             // 
             this.colAciklama.Caption = "Açıklama";
@@ -246,6 +240,26 @@
             this.colAciklama.StatusBarKisaYolAciklama = null;
             this.colAciklama.Visible = true;
             this.colAciklama.Width = 211;
+            // 
+            // colId
+            // 
+            this.colId.Caption = "Id";
+            this.colId.FieldName = "Id";
+            this.colId.Name = "colId";
+            this.colId.OptionsColumn.AllowEdit = false;
+            this.colId.OptionsColumn.ShowInCustomizationForm = false;
+            // 
+            // colMeslekAdi
+            // 
+            this.colMeslekAdi.Caption = "Meslek";
+            this.colMeslekAdi.FieldName = "MeslekAdi";
+            this.colMeslekAdi.Name = "colMeslekAdi";
+            this.colMeslekAdi.OptionsColumn.AllowEdit = false;
+            this.colMeslekAdi.StatusBarAciklama = null;
+            this.colMeslekAdi.StatusBarKisaYol = null;
+            this.colMeslekAdi.StatusBarKisaYolAciklama = null;
+            this.colMeslekAdi.Visible = true;
+            this.colMeslekAdi.Width = 106;
             // 
             // gridBand1
             // 
@@ -270,11 +284,12 @@
             // 
             // gridBand3
             // 
-            this.gridBand3.Caption = "Ek Bilgiler";
+            this.gridBand3.Caption = "Kart Bilgileri";
+            this.gridBand3.Columns.Add(this.colMeslekAdi);
             this.gridBand3.Columns.Add(this.colAciklama);
             this.gridBand3.Name = "gridBand3";
             this.gridBand3.VisibleIndex = 2;
-            this.gridBand3.Width = 211;
+            this.gridBand3.Width = 317;
             // 
             // KisiListForm
             // 
@@ -314,5 +329,6 @@
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand1;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand2;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand3;
+        private UserControls.Grid.MyBandedGridColumn colMeslekAdi;
     }
 }

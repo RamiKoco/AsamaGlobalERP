@@ -44,6 +44,8 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.KisiForms
             txtCinsiyet.SelectedItem = entity.Cinsiyet.ToName();           
             txtDogumTarihi.EditValue = entity.DogumTarihi;
             txtAciklama.Text = entity.Aciklama;
+            txtMeslek.Id = entity.MeslekId;
+            txtMeslek.Text = entity.MeslekAdi;
             txtOzelKod1.Id = entity.OzelKod1Id;
             txtOzelKod1.Text = entity.OzelKod1Adi;
             txtOzelKod2.Id = entity.OzelKod2Id;
@@ -62,6 +64,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.KisiForms
                 Cinsiyet = txtCinsiyet.Text.GetEnum<Cinsiyet>(),               
                 DogumTarihi = (DateTime?)txtDogumTarihi.EditValue,
                 Aciklama = txtAciklama.Text,
+                MeslekId = txtMeslek.Id,
                 OzelKod1Id = txtOzelKod1.Id,
                 OzelKod2Id = txtOzelKod2.Id,                
                 Durum = tglDurum.IsOn
@@ -74,7 +77,9 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.KisiForms
             if (!(sender is ButtonEdit)) return;
 
             using (var sec = new SelectFunctions())
-                if (sender == txtOzelKod1)
+                 if (sender == txtMeslek)
+                        sec.Sec(txtMeslek);
+                else if (sender == txtOzelKod1)
                     sec.Sec(txtOzelKod1, KartTuru.Kisi);
                 else if (sender == txtOzelKod2)
                     sec.Sec(txtOzelKod2, KartTuru.Kisi);
