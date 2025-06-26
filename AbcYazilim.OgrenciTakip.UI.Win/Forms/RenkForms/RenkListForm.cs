@@ -5,28 +5,26 @@ using AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Functions;
 using AbcYazilim.OgrenciTakip.UI.Win.Show;
 
-
-namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.KisiForms
+namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.RenkForms
 {
-    public partial class KisiListForm : BaseListForm
+    public partial class RenkListForm :BaseListForm
     {
-        public KisiListForm()
+        public RenkListForm()
         {
             InitializeComponent();
-            Bll = new KisiBll();
+            Bll = new RenkBll();
         }
         protected override void DegiskenleriDoldur()
         {
             Tablo = tablo;
-            BaseKartTuru = KartTuru.Kisi;
-            FormShow = new ShowEditForms<KisiEditForm>();
+            BaseKartTuru = KartTuru.Renk;
+            FormShow = new ShowEditForms<RenkEditForm>();
             Navigator = longNavigator.Navigator;
         }
-
         protected override void Listele()
         {
-            Tablo.GridControl.DataSource = ((KisiBll)Bll).List(FilterFunctions.Filter<Kisi>(AktifKartlariGoster));
-        }
+            Tablo.GridControl.DataSource = ((RenkBll)Bll).List(FilterFunctions.Filter<Renk>(AktifKartlariGoster));
 
+        }
     }
 }

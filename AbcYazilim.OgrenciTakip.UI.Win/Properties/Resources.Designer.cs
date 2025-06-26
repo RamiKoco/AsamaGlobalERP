@@ -1273,6 +1273,26 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap newfeed_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("newfeed_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap newfeed_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("newfeed_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap newgroup_16x16 {
             get {
                 object obj = ResourceManager.GetObject("newgroup_16x16", resourceCulture);
@@ -1326,6 +1346,26 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Properties {
         internal static System.Drawing.Bitmap office_32x32 {
             get {
                 object obj = ResourceManager.GetObject("office_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap palette_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("palette_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap palette_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("palette_32x32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

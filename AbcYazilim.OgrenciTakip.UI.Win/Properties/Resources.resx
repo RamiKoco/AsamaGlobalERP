@@ -703,4 +703,16 @@
   <data name="contentarrangeinrows_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\contentarrangeinrows_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="newfeed_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\newfeed_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="newfeed_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\newfeed_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="palette_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\palette_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="palette_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\palette_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

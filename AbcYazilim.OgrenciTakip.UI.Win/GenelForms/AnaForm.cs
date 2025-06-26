@@ -10,6 +10,7 @@ using AbcYazilim.OgrenciTakip.UI.Win.Forms.AvukatForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.BankaForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.BankaHesapForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.CariForms;
+using AbcYazilim.OgrenciTakip.UI.Win.Forms.EtiketForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.EvrakForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.FaturaForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.GorevForms;
@@ -35,6 +36,7 @@ using AbcYazilim.OgrenciTakip.UI.Win.Forms.OkulForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.PromosyonForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.RamiDenemeForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.RehberForms;
+using AbcYazilim.OgrenciTakip.UI.Win.Forms.RenkForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.ServisForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.SinifForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.SinifGrupForms;
@@ -195,6 +197,11 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.GenelForms
                 ShowListForms<KayitKaynakListForm>.ShowListForm(KartTuru.KayitKaynak);
             else if (e.Item == btnKisiGrubuKartlari)
                 ShowListForms<KisiGrubuListForm>.ShowListForm(KartTuru.KisiGrubu);
+            else if (e.Item == btnEtiketKartlari)
+                ShowListForms<EtiketListForm>.ShowListForm(KartTuru.Etiket);
+            else if (e.Item == btnRenkKartlari)
+                ShowListForms<RenkListForm>.ShowListForm(KartTuru.Renk);
+
             //else if (e.Item == btnAjandaKartlari)
             //{
             //    Ajanda ajandaForm = new Ajanda();

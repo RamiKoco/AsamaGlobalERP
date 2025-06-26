@@ -174,5 +174,9 @@ namespace AbcYazilim.OgrenciTakip.Common.Enums
         KayitKaynak = 84,
         [Description("Grup Kartı")]
         KisiGrubu = 85,
+        [Description("Etiket Kartı")]
+        Etiket = 86,
+        [Description("Renk Kartı")]
+        Renk = 87,
     }
 }

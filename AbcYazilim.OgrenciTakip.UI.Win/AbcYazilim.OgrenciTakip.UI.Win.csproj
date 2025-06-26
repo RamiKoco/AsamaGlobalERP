@@ -285,6 +285,18 @@
     <Compile Include="Forms\DonemForms\DonemListForm.Designer.cs">
       <DependentUpon>DonemListForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\EtiketForms\EtiketEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EtiketForms\EtiketEditForm.Designer.cs">
+      <DependentUpon>EtiketEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EtiketForms\EtiketListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EtiketForms\EtiketListForm.Designer.cs">
+      <DependentUpon>EtiketListForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\EvrakForms\EvrakEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -740,6 +752,18 @@
     </Compile>
     <Compile Include="Forms\RehberForms\RehberListForm.Designer.cs">
       <DependentUpon>RehberListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RenkForms\RenkEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RenkForms\RenkEditForm.Designer.cs">
+      <DependentUpon>RenkEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RenkForms\RenkListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RenkForms\RenkListForm.Designer.cs">
+      <DependentUpon>RenkListForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\ServisForms\ServisEditForm.cs">
       <SubType>Form</SubType>
@@ -1424,6 +1448,12 @@
     <EmbeddedResource Include="Forms\DonemForms\DonemListForm.resx">
       <DependentUpon>DonemListForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EtiketForms\EtiketEditForm.resx">
+      <DependentUpon>EtiketEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EtiketForms\EtiketListForm.resx">
+      <DependentUpon>EtiketListForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\EvrakForms\EvrakEditForm.resx">
       <DependentUpon>EvrakEditForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -1651,6 +1681,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\RehberForms\RehberListForm.resx">
       <DependentUpon>RehberListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RenkForms\RenkEditForm.resx">
+      <DependentUpon>RenkEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RenkForms\RenkListForm.resx">
+      <DependentUpon>RenkListForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ServisForms\ServisEditForm.resx">
       <DependentUpon>ServisEditForm.cs</DependentUpon>
@@ -2560,6 +2596,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\contentarrangeinrows_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\newfeed_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\newfeed_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\palette_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\palette_16x16.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
