@@ -14,6 +14,7 @@ namespace AbcYazilim.OgrenciTakip.Model.Entities
         public string CariAdi { get; set; }
 
         [StringLength(14)]
+
         public string TcKimlikNo { get; set; }
 
         [StringLength(17)]
