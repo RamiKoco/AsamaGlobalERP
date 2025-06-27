@@ -5,8 +5,6 @@ using AbcYazilim.OgrenciTakip.Model.Dto;
 using AbcYazilim.OgrenciTakip.Model.Entities;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Functions;
-using AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls;
-using AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFormTable;
 using DevExpress.XtraEditors;
 using System;
 
@@ -17,15 +15,14 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.KisiForms
         public KisiEditForm()
         {
             InitializeComponent();
-            DataLayoutControl = myDataLayoutControl;
-            Bll = new KisiBll(myDataLayoutControl);
-            txtCinsiyet.Properties.Items.AddRange(EnumFunctions.GetEnumDescriptionList<Cinsiyet>());
-            txtKanGrubu.Properties.Items.AddRange(EnumFunctions.GetEnumDescriptionList<KanGrubu>());
+
+            DataLayoutControls = new[] { DataLayoutGenel, DataLayoutGenelBilgiler };
+            Bll = new KisiBll(DataLayoutGenelBilgiler);
+            //Herhangi bir hata olduğunda bunun içerisindeki controllere odaklan demiş olacaz
             BaseKartTuru = KartTuru.Kisi;
             EventsLoad();
-
+            txtCinsiyet.Properties.Items.AddRange(EnumFunctions.GetEnumDescriptionList<Cinsiyet>());          
         }
-
         public override void Yukle()
         {
             OldEntity = BaseIslemTuru == IslemTuru.EntityInsert ? new KisiS() : ((KisiBll)Bll).Single(FilterFunctions.Filter<Kisi>(Id));
@@ -35,50 +32,30 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.KisiForms
             if (BaseIslemTuru != IslemTuru.EntityInsert) return;
             Id = BaseIslemTuru.IdOlustur(OldEntity);
             txtKod.Text = ((KisiBll)Bll).YeniKodVer();
-            txtTcKimlikNo.Focus();
+            txtAdi.Focus();
         }
 
         protected override void NesneyiKontrollereBagla()
         {
             var entity = (KisiS)OldEntity;
-            txtKod.Text = entity.Kod;
-            txtTcKimlikNo.Text = entity.TcKimlikNo;
-            txtAdi.Text = entity.Adi;
-            txtSoyAdi.Text = entity.Soyadi;
-            txtCinsiyet.SelectedItem = entity.Cinsiyet.ToName();
-            txtTelefon.Text = entity.Telefon;
-            txtKanGrubu.SelectedItem = entity.KanGrubu.ToName();
-            txtBabaAdi.Text = entity.BabaAdi;
-            txtAnaAdi.Text = entity.AnaAdi;
-            txtDogumYeri.Text = entity.DogumYeri;
+            txtKod.Text = entity.Kod;          
+            txtAdi.Text = entity.Ad;
+            txtSoyAdi.Text = entity.Soyad;
+            txtCinsiyet.SelectedItem = entity.Cinsiyet.ToName();           
             txtDogumTarihi.EditValue = entity.DogumTarihi;
-            txtKanGrubu.SelectedItem = entity.KanGrubu.ToName();
-            txtKimlikSeri.Text = entity.KimlikSeri;
-            txtKimlikSiraNo.Text = entity.KimlikSiraNo;
-            txtKimlikIl.Id = entity.KimlikIlId;
-            txtKimlikIl.Text = entity.KimlikIlAdi;
-            txtKimlikIlce.Id = entity.KimlikIlceId;
-            txtKimlikIlce.Text = entity.KimlikIlceAdi;
-            txtKimlikMahalleKoy.Text = entity.KimlikMahalleKoy;
-            txtKimlikCiltNo.Text = entity.KimlikCiltNo;
-            txtKimlikAileSiraNo.Text = entity.KimlikAileSiraNo;
-            txtKimlikBireySiraNo.Text = entity.KimlikBireySiraNo;
-            txtKimlikVerildigiYer.Text = entity.KimlikVerildigiYer;
-            txtKimlikVerilisNedeni.Text = entity.KimlikVerilisNedeni;
-            txtKimlikKayitNo.Text = entity.KimlikKayitNo;
-            txtKimlikVerilisTarihi.EditValue = entity.KimlikVerilisTarihi;
-            imgResim.EditValue = entity.Resim;
+            txtAciklama.Text = entity.Aciklama;
+
+            txtKayitKaynak.Id = entity.KayitKaynakId;
+            txtKayitKaynak.Text = entity.KayitKaynakAdi;
+
+            txtMeslek.Id = entity.MeslekId;
+            txtMeslek.Text = entity.MeslekAdi;
+            txtKisiGrubu.Id = entity.KisiGrubuId;
+            txtKisiGrubu.Text = entity.KisiGrubuAdi;
             txtOzelKod1.Id = entity.OzelKod1Id;
             txtOzelKod1.Text = entity.OzelKod1Adi;
             txtOzelKod2.Id = entity.OzelKod2Id;
-            txtOzelKod2.Text = entity.OzelKod2Adi;
-            txtOzelKod3.Id = entity.OzelKod3Id;
-            txtOzelKod3.Text = entity.OzelKod3Adi;
-            txtOzelKod4.Id = entity.OzelKod4Id;
-            txtOzelKod4.Text = entity.OzelKod4Adi;
-            txtOzelKod5.Id = entity.OzelKod5Id;
-            txtOzelKod5.Text = entity.OzelKod5Adi;
-
+            txtOzelKod2.Text = entity.OzelKod2Adi;  
             tglDurum.IsOn = entity.Durum;
         }
 
@@ -87,79 +64,38 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.KisiForms
             CurrentEntity = new Kisi
             {
                 Id = Id,
-                Kod = txtKod.Text,
-                TcKimlikNo = txtTcKimlikNo.Text,
-                Adi = txtAdi.Text,
-                Soyadi = txtSoyAdi.Text,
-                Cinsiyet = txtCinsiyet.Text.GetEnum<Cinsiyet>(),
-                Telefon = txtTelefon.Text,
-                KanGrubu = txtKanGrubu.Text.GetEnum<KanGrubu>(),
-                BabaAdi = txtBabaAdi.Text,
-                AnaAdi = txtAnaAdi.Text,
-                DogumYeri = txtDogumYeri.Text,
+                Kod = txtKod.Text,               
+                Ad = txtAdi.Text,
+                Soyad = txtSoyAdi.Text,
+                Cinsiyet = txtCinsiyet.Text.GetEnum<Cinsiyet>(),               
                 DogumTarihi = (DateTime?)txtDogumTarihi.EditValue,
-                KimlikSeri = txtKimlikSeri.Text,
-                KimlikSiraNo = txtKimlikSiraNo.Text,
-                KimlikIlId = txtKimlikIl.Id,
-                KimlikIlceId = txtKimlikIlce.Id,
-                KimlikMahalleKoy = txtKimlikMahalleKoy.Text,
-                KimlikCiltNo = txtKimlikCiltNo.Text,
-                KimlikAileSiraNo = txtKimlikAileSiraNo.Text,
-                KimlikBireySiraNo = txtKimlikBireySiraNo.Text,
-                KimlikVerildigiYer = txtKimlikVerildigiYer.Text,
-                KimlikVerilisNedeni = txtKimlikVerilisNedeni.Text,
-                KimlikKayitNo = txtKimlikKayitNo.Text,
-                KimlikVerilisTarihi = (DateTime?)txtKimlikVerilisTarihi.EditValue,
-                Resim = (byte[])imgResim.EditValue,
+                Aciklama = txtAciklama.Text,
+                KayitKaynakId = txtKayitKaynak.Id,
+                MeslekId = txtMeslek.Id,
+                KisiGrubuId = txtKisiGrubu.Id,
                 OzelKod1Id = txtOzelKod1.Id,
-                OzelKod2Id = txtOzelKod2.Id,
-                OzelKod3Id = txtOzelKod3.Id,
-                OzelKod4Id = txtOzelKod4.Id,
-                OzelKod5Id = txtOzelKod5.Id,
+                OzelKod2Id = txtOzelKod2.Id,                
                 Durum = tglDurum.IsOn
             };
             ButonEnabledDurumu();
         }
-
-        //protected override void TabloYukle()
-        //{
-        //    tahakkukBilgileriTable.OwnerForm = this;
-        //    tahakkukBilgileriTable.Yukle();
-        //}
 
         protected override void SecimYap(object sender)
         {
             if (!(sender is ButtonEdit)) return;
 
             using (var sec = new SelectFunctions())
-                if (sender == txtKimlikIl)
-                    sec.Sec(txtKimlikIl);
-                else if (sender == txtKimlikIlce)
-                    sec.Sec(txtKimlikIlce, txtKimlikIl);
+                if (sender == txtMeslek)
+                    sec.Sec(txtMeslek);
+                else if (sender == txtKisiGrubu)
+                    sec.Sec(txtKisiGrubu);
+                else if (sender == txtKayitKaynak)
+                    sec.Sec(txtKayitKaynak);
                 else if (sender == txtOzelKod1)
                     sec.Sec(txtOzelKod1, KartTuru.Kisi);
                 else if (sender == txtOzelKod2)
                     sec.Sec(txtOzelKod2, KartTuru.Kisi);
-                else if (sender == txtOzelKod3)
-                    sec.Sec(txtOzelKod3, KartTuru.Kisi);
-                else if (sender == txtOzelKod4)
-                    sec.Sec(txtOzelKod4, KartTuru.Kisi);
-                else if (sender == txtOzelKod5)
-                    sec.Sec(txtOzelKod5, KartTuru.Kisi);
-        }
-        protected override void Control_EnabledChange(object sender, EventArgs e)
-        {
-            if (sender != txtKimlikIl) return;
-            txtKimlikIl.ControlEnabledChange(txtKimlikIlce);
-
-        }
-
-        protected override void Control_Enter(object sender, EventArgs e)
-        {
-            if (!(sender is MyPictureEdit resim)) return;
-            resim.Sec(resimMenu);
-
-        }
-       
+              
+        }      
     }
 }

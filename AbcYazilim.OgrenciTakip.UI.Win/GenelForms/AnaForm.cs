@@ -10,6 +10,7 @@ using AbcYazilim.OgrenciTakip.UI.Win.Forms.AvukatForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.BankaForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.BankaHesapForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.CariForms;
+using AbcYazilim.OgrenciTakip.UI.Win.Forms.EtiketForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.EvrakForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.FaturaForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.GorevForms;
@@ -22,7 +23,9 @@ using AbcYazilim.OgrenciTakip.UI.Win.Forms.IndirimTuruForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.IptalNedeniForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.IsyeriForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.KasaForms;
+using AbcYazilim.OgrenciTakip.UI.Win.Forms.KayitKaynakForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.KisiForms;
+using AbcYazilim.OgrenciTakip.UI.Win.Forms.KisiGrubuForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.KontenjanForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.KullaniciForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.MakbuzForms;
@@ -33,6 +36,7 @@ using AbcYazilim.OgrenciTakip.UI.Win.Forms.OkulForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.PromosyonForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.RamiDenemeForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.RehberForms;
+using AbcYazilim.OgrenciTakip.UI.Win.Forms.RenkForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.ServisForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.SinifForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.SinifGrupForms;
@@ -186,10 +190,17 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.GenelForms
             else if (e.Item == btnRamiDeneme)
                 ShowListForms<RamiDenemeListForm>.ShowListForm(KartTuru.Rami);
             else if (e.Item == btnYazar)
-                ShowListForms<YazarListForm>.ShowListForm(KartTuru.Yazar);
-
+                ShowListForms<YazarListForm>.ShowListForm(KartTuru.Yazar);            
             else if (e.Item == btnKisiKartlari)
                 ShowListForms<KisiListForm>.ShowListForm(KartTuru.Kisi);
+            else if (e.Item == btnKayitKaynakKartlari)
+                ShowListForms<KayitKaynakListForm>.ShowListForm(KartTuru.KayitKaynak);
+            else if (e.Item == btnKisiGrubuKartlari)
+                ShowListForms<KisiGrubuListForm>.ShowListForm(KartTuru.KisiGrubu);
+            else if (e.Item == btnEtiketKartlari)
+                ShowListForms<EtiketListForm>.ShowListForm(KartTuru.Etiket);
+            else if (e.Item == btnRenkKartlari)
+                ShowListForms<RenkListForm>.ShowListForm(KartTuru.Renk);
 
             //else if (e.Item == btnAjandaKartlari)
             //{

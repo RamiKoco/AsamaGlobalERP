@@ -93,6 +93,7 @@
     <Compile Include="General\DonemBll.cs" />
     <Compile Include="General\DonemParametreBll.cs" />
     <Compile Include="General\EposBilgileriBll.cs" />
+    <Compile Include="General\EtiketBll.cs" />
     <Compile Include="General\EvrakBilgileriBll.cs" />
     <Compile Include="General\EvrakBll.cs" />
     <Compile Include="General\FaturaBll.cs" />
@@ -119,7 +120,9 @@
     <Compile Include="General\IsyeriBll.cs" />
     <Compile Include="General\KardesBilgileriBll.cs" />
     <Compile Include="General\KasaBll.cs" />
+    <Compile Include="General\KayitKaynakBll.cs" />
     <Compile Include="General\KisiBll.cs" />
+    <Compile Include="General\KisiGrubuBll.cs" />
     <Compile Include="General\KitapTuruBll.cs" />
     <Compile Include="General\KontenjanBll.cs" />
     <Compile Include="General\KullaniciBirimYetkileriBll.cs" />
@@ -147,6 +150,7 @@
     <Compile Include="General\RamiDenemeBll.cs" />
     <Compile Include="General\RaporBll.cs" />
     <Compile Include="General\RehberBll.cs" />
+    <Compile Include="General\RenkBll.cs" />
     <Compile Include="General\RolBll.cs" />
     <Compile Include="General\RolYetkileriBll.cs" />
     <Compile Include="General\ServisBll.cs" />

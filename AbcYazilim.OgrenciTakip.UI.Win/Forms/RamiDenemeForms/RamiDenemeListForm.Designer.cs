@@ -35,7 +35,12 @@
             this.colId = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
             this.colKod = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
             this.colAd = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
+            this.colSoyad = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
+            this.colCinsiyet = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
+            this.colOzelKod1Adi = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
+            this.colOzelKod2Adi = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
             this.colAciklama = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
+            this.colTelefon = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablo)).BeginInit();
@@ -44,7 +49,7 @@
             // ribbonControl
             // 
             this.ribbonControl.ExpandCollapseItem.Id = 0;
-            this.ribbonControl.Size = new System.Drawing.Size(913, 135);
+            this.ribbonControl.Size = new System.Drawing.Size(1108, 135);
             this.ribbonControl.Toolbar.ShowCustomizeItem = false;
             // 
             // btnGonder
@@ -71,7 +76,7 @@
             this.longNavigator.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.longNavigator.Location = new System.Drawing.Point(0, 407);
             this.longNavigator.Name = "longNavigator";
-            this.longNavigator.Size = new System.Drawing.Size(913, 24);
+            this.longNavigator.Size = new System.Drawing.Size(1108, 24);
             this.longNavigator.TabIndex = 2;
             // 
             // grid
@@ -81,7 +86,7 @@
             this.grid.MainView = this.tablo;
             this.grid.MenuManager = this.ribbonControl;
             this.grid.Name = "grid";
-            this.grid.Size = new System.Drawing.Size(913, 272);
+            this.grid.Size = new System.Drawing.Size(1108, 272);
             this.grid.TabIndex = 3;
             this.grid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.tablo});
@@ -102,6 +107,11 @@
             this.colId,
             this.colKod,
             this.colAd,
+            this.colSoyad,
+            this.colCinsiyet,
+            this.colTelefon,
+            this.colOzelKod1Adi,
+            this.colOzelKod2Adi,
             this.colAciklama});
             this.tablo.GridControl = this.grid;
             this.tablo.Name = "tablo";
@@ -151,7 +161,7 @@
             // 
             // colAd
             // 
-            this.colAd.Caption = "myGridColumn1";
+            this.colAd.Caption = "Ad";
             this.colAd.FieldName = "Ad";
             this.colAd.Name = "colAd";
             this.colAd.OptionsColumn.AllowEdit = false;
@@ -161,11 +171,63 @@
             this.colAd.StatusBarKisaYolAciklama = null;
             this.colAd.Visible = true;
             this.colAd.VisibleIndex = 1;
-            this.colAd.Width = 250;
+            this.colAd.Width = 145;
+            // 
+            // colSoyad
+            // 
+            this.colSoyad.Caption = "Soyad";
+            this.colSoyad.FieldName = "Soyadi";
+            this.colSoyad.Name = "colSoyad";
+            this.colSoyad.OptionsColumn.AllowEdit = false;
+            this.colSoyad.StatusBarAciklama = null;
+            this.colSoyad.StatusBarKisaYol = null;
+            this.colSoyad.StatusBarKisaYolAciklama = null;
+            this.colSoyad.Visible = true;
+            this.colSoyad.VisibleIndex = 2;
+            this.colSoyad.Width = 149;
+            // 
+            // colCinsiyet
+            // 
+            this.colCinsiyet.Caption = "Cinsiyet";
+            this.colCinsiyet.FieldName = "Cinsiyet";
+            this.colCinsiyet.Name = "colCinsiyet";
+            this.colCinsiyet.OptionsColumn.AllowEdit = false;
+            this.colCinsiyet.StatusBarAciklama = null;
+            this.colCinsiyet.StatusBarKisaYol = null;
+            this.colCinsiyet.StatusBarKisaYolAciklama = null;
+            this.colCinsiyet.Visible = true;
+            this.colCinsiyet.VisibleIndex = 3;
+            this.colCinsiyet.Width = 103;
+            // 
+            // colOzelKod1Adi
+            // 
+            this.colOzelKod1Adi.Caption = "Özel Kod-1";
+            this.colOzelKod1Adi.FieldName = "OzelKod1Adi";
+            this.colOzelKod1Adi.Name = "colOzelKod1Adi";
+            this.colOzelKod1Adi.OptionsColumn.AllowEdit = false;
+            this.colOzelKod1Adi.StatusBarAciklama = null;
+            this.colOzelKod1Adi.StatusBarKisaYol = null;
+            this.colOzelKod1Adi.StatusBarKisaYolAciklama = null;
+            this.colOzelKod1Adi.Visible = true;
+            this.colOzelKod1Adi.VisibleIndex = 5;
+            this.colOzelKod1Adi.Width = 100;
+            // 
+            // colOzelKod2Adi
+            // 
+            this.colOzelKod2Adi.Caption = "Özel Kod-2";
+            this.colOzelKod2Adi.FieldName = "OzelKod2Adi";
+            this.colOzelKod2Adi.Name = "colOzelKod2Adi";
+            this.colOzelKod2Adi.OptionsColumn.AllowEdit = false;
+            this.colOzelKod2Adi.StatusBarAciklama = null;
+            this.colOzelKod2Adi.StatusBarKisaYol = null;
+            this.colOzelKod2Adi.StatusBarKisaYolAciklama = null;
+            this.colOzelKod2Adi.Visible = true;
+            this.colOzelKod2Adi.VisibleIndex = 6;
+            this.colOzelKod2Adi.Width = 93;
             // 
             // colAciklama
             // 
-            this.colAciklama.Caption = "myGridColumn2";
+            this.colAciklama.Caption = "Açıklama";
             this.colAciklama.FieldName = "Aciklama";
             this.colAciklama.Name = "colAciklama";
             this.colAciklama.OptionsColumn.AllowEdit = false;
@@ -174,14 +236,27 @@
             this.colAciklama.StatusBarKisaYol = null;
             this.colAciklama.StatusBarKisaYolAciklama = null;
             this.colAciklama.Visible = true;
-            this.colAciklama.VisibleIndex = 2;
-            this.colAciklama.Width = 450;
+            this.colAciklama.VisibleIndex = 7;
+            this.colAciklama.Width = 321;
+            // 
+            // colTelefon
+            // 
+            this.colTelefon.Caption = "Telefon";
+            this.colTelefon.FieldName = "Telefon";
+            this.colTelefon.Name = "colTelefon";
+            this.colTelefon.OptionsColumn.AllowEdit = false;
+            this.colTelefon.StatusBarAciklama = null;
+            this.colTelefon.StatusBarKisaYol = null;
+            this.colTelefon.StatusBarKisaYolAciklama = null;
+            this.colTelefon.Visible = true;
+            this.colTelefon.VisibleIndex = 4;
+            this.colTelefon.Width = 88;
             // 
             // RamiDenemeListForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(913, 455);
+            this.ClientSize = new System.Drawing.Size(1108, 455);
             this.Controls.Add(this.grid);
             this.Controls.Add(this.longNavigator);
             this.IconOptions.ShowIcon = false;
@@ -207,5 +282,10 @@
         private UserControls.Grid.MyGridColumn colKod;
         private UserControls.Grid.MyGridColumn colAd;
         private UserControls.Grid.MyGridColumn colAciklama;
+        private UserControls.Grid.MyGridColumn colSoyad;
+        private UserControls.Grid.MyGridColumn colOzelKod1Adi;
+        private UserControls.Grid.MyGridColumn colOzelKod2Adi;
+        private UserControls.Grid.MyGridColumn colCinsiyet;
+        private UserControls.Grid.MyGridColumn colTelefon;
     }
 }

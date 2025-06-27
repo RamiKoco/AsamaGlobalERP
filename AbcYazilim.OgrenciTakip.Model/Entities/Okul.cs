@@ -19,14 +19,14 @@ namespace AbcYazilim.OgrenciTakip.Model.Entities
         [ZorunluAlan("İlçe Adı", "txtIlce")]
         public long IlceId { get; set; }
 
-        [ZorunluAlan("Mahalle Adı", "txtMahalle")]
-        public long MahalleId { get; set; }
+        //[ZorunluAlan("Mahalle Adı", "txtMahalle")]
+        //public long MahalleId { get; set; }
 
         [StringLength(500)] 
         public string Aciklama { get; set; }
 
         public Il Il { get; set; }
         public Ilce Ilce { get; set; }
-        public Mahalle Mahalle { get; set; }
+        //public Mahalle Mahalle { get; set; }
     }
 }

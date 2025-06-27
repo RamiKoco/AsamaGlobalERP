@@ -42,8 +42,8 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.OkulForms
             txtIl.Text = entity.IlAdi;
             txtIlce.Id = entity.IlceId;
             txtIlce.Text = entity.IlceAdi;
-            txtMahalle.Id = entity.MahalleId;
-            txtMahalle.Text = entity.MahalleAdi;
+            //txtMahalle.Id = entity.MahalleId;
+            //txtMahalle.Text = entity.MahalleAdi;
             txtAciklama.Text = entity.Aciklama;
             tglDurum.IsOn = entity.Durum;
         }
@@ -57,7 +57,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.OkulForms
                 OkulAdi = txtOkulAdi.Text,
                 IlId = Convert.ToInt64(txtIl.Id),
                 IlceId = Convert.ToInt64(txtIlce.Id),
-                MahalleId = Convert.ToInt64(txtMahalle.Id),
+                //MahalleId = Convert.ToInt64(txtMahalle.Id),
                 Aciklama = txtAciklama.Text,
                 Durum = tglDurum.IsOn
             };
