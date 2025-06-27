@@ -4,6 +4,8 @@ using AbcYazilim.OgrenciTakip.Model.Entities;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Functions;
 using AbcYazilim.OgrenciTakip.UI.Win.Show;
+using DevExpress.XtraEditors.Repository;
+using DevExpress.XtraEditors.Controls;
 
 namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.RenkForms
 {
@@ -13,6 +15,8 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.RenkForms
         {
             InitializeComponent();
             Bll = new RenkBll();
+            //tablo.RowCellStyle += tablo_RowCellStyle; // <-- bu satırı ekle
+            GridRenkAyarla();
         }
         protected override void DegiskenleriDoldur()
         {
@@ -20,11 +24,42 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.RenkForms
             BaseKartTuru = KartTuru.Renk;
             FormShow = new ShowEditForms<RenkEditForm>();
             Navigator = longNavigator.Navigator;
+          
         }
         protected override void Listele()
         {
-            Tablo.GridControl.DataSource = ((RenkBll)Bll).List(FilterFunctions.Filter<Renk>(AktifKartlariGoster));
+            Tablo.GridControl.DataSource = ((RenkBll)Bll).List(FilterFunctions.Filter<Renk>(AktifKartlariGoster));          
 
         }
+        private void GridRenkAyarla()
+        {           
+            var colorEdit = new RepositoryItemColorEdit
+            {
+                ReadOnly = true,
+                ShowColorDialog = false,
+                TextEditStyle = TextEditStyles.DisableTextEditor
+            };
+
+            colForeColor.ColumnEdit = colorEdit;
+
+            // Sayısal değeri gizle, sadece renk kutusu göster
+            tablo.CustomColumnDisplayText += (s, e) =>
+            {
+                if (e.Column.FieldName == "ForeColor")
+                    e.DisplayText = "";
+            };
+        }
+
+        ///////// Yazıları etkileyen Renk kodu//////////
+        //private void tablo_RowCellStyle(object sender, RowCellStyleEventArgs e)
+        //{
+        //    if (e.Column.FieldName != "RenkAdi") return;
+
+        //    var view = sender as GridView;
+        //    var renk = view.GetRowCellValue(e.RowHandle, "ForeColor");
+
+        //    if (renk != null && int.TryParse(renk.ToString(), out int argb))
+        //        e.Appearance.ForeColor = Color.FromArgb(argb);
+        //}
     }
 }

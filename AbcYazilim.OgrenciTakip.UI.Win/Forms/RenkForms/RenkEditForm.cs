@@ -1,8 +1,11 @@
 ﻿using AbcYazilim.OgrenciTakip.Bll.General;
 using AbcYazilim.OgrenciTakip.Common.Enums;
+using AbcYazilim.OgrenciTakip.Model.Dto;
 using AbcYazilim.OgrenciTakip.Model.Entities;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Functions;
+using DevExpress.XtraEditors;
+using System.Drawing;
 
 
 namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.RenkForms
@@ -21,9 +24,9 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.RenkForms
 
         public override void Yukle()
         {
-            OldEntity = BaseIslemTuru == IslemTuru.EntityInsert ? new Renk() : ((RenkBll)Bll).Single(FilterFunctions.Filter<Renk>(Id));
+            OldEntity = BaseIslemTuru == IslemTuru.EntityInsert ? new RenkS() : ((RenkBll)Bll).Single(FilterFunctions.Filter<Renk>(Id));
             NesneyiKontrollereBagla();
-
+            TabloYukle();
             if (BaseIslemTuru != IslemTuru.EntityInsert) return;
             Id = BaseIslemTuru.IdOlustur(OldEntity);
             txtKod.Text = ((RenkBll)Bll).YeniKodVer();
@@ -31,10 +34,18 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.RenkForms
         }
         protected override void NesneyiKontrollereBagla()
         {
-            var entity = (Renk)OldEntity;
+            var entity = (RenkS)OldEntity;
 
             txtKod.Text = entity.Kod;
-            txtRenkAdi.Text = entity.RenkAdi;
+            txtRenkAdi.Text = entity.RenkAdi;          
+            txtRenkKodu.Text = entity.RenkKodu;          
+            txtForeColor.Color = Color.FromArgb(entity.ForeColor);
+            txtRenkAdi.ForeColor = Color.FromArgb(entity.ForeColor); // <- BURASI!
+            txtAciklama.Text = entity.Aciklama;
+            txtOzelKod1.Id = entity.OzelKod1Id;
+            txtOzelKod1.Text = entity.OzelKod1Adi;
+            txtOzelKod2.Id = entity.OzelKod2Id;
+            txtOzelKod2.Text = entity.OzelKod2Adi;
             tglDurum.IsOn = entity.Durum;
 
         }
@@ -44,11 +55,28 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.RenkForms
             {
                 Id = Id,
                 Kod = txtKod.Text,
-                RenkAdi = txtRenkAdi.Text,
+                RenkAdi = txtRenkAdi.Text,               
+                RenkKodu = txtForeColor.Text,               
+                ForeColor = txtForeColor.Color.ToArgb(),
+                Aciklama = txtAciklama.Text,
+                OzelKod1Id = txtOzelKod1.Id,
+                OzelKod2Id = txtOzelKod2.Id,
                 Durum = tglDurum.IsOn
             };
             ButonEnabledDurumu();
         }
 
+        protected override void SecimYap(object sender)
+        {
+            if (!(sender is ButtonEdit)) return;
+
+            using (var sec = new SelectFunctions())
+                
+                if (sender == txtOzelKod1)
+                    sec.Sec(txtOzelKod1, KartTuru.Renk);
+                else if (sender == txtOzelKod2)
+                    sec.Sec(txtOzelKod2, KartTuru.Renk);
+
+        }
     }
 }

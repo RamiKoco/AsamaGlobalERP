@@ -118,6 +118,7 @@
     <Compile Include="Dto\RamiDenemeDto.cs" />
     <Compile Include="Dto\RaporDto.cs" />
     <Compile Include="Dto\RaporlarDto.cs" />
+    <Compile Include="Dto\RenkDto.cs" />
     <Compile Include="Dto\RolYetkileriDto.cs" />
     <Compile Include="Dto\SinavBilgileriDto.cs" />
     <Compile Include="Dto\SinifDto.cs" />

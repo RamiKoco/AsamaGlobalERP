@@ -6,6 +6,7 @@ using AbcYazilim.OgrenciTakip.Model.Entities;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Functions;
 using DevExpress.XtraEditors;
+using System.Drawing;
 
 namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.EtiketForms
 {
@@ -31,14 +32,17 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.EtiketForms
             Id = BaseIslemTuru.IdOlustur(OldEntity);
             txtKod.Text = ((EtiketBll)Bll).YeniKodVer();
             txtEtiketAdi.Focus();
+
         }
 
         protected override void NesneyiKontrollereBagla()
         {
             var entity = (EtiketS)OldEntity;
 
-            txtKod.Text = entity.Kod;
+            txtKod.Text = entity.Kod; 
             txtEtiketAdi.Text = entity.Ad;
+            txtTVCForeColor.Color = Color.FromArgb(entity.TVCForeColor);
+            txtEtiketAdi.ForeColor = Color.FromArgb(entity.TVCForeColor); // <- BURASI!
             txtKayitTuru.SelectedItem = entity.KayitTuru.ToName();
             txtRenk.Id = entity.RenkId;
             txtRenk.Text = entity.RenkAdi;
@@ -52,6 +56,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.EtiketForms
                 Id = Id,
                 Kod = txtKod.Text,
                 Ad = txtEtiketAdi.Text,
+                TVCForeColor = txtTVCForeColor.Color.ToArgb(),         
                 KayitTuru = txtKayitTuru.Text.GetEnum<KayitTuru>(),
                 RenkId= txtRenk.Id,
                 Durum = tglDurum.IsOn

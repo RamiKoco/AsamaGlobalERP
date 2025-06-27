@@ -24,6 +24,7 @@ namespace AbcYazilim.OgrenciTakip.Bll.General
                 Id = x.Id,
                 Kod = x.Kod,
                 Ad = x.Ad,
+                TVCForeColor=x.TVCForeColor,
                 KayitTuru = x.KayitTuru,              
                 RenkId = x.RenkId,
                 RenkAdi = x.Renk.RenkAdi,               
@@ -38,6 +39,7 @@ namespace AbcYazilim.OgrenciTakip.Bll.General
                 Id = x.Id,
                 Kod = x.Kod,
                 Ad = x.Ad,
+                TVCForeColor = x.TVCForeColor,
                 KayitTuru = x.KayitTuru,
                 RenkAdi = x.Renk.RenkAdi,  
             }).OrderBy(x => x.Kod).ToList();

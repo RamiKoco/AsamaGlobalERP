@@ -13,7 +13,8 @@ namespace AbcYazilim.OgrenciTakip.Model.Dto
     }
     public class EtiketL : BaseEntity
     {
-        public string Ad { get; set; }    
+        public string Ad { get; set; }
+        public int TVCForeColor { get; set; }
         public KayitTuru KayitTuru { get; set; }   
         public string RenkAdi { get; set; }
     }
