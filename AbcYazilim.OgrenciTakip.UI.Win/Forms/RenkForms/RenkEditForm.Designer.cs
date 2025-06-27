@@ -116,7 +116,7 @@
             this.txtRenkKodu.Size = new System.Drawing.Size(196, 20);
             this.txtRenkKodu.StatusBarAciklama = "Renk Adı Giriniz.";
             this.txtRenkKodu.StyleController = this.myDataLayoutControl;
-            this.txtRenkKodu.TabIndex = 13;
+            this.txtRenkKodu.TabIndex = 6;
             this.txtRenkKodu.Visible = false;
             // 
             // txtOzelKod2
@@ -136,7 +136,7 @@
             this.txtOzelKod2.StatusBarKisaYol = "F4 :";
             this.txtOzelKod2.StatusBarKisaYolAciklama = "Seçim Yap";
             this.txtOzelKod2.StyleController = this.myDataLayoutControl;
-            this.txtOzelKod2.TabIndex = 12;
+            this.txtOzelKod2.TabIndex = 2;
             // 
             // txtAciklama
             // 
@@ -150,7 +150,7 @@
             this.txtAciklama.Size = new System.Drawing.Size(470, 44);
             this.txtAciklama.StatusBarAciklama = "Açıklama Giriniz.";
             this.txtAciklama.StyleController = this.myDataLayoutControl;
-            this.txtAciklama.TabIndex = 11;
+            this.txtAciklama.TabIndex = 4;
             // 
             // txtOzelKod1
             // 
@@ -169,7 +169,7 @@
             this.txtOzelKod1.StatusBarKisaYol = "F4 :";
             this.txtOzelKod1.StatusBarKisaYolAciklama = "Seçim Yap";
             this.txtOzelKod1.StyleController = this.myDataLayoutControl;
-            this.txtOzelKod1.TabIndex = 10;
+            this.txtOzelKod1.TabIndex = 3;
             // 
             // txtForeColor
             // 
@@ -188,7 +188,7 @@
             this.txtForeColor.StatusBarKisaYol = null;
             this.txtForeColor.StatusBarKisaYolAciklama = null;
             this.txtForeColor.StyleController = this.myDataLayoutControl;
-            this.txtForeColor.TabIndex = 4;
+            this.txtForeColor.TabIndex = 1;
             // 
             // txtKod
             // 
@@ -206,7 +206,7 @@
             this.txtKod.Size = new System.Drawing.Size(132, 20);
             this.txtKod.StatusBarAciklama = "Kod Giriniz";
             this.txtKod.StyleController = this.myDataLayoutControl;
-            this.txtKod.TabIndex = 2;
+            this.txtKod.TabIndex = 7;
             // 
             // txtRenkAdi
             // 
@@ -238,7 +238,7 @@
             this.tglDurum.Size = new System.Drawing.Size(73, 20);
             this.tglDurum.StatusBarAciklama = "Kartın Kullanım Durumunu Seçiniz.";
             this.tglDurum.StyleController = this.myDataLayoutControl;
-            this.tglDurum.TabIndex = 1;
+            this.tglDurum.TabIndex = 5;
             // 
             // Root
             // 
