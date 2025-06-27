@@ -18,7 +18,7 @@ namespace AbcYazilim.OgrenciTakip.Model.Entities
         public string Aciklama { get; set; }
 
         public Kurgu Kurgu { get; set; }
-        public KitapTuru.KitapTuru KitapTuru { get; set; } // Fully qualify the KitapTuru type
+        public KitapTuru.KitapTuru KitapTuru { get; set; } // Fully qualify the KitapTuru type cccd
         public OzelKod OzelKod1 { get; set; }
         public OzelKod OzelKod2 { get; set; }
     }
