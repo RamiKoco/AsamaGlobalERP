@@ -34,30 +34,30 @@
             DevExpress.XtraLayout.RowDefinition rowDefinition1 = new DevExpress.XtraLayout.RowDefinition();
             DevExpress.XtraLayout.RowDefinition rowDefinition2 = new DevExpress.XtraLayout.RowDefinition();
             this.myDataLayoutControl = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls.MyDataLayoutControl();
-            this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.tglDurum = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls.MyToogleSwitch();
-            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.txtRenkAdi = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls.MyTextEdit();
-            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.txtKod = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls.MyKodTextEdit();
+            this.txtRenkAdi = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls.MyTextEdit();
+            this.tglDurum = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls.MyToogleSwitch();
+            this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.resimMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.myDataLayoutControl)).BeginInit();
             this.myDataLayoutControl.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tglDurum.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtRenkAdi.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKod.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtRenkAdi.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tglDurum.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbonControl
             // 
             this.ribbonControl.ExpandCollapseItem.Id = 0;
-            this.ribbonControl.Size = new System.Drawing.Size(411, 135);
+            this.ribbonControl.Size = new System.Drawing.Size(426, 135);
             this.ribbonControl.Toolbar.ShowCustomizeItem = false;
             // 
             // myDataLayoutControl
@@ -70,9 +70,59 @@
             this.myDataLayoutControl.Name = "myDataLayoutControl";
             this.myDataLayoutControl.OptionsFocus.EnableAutoTabOrder = false;
             this.myDataLayoutControl.Root = this.Root;
-            this.myDataLayoutControl.Size = new System.Drawing.Size(411, 73);
+            this.myDataLayoutControl.Size = new System.Drawing.Size(426, 71);
             this.myDataLayoutControl.TabIndex = 0;
             this.myDataLayoutControl.Text = "myDataLayoutControl1";
+            // 
+            // txtKod
+            // 
+            this.txtKod.EnterMoveNextControl = true;
+            this.txtKod.Location = new System.Drawing.Point(43, 12);
+            this.txtKod.MenuManager = this.ribbonControl;
+            this.txtKod.Name = "txtKod";
+            this.txtKod.Properties.Appearance.BackColor = System.Drawing.Color.PaleGoldenrod;
+            this.txtKod.Properties.Appearance.Options.UseBackColor = true;
+            this.txtKod.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtKod.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.txtKod.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
+            this.txtKod.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtKod.Properties.MaxLength = 20;
+            this.txtKod.Size = new System.Drawing.Size(165, 20);
+            this.txtKod.StatusBarAciklama = "Kod Giriniz";
+            this.txtKod.StyleController = this.myDataLayoutControl;
+            this.txtKod.TabIndex = 2;
+            // 
+            // txtRenkAdi
+            // 
+            this.txtRenkAdi.EnterMoveNextControl = true;
+            this.txtRenkAdi.Location = new System.Drawing.Point(43, 36);
+            this.txtRenkAdi.MenuManager = this.ribbonControl;
+            this.txtRenkAdi.Name = "txtRenkAdi";
+            this.txtRenkAdi.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
+            this.txtRenkAdi.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtRenkAdi.Properties.MaxLength = 50;
+            this.txtRenkAdi.Size = new System.Drawing.Size(165, 20);
+            this.txtRenkAdi.StatusBarAciklama = "Renk Adı Giriniz.";
+            this.txtRenkAdi.StyleController = this.myDataLayoutControl;
+            this.txtRenkAdi.TabIndex = 0;
+            // 
+            // tglDurum
+            // 
+            this.tglDurum.EnterMoveNextControl = true;
+            this.tglDurum.Location = new System.Drawing.Point(319, 12);
+            this.tglDurum.MenuManager = this.ribbonControl;
+            this.tglDurum.Name = "tglDurum";
+            this.tglDurum.Properties.Appearance.ForeColor = System.Drawing.Color.Maroon;
+            this.tglDurum.Properties.Appearance.Options.UseForeColor = true;
+            this.tglDurum.Properties.AutoHeight = false;
+            this.tglDurum.Properties.AutoWidth = true;
+            this.tglDurum.Properties.GlyphAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.tglDurum.Properties.OffText = "Pasif";
+            this.tglDurum.Properties.OnText = "Aktif";
+            this.tglDurum.Size = new System.Drawing.Size(73, 20);
+            this.tglDurum.StatusBarAciklama = "Kartın Kullanım Durumunu Seçiniz.";
+            this.tglDurum.StyleController = this.myDataLayoutControl;
+            this.tglDurum.TabIndex = 1;
             // 
             // Root
             // 
@@ -101,52 +151,20 @@
             this.Root.OptionsTableLayoutGroup.RowDefinitions.AddRange(new DevExpress.XtraLayout.RowDefinition[] {
             rowDefinition1,
             rowDefinition2});
-            this.Root.Size = new System.Drawing.Size(411, 73);
+            this.Root.Size = new System.Drawing.Size(426, 71);
             this.Root.TextVisible = false;
-            // 
-            // tglDurum
-            // 
-            this.tglDurum.EnterMoveNextControl = true;
-            this.tglDurum.Location = new System.Drawing.Point(304, 12);
-            this.tglDurum.MenuManager = this.ribbonControl;
-            this.tglDurum.Name = "tglDurum";
-            this.tglDurum.Properties.Appearance.ForeColor = System.Drawing.Color.Maroon;
-            this.tglDurum.Properties.Appearance.Options.UseForeColor = true;
-            this.tglDurum.Properties.AutoHeight = false;
-            this.tglDurum.Properties.AutoWidth = true;
-            this.tglDurum.Properties.GlyphAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.tglDurum.Properties.OffText = "Pasif";
-            this.tglDurum.Properties.OnText = "Aktif";
-            this.tglDurum.Size = new System.Drawing.Size(73, 20);
-            this.tglDurum.StatusBarAciklama = "Kartın Kullanım Durumunu Seçiniz.";
-            this.tglDurum.StyleController = this.myDataLayoutControl;
-            this.tglDurum.TabIndex = 1;
             // 
             // layoutControlItem1
             // 
             this.layoutControlItem1.AppearanceItemCaption.ForeColor = System.Drawing.Color.Maroon;
             this.layoutControlItem1.AppearanceItemCaption.Options.UseForeColor = true;
             this.layoutControlItem1.Control = this.tglDurum;
-            this.layoutControlItem1.Location = new System.Drawing.Point(292, 0);
+            this.layoutControlItem1.Location = new System.Drawing.Point(307, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
             this.layoutControlItem1.OptionsTableLayoutItem.ColumnIndex = 2;
             this.layoutControlItem1.Size = new System.Drawing.Size(99, 24);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
-            // 
-            // txtRenkAdi
-            // 
-            this.txtRenkAdi.EnterMoveNextControl = true;
-            this.txtRenkAdi.Location = new System.Drawing.Point(43, 36);
-            this.txtRenkAdi.MenuManager = this.ribbonControl;
-            this.txtRenkAdi.Name = "txtRenkAdi";
-            this.txtRenkAdi.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
-            this.txtRenkAdi.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtRenkAdi.Properties.MaxLength = 50;
-            this.txtRenkAdi.Size = new System.Drawing.Size(165, 20);
-            this.txtRenkAdi.StatusBarAciklama = "Renk Adı Giriniz.";
-            this.txtRenkAdi.StyleController = this.myDataLayoutControl;
-            this.txtRenkAdi.TabIndex = 0;
             // 
             // layoutControlItem2
             // 
@@ -156,27 +174,9 @@
             this.layoutControlItem2.Location = new System.Drawing.Point(0, 24);
             this.layoutControlItem2.Name = "layoutControlItem2";
             this.layoutControlItem2.OptionsTableLayoutItem.RowIndex = 1;
-            this.layoutControlItem2.Size = new System.Drawing.Size(200, 29);
+            this.layoutControlItem2.Size = new System.Drawing.Size(200, 27);
             this.layoutControlItem2.Text = "Ad";
             this.layoutControlItem2.TextSize = new System.Drawing.Size(19, 13);
-            // 
-            // txtKod
-            // 
-            this.txtKod.EnterMoveNextControl = true;
-            this.txtKod.Location = new System.Drawing.Point(43, 12);
-            this.txtKod.MenuManager = this.ribbonControl;
-            this.txtKod.Name = "txtKod";
-            this.txtKod.Properties.Appearance.BackColor = System.Drawing.Color.PaleGoldenrod;
-            this.txtKod.Properties.Appearance.Options.UseBackColor = true;
-            this.txtKod.Properties.Appearance.Options.UseTextOptions = true;
-            this.txtKod.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.txtKod.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
-            this.txtKod.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtKod.Properties.MaxLength = 20;
-            this.txtKod.Size = new System.Drawing.Size(165, 20);
-            this.txtKod.StatusBarAciklama = "Kod Giriniz";
-            this.txtKod.StyleController = this.myDataLayoutControl;
-            this.txtKod.TabIndex = 2;
             // 
             // layoutControlItem3
             // 
@@ -193,7 +193,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(411, 232);
+            this.ClientSize = new System.Drawing.Size(426, 230);
             this.Controls.Add(this.myDataLayoutControl);
             this.IconOptions.ShowIcon = false;
             this.Name = "RenkEditForm";
@@ -204,12 +204,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.resimMenu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.myDataLayoutControl)).EndInit();
             this.myDataLayoutControl.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tglDurum.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtRenkAdi.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKod.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtRenkAdi.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tglDurum.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
