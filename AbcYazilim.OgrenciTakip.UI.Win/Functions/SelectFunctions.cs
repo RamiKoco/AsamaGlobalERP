@@ -282,22 +282,21 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Functions
                         if (entity != null)
                         {
                             _btnEdit.Id = entity.Id;
-                            _btnEdit.EditValue = entity.Ad;
+                            _btnEdit.EditValue = entity.EtiketAdi;
                         }
                     }
-                    break;
+                    break;      
 
                 case "txtRenk":
                     {
-                        var entity = (Renk)ShowListForms<RenkListForm>.ShowDialogListForm(KartTuru.Renk, _btnEdit.Id);
+                        var entity = (RenkL)ShowListForms<RenkListForm>.ShowDialogListForm(KartTuru.Renk, _btnEdit.Id);
                         if (entity != null)
                         {
                             _btnEdit.Id = entity.Id;
                             _btnEdit.EditValue = entity.RenkAdi;
                         }
                     }
-                    break;
-
+                    break;                
 
                 case "txtKisiGrubu":
                     {

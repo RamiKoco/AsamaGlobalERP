@@ -3,8 +3,6 @@ using AbcYazilim.OgrenciTakip.Model.Attributes;
 using AbcYazilim.OgrenciTakip.Model.Entities.Base;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Drawing;
-
 
 namespace AbcYazilim.OgrenciTakip.Model.Entities
 {
@@ -14,12 +12,17 @@ namespace AbcYazilim.OgrenciTakip.Model.Entities
         public override string Kod { get; set; }
 
         [Required, StringLength(50), ZorunluAlan("Etiket Adı", "txtEtiketAdi")]
-        public string Ad { get; set; }
-        public int TVCForeColor { get; set; } = Color.Maroon.ToArgb();
+        public string EtiketAdi { get; set; }
         public KayitTuru KayitTuru { get; set; } = KayitTuru.Kisi;
+        [StringLength(500)]
+        public string Aciklama { get; set; }
         public long? RenkId { get; set; }
+        public long? OzelKod1Id { get; set; }
+        public long? OzelKod2Id { get; set; }
 
         public Renk Renk { get; set; }
+        public OzelKod OzelKod1 { get; set; }
+        public OzelKod OzelKod2 { get; set; }
 
     }
 }

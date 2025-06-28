@@ -9,13 +9,17 @@ namespace AbcYazilim.OgrenciTakip.Model.Dto
     [NotMapped]
     public class EtiketS : Etiket
     {     
-        public string RenkAdi { get; set; }     
+        public string RenkAdi { get; set; }
+        public string OzelKod1Adi { get; set; }
+        public string OzelKod2Adi { get; set; }
     }
     public class EtiketL : BaseEntity
     {
-        public string Ad { get; set; }
-        public int TVCForeColor { get; set; }
-        public KayitTuru KayitTuru { get; set; }   
+        public string EtiketAdi { get; set; }
+        public KayitTuru KayitTuru { get; set; }
+        public string Aciklama { get; set; }
         public string RenkAdi { get; set; }
+        public string OzelKod1Adi { get; set; }
+        public string OzelKod2Adi { get; set; }
     }
 }

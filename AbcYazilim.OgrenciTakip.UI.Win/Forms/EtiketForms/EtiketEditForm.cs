@@ -6,7 +6,7 @@ using AbcYazilim.OgrenciTakip.Model.Entities;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Functions;
 using DevExpress.XtraEditors;
-using System.Drawing;
+
 
 namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.EtiketForms
 {
@@ -40,12 +40,15 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.EtiketForms
             var entity = (EtiketS)OldEntity;
 
             txtKod.Text = entity.Kod; 
-            txtEtiketAdi.Text = entity.Ad;
-            txtTVCForeColor.Color = Color.FromArgb(entity.TVCForeColor);
-            txtEtiketAdi.ForeColor = Color.FromArgb(entity.TVCForeColor); // <- BURASI!
+            txtEtiketAdi.Text = entity.EtiketAdi;
             txtKayitTuru.SelectedItem = entity.KayitTuru.ToName();
+            txtAciklama.Text = entity.Aciklama;
             txtRenk.Id = entity.RenkId;
             txtRenk.Text = entity.RenkAdi;
+            txtOzelKod1.Id = entity.OzelKod1Id;
+            txtOzelKod1.Text = entity.OzelKod1Adi;
+            txtOzelKod2.Id = entity.OzelKod2Id;
+            txtOzelKod2.Text = entity.OzelKod2Adi;
             tglDurum.IsOn = entity.Durum;
 
         }
@@ -55,10 +58,12 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.EtiketForms
             {
                 Id = Id,
                 Kod = txtKod.Text,
-                Ad = txtEtiketAdi.Text,
-                TVCForeColor = txtTVCForeColor.Color.ToArgb(),         
+                EtiketAdi = txtEtiketAdi.Text,       
                 KayitTuru = txtKayitTuru.Text.GetEnum<KayitTuru>(),
-                RenkId= txtRenk.Id,
+                Aciklama = txtAciklama.Text,
+                RenkId = txtRenk.Id,
+                OzelKod1Id = txtOzelKod1.Id,
+                OzelKod2Id = txtOzelKod2.Id,
                 Durum = tglDurum.IsOn
             };
             ButonEnabledDurumu();
@@ -70,7 +75,11 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.EtiketForms
 
             using (var sec = new SelectFunctions())
                 if (sender == txtRenk)
-                    sec.Sec(txtRenk);               
+                    sec.Sec(txtRenk);
+                else if (sender == txtOzelKod1)
+                    sec.Sec(txtOzelKod1, KartTuru.Etiket);
+                else if (sender == txtOzelKod2)
+                    sec.Sec(txtOzelKod2, KartTuru.Etiket);
 
         }
     }

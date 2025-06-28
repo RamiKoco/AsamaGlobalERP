@@ -23,11 +23,15 @@ namespace AbcYazilim.OgrenciTakip.Bll.General
             {
                 Id = x.Id,
                 Kod = x.Kod,
-                Ad = x.Ad,
-                TVCForeColor=x.TVCForeColor,
-                KayitTuru = x.KayitTuru,              
+                EtiketAdi = x.EtiketAdi,
+                KayitTuru = x.KayitTuru,
+                Aciklama = x.Aciklama,
                 RenkId = x.RenkId,
-                RenkAdi = x.Renk.RenkAdi,               
+                RenkAdi = x.Renk.RenkAdi,
+                OzelKod1Id = x.OzelKod1Id,
+                OzelKod1Adi = x.OzelKod1.OzelKodAdi,
+                OzelKod2Id = x.OzelKod2Id,
+                OzelKod2Adi = x.OzelKod2.OzelKodAdi,
                 Durum = x.Durum
             });
         }
@@ -38,10 +42,13 @@ namespace AbcYazilim.OgrenciTakip.Bll.General
             {
                 Id = x.Id,
                 Kod = x.Kod,
-                Ad = x.Ad,
-                TVCForeColor = x.TVCForeColor,
+                EtiketAdi = x.EtiketAdi,
                 KayitTuru = x.KayitTuru,
-                RenkAdi = x.Renk.RenkAdi,  
+                Aciklama = x.Aciklama,
+                RenkAdi = x.Renk.RenkAdi,
+                OzelKod1Adi = x.OzelKod1.OzelKodAdi,
+                OzelKod2Adi = x.OzelKod2.OzelKodAdi,
+
             }).OrderBy(x => x.Kod).ToList();
         }
     }

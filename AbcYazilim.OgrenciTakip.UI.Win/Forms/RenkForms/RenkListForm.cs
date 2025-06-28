@@ -10,13 +10,12 @@ using DevExpress.XtraEditors.Controls;
 namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.RenkForms
 {
     public partial class RenkListForm :BaseListForm
-    {
+    {     
         public RenkListForm()
         {
             InitializeComponent();
             Bll = new RenkBll();
-            //tablo.RowCellStyle += tablo_RowCellStyle; // <-- bu satırı ekle
-            GridRenkAyarla();
+            //tablo.RowCellStyle += tablo_RowCellStyle; // <-- bu satırı ekle          
         }
         protected override void DegiskenleriDoldur()
         {
@@ -24,7 +23,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.RenkForms
             BaseKartTuru = KartTuru.Renk;
             FormShow = new ShowEditForms<RenkEditForm>();
             Navigator = longNavigator.Navigator;
-          
+            GridRenkAyarla();
         }
         protected override void Listele()
         {
