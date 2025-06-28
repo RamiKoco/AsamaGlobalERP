@@ -278,7 +278,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Functions
 
                 case "txtEtiket":
                     {
-                        var entity = (Etiket)ShowListForms<EtiketListForm>.ShowDialogListForm(KartTuru.Etiket, _btnEdit.Id);
+                        var entity = (EtiketL)ShowListForms<EtiketListForm>.ShowDialogListForm(KartTuru.Etiket, _btnEdit.Id);
                         if (entity != null)
                         {
                             _btnEdit.Id = entity.Id;

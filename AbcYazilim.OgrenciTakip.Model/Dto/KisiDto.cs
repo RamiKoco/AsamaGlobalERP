@@ -11,6 +11,7 @@ namespace AbcYazilim.OgrenciTakip.Model.Dto
     {
         public string KisiGrubuAdi { get; set; }
         public string KayitKaynakAdi { get; set; }
+        public string EtiketAdi { get; set; }
         public string MeslekAdi { get; set; }
         public string OzelKod1Adi { get; set; }
         public string OzelKod2Adi { get; set; }
@@ -21,6 +22,8 @@ namespace AbcYazilim.OgrenciTakip.Model.Dto
         public string Soyad { get; set; }
         public Cinsiyet Cinsiyet { get; set; }
         public DateTime? DogumTarihi { get; set; }
+        public KayitTuru KayitTuru { get; set; }
+        public string EtiketAdi { get; set; }
         public string Aciklama { get; set; }
         public string KisiGrubuAdi { get; set; }
         public string KayitKaynakAdi { get; set; }

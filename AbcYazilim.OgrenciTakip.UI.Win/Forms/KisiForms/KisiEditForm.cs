@@ -44,7 +44,8 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.KisiForms
             txtCinsiyet.SelectedItem = entity.Cinsiyet.ToName();           
             txtDogumTarihi.EditValue = entity.DogumTarihi;
             txtAciklama.Text = entity.Aciklama;
-
+            txtEtiket.Id = entity.EtiketId;
+            txtEtiket.Text = entity.EtiketAdi;
             txtKayitKaynak.Id = entity.KayitKaynakId;
             txtKayitKaynak.Text = entity.KayitKaynakAdi;
 
@@ -71,6 +72,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.KisiForms
                 DogumTarihi = (DateTime?)txtDogumTarihi.EditValue,
                 Aciklama = txtAciklama.Text,
                 KayitKaynakId = txtKayitKaynak.Id,
+                EtiketId = txtEtiket.Id,
                 MeslekId = txtMeslek.Id,
                 KisiGrubuId = txtKisiGrubu.Id,
                 OzelKod1Id = txtOzelKod1.Id,
@@ -79,7 +81,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.KisiForms
             };
             ButonEnabledDurumu();
         }
-
+     
         protected override void SecimYap(object sender)
         {
             if (!(sender is ButtonEdit)) return;
@@ -89,6 +91,8 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.KisiForms
                     sec.Sec(txtMeslek);
                 else if (sender == txtKisiGrubu)
                     sec.Sec(txtKisiGrubu);
+                else if (sender == txtEtiket)
+                    sec.Sec(txtEtiket);
                 else if (sender == txtKayitKaynak)
                     sec.Sec(txtKayitKaynak);
                 else if (sender == txtOzelKod1)

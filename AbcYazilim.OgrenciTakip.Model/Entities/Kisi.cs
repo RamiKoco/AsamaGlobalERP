@@ -18,19 +18,21 @@ namespace AbcYazilim.OgrenciTakip.Model.Entities
         [Required, StringLength(30), ZorunluAlan("SoyAdı", "txtSoyAdi")]
         public string Soyad { get; set; }
         public Cinsiyet Cinsiyet { get; set; } = Cinsiyet.Erkek;
+        public KayitTuru KayitTuru { get; set; } = KayitTuru.Kisi;
         [Column(TypeName = "date")]
         public DateTime? DogumTarihi { get; set; }
         [StringLength(500)]
         public string Aciklama { get; set; }
 
         //public long? SorumluPersonelId { get; set; }        
-        //public long? EtiketId { get; set; }
+        public long? EtiketId { get; set; }
         public long? KisiGrubuId { get; set; }
         public long? KayitKaynakId { get; set; }
         public long? MeslekId { get; set; }
         public long? OzelKod1Id { get; set; }
         public long? OzelKod2Id { get; set; }
 
+        public Etiket Etiket { get; set; }
         public KisiGrubu KisiGrubu { get; set; }
         public KayitKaynak KayitKaynak { get; set; }
         public Meslek Meslek { get; set; }       

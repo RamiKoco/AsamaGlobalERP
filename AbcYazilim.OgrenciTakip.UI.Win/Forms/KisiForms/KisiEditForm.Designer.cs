@@ -56,7 +56,6 @@
             this.tabUst = new DevExpress.XtraBars.Navigation.TabPane();
             this.pageGenelBilgiler = new DevExpress.XtraBars.Navigation.TabNavigationPage();
             this.DataLayoutGenelBilgiler = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls.MyDataLayoutControl();
-            this.myMemoEdit1 = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls.MyMemoEdit();
             this.tglDurum = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls.MyToogleSwitch();
             this.txtAciklama = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls.MyMemoEdit();
             this.txtMeslek = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls.MyButtonEdit();
@@ -70,6 +69,7 @@
             this.txtSoyAdi = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls.MyTextEdit();
             this.txtAdi = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls.MyTextEdit();
             this.txtKayitKaynak = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls.MyButtonEdit();
+            this.txtEtiket = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls.MyButtonEdit();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -80,10 +80,10 @@
             this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem14 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem16 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem15 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem13 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem16 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.pageAdresBilgileri = new DevExpress.XtraBars.Navigation.TabNavigationPage();
             this.pageIletisimBilgileri = new DevExpress.XtraBars.Navigation.TabNavigationPage();
@@ -104,7 +104,6 @@
             this.pageGenelBilgiler.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataLayoutGenelBilgiler)).BeginInit();
             this.DataLayoutGenelBilgiler.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.myMemoEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tglDurum.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAciklama.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMeslek.Properties)).BeginInit();
@@ -119,6 +118,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtSoyAdi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAdi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKayitKaynak.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtEtiket.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
@@ -129,10 +129,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
@@ -246,7 +246,6 @@
             // 
             // DataLayoutGenelBilgiler
             // 
-            this.DataLayoutGenelBilgiler.Controls.Add(this.myMemoEdit1);
             this.DataLayoutGenelBilgiler.Controls.Add(this.tglDurum);
             this.DataLayoutGenelBilgiler.Controls.Add(this.txtAciklama);
             this.DataLayoutGenelBilgiler.Controls.Add(this.txtMeslek);
@@ -260,6 +259,7 @@
             this.DataLayoutGenelBilgiler.Controls.Add(this.txtSoyAdi);
             this.DataLayoutGenelBilgiler.Controls.Add(this.txtAdi);
             this.DataLayoutGenelBilgiler.Controls.Add(this.txtKayitKaynak);
+            this.DataLayoutGenelBilgiler.Controls.Add(this.txtEtiket);
             this.DataLayoutGenelBilgiler.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DataLayoutGenelBilgiler.Location = new System.Drawing.Point(0, 0);
             this.DataLayoutGenelBilgiler.Name = "DataLayoutGenelBilgiler";
@@ -268,20 +268,6 @@
             this.DataLayoutGenelBilgiler.Size = new System.Drawing.Size(774, 208);
             this.DataLayoutGenelBilgiler.TabIndex = 0;
             this.DataLayoutGenelBilgiler.Text = "myDataLayoutControl2";
-            // 
-            // myMemoEdit1
-            // 
-            this.myMemoEdit1.EnterMoveNextControl = true;
-            this.myMemoEdit1.Location = new System.Drawing.Point(553, 76);
-            this.myMemoEdit1.MenuManager = this.ribbonControl;
-            this.myMemoEdit1.Name = "myMemoEdit1";
-            this.myMemoEdit1.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
-            this.myMemoEdit1.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.myMemoEdit1.Properties.MaxLength = 500;
-            this.myMemoEdit1.Size = new System.Drawing.Size(217, 68);
-            this.myMemoEdit1.StatusBarAciklama = "Açıklama Giriniz.";
-            this.myMemoEdit1.StyleController = this.DataLayoutGenelBilgiler;
-            this.myMemoEdit1.TabIndex = 11;
             // 
             // tglDurum
             // 
@@ -516,6 +502,24 @@
             this.txtKayitKaynak.StyleController = this.DataLayoutGenelBilgiler;
             this.txtKayitKaynak.TabIndex = 7;
             // 
+            // txtEtiket
+            // 
+            this.txtEtiket.EnterMoveNextControl = true;
+            this.txtEtiket.Id = null;
+            this.txtEtiket.Location = new System.Drawing.Point(553, 76);
+            this.txtEtiket.Name = "txtEtiket";
+            this.txtEtiket.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
+            this.txtEtiket.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtEtiket.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton()});
+            this.txtEtiket.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.txtEtiket.Size = new System.Drawing.Size(217, 20);
+            this.txtEtiket.StatusBarAciklama = "Etiket Seçiniz";
+            this.txtEtiket.StatusBarKisaYol = "F4 :";
+            this.txtEtiket.StatusBarKisaYolAciklama = "Seçim Yap";
+            this.txtEtiket.StyleController = this.DataLayoutGenelBilgiler;
+            this.txtEtiket.TabIndex = 7;
+            // 
             // layoutControlGroup1
             // 
             this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
@@ -530,10 +534,10 @@
             this.layoutControlItem12,
             this.layoutControlItem14,
             this.layoutControlItem8,
-            this.layoutControlItem16,
             this.layoutControlItem9,
             this.layoutControlItem15,
             this.layoutControlItem13,
+            this.layoutControlItem16,
             this.layoutControlItem3});
             this.layoutControlGroup1.LayoutMode = DevExpress.XtraLayout.Utils.LayoutMode.Table;
             this.layoutControlGroup1.Name = "Root";
@@ -724,23 +728,6 @@
             this.layoutControlItem8.TextSize = new System.Drawing.Size(60, 13);
             this.layoutControlItem8.TextToControlDistance = 5;
             // 
-            // layoutControlItem16
-            // 
-            this.layoutControlItem16.AppearanceItemCaption.ForeColor = System.Drawing.Color.Maroon;
-            this.layoutControlItem16.AppearanceItemCaption.Options.UseForeColor = true;
-            this.layoutControlItem16.Control = this.myMemoEdit1;
-            this.layoutControlItem16.Location = new System.Drawing.Point(484, 72);
-            this.layoutControlItem16.Name = "layoutControlItem16";
-            this.layoutControlItem16.OptionsTableLayoutItem.ColumnIndex = 5;
-            this.layoutControlItem16.OptionsTableLayoutItem.ColumnSpan = 2;
-            this.layoutControlItem16.OptionsTableLayoutItem.RowIndex = 3;
-            this.layoutControlItem16.OptionsTableLayoutItem.RowSpan = 3;
-            this.layoutControlItem16.Size = new System.Drawing.Size(286, 72);
-            this.layoutControlItem16.Text = "Etiket";
-            this.layoutControlItem16.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
-            this.layoutControlItem16.TextSize = new System.Drawing.Size(60, 13);
-            this.layoutControlItem16.TextToControlDistance = 5;
-            // 
             // layoutControlItem9
             // 
             this.layoutControlItem9.AppearanceItemCaption.ForeColor = System.Drawing.Color.Maroon;
@@ -797,6 +784,34 @@
             this.layoutControlItem13.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
             this.layoutControlItem13.TextSize = new System.Drawing.Size(55, 13);
             this.layoutControlItem13.TextToControlDistance = 5;
+            // 
+            // layoutControlItem16
+            // 
+            this.layoutControlItem16.AppearanceItemCaption.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.layoutControlItem16.AppearanceItemCaption.ForeColor = System.Drawing.Color.Maroon;
+            this.layoutControlItem16.AppearanceItemCaption.Options.UseFont = true;
+            this.layoutControlItem16.AppearanceItemCaption.Options.UseForeColor = true;
+            this.layoutControlItem16.AppearanceItemCaptionDisabled.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.layoutControlItem16.AppearanceItemCaptionDisabled.Options.UseFont = true;
+            this.layoutControlItem16.Control = this.txtEtiket;
+            this.layoutControlItem16.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.layoutControlItem16.CustomizationFormText = "Meslek";
+            this.layoutControlItem16.Location = new System.Drawing.Point(484, 72);
+            this.layoutControlItem16.Name = "layoutControlItem16";
+            this.layoutControlItem16.OptionsPrint.AppearanceItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.layoutControlItem16.OptionsPrint.AppearanceItem.Options.UseFont = true;
+            this.layoutControlItem16.OptionsPrint.AppearanceItemControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.layoutControlItem16.OptionsPrint.AppearanceItemControl.Options.UseFont = true;
+            this.layoutControlItem16.OptionsPrint.AppearanceItemText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.layoutControlItem16.OptionsPrint.AppearanceItemText.Options.UseFont = true;
+            this.layoutControlItem16.OptionsTableLayoutItem.ColumnIndex = 5;
+            this.layoutControlItem16.OptionsTableLayoutItem.ColumnSpan = 2;
+            this.layoutControlItem16.OptionsTableLayoutItem.RowIndex = 3;
+            this.layoutControlItem16.Size = new System.Drawing.Size(286, 24);
+            this.layoutControlItem16.Text = "Etiket";
+            this.layoutControlItem16.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
+            this.layoutControlItem16.TextSize = new System.Drawing.Size(60, 13);
+            this.layoutControlItem16.TextToControlDistance = 5;
             // 
             // layoutControlItem3
             // 
@@ -921,7 +936,6 @@
             this.pageGenelBilgiler.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DataLayoutGenelBilgiler)).EndInit();
             this.DataLayoutGenelBilgiler.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.myMemoEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tglDurum.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAciklama.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMeslek.Properties)).EndInit();
@@ -936,6 +950,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtSoyAdi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAdi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKayitKaynak.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtEtiket.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
@@ -946,10 +961,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem15)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
@@ -1000,12 +1015,12 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem12;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem14;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem8;
-        private UserControls.Controls.MyMemoEdit myMemoEdit1;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem16;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem9;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem15;
         private UserControls.Controls.MyButtonEdit txtKayitKaynak;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem13;
+        private UserControls.Controls.MyButtonEdit txtEtiket;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem16;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
     }
 }
