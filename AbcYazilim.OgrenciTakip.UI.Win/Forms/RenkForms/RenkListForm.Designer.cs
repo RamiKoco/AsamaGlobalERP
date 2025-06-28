@@ -36,7 +36,7 @@
             this.colKod = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.colRenkAdi = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colForeColor = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
-            this.colRenkKodu = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
+            this.colRGB = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.gridBand2 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.colOzelKod1Adi = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colOzelKod2Adi = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
@@ -120,7 +120,7 @@
             this.colId,
             this.colKod,
             this.colRenkAdi,
-            this.colRenkKodu,
+            this.colRGB,
             this.colForeColor,
             this.colOzelKod1Adi,
             this.colOzelKod2Adi,
@@ -151,7 +151,7 @@
             this.gridBand1.Columns.Add(this.colKod);
             this.gridBand1.Columns.Add(this.colRenkAdi);
             this.gridBand1.Columns.Add(this.colForeColor);
-            this.gridBand1.Columns.Add(this.colRenkKodu);
+            this.gridBand1.Columns.Add(this.colRGB);
             this.gridBand1.Name = "gridBand1";
             this.gridBand1.VisibleIndex = 0;
             this.gridBand1.Width = 423;
@@ -169,6 +169,8 @@
             // 
             // colRenkAdi
             // 
+            this.colRenkAdi.AppearanceCell.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
+            this.colRenkAdi.AppearanceCell.Options.UseFont = true;
             this.colRenkAdi.Caption = "Renk Adı";
             this.colRenkAdi.FieldName = "RenkAdi";
             this.colRenkAdi.Name = "colRenkAdi";
@@ -193,19 +195,19 @@
             this.colForeColor.Visible = true;
             this.colForeColor.Width = 79;
             // 
-            // colRenkKodu
+            // colRGB
             // 
-            this.colRenkKodu.AppearanceCell.Options.UseTextOptions = true;
-            this.colRenkKodu.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colRenkKodu.Caption = "Renk Kodu";
-            this.colRenkKodu.FieldName = "RenkKodu";
-            this.colRenkKodu.Name = "colRenkKodu";
-            this.colRenkKodu.OptionsColumn.AllowEdit = false;
-            this.colRenkKodu.StatusBarAciklama = null;
-            this.colRenkKodu.StatusBarKisaYol = null;
-            this.colRenkKodu.StatusBarKisaYolAciklama = null;
-            this.colRenkKodu.Visible = true;
-            this.colRenkKodu.Width = 118;
+            this.colRGB.AppearanceCell.Options.UseTextOptions = true;
+            this.colRGB.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colRGB.Caption = "RGB";
+            this.colRGB.FieldName = "RGB";
+            this.colRGB.Name = "colRGB";
+            this.colRGB.OptionsColumn.AllowEdit = false;
+            this.colRGB.StatusBarAciklama = null;
+            this.colRGB.StatusBarKisaYol = null;
+            this.colRGB.StatusBarKisaYolAciklama = null;
+            this.colRGB.Visible = true;
+            this.colRGB.Width = 118;
             // 
             // gridBand2
             // 
@@ -297,7 +299,7 @@
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn colId;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn colKod;
         private UserControls.Grid.MyBandedGridColumn colRenkAdi;
-        private UserControls.Grid.MyBandedGridColumn colRenkKodu;
+        private UserControls.Grid.MyBandedGridColumn colRGB;
         private UserControls.Grid.MyBandedGridColumn colOzelKod1Adi;
         private UserControls.Grid.MyBandedGridColumn colOzelKod2Adi;
         private UserControls.Grid.MyBandedGridColumn colAciklama;

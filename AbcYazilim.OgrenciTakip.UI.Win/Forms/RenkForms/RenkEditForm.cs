@@ -38,7 +38,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.RenkForms
 
             txtKod.Text = entity.Kod;
             txtRenkAdi.Text = entity.RenkAdi;          
-            txtRenkKodu.Text = entity.RenkKodu;          
+            txtRGB.Text = entity.RGB;          
             txtForeColor.Color = Color.FromArgb(entity.ForeColor);
             txtRenkAdi.ForeColor = Color.FromArgb(entity.ForeColor); // <- BURASI!
             txtAciklama.Text = entity.Aciklama;
@@ -55,8 +55,8 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.RenkForms
             {
                 Id = Id,
                 Kod = txtKod.Text,
-                RenkAdi = txtRenkAdi.Text,               
-                RenkKodu = txtForeColor.Text,               
+                RenkAdi = txtRenkAdi.Text,
+                RGB = txtForeColor.Text,               
                 ForeColor = txtForeColor.Color.ToArgb(),
                 Aciklama = txtAciklama.Text,
                 OzelKod1Id = txtOzelKod1.Id,

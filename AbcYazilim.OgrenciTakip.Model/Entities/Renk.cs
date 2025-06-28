@@ -14,7 +14,7 @@ namespace AbcYazilim.OgrenciTakip.Model.Entities
         [Required, StringLength(50), ZorunluAlan("Renk Adı", "txtRenkAdi")]
         public string RenkAdi { get; set; }
 
-        public string RenkKodu { get; set; }
+        public string RGB { get; set; }
         public int ForeColor { get; set; } = Color.Maroon.ToArgb();
         public long? OzelKod1Id { get; set; }
         public long? OzelKod2Id { get; set; }

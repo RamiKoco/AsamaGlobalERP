@@ -14,7 +14,7 @@ namespace AbcYazilim.OgrenciTakip.Model.Dto
     public class RenkL: BaseEntity
     {
         public string RenkAdi { get; set; }
-        public string RenkKodu { get; set; }
+        public string RGB { get; set; }
         public int ForeColor { get; set; }
         public string Aciklama { get; set; }
         public string OzelKod1Adi { get; set; }
