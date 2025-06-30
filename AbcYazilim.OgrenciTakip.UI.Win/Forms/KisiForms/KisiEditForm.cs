@@ -7,6 +7,8 @@ using AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Functions;
 using DevExpress.XtraEditors;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.KisiForms
 {
@@ -26,6 +28,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.KisiForms
         public override void Yukle()
         {
             OldEntity = BaseIslemTuru == IslemTuru.EntityInsert ? new KisiS() : ((KisiBll)Bll).Single(FilterFunctions.Filter<Kisi>(Id));
+            EtiketleriYukle();
             NesneyiKontrollereBagla();
             TabloYukle();
 
@@ -34,7 +37,20 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.KisiForms
             txtKod.Text = ((KisiBll)Bll).YeniKodVer();
             txtAdi.Focus();
         }
+        private List<EtiketL> _tumEtiketler;
 
+        private void EtiketleriYukle()
+        {
+            _tumEtiketler = new EtiketBll().List(null).Cast<EtiketL>().ToList();
+
+            txtEtiket2.Properties.Tokens.Clear();
+            txtEtiket2.Properties.EditMode = TokenEditMode.Manual;
+
+            foreach (var etiket in _tumEtiketler)
+            {
+                txtEtiket2.Properties.Tokens.Add(new TokenEditToken(etiket.EtiketAdi, etiket.Id));
+            }
+        }
         protected override void NesneyiKontrollereBagla()
         {
             var entity = (KisiS)OldEntity;
@@ -48,7 +64,12 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.KisiForms
             txtEtiket.Text = entity.EtiketAdi;
             txtKayitKaynak.Id = entity.KayitKaynakId;
             txtKayitKaynak.Text = entity.KayitKaynakAdi;
-
+            //txtEtiket2.EditValue = entity.Etiketler?.Select(x => x.Id).ToList();
+            //txtEtiket2.EditValue = new List<long> { entity.Id };
+            //txtEtiket2.EditValue = entity.Etiketler?.Select(x => x.Id).ToList();
+            _tumEtiketler = new EtiketBll().List(null).OfType<EtiketL>().ToList();
+            // Buraya ekle:
+            //txtEtiket2.EditValue = entity.Etiketler?.Select(x => x.Id).ToList() ?? new List<long>();
             txtMeslek.Id = entity.MeslekId;
             txtMeslek.Text = entity.MeslekAdi;
             txtKisiGrubu.Id = entity.KisiGrubuId;
@@ -62,6 +83,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.KisiForms
 
         protected override void GuncelNesneOlustur()
         {
+            var secilenEtiketIdListesi = txtEtiket2.EditValue as IEnumerable<long>;
             CurrentEntity = new Kisi
             {
                 Id = Id,
@@ -72,7 +94,9 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.KisiForms
                 DogumTarihi = (DateTime?)txtDogumTarihi.EditValue,
                 Aciklama = txtAciklama.Text,
                 KayitKaynakId = txtKayitKaynak.Id,
-                EtiketId = txtEtiket.Id,
+                // Çoklu etiket ilişkisi:
+                EtiketId = secilenEtiketIdListesi?.FirstOrDefault() ?? 0,
+                //EtiketId = txtEtiket.Id,
                 MeslekId = txtMeslek.Id,
                 KisiGrubuId = txtKisiGrubu.Id,
                 OzelKod1Id = txtOzelKod1.Id,

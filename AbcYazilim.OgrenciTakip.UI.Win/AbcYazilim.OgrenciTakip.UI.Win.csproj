@@ -1227,6 +1227,9 @@
     <Compile Include="UserControls\Controls\MyTextEdit.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="UserControls\Controls\MyTokenEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="UserControls\Controls\MyToogleSwitch.cs">
       <SubType>Component</SubType>
     </Compile>

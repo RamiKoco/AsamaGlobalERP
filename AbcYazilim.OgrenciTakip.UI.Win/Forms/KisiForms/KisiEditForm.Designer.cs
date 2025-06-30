@@ -93,6 +93,8 @@
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.txtEtiket2 = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls.MyTokenEdit();
+            this.layoutControlItem17 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.resimMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataLayoutGenel)).BeginInit();
@@ -137,6 +139,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtEtiket2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbonControl
@@ -246,6 +250,7 @@
             // 
             // DataLayoutGenelBilgiler
             // 
+            this.DataLayoutGenelBilgiler.Controls.Add(this.txtEtiket2);
             this.DataLayoutGenelBilgiler.Controls.Add(this.tglDurum);
             this.DataLayoutGenelBilgiler.Controls.Add(this.txtAciklama);
             this.DataLayoutGenelBilgiler.Controls.Add(this.txtMeslek);
@@ -411,6 +416,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.txtDogumTarihi.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txtDogumTarihi.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTimeAdvancingCaret;
             this.txtDogumTarihi.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.DateTimeMaskManager));
             this.txtDogumTarihi.Properties.MaskSettings.Set("useAdvancingCaret", true);
             this.txtDogumTarihi.Size = new System.Drawing.Size(97, 20);
@@ -538,7 +544,8 @@
             this.layoutControlItem15,
             this.layoutControlItem13,
             this.layoutControlItem16,
-            this.layoutControlItem3});
+            this.layoutControlItem3,
+            this.layoutControlItem17});
             this.layoutControlGroup1.LayoutMode = DevExpress.XtraLayout.Utils.LayoutMode.Table;
             this.layoutControlGroup1.Name = "Root";
             columnDefinition1.SizeType = System.Windows.Forms.SizeType.Absolute;
@@ -913,6 +920,37 @@
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
+            // txtEtiket2
+            // 
+            this.txtEtiket2.EnterMoveNextControl = true;
+            this.txtEtiket2.Location = new System.Drawing.Point(553, 100);
+            this.txtEtiket2.MenuManager = this.ribbonControl;
+            this.txtEtiket2.Name = "txtEtiket2";
+            this.txtEtiket2.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
+            this.txtEtiket2.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtEtiket2.Properties.Separators.AddRange(new string[] {
+            ","});
+            this.txtEtiket2.Size = new System.Drawing.Size(217, 20);
+            this.txtEtiket2.StatusBarAciklama = null;
+            this.txtEtiket2.StyleController = this.DataLayoutGenelBilgiler;
+            this.txtEtiket2.TabIndex = 14;
+            // 
+            // layoutControlItem17
+            // 
+            this.layoutControlItem17.AppearanceItemCaption.ForeColor = System.Drawing.Color.Maroon;
+            this.layoutControlItem17.AppearanceItemCaption.Options.UseForeColor = true;
+            this.layoutControlItem17.Control = this.txtEtiket2;
+            this.layoutControlItem17.Location = new System.Drawing.Point(484, 96);
+            this.layoutControlItem17.Name = "layoutControlItem17";
+            this.layoutControlItem17.OptionsTableLayoutItem.ColumnIndex = 5;
+            this.layoutControlItem17.OptionsTableLayoutItem.ColumnSpan = 2;
+            this.layoutControlItem17.OptionsTableLayoutItem.RowIndex = 4;
+            this.layoutControlItem17.Size = new System.Drawing.Size(286, 24);
+            this.layoutControlItem17.Text = "Etiket2";
+            this.layoutControlItem17.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
+            this.layoutControlItem17.TextSize = new System.Drawing.Size(60, 20);
+            this.layoutControlItem17.TextToControlDistance = 5;
+            // 
             // KisiEditForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -969,6 +1007,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtEtiket2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1022,5 +1062,7 @@
         private UserControls.Controls.MyButtonEdit txtEtiket;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem16;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
+        private UserControls.Controls.MyTokenEdit txtEtiket2;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem17;
     }
 }
