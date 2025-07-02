@@ -31,7 +31,7 @@ namespace AbcYazilim.OgrenciTakip.Bll.General
                 OzelKod1Id = x.OzelKod1Id,
                 OzelKod1Adi = x.OzelKod1.OzelKodAdi,
                 OzelKod2Id = x.OzelKod2Id,
-                OzelKod2Adi = x.OzelKod2.OzelKodAdi,
+                OzelKod2Adi = x.OzelKod2.OzelKodAdi,            
                 Durum = x.Durum
             });
         }

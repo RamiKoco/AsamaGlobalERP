@@ -105,6 +105,7 @@
     <Compile Include="Dto\KardesBilgileriDto.cs" />
     <Compile Include="Dto\KasaDto.cs" />
     <Compile Include="Dto\KisiDto.cs" />
+    <Compile Include="Dto\KisiEtiketDto.cs" />
     <Compile Include="Dto\KullaniciBirimYetkileriDto.cs" />
     <Compile Include="Dto\KullaniciDto.cs" />
     <Compile Include="Dto\KullaniciParametreDto.cs" />

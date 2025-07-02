@@ -19,10 +19,13 @@ namespace AbcYazilim.OgrenciTakip.Model.Entities
         public long? RenkId { get; set; }
         public long? OzelKod1Id { get; set; }
         public long? OzelKod2Id { get; set; }
+        public long SubeId { get; set; }
+        public long DonemId { get; set; }
 
         public Renk Renk { get; set; }
         public OzelKod OzelKod1 { get; set; }
-        public OzelKod OzelKod2 { get; set; }
+        public OzelKod OzelKod2 { get; set; }      
+       
 
     }
 }

@@ -5,7 +5,9 @@ using AbcYazilim.OgrenciTakip.Model.Dto;
 using AbcYazilim.OgrenciTakip.Model.Entities;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Functions;
+using AbcYazilim.OgrenciTakip.UI.Win.GenelForms;
 using DevExpress.XtraEditors;
+using System;
 using System.Drawing;
 
 
@@ -28,7 +30,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.EtiketForms
         {
             OldEntity = BaseIslemTuru == IslemTuru.EntityInsert ? new EtiketS() : ((EtiketBll)Bll).Single(FilterFunctions.Filter<Etiket>(Id));
             NesneyiKontrollereBagla();
-            TabloYukle();
+            //TabloYukle();
             if (BaseIslemTuru != IslemTuru.EntityInsert) return;
             Id = BaseIslemTuru.IdOlustur(OldEntity);
             txtKod.Text = ((EtiketBll)Bll).YeniKodVer();
@@ -70,6 +72,16 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.EtiketForms
             ButonEnabledDurumu();
         }
 
+        protected override bool EntityInsert()
+        {
+            return ((EtiketBll)Bll).Insert(CurrentEntity, x => x.Kod == CurrentEntity.Kod );
+        }
+
+        protected override bool EntityUpdate()
+        {
+            return ((EtiketBll)Bll).Update(OldEntity, CurrentEntity, x => x.Kod == CurrentEntity.Kod );
+        }
+
         protected override void SecimYap(object sender)
         {
             if (!(sender is ButtonEdit)) return;
@@ -82,6 +94,11 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.EtiketForms
                 else if (sender == txtOzelKod2)
                     sec.Sec(txtOzelKod2, KartTuru.Etiket);
 
+        }
+
+        protected override void Control_EditValueChanged(object sender, EventArgs e)
+        {
+            base.Control_EditValueChanged(sender, e);
         }
     }
 }

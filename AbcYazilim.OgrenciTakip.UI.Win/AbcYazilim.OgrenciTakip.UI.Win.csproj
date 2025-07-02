@@ -1299,6 +1299,12 @@
     <Compile Include="UserControls\UserControl\IndirimEditFormTable\IndiriminUygulanacagiHizmetlerTable.Designer.cs">
       <DependentUpon>IndiriminUygulanacagiHizmetlerTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UserControl\KisiEtiketEditFormTable\KisiEtiketEditFormTable.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UserControl\KisiEtiketEditFormTable\KisiEtiketEditFormTable.Designer.cs">
+      <DependentUpon>KisiEtiketEditFormTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UserControl\KullaniciBirimYetkileriEditFormTable\DonemTable.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -1920,6 +1926,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControl\IndirimEditFormTable\IndiriminUygulanacagiHizmetlerTable.resx">
       <DependentUpon>IndiriminUygulanacagiHizmetlerTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControl\KisiEtiketEditFormTable\KisiEtiketEditFormTable.resx">
+      <DependentUpon>KisiEtiketEditFormTable.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControl\KullaniciBirimYetkileriEditFormTable\DonemTable.resx">
       <DependentUpon>DonemTable.cs</DependentUpon>

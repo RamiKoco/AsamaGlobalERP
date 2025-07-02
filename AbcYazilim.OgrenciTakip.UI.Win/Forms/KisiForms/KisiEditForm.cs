@@ -5,6 +5,7 @@ using AbcYazilim.OgrenciTakip.Model.Dto;
 using AbcYazilim.OgrenciTakip.Model.Entities;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Functions;
+using AbcYazilim.OgrenciTakip.UI.Win.GenelForms;
 using DevExpress.XtraEditors;
 using System;
 using System.Collections.Generic;
@@ -20,7 +21,6 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.KisiForms
 
             DataLayoutControls = new[] { DataLayoutGenel, DataLayoutGenelBilgiler };
             Bll = new KisiBll(DataLayoutGenelBilgiler);
-            //Herhangi bir hata olduğunda bunun içerisindeki controllere odaklan demiş olacaz
             BaseKartTuru = KartTuru.Kisi;
             EventsLoad();
             txtCinsiyet.Properties.Items.AddRange(EnumFunctions.GetEnumDescriptionList<Cinsiyet>());          
@@ -28,7 +28,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.KisiForms
         public override void Yukle()
         {
             OldEntity = BaseIslemTuru == IslemTuru.EntityInsert ? new KisiS() : ((KisiBll)Bll).Single(FilterFunctions.Filter<Kisi>(Id));
-            EtiketleriYukle();
+            //EtiketleriYukle();
             NesneyiKontrollereBagla();
             TabloYukle();
 
@@ -37,20 +37,20 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.KisiForms
             txtKod.Text = ((KisiBll)Bll).YeniKodVer();
             txtAdi.Focus();
         }
-        private List<EtiketL> _tumEtiketler;
+        //private List<EtiketL> _tumEtiketler;
 
-        private void EtiketleriYukle()
-        {
-            _tumEtiketler = new EtiketBll().List(null).Cast<EtiketL>().ToList();
+        //private void EtiketleriYukle()
+        //{
+        //    _tumEtiketler = new EtiketBll().List(null).Cast<EtiketL>().ToList();
 
-            txtEtiket2.Properties.Tokens.Clear();
-            txtEtiket2.Properties.EditMode = TokenEditMode.Manual;
+        //    txtEtiket2.Properties.Tokens.Clear();
+        //    txtEtiket2.Properties.EditMode = TokenEditMode.Manual;
 
-            foreach (var etiket in _tumEtiketler)
-            {
-                txtEtiket2.Properties.Tokens.Add(new TokenEditToken(etiket.EtiketAdi, etiket.Id));
-            }
-        }
+        //    foreach (var etiket in _tumEtiketler)
+        //    {
+        //        txtEtiket2.Properties.Tokens.Add(new TokenEditToken(etiket.EtiketAdi, etiket.Id));
+        //    }
+        //}
         protected override void NesneyiKontrollereBagla()
         {
             var entity = (KisiS)OldEntity;
@@ -60,14 +60,14 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.KisiForms
             txtCinsiyet.SelectedItem = entity.Cinsiyet.ToName();           
             txtDogumTarihi.EditValue = entity.DogumTarihi;
             txtAciklama.Text = entity.Aciklama;
-            txtEtiket.Id = entity.EtiketId;
-            txtEtiket.Text = entity.EtiketAdi;
+            //txtEtiket.Id = entity.EtiketId;
+            //txtEtiket.Text = entity.EtiketAdi;
             txtKayitKaynak.Id = entity.KayitKaynakId;
             txtKayitKaynak.Text = entity.KayitKaynakAdi;
             //txtEtiket2.EditValue = entity.Etiketler?.Select(x => x.Id).ToList();
             //txtEtiket2.EditValue = new List<long> { entity.Id };
             //txtEtiket2.EditValue = entity.Etiketler?.Select(x => x.Id).ToList();
-            _tumEtiketler = new EtiketBll().List(null).OfType<EtiketL>().ToList();
+            //_tumEtiketler = new EtiketBll().List(null).OfType<EtiketL>().ToList();
             // Buraya ekle:
             //txtEtiket2.EditValue = entity.Etiketler?.Select(x => x.Id).ToList() ?? new List<long>();
             txtMeslek.Id = entity.MeslekId;
@@ -95,17 +95,36 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.KisiForms
                 Aciklama = txtAciklama.Text,
                 KayitKaynakId = txtKayitKaynak.Id,
                 // Çoklu etiket ilişkisi:
-                EtiketId = secilenEtiketIdListesi?.FirstOrDefault() ?? 0,
+                //EtiketId = secilenEtiketIdListesi?.FirstOrDefault() ?? 0,
                 //EtiketId = txtEtiket.Id,
                 MeslekId = txtMeslek.Id,
                 KisiGrubuId = txtKisiGrubu.Id,
                 OzelKod1Id = txtOzelKod1.Id,
-                OzelKod2Id = txtOzelKod2.Id,                
+                OzelKod2Id = txtOzelKod2.Id,
                 Durum = tglDurum.IsOn
             };
             ButonEnabledDurumu();
         }
-     
+        protected internal override void ButonEnabledDurumu()
+        {
+            if (!IsLoaded) return;
+            GeneralFunctions.ButtonEnabledDurumu(btnYeni, btnKaydet, btnGerial, btnSil, OldEntity, CurrentEntity, etiketTablo.TableValueChanged);
+
+        }
+
+        protected override bool EntityInsert()
+        {
+
+            if (etiketTablo.HataliGiris()) return false;
+            return ((KisiBll)Bll).Insert(CurrentEntity, x => x.Kod == CurrentEntity.Kod ) && etiketTablo.Kaydet();
+        }
+
+        protected override bool EntityUpdate()
+        {
+            if (etiketTablo.HataliGiris()) return false;
+            return ((KisiBll)Bll).Update(OldEntity, CurrentEntity, x => x.Kod == CurrentEntity.Kod) && etiketTablo.Kaydet();
+        }
+
         protected override void SecimYap(object sender)
         {
             if (!(sender is ButtonEdit)) return;
@@ -115,8 +134,8 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.KisiForms
                     sec.Sec(txtMeslek);
                 else if (sender == txtKisiGrubu)
                     sec.Sec(txtKisiGrubu);
-                else if (sender == txtEtiket)
-                    sec.Sec(txtEtiket);
+                //else if (sender == txtEtiket)
+                //    sec.Sec(txtEtiket);
                 else if (sender == txtKayitKaynak)
                     sec.Sec(txtKayitKaynak);
                 else if (sender == txtOzelKod1)
@@ -124,6 +143,12 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.KisiForms
                 else if (sender == txtOzelKod2)
                     sec.Sec(txtOzelKod2, KartTuru.Kisi);
               
-        }      
+        }
+
+        protected override void TabloYukle()
+        {
+            etiketTablo.OwnerForm = this;
+            etiketTablo.Yukle();
+        }
     }
 }

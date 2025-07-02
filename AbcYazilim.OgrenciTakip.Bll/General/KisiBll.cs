@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace AbcYazilim.OgrenciTakip.Bll.General
 {
-    public class KisiBll : BaseGenelBll<Kisi>, IBaseGenelBll, IBaseCommonBll
+    public class KisiBll : BaseGenelBll<Kisi>, IBaseCommonBll
     {
         public KisiBll() : base(KartTuru.Kisi) { }
         public KisiBll(Control ctrl) : base(ctrl, KartTuru.Kisi) { }
@@ -32,14 +32,14 @@ namespace AbcYazilim.OgrenciTakip.Bll.General
                 KayitKaynakAdi = x.KayitKaynak.KayitKaynakAdi,
                 KisiGrubuId = x.KisiGrubuId,
                 KisiGrubuAdi = x.KisiGrubu.GrupAdi,
-                EtiketId = x.EtiketId,
-                EtiketAdi = x.Etiket.EtiketAdi,
+                //EtiketId = x.EtiketId,
+                //EtiketAdi = x.Etiket.EtiketAdi,
                 MeslekId = x.MeslekId,
                 MeslekAdi = x.Meslek.MeslekAdi,
                 OzelKod1Id = x.OzelKod1Id,
                 OzelKod1Adi = x.OzelKod1.OzelKodAdi,
                 OzelKod2Id = x.OzelKod2Id,
-                OzelKod2Adi = x.OzelKod2.OzelKodAdi,
+                OzelKod2Adi = x.OzelKod2.OzelKodAdi,        
                 Durum = x.Durum
             });
         }
@@ -55,7 +55,7 @@ namespace AbcYazilim.OgrenciTakip.Bll.General
                 Cinsiyet = x.Cinsiyet,               
                 DogumTarihi = x.DogumTarihi,
                 KayitTuru = x.KayitTuru,
-                EtiketAdi = x.Etiket.EtiketAdi,
+                //EtiketAdi = x.Etiket.EtiketAdi,
                 Aciklama = x.Aciklama,
                 KayitKaynakAdi = x.KayitKaynak.KayitKaynakAdi,
                 MeslekAdi = x.Meslek.MeslekAdi,

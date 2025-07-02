@@ -28,6 +28,7 @@ namespace AbcYazilim.OgrenciTakip.Data.Contexts
             modelBuilder.Entity<Il>().HasMany(x => x.Ilce).WithRequired().WillCascadeOnDelete(true);
             modelBuilder.Entity<Banka>().HasMany(x => x.BankaSube).WithRequired().WillCascadeOnDelete(true);
             modelBuilder.Entity<Indirim>().HasMany(x => x.IndiriminUygulanacagiHizmetBilgileri).WithRequired().WillCascadeOnDelete(true);
+            modelBuilder.Entity<Kisi>().HasMany(x => x.KisiEtiketleri).WithRequired().WillCascadeOnDelete(true);
         }
 
         public DbSet<Il> Il { get; set; }
@@ -100,6 +101,7 @@ namespace AbcYazilim.OgrenciTakip.Data.Contexts
         public DbSet<Kurgu> Kurgu { get; set; }
         public DbSet<KitapTuru> KitapTuru { get; set; }
         public DbSet<Kisi> Kisi { get; set; }
+        public DbSet<KisiEtiket> KisiEtiket { get; set; }
         public DbSet<Etiket> Etiket { get; set; }
         public DbSet<Renk> Renk { get; set; }
     }
