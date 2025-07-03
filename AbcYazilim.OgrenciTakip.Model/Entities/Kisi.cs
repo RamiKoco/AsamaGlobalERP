@@ -24,12 +24,12 @@ namespace AbcYazilim.OgrenciTakip.Model.Entities
         public DateTime? DogumTarihi { get; set; }
         [StringLength(500)]
         public string Aciklama { get; set; }
-
+        //public long? Etiket { get; set; }
         //public long? SorumluPersonelId { get; set; }        
         //public long? EtiketId { get; set; }
         public long? KisiGrubuId { get; set; }
         public long? KayitKaynakId { get; set; }
-        //public long? EtiketId { get; set; }
+        public long? EtiketId { get; set; }
         public long? MeslekId { get; set; }
         public long? OzelKod1Id { get; set; }
         public long? OzelKod2Id { get; set; }
@@ -45,6 +45,7 @@ namespace AbcYazilim.OgrenciTakip.Model.Entities
         //public ICollection<KisiEtiket> KisiEtiket { get; set; }
         [InverseProperty("Kisi")]
         public virtual ICollection<KisiEtiket> KisiEtiketleri { get; set; }
+        public virtual ICollection<EtiketKayitTuruBaglanti> EtiketKayitTuruBaglanti { get; set; }
 
     }
 }

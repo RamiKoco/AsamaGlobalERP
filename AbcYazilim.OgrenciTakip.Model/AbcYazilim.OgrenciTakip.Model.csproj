@@ -91,6 +91,7 @@
     <Compile Include="Dto\CariDto.cs" />
     <Compile Include="Dto\EposBilgileriDto.cs" />
     <Compile Include="Dto\EtiketDto.cs" />
+    <Compile Include="Dto\EtiketKayitTuruBaglantiDto.cs" />
     <Compile Include="Dto\EvrakBilgileriDto.cs" />
     <Compile Include="Dto\FaturaDto.cs" />
     <Compile Include="Dto\GecikmeAciklamalariDto.cs" />
@@ -129,6 +130,7 @@
     <Compile Include="Entities\BaglantiAyarlari.cs" />
     <Compile Include="Entities\DonemParametre.cs" />
     <Compile Include="Entities\Etiket.cs" />
+    <Compile Include="Entities\EtiketKayitTuruBaglanti.cs" />
     <Compile Include="Entities\GecikmeAciklamalari.cs" />
     <Compile Include="Entities\AileBilgi.cs" />
     <Compile Include="Entities\AileBilgileri.cs" />
