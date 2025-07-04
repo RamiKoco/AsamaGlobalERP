@@ -131,7 +131,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.KisiForms
         private void EtiketleriYukle()
         {
             var etiketBll = new EtiketBll();
-            _tumEtiketler = etiketBll.List(x => x.Durum == true).Cast<EtiketL>().ToList();
+            _tumEtiketler = etiketBll.List(x => x.Durum == true && x.KayitTuru == KayitTuru.Kisi).Cast<EtiketL>().ToList();
             txtEtiket.Properties.DataSource = _tumEtiketler;
             txtEtiket.Properties.DisplayMember = "EtiketAdi";
             txtEtiket.Properties.ValueMember = "Id";
@@ -147,13 +147,13 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.KisiForms
                          ?.ToArray();
 
 
-            if (seciliEtiketIdler != null && seciliEtiketIdler.Any())
+            if (seciliEtiketIdler != null)
             {
                 using (var db = new OgrenciTakipContext())
                 {
                     // Önce bu kişiye ait eski etiket bağlantılarını sil
                     var eskiBaglantilar = db.EtiketKayitTuruBaglanti
-                        .Where(x => x.KayitTuru == KayitTuru.Kisi)
+                        .Where(x => x.KayitTuru == KayitTuru.Kisi && x.KayitId == Id)
                         .ToList();
                     db.EtiketKayitTuruBaglanti.RemoveRange(eskiBaglantilar);
 
@@ -163,7 +163,8 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.KisiForms
                         var baglanti = new EtiketKayitTuruBaglanti
                         {
                             EtiketId = etiketId,
-                            KayitTuru = KayitTuru.Kisi,                           
+                            KayitTuru = KayitTuru.Kisi,
+                            KayitId = Id
                         };
                         db.EtiketKayitTuruBaglanti.Add(baglanti);
                     }
@@ -177,7 +178,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.KisiForms
             using (var db = new OgrenciTakipContext())
             {
                 var seciliEtiketler = db.EtiketKayitTuruBaglanti
-                    .Where(x => x.KayitTuru == KayitTuru.Kisi)
+                    .Where(x => x.KayitTuru == KayitTuru.Kisi && x.KayitId == Id)
                     .Select(x => x.EtiketId)
                     .ToList();
 

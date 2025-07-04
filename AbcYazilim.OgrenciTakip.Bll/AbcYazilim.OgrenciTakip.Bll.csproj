@@ -94,7 +94,6 @@
     <Compile Include="General\DonemParametreBll.cs" />
     <Compile Include="General\EposBilgileriBll.cs" />
     <Compile Include="General\EtiketBll.cs" />
-    <Compile Include="General\EtiketKayitTuruBaglantiBll.cs" />
     <Compile Include="General\EvrakBilgileriBll.cs" />
     <Compile Include="General\EvrakBll.cs" />
     <Compile Include="General\FaturaBll.cs" />
