@@ -8,6 +8,7 @@ namespace AbcYazilim.OgrenciTakip.Model.Entities
     {
         
         public long TahakkukId { get; set; }
+        public long KisiId { get; set; }
         public DateTime Tarih { get; set; }
 
         [Required,StringLength(1000)]

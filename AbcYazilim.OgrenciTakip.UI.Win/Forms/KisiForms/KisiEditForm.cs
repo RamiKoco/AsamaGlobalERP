@@ -4,8 +4,13 @@ using AbcYazilim.OgrenciTakip.Common.Functions;
 using AbcYazilim.OgrenciTakip.Data.Contexts;
 using AbcYazilim.OgrenciTakip.Model.Dto;
 using AbcYazilim.OgrenciTakip.Model.Entities;
+using AbcYazilim.OgrenciTakip.Model.Entities.Base.Interfaces;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Functions;
+using AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.Base;
+using AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFormTable;
+using DevExpress.CodeParser;
+using DevExpress.XtraBars.Navigation;
 using DevExpress.XtraEditors;
 using System;
 using System.Collections.Generic;
@@ -15,6 +20,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.KisiForms
 {
     public partial class KisiEditForm : BaseEditForm
     {
+        private BaseTablo _bilgiNotlariTable;
         private List<EtiketL> _tumEtiketler;
         private List<long> _oldEtiketIdListesi = new List<long>();
         private List<long> _guncelEtiketIdListesi = new List<long>();
@@ -109,16 +115,25 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.KisiForms
 
             bool etiketDegisti = !_oldEtiketIdListesi?.SequenceEqual(_guncelEtiketIdListesi ?? new List<long>()) ?? false;
 
-            GeneralFunctions.ButtonEnabledDurumu(
-                btnYeni,
-                btnKaydet,
-                btnGerial,
-                btnSil,
-                OldEntity,
-                CurrentEntity,
-                etiketDegisti
-            );
+            bool TableValueChanged()
+            {
+                return _bilgiNotlariTable?.TableValueChanged ?? false;
+            }
+
+            if (FarkliSubeIslemi)
+            {
+                GeneralFunctions.ButtonEnabledDurumu(btnYeni, btnKaydet, btnGerial, btnSil);
+            }
+            else if (TableValueChanged())
+            {
+                GeneralFunctions.ButtonEnabledDurumu(btnYeni, btnKaydet, btnGerial, btnSil, OldEntity, CurrentEntity, true);
+            }
+            else
+            {
+                GeneralFunctions.ButtonEnabledDurumu(btnYeni, btnKaydet, btnGerial, btnSil, OldEntity, CurrentEntity, etiketDegisti);
+            }
         }
+
         protected override bool EntityInsert()
         {
 
@@ -166,7 +181,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.KisiForms
                         ?.Select(x => long.TryParse(x, out var val) ? val : 0)
                         ?.Where(x => x > 0)
                         ?.ToArray();
-
+            if (_bilgiNotlariTable != null && !_bilgiNotlariTable.Kaydet()) return false;
 
             if (seciliEtiketIdler != null)
             {
@@ -212,5 +227,57 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.KisiForms
             var sonuc = base.Kaydet(kapanis);
             return sonuc;
         }
+
+        protected override void BagliTabloYukle()
+        {
+            bool TableValueChanged(BaseTablo tablo)
+            {
+                return tablo.Tablo.DataController.ListSource.Cast<IBaseHareketEntity>()
+                    .Any(x => x.Insert || x.Update || x.Delete);
+            }
+
+
+            if (_bilgiNotlariTable != null && TableValueChanged(_bilgiNotlariTable))
+                _bilgiNotlariTable.Yukle();
+        }
+
+        protected override bool BagliTabloHataliGirisKontrol()
+        {  
+            if (_bilgiNotlariTable != null && _bilgiNotlariTable.HataliGiris())
+            {
+                tabUst.SelectedPage = pageNotlar;
+                _bilgiNotlariTable.Tablo.GridControl.Focus();
+                return true;
+            }      
+
+            return false;
+        }
+
+        protected override void Control_SelectedPageChanged(object sender, SelectedPageChangedEventArgs e)
+        {
+            if (e.Page == pageGenelBilgiler)
+            {
+                txtAdi.Focus();
+                txtSoyAdi.SelectAll();
+            }
+
+      
+            else if (e.Page == pageNotlar)
+            {
+                if (pageNotlar.Controls.Count == 0)
+                {
+                    _bilgiNotlariTable = new BilgiNotlariTable().AddTable(this);
+                    pageNotlar.Controls.Add(_bilgiNotlariTable);
+                    _bilgiNotlariTable.Yukle();
+
+                }
+
+                _bilgiNotlariTable.Tablo.GridControl.Focus();
+
+            }
+            
+        }
+    
+
     }
 }

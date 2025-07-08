@@ -19,6 +19,7 @@ namespace AbcYazilim.OgrenciTakip.Bll.General
             {
                 Id = x.Id,
                 TahakkukId = x.TahakkukId,
+                KisiId = x.KisiId,
                 Tarih = x.Tarih,
                 BilgiNotu = x.BilgiNotu
               
