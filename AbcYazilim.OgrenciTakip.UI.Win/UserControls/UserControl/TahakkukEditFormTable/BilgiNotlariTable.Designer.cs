@@ -34,6 +34,7 @@
             this.repositoryTarih = new DevExpress.XtraEditors.Repository.RepositoryItemDateEdit();
             this.colBilgiNotu = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
             this.repositoryNot = new DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit();
+            ((System.ComponentModel.ISupportInitialize)(this.popupMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryTarih)).BeginInit();
@@ -101,6 +102,7 @@
             this.colTarih.ColumnEdit = this.repositoryTarih;
             this.colTarih.FieldName = "Tarih";
             this.colTarih.Name = "colTarih";
+            this.colTarih.OptionsColumn.AllowEdit = false;
             this.colTarih.OptionsColumn.FixedWidth = true;
             this.colTarih.OptionsFilter.AllowAutoFilter = false;
             this.colTarih.OptionsFilter.AllowFilter = false;
@@ -123,6 +125,7 @@
             this.repositoryTarih.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.repositoryTarih.EditFormat.FormatString = "G";
             this.repositoryTarih.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.repositoryTarih.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTimeAdvancingCaret;
             this.repositoryTarih.MaskSettings.Set("useAdvancingCaret", true);
             this.repositoryTarih.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.DateTimeMaskManager));
             this.repositoryTarih.Name = "repositoryTarih";
@@ -157,6 +160,7 @@
             this.Size = new System.Drawing.Size(774, 396);
             this.Controls.SetChildIndex(this.insUptNavigator, 0);
             this.Controls.SetChildIndex(this.grid, 0);
+            ((System.ComponentModel.ISupportInitialize)(this.popupMenu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryTarih.CalendarTimeProperties)).EndInit();

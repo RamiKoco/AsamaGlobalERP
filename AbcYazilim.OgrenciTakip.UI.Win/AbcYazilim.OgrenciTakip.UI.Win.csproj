@@ -2630,5 +2630,8 @@
   <ItemGroup>
     <None Include="Resources\palette_16x16.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clearformatting_16x161.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

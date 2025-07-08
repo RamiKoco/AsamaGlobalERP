@@ -878,9 +878,9 @@
             // pageNotlar
             // 
             this.pageNotlar.Caption = "Notlar";
-            this.pageNotlar.ImageOptions.Image = global::AbcYazilim.OgrenciTakip.UI.Win.Properties.Resources.textbox_16x161;
+            this.pageNotlar.ImageOptions.Image = global::AbcYazilim.OgrenciTakip.UI.Win.Properties.Resources.clearformatting_16x161;
             this.pageNotlar.Name = "pageNotlar";
-            this.pageNotlar.Size = new System.Drawing.Size(774, 241);
+            this.pageNotlar.Size = new System.Drawing.Size(928, 208);
             // 
             // Root
             // 
