@@ -135,7 +135,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms
 
 
         }
-        private bool Kaydet(bool kapanis)
+        public virtual bool Kaydet(bool kapanis)
         {
             bool KayitIslemi()
             {

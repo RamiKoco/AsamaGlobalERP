@@ -16,6 +16,8 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.KisiForms
     public partial class KisiEditForm : BaseEditForm
     {
         private List<EtiketL> _tumEtiketler;
+        private List<long> _oldEtiketIdListesi = new List<long>();
+        private List<long> _guncelEtiketIdListesi = new List<long>();
         public KisiEditForm()
         {
             InitializeComponent();
@@ -25,6 +27,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.KisiForms
             BaseKartTuru = KartTuru.Kisi;
             EventsLoad();
             txtCinsiyet.Properties.Items.AddRange(EnumFunctions.GetEnumDescriptionList<Cinsiyet>());          
+                    
         }
         public override void Yukle()
         {
@@ -38,7 +41,14 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.KisiForms
             txtKod.Text = ((KisiBll)Bll).YeniKodVer();
             txtAdi.Focus();
         }
-      
+        private void EtiketleriYukle()
+        {
+            var etiketBll = new EtiketBll();
+            _tumEtiketler = etiketBll.List(x => x.Durum == true && x.KayitTuru == KayitTuru.Kisi).Cast<EtiketL>().ToList();
+            txtEtiket.Properties.DataSource = _tumEtiketler;
+            txtEtiket.Properties.DisplayMember = "EtiketAdi";
+            txtEtiket.Properties.ValueMember = "Id";
+        }     
         protected override void NesneyiKontrollereBagla()
         {
             var entity = (KisiS)OldEntity;
@@ -64,7 +74,17 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.KisiForms
 
         protected override void GuncelNesneOlustur()
         {
-            var secilenEtiketIdListesi = txtEtiket.EditValue as IEnumerable<long>;
+            var etiketValue = txtEtiket.EditValue;
+            if (etiketValue is string str)
+            {
+                _guncelEtiketIdListesi = str
+                    .Split(',')
+                    .Select(x => long.TryParse(x, out var val) ? val : 0)
+                    .Where(x => x > 0)
+                    .ToList();
+            }
+            else
+                _guncelEtiketIdListesi = new List<long>();
             CurrentEntity = new Kisi
             {
                 Id = Id,
@@ -82,15 +102,23 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.KisiForms
                 Durum = tglDurum.IsOn
             };
             ButonEnabledDurumu();
-            BagliTabloKaydet();
         }
         protected internal override void ButonEnabledDurumu()
         {
             if (!IsLoaded) return;
-            GeneralFunctions.ButtonEnabledDurumu(btnYeni, btnKaydet, btnGerial, btnSil, OldEntity, CurrentEntity, etiketTablo.TableValueChanged);
 
+            bool etiketDegisti = !_oldEtiketIdListesi?.SequenceEqual(_guncelEtiketIdListesi ?? new List<long>()) ?? false;
+
+            GeneralFunctions.ButtonEnabledDurumu(
+                btnYeni,
+                btnKaydet,
+                btnGerial,
+                btnSil,
+                OldEntity,
+                CurrentEntity,
+                etiketDegisti
+            );
         }
-
         protected override bool EntityInsert()
         {
 
@@ -128,36 +156,27 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.KisiForms
             etiketTablo.Yukle();
         }
 
-        private void EtiketleriYukle()
-        {
-            var etiketBll = new EtiketBll();
-            _tumEtiketler = etiketBll.List(x => x.Durum == true && x.KayitTuru == KayitTuru.Kisi).Cast<EtiketL>().ToList();
-            txtEtiket.Properties.DataSource = _tumEtiketler;
-            txtEtiket.Properties.DisplayMember = "EtiketAdi";
-            txtEtiket.Properties.ValueMember = "Id";
-        }
+      
         protected override bool BagliTabloKaydet()
         {
             var seciliEtiketIdler = txtEtiket.EditValue as IEnumerable<long>
-                         ?? txtEtiket.EditValue as long[]
-                         ?? txtEtiket.EditValue?.ToString()
-                         ?.Split(',')
-                         ?.Select(x => long.TryParse(x, out var val) ? val : 0)
-                         ?.Where(x => x > 0)
-                         ?.ToArray();
+                        ?? txtEtiket.EditValue as long[]
+                        ?? txtEtiket.EditValue?.ToString()
+                        ?.Split(',')
+                        ?.Select(x => long.TryParse(x, out var val) ? val : 0)
+                        ?.Where(x => x > 0)
+                        ?.ToArray();
 
 
             if (seciliEtiketIdler != null)
             {
                 using (var db = new OgrenciTakipContext())
                 {
-                    // Önce bu kişiye ait eski etiket bağlantılarını sil
                     var eskiBaglantilar = db.EtiketKayitTuruBaglanti
                         .Where(x => x.KayitTuru == KayitTuru.Kisi && x.KayitId == Id)
                         .ToList();
                     db.EtiketKayitTuruBaglanti.RemoveRange(eskiBaglantilar);
 
-                    // Yeni seçili etiketleri ekle
                     foreach (var etiketId in seciliEtiketIdler)
                     {
                         var baglanti = new EtiketKayitTuruBaglanti
@@ -183,7 +202,15 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.KisiForms
                     .ToList();
 
                 txtEtiket.EditValue = string.Join(",", seciliEtiketler);
+                _oldEtiketIdListesi = seciliEtiketler;
             }
+        }
+        public override bool Kaydet(bool kapanis)
+        {
+            BagliTabloKaydet();
+            _oldEtiketIdListesi = _guncelEtiketIdListesi.ToList();
+            var sonuc = base.Kaydet(kapanis);
+            return sonuc;
         }
     }
 }

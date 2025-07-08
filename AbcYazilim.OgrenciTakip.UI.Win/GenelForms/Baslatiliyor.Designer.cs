@@ -28,6 +28,7 @@
         /// </summary>
 		private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Baslatiliyor));
             this.progressBarControl = new DevExpress.XtraEditors.MarqueeProgressBarControl();
             this.labelCopyright = new DevExpress.XtraEditors.LabelControl();
             this.labelStatus = new DevExpress.XtraEditors.LabelControl();
@@ -44,33 +45,37 @@
             this.progressBarControl.EditValue = 0;
             this.progressBarControl.Location = new System.Drawing.Point(11, 261);
             this.progressBarControl.Name = "progressBarControl";
+            this.progressBarControl.Properties.Appearance.BackColor = System.Drawing.Color.Red;
             this.progressBarControl.Size = new System.Drawing.Size(426, 20);
             this.progressBarControl.TabIndex = 5;
             // 
             // labelCopyright
             // 
-            this.labelCopyright.Appearance.ForeColor = System.Drawing.Color.Maroon;
+            this.labelCopyright.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
+            this.labelCopyright.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.labelCopyright.Appearance.Options.UseFont = true;
             this.labelCopyright.Appearance.Options.UseForeColor = true;
             this.labelCopyright.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.labelCopyright.LineVisible = true;
             this.labelCopyright.Location = new System.Drawing.Point(11, 287);
             this.labelCopyright.Name = "labelCopyright";
-            this.labelCopyright.Size = new System.Drawing.Size(129, 13);
+            this.labelCopyright.Size = new System.Drawing.Size(186, 15);
             this.labelCopyright.TabIndex = 6;
-            this.labelCopyright.Text = "Copyright Abc Yazılım 2022";
+            this.labelCopyright.Text = "Copyright Asama Global ERP";
             // 
             // labelStatus
             // 
             this.labelStatus.Location = new System.Drawing.Point(11, 244);
             this.labelStatus.Margin = new System.Windows.Forms.Padding(3, 3, 3, 1);
             this.labelStatus.Name = "labelStatus";
-            this.labelStatus.Size = new System.Drawing.Size(150, 13);
+            this.labelStatus.Size = new System.Drawing.Size(144, 13);
             this.labelStatus.TabIndex = 7;
             this.labelStatus.Text = "Başlatılıyor. Lütfen Bekleyiniz...";
             // 
             // peImage
             // 
             this.peImage.Dock = System.Windows.Forms.DockStyle.Top;
-            this.peImage.EditValue = global::AbcYazilim.OgrenciTakip.UI.Win.Properties.Resources.tumblr_pcsgcsmIeB1qeyvpto1_500;
+            this.peImage.EditValue = ((object)(resources.GetObject("peImage.EditValue")));
             this.peImage.Location = new System.Drawing.Point(1, 1);
             this.peImage.Name = "peImage";
             this.peImage.Properties.AllowFocused = false;
@@ -85,7 +90,9 @@
             // 
             // lblVersiyon
             // 
-            this.lblVersiyon.Appearance.ForeColor = System.Drawing.Color.Maroon;
+            this.lblVersiyon.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
+            this.lblVersiyon.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblVersiyon.Appearance.Options.UseFont = true;
             this.lblVersiyon.Appearance.Options.UseForeColor = true;
             this.lblVersiyon.Appearance.Options.UseTextOptions = true;
             this.lblVersiyon.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
