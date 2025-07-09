@@ -41,7 +41,9 @@ namespace AbcYazilim.OgrenciTakip.Bll.General
                 OzelKod1Id = x.OzelKod1Id,
                 OzelKod1Adi = x.OzelKod1.OzelKodAdi,
                 OzelKod2Id = x.OzelKod2Id,
-                OzelKod2Adi = x.OzelKod2.OzelKodAdi,              
+                OzelKod2Adi = x.OzelKod2.OzelKodAdi,
+                AdresTurleriId = x.AdresTurleriId,
+                AdresTurleriAdi = x.AdresTurleri.Ad,
                 Durum = x.Durum
             });
         }
@@ -65,7 +67,8 @@ namespace AbcYazilim.OgrenciTakip.Bll.General
                 IlAdi = x.Il.IlAdi,
                 IlceAdi = x.Ilce.IlceAdi,              
                 OzelKod1Adi = x.OzelKod1.OzelKodAdi,
-                OzelKod2Adi = x.OzelKod2.OzelKodAdi             
+                OzelKod2Adi = x.OzelKod2.OzelKodAdi,
+                AdresTurleriAdi = x.AdresTurleri.Ad,
 
             }).OrderBy(x => x.Kod).ToList();
         }

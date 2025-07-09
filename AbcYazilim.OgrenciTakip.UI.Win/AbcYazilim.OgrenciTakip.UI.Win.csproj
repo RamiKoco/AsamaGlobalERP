@@ -195,6 +195,18 @@
     <Compile Include="Forms\AdresBilgileriForms\AdresBilgileriListForm.Designer.cs">
       <DependentUpon>AdresBilgileriListForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\AdresTurleriForms\AdresTurleriEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdresTurleriForms\AdresTurleriEditForm.Designer.cs">
+      <DependentUpon>AdresTurleriEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdresTurleriForms\AdresTurleriListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdresTurleriForms\AdresTurleriListForm.Designer.cs">
+      <DependentUpon>AdresTurleriListForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\AileBilgiForms\AileBilgiEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1430,6 +1442,12 @@
     <EmbeddedResource Include="Forms\AdresBilgileriForms\AdresBilgileriListForm.resx">
       <DependentUpon>AdresBilgileriListForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdresTurleriForms\AdresTurleriEditForm.resx">
+      <DependentUpon>AdresTurleriEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdresTurleriForms\AdresTurleriListForm.resx">
+      <DependentUpon>AdresTurleriListForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\AileBilgiForms\AileBilgiEditForm.resx">
       <DependentUpon>AileBilgiEditForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -2656,6 +2674,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\country_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bo_localization.svg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

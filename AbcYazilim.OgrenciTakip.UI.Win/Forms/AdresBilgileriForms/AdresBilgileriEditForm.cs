@@ -42,7 +42,6 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.AdresBilgiForms
             txtAdresNotu.Text = entity.AdresNotu;            
             txtKayitTuru.SelectedItem = entity.KayitTuru.ToName();
             //txtKayitHesabi.Text = entity.KayitHesabi;
-            //txtAdresTuru.Text = entity.AdresTuru;
             //txtAdresTipi.Text = entity.txtAdresTipi;
             //txtUlke.Id = entity.UlkeId;
             //txtUlke.Text = entity.UlkeAdi;
@@ -54,12 +53,12 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.AdresBilgiForms
             txtOzelKod1.Text = entity.OzelKod1Adi;
             txtOzelKod2.Id = entity.OzelKod2Id;
             txtOzelKod2.Text = entity.OzelKod2Adi;
+            txtAdresTurleri.Id = entity.AdresTurleriId;
+            txtAdresTurleri.Text = entity.AdresTurleriAdi;
             txtPostaKodu.Text = entity.PostaKodu;
             txtAdres.Text = entity.Adres;
-            //txtEnlem.EditValue = entity.Enlem;
             txtEnlem.EditValue = entity.Enlem ?? 0m;
             txtBoylam.EditValue = entity.Boylam ?? 0m;
-            //txtBoylam.EditValue = entity.Boylam;
             txtAciklama.Text = entity.Aciklama;   
             tglDurum.IsOn = entity.Durum;
         }
@@ -77,13 +76,13 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.AdresBilgiForms
                 AdresNotu= txtAdresNotu.Text,
                 KayitTuru = txtKayitTuru.Text.GetEnum<KayitTuru>(),
                 //KayitHesabi= txtKayitHesabi.Text,
-                //AdresTuru = txtAdresTuru.Text,
                 //AdresTipi = txtAdresTipi.Text,
                 //UlkeId = txtUlke.Id,
                 IlId = txtIl.Id,
                 IlceId = txtIlce.Id,
                 OzelKod1Id = txtOzelKod1.Id,
                 OzelKod2Id = txtOzelKod2.Id,
+                AdresTurleriId = txtAdresTurleri.Id,
                 PostaKodu= txtPostaKodu.Text,
                 Adres = txtAdres.Text,
                 Enlem = enlem,
@@ -106,7 +105,9 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.AdresBilgiForms
                 else if (sender == txtOzelKod1)
                     sec.Sec(txtOzelKod1, KartTuru.AdresBilgileri);
                 else if (sender == txtOzelKod2)
-                    sec.Sec(txtOzelKod2, KartTuru.AdresBilgileri);            
+                    sec.Sec(txtOzelKod2, KartTuru.AdresBilgileri);
+                else if (sender == txtAdresTurleri)
+                    sec.Sec(txtAdresTurleri, KartTuru.AdresTurleri);
         }
 
         protected override void Control_EnabledChange(object sender, EventArgs e)

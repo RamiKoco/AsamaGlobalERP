@@ -29,6 +29,7 @@ namespace AbcYazilim.OgrenciTakip.Model.Entities
         public long? IlceId { get; set; }
         public long? OzelKod1Id { get; set; }
         public long? OzelKod2Id { get; set; }
+        public long? AdresTurleriId { get; set; }
         public decimal? Enlem { get; set; }
         public decimal? Boylam { get; set; }
         public bool VarsayilanMi { get; set; } = true;
@@ -39,6 +40,7 @@ namespace AbcYazilim.OgrenciTakip.Model.Entities
         public Ilce Ilce { get; set; }   
         public OzelKod OzelKod1 { get; set; }
         public OzelKod OzelKod2 { get; set; }
+        public AdresTurleri AdresTurleri { get; set; }
        
     }
 }

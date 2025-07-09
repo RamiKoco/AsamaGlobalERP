@@ -182,5 +182,7 @@ namespace AbcYazilim.OgrenciTakip.Common.Enums
         EtiketKayitTuruBaglanti = 88,
         [Description("Adres Kartı")]
         AdresBilgileri = 89,
+        [Description("Adres Türleri")]
+        AdresTurleri = 90,
     }
 }

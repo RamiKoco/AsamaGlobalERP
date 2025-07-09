@@ -2,6 +2,7 @@
 using AbcYazilim.OgrenciTakip.Model.Dto;
 using AbcYazilim.OgrenciTakip.Model.Entities;
 using AbcYazilim.OgrenciTakip.Model.Entities.KitapTuru;
+using AbcYazilim.OgrenciTakip.UI.Win.Forms.AdresTurleriForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.AvukatForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.BankaForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.BankaHesapForms;
@@ -305,6 +306,17 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Functions
                         {
                             _btnEdit.Id = entity.Id;
                             _btnEdit.EditValue = entity.GrupAdi;
+                        }
+                    }
+                    break;
+
+                case "txtAdresTurleri":
+                    {
+                        var entity = (AdresTurleriL)ShowListForms<AdresTurleriListForm>.ShowDialogListForm(KartTuru.AdresTurleri, _btnEdit.Id);
+                        if (entity != null)
+                        {
+                            _btnEdit.Id = entity.Id;
+                            _btnEdit.EditValue = entity.Ad;
                         }
                     }
                     break;

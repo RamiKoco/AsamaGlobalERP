@@ -12,6 +12,7 @@ namespace AbcYazilim.OgrenciTakip.Model.Dto
         public string IlceAdi { get; set; }
         public string OzelKod1Adi { get; set; }
         public string OzelKod2Adi { get; set; }
+        public string AdresTurleriAdi { get; set; }
     }
     public class AdresBilgileriL : BaseEntity
     {
@@ -19,6 +20,7 @@ namespace AbcYazilim.OgrenciTakip.Model.Dto
         public string IlceAdi { get; set; }
         public string OzelKod1Adi { get; set; }
         public string OzelKod2Adi { get; set; }
+        public string AdresTurleriAdi { get; set; }
         public string Aciklama { get; set; }
         public string Baslik { get; set; }
         public string AdresNotu { get; set; }

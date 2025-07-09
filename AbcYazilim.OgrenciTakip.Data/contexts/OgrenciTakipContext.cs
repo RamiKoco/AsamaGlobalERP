@@ -106,5 +106,6 @@ namespace AbcYazilim.OgrenciTakip.Data.Contexts
         public DbSet<Renk> Renk { get; set; }
         public DbSet<EtiketKayitTuruBaglanti> EtiketKayitTuruBaglanti { get; set; }
         public DbSet<AdresBilgileri> AdresBilgileri { get; set; }
+        public DbSet<AdresTurleri> AdresTurleri { get; set; }
     }
 }

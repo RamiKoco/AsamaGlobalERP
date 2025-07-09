@@ -60,7 +60,7 @@
             this.txtOzelKod2 = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls.MyButtonEdit();
             this.txtOzelKod1 = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls.MyButtonEdit();
             this.txtAdresTipi = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls.MyButtonEdit();
-            this.txtAdresTuru = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls.MyButtonEdit();
+            this.txtAdresTurleri = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls.MyButtonEdit();
             this.txtKayitHesabi = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls.MyButtonEdit();
             this.txtKayitTuru = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls.MyComboBoxEdit();
             this.txtAdresNotu = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls.MyTextEdit();
@@ -101,7 +101,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtOzelKod2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtOzelKod1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAdresTipi.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtAdresTuru.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAdresTurleri.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKayitHesabi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKayitTuru.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAdresNotu.Properties)).BeginInit();
@@ -148,7 +148,7 @@
             this.myDataLayoutControl.Controls.Add(this.txtOzelKod2);
             this.myDataLayoutControl.Controls.Add(this.txtOzelKod1);
             this.myDataLayoutControl.Controls.Add(this.txtAdresTipi);
-            this.myDataLayoutControl.Controls.Add(this.txtAdresTuru);
+            this.myDataLayoutControl.Controls.Add(this.txtAdresTurleri);
             this.myDataLayoutControl.Controls.Add(this.txtKayitHesabi);
             this.myDataLayoutControl.Controls.Add(this.txtKayitTuru);
             this.myDataLayoutControl.Controls.Add(this.txtAdresNotu);
@@ -382,24 +382,24 @@
             this.txtAdresTipi.StyleController = this.myDataLayoutControl;
             this.txtAdresTipi.TabIndex = 5;
             // 
-            // txtAdresTuru
+            // txtAdresTurleri
             // 
-            this.txtAdresTuru.EnterMoveNextControl = true;
-            this.txtAdresTuru.Id = null;
-            this.txtAdresTuru.Location = new System.Drawing.Point(77, 132);
-            this.txtAdresTuru.MenuManager = this.ribbonControl;
-            this.txtAdresTuru.Name = "txtAdresTuru";
-            this.txtAdresTuru.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
-            this.txtAdresTuru.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtAdresTuru.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.txtAdresTurleri.EnterMoveNextControl = true;
+            this.txtAdresTurleri.Id = null;
+            this.txtAdresTurleri.Location = new System.Drawing.Point(77, 132);
+            this.txtAdresTurleri.MenuManager = this.ribbonControl;
+            this.txtAdresTurleri.Name = "txtAdresTurleri";
+            this.txtAdresTurleri.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
+            this.txtAdresTurleri.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtAdresTurleri.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.txtAdresTuru.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.txtAdresTuru.Size = new System.Drawing.Size(181, 20);
-            this.txtAdresTuru.StatusBarAciklama = "Adres Türü Seçiniz";
-            this.txtAdresTuru.StatusBarKisaYol = "F4 :";
-            this.txtAdresTuru.StatusBarKisaYolAciklama = "Seçim Yap";
-            this.txtAdresTuru.StyleController = this.myDataLayoutControl;
-            this.txtAdresTuru.TabIndex = 4;
+            this.txtAdresTurleri.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.txtAdresTurleri.Size = new System.Drawing.Size(181, 20);
+            this.txtAdresTurleri.StatusBarAciklama = "Adres Türü Seçiniz";
+            this.txtAdresTurleri.StatusBarKisaYol = "F4 :";
+            this.txtAdresTurleri.StatusBarKisaYolAciklama = "Seçim Yap";
+            this.txtAdresTurleri.StyleController = this.myDataLayoutControl;
+            this.txtAdresTurleri.TabIndex = 4;
             // 
             // txtKayitHesabi
             // 
@@ -615,8 +615,7 @@
             // 
             this.layoutControlItem5.AppearanceItemCaption.ForeColor = System.Drawing.Color.Maroon;
             this.layoutControlItem5.AppearanceItemCaption.Options.UseForeColor = true;
-            this.layoutControlItem5.Control = this.txtAdresTuru;
-            this.layoutControlItem5.Enabled = false;
+            this.layoutControlItem5.Control = this.txtAdresTurleri;
             this.layoutControlItem5.Location = new System.Drawing.Point(0, 120);
             this.layoutControlItem5.Name = "layoutControlItem5";
             this.layoutControlItem5.OptionsTableLayoutItem.ColumnSpan = 2;
@@ -851,7 +850,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtOzelKod2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtOzelKod1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAdresTipi.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtAdresTuru.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAdresTurleri.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKayitHesabi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKayitTuru.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAdresNotu.Properties)).EndInit();
@@ -892,7 +891,7 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
         private UserControls.Controls.MyButtonEdit txtKayitHesabi;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
-        private UserControls.Controls.MyButtonEdit txtAdresTuru;
+        private UserControls.Controls.MyButtonEdit txtAdresTurleri;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
         private UserControls.Controls.MyButtonEdit txtAdresTipi;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;

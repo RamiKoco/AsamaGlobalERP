@@ -5,6 +5,7 @@ using AbcYazilim.OgrenciTakip.Common.Message;
 using AbcYazilim.OgrenciTakip.Model.Dto;
 using AbcYazilim.OgrenciTakip.Model.Entities;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.AdresBilgileriForms;
+using AbcYazilim.OgrenciTakip.UI.Win.Forms.AdresTurleriForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.AileBilgiForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.AjandaForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.AvukatForms;
@@ -205,6 +206,9 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.GenelForms
 
             else if (e.Item == btnAdresKartlari)
                 ShowListForms<AdresBilgileriListForm>.ShowListForm(KartTuru.AdresBilgileri);
+            else if (e.Item == btnAdresTurleriKartlari)
+                ShowListForms<AdresTurleriListForm>.ShowListForm(KartTuru.AdresTurleri);
+            
             //else if (e.Item == btnAjandaKartlari)
             //{
             //    Ajanda ajandaForm = new Ajanda();

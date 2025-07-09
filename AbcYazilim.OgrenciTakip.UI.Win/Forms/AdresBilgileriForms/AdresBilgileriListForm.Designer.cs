@@ -40,7 +40,7 @@
             this.colKayitTuru = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colKayitHesabi = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.gridBand2 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
-            this.colAdresTuru = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
+            this.colAdresTurleriAdi = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colAdresTipi = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colUlkeAdi = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colIlAdi = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
@@ -139,7 +139,7 @@
             this.colAdresNotu,
             this.colKayitTuru,
             this.colKayitHesabi,
-            this.colAdresTuru,
+            this.colAdresTurleriAdi,
             this.colAdresTipi,
             this.colUlkeAdi,
             this.colIlAdi,
@@ -252,7 +252,7 @@
             // gridBand2
             // 
             this.gridBand2.Caption = "Adres Bilgileri";
-            this.gridBand2.Columns.Add(this.colAdresTuru);
+            this.gridBand2.Columns.Add(this.colAdresTurleriAdi);
             this.gridBand2.Columns.Add(this.colAdresTipi);
             this.gridBand2.Columns.Add(this.colUlkeAdi);
             this.gridBand2.Columns.Add(this.colIlAdi);
@@ -263,17 +263,17 @@
             this.gridBand2.VisibleIndex = 2;
             this.gridBand2.Width = 572;
             // 
-            // colAdresTuru
+            // colAdresTurleriAdi
             // 
-            this.colAdresTuru.Caption = "Adres Türü";
-            this.colAdresTuru.FieldName = "AdresTuru";
-            this.colAdresTuru.Name = "colAdresTuru";
-            this.colAdresTuru.OptionsColumn.AllowEdit = false;
-            this.colAdresTuru.StatusBarAciklama = null;
-            this.colAdresTuru.StatusBarKisaYol = null;
-            this.colAdresTuru.StatusBarKisaYolAciklama = null;
-            this.colAdresTuru.Visible = true;
-            this.colAdresTuru.Width = 81;
+            this.colAdresTurleriAdi.Caption = "Adres Türü";
+            this.colAdresTurleriAdi.FieldName = "AdresTurleriAdi";
+            this.colAdresTurleriAdi.Name = "colAdresTurleriAdi";
+            this.colAdresTurleriAdi.OptionsColumn.AllowEdit = false;
+            this.colAdresTurleriAdi.StatusBarAciklama = null;
+            this.colAdresTurleriAdi.StatusBarKisaYol = null;
+            this.colAdresTurleriAdi.StatusBarKisaYolAciklama = null;
+            this.colAdresTurleriAdi.Visible = true;
+            this.colAdresTurleriAdi.Width = 81;
             // 
             // colAdresTipi
             // 
@@ -474,7 +474,7 @@
         private UserControls.Grid.MyBandedGridColumn colKayitTuru;
         private UserControls.Grid.MyBandedGridColumn colKayitHesabi;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand2;
-        private UserControls.Grid.MyBandedGridColumn colAdresTuru;
+        private UserControls.Grid.MyBandedGridColumn colAdresTurleriAdi;
         private UserControls.Grid.MyBandedGridColumn colAdresTipi;
         private UserControls.Grid.MyBandedGridColumn colUlkeAdi;
         private UserControls.Grid.MyBandedGridColumn colIlAdi;
