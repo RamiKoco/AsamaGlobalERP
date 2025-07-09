@@ -65,6 +65,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Enums\AdresTipi.cs" />
     <Compile Include="Enums\AdresTuru.cs" />
     <Compile Include="Enums\Aylar.cs" />
     <Compile Include="Enums\BankaHesapTuru.cs" />

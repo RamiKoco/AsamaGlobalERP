@@ -27,6 +27,7 @@ namespace AbcYazilim.OgrenciTakip.Model.Dto
         public string PostaKodu { get; set; }
         public string Adres { get; set; }       
         public KayitTuru KayitTuru { get; set; } 
+        public AdresTipi AdresTipi { get; set; } 
         public decimal Enlem { get; set; }
         public decimal Boylam { get; set; }
         public bool VarsayilanMi { get; set; }

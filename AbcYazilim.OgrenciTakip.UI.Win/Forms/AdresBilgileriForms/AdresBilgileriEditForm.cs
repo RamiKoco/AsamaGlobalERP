@@ -19,6 +19,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.AdresBilgiForms
             DataLayoutControl = myDataLayoutControl;
             Bll = new AdresBilgileriBll(myDataLayoutControl);
             txtKayitTuru.Properties.Items.AddRange(EnumFunctions.GetEnumDescriptionList<KayitTuru>());
+            txtAdresTipi.Properties.Items.AddRange(EnumFunctions.GetEnumDescriptionList<AdresTipi>());           
             BaseKartTuru = KartTuru.AdresBilgileri;
             EventsLoad();
         }
@@ -41,8 +42,8 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.AdresBilgiForms
             txtBaslik.Text = entity.Baslik;
             txtAdresNotu.Text = entity.AdresNotu;            
             txtKayitTuru.SelectedItem = entity.KayitTuru.ToName();
+            txtAdresTipi.SelectedItem = entity.AdresTipi.ToName();
             //txtKayitHesabi.Text = entity.KayitHesabi;
-            //txtAdresTipi.Text = entity.txtAdresTipi;
             //txtUlke.Id = entity.UlkeId;
             //txtUlke.Text = entity.UlkeAdi;
             txtIl.Id = entity.IlId;
@@ -75,8 +76,8 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.AdresBilgiForms
                 Baslik= txtBaslik.Text,
                 AdresNotu= txtAdresNotu.Text,
                 KayitTuru = txtKayitTuru.Text.GetEnum<KayitTuru>(),
+                AdresTipi = txtAdresTipi.Text.GetEnum<AdresTipi>(),
                 //KayitHesabi= txtKayitHesabi.Text,
-                //AdresTipi = txtAdresTipi.Text,
                 //UlkeId = txtUlke.Id,
                 IlId = txtIl.Id,
                 IlceId = txtIlce.Id,

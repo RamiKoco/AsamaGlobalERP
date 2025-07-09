@@ -24,6 +24,7 @@ namespace AbcYazilim.OgrenciTakip.Model.Entities
         [StringLength(500)]
         public string Aciklama { get; set; }
         public KayitTuru KayitTuru { get; set; } = KayitTuru.Adres;
+        public AdresTipi AdresTipi { get; set; } = AdresTipi.Genel;
 
         public long? IlId { get; set; }
         public long? IlceId { get; set; }
