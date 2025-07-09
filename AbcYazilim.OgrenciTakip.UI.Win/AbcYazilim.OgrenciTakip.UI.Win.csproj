@@ -183,6 +183,18 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\AdresBilgileriForms\AdresBilgileriEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdresBilgileriForms\AdresBilgileriEditForm.Designer.cs">
+      <DependentUpon>AdresBilgileriEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdresBilgileriForms\AdresBilgileriListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdresBilgileriForms\AdresBilgileriListForm.Designer.cs">
+      <DependentUpon>AdresBilgileriListForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\AileBilgiForms\AileBilgiEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1412,6 +1424,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Yeni_KurumDataSet.xsd</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Forms\AdresBilgileriForms\AdresBilgileriEditForm.resx">
+      <DependentUpon>AdresBilgileriEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdresBilgileriForms\AdresBilgileriListForm.resx">
+      <DependentUpon>AdresBilgileriListForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\AileBilgiForms\AileBilgiEditForm.resx">
       <DependentUpon>AileBilgiEditForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -2632,6 +2650,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\clearformatting_16x161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\country_16x161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\country_32x32.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

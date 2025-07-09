@@ -180,5 +180,7 @@ namespace AbcYazilim.OgrenciTakip.Common.Enums
         Renk = 87,
         [Description("Etiket Kayıt Türü Bağlantı Kartı")]
         EtiketKayitTuruBaglanti = 88,
+        [Description("Adres Kartı")]
+        AdresBilgileri = 89,
     }
 }
