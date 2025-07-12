@@ -38,7 +38,7 @@
             this.colAdresNotu = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.gridBand4 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.colKayitTuru = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
-            this.colKayitHesabi = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
+            this.colKisiAdi = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.gridBand2 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.colAdresTurleriAdi = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colAdresTipi = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
@@ -138,7 +138,7 @@
             this.colBaslik,
             this.colAdresNotu,
             this.colKayitTuru,
-            this.colKayitHesabi,
+            this.colKisiAdi,
             this.colAdresTurleriAdi,
             this.colAdresTipi,
             this.colUlkeAdi,
@@ -220,7 +220,7 @@
             // 
             this.gridBand4.Caption = "Kayıt Hesabı Bilgileri";
             this.gridBand4.Columns.Add(this.colKayitTuru);
-            this.gridBand4.Columns.Add(this.colKayitHesabi);
+            this.gridBand4.Columns.Add(this.colKisiAdi);
             this.gridBand4.Name = "gridBand4";
             this.gridBand4.VisibleIndex = 1;
             this.gridBand4.Width = 197;
@@ -237,17 +237,19 @@
             this.colKayitTuru.Visible = true;
             this.colKayitTuru.Width = 97;
             // 
-            // colKayitHesabi
+            // colKisiAdi
             // 
-            this.colKayitHesabi.Caption = "Kayıt Hesabı";
-            this.colKayitHesabi.FieldName = "KayitHesabi";
-            this.colKayitHesabi.Name = "colKayitHesabi";
-            this.colKayitHesabi.OptionsColumn.AllowEdit = false;
-            this.colKayitHesabi.StatusBarAciklama = null;
-            this.colKayitHesabi.StatusBarKisaYol = null;
-            this.colKayitHesabi.StatusBarKisaYolAciklama = null;
-            this.colKayitHesabi.Visible = true;
-            this.colKayitHesabi.Width = 100;
+            this.colKisiAdi.Caption = "Kayıt Hesabı";
+            this.colKisiAdi.FieldName = "KayitHesabiAdi";
+            this.colKisiAdi.Name = "colKisiAdi";
+            this.colKisiAdi.OptionsColumn.AllowEdit = false;
+            this.colKisiAdi.StatusBarAciklama = null;
+            this.colKisiAdi.StatusBarKisaYol = null;
+            this.colKisiAdi.StatusBarKisaYolAciklama = null;
+            this.colKisiAdi.UnboundDataType = typeof(string);
+            this.colKisiAdi.UnboundExpression = "Iif([KayitTuru] = 0, [KisiAdi], [MeslekAdi])";
+            this.colKisiAdi.Visible = true;
+            this.colKisiAdi.Width = 100;
             // 
             // gridBand2
             // 
@@ -472,7 +474,7 @@
         private UserControls.Grid.MyBandedGridColumn colAdresNotu;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand4;
         private UserControls.Grid.MyBandedGridColumn colKayitTuru;
-        private UserControls.Grid.MyBandedGridColumn colKayitHesabi;
+        private UserControls.Grid.MyBandedGridColumn colKisiAdi;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand2;
         private UserControls.Grid.MyBandedGridColumn colAdresTurleriAdi;
         private UserControls.Grid.MyBandedGridColumn colAdresTipi;

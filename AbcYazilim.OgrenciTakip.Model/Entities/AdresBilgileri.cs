@@ -23,9 +23,11 @@ namespace AbcYazilim.OgrenciTakip.Model.Entities
 
         [StringLength(500)]
         public string Aciklama { get; set; }
-        public KayitTuru KayitTuru { get; set; } = KayitTuru.Adres;
+        public KayitTuru KayitTuru { get; set; } 
         public AdresTipi AdresTipi { get; set; } = AdresTipi.Genel;
-
+        public string KayitHesabiAdi { get; set; }
+        public long? KisiId { get; set; }
+        public long? MeslekId { get; set; }
         public long? IlId { get; set; }
         public long? IlceId { get; set; }
         public long? OzelKod1Id { get; set; }
@@ -37,6 +39,8 @@ namespace AbcYazilim.OgrenciTakip.Model.Entities
         public bool VarsayilanFaturaMi { get; set; } = false;
         public bool VarsayilanSevkiyatMi { get; set; } = false;
       
+        public Kisi Kisi { get; set; }
+        public Meslek Meslek { get; set; }
         public Il Il { get; set; }
         public Ilce Ilce { get; set; }   
         public OzelKod OzelKod1 { get; set; }

@@ -8,6 +8,9 @@ namespace AbcYazilim.OgrenciTakip.Model.Dto
     [NotMapped]
     public class AdresBilgileriS: AdresBilgileri
     {
+        public string KisiAdi { get; set; }
+        public string MeslekAdi { get; set; }
+        public new string KayitHesabiAdi => KayitTuru == KayitTuru.Kisi ? KisiAdi : MeslekAdi;
         public string IlAdi { get; set; }
         public string IlceAdi { get; set; }
         public string OzelKod1Adi { get; set; }
@@ -16,6 +19,10 @@ namespace AbcYazilim.OgrenciTakip.Model.Dto
     }
     public class AdresBilgileriL : BaseEntity
     {
+        public string KisiAdi { get; set; }
+        public string MeslekAdi { get; set; }
+        public string KayitHesabiAdi =>
+        KayitTuru == KayitTuru.Kisi ? KisiAdi : MeslekAdi;
         public string IlAdi { get; set; }
         public string IlceAdi { get; set; }
         public string OzelKod1Adi { get; set; }

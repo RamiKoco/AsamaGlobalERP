@@ -47,6 +47,7 @@
             DevExpress.XtraLayout.RowDefinition rowDefinition11 = new DevExpress.XtraLayout.RowDefinition();
             DevExpress.XtraLayout.RowDefinition rowDefinition12 = new DevExpress.XtraLayout.RowDefinition();
             this.myDataLayoutControl = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls.MyDataLayoutControl();
+            this.txtAdresTipi = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls.MyComboBoxEdit();
             this.tglDurum = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls.MyToogleSwitch();
             this.txtKod = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls.MyKodTextEdit();
             this.txtAciklama = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls.MyMemoEdit();
@@ -81,13 +82,13 @@
             this.layoutControlItem15 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem16 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem18 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.txtAdresTipi = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls.MyComboBoxEdit();
             this.layoutControlItem17 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.resimMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.myDataLayoutControl)).BeginInit();
             this.myDataLayoutControl.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAdresTipi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tglDurum.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKod.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAciklama.Properties)).BeginInit();
@@ -122,7 +123,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem18)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtAdresTipi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             this.SuspendLayout();
@@ -161,6 +161,24 @@
             this.myDataLayoutControl.Size = new System.Drawing.Size(563, 325);
             this.myDataLayoutControl.TabIndex = 0;
             this.myDataLayoutControl.Text = "Adres Bilgileri";
+            // 
+            // txtAdresTipi
+            // 
+            this.txtAdresTipi.EnterMoveNextControl = true;
+            this.txtAdresTipi.Location = new System.Drawing.Point(77, 156);
+            this.txtAdresTipi.MenuManager = this.ribbonControl;
+            this.txtAdresTipi.Name = "txtAdresTipi";
+            this.txtAdresTipi.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
+            this.txtAdresTipi.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtAdresTipi.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txtAdresTipi.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.txtAdresTipi.Size = new System.Drawing.Size(181, 20);
+            this.txtAdresTipi.StatusBarAciklama = "Adres Tipi Seçiniz";
+            this.txtAdresTipi.StatusBarKisaYol = "F4 :";
+            this.txtAdresTipi.StatusBarKisaYolAciklama = "Seçim Yap";
+            this.txtAdresTipi.StyleController = this.myDataLayoutControl;
+            this.txtAdresTipi.TabIndex = 18;
             // 
             // tglDurum
             // 
@@ -581,7 +599,6 @@
             this.layoutControlItem4.AppearanceItemCaption.ForeColor = System.Drawing.Color.Maroon;
             this.layoutControlItem4.AppearanceItemCaption.Options.UseForeColor = true;
             this.layoutControlItem4.Control = this.txtKayitHesabi;
-            this.layoutControlItem4.Enabled = false;
             this.layoutControlItem4.Location = new System.Drawing.Point(0, 96);
             this.layoutControlItem4.Name = "layoutControlItem4";
             this.layoutControlItem4.OptionsTableLayoutItem.ColumnSpan = 2;
@@ -773,24 +790,6 @@
             this.layoutControlItem18.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem18.TextVisible = false;
             // 
-            // txtAdresTipi
-            // 
-            this.txtAdresTipi.EnterMoveNextControl = true;
-            this.txtAdresTipi.Location = new System.Drawing.Point(77, 156);
-            this.txtAdresTipi.MenuManager = this.ribbonControl;
-            this.txtAdresTipi.Name = "txtAdresTipi";
-            this.txtAdresTipi.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
-            this.txtAdresTipi.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtAdresTipi.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.txtAdresTipi.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.txtAdresTipi.Size = new System.Drawing.Size(181, 20);
-            this.txtAdresTipi.StatusBarAciklama = "Adres Tipi Seçiniz";
-            this.txtAdresTipi.StatusBarKisaYol = "F4 :";
-            this.txtAdresTipi.StatusBarKisaYolAciklama = "Seçim Yap";
-            this.txtAdresTipi.StyleController = this.myDataLayoutControl;
-            this.txtAdresTipi.TabIndex = 18;
-            // 
             // layoutControlItem17
             // 
             this.layoutControlItem17.AppearanceItemCaption.ForeColor = System.Drawing.Color.Maroon;
@@ -835,6 +834,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.resimMenu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.myDataLayoutControl)).EndInit();
             this.myDataLayoutControl.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.txtAdresTipi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tglDurum.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKod.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAciklama.Properties)).EndInit();
@@ -869,7 +869,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem15)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem18)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtAdresTipi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             this.ResumeLayout(false);
