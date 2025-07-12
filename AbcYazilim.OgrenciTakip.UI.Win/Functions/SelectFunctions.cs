@@ -35,6 +35,7 @@ using AbcYazilim.OgrenciTakip.UI.Win.Forms.SinifForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.SinifGrupForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.SubeForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.TesvikForms;
+using AbcYazilim.OgrenciTakip.UI.Win.Forms.UlkeForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.YabancıDilForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Show;
 using AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls;
@@ -101,6 +102,18 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Functions
         {
             switch (_btnEdit.Name)
             {
+                case "txtUlke":
+                    {
+                        var entity = (Ulke)ShowListForms<UlkeListForm>.ShowDialogListForm(KartTuru.Ulke,
+                            _btnEdit.Id);
+                        if (entity != null)
+                        {
+                            _btnEdit.Id = entity.Id;
+                            _btnEdit.EditValue = entity.UlkeAdi;
+                        }
+                    }
+                    break;
+
                 case "txtIl":
                 case "txtAdresIl":
                 case "txtEvAdresIl":

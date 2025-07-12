@@ -11,6 +11,7 @@ namespace AbcYazilim.OgrenciTakip.Model.Dto
         public string KisiAdi { get; set; }
         public string MeslekAdi { get; set; }
         public new string KayitHesabiAdi => KayitTuru == KayitTuru.Kisi ? KisiAdi : MeslekAdi;
+        public string UlkeAdi { get; set; }
         public string IlAdi { get; set; }
         public string IlceAdi { get; set; }
         public string OzelKod1Adi { get; set; }
@@ -23,6 +24,7 @@ namespace AbcYazilim.OgrenciTakip.Model.Dto
         public string MeslekAdi { get; set; }
         public string KayitHesabiAdi =>
         KayitTuru == KayitTuru.Kisi ? KisiAdi : MeslekAdi;
+        public string UlkeAdi { get; set; }
         public string IlAdi { get; set; }
         public string IlceAdi { get; set; }
         public string OzelKod1Adi { get; set; }

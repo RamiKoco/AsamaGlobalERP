@@ -28,6 +28,7 @@ namespace AbcYazilim.OgrenciTakip.Model.Entities
         public string KayitHesabiAdi { get; set; }
         public long? KisiId { get; set; }
         public long? MeslekId { get; set; }
+        public long? UlkeId { get; set; } = 2025071213170549774;
         public long? IlId { get; set; }
         public long? IlceId { get; set; }
         public long? OzelKod1Id { get; set; }
@@ -41,6 +42,7 @@ namespace AbcYazilim.OgrenciTakip.Model.Entities
       
         public Kisi Kisi { get; set; }
         public Meslek Meslek { get; set; }
+        public Ulke Ulke { get; set; }
         public Il Il { get; set; }
         public Ilce Ilce { get; set; }   
         public OzelKod OzelKod1 { get; set; }

@@ -56,6 +56,8 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.AdresBilgiForms
                 txtKayitHesabi.Id = 0;
 
             txtKayitHesabi.Text = entity.KayitHesabiAdi;
+            txtUlke.Id = entity.UlkeId;
+            txtUlke.Text = entity.UlkeAdi;
             txtIl.Id = entity.IlId;
             txtIl.Text = entity.IlAdi;
             txtIlce.Id = entity.IlceId;
@@ -92,6 +94,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.AdresBilgiForms
                 AdresTipi = txtAdresTipi.Text.GetEnum<AdresTipi>(),               
                 KisiId = kisiId,
                 MeslekId = meslekId,
+                UlkeId=txtUlke.Id,
                 IlId = txtIl.Id,
                 IlceId = txtIlce.Id,
                 OzelKod1Id = txtOzelKod1.Id,
@@ -116,7 +119,9 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.AdresBilgiForms
             if (!(sender is ButtonEdit)) return;
 
             using (var sec = new SelectFunctions())
-                if (sender == txtIl)
+                if (sender == txtUlke)
+                    sec.Sec(txtUlke);
+                else if (sender == txtIl)
                     sec.Sec(txtIl);
                 else if (sender == txtIlce)
                     sec.Sec(txtIlce, txtIl);

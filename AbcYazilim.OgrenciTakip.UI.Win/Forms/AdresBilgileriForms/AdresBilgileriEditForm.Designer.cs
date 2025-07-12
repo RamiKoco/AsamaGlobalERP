@@ -661,7 +661,6 @@
             this.layoutControlItem9.AppearanceItemCaption.ForeColor = System.Drawing.Color.Maroon;
             this.layoutControlItem9.AppearanceItemCaption.Options.UseForeColor = true;
             this.layoutControlItem9.Control = this.txtUlke;
-            this.layoutControlItem9.Enabled = false;
             this.layoutControlItem9.Location = new System.Drawing.Point(280, 72);
             this.layoutControlItem9.Name = "layoutControlItem9";
             this.layoutControlItem9.OptionsTableLayoutItem.ColumnIndex = 3;
