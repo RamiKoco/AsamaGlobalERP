@@ -149,14 +149,18 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.AdresBilgiForms
         }
         public override bool Kaydet(bool kapanis)
         {
-            if (string.IsNullOrWhiteSpace(txtKayitHesabi.Text))
+            // Sadece gerçekten kaydedilecekse (yani kapanış değilse) kontrol et
+            if (!kapanis)
             {
-                Messages.HataliVeriMesaji("Lütfen Kayıt Hesabı giriniz.");
-                txtKayitHesabi.Focus();
-                return false;
+                if (string.IsNullOrWhiteSpace(txtKayitHesabi.Text))
+                {
+                    Messages.HataliVeriMesaji("Lütfen Kayıt Hesabı giriniz.");
+                    txtKayitHesabi.Focus();
+                    return false;
+                }
             }
-            return base.Kaydet(kapanis); // Asıl kaydetme işlemi devam ettir
-        }
 
+            return base.Kaydet(kapanis);
+        }
     }
 }
