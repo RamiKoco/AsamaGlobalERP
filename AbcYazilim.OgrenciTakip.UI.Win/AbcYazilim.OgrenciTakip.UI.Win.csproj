@@ -879,6 +879,18 @@
     <Compile Include="Forms\TesvikForms\TesvikListForm.Designer.cs">
       <DependentUpon>TesvikListForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\UlkeForms\UlkeEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UlkeForms\UlkeEditForm.Designer.cs">
+      <DependentUpon>UlkeEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UlkeForms\UlkeListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UlkeForms\UlkeListForm.Designer.cs">
+      <DependentUpon>UlkeListForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\YabancıDilForms\YabanciDilEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1784,6 +1796,12 @@
     <EmbeddedResource Include="Forms\TesvikForms\TesvikListForm.resx">
       <DependentUpon>TesvikListForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UlkeForms\UlkeEditForm.resx">
+      <DependentUpon>UlkeEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UlkeForms\UlkeListForm.resx">
+      <DependentUpon>UlkeListForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\YabancıDilForms\YabanciDilEditForm.resx">
       <DependentUpon>YabanciDilEditForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -2677,6 +2695,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\bo_localization.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bo_localization1.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ülkekartları.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\viewonweb_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\viewonweb_32x32.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

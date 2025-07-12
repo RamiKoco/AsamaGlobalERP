@@ -166,6 +166,7 @@
     <Compile Include="General\TesvikBll.cs" />
     <Compile Include="General\UcretOrtalamalariRaporuBll.cs" />
     <Compile Include="General\UcretVeOdemeRaporuBll.cs" />
+    <Compile Include="General\UlkeBll.cs" />
     <Compile Include="General\YabancıDilBll.cs" />
     <Compile Include="General\YakinlikBll.cs" />
     <Compile Include="General\YazarBll.cs" />

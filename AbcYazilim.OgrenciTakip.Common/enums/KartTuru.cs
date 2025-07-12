@@ -184,5 +184,7 @@ namespace AbcYazilim.OgrenciTakip.Common.Enums
         AdresBilgileri = 89,
         [Description("Adres Türleri")]
         AdresTurleri = 90,
+        [Description("Ülke Kartı")]
+        Ulke = 91,
     }
 }

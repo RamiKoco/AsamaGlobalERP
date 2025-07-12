@@ -44,6 +44,7 @@ using AbcYazilim.OgrenciTakip.UI.Win.Forms.SinifForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.SinifGrupForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.TahakkukForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.TesvikForms;
+using AbcYazilim.OgrenciTakip.UI.Win.Forms.UlkeForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.YabancıDilForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.YakinlikForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.YazarForms;
@@ -178,6 +179,8 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.GenelForms
 
             if (e.Item == btnOkulKartlari)
                 ShowListForms<OkulListForm>.ShowListForm(KartTuru.Okul);
+            else if (e.Item == btnUlkeKartlari)
+                ShowListForms<UlkeListForm>.ShowListForm(KartTuru.Ulke);
             else if (e.Item == btnIlKartlari)
                 ShowListForms<IlListForm>.ShowListForm(KartTuru.Il);
             else if (e.Item == btnAileBilgiKartlari)

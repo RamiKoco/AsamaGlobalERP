@@ -211,6 +211,7 @@
     <Compile Include="Entities\Tahakkuk.cs" />
     <Compile Include="Entities\Tesvik.cs" />
     <Compile Include="Entities\OdemeTuru.cs" />
+    <Compile Include="Entities\Ulke.cs" />
     <Compile Include="Entities\YabanciDil.cs" />
     <Compile Include="Entities\Yakinlik.cs" />
     <Compile Include="Entities\Yazar.cs" />
