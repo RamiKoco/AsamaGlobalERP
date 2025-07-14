@@ -28,7 +28,7 @@ namespace AbcYazilim.OgrenciTakip.Model.Entities
         public string KayitHesabiAdi { get; set; }
         public long? KisiId { get; set; }
         public long? MeslekId { get; set; }
-        public long? UlkeId { get; set; } = 2025071213170549774;
+        public long? UlkeId { get; set; } 
         public long? IlId { get; set; }
         public long? IlceId { get; set; }
         public long? OzelKod1Id { get; set; }
