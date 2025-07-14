@@ -58,12 +58,12 @@ namespace AbcYazilim.OgrenciTakip.Bll.General
                 OzelKod3 = x.Tahakkuk.OzelKod3.OzelKodAdi,
                 OzelKod4 = x.Tahakkuk.OzelKod4.OzelKodAdi,
                 OzelKod5 = x.Tahakkuk.OzelKod5.OzelKodAdi,
-                VeliAdi = x.VeliBilgileri.Iletisim.Adi,
-                VeliSoyadi = x.VeliBilgileri.Iletisim.Soyadi,
+                //VeliAdi = x.VeliBilgileri.Iletisim.Adi,
+                //VeliSoyadi = x.VeliBilgileri.Iletisim.Soyadi,
                 VeliYakinlikAdi = x.VeliBilgileri.Yakinlik.YakinlikAdi,
-                VeliMeslekAdi = x.VeliBilgileri.Iletisim.Meslek.MeslekAdi,
-                VeliIsyeriAdi = x.VeliBilgileri.Iletisim.Isyeri.IsyeriAdi,
-                VeliGorevAdi = x.VeliBilgileri.Iletisim.Gorev.GorevAdi,
+                //VeliMeslekAdi = x.VeliBilgileri.Iletisim.Meslek.MeslekAdi,
+                //VeliIsyeriAdi = x.VeliBilgileri.Iletisim.Isyeri.IsyeriAdi,
+                //VeliGorevAdi = x.VeliBilgileri.Iletisim.Gorev.GorevAdi,
 
             }).OrderBy(x => x.OgrenciNo).ToList();
         }

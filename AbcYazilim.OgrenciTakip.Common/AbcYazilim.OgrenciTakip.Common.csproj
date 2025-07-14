@@ -79,6 +79,7 @@
     <Compile Include="Enums\GruplamaTuru.cs" />
     <Compile Include="Enums\HizmetAlimDurumu.cs" />
     <Compile Include="Enums\HizmetTipi.cs" />
+    <Compile Include="Enums\IletisimTuru.cs" />
     <Compile Include="Enums\IptalDurumu.cs" />
     <Compile Include="Enums\IslemTuru.cs" />
     <Compile Include="Enums\KanGrubu.cs" />

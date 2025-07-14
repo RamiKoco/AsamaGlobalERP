@@ -186,5 +186,7 @@ namespace AbcYazilim.OgrenciTakip.Common.Enums
         AdresTurleri = 90,
         [Description("Ülke Kartı")]
         Ulke = 91,
+        [Description("Sosyal Medya Kartı")]
+        SosyalMedyaPlatformu = 92,
     }
 }

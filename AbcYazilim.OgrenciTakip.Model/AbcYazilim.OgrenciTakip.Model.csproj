@@ -126,6 +126,7 @@
     <Compile Include="Dto\RolYetkileriDto.cs" />
     <Compile Include="Dto\SinavBilgileriDto.cs" />
     <Compile Include="Dto\SinifDto.cs" />
+    <Compile Include="Dto\SosyalMedyaPlatformuDto.cs" />
     <Compile Include="Dto\SubeDto.cs" />
     <Compile Include="Dto\TahakkukDto.cs" />
     <Compile Include="Dto\YazarDto.cs" />
@@ -207,6 +208,7 @@
     <Compile Include="Entities\SinavBilgileri.cs" />
     <Compile Include="Entities\Sinif.cs" />
     <Compile Include="Entities\SinifGrup.cs" />
+    <Compile Include="Entities\SosyalMedyaPlatformu.cs" />
     <Compile Include="Entities\Sube.cs" />
     <Compile Include="Entities\Tahakkuk.cs" />
     <Compile Include="Entities\Tesvik.cs" />

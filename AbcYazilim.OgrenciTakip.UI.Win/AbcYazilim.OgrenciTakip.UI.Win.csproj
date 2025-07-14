@@ -825,6 +825,18 @@
     <Compile Include="Forms\SinifGrupForms\SinifGrupListForm.Designer.cs">
       <DependentUpon>SinifGrupListForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\SosyalMedyaForms\SosyalMedyaPlatformuEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SosyalMedyaForms\SosyalMedyaPlatformuEditForm.Designer.cs">
+      <DependentUpon>SosyalMedyaPlatformuEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SosyalMedyaForms\SosyalMedyaPlatformuListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SosyalMedyaForms\SosyalMedyaPlatformuListForm.Designer.cs">
+      <DependentUpon>SosyalMedyaPlatformuListForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\SubeForms\SubeEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1769,6 +1781,12 @@
     <EmbeddedResource Include="Forms\SinifGrupForms\SinifGrupListForm.resx">
       <DependentUpon>SinifGrupListForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SosyalMedyaForms\SosyalMedyaPlatformuEditForm.resx">
+      <DependentUpon>SosyalMedyaPlatformuEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SosyalMedyaForms\SosyalMedyaPlatformuListForm.resx">
+      <DependentUpon>SosyalMedyaPlatformuListForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\SubeForms\SubeEditForm.resx">
       <DependentUpon>SubeEditForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -2707,6 +2725,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\viewonweb_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\viewonweb_16x161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\viewonweb_32x321.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

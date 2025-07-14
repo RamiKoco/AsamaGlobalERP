@@ -1,6 +1,6 @@
-﻿namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.AdresTurleriForms
+﻿namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.SosyalMedyaForms
 {
-    partial class AdresTurleriListForm
+    partial class SosyalMedyaPlatformuListForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,16 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdresTurleriListForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SosyalMedyaPlatformuListForm));
             this.grid = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyGridControl();
             this.tablo = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyGridView();
             this.colId = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
             this.colKod = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
+            this.longNavigator = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Navigators.LongNavigator();
             this.colAd = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
             this.colOzelKod1Adi = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
             this.colOzelKod2Adi = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
             this.colAciklama = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
-            this.longNavigator = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Navigators.LongNavigator();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablo)).BeginInit();
@@ -117,7 +117,7 @@
             this.tablo.StatusBarAciklama = null;
             this.tablo.StatusBarKisaYol = null;
             this.tablo.StatusBarKisaYolAciklama = null;
-            this.tablo.ViewCaption = "Sosyal Medya Kartları";
+            this.tablo.ViewCaption = "Adres Türü Kartları";
             // 
             // colId
             // 
@@ -145,9 +145,17 @@
             this.colKod.VisibleIndex = 0;
             this.colKod.Width = 109;
             // 
+            // longNavigator
+            // 
+            this.longNavigator.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.longNavigator.Location = new System.Drawing.Point(0, 434);
+            this.longNavigator.Name = "longNavigator";
+            this.longNavigator.Size = new System.Drawing.Size(1058, 24);
+            this.longNavigator.TabIndex = 3;
+            // 
             // colAd
             // 
-            this.colAd.Caption = "Ad";
+            this.colAd.Caption = "Adres Türü Adı";
             this.colAd.FieldName = "Ad";
             this.colAd.Name = "colAd";
             this.colAd.OptionsColumn.AllowEdit = false;
@@ -197,15 +205,7 @@
             this.colAciklama.VisibleIndex = 4;
             this.colAciklama.Width = 324;
             // 
-            // longNavigator
-            // 
-            this.longNavigator.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.longNavigator.Location = new System.Drawing.Point(0, 434);
-            this.longNavigator.Name = "longNavigator";
-            this.longNavigator.Size = new System.Drawing.Size(1058, 24);
-            this.longNavigator.TabIndex = 3;
-            // 
-            // AdresTurleriListForm
+            // SosyalMedyaPlatformuListForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -213,8 +213,8 @@
             this.Controls.Add(this.longNavigator);
             this.Controls.Add(this.grid);
             this.IconOptions.ShowIcon = false;
-            this.Name = "AdresTurleriListForm";
-            this.Text = "AdresTurleriListForm";
+            this.Name = "SosyalMedyaPlatformuListForm";
+            this.Text = "SosyalMedyaPlatformuListForm";
             this.Controls.SetChildIndex(this.ribbonControl, 0);
             this.Controls.SetChildIndex(this.grid, 0);
             this.Controls.SetChildIndex(this.longNavigator, 0);

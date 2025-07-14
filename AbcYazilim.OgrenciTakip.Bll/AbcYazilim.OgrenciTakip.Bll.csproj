@@ -160,6 +160,7 @@
     <Compile Include="General\SinavBilgileriBll.cs" />
     <Compile Include="General\SinifBll.cs" />
     <Compile Include="General\SinifGrupBll.cs" />
+    <Compile Include="General\SosyalMedyaPlatformuBll.cs" />
     <Compile Include="General\SubeBll.cs" />
     <Compile Include="General\TahakkukBll.cs" />
     <Compile Include="General\TahsilatRaporuBll.cs" />

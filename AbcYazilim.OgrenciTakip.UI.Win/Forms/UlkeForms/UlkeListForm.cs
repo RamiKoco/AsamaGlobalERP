@@ -2,10 +2,8 @@
 using AbcYazilim.OgrenciTakip.Common.Enums;
 using AbcYazilim.OgrenciTakip.Model.Entities;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms;
-using AbcYazilim.OgrenciTakip.UI.Win.Forms.IlForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Functions;
 using AbcYazilim.OgrenciTakip.UI.Win.Show;
-using DevExpress.XtraBars;
 
 namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.UlkeForms
 {

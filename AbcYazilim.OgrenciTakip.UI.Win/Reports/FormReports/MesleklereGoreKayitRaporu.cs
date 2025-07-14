@@ -45,18 +45,18 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Reports.FormReports
             var iptalDurumu = txtIptalDurumu.CheckedComboBoxList<IptalDurumu>();
 
 
-            using (var bll = new MesleklereGoreKayitRaporuBll())
-            {
-                tablo.GridControl.DataSource = bll.List(x =>
-                    subeler.Contains(x.SubeId) &&
-                    kayitSekli.Contains(x.KayitSekli) &&
-                    kayitDurumu.Contains(x.KayitDurumu) &&
-                    iptalDurumu.Contains(x.Durum ? IptalDurumu.DevamEdiyor : IptalDurumu.IptalEdildi) &&
-                    x.DonemId == AnaForm.DonemId);
+            //using (var bll = new MesleklereGoreKayitRaporuBll())
+            //{
+            //    tablo.GridControl.DataSource = bll.List(x =>
+            //        subeler.Contains(x.SubeId) &&
+            //        kayitSekli.Contains(x.KayitSekli) &&
+            //        kayitDurumu.Contains(x.KayitDurumu) &&
+            //        iptalDurumu.Contains(x.Durum ? IptalDurumu.DevamEdiyor : IptalDurumu.IptalEdildi) &&
+            //        x.DonemId == AnaForm.DonemId);
 
-                base.Listele();
+            //    base.Listele();
 
-            }
+            //}
 
         }
 

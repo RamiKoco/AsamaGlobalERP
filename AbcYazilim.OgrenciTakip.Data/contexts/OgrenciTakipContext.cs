@@ -109,5 +109,6 @@ namespace AbcYazilim.OgrenciTakip.Data.Contexts
         public DbSet<EtiketKayitTuruBaglanti> EtiketKayitTuruBaglanti { get; set; }
         public DbSet<AdresBilgileri> AdresBilgileri { get; set; }
         public DbSet<AdresTurleri> AdresTurleri { get; set; }
+        public DbSet<SosyalMedyaPlatformu> SosyalMedyaPlatformu { get; set; }
     }
 }

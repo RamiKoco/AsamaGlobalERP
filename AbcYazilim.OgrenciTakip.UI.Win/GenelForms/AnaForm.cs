@@ -42,6 +42,7 @@ using AbcYazilim.OgrenciTakip.UI.Win.Forms.RenkForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.ServisForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.SinifForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.SinifGrupForms;
+using AbcYazilim.OgrenciTakip.UI.Win.Forms.SosyalMedyaForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.TahakkukForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.TesvikForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.UlkeForms;
@@ -211,6 +212,9 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.GenelForms
                 ShowListForms<AdresBilgileriListForm>.ShowListForm(KartTuru.AdresBilgileri);
             else if (e.Item == btnAdresTurleriKartlari)
                 ShowListForms<AdresTurleriListForm>.ShowListForm(KartTuru.AdresTurleri);
+
+            else if (e.Item == btnSosyalMedyaKartlari)
+                ShowListForms<SosyalMedyaPlatformuListForm>.ShowListForm(KartTuru.SosyalMedyaPlatformu);
             
             //else if (e.Item == btnAjandaKartlari)
             //{
