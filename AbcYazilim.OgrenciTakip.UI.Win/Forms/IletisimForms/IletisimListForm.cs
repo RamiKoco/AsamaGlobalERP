@@ -1,12 +1,11 @@
-﻿using System;
-using System.Linq;
-using System.Linq.Expressions;
-using AbcYazilim.OgrenciTakip.Bll.General;
+﻿using AbcYazilim.OgrenciTakip.Bll.General;
 using AbcYazilim.OgrenciTakip.Common.Enums;
-using AbcYazilim.OgrenciTakip.Common.Message;
 using AbcYazilim.OgrenciTakip.Model.Entities;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms;
+using AbcYazilim.OgrenciTakip.UI.Win.Functions;
 using AbcYazilim.OgrenciTakip.UI.Win.Show;
+using System;
+using System.Linq.Expressions;
 
 namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.IletisimForms
 {
@@ -36,18 +35,24 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.IletisimForms
             Tablo = tablo;
             BaseKartTuru = KartTuru.Iletisim;
             FormShow = new ShowEditForms<IletisimEditForm>();
-            Navigator = longNavigator.Navigator;
+            Navigator = longNavigator.Navigator;           
+         
         }
+        //protected override void Listele()
+        //{
+        //    var list = ((IletisimBll) Bll).List(_filter);
+        //    Tablo.GridControl.DataSource = list;
+
+        //    if (!MultiSelect) return;
+        //    if (list.Any())
+        //        EklenebilecekEntityVar = true;
+        //    else
+        //        Messages.KartBulunamadiMesaji("Kart");
+
+        //}
         protected override void Listele()
         {
-            var list = ((IletisimBll) Bll).List(_filter);
-            Tablo.GridControl.DataSource = list;
-
-            if (!MultiSelect) return;
-            if (list.Any())
-                EklenebilecekEntityVar = true;
-            else
-                Messages.KartBulunamadiMesaji("Kart");
+            Tablo.GridControl.DataSource = ((IletisimBll)Bll).List(FilterFunctions.Filter<Iletisim>(AktifKartlariGoster));
         }
 
     }

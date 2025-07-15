@@ -254,7 +254,7 @@
             this.layoutControlItem1.OptionsTableLayoutItem.ColumnSpan = 4;
             this.layoutControlItem1.OptionsTableLayoutItem.RowIndex = 1;
             this.layoutControlItem1.Size = new System.Drawing.Size(438, 24);
-            this.layoutControlItem1.Text = "Adres Türü Adı";
+            this.layoutControlItem1.Text = "Ad";
             this.layoutControlItem1.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
             this.layoutControlItem1.TextSize = new System.Drawing.Size(70, 20);
             this.layoutControlItem1.TextToControlDistance = 5;

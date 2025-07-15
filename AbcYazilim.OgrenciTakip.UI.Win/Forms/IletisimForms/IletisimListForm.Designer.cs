@@ -33,27 +33,28 @@
             this.grid = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridControl();
             this.tablo = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridView();
             this.colKod = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
-            this.colTcKimlikNo = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
-            this.colAdi = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
-            this.colSoyadi = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
+            this.colBaslik = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
+            this.colIlgili = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
+            this.colKanallar = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
+            this.colVoipMi = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
+            this.colUlkeKodu = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
+            this.colNumara = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
+            this.colDahiliNo = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
+            this.colIzinDurumu = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
+            this.colEPosta = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
+            this.colIzinTarihi = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
+            this.colOncelik = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
+            this.colIletisimTuru = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colWeb = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
-            this.colEmail = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
-            this.colMeslek = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
-            this.colEvTel = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
-            this.colIsTel1 = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
-            this.colCepTel1 = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
-            this.colEvAdres = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
-            this.colEvAdresIlAdi = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
-            this.colEvAdresIlceAdi = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
-            this.colIsAdres = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
-            this.colIsAdresIlAdi = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
-            this.colIsAdresIlceAdi = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
-            this.colIsyeriAdi = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
-            this.colGorevAdi = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
+            this.colKullaniciAdi = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
+            this.colSosyalMedyaUrl = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
+            this.colSosyalMedyaPlatformuAdi = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colOzelKod1Adi = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colOzelKod2Adi = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colAciklama = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colId = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.colSIPServer = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
+            this.colSIPKullaniciAdi = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.bndSecim = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.gridBand1 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.gridBand2 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
@@ -69,21 +70,27 @@
             // ribbonControl
             // 
             this.ribbonControl.ExpandCollapseItem.Id = 0;
-            // 
-            // 
-            // 
-            this.ribbonControl.SearchEditItem.AccessibleName = "Search Item";
-            this.ribbonControl.SearchEditItem.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Left;
-            this.ribbonControl.SearchEditItem.EditWidth = 150;
-            this.ribbonControl.SearchEditItem.Id = -5000;
-            this.ribbonControl.SearchEditItem.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
-            this.ribbonControl.Size = new System.Drawing.Size(1146, 109);
+            this.ribbonControl.Size = new System.Drawing.Size(1146, 135);
             this.ribbonControl.Toolbar.ShowCustomizeItem = false;
             // 
             // btnGonder
             // 
             this.btnGonder.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnGonder.ImageOptions.Image")));
             this.btnGonder.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnGonder.ImageOptions.LargeImage")));
+            // 
+            // btnYeniMakbuz
+            // 
+            this.btnYeniMakbuz.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnYeniMakbuz.ImageOptions.Image")));
+            this.btnYeniMakbuz.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnYeniMakbuz.ImageOptions.LargeImage")));
+            // 
+            // btnYeniRapor
+            // 
+            this.btnYeniRapor.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnYeniRapor.ImageOptions.Image")));
+            this.btnYeniRapor.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnYeniRapor.ImageOptions.LargeImage")));
+            // 
+            // barSubItem8
+            // 
+            this.barSubItem8.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barSubItem8.ImageOptions.Image")));
             // 
             // longNavigator
             // 
@@ -96,11 +103,11 @@
             // grid
             // 
             this.grid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grid.Location = new System.Drawing.Point(0, 109);
+            this.grid.Location = new System.Drawing.Point(0, 135);
             this.grid.MainView = this.tablo;
             this.grid.MenuManager = this.ribbonControl;
             this.grid.Name = "grid";
-            this.grid.Size = new System.Drawing.Size(1146, 269);
+            this.grid.Size = new System.Drawing.Size(1146, 243);
             this.grid.TabIndex = 3;
             this.grid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.tablo});
@@ -135,26 +142,27 @@
             this.tablo.Columns.AddRange(new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn[] {
             this.colId,
             this.colKod,
-            this.colTcKimlikNo,
-            this.colAdi,
-            this.colSoyadi,
-            this.colMeslek,
-            this.colWeb,
-            this.colEmail,
-            this.colEvTel,
-            this.colIsTel1,
-            this.colCepTel1,
-            this.colEvAdres,
-            this.colEvAdresIlAdi,
-            this.colEvAdresIlceAdi,
-            this.colIsAdres,
-            this.colIsAdresIlAdi,
-            this.colIsAdresIlceAdi,
-            this.colIsyeriAdi,
-            this.colGorevAdi,
+            this.colBaslik,
             this.colOzelKod1Adi,
             this.colOzelKod2Adi,
-            this.colAciklama});
+            this.colAciklama,
+            this.colDahiliNo,
+            this.colNumara,
+            this.colUlkeKodu,
+            this.colEPosta,
+            this.colIletisimTuru,
+            this.colIlgili,
+            this.colWeb,
+            this.colSosyalMedyaUrl,
+            this.colKullaniciAdi,
+            this.colIzinTarihi,
+            this.colOncelik,
+            this.colSosyalMedyaPlatformuAdi,
+            this.colIzinDurumu,
+            this.colKanallar,
+            this.colVoipMi,
+            this.colSIPServer,
+            this.colSIPKullaniciAdi});
             this.tablo.GridControl = this.grid;
             this.tablo.Name = "tablo";
             this.tablo.OptionsMenu.EnableColumnMenu = false;
@@ -186,47 +194,148 @@
             this.colKod.Visible = true;
             this.colKod.Width = 120;
             // 
-            // colTcKimlikNo
+            // colBaslik
             // 
-            this.colTcKimlikNo.AppearanceCell.Options.UseTextOptions = true;
-            this.colTcKimlikNo.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colTcKimlikNo.Caption = "Tc Kimlik No";
-            this.colTcKimlikNo.FieldName = "TcKimlikNo";
-            this.colTcKimlikNo.Name = "colTcKimlikNo";
-            this.colTcKimlikNo.OptionsColumn.AllowEdit = false;
-            this.colTcKimlikNo.StatusBarAciklama = null;
-            this.colTcKimlikNo.StatusBarKisaYol = null;
-            this.colTcKimlikNo.StatusBarKisaYolAciklama = null;
-            this.colTcKimlikNo.Visible = true;
-            this.colTcKimlikNo.Width = 110;
+            this.colBaslik.Caption = "Başlık";
+            this.colBaslik.FieldName = "Baslik";
+            this.colBaslik.Name = "colBaslik";
+            this.colBaslik.OptionsColumn.AllowEdit = false;
+            this.colBaslik.StatusBarAciklama = null;
+            this.colBaslik.StatusBarKisaYol = null;
+            this.colBaslik.StatusBarKisaYolAciklama = null;
+            this.colBaslik.Visible = true;
+            this.colBaslik.Width = 120;
             // 
-            // colAdi
+            // colIlgili
             // 
-            this.colAdi.Caption = "Adı";
-            this.colAdi.FieldName = "Adi";
-            this.colAdi.Name = "colAdi";
-            this.colAdi.OptionsColumn.AllowEdit = false;
-            this.colAdi.StatusBarAciklama = null;
-            this.colAdi.StatusBarKisaYol = null;
-            this.colAdi.StatusBarKisaYolAciklama = null;
-            this.colAdi.Visible = true;
-            this.colAdi.Width = 120;
+            this.colIlgili.Caption = "İlgili";
+            this.colIlgili.FieldName = "Ilgili";
+            this.colIlgili.Name = "colIlgili";
+            this.colIlgili.OptionsColumn.AllowEdit = false;
+            this.colIlgili.StatusBarAciklama = null;
+            this.colIlgili.StatusBarKisaYol = null;
+            this.colIlgili.StatusBarKisaYolAciklama = null;
+            this.colIlgili.Visible = true;
             // 
-            // colSoyadi
+            // colKanallar
             // 
-            this.colSoyadi.Caption = "Soyadı";
-            this.colSoyadi.FieldName = "Soyadi";
-            this.colSoyadi.Name = "colSoyadi";
-            this.colSoyadi.OptionsColumn.AllowEdit = false;
-            this.colSoyadi.StatusBarAciklama = null;
-            this.colSoyadi.StatusBarKisaYol = null;
-            this.colSoyadi.StatusBarKisaYolAciklama = null;
-            this.colSoyadi.Visible = true;
-            this.colSoyadi.Width = 120;
+            this.colKanallar.Caption = "Kanallar";
+            this.colKanallar.FieldName = "Kanallar";
+            this.colKanallar.Name = "colKanallar";
+            this.colKanallar.OptionsColumn.AllowEdit = false;
+            this.colKanallar.StatusBarAciklama = null;
+            this.colKanallar.StatusBarKisaYol = null;
+            this.colKanallar.StatusBarKisaYolAciklama = null;
+            this.colKanallar.Visible = true;
+            // 
+            // colVoipMi
+            // 
+            this.colVoipMi.Caption = "Voip";
+            this.colVoipMi.FieldName = "VoipMi";
+            this.colVoipMi.Name = "colVoipMi";
+            this.colVoipMi.OptionsColumn.AllowEdit = false;
+            this.colVoipMi.StatusBarAciklama = null;
+            this.colVoipMi.StatusBarKisaYol = null;
+            this.colVoipMi.StatusBarKisaYolAciklama = null;
+            this.colVoipMi.Visible = true;
+            // 
+            // colUlkeKodu
+            // 
+            this.colUlkeKodu.Caption = "Ülke Kodu";
+            this.colUlkeKodu.FieldName = "UlkeKodu";
+            this.colUlkeKodu.Name = "colUlkeKodu";
+            this.colUlkeKodu.OptionsColumn.AllowEdit = false;
+            this.colUlkeKodu.StatusBarAciklama = null;
+            this.colUlkeKodu.StatusBarKisaYol = null;
+            this.colUlkeKodu.StatusBarKisaYolAciklama = null;
+            this.colUlkeKodu.Visible = true;
+            this.colUlkeKodu.Width = 91;
+            // 
+            // colNumara
+            // 
+            this.colNumara.Caption = "Telefon";
+            this.colNumara.FieldName = "Numara";
+            this.colNumara.Name = "colNumara";
+            this.colNumara.OptionsColumn.AllowEdit = false;
+            this.colNumara.StatusBarAciklama = null;
+            this.colNumara.StatusBarKisaYol = null;
+            this.colNumara.StatusBarKisaYolAciklama = null;
+            this.colNumara.Visible = true;
+            this.colNumara.Width = 91;
+            // 
+            // colDahiliNo
+            // 
+            this.colDahiliNo.Caption = "Dahili ";
+            this.colDahiliNo.FieldName = "DahiliNo";
+            this.colDahiliNo.Name = "colDahiliNo";
+            this.colDahiliNo.OptionsColumn.AllowEdit = false;
+            this.colDahiliNo.StatusBarAciklama = null;
+            this.colDahiliNo.StatusBarKisaYol = null;
+            this.colDahiliNo.StatusBarKisaYolAciklama = null;
+            this.colDahiliNo.Visible = true;
+            this.colDahiliNo.Width = 91;
+            // 
+            // colIzinDurumu
+            // 
+            this.colIzinDurumu.Caption = "İzin Durumu";
+            this.colIzinDurumu.FieldName = "IzinDurumu";
+            this.colIzinDurumu.Name = "colIzinDurumu";
+            this.colIzinDurumu.OptionsColumn.AllowEdit = false;
+            this.colIzinDurumu.StatusBarAciklama = null;
+            this.colIzinDurumu.StatusBarKisaYol = null;
+            this.colIzinDurumu.StatusBarKisaYolAciklama = null;
+            this.colIzinDurumu.Visible = true;
+            this.colIzinDurumu.Width = 94;
+            // 
+            // colEPosta
+            // 
+            this.colEPosta.Caption = "E-Posta";
+            this.colEPosta.FieldName = "EPosta";
+            this.colEPosta.Name = "colEPosta";
+            this.colEPosta.OptionsColumn.AllowEdit = false;
+            this.colEPosta.StatusBarAciklama = null;
+            this.colEPosta.StatusBarKisaYol = null;
+            this.colEPosta.StatusBarKisaYolAciklama = null;
+            this.colEPosta.Visible = true;
+            // 
+            // colIzinTarihi
+            // 
+            this.colIzinTarihi.Caption = "İzin Tarihi";
+            this.colIzinTarihi.FieldName = "IzinTarihi";
+            this.colIzinTarihi.Name = "colIzinTarihi";
+            this.colIzinTarihi.OptionsColumn.AllowEdit = false;
+            this.colIzinTarihi.StatusBarAciklama = null;
+            this.colIzinTarihi.StatusBarKisaYol = null;
+            this.colIzinTarihi.StatusBarKisaYolAciklama = null;
+            this.colIzinTarihi.Visible = true;
+            // 
+            // colOncelik
+            // 
+            this.colOncelik.AppearanceCell.Options.UseTextOptions = true;
+            this.colOncelik.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colOncelik.Caption = "Öncelik";
+            this.colOncelik.FieldName = "Oncelik";
+            this.colOncelik.Name = "colOncelik";
+            this.colOncelik.OptionsColumn.AllowEdit = false;
+            this.colOncelik.StatusBarAciklama = null;
+            this.colOncelik.StatusBarKisaYol = null;
+            this.colOncelik.StatusBarKisaYolAciklama = null;
+            this.colOncelik.Visible = true;
+            // 
+            // colIletisimTuru
+            // 
+            this.colIletisimTuru.Caption = "İletişim Türü";
+            this.colIletisimTuru.FieldName = "IletisimTuru";
+            this.colIletisimTuru.Name = "colIletisimTuru";
+            this.colIletisimTuru.OptionsColumn.AllowEdit = false;
+            this.colIletisimTuru.StatusBarAciklama = null;
+            this.colIletisimTuru.StatusBarKisaYol = null;
+            this.colIletisimTuru.StatusBarKisaYolAciklama = null;
+            this.colIletisimTuru.Visible = true;
             // 
             // colWeb
             // 
-            this.colWeb.Caption = "Web Adresi";
+            this.colWeb.Caption = "Web";
             this.colWeb.FieldName = "Web";
             this.colWeb.Name = "colWeb";
             this.colWeb.OptionsColumn.AllowEdit = false;
@@ -234,180 +343,39 @@
             this.colWeb.StatusBarKisaYol = null;
             this.colWeb.StatusBarKisaYolAciklama = null;
             this.colWeb.Visible = true;
-            this.colWeb.Width = 150;
             // 
-            // colEmail
+            // colKullaniciAdi
             // 
-            this.colEmail.Caption = "E-Mail Adresi";
-            this.colEmail.FieldName = "Email";
-            this.colEmail.Name = "colEmail";
-            this.colEmail.OptionsColumn.AllowEdit = false;
-            this.colEmail.StatusBarAciklama = null;
-            this.colEmail.StatusBarKisaYol = null;
-            this.colEmail.StatusBarKisaYolAciklama = null;
-            this.colEmail.Visible = true;
-            this.colEmail.Width = 150;
+            this.colKullaniciAdi.Caption = "Kullanıcı Adı";
+            this.colKullaniciAdi.FieldName = "KullaniciAdi";
+            this.colKullaniciAdi.Name = "colKullaniciAdi";
+            this.colKullaniciAdi.OptionsColumn.AllowEdit = false;
+            this.colKullaniciAdi.StatusBarAciklama = null;
+            this.colKullaniciAdi.StatusBarKisaYol = null;
+            this.colKullaniciAdi.StatusBarKisaYolAciklama = null;
+            this.colKullaniciAdi.Visible = true;
             // 
-            // colMeslek
+            // colSosyalMedyaUrl
             // 
-            this.colMeslek.Caption = "Meslek";
-            this.colMeslek.FieldName = "MeslekAdi";
-            this.colMeslek.Name = "colMeslek";
-            this.colMeslek.OptionsColumn.AllowEdit = false;
-            this.colMeslek.StatusBarAciklama = null;
-            this.colMeslek.StatusBarKisaYol = null;
-            this.colMeslek.StatusBarKisaYolAciklama = null;
-            this.colMeslek.Visible = true;
-            this.colMeslek.Width = 120;
+            this.colSosyalMedyaUrl.Caption = "URL";
+            this.colSosyalMedyaUrl.FieldName = "SosyalMedyaUrl";
+            this.colSosyalMedyaUrl.Name = "colSosyalMedyaUrl";
+            this.colSosyalMedyaUrl.OptionsColumn.AllowEdit = false;
+            this.colSosyalMedyaUrl.StatusBarAciklama = null;
+            this.colSosyalMedyaUrl.StatusBarKisaYol = null;
+            this.colSosyalMedyaUrl.StatusBarKisaYolAciklama = null;
+            this.colSosyalMedyaUrl.Visible = true;
             // 
-            // colEvTel
+            // colSosyalMedyaPlatformuAdi
             // 
-            this.colEvTel.AppearanceCell.Options.UseTextOptions = true;
-            this.colEvTel.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colEvTel.Caption = "Ev";
-            this.colEvTel.CustomizationCaption = "Ev Telefonu";
-            this.colEvTel.FieldName = "EvTel";
-            this.colEvTel.Name = "colEvTel";
-            this.colEvTel.OptionsColumn.AllowEdit = false;
-            this.colEvTel.StatusBarAciklama = null;
-            this.colEvTel.StatusBarKisaYol = null;
-            this.colEvTel.StatusBarKisaYolAciklama = null;
-            this.colEvTel.Visible = true;
-            this.colEvTel.Width = 120;
-            // 
-            // colIsTel1
-            // 
-            this.colIsTel1.AppearanceCell.Options.UseTextOptions = true;
-            this.colIsTel1.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colIsTel1.Caption = "İş";
-            this.colIsTel1.CustomizationCaption = "İş Telefonu-1";
-            this.colIsTel1.FieldName = "IsTel1";
-            this.colIsTel1.Name = "colIsTel1";
-            this.colIsTel1.OptionsColumn.AllowEdit = false;
-            this.colIsTel1.StatusBarAciklama = null;
-            this.colIsTel1.StatusBarKisaYol = null;
-            this.colIsTel1.StatusBarKisaYolAciklama = null;
-            this.colIsTel1.Visible = true;
-            this.colIsTel1.Width = 120;
-            // 
-            // colCepTel1
-            // 
-            this.colCepTel1.AppearanceCell.Options.UseTextOptions = true;
-            this.colCepTel1.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colCepTel1.Caption = "Cep";
-            this.colCepTel1.CustomizationCaption = "Cep Telefonu-1";
-            this.colCepTel1.FieldName = "CepTel1";
-            this.colCepTel1.Name = "colCepTel1";
-            this.colCepTel1.OptionsColumn.AllowEdit = false;
-            this.colCepTel1.StatusBarAciklama = null;
-            this.colCepTel1.StatusBarKisaYol = null;
-            this.colCepTel1.StatusBarKisaYolAciklama = null;
-            this.colCepTel1.Visible = true;
-            this.colCepTel1.Width = 120;
-            // 
-            // colEvAdres
-            // 
-            this.colEvAdres.Caption = "Ev";
-            this.colEvAdres.CustomizationCaption = "Ev Adresi";
-            this.colEvAdres.FieldName = "EvAdres";
-            this.colEvAdres.Name = "colEvAdres";
-            this.colEvAdres.OptionsColumn.AllowEdit = false;
-            this.colEvAdres.StatusBarAciklama = null;
-            this.colEvAdres.StatusBarKisaYol = null;
-            this.colEvAdres.StatusBarKisaYolAciklama = null;
-            this.colEvAdres.Visible = true;
-            this.colEvAdres.Width = 250;
-            // 
-            // colEvAdresIlAdi
-            // 
-            this.colEvAdresIlAdi.Caption = "İl";
-            this.colEvAdresIlAdi.CustomizationCaption = "Ev Adres İl Adı";
-            this.colEvAdresIlAdi.FieldName = "EvAdresIlAdi";
-            this.colEvAdresIlAdi.Name = "colEvAdresIlAdi";
-            this.colEvAdresIlAdi.OptionsColumn.AllowEdit = false;
-            this.colEvAdresIlAdi.StatusBarAciklama = null;
-            this.colEvAdresIlAdi.StatusBarKisaYol = null;
-            this.colEvAdresIlAdi.StatusBarKisaYolAciklama = null;
-            this.colEvAdresIlAdi.Visible = true;
-            this.colEvAdresIlAdi.Width = 120;
-            // 
-            // colEvAdresIlceAdi
-            // 
-            this.colEvAdresIlceAdi.Caption = "İlçe";
-            this.colEvAdresIlceAdi.CustomizationCaption = "Ev Adres İlçe Adı";
-            this.colEvAdresIlceAdi.FieldName = "EvAdresIlceAdi";
-            this.colEvAdresIlceAdi.Name = "colEvAdresIlceAdi";
-            this.colEvAdresIlceAdi.OptionsColumn.AllowEdit = false;
-            this.colEvAdresIlceAdi.StatusBarAciklama = null;
-            this.colEvAdresIlceAdi.StatusBarKisaYol = null;
-            this.colEvAdresIlceAdi.StatusBarKisaYolAciklama = null;
-            this.colEvAdresIlceAdi.Visible = true;
-            this.colEvAdresIlceAdi.Width = 120;
-            // 
-            // colIsAdres
-            // 
-            this.colIsAdres.Caption = "İş";
-            this.colIsAdres.CustomizationCaption = "İş Adresi";
-            this.colIsAdres.FieldName = "IsAdres";
-            this.colIsAdres.Name = "colIsAdres";
-            this.colIsAdres.OptionsColumn.AllowEdit = false;
-            this.colIsAdres.StatusBarAciklama = null;
-            this.colIsAdres.StatusBarKisaYol = null;
-            this.colIsAdres.StatusBarKisaYolAciklama = null;
-            this.colIsAdres.Visible = true;
-            this.colIsAdres.Width = 250;
-            // 
-            // colIsAdresIlAdi
-            // 
-            this.colIsAdresIlAdi.Caption = "İl";
-            this.colIsAdresIlAdi.CustomizationCaption = "İş Adres İl Adı";
-            this.colIsAdresIlAdi.FieldName = "IsAdresIlAdi";
-            this.colIsAdresIlAdi.Name = "colIsAdresIlAdi";
-            this.colIsAdresIlAdi.OptionsColumn.AllowEdit = false;
-            this.colIsAdresIlAdi.StatusBarAciklama = null;
-            this.colIsAdresIlAdi.StatusBarKisaYol = null;
-            this.colIsAdresIlAdi.StatusBarKisaYolAciklama = null;
-            this.colIsAdresIlAdi.Visible = true;
-            this.colIsAdresIlAdi.Width = 120;
-            // 
-            // colIsAdresIlceAdi
-            // 
-            this.colIsAdresIlceAdi.Caption = "İlçe";
-            this.colIsAdresIlceAdi.CustomizationCaption = "İş Adres İlçe Adı";
-            this.colIsAdresIlceAdi.FieldName = "IsAdresIlceAdi";
-            this.colIsAdresIlceAdi.Name = "colIsAdresIlceAdi";
-            this.colIsAdresIlceAdi.OptionsColumn.AllowEdit = false;
-            this.colIsAdresIlceAdi.StatusBarAciklama = null;
-            this.colIsAdresIlceAdi.StatusBarKisaYol = null;
-            this.colIsAdresIlceAdi.StatusBarKisaYolAciklama = null;
-            this.colIsAdresIlceAdi.Visible = true;
-            this.colIsAdresIlceAdi.Width = 120;
-            // 
-            // colIsyeriAdi
-            // 
-            this.colIsyeriAdi.Caption = "Adı";
-            this.colIsyeriAdi.CustomizationCaption = "İşyeri Adı";
-            this.colIsyeriAdi.FieldName = "IsyeriAdi";
-            this.colIsyeriAdi.Name = "colIsyeriAdi";
-            this.colIsyeriAdi.OptionsColumn.AllowEdit = false;
-            this.colIsyeriAdi.StatusBarAciklama = null;
-            this.colIsyeriAdi.StatusBarKisaYol = null;
-            this.colIsyeriAdi.StatusBarKisaYolAciklama = null;
-            this.colIsyeriAdi.Visible = true;
-            this.colIsyeriAdi.Width = 120;
-            // 
-            // colGorevAdi
-            // 
-            this.colGorevAdi.Caption = "Görevi";
-            this.colGorevAdi.CustomizationCaption = "Görev Adı";
-            this.colGorevAdi.FieldName = "GorevAdi";
-            this.colGorevAdi.Name = "colGorevAdi";
-            this.colGorevAdi.OptionsColumn.AllowEdit = false;
-            this.colGorevAdi.StatusBarAciklama = null;
-            this.colGorevAdi.StatusBarKisaYol = null;
-            this.colGorevAdi.StatusBarKisaYolAciklama = null;
-            this.colGorevAdi.Visible = true;
-            this.colGorevAdi.Width = 120;
+            this.colSosyalMedyaPlatformuAdi.Caption = "Sosyal Medya";
+            this.colSosyalMedyaPlatformuAdi.FieldName = "SosyalMedyaPlatformuAdi";
+            this.colSosyalMedyaPlatformuAdi.Name = "colSosyalMedyaPlatformuAdi";
+            this.colSosyalMedyaPlatformuAdi.OptionsColumn.AllowEdit = false;
+            this.colSosyalMedyaPlatformuAdi.StatusBarAciklama = null;
+            this.colSosyalMedyaPlatformuAdi.StatusBarKisaYol = null;
+            this.colSosyalMedyaPlatformuAdi.StatusBarKisaYolAciklama = null;
+            this.colSosyalMedyaPlatformuAdi.Visible = true;
             // 
             // colOzelKod1Adi
             // 
@@ -453,6 +421,30 @@
             this.colId.OptionsColumn.AllowEdit = false;
             this.colId.OptionsColumn.ShowInCustomizationForm = false;
             // 
+            // colSIPServer
+            // 
+            this.colSIPServer.Caption = "SİP Server";
+            this.colSIPServer.FieldName = "SIPServer";
+            this.colSIPServer.Name = "colSIPServer";
+            this.colSIPServer.OptionsColumn.AllowEdit = false;
+            this.colSIPServer.StatusBarAciklama = null;
+            this.colSIPServer.StatusBarKisaYol = null;
+            this.colSIPServer.StatusBarKisaYolAciklama = null;
+            this.colSIPServer.Visible = true;
+            this.colSIPServer.Width = 91;
+            // 
+            // colSIPKullaniciAdi
+            // 
+            this.colSIPKullaniciAdi.Caption = "SİP Kullanıcı Adı";
+            this.colSIPKullaniciAdi.FieldName = "SIPKullaniciAdi";
+            this.colSIPKullaniciAdi.Name = "colSIPKullaniciAdi";
+            this.colSIPKullaniciAdi.OptionsColumn.AllowEdit = false;
+            this.colSIPKullaniciAdi.StatusBarAciklama = null;
+            this.colSIPKullaniciAdi.StatusBarKisaYol = null;
+            this.colSIPKullaniciAdi.StatusBarKisaYolAciklama = null;
+            this.colSIPKullaniciAdi.Visible = true;
+            this.colSIPKullaniciAdi.Width = 91;
+            // 
             // bndSecim
             // 
             this.bndSecim.Caption = "Seç";
@@ -465,47 +457,48 @@
             // 
             this.gridBand1.Caption = "Genel Bilgiler";
             this.gridBand1.Columns.Add(this.colKod);
-            this.gridBand1.Columns.Add(this.colTcKimlikNo);
-            this.gridBand1.Columns.Add(this.colAdi);
-            this.gridBand1.Columns.Add(this.colSoyadi);
-            this.gridBand1.Columns.Add(this.colWeb);
-            this.gridBand1.Columns.Add(this.colEmail);
-            this.gridBand1.Columns.Add(this.colMeslek);
+            this.gridBand1.Columns.Add(this.colBaslik);
+            this.gridBand1.Columns.Add(this.colIlgili);
+            this.gridBand1.Columns.Add(this.colKanallar);
+            this.gridBand1.Columns.Add(this.colVoipMi);
             this.gridBand1.Name = "gridBand1";
             this.gridBand1.VisibleIndex = 0;
-            this.gridBand1.Width = 890;
+            this.gridBand1.Width = 465;
             // 
             // gridBand2
             // 
             this.gridBand2.Caption = "Telefon";
-            this.gridBand2.Columns.Add(this.colEvTel);
-            this.gridBand2.Columns.Add(this.colIsTel1);
-            this.gridBand2.Columns.Add(this.colCepTel1);
+            this.gridBand2.Columns.Add(this.colSIPKullaniciAdi);
+            this.gridBand2.Columns.Add(this.colSIPServer);
+            this.gridBand2.Columns.Add(this.colUlkeKodu);
+            this.gridBand2.Columns.Add(this.colNumara);
+            this.gridBand2.Columns.Add(this.colDahiliNo);
+            this.gridBand2.Columns.Add(this.colIzinDurumu);
             this.gridBand2.Name = "gridBand2";
             this.gridBand2.VisibleIndex = 1;
-            this.gridBand2.Width = 360;
+            this.gridBand2.Width = 549;
             // 
             // gridBand3
             // 
             this.gridBand3.Caption = "Adres";
-            this.gridBand3.Columns.Add(this.colEvAdres);
-            this.gridBand3.Columns.Add(this.colEvAdresIlAdi);
-            this.gridBand3.Columns.Add(this.colEvAdresIlceAdi);
-            this.gridBand3.Columns.Add(this.colIsAdres);
-            this.gridBand3.Columns.Add(this.colIsAdresIlAdi);
-            this.gridBand3.Columns.Add(this.colIsAdresIlceAdi);
+            this.gridBand3.Columns.Add(this.colEPosta);
+            this.gridBand3.Columns.Add(this.colIzinTarihi);
+            this.gridBand3.Columns.Add(this.colOncelik);
             this.gridBand3.Name = "gridBand3";
             this.gridBand3.VisibleIndex = 2;
-            this.gridBand3.Width = 980;
+            this.gridBand3.Width = 225;
             // 
             // gridBand4
             // 
             this.gridBand4.Caption = "İşyeri / Firma";
-            this.gridBand4.Columns.Add(this.colIsyeriAdi);
-            this.gridBand4.Columns.Add(this.colGorevAdi);
+            this.gridBand4.Columns.Add(this.colIletisimTuru);
+            this.gridBand4.Columns.Add(this.colWeb);
+            this.gridBand4.Columns.Add(this.colKullaniciAdi);
+            this.gridBand4.Columns.Add(this.colSosyalMedyaUrl);
+            this.gridBand4.Columns.Add(this.colSosyalMedyaPlatformuAdi);
             this.gridBand4.Name = "gridBand4";
             this.gridBand4.VisibleIndex = 3;
-            this.gridBand4.Width = 240;
+            this.gridBand4.Width = 375;
             // 
             // gridBand5
             // 
@@ -552,29 +545,30 @@
         private UserControls.Grid.MyBandedGridView tablo;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn colId;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn colKod;
-        private UserControls.Grid.MyBandedGridColumn colTcKimlikNo;
-        private UserControls.Grid.MyBandedGridColumn colAdi;
-        private UserControls.Grid.MyBandedGridColumn colSoyadi;
-        private UserControls.Grid.MyBandedGridColumn colMeslek;
-        private UserControls.Grid.MyBandedGridColumn colWeb;
-        private UserControls.Grid.MyBandedGridColumn colEmail;
-        private UserControls.Grid.MyBandedGridColumn colEvTel;
-        private UserControls.Grid.MyBandedGridColumn colIsTel1;
-        private UserControls.Grid.MyBandedGridColumn colCepTel1;
-        private UserControls.Grid.MyBandedGridColumn colEvAdres;
-        private UserControls.Grid.MyBandedGridColumn colEvAdresIlAdi;
-        private UserControls.Grid.MyBandedGridColumn colEvAdresIlceAdi;
-        private UserControls.Grid.MyBandedGridColumn colIsAdres;
-        private UserControls.Grid.MyBandedGridColumn colIsAdresIlAdi;
-        private UserControls.Grid.MyBandedGridColumn colIsAdresIlceAdi;
-        private UserControls.Grid.MyBandedGridColumn colIsyeriAdi;
-        private UserControls.Grid.MyBandedGridColumn colGorevAdi;
+        private UserControls.Grid.MyBandedGridColumn colBaslik;
         private UserControls.Grid.MyBandedGridColumn colOzelKod1Adi;
         private UserControls.Grid.MyBandedGridColumn colOzelKod2Adi;
         private UserControls.Grid.MyBandedGridColumn colAciklama;
+        private UserControls.Grid.MyBandedGridColumn colDahiliNo;
+        private UserControls.Grid.MyBandedGridColumn colUlkeKodu;
+        private UserControls.Grid.MyBandedGridColumn colNumara;
+        private UserControls.Grid.MyBandedGridColumn colEPosta;
+        private UserControls.Grid.MyBandedGridColumn colIletisimTuru;
+        private UserControls.Grid.MyBandedGridColumn colIlgili;
+        private UserControls.Grid.MyBandedGridColumn colWeb;
+        private UserControls.Grid.MyBandedGridColumn colKullaniciAdi;
+        private UserControls.Grid.MyBandedGridColumn colSosyalMedyaUrl;
+        private UserControls.Grid.MyBandedGridColumn colIzinTarihi;
+        private UserControls.Grid.MyBandedGridColumn colOncelik;
+        private UserControls.Grid.MyBandedGridColumn colSosyalMedyaPlatformuAdi;
+        private UserControls.Grid.MyBandedGridColumn colIzinDurumu;
+        private UserControls.Grid.MyBandedGridColumn colKanallar;
+        private UserControls.Grid.MyBandedGridColumn colVoipMi;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand bndSecim;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand1;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand2;
+        private UserControls.Grid.MyBandedGridColumn colSIPKullaniciAdi;
+        private UserControls.Grid.MyBandedGridColumn colSIPServer;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand3;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand4;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand5;

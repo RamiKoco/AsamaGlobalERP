@@ -33,6 +33,7 @@ using AbcYazilim.OgrenciTakip.UI.Win.Forms.RehberForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.RenkForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.SinifForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.SinifGrupForms;
+using AbcYazilim.OgrenciTakip.UI.Win.Forms.SosyalMedyaForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.SubeForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.TesvikForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.UlkeForms;
@@ -593,7 +594,17 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Functions
                     }
                     break;
 
-           
+                case "txtSosyalMedyaPlatformu":
+                    {
+                        var entity = (SosyalMedyaPlatformuL)ShowListForms<SosyalMedyaPlatformuListForm>.ShowDialogListForm(KartTuru.SosyalMedyaPlatformu,
+                            _btnEdit.Id);
+                        if (entity != null)
+                        {
+                            _btnEdit.Id = entity.Id;
+                            _btnEdit.EditValue = entity.Ad;
+                        }
+                    }
+                    break;
 
                 case "txtKayitHesabi":
                     {                     
