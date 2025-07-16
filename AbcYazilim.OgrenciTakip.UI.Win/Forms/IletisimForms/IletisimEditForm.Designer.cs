@@ -1141,6 +1141,7 @@
             this.layoutControlItem22.Size = new System.Drawing.Size(145, 24);
             this.layoutControlItem22.Text = "Varsayılan Mı";
             this.layoutControlItem22.TextSize = new System.Drawing.Size(62, 13);
+            this.layoutControlItem22.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
             // 
             // layoutControlItem1
             // 

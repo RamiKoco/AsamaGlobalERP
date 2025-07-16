@@ -40,7 +40,6 @@
             this.colIlgili = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colKanallar = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.gridBand2 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
-            this.colVoipMi = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colSIPKullaniciAdi = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colSIPServer = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.gridBand3 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
@@ -55,8 +54,6 @@
             this.pageTelefon = new DevExpress.XtraBars.Navigation.NavigationPage();
             this.telefonGrid = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridControl();
             this.telefonTablo = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridView();
-            this.gridBand13 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
-            this.colVarsayilanMi = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.gridBand11 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.colBaslik = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.gridBand7 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
@@ -81,8 +78,6 @@
             this.pageEPosta = new DevExpress.XtraBars.Navigation.NavigationPage();
             this.epostaGrid = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridControl();
             this.epostaTablo = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridView();
-            this.gridBand12 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
-            this.colMail = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.gridBand9 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.colBaslik2 = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colEPosta = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
@@ -235,7 +230,6 @@
             this.colIzinTarihi,
             this.colIzinDurumu,
             this.colKanallar,
-            this.colVoipMi,
             this.colSIPServer,
             this.colSIPKullaniciAdi});
             this.tablo.GridControl = this.grid;
@@ -274,7 +268,7 @@
             this.gridBand1.Columns.Add(this.colKanallar);
             this.gridBand1.Name = "gridBand1";
             this.gridBand1.VisibleIndex = 0;
-            this.gridBand1.Width = 299;
+            this.gridBand1.Width = 469;
             // 
             // colKod
             // 
@@ -285,7 +279,7 @@
             this.colKod.Name = "colKod";
             this.colKod.OptionsColumn.AllowEdit = false;
             this.colKod.Visible = true;
-            this.colKod.Width = 132;
+            this.colKod.Width = 138;
             // 
             // colIlgili
             // 
@@ -297,7 +291,7 @@
             this.colIlgili.StatusBarKisaYol = null;
             this.colIlgili.StatusBarKisaYolAciklama = null;
             this.colIlgili.Visible = true;
-            this.colIlgili.Width = 83;
+            this.colIlgili.Width = 165;
             // 
             // colKanallar
             // 
@@ -309,28 +303,16 @@
             this.colKanallar.StatusBarKisaYol = null;
             this.colKanallar.StatusBarKisaYolAciklama = null;
             this.colKanallar.Visible = true;
-            this.colKanallar.Width = 84;
+            this.colKanallar.Width = 166;
             // 
             // gridBand2
             // 
             this.gridBand2.Caption = "SIP Bilgileri";
-            this.gridBand2.Columns.Add(this.colVoipMi);
             this.gridBand2.Columns.Add(this.colSIPKullaniciAdi);
             this.gridBand2.Columns.Add(this.colSIPServer);
             this.gridBand2.Name = "gridBand2";
             this.gridBand2.VisibleIndex = 1;
-            this.gridBand2.Width = 257;
-            // 
-            // colVoipMi
-            // 
-            this.colVoipMi.Caption = "Voip";
-            this.colVoipMi.FieldName = "VoipMi";
-            this.colVoipMi.Name = "colVoipMi";
-            this.colVoipMi.OptionsColumn.AllowEdit = false;
-            this.colVoipMi.StatusBarAciklama = null;
-            this.colVoipMi.StatusBarKisaYol = null;
-            this.colVoipMi.StatusBarKisaYolAciklama = null;
-            this.colVoipMi.Visible = true;
+            this.gridBand2.Width = 217;
             // 
             // colSIPKullaniciAdi
             // 
@@ -342,7 +324,7 @@
             this.colSIPKullaniciAdi.StatusBarKisaYol = null;
             this.colSIPKullaniciAdi.StatusBarKisaYolAciklama = null;
             this.colSIPKullaniciAdi.Visible = true;
-            this.colSIPKullaniciAdi.Width = 91;
+            this.colSIPKullaniciAdi.Width = 108;
             // 
             // colSIPServer
             // 
@@ -354,7 +336,7 @@
             this.colSIPServer.StatusBarKisaYol = null;
             this.colSIPServer.StatusBarKisaYolAciklama = null;
             this.colSIPServer.Visible = true;
-            this.colSIPServer.Width = 91;
+            this.colSIPServer.Width = 109;
             // 
             // gridBand3
             // 
@@ -494,7 +476,6 @@
             this.telefonTablo.Appearance.ViewCaption.Options.UseForeColor = true;
             this.telefonTablo.BandPanelRowHeight = 40;
             this.telefonTablo.Bands.AddRange(new DevExpress.XtraGrid.Views.BandedGrid.GridBand[] {
-            this.gridBand13,
             this.gridBand11,
             this.gridBand7});
             this.telefonTablo.Columns.AddRange(new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn[] {
@@ -503,8 +484,7 @@
             this.colUlkeKodu,
             this.colNumara,
             this.colDahiliNo,
-            this.colOncelik,
-            this.colVarsayilanMi});
+            this.colOncelik});
             this.telefonTablo.GridControl = this.telefonGrid;
             this.telefonTablo.Name = "telefonTablo";
             this.telefonTablo.OptionsMenu.EnableColumnMenu = false;
@@ -525,33 +505,13 @@
             this.telefonTablo.StatusBarKisaYolAciklama = null;
             this.telefonTablo.ViewCaption = "Telefon & Fax";
             // 
-            // gridBand13
-            // 
-            this.gridBand13.Caption = "Varsayılan";
-            this.gridBand13.Columns.Add(this.colVarsayilanMi);
-            this.gridBand13.Name = "gridBand13";
-            this.gridBand13.VisibleIndex = 0;
-            this.gridBand13.Width = 145;
-            // 
-            // colVarsayilanMi
-            // 
-            this.colVarsayilanMi.Caption = "Numara";
-            this.colVarsayilanMi.FieldName = "VarsayilanMi";
-            this.colVarsayilanMi.Name = "colVarsayilanMi";
-            this.colVarsayilanMi.OptionsColumn.AllowEdit = false;
-            this.colVarsayilanMi.StatusBarAciklama = null;
-            this.colVarsayilanMi.StatusBarKisaYol = null;
-            this.colVarsayilanMi.StatusBarKisaYolAciklama = null;
-            this.colVarsayilanMi.Visible = true;
-            this.colVarsayilanMi.Width = 145;
-            // 
             // gridBand11
             // 
             this.gridBand11.Caption = "Başlıklar";
             this.gridBand11.Columns.Add(this.colBaslik);
             this.gridBand11.Name = "gridBand11";
-            this.gridBand11.VisibleIndex = 1;
-            this.gridBand11.Width = 208;
+            this.gridBand11.VisibleIndex = 0;
+            this.gridBand11.Width = 181;
             // 
             // colBaslik
             // 
@@ -563,7 +523,7 @@
             this.colBaslik.StatusBarKisaYol = null;
             this.colBaslik.StatusBarKisaYolAciklama = null;
             this.colBaslik.Visible = true;
-            this.colBaslik.Width = 208;
+            this.colBaslik.Width = 181;
             // 
             // gridBand7
             // 
@@ -574,8 +534,8 @@
             this.gridBand7.Columns.Add(this.colDahiliNo);
             this.gridBand7.Columns.Add(this.colOncelik);
             this.gridBand7.Name = "gridBand7";
-            this.gridBand7.VisibleIndex = 2;
-            this.gridBand7.Width = 673;
+            this.gridBand7.VisibleIndex = 1;
+            this.gridBand7.Width = 568;
             // 
             // colIletisimTuru
             // 
@@ -587,7 +547,7 @@
             this.colIletisimTuru.StatusBarKisaYol = null;
             this.colIletisimTuru.StatusBarKisaYolAciklama = null;
             this.colIletisimTuru.Visible = true;
-            this.colIletisimTuru.Width = 152;
+            this.colIletisimTuru.Width = 130;
             // 
             // colUlkeKodu
             // 
@@ -605,6 +565,8 @@
             // 
             // colNumara
             // 
+            this.colNumara.AppearanceCell.Options.UseTextOptions = true;
+            this.colNumara.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colNumara.Caption = "Telefon";
             this.colNumara.FieldName = "Numara";
             this.colNumara.Name = "colNumara";
@@ -613,7 +575,7 @@
             this.colNumara.StatusBarKisaYol = null;
             this.colNumara.StatusBarKisaYolAciklama = null;
             this.colNumara.Visible = true;
-            this.colNumara.Width = 255;
+            this.colNumara.Width = 172;
             // 
             // colDahiliNo
             // 
@@ -897,13 +859,11 @@
             this.epostaTablo.Appearance.ViewCaption.Options.UseForeColor = true;
             this.epostaTablo.BandPanelRowHeight = 40;
             this.epostaTablo.Bands.AddRange(new DevExpress.XtraGrid.Views.BandedGrid.GridBand[] {
-            this.gridBand12,
             this.gridBand9});
             this.epostaTablo.Columns.AddRange(new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn[] {
             this.colEPosta,
             this.colBaslik2,
-            this.colOncelik1,
-            this.colMail});
+            this.colOncelik1});
             this.epostaTablo.GridControl = this.epostaGrid;
             this.epostaTablo.Name = "epostaTablo";
             this.epostaTablo.OptionsMenu.EnableColumnMenu = false;
@@ -924,26 +884,6 @@
             this.epostaTablo.StatusBarKisaYolAciklama = null;
             this.epostaTablo.ViewCaption = "  E-Posta";
             // 
-            // gridBand12
-            // 
-            this.gridBand12.Caption = "Varsayılan";
-            this.gridBand12.Columns.Add(this.colMail);
-            this.gridBand12.Name = "gridBand12";
-            this.gridBand12.VisibleIndex = 0;
-            this.gridBand12.Width = 94;
-            // 
-            // colMail
-            // 
-            this.colMail.Caption = "Mail";
-            this.colMail.FieldName = "Mail";
-            this.colMail.Name = "colMail";
-            this.colMail.OptionsColumn.AllowEdit = false;
-            this.colMail.StatusBarAciklama = null;
-            this.colMail.StatusBarKisaYol = null;
-            this.colMail.StatusBarKisaYolAciklama = null;
-            this.colMail.Visible = true;
-            this.colMail.Width = 94;
-            // 
             // gridBand9
             // 
             this.gridBand9.Caption = "E-Posta Bilgileri";
@@ -951,7 +891,7 @@
             this.gridBand9.Columns.Add(this.colEPosta);
             this.gridBand9.Columns.Add(this.colOncelik1);
             this.gridBand9.Name = "gridBand9";
-            this.gridBand9.VisibleIndex = 1;
+            this.gridBand9.VisibleIndex = 0;
             this.gridBand9.Width = 571;
             // 
             // colBaslik2
@@ -1038,7 +978,6 @@
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn colKod;
         private UserControls.Grid.MyBandedGridColumn colIlgili;
         private UserControls.Grid.MyBandedGridColumn colKanallar;
-        private UserControls.Grid.MyBandedGridColumn colVoipMi;
         private UserControls.Grid.MyBandedGridColumn colSIPKullaniciAdi;
         private UserControls.Grid.MyBandedGridColumn colSIPServer;
         private UserControls.Grid.MyBandedGridColumn colIzinDurumu;
@@ -1075,12 +1014,8 @@
         private UserControls.Grid.MyBandedGridColumn colBaslik;
         private UserControls.Grid.MyBandedGridColumn colIletisimTuru;
         private UserControls.Grid.MyBandedGridColumn colOncelik;
-        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand13;
-        private UserControls.Grid.MyBandedGridColumn colVarsayilanMi;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand11;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand7;
-        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand12;
-        private UserControls.Grid.MyBandedGridColumn colMail;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand9;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand bndSecim;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand1;
