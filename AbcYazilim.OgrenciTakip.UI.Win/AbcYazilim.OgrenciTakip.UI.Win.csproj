@@ -2732,5 +2732,20 @@
   <ItemGroup>
     <None Include="Resources\viewonweb_32x321.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pie_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mobilephone2_16x162.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mail_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\viewonweb_16x162.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\colors_16x16.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -90,6 +90,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.IletisimForms
             txtOzelKod2.Text = entity.OzelKod2Adi;
             txtAciklama.Text = entity.Aciklama;
             tglVoip.IsOn = entity.VoipMi;
+            txtVarsayilanMi.IsOn = entity.VarsayilanMi;
             tglDurum.IsOn = entity.Durum;
         }
 
@@ -126,7 +127,8 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.IletisimForms
                 OzelKod1Id = txtOzelKod1.Id,
                 OzelKod2Id = txtOzelKod2.Id,
                 Aciklama = txtAciklama.Text,
-                VoipMi=tglVoip.IsOn,
+                VarsayilanMi = txtVarsayilanMi.IsOn,
+                VoipMi =tglVoip.IsOn,
                 Durum = tglDurum.IsOn
             };
             ButonEnabledDurumu();

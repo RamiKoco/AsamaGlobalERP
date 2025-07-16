@@ -105,5 +105,7 @@ namespace AbcYazilim.OgrenciTakip.Bll.General
                 Aciklama = x.Aciklama,
             }).OrderBy(x => x.Kod).ToList();
         }
+
+   
     }
 }

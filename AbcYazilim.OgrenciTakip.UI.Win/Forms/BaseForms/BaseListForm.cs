@@ -344,7 +344,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms
 
        
 
-        private void Tablo_DoubleClick(object sender, EventArgs e)
+        protected void Tablo_DoubleClick(object sender, EventArgs e)
         {
             //sonradan eklendi.udemy soru cevaptan çift tıklama ile ilgili durumdan kaynaklı.
             var info = Tablo.CalcHitInfo(((MouseEventArgs)e).Location);
@@ -355,7 +355,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms
             IslemTuruSec();
             Cursor.Current = DefaultCursor;
         }
-        private void Tablo_KeyDown(object sender, KeyEventArgs e)
+        protected void Tablo_KeyDown(object sender, KeyEventArgs e)
         {
             switch (e.KeyCode)
             {
@@ -369,7 +369,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms
                     break;
             }
         }
-        private void Tablo_MouseUp(object sender, System.Windows.Forms.MouseEventArgs e)
+        protected void Tablo_MouseUp(object sender, System.Windows.Forms.MouseEventArgs e)
         {
             e.SagMenuGoster(sagMenu);
 

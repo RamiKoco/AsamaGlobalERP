@@ -37,7 +37,7 @@ namespace AbcYazilim.OgrenciTakip.Model.Entities
         public string Ilgili { get; set; }
         public short Oncelik { get; set; }
         public bool VoipMi { get; set; }
-        public bool VarsayilanMi { get; set; }       
+        public bool VarsayilanMi { get; set; }  
         public bool AramaAktifMi { get; set; }
         public bool SmsAktifMi { get; set; }
         public bool WhatsAppAktifMi { get; set; }
