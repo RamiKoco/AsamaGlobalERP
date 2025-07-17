@@ -1523,6 +1523,16 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap pie_16x161 {
+            get {
+                object obj = ResourceManager.GetObject("pie_16x161", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap previous_16x16 {
             get {
                 object obj = ResourceManager.GetObject("previous_16x16", resourceCulture);
@@ -2176,6 +2186,16 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Properties {
         internal static System.Drawing.Bitmap viewonweb_16x162 {
             get {
                 object obj = ResourceManager.GetObject("viewonweb_16x162", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap viewonweb_16x163 {
+            get {
+                object obj = ResourceManager.GetObject("viewonweb_16x163", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

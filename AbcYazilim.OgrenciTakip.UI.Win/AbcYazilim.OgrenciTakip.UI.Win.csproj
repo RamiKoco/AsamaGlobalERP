@@ -2777,5 +2777,11 @@
   <ItemGroup>
     <None Include="Resources\colors_16x161.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\viewonweb_16x163.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pie_16x161.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

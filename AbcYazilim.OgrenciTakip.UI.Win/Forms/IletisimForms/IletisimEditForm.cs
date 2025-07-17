@@ -134,6 +134,87 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.IletisimForms
             };
             ButonEnabledDurumu();
         }
+        protected internal override void ButonEnabledDurumu()
+        {
+            if (!IsLoaded) return;
+
+            base.ButonEnabledDurumu();
+
+            if (!Enum.TryParse<IletisimTuru>(txtIletisimTurleri.Text, out var iletisimTuru))
+                return;
+
+            txtUlkeKodu.Enabled = true;
+            txtTelefonVeFax.Enabled = true;
+            txtDahili.Enabled = true;
+            txtEPosta.Enabled = true;
+            txtWeb.Enabled = true;
+            txtSosyalMedyaPlatformu.Enabled = true;
+            txtSosyalMedyaUrl.Enabled = true;
+            txtKullaniciAdi.Enabled = true;
+            txtSIPKullaniciAdi.Enabled = true;
+            txtSIPServer.Enabled = true;
+            tglVoip.Enabled = true;
+
+            switch (iletisimTuru)
+            {
+                case IletisimTuru.Telefon:
+                    txtEPosta.Enabled = false;
+                    txtSosyalMedyaPlatformu.Enabled = false;
+                    txtWeb.Enabled = false;
+                    txtSosyalMedyaUrl.Enabled = false;
+                    txtKullaniciAdi.Enabled = false;
+                    break;
+
+                case IletisimTuru.EPosta:
+                    txtUlkeKodu.Enabled = false;
+                    txtTelefonVeFax.Enabled = false;
+                    txtDahili.Enabled = false;
+                    txtSosyalMedyaPlatformu.Enabled = false;
+                    txtWeb.Enabled = false;
+                    txtSosyalMedyaUrl.Enabled = false;
+                    txtKullaniciAdi.Enabled = false;
+                    txtSIPKullaniciAdi.Enabled = false;
+                    txtSIPServer.Enabled = false;
+                    tglVoip.Enabled = false;
+                    break;
+
+
+                case IletisimTuru.Web:
+                    txtUlkeKodu.Enabled = false;
+                    txtTelefonVeFax.Enabled = false;
+                    txtDahili.Enabled = false;
+                    txtEPosta.Enabled = false;
+                    txtSosyalMedyaPlatformu.Enabled = false;
+                    txtSosyalMedyaUrl.Enabled = false;
+                    txtKullaniciAdi.Enabled = false;
+                    txtSIPKullaniciAdi.Enabled = false;
+                    txtSIPServer.Enabled = false;
+                    tglVoip.Enabled = false;
+                    break;
+
+
+                case IletisimTuru.SosyalMedya:
+                    txtUlkeKodu.Enabled = false;
+                    txtTelefonVeFax.Enabled = false;
+                    txtDahili.Enabled = false;
+                    txtEPosta.Enabled = false;
+                    txtWeb.Enabled = false;
+                    txtSIPKullaniciAdi.Enabled = false;
+                    txtSIPServer.Enabled = false;
+                    tglVoip.Enabled = false;
+                    break;
+
+
+                case IletisimTuru.Fax:
+                    txtEPosta.Enabled = false;
+                    txtSosyalMedyaPlatformu.Enabled = false;
+                    txtWeb.Enabled = false;
+                    txtSosyalMedyaUrl.Enabled = false;
+                    txtKullaniciAdi.Enabled = false;
+                    break;
+            }
+        }
+
         private void txtKayitTuru_SelectedIndexChanged(object sender, EventArgs e)
         {
             txtKayitHesabi.Id = 0;
@@ -192,14 +273,36 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.IletisimForms
                     KisiId = kisiId.Value,
                     IletisimId = iletisimEntity.Id,
                     Veli = true,
-                    IletisimTuru = iletisimEntity.IletisimTuru,
-                    //Insert = true
+                    IletisimTuru = iletisimEntity.IletisimTuru                   
                 };
 
-                // Eğer Insert yoksa direkt context kullan
                 using (var context = new OgrenciTakipContext())
                 {
-                    context.IletisimBilgileri.Add(entity);
+                    // Aynı iletişim kaydına bağlı olan tüm kayıtları bul (yani IletisimId eşleşenler)
+                    var mevcutKayitlar = context.IletisimBilgileri
+                        .Where(x => x.IletisimId == iletisimEntity.Id)
+                        .ToList();
+
+                    // Eğer varsa hepsini sil
+                    if (mevcutKayitlar.Any())
+                    {
+                        foreach (var kayit in mevcutKayitlar)
+                        {
+                            context.IletisimBilgileri.Remove(kayit);
+                        }
+                        context.SaveChanges();
+                    }
+
+                    // Yeni kaydı ekle
+                    var yeniKayit = new IletisimBilgileri
+                    {
+                        KisiId = kisiId.Value,
+                        IletisimId = iletisimEntity.Id,
+                        Veli = true,
+                        IletisimTuru = iletisimEntity.IletisimTuru
+                    };
+
+                    context.IletisimBilgileri.Add(yeniKayit);
                     context.SaveChanges();
                 }
             }

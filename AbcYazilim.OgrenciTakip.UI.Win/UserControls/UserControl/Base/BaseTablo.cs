@@ -240,7 +240,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.Base
             OwnerForm.statusBarKisaYol.Visibility = BarItemVisibility.Never;
             OwnerForm.statusBarKisaYolAciklama.Visibility = BarItemVisibility.Never;
         }
-        private void Tablo_KeyDown(object sender, KeyEventArgs e)
+        protected void Tablo_KeyDown(object sender, KeyEventArgs e)
         {
             switch (e.KeyCode)
             {
@@ -308,7 +308,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.Base
             _tabloSablonKayitEdilecek = true;
             SablonKaydet();
         }
-        private void Tablo_DoubleClick(object sender, EventArgs e)
+        protected void Tablo_DoubleClick(object sender, EventArgs e)
         {
             OpenEntity();
         }
