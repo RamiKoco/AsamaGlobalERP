@@ -1353,6 +1353,12 @@
     <Compile Include="UserControls\UserControl\KisiEditFormTable\BilgiNotlariTable.Designer.cs">
       <DependentUpon>BilgiNotlariTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UserControl\KisiEditFormTable\IletisimBilgileriTable.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UserControl\KisiEditFormTable\IletisimBilgileriTable.Designer.cs">
+      <DependentUpon>IletisimBilgileriTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UserControl\KisiEditFormTable\KisiEtiketEditFormTable.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -2007,6 +2013,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControl\KisiEditFormTable\BilgiNotlariTable.resx">
       <DependentUpon>BilgiNotlariTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControl\KisiEditFormTable\IletisimBilgileriTable.resx">
+      <DependentUpon>IletisimBilgileriTable.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControl\KisiEditFormTable\KisiEtiketEditFormTable.resx">
       <DependentUpon>KisiEtiketEditFormTable.cs</DependentUpon>

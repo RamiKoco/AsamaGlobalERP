@@ -22,7 +22,7 @@ namespace AbcYazilim.OgrenciTakip.Bll.General
                 VeliBilgileri = x.IletisimBilgileri.Where(y => y.Veli).Select(y => new
                 {
                     y.Iletisim,
-                    y.Yakinlik
+                    //y.Yakinlik
 
                 }).FirstOrDefault(),
 
@@ -60,7 +60,7 @@ namespace AbcYazilim.OgrenciTakip.Bll.General
                 OzelKod5 = x.Tahakkuk.OzelKod5.OzelKodAdi,
                 //VeliAdi = x.VeliBilgileri.Iletisim.Adi,
                 //VeliSoyadi = x.VeliBilgileri.Iletisim.Soyadi,
-                VeliYakinlikAdi = x.VeliBilgileri.Yakinlik.YakinlikAdi,
+                //VeliYakinlikAdi = x.VeliBilgileri.Yakinlik.YakinlikAdi,
                 //VeliMeslekAdi = x.VeliBilgileri.Iletisim.Meslek.MeslekAdi,
                 //VeliIsyeriAdi = x.VeliBilgileri.Iletisim.Isyeri.IsyeriAdi,
                 //VeliGorevAdi = x.VeliBilgileri.Iletisim.Gorev.GorevAdi,

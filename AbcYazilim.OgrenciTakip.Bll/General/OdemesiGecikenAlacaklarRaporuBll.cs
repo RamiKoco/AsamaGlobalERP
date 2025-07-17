@@ -54,7 +54,7 @@ namespace AbcYazilim.OgrenciTakip.Bll.General
                 VeliBilgileri = x.Tahakkuk.IletisimBilgileri.Where(y => y.Veli).Select(y =>  new
                 {
                     y.Iletisim,
-                    y.Yakinlik
+                    //y.Yakinlik
 
                 }).FirstOrDefault()
 

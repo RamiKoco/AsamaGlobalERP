@@ -22,7 +22,7 @@ namespace AbcYazilim.OgrenciTakip.Bll.General
                 VeliBilgileri = x.IletisimBilgileri.Where(y => y.Veli).Select(y => new
                 {
                     y.Iletisim,
-                    y.Yakinlik
+                    //y.Yakinlik
                    
                 }).FirstOrDefault(),
 
@@ -139,7 +139,7 @@ namespace AbcYazilim.OgrenciTakip.Bll.General
                 //VeliIsAdresIlceAdi = x.VeliBilgileri.Iletisim.IsAdresIlce.IlceAdi,
                 //VeliIbanNo = x.VeliBilgileri.Iletisim.IbanNo,
                 //VeliKartNo = x.VeliBilgileri.Iletisim.KartNo,
-                VeliYakinlikAdi = x.VeliBilgileri.Yakinlik.YakinlikAdi,
+                //VeliYakinlikAdi = x.VeliBilgileri.Yakinlik.YakinlikAdi,
                 //VeliMeslekAdi = x.VeliBilgileri.Iletisim.Meslek.MeslekAdi,
                 //VeliIsyeriAdi = x.VeliBilgileri.Iletisim.Isyeri.IsyeriAdi,
                 //VeliGorevAdi = x.VeliBilgileri.Iletisim.Gorev.GorevAdi,

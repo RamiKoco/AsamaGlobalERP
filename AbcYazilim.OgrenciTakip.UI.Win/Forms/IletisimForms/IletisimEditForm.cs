@@ -2,6 +2,7 @@
 using AbcYazilim.OgrenciTakip.Common.Enums;
 using AbcYazilim.OgrenciTakip.Common.Functions;
 using AbcYazilim.OgrenciTakip.Common.Message;
+using AbcYazilim.OgrenciTakip.Data.Contexts;
 using AbcYazilim.OgrenciTakip.Model.Dto;
 using AbcYazilim.OgrenciTakip.Model.Entities;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms;
@@ -172,8 +173,38 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.IletisimForms
                     return false;
                 }
             }
+          
+            var sonuc = base.Kaydet(kapanis);
 
-            return base.Kaydet(kapanis);
+            if (!sonuc) return false;
+
+            var kayitTuru = txtKayitTuru.Text.GetEnum<KayitTuru>();
+
+            var kisiId = kayitTuru == KayitTuru.Kisi ? txtKayitHesabi.Id : null;
+
+            if (kayitTuru == KayitTuru.Kisi && kisiId.HasValue && kisiId > 0)
+            {
+                var iletisimEntity = CurrentEntity as Iletisim;
+                if (iletisimEntity == null) return false;
+
+                var entity = new IletisimBilgileri
+                {
+                    KisiId = kisiId.Value,
+                    IletisimId = iletisimEntity.Id,
+                    Veli = true,
+                    IletisimTuru = iletisimEntity.IletisimTuru,
+                    //Insert = true
+                };
+
+                // Eğer Insert yoksa direkt context kullan
+                using (var context = new OgrenciTakipContext())
+                {
+                    context.IletisimBilgileri.Add(entity);
+                    context.SaveChanges();
+                }
+            }
+
+            return true;
         }
        
     }

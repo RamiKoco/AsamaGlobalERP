@@ -1,28 +1,26 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
-using AbcYazilim.OgrenciTakip.Model.Entities;
+﻿using AbcYazilim.OgrenciTakip.Model.Entities;
 using AbcYazilim.OgrenciTakip.Model.Entities.Base.Interfaces;
 using DevExpress.DataAccess.ObjectBinding;
+using System;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace AbcYazilim.OgrenciTakip.Model.Dto
 {
     [NotMapped]
     public class IletisimBilgileriL : IletisimBilgileri, IBaseHareketEntity
-    {
-        public string TcKimlikNo { get; set; }
-        public string Adi { get; set; }
-        public string Soyadi { get; set; }
-        public string EvTel { get; set; }
-        public string IsTel1 { get; set; } 
-        public string IsTel2 { get; set; }
-        public string CepTel1 { get; set; }
-        public string CepTel2 { get; set; }
-        public string EvAdres { get; set; }
-        public string EvAdresIlAdi { get; set; }
-        public string EvAdresIlceAdi { get; set; }
-        public string IsAdres { get; set; }
-        public string IsAdresIlAdi { get; set; }
-        public string IsAdresIlceAdi { get; set; }
-        public string YakinlikAdi { get; set; }
+    {      
+        public string Baslik { get; set; }
+        public string UlkeKodu { get; set; }
+        public string Numara { get; set; }
+        public string DahiliNo { get; set; }
+        public string EPosta { get; set; }
+        public DateTime? IzinTarihi { get; set; }
+        public string KullaniciAdi { get; set; }
+        public string SosyalMedyaUrl { get; set; }
+        public string SIPKullaniciAdi { get; set; }
+        public string SIPServer { get; set; }
+        public string Ilgili { get; set; }
+        public string Web { get; set; }
         public string MeslekAdi { get; set; }
         public string IsyeriAdi { get; set; }
         public string GorevAdi { get; set; }
@@ -34,24 +32,18 @@ namespace AbcYazilim.OgrenciTakip.Model.Dto
     [HighlightedClass]
     public class IletisimBilgileriR
     {
-        public string TcKimlikNo { get; set; }
-        public string Adi { get; set; }
-        public string Soyadi { get; set; }
-        public string AdiSoyadi { get; set; }
-        public string EvTel { get; set; }
-        public string IsTel1 { get; set; }
-        public string IsTel2 { get; set; }
-        public string CepTel1 { get; set; }
-        public string CepTel2 { get; set; }
-        public string EvAdres { get; set; }
-        public string EvAdresIlAdi { get; set; }
-        public string EvAdresIlceAdi { get; set; }
-        public string EvAdresTam { get; set; }
-        public string IsAdres { get; set; }
-        public string IsAdresIlAdi { get; set; }
-        public string IsAdresIlceAdi { get; set; }
-        public string IsAdresTam { get; set; }
-        public string YakinlikAdi { get; set; }
+        public string Baslik { get; set; }
+        public string UlkeKodu { get; set; }
+        public string Numara { get; set; }
+        public string DahiliNo { get; set; }
+        public string EPosta { get; set; }
+        public DateTime? IzinTarihi { get; set; }
+        public string KullaniciAdi { get; set; }
+        public string SosyalMedyaUrl { get; set; }
+        public string SIPKullaniciAdi { get; set; }
+        public string SIPServer { get; set; }
+        public string Ilgili { get; set; }
+        public string Web { get; set; }
         public string MeslekAdi { get; set; }
         public string IsyeriAdi { get; set; }
         public string GorevAdi { get; set; }

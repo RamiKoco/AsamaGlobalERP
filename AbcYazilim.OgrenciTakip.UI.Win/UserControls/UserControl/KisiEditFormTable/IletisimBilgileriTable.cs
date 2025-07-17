@@ -1,6 +1,4 @@
-﻿using System;
-using System.Linq;
-using AbcYazilim.OgrenciTakip.Bll.Functions;
+﻿using AbcYazilim.OgrenciTakip.Bll.Functions;
 using AbcYazilim.OgrenciTakip.Bll.General;
 using AbcYazilim.OgrenciTakip.Common.Enums;
 using AbcYazilim.OgrenciTakip.Common.Message;
@@ -13,8 +11,11 @@ using AbcYazilim.OgrenciTakip.UI.Win.Show;
 using AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.Base;
 using DevExpress.XtraBars;
 using DevExpress.XtraGrid.Views.Base;
+using System;
+using System.Linq;
 
-namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFormTable
+
+namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.KisiEditFormTable
 {
     public partial class IletisimBilgileriTable : BaseTablo
     {
@@ -25,15 +26,13 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFo
             Bll = new IletisimBilgileriBll();
             Tablo = tablo;
             EventsLoad();
-            ShowItems = new BarItem[] {btnKartDuzenle};
-            repositoryAdres.Items.AddEnum<AdresTuru>();
-            
+            ShowItems = new BarItem[] { btnKartDuzenle };
+            repositoryAdres.Items.AddEnum<IletisimTuru>();
         }
         protected internal override void Listele()
         {
             tablo.GridControl.DataSource = ((IletisimBilgileriBll)Bll).List(x => x.KisiId == OwnerForm.Id).ToBindingList<IletisimBilgileriL>();
         }
-
         protected override void HareketEkle()
         {
             var source = tablo.DataController.ListSource;
@@ -49,15 +48,18 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFo
                 {
                     KisiId = OwnerForm.Id,
                     IletisimId = entity.Id,
-                    //TcKimlikNo = entity.TcKimlikNo,
-                    //Adi = entity.Adi,
-                    //Soyadi = entity.Soyadi,
-                    //EvTel = entity.EvTel,
-                    //IsTel1 = entity.IsTel1,
-                    //IsTel2 = entity.IsTel2,
-                    //CepTel1 = entity.CepTel1,
-                    //CepTel2 = entity.CepTel2,
-                    //EvAdres = entity.EvAdres,
+                    Baslik = entity.Baslik,
+                    UlkeKodu = entity.UlkeKodu,
+                    Numara = entity.Numara,
+                    DahiliNo = entity.DahiliNo,
+                    EPosta = entity.EPosta,
+                    IzinTarihi = entity.IzinTarihi,
+                    KullaniciAdi = entity.KullaniciAdi,
+                    SosyalMedyaUrl = entity.SosyalMedyaUrl,
+                    SIPKullaniciAdi = entity.SIPKullaniciAdi,
+                    SIPServer = entity.SIPServer,
+                    Ilgili = entity.Ilgili,
+                    Web = entity.Web,
                     //EvAdresIlAdi = entity.EvAdresIlAdi,
                     //EvAdresIlceAdi = entity.EvAdresIlceAdi,
                     //IsAdres = entity.IsAdres,
@@ -75,8 +77,8 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFo
                     row.IletisimTuru = IletisimTuru.Telefon;
                 }
 
-                var yakinlik = (Yakinlik)ShowListForms<YakinlikListForm>.ShowDialogListForm(KartTuru.Yakinlik, -1);
-                if (yakinlik == null) return;
+                //var yakinlik = (Yakinlik)ShowListForms<YakinlikListForm>.ShowDialogListForm(KartTuru.Yakinlik, -1);
+                //if (yakinlik == null) return;
 
                 //row.YakinlikId = yakinlik.Id;
                 //row.YakinlikAdi = yakinlik.YakinlikAdi;
@@ -111,7 +113,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFo
 
                 //}
 
-            if (!tablo.HasColumnErrors) continue;
+                if (!tablo.HasColumnErrors) continue;
                 Messages.TabloEksikBilgiMesaji($"{tablo.ViewCaption} Tablosu");
                 return true;
             }
@@ -124,7 +126,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFo
         {
             var entity = tablo.GetRow<IletisimBilgileriL>();
             if (entity == null) return;
-            ShowEditForms<IletisimEditForm>.ShowDialogEditForm(KartTuru.Tahakkuk, entity.IletisimId,null);
+            ShowEditForms<IletisimEditForm>.ShowDialogEditForm(KartTuru.Kisi, entity.IletisimId, null);
 
         }
 
@@ -138,7 +140,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFo
             for (int i = 0; i < tablo.DataRowCount; i++)
             {
                 if (i == rowHandle) continue;
-                
+
                 if (source[i].IletisimTuru == null) continue;
                 source[i].IletisimTuru = null;
 
@@ -169,13 +171,13 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFo
 
         }
 
-        protected override void Tablo_FocusedColumnChanged(object sender, FocusedColumnChangedEventArgs e)
-        {
-            base.Tablo_FocusedColumnChanged(sender, e);
+        //protected override void Tablo_FocusedColumnChanged(object sender, FocusedColumnChangedEventArgs e)
+        //{
+        //    base.Tablo_FocusedColumnChanged(sender, e);
 
-            if (e.FocusedColumn == colYakinlikAdi)
-                e.FocusedColumn.Sec(tablo,insUptNavigator.Navigator,repositoryYakinlik,colYakinlikId);
+        //    if (e.FocusedColumn == colBaslik)
+        //        e.FocusedColumn.Sec(tablo, insUptNavigator.Navigator, repositoryYakinlik, colBaslik);
 
-        }
+        //}
     }
 }

@@ -43,7 +43,7 @@ namespace AbcYazilim.OgrenciTakip.Bll.General
                 VeliBilgileri = x.Tahakkuk.IletisimBilgileri.Where(y => y.Veli).Select(z => new
                 {
                     z.Iletisim,
-                    z.Yakinlik
+                    //z.Yakinlik
                 }).FirstOrDefault()
 
             }).Select(x => new FaturaPlaniL
