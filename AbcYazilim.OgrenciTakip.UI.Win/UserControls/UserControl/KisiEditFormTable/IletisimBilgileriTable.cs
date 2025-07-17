@@ -3,15 +3,14 @@ using AbcYazilim.OgrenciTakip.Bll.General;
 using AbcYazilim.OgrenciTakip.Common.Enums;
 using AbcYazilim.OgrenciTakip.Common.Message;
 using AbcYazilim.OgrenciTakip.Model.Dto;
-using AbcYazilim.OgrenciTakip.Model.Entities;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.IletisimForms;
-using AbcYazilim.OgrenciTakip.UI.Win.Forms.YakinlikForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Functions;
 using AbcYazilim.OgrenciTakip.UI.Win.Show;
 using AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.Base;
 using DevExpress.XtraBars;
-using DevExpress.XtraGrid.Views.Base;
+using DevExpress.XtraBars.Navigation;
 using System;
+using System.Diagnostics;
 using System.Linq;
 
 
@@ -27,11 +26,27 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.KisiEditFormTa
             Tablo = tablo;
             EventsLoad();
             ShowItems = new BarItem[] { btnKartDuzenle };
-            repositoryAdres.Items.AddEnum<IletisimTuru>();
+            //repositoryAdres.Items.AddEnum<IletisimTuru>();
+            solPane.SelectedPageChanged += NavigationPane_SelectedPageChanged;
+            insUptNavigator.Visible = false;
+        }
+        private void NavigationPane_SelectedPageChanged(object sender, SelectedPageChangedEventArgs e)
+        {
+            var selectedPage = e.Page as NavigationPage;
+            Debug.WriteLine($"[DEBUG] Seçilen sayfa: {selectedPage?.Name}");
+            DegiskenleriDoldur();
+            Listele(); // Güncel tabloya göre veri yüklenir
         }
         protected internal override void Listele()
         {
-            tablo.GridControl.DataSource = ((IletisimBilgileriBll)Bll).List(x => x.KisiId == OwnerForm.Id).ToBindingList<IletisimBilgileriL>();
+           
+            var list = ((IletisimBilgileriBll)Bll)
+                .List(x => x.KisiId == OwnerForm.Id)
+                .ToBindingList<IletisimBilgileriL>();
+
+            if (Tablo?.GridControl != null)
+                Tablo.GridControl.DataSource = list;
+
         }
         protected override void HareketEkle()
         {
@@ -84,21 +99,13 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.KisiEditFormTa
                     row.IletisimTuru = IletisimTuru.Telefon;
                 }
 
-                //var yakinlik = (Yakinlik)ShowListForms<YakinlikListForm>.ShowDialogListForm(KartTuru.Yakinlik, -1);
-                //if (yakinlik == null) return;
-
-                //row.YakinlikId = yakinlik.Id;
-                //row.YakinlikAdi = yakinlik.YakinlikAdi;
-
-
                 source.Add(row);
 
             }
 
             tablo.Focus();
             tablo.RefleshDataSource();
-            tablo.FocusedRowHandle = tablo.DataRowCount - 1;
-            tablo.FocusedColumn = colVeli;
+            tablo.FocusedRowHandle = tablo.DataRowCount - 1;          
 
             ButonEnabledDurumu(true);
 
@@ -111,14 +118,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.KisiEditFormTa
 
             for (int i = 0; i < tablo.DataRowCount; i++)
             {
-                var entity = tablo.GetRow<IletisimBilgileriL>(i);
-                //if (entity.YakinlikAdi == null)
-                //{
-                //    tablo.FocusedRowHandle = i;
-                //    tablo.FocusedColumn = colYakinlikAdi;
-                //    tablo.SetColumnError(colYakinlikAdi, "Yakınlık Adı Alanına Geçerli Bir Değer Giriniz");
-
-                //}
+                var entity = tablo.GetRow<IletisimBilgileriL>(i);               
 
                 if (!tablo.HasColumnErrors) continue;
                 Messages.TabloEksikBilgiMesaji($"{tablo.ViewCaption} Tablosu");
@@ -133,8 +133,6 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.KisiEditFormTa
         {
             var entity = tablo.GetRow<IletisimBilgileriL>();
             if (entity == null) return;
-            ShowEditForms<IletisimEditForm>.ShowDialogEditForm(KartTuru.Kisi, entity.IletisimId, null);
-
         }
 
         protected override void ImageComboBox_SelectedValueChanged(object sender, EventArgs e)
@@ -178,13 +176,40 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.KisiEditFormTa
 
         }
 
-        //protected override void Tablo_FocusedColumnChanged(object sender, FocusedColumnChangedEventArgs e)
-        //{
-        //    base.Tablo_FocusedColumnChanged(sender, e);
+        protected override void DegiskenleriDoldur()
+        {
 
-        //    if (e.FocusedColumn == colBaslik)
-        //        e.FocusedColumn.Sec(tablo, insUptNavigator.Navigator, repositoryYakinlik, colBaslik);
+            switch (solPane.SelectedPage.Name)
+            {
+               
 
-        //}
+                case "pageGenel":
+                    Tablo = tablo;
+                    break;
+
+                case "pageTelefon":
+                    Tablo = telefonTablo;
+                    break;
+
+                //case "pageWeb":
+                //    Tablo = webTablo;
+                //    TabloEventsYukle();
+                //    break;
+
+                case "pageEPosta":
+                    Tablo = epostaTablo;
+                    break;
+
+                case "pageSosyalMedya":
+                    Tablo = sosyalMedyaTablo;
+                    break;
+
+                    //default:
+                    //    Tablo = tablo; // Ana tablo
+                    //    break;
+            }
+
+
+        }     
     }
 }

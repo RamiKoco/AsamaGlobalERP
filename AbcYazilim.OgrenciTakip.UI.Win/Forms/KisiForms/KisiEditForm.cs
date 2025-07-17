@@ -9,6 +9,7 @@ using AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Functions;
 using AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.Base;
 using AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.KisiEditFormTable;
+using DevExpress.XtraBars;
 using DevExpress.XtraBars.Navigation;
 using DevExpress.XtraEditors;
 using System;
@@ -31,6 +32,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.KisiForms
             DataLayoutControls = new[] { DataLayoutGenel, DataLayoutGenelBilgiler };
             Bll = new KisiBll(DataLayoutGenelBilgiler);
             BaseKartTuru = KartTuru.Kisi;
+            HideItems = new BarItem[] { btnYeni };
             EventsLoad();
             txtCinsiyet.Properties.Items.AddRange(EnumFunctions.GetEnumDescriptionList<Cinsiyet>());          
                     

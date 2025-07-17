@@ -1353,6 +1353,12 @@
     <Compile Include="UserControls\UserControl\KisiEditFormTable\BilgiNotlariTable.Designer.cs">
       <DependentUpon>BilgiNotlariTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UserControl\KisiEditFormTable\ForTestTable.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UserControl\KisiEditFormTable\ForTestTable.Designer.cs">
+      <DependentUpon>ForTestTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UserControl\KisiEditFormTable\IletisimBilgileriTable.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -2013,6 +2019,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControl\KisiEditFormTable\BilgiNotlariTable.resx">
       <DependentUpon>BilgiNotlariTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControl\KisiEditFormTable\ForTestTable.resx">
+      <DependentUpon>ForTestTable.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControl\KisiEditFormTable\IletisimBilgileriTable.resx">
       <DependentUpon>IletisimBilgileriTable.cs</DependentUpon>
@@ -2755,6 +2764,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\colors_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\contact_16x161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mobilephone2_16x163.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mail_16x161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\colors_16x161.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

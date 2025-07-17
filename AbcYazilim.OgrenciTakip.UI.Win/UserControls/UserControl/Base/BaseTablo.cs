@@ -1,21 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Windows.Forms;
-using AbcYazilim.OgrenciTakip.Bll.Interfaces;
+﻿using AbcYazilim.OgrenciTakip.Bll.Interfaces;
+using AbcYazilim.OgrenciTakip.Common.Enums;
 using AbcYazilim.OgrenciTakip.Common.Message;
 using AbcYazilim.OgrenciTakip.Model.Entities.Base;
 using AbcYazilim.OgrenciTakip.Model.Entities.Base.Interfaces;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms;
-using DevExpress.XtraBars;
-using DevExpress.XtraEditors;
-using DevExpress.XtraGrid.Views.Grid;
+using AbcYazilim.OgrenciTakip.UI.Win.Forms.IletisimForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Functions;
 using AbcYazilim.OgrenciTakip.UI.Win.Interfaces;
+using AbcYazilim.OgrenciTakip.UI.Win.Show;
 using DevExpress.Utils.Extensions;
+using DevExpress.XtraBars;
+using DevExpress.XtraEditors;
 using DevExpress.XtraEditors.Repository;
 using DevExpress.XtraGrid.Columns;
 using DevExpress.XtraGrid.Views.Base;
+using DevExpress.XtraGrid.Views.Grid;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Windows.Forms;
 
 namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.Base
 {
@@ -71,7 +74,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.Base
             Tablo.RowCountChanged += Tablo_RowCountChanged;
         }
 
-      
+       
 
         protected internal void Yukle()
         {
@@ -315,5 +318,6 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.Base
             RowCellAllowEdit(); 
         }
         protected virtual void Tablo_RowCountChanged(object sender, EventArgs e) { }
+        protected virtual void DegiskenleriDoldur() { }     
     }
 }

@@ -493,6 +493,16 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap colors_16x161 {
+            get {
+                object obj = ResourceManager.GetObject("colors_16x161", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap comment_16x16 {
             get {
                 object obj = ResourceManager.GetObject("comment_16x16", resourceCulture);
@@ -506,6 +516,16 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Properties {
         internal static System.Drawing.Bitmap contact_16x16 {
             get {
                 object obj = ResourceManager.GetObject("contact_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap contact_16x161 {
+            get {
+                object obj = ResourceManager.GetObject("contact_16x161", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1233,6 +1253,16 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap mail_16x161 {
+            get {
+                object obj = ResourceManager.GetObject("mail_16x161", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap man_16x16 {
             get {
                 object obj = ResourceManager.GetObject("man_16x16", resourceCulture);
@@ -1306,6 +1336,16 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Properties {
         internal static System.Drawing.Bitmap mobilephone2_16x162 {
             get {
                 object obj = ResourceManager.GetObject("mobilephone2_16x162", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mobilephone2_16x163 {
+            get {
+                object obj = ResourceManager.GetObject("mobilephone2_16x163", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
