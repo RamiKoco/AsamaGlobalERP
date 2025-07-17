@@ -14,13 +14,8 @@ namespace AbcYazilim.OgrenciTakip.Bll.General
 {
     public class IletisimBll : BaseGenelBll<Iletisim>, IBaseGenelBll, IBaseCommonBll
     {
-        public IletisimBll() : base(KartTuru.Iletisim)
-        {
-        }
-
-        public IletisimBll(Control ctrl) : base(ctrl, KartTuru.Iletisim)
-        {
-        }
+        public IletisimBll() : base(KartTuru.Iletisim) { }        
+        public IletisimBll(Control ctrl) : base(ctrl, KartTuru.Iletisim) { }   
 
         public override BaseEntity Single(Expression<Func<Iletisim, bool>> filter)
         {

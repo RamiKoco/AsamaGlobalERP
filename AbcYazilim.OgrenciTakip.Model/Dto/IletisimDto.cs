@@ -39,8 +39,7 @@ namespace AbcYazilim.OgrenciTakip.Model.Dto
         public string SosyalMedyaUrl { get; set; }
         public string SIPKullaniciAdi { get; set; }
         public string SIPServer { get; set; }
-        public string Ilgili { get; set; }
-        public string Web { get; set; }
+        public string Ilgili { get; set; }      
         public short Oncelik { get; set; } 
         public bool VoipMi { get; set; }
         public bool VarsayilanMi { get; set; }        
@@ -48,6 +47,7 @@ namespace AbcYazilim.OgrenciTakip.Model.Dto
         public bool SmsAktifMi { get; set; }
         public bool WhatsAppAktifMi { get; set; }
         public bool EmailAktifMi { get; set; }
+        public string Web { get; set; }
         public string SosyalMedyaPlatformuAdi { get; set; }    
         public string OzelKod1Adi { get; set; }
         public string OzelKod2Adi { get; set; }
