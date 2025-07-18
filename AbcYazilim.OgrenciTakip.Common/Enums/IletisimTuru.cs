@@ -6,11 +6,11 @@ namespace AbcYazilim.OgrenciTakip.Common.Enums
     {
         [Description("Telefon")]
         Telefon = 1,
-        [Description("EPosta")]
+        [Description("E-Posta")]
         EPosta = 2,
         [Description("Web")]
         Web = 3,
-        [Description("SosyalMedya")]
+        [Description("Sosyal Medya")]
         SosyalMedya = 4,
         [Description("Fax")]
         Fax = 5

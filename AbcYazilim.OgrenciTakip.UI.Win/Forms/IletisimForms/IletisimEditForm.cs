@@ -37,6 +37,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.IletisimForms
                 txtKayitHesabi.Id = 0;
                 txtKayitHesabi.Text = "";
             };
+            txtIletisimTurleri.EditValueChanged += TxtIletisimTurleri_EditValueChanged;
             EventsLoad();
         }
 
@@ -69,7 +70,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.IletisimForms
             else
                 txtKayitHesabi.Id = 0;
             txtKayitHesabi.Text = entity.KayitHesabiAdi;
-            txtIletisimTurleri.SelectedItem = entity.IletisimTuru.ToName();
+            txtIletisimTurleri.EditValue = entity.IletisimTuru.ToName();
             txtKanallar.SetEditValue(entity.Kanallar);
             txtIzinDurumu.SelectedItem = entity.IzinDurumu.ToName();
             txtIzinTarihi.EditValue = entity.IzinTarihi;
@@ -93,6 +94,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.IletisimForms
             tglVoip.IsOn = entity.VoipMi;
             txtVarsayilanMi.IsOn = entity.VarsayilanMi;
             tglDurum.IsOn = entity.Durum;
+            ButonEnabledDurumu();
         }
 
         protected override void GuncelNesneOlustur()
@@ -140,8 +142,18 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.IletisimForms
 
             base.ButonEnabledDurumu();
 
-            if (!Enum.TryParse<IletisimTuru>(txtIletisimTurleri.Text, out var iletisimTuru))
+            if (txtIletisimTurleri.EditValue == null) return;
+
+            IletisimTuru iletisimTuru;
+
+            try
+            {
+                iletisimTuru = EnumFunctions.GetValueFromDescription<IletisimTuru>(txtIletisimTurleri.EditValue.ToString());
+            }
+            catch
+            {
                 return;
+            }
 
             txtUlkeKodu.Enabled = true;
             txtTelefonVeFax.Enabled = true;
@@ -178,7 +190,6 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.IletisimForms
                     tglVoip.Enabled = false;
                     break;
 
-
                 case IletisimTuru.Web:
                     txtUlkeKodu.Enabled = false;
                     txtTelefonVeFax.Enabled = false;
@@ -192,7 +203,6 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.IletisimForms
                     tglVoip.Enabled = false;
                     break;
 
-
                 case IletisimTuru.SosyalMedya:
                     txtUlkeKodu.Enabled = false;
                     txtTelefonVeFax.Enabled = false;
@@ -204,15 +214,21 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.IletisimForms
                     tglVoip.Enabled = false;
                     break;
 
-
                 case IletisimTuru.Fax:
                     txtEPosta.Enabled = false;
                     txtSosyalMedyaPlatformu.Enabled = false;
                     txtWeb.Enabled = false;
                     txtSosyalMedyaUrl.Enabled = false;
                     txtKullaniciAdi.Enabled = false;
+                    txtSIPKullaniciAdi.Enabled = false;
+                    txtSIPServer.Enabled = false;
+                    tglVoip.Enabled = false;
                     break;
             }
+        }
+        private void TxtIletisimTurleri_EditValueChanged(object sender, EventArgs e)
+        {
+            ButonEnabledDurumu();
         }
 
         private void txtKayitTuru_SelectedIndexChanged(object sender, EventArgs e)

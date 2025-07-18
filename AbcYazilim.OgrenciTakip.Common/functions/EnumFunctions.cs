@@ -20,8 +20,25 @@ namespace AbcYazilim.OgrenciTakip.Common.Functions
             if (attributes.Length == 0) return null;
             return (T)attributes[0];
         }
-     
 
+        public static T GetValueFromDescription<T>(string description)
+        {
+            var type = typeof(T);
+            foreach (var field in type.GetFields())
+            {
+                if (Attribute.GetCustomAttribute(field, typeof(DescriptionAttribute)) is DescriptionAttribute attribute)
+                {
+                    if (attribute.Description == description)
+                        return (T)field.GetValue(null);
+                }
+                else
+                {
+                    if (field.Name == description)
+                        return (T)field.GetValue(null);
+                }
+            }
+            throw new ArgumentException($"Tanımsız açıklama: {description}", nameof(description));
+        }
         public static string ToName(this Enum value)
         {
             if (value == null) return null;
