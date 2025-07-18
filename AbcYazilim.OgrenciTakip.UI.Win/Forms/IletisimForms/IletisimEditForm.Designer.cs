@@ -923,7 +923,7 @@
             this.layoutControlItem8.Name = "layoutControlItem8";
             this.layoutControlItem8.OptionsTableLayoutItem.RowIndex = 6;
             this.layoutControlItem8.Size = new System.Drawing.Size(145, 24);
-            this.layoutControlItem8.Text = "Telefon - Fax";
+            this.layoutControlItem8.Text = "Numara";
             this.layoutControlItem8.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
             this.layoutControlItem8.TextSize = new System.Drawing.Size(80, 20);
             this.layoutControlItem8.TextToControlDistance = 5;
