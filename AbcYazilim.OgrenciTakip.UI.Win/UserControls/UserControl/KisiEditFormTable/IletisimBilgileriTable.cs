@@ -8,7 +8,6 @@ using DevExpress.XtraBars.Navigation;
 using System.Diagnostics;
 using System.Windows.Forms;
 
-
 namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.KisiEditFormTable
 {
     public partial class IletisimBilgileriTable : BaseTablo
@@ -21,14 +20,38 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.KisiEditFormTa
             Tablo = tablo;
             EventsLoad();
             HideItems = new BarItem[] { btnBelgeHareketleri };
-            solPane.SelectedPageChanged += NavigationPane_SelectedPageChanged;
+            solPane.SelectedPageChanged += NavigationPane_SelectedPageChanged;           
             insUptNavigator.Visible = false;
+            smallNavigatorTelefon.Navigator.NavigatableControl = Tablo.GridControl;
+            smallNavigatorEPosta.Navigator.NavigatableControl = Tablo.GridControl;
+            smallNavigatorWeb.Navigator.NavigatableControl = Tablo.GridControl;
+            smallNavigatorSosyalMedya.Navigator.NavigatableControl = Tablo.GridControl;           
         }
         private void NavigationPane_SelectedPageChanged(object sender, SelectedPageChangedEventArgs e)
         {
             var selectedPage = e.Page as NavigationPage;
             Debug.WriteLine($"[DEBUG] Seçilen sayfa: {selectedPage?.Name}");
-            DegiskenleriDoldur();
+            DegiskenleriDoldur();          
+
+            switch (selectedPage?.Name)
+            {
+                case "pageTelefon":
+                    smallNavigatorTelefon.Navigator.NavigatableControl = Tablo.GridControl;
+                    break;
+
+                case "pageWeb":
+                    smallNavigatorWeb.Navigator.NavigatableControl = Tablo.GridControl;
+                    break;
+
+                case "pageEPosta":
+                    smallNavigatorEPosta.Navigator.NavigatableControl = Tablo.GridControl;
+                    break;
+
+                case "pageSosyalMedya":
+                    smallNavigatorSosyalMedya.Navigator.NavigatableControl = Tablo.GridControl;
+                    break;
+            }
+
             Listele();
         }
     
@@ -59,8 +82,8 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.KisiEditFormTa
             }
 
             return false;
+        }     
 
-        }   
         protected override void DegiskenleriDoldur()
         {
 
@@ -68,7 +91,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.KisiEditFormTa
             {
 
                 case "pageTelefon":
-                    Tablo = tablo;
+                    Tablo = tablo;                   
                     break;
 
                 case "pageWeb":

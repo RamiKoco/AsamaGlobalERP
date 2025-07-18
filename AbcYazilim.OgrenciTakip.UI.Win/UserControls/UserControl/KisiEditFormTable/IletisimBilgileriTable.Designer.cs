@@ -30,6 +30,7 @@
         {
             this.solPane = new DevExpress.XtraBars.Navigation.NavigationPane();
             this.pageTelefon = new DevExpress.XtraBars.Navigation.NavigationPage();
+            this.smallNavigatorTelefon = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Navigators.SmallNavigator();
             this.telefonGrid = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridControl();
             this.tablo = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridView();
             this.gridBand2 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
@@ -40,12 +41,15 @@
             this.colDahiliNo = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colOncelik = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.pageEPosta = new DevExpress.XtraBars.Navigation.NavigationPage();
+            this.smallNavigatorEPosta = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Navigators.SmallNavigator();
             this.epostaGrid = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridControl();
             this.epostaTablo = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridView();
+            this.gridBand3 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.colBaslik = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colEPosta = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colOncelik1 = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.pageSosyalMedya = new DevExpress.XtraBars.Navigation.NavigationPage();
+            this.smallNavigatorSosyalMedya = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Navigators.SmallNavigator();
             this.sosyalMedyaGrid = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridControl();
             this.sosyalMedyaTablo = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridView();
             this.gridBand4 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
@@ -53,12 +57,12 @@
             this.colKullaniciAdi = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colSosyalMedyaUrl = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.pageWeb = new DevExpress.XtraBars.Navigation.NavigationPage();
+            this.smallNavigatorWeb = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Navigators.SmallNavigator();
             this.webGrid = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridControl();
             this.webTablo = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridView();
             this.gridBand8 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.colIlgili = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colWeb = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
-            this.gridBand3 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.solPane)).BeginInit();
             this.solPane.SuspendLayout();
@@ -120,11 +124,20 @@
             // 
             this.pageTelefon.BackgroundPadding = new System.Windows.Forms.Padding(2, -15, 2, 2);
             this.pageTelefon.Caption = "  ";
+            this.pageTelefon.Controls.Add(this.smallNavigatorTelefon);
             this.pageTelefon.Controls.Add(this.telefonGrid);
             this.pageTelefon.ImageOptions.Image = global::AbcYazilim.OgrenciTakip.UI.Win.Properties.Resources.mobilephone2_16x163;
             this.pageTelefon.Name = "pageTelefon";
             this.pageTelefon.PageText = "Telefon & Fax";
             this.pageTelefon.Size = new System.Drawing.Size(783, 349);
+            // 
+            // smallNavigatorTelefon
+            // 
+            this.smallNavigatorTelefon.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.smallNavigatorTelefon.Location = new System.Drawing.Point(0, 325);
+            this.smallNavigatorTelefon.Name = "smallNavigatorTelefon";
+            this.smallNavigatorTelefon.Size = new System.Drawing.Size(783, 24);
+            this.smallNavigatorTelefon.TabIndex = 1;
             // 
             // telefonGrid
             // 
@@ -275,12 +288,21 @@
             // 
             this.pageEPosta.BackgroundPadding = new System.Windows.Forms.Padding(2, -15, 2, 2);
             this.pageEPosta.Caption = "  ";
+            this.pageEPosta.Controls.Add(this.smallNavigatorEPosta);
             this.pageEPosta.Controls.Add(this.epostaGrid);
             this.pageEPosta.Cursor = System.Windows.Forms.Cursors.Default;
             this.pageEPosta.ImageOptions.Image = global::AbcYazilim.OgrenciTakip.UI.Win.Properties.Resources.mail_16x161;
             this.pageEPosta.Name = "pageEPosta";
             this.pageEPosta.PageText = "E-Posta";
             this.pageEPosta.Size = new System.Drawing.Size(783, 349);
+            // 
+            // smallNavigatorEPosta
+            // 
+            this.smallNavigatorEPosta.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.smallNavigatorEPosta.Location = new System.Drawing.Point(0, 325);
+            this.smallNavigatorEPosta.Name = "smallNavigatorEPosta";
+            this.smallNavigatorEPosta.Size = new System.Drawing.Size(783, 24);
+            this.smallNavigatorEPosta.TabIndex = 1;
             // 
             // epostaGrid
             // 
@@ -337,6 +359,16 @@
             this.epostaTablo.StatusBarKisaYolAciklama = null;
             this.epostaTablo.ViewCaption = "E-Posta";
             // 
+            // gridBand3
+            // 
+            this.gridBand3.Caption = "E-Posta Bilgileri";
+            this.gridBand3.Columns.Add(this.colBaslik);
+            this.gridBand3.Columns.Add(this.colEPosta);
+            this.gridBand3.Columns.Add(this.colOncelik1);
+            this.gridBand3.Name = "gridBand3";
+            this.gridBand3.VisibleIndex = 0;
+            this.gridBand3.Width = 510;
+            // 
             // colBaslik
             // 
             this.colBaslik.Caption = "Başlık";
@@ -379,11 +411,20 @@
             // 
             this.pageSosyalMedya.BackgroundPadding = new System.Windows.Forms.Padding(2, -15, 2, 2);
             this.pageSosyalMedya.Caption = "  ";
+            this.pageSosyalMedya.Controls.Add(this.smallNavigatorSosyalMedya);
             this.pageSosyalMedya.Controls.Add(this.sosyalMedyaGrid);
             this.pageSosyalMedya.ImageOptions.Image = global::AbcYazilim.OgrenciTakip.UI.Win.Properties.Resources.colors_16x161;
             this.pageSosyalMedya.Name = "pageSosyalMedya";
             this.pageSosyalMedya.PageText = "Sosyal Medya";
             this.pageSosyalMedya.Size = new System.Drawing.Size(783, 349);
+            // 
+            // smallNavigatorSosyalMedya
+            // 
+            this.smallNavigatorSosyalMedya.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.smallNavigatorSosyalMedya.Location = new System.Drawing.Point(0, 325);
+            this.smallNavigatorSosyalMedya.Name = "smallNavigatorSosyalMedya";
+            this.smallNavigatorSosyalMedya.Size = new System.Drawing.Size(783, 24);
+            this.smallNavigatorSosyalMedya.TabIndex = 1;
             // 
             // sosyalMedyaGrid
             // 
@@ -490,11 +531,20 @@
             // 
             this.pageWeb.BackgroundPadding = new System.Windows.Forms.Padding(2, -15, 2, 2);
             this.pageWeb.Caption = "  ";
+            this.pageWeb.Controls.Add(this.smallNavigatorWeb);
             this.pageWeb.Controls.Add(this.webGrid);
             this.pageWeb.ImageOptions.Image = global::AbcYazilim.OgrenciTakip.UI.Win.Properties.Resources.pie_16x161;
             this.pageWeb.Name = "pageWeb";
             this.pageWeb.PageText = "Web";
             this.pageWeb.Size = new System.Drawing.Size(783, 349);
+            // 
+            // smallNavigatorWeb
+            // 
+            this.smallNavigatorWeb.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.smallNavigatorWeb.Location = new System.Drawing.Point(0, 325);
+            this.smallNavigatorWeb.Name = "smallNavigatorWeb";
+            this.smallNavigatorWeb.Size = new System.Drawing.Size(783, 24);
+            this.smallNavigatorWeb.TabIndex = 1;
             // 
             // webGrid
             // 
@@ -583,16 +633,6 @@
             this.colWeb.Visible = true;
             this.colWeb.Width = 341;
             // 
-            // gridBand3
-            // 
-            this.gridBand3.Caption = "E-Posta Bilgileri";
-            this.gridBand3.Columns.Add(this.colBaslik);
-            this.gridBand3.Columns.Add(this.colEPosta);
-            this.gridBand3.Columns.Add(this.colOncelik1);
-            this.gridBand3.Name = "gridBand3";
-            this.gridBand3.VisibleIndex = 0;
-            this.gridBand3.Width = 510;
-            // 
             // IletisimBilgileriTable
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -655,5 +695,9 @@
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand2;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand5;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand3;
+        private Navigators.SmallNavigator smallNavigatorTelefon;
+        private Navigators.SmallNavigator smallNavigatorEPosta;
+        private Navigators.SmallNavigator smallNavigatorSosyalMedya;
+        private Navigators.SmallNavigator smallNavigatorWeb;
     }
 }
