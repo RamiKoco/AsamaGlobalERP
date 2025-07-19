@@ -19,9 +19,12 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.KisiEditFormTa
             Bll = new AdresHareketleriBll();
             Tablo = tablo;
             EventsLoad();
-            HideItems = new BarItem[] { btnBelgeHareketleri };        
-            insUptNavigator.Visible = false;
-            smallNavigator.Navigator.NavigatableControl = Tablo.GridControl;            
+            TabloEventsYukle();
+            HideItems = new BarItem[] { btnBelgeHareketleri };
+            insUptNavigator.Navigator.Buttons.Append.Visible = false;
+            insUptNavigator.Navigator.Buttons.Remove.Visible = false;
+            insUptNavigator.Navigator.Buttons.Edit.Visible = false;
+
         }
 
         protected internal override void Listele()
@@ -52,7 +55,6 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.KisiEditFormTa
 
             return false;
         }
-
         protected override void OpenEntity()
         {
             var entity = tablo.GetRow<AdresHareketleriL>();
@@ -60,5 +62,17 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.KisiEditFormTa
             ShowEditForms<KisiEditForm>.ShowDialogEditForm(KartTuru.Kisi, entity.AdresBilgileriId);
 
         }
+        protected virtual void TabloEventsYukle()
+        {
+            if (Tablo == null) return;
+
+            Tablo.DoubleClick -= Tablo_DoubleClick;
+            Tablo.KeyDown -= Tablo_KeyDown;
+            Tablo.MouseUp -= Tablo_MouseUp;
+
+            Tablo.KeyDown += Tablo_KeyDown;
+        }
+
+
     }
 }

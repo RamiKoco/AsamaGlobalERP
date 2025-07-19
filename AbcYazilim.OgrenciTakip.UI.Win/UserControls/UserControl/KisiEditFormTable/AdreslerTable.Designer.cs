@@ -46,7 +46,6 @@
             this.colEnlem = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colBoylam = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colAciklama = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
-            this.smallNavigator = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Navigators.SmallNavigator();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablo)).BeginInit();
@@ -306,25 +305,15 @@
             this.colAciklama.StatusBarKisaYolAciklama = null;
             this.colAciklama.Width = 418;
             // 
-            // smallNavigator
-            // 
-            this.smallNavigator.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.smallNavigator.Location = new System.Drawing.Point(0, 279);
-            this.smallNavigator.Name = "smallNavigator";
-            this.smallNavigator.Size = new System.Drawing.Size(506, 24);
-            this.smallNavigator.TabIndex = 6;
-            // 
             // AdreslerTable
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.smallNavigator);
             this.Controls.Add(this.grid);
             this.Name = "AdreslerTable";
             this.Size = new System.Drawing.Size(506, 327);
             this.Controls.SetChildIndex(this.insUptNavigator, 0);
             this.Controls.SetChildIndex(this.grid, 0);
-            this.Controls.SetChildIndex(this.smallNavigator, 0);
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablo)).EndInit();
@@ -353,6 +342,5 @@
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand5;
         private Grid.MyBandedGridColumn colEnlem;
         private Grid.MyBandedGridColumn colBoylam;
-        private Navigators.SmallNavigator smallNavigator;
     }
 }

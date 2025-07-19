@@ -159,7 +159,7 @@
             this.DataLayoutGenel.Name = "DataLayoutGenel";
             this.DataLayoutGenel.OptionsFocus.EnableAutoTabOrder = false;
             this.DataLayoutGenel.Root = this.Root;
-            this.DataLayoutGenel.Size = new System.Drawing.Size(952, 490);
+            this.DataLayoutGenel.Size = new System.Drawing.Size(952, 640);
             this.DataLayoutGenel.TabIndex = 0;
             this.DataLayoutGenel.Text = "myDataLayoutControl1";
             // 
@@ -169,16 +169,16 @@
             this.tabAlt.Controls.Add(this.tabNavigationPage4);
             this.tabAlt.Controls.Add(this.tabNavigationPage9);
             this.tabAlt.Controls.Add(this.tabNavigationPage10);
-            this.tabAlt.Location = new System.Drawing.Point(12, 252);
+            this.tabAlt.Location = new System.Drawing.Point(12, 357);
             this.tabAlt.Name = "tabAlt";
             this.tabAlt.Pages.AddRange(new DevExpress.XtraBars.Navigation.NavigationPageBase[] {
             this.tabNavigationPage3,
             this.tabNavigationPage4,
             this.tabNavigationPage9,
             this.tabNavigationPage10});
-            this.tabAlt.RegularSize = new System.Drawing.Size(718, 231);
+            this.tabAlt.RegularSize = new System.Drawing.Size(718, 276);
             this.tabAlt.SelectedPage = this.tabNavigationPage3;
-            this.tabAlt.Size = new System.Drawing.Size(718, 231);
+            this.tabAlt.Size = new System.Drawing.Size(718, 276);
             this.tabAlt.TabIndex = 5;
             this.tabAlt.Text = "tabPane2";
             // 
@@ -186,7 +186,7 @@
             // 
             this.tabNavigationPage3.Caption = "tabNavigationPage3";
             this.tabNavigationPage3.Name = "tabNavigationPage3";
-            this.tabNavigationPage3.Size = new System.Drawing.Size(718, 198);
+            this.tabNavigationPage3.Size = new System.Drawing.Size(718, 243);
             // 
             // tabNavigationPage4
             // 
@@ -234,9 +234,9 @@
             this.pageFirmaBilgileri,
             this.pageEkBilgiler,
             this.pageNotlar});
-            this.tabUst.RegularSize = new System.Drawing.Size(928, 241);
+            this.tabUst.RegularSize = new System.Drawing.Size(928, 346);
             this.tabUst.SelectedPage = this.pageGenelBilgiler;
-            this.tabUst.Size = new System.Drawing.Size(928, 241);
+            this.tabUst.Size = new System.Drawing.Size(928, 346);
             this.tabUst.TabIndex = 0;
             this.tabUst.Text = "tabPane1";
             // 
@@ -852,7 +852,7 @@
             this.pageAdresBilgileri.Caption = "Adres Bilgileri";
             this.pageAdresBilgileri.ImageOptions.Image = global::AbcYazilim.OgrenciTakip.UI.Win.Properties.Resources.country_16x16;
             this.pageAdresBilgileri.Name = "pageAdresBilgileri";
-            this.pageAdresBilgileri.Size = new System.Drawing.Size(774, 241);
+            this.pageAdresBilgileri.Size = new System.Drawing.Size(928, 313);
             // 
             // pageIletisimBilgileri
             // 
@@ -898,7 +898,7 @@
             this.Root.OptionsTableLayoutGroup.ColumnDefinitions.AddRange(new DevExpress.XtraLayout.ColumnDefinition[] {
             columnDefinition10,
             columnDefinition11});
-            rowDefinition9.Height = 245D;
+            rowDefinition9.Height = 350D;
             rowDefinition9.SizeType = System.Windows.Forms.SizeType.Absolute;
             rowDefinition10.Height = 100D;
             rowDefinition10.SizeType = System.Windows.Forms.SizeType.Percent;
@@ -906,7 +906,7 @@
             rowDefinition9,
             rowDefinition10});
             this.Root.Padding = new DevExpress.XtraLayout.Utils.Padding(10, 10, 5, 5);
-            this.Root.Size = new System.Drawing.Size(952, 490);
+            this.Root.Size = new System.Drawing.Size(952, 640);
             this.Root.TextVisible = false;
             // 
             // layoutControlItem1
@@ -917,7 +917,7 @@
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
             this.layoutControlItem1.OptionsTableLayoutItem.ColumnSpan = 2;
-            this.layoutControlItem1.Size = new System.Drawing.Size(932, 245);
+            this.layoutControlItem1.Size = new System.Drawing.Size(932, 350);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
@@ -926,10 +926,10 @@
             this.layoutControlItem2.AppearanceItemCaption.ForeColor = System.Drawing.Color.Maroon;
             this.layoutControlItem2.AppearanceItemCaption.Options.UseForeColor = true;
             this.layoutControlItem2.Control = this.tabAlt;
-            this.layoutControlItem2.Location = new System.Drawing.Point(0, 245);
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 350);
             this.layoutControlItem2.Name = "layoutControlItem2";
             this.layoutControlItem2.OptionsTableLayoutItem.RowIndex = 1;
-            this.layoutControlItem2.Size = new System.Drawing.Size(722, 235);
+            this.layoutControlItem2.Size = new System.Drawing.Size(722, 280);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
@@ -937,10 +937,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(952, 649);
+            this.ClientSize = new System.Drawing.Size(952, 799);
             this.Controls.Add(this.DataLayoutGenel);
             this.IconOptions.ShowIcon = false;
-            this.MinimumSize = new System.Drawing.Size(954, 650);
+            this.MinimumSize = new System.Drawing.Size(954, 800);
             this.Name = "KisiEditForm";
             this.Text = "Kişi Kartı";
             this.Controls.SetChildIndex(this.ribbonControl, 0);
