@@ -110,5 +110,6 @@ namespace AbcYazilim.OgrenciTakip.Data.Contexts
         public DbSet<AdresBilgileri> AdresBilgileri { get; set; }
         public DbSet<AdresTurleri> AdresTurleri { get; set; }
         public DbSet<SosyalMedyaPlatformu> SosyalMedyaPlatformu { get; set; }
+        public DbSet<AdresHareketleri> AdresHareketleri { get; set; }
     }
 }

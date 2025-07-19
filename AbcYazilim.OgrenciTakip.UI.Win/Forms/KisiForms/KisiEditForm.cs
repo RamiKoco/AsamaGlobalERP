@@ -22,6 +22,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.KisiForms
     {
         private BaseTablo _bilgiNotlariTable;
         private BaseTablo _iletisimBilgileriTable;
+        private BaseTablo _adreslerTable;
         private List<EtiketL> _tumEtiketler;
         private List<long> _oldEtiketIdListesi = new List<long>();
         private List<long> _guncelEtiketIdListesi = new List<long>();
@@ -63,6 +64,8 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.KisiForms
                 _bilgiNotlariTable.Yukle();
             if (_iletisimBilgileriTable != null && TableValueChanged(_iletisimBilgileriTable))
                 _iletisimBilgileriTable.Yukle();
+            if (_adreslerTable != null && TableValueChanged(_adreslerTable))
+                _adreslerTable.Yukle();
         }
 
         protected override void NesneyiKontrollereBagla()
@@ -148,6 +151,13 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.KisiForms
                 return true;
             }
 
+            if (_adreslerTable != null && _adreslerTable.HataliGiris())
+            {
+                tabUst.SelectedPage = pageAdresBilgileri;
+                _adreslerTable.Tablo.GridControl.Focus();
+                return true;
+            }
+
             return false;
         }
 
@@ -178,7 +188,10 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.KisiForms
             bool TableValueChanged()
             {
                 if (_iletisimBilgileriTable != null && _iletisimBilgileriTable.TableValueChanged) return true;
-                return _bilgiNotlariTable?.TableValueChanged ?? false;
+                if (_adreslerTable != null && _adreslerTable.TableValueChanged) return true;
+                if (_bilgiNotlariTable != null && _bilgiNotlariTable.TableValueChanged) return true;
+
+                return false;
 
             }
 
@@ -209,6 +222,8 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.KisiForms
                         ?.ToArray();
             if (_bilgiNotlariTable != null && !_bilgiNotlariTable.Kaydet()) return false;
             if (_iletisimBilgileriTable != null && !_iletisimBilgileriTable.Kaydet()) return false;
+            if (_adreslerTable != null && !_adreslerTable.Kaydet()) return false;
+
             if (seciliEtiketIdler != null)
             {
                 using (var db = new OgrenciTakipContext())
@@ -247,7 +262,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.KisiForms
             {
                 if (pageNotlar.Controls.Count == 0)
                 {
-                    _bilgiNotlariTable = new BilgiNotlariTable().AddTable(this);
+                    _bilgiNotlariTable = new  BilgiNotlariTable().AddTable(this);
                     pageNotlar.Controls.Add(_bilgiNotlariTable);
                     _bilgiNotlariTable.Yukle();
 
@@ -256,17 +271,32 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.KisiForms
                 _bilgiNotlariTable.Tablo.GridControl.Focus();
 
             }
+
             else if (e.Page == pageIletisimBilgileri)
             {
                 if (pageIletisimBilgileri.Controls.Count == 0)
                 {
-                    _iletisimBilgileriTable = new IletisimBilgileriTable().AddTable(this);
+                    _iletisimBilgileriTable = new  IletisimBilgileriTable().AddTable(this);
                     pageIletisimBilgileri.Controls.Add(_iletisimBilgileriTable);
                     _iletisimBilgileriTable.Yukle();
 
                 }
 
                 _iletisimBilgileriTable.Tablo.GridControl.Focus();
+
+            }
+
+            else if (e.Page == pageAdresBilgileri)
+            {
+                if (pageAdresBilgileri.Controls.Count == 0)
+                {
+                    _adreslerTable = new AdreslerTable().AddTable(this);
+                    pageAdresBilgileri.Controls.Add(_adreslerTable);
+                    _adreslerTable.Yukle();
+
+                }
+
+                _adreslerTable.Tablo.GridControl.Focus();
 
             }
 

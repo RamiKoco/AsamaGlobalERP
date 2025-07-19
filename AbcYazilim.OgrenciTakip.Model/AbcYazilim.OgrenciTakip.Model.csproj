@@ -82,6 +82,7 @@
     <Compile Include="Attributes\Kod.cs" />
     <Compile Include="Attributes\ZorunluAlan.cs" />
     <Compile Include="Dto\AdresBilgileriDto.cs" />
+    <Compile Include="Dto\AdresHareketleriDto.cs" />
     <Compile Include="Dto\AdresTurleriDto.cs" />
     <Compile Include="Dto\AileBilgileriDto.cs" />
     <Compile Include="Dto\AvukatDto.cs" />
@@ -131,6 +132,7 @@
     <Compile Include="Dto\TahakkukDto.cs" />
     <Compile Include="Dto\YazarDto.cs" />
     <Compile Include="Entities\AdresBilgileri.cs" />
+    <Compile Include="Entities\AdresHareketleri.cs" />
     <Compile Include="Entities\AdresTurleri.cs" />
     <Compile Include="Entities\BaglantiAyarlari.cs" />
     <Compile Include="Entities\DonemParametre.cs" />

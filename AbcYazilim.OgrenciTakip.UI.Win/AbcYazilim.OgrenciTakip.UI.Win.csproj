@@ -1353,6 +1353,12 @@
     <Compile Include="UserControls\UserControl\IndirimEditFormTable\IndiriminUygulanacagiHizmetlerTable.Designer.cs">
       <DependentUpon>IndiriminUygulanacagiHizmetlerTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UserControl\KisiEditFormTable\AdreslerTable.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UserControl\KisiEditFormTable\AdreslerTable.Designer.cs">
+      <DependentUpon>AdreslerTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UserControl\KisiEditFormTable\BilgiNotlariTable.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -2025,6 +2031,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControl\IndirimEditFormTable\IndiriminUygulanacagiHizmetlerTable.resx">
       <DependentUpon>IndiriminUygulanacagiHizmetlerTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControl\KisiEditFormTable\AdreslerTable.resx">
+      <DependentUpon>AdreslerTable.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControl\KisiEditFormTable\BilgiNotlariTable.resx">
       <DependentUpon>BilgiNotlariTable.cs</DependentUpon>

@@ -2,12 +2,14 @@
 using AbcYazilim.OgrenciTakip.Common.Enums;
 using AbcYazilim.OgrenciTakip.Common.Functions;
 using AbcYazilim.OgrenciTakip.Common.Message;
+using AbcYazilim.OgrenciTakip.Data.Contexts;
 using AbcYazilim.OgrenciTakip.Model.Dto;
 using AbcYazilim.OgrenciTakip.Model.Entities;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Functions;
 using DevExpress.XtraEditors;
 using System;
+using System.Linq;
 
 namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.AdresBilgiForms
 {
@@ -149,7 +151,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.AdresBilgiForms
         }
         public override bool Kaydet(bool kapanis)
         {
-            // Sadece gerçekten kaydedilecekse (yani kapanış değilse) kontrol et
+          
             if (!kapanis)
             {
                 if (string.IsNullOrWhiteSpace(txtKayitHesabi.Text))
@@ -160,7 +162,48 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.AdresBilgiForms
                 }
             }
 
-            return base.Kaydet(kapanis);
+            var sonuc = base.Kaydet(kapanis);
+            if (!sonuc) return false;
+
+
+            var kayitTuru = txtKayitTuru.Text.GetEnum<KayitTuru>();
+            var kisiId = kayitTuru == KayitTuru.Kisi ? txtKayitHesabi.Id : null;
+
+            if (kayitTuru == KayitTuru.Kisi && kisiId.HasValue && kisiId > 0)
+            {
+                var adresEntity = CurrentEntity as AdresBilgileri;
+                if (adresEntity == null) return false;
+
+                using (var context = new OgrenciTakipContext())
+                {
+                    // Daha önce kaydedilmiş aynı adres kaydını sil
+                    var mevcutKayitlar = context.AdresHareketleri
+                        .Where(x => x.AdresBilgileriId == adresEntity.Id)
+                        .ToList();
+
+                    if (mevcutKayitlar.Any())
+                    {
+                        foreach (var kayit in mevcutKayitlar)
+                        {
+                            context.AdresHareketleri.Remove(kayit);
+                        }
+                        context.SaveChanges();
+                    }
+
+                    // Yeni kaydı oluştur ve ekle
+                    var yeniKayit = new AdresHareketleri
+                    {
+                        KisiId = kisiId.Value,
+                        AdresBilgileriId = adresEntity.Id
+                    };
+
+                    context.AdresHareketleri.Add(yeniKayit);
+                    context.SaveChanges();
+                }
+            }
+
+
+            return true;
         }
     }
 }
