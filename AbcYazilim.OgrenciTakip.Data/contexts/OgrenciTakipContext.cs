@@ -113,5 +113,7 @@ namespace AbcYazilim.OgrenciTakip.Data.Contexts
         public DbSet<AdresHareketleri> AdresHareketleri { get; set; }
         public DbSet<Departman> Departman { get; set; }
         public DbSet<KimlikTuru> KimlikTuru { get; set; }
+        public DbSet<Uyruk> Uyruk { get; set; }
+        public DbSet<Pozisyon> Pozisyon { get; set; }
     }
 }

@@ -192,5 +192,9 @@ namespace AbcYazilim.OgrenciTakip.Common.Enums
         Departman = 93,
         [Description("Kimlik Türü Kartı")]
         KimlikTuru = 94,
+        [Description("Uyruk Kartı")]
+        Uyruk = 95,
+        [Description("Pozisyon Kartı")]
+        Pozisyon = 96,
     }
 }

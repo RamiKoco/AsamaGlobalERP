@@ -701,6 +701,16 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type DevExpress.Utils.Svg.SvgImage.
+        /// </summary>
+        internal static DevExpress.Utils.Svg.SvgImage datapanel {
+            get {
+                object obj = ResourceManager.GetObject("datapanel", resourceCulture);
+                return ((DevExpress.Utils.Svg.SvgImage)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap deletelist_16x16 {
@@ -1731,6 +1741,16 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type DevExpress.Utils.Svg.SvgImage.
+        /// </summary>
+        internal static DevExpress.Utils.Svg.SvgImage re_layout {
+            get {
+                object obj = ResourceManager.GetObject("re-layout", resourceCulture);
+                return ((DevExpress.Utils.Svg.SvgImage)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap receipt_16x16 {
@@ -1747,6 +1767,16 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Properties {
             get {
                 object obj = ResourceManager.GetObject("receipt_32x32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type DevExpress.Utils.Svg.SvgImage.
+        /// </summary>
+        internal static DevExpress.Utils.Svg.SvgImage redyellowgreencolorscale {
+            get {
+                object obj = ResourceManager.GetObject("redyellowgreencolorscale", resourceCulture);
+                return ((DevExpress.Utils.Svg.SvgImage)(obj));
             }
         }
         

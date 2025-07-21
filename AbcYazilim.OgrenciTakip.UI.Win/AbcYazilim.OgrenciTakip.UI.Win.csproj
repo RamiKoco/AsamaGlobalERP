@@ -759,6 +759,18 @@
     <Compile Include="Forms\OzelKodForms\OzelKodListForm.Designer.cs">
       <DependentUpon>OzelKodListForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\PozisyonForms\PozisyonEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PozisyonForms\PozisyonEditForm.Designer.cs">
+      <DependentUpon>PozisyonEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PozisyonForms\PozisyonListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PozisyonForms\PozisyonListForm.Designer.cs">
+      <DependentUpon>PozisyonListForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\PromosyonForms\PromosyonEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -932,6 +944,18 @@
     </Compile>
     <Compile Include="Forms\UlkeForms\UlkeListForm.Designer.cs">
       <DependentUpon>UlkeListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UyrukForms\UyrukEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UyrukForms\UyrukEditForm.Designer.cs">
+      <DependentUpon>UyrukEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UyrukForms\UyrukListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UyrukForms\UyrukListForm.Designer.cs">
+      <DependentUpon>UyrukListForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\YabancıDilForms\YabanciDilEditForm.cs">
       <SubType>Form</SubType>
@@ -1796,6 +1820,12 @@
     <EmbeddedResource Include="Forms\OzelKodForms\OzelKodListForm.resx">
       <DependentUpon>OzelKodListForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PozisyonForms\PozisyonEditForm.resx">
+      <DependentUpon>PozisyonEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PozisyonForms\PozisyonListForm.resx">
+      <DependentUpon>PozisyonListForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\PromosyonForms\PromosyonEditForm.resx">
       <DependentUpon>PromosyonEditForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -1882,6 +1912,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\UlkeForms\UlkeListForm.resx">
       <DependentUpon>UlkeListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UyrukForms\UyrukEditForm.resx">
+      <DependentUpon>UyrukEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UyrukForms\UyrukListForm.resx">
+      <DependentUpon>UyrukListForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\YabancıDilForms\YabanciDilEditForm.resx">
       <DependentUpon>YabanciDilEditForm.cs</DependentUpon>
@@ -2848,6 +2884,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\card_32x321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\redyellowgreencolorscale.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\datapanel.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\re-layout.svg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
