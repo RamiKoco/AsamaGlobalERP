@@ -108,6 +108,7 @@
     <Compile Include="Dto\IndiriminUygulanacagiHizmetBilgileriDto.cs" />
     <Compile Include="Dto\KardesBilgileriDto.cs" />
     <Compile Include="Dto\KasaDto.cs" />
+    <Compile Include="Dto\KimlikTuruDto.cs" />
     <Compile Include="Dto\KisiDto.cs" />
     <Compile Include="Dto\KisiEtiketDto.cs" />
     <Compile Include="Dto\KullaniciBirimYetkileriDto.cs" />
@@ -135,6 +136,7 @@
     <Compile Include="Entities\AdresHareketleri.cs" />
     <Compile Include="Entities\AdresTurleri.cs" />
     <Compile Include="Entities\BaglantiAyarlari.cs" />
+    <Compile Include="Entities\Departman.cs" />
     <Compile Include="Entities\DonemParametre.cs" />
     <Compile Include="Entities\Etiket.cs" />
     <Compile Include="Entities\EtiketKayitTuruBaglanti.cs" />
@@ -177,6 +179,7 @@
     <Compile Include="Entities\KardesBilgileri.cs" />
     <Compile Include="Entities\Kasa.cs" />
     <Compile Include="Entities\KayitKaynak.cs" />
+    <Compile Include="Entities\KimlikTuru.cs" />
     <Compile Include="Entities\Kisi.cs" />
     <Compile Include="Entities\KisiEtiket.cs" />
     <Compile Include="Entities\KisiGrubu.cs" />

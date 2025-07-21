@@ -24,20 +24,21 @@ namespace AbcYazilim.OgrenciTakip.Bll.General
                 KayitTuru = x.AdresBilgileri.KayitTuru,
                 AdresTipi = x.AdresBilgileri.AdresTipi,
                 AdresNotu = x.AdresBilgileri.AdresNotu,
-                Adres = x.AdresBilgileri.Adres,
-                Aciklama = x.AdresBilgileri.Aciklama,
+                Adres = x.AdresBilgileri.Adres,                
                 PostaKodu = x.AdresBilgileri.PostaKodu,
                 Enlem = x.AdresBilgileri.Enlem ?? 0,
-                Boylam = x.AdresBilgileri.Boylam ?? 0,
-                VarsayilanMi = x.AdresBilgileri.VarsayilanMi,
-                VarsayilanFaturaMi = x.AdresBilgileri.VarsayilanFaturaMi,
-                VarsayilanSevkiyatMi = x.AdresBilgileri.VarsayilanSevkiyatMi,     
+                Boylam = x.AdresBilgileri.Boylam ?? 0,                
                 UlkeAdi = x.AdresBilgileri.Ulke.UlkeAdi,              
                 IlAdi = x.AdresBilgileri.Il.IlAdi,              
-                IlceAdi = x.AdresBilgileri.Ilce.IlceAdi,               
-                OzelKod1Adi = x.AdresBilgileri.OzelKod1.OzelKodAdi,              
-                OzelKod2Adi = x.AdresBilgileri.OzelKod2.OzelKodAdi,               
-                AdresTurleriAdi = x.AdresBilgileri.AdresTurleri.Ad               
+                IlceAdi = x.AdresBilgileri.Ilce.IlceAdi,
+                AdresTurleriAdi = x.AdresBilgileri.AdresTurleri.Ad
+                //Aciklama = x.AdresBilgileri.Aciklama,
+                //VarsayilanMi = x.AdresBilgileri.VarsayilanMi,
+                //VarsayilanFaturaMi = x.AdresBilgileri.VarsayilanFaturaMi,
+                //VarsayilanSevkiyatMi = x.AdresBilgileri.VarsayilanSevkiyatMi,  
+                //OzelKod1Adi = x.AdresBilgileri.OzelKod1.OzelKodAdi,              
+                //OzelKod2Adi = x.AdresBilgileri.OzelKod2.OzelKodAdi,               
+
 
             }).ToList();
         }

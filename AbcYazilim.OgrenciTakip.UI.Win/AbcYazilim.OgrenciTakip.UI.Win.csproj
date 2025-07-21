@@ -297,6 +297,18 @@
     <Compile Include="Forms\CariForms\CariListForm.Designer.cs">
       <DependentUpon>CariListForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\DepartmanForms\DepartmanEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DepartmanForms\DepartmanEditForm.Designer.cs">
+      <DependentUpon>DepartmanEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DepartmanForms\DepartmanListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DepartmanForms\DepartmanListForm.Designer.cs">
+      <DependentUpon>DepartmanListForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\DonemForms\DonemEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -530,6 +542,18 @@
     </Compile>
     <Compile Include="Forms\KayitKaynakForms\KayitKaynakListForm.Designer.cs">
       <DependentUpon>KayitKaynakListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\KimlikTuruForms\KimlikTuruEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\KimlikTuruForms\KimlikTuruEditForm.Designer.cs">
+      <DependentUpon>KimlikTuruEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\KimlikTuruForms\KimlikTuruListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\KimlikTuruForms\KimlikTuruListForm.Designer.cs">
+      <DependentUpon>KimlikTuruListForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\KisiForms\KisiEditForm.cs">
       <SubType>Form</SubType>
@@ -1541,6 +1565,12 @@
     <EmbeddedResource Include="Forms\CariForms\CariListForm.resx">
       <DependentUpon>CariListForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DepartmanForms\DepartmanEditForm.resx">
+      <DependentUpon>DepartmanEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DepartmanForms\DepartmanListForm.resx">
+      <DependentUpon>DepartmanListForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\DonemForms\DonemEditForm.resx">
       <DependentUpon>DonemEditForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -1657,6 +1687,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\KayitKaynakForms\KayitKaynakListForm.resx">
       <DependentUpon>KayitKaynakListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\KimlikTuruForms\KimlikTuruEditForm.resx">
+      <DependentUpon>KimlikTuruEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\KimlikTuruForms\KimlikTuruListForm.resx">
+      <DependentUpon>KimlikTuruListForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\KisiForms\KisiEditForm.resx">
       <DependentUpon>KisiEditForm.cs</DependentUpon>
@@ -2800,6 +2836,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\pie_16x161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chartsshowlegend_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chartsshowlegend_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\card_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\card_32x321.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
