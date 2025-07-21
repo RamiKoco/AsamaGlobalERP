@@ -8,6 +8,8 @@ namespace AbcYazilim.OgrenciTakip.Common.Enums
         Kisi = 1,
         [Description("Meslek Kartı")]
         Meslek = 2,           
+        [Description("Personel Kartı")]
+        Personel = 3,           
         
     }
 }

@@ -67,6 +67,7 @@
   <ItemGroup>
     <Compile Include="Enums\AdresTipi.cs" />
     <Compile Include="Enums\AdresTuru.cs" />
+    <Compile Include="Enums\AskerlikDurumu.cs" />
     <Compile Include="Enums\Aylar.cs" />
     <Compile Include="Enums\BankaHesapTuru.cs" />
     <Compile Include="Enums\BelgeDurumu.cs" />
@@ -92,6 +93,7 @@
     <Compile Include="Enums\KdvSekli.cs" />
     <Compile Include="Enums\MakbuzHesapTuru.cs" />
     <Compile Include="Enums\MakbuzTuru.cs" />
+    <Compile Include="Enums\MedeniDurum.cs" />
     <Compile Include="Enums\OdemeTipi.cs" />
     <Compile Include="Enums\OzelKodTuru.cs" />
     <Compile Include="Enums\RaporBolumTuru.cs" />

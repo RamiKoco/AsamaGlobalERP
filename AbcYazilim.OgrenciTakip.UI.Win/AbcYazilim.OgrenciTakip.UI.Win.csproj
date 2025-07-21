@@ -759,6 +759,18 @@
     <Compile Include="Forms\OzelKodForms\OzelKodListForm.Designer.cs">
       <DependentUpon>OzelKodListForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\PersonelForms\PersonelEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PersonelForms\PersonelEditForm.Designer.cs">
+      <DependentUpon>PersonelEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PersonelForms\PersonelListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PersonelForms\PersonelListForm.Designer.cs">
+      <DependentUpon>PersonelListForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\PozisyonForms\PozisyonEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1819,6 +1831,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\OzelKodForms\OzelKodListForm.resx">
       <DependentUpon>OzelKodListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PersonelForms\PersonelEditForm.resx">
+      <DependentUpon>PersonelEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PersonelForms\PersonelListForm.resx">
+      <DependentUpon>PersonelListForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\PozisyonForms\PozisyonEditForm.resx">
       <DependentUpon>PozisyonEditForm.cs</DependentUpon>
@@ -2893,6 +2911,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\re-layout.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\doctor_16x162.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\country_16x162.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mobilephone2_16x164.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\article_16x161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clearformatting_16x162.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profile_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\newitem_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reviewers.svg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

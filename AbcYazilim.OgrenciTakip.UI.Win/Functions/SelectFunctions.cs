@@ -31,6 +31,7 @@ using AbcYazilim.OgrenciTakip.UI.Win.Forms.MeslekForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.OdemeTuruForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.OkulForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.OzelKodForms;
+using AbcYazilim.OgrenciTakip.UI.Win.Forms.PozisyonForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.RehberForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.RenkForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.SinifForms;
@@ -388,6 +389,16 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Functions
                 case "txtDepartman":
                     {
                         var entity = (Departman)ShowListForms<DepartmanListForm>.ShowDialogListForm(KartTuru.Departman, _btnEdit.Id);
+                        if (entity != null)
+                        {
+                            _btnEdit.Id = entity.Id;
+                            _btnEdit.EditValue = entity.Ad;
+                        }
+                    }
+                    break;
+                case "txtPozisyon":
+                    {
+                        var entity = (PozisyonL)ShowListForms<PozisyonListForm>.ShowDialogListForm(KartTuru.Pozisyon, _btnEdit.Id);
                         if (entity != null)
                         {
                             _btnEdit.Id = entity.Id;

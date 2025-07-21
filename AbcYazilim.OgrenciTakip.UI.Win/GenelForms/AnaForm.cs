@@ -37,6 +37,7 @@ using AbcYazilim.OgrenciTakip.UI.Win.Forms.MeslekForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.OdemeTuruForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.OgrenciForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.OkulForms;
+using AbcYazilim.OgrenciTakip.UI.Win.Forms.PersonelForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.PozisyonForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.PromosyonForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.RamiDenemeForms;
@@ -226,6 +227,8 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.GenelForms
                 ShowListForms<UyrukListForm>.ShowListForm(KartTuru.Uyruk);
             else if (e.Item == btnPozisyonKartlari)
                 ShowListForms<PozisyonListForm>.ShowListForm(KartTuru.Pozisyon);
+            else if (e.Item == btnPersonelKartlari)
+                ShowListForms<PersonelListForm>.ShowListForm(KartTuru.Personel);
             
             //else if (e.Item == btnAjandaKartlari)
             //{

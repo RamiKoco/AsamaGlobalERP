@@ -196,5 +196,7 @@ namespace AbcYazilim.OgrenciTakip.Common.Enums
         Uyruk = 95,
         [Description("Pozisyon Kartı")]
         Pozisyon = 96,
+        [Description("Personel Kartı")]
+        Personel = 97,
     }
 }
