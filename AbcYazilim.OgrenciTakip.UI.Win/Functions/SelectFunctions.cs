@@ -20,6 +20,7 @@ using AbcYazilim.OgrenciTakip.UI.Win.Forms.IndirimTuruForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.IsyeriForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.KasaForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.KayitKaynakForms;
+using AbcYazilim.OgrenciTakip.UI.Win.Forms.KimlikTuruForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.KisiForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.KisiGrubuForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.KitapTuruForms;
@@ -40,6 +41,7 @@ using AbcYazilim.OgrenciTakip.UI.Win.Forms.SosyalMedyaForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.SubeForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.TesvikForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.UlkeForms;
+using AbcYazilim.OgrenciTakip.UI.Win.Forms.UyrukForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.YabancıDilForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Show;
 using AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls;
@@ -403,6 +405,26 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Functions
                         {
                             _btnEdit.Id = entity.Id;
                             _btnEdit.EditValue = entity.Ad;
+                        }
+                    }
+                    break;
+                case "txtUyruk":
+                    {
+                        var entity = (UyrukL)ShowListForms<UyrukListForm>.ShowDialogListForm(KartTuru.Uyruk, _btnEdit.Id);
+                        if (entity != null)
+                        {
+                            _btnEdit.Id = entity.Id;
+                            _btnEdit.EditValue = entity.Ad;
+                        }
+                    }
+                    break;
+                case "txtKimlikTuru":
+                    {
+                        var entity = (KimlikTuruL)ShowListForms<KimlikTuruListForm>.ShowDialogListForm(KartTuru.KimlikTuru, _btnEdit.Id);
+                        if (entity != null)
+                        {
+                            _btnEdit.Id = entity.Id;
+                            _btnEdit.EditValue = entity.KimlikAdi;
                         }
                     }
                     break;

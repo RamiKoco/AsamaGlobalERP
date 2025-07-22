@@ -47,8 +47,19 @@
             DevExpress.XtraLayout.RowDefinition rowDefinition9 = new DevExpress.XtraLayout.RowDefinition();
             DevExpress.XtraLayout.ColumnDefinition columnDefinition9 = new DevExpress.XtraLayout.ColumnDefinition();
             DevExpress.XtraLayout.ColumnDefinition columnDefinition10 = new DevExpress.XtraLayout.ColumnDefinition();
+            DevExpress.XtraLayout.ColumnDefinition columnDefinition11 = new DevExpress.XtraLayout.ColumnDefinition();
+            DevExpress.XtraLayout.ColumnDefinition columnDefinition12 = new DevExpress.XtraLayout.ColumnDefinition();
             DevExpress.XtraLayout.RowDefinition rowDefinition10 = new DevExpress.XtraLayout.RowDefinition();
             DevExpress.XtraLayout.RowDefinition rowDefinition11 = new DevExpress.XtraLayout.RowDefinition();
+            DevExpress.XtraLayout.RowDefinition rowDefinition12 = new DevExpress.XtraLayout.RowDefinition();
+            DevExpress.XtraLayout.RowDefinition rowDefinition13 = new DevExpress.XtraLayout.RowDefinition();
+            DevExpress.XtraLayout.RowDefinition rowDefinition14 = new DevExpress.XtraLayout.RowDefinition();
+            DevExpress.XtraLayout.RowDefinition rowDefinition15 = new DevExpress.XtraLayout.RowDefinition();
+            DevExpress.XtraLayout.RowDefinition rowDefinition16 = new DevExpress.XtraLayout.RowDefinition();
+            DevExpress.XtraLayout.ColumnDefinition columnDefinition13 = new DevExpress.XtraLayout.ColumnDefinition();
+            DevExpress.XtraLayout.ColumnDefinition columnDefinition14 = new DevExpress.XtraLayout.ColumnDefinition();
+            DevExpress.XtraLayout.RowDefinition rowDefinition17 = new DevExpress.XtraLayout.RowDefinition();
+            DevExpress.XtraLayout.RowDefinition rowDefinition18 = new DevExpress.XtraLayout.RowDefinition();
             this.DataLayoutGenel = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls.MyDataLayoutControl();
             this.tabAlt = new DevExpress.XtraBars.Navigation.TabPane();
             this.tabNavigationPage3 = new DevExpress.XtraBars.Navigation.TabNavigationPage();
@@ -82,6 +93,19 @@
             this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem13 = new DevExpress.XtraLayout.LayoutControlItem();
             this.pageKisiselBilgiler = new DevExpress.XtraBars.Navigation.TabNavigationPage();
+            this.DataLayoutControlKisiselBilgiler = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls.MyDataLayoutControl();
+            this.txtKimlikTuru = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls.MyButtonEdit();
+            this.txtMeslek = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls.MyButtonEdit();
+            this.txtAskerlikDurumu = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls.MyComboBoxEdit();
+            this.txtMedeniDurum = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls.MyComboBoxEdit();
+            this.txtSGKSicilNo = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls.MyTextEdit();
+            this.txtUyruk = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls.MyButtonEdit();
+            this.txtKanGrubu = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls.MyComboBoxEdit();
+            this.txtBabaAdi = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls.MyTextEdit();
+            this.txtAnaAdi = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls.MyTextEdit();
+            this.txtDogumTarihi = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls.MyDateEdit();
+            this.txtTcKimlikNo = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls.MyTcKimlikNoTextEdit();
+            this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.pageAdresBilgileri = new DevExpress.XtraBars.Navigation.TabNavigationPage();
             this.pageIletisimBilgileri = new DevExpress.XtraBars.Navigation.TabNavigationPage();
             this.pageBelgeler = new DevExpress.XtraBars.Navigation.TabNavigationPage();
@@ -89,6 +113,17 @@
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem19 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem23 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem18 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem17 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem24 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem20 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem22 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem21 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem16 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem15 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem25 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.resimMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataLayoutGenel)).BeginInit();
@@ -125,9 +160,36 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).BeginInit();
+            this.pageKisiselBilgiler.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DataLayoutControlKisiselBilgiler)).BeginInit();
+            this.DataLayoutControlKisiselBilgiler.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtKimlikTuru.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMeslek.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAskerlikDurumu.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMedeniDurum.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSGKSicilNo.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtUyruk.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtKanGrubu.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBabaAdi.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAnaAdi.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDogumTarihi.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDogumTarihi.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTcKimlikNo.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem19)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem23)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem18)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem24)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem20)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem22)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem21)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem15)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem25)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbonControl
@@ -337,7 +399,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.txtOzelKod1.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.txtOzelKod1.Size = new System.Drawing.Size(151, 20);
-            this.txtOzelKod1.StatusBarAciklama = "Özel Kod Seçiniz";
+            this.txtOzelKod1.StatusBarAciklama = "Medeni Durum Seçiniz";
             this.txtOzelKod1.StatusBarKisaYol = "F4 :";
             this.txtOzelKod1.StatusBarKisaYolAciklama = "Seçim Yap";
             this.txtOzelKod1.StyleController = this.DataLayoutGenelBilgiler;
@@ -716,9 +778,275 @@
             // 
             this.pageKisiselBilgiler.BackgroundPadding = new System.Windows.Forms.Padding(5);
             this.pageKisiselBilgiler.Caption = "Kişisel Bilgiler";
+            this.pageKisiselBilgiler.Controls.Add(this.DataLayoutControlKisiselBilgiler);
             this.pageKisiselBilgiler.ImageOptions.Image = global::AbcYazilim.OgrenciTakip.UI.Win.Properties.Resources.newitem_16x16;
             this.pageKisiselBilgiler.Name = "pageKisiselBilgiler";
             this.pageKisiselBilgiler.Size = new System.Drawing.Size(754, 223);
+            // 
+            // DataLayoutControlKisiselBilgiler
+            // 
+            this.DataLayoutControlKisiselBilgiler.Controls.Add(this.txtKimlikTuru);
+            this.DataLayoutControlKisiselBilgiler.Controls.Add(this.txtMeslek);
+            this.DataLayoutControlKisiselBilgiler.Controls.Add(this.txtAskerlikDurumu);
+            this.DataLayoutControlKisiselBilgiler.Controls.Add(this.txtMedeniDurum);
+            this.DataLayoutControlKisiselBilgiler.Controls.Add(this.txtSGKSicilNo);
+            this.DataLayoutControlKisiselBilgiler.Controls.Add(this.txtUyruk);
+            this.DataLayoutControlKisiselBilgiler.Controls.Add(this.txtKanGrubu);
+            this.DataLayoutControlKisiselBilgiler.Controls.Add(this.txtBabaAdi);
+            this.DataLayoutControlKisiselBilgiler.Controls.Add(this.txtAnaAdi);
+            this.DataLayoutControlKisiselBilgiler.Controls.Add(this.txtDogumTarihi);
+            this.DataLayoutControlKisiselBilgiler.Controls.Add(this.txtTcKimlikNo);
+            this.DataLayoutControlKisiselBilgiler.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DataLayoutControlKisiselBilgiler.Location = new System.Drawing.Point(0, 0);
+            this.DataLayoutControlKisiselBilgiler.Name = "DataLayoutControlKisiselBilgiler";
+            this.DataLayoutControlKisiselBilgiler.OptionsFocus.EnableAutoTabOrder = false;
+            this.DataLayoutControlKisiselBilgiler.Root = this.layoutControlGroup2;
+            this.DataLayoutControlKisiselBilgiler.Size = new System.Drawing.Size(754, 223);
+            this.DataLayoutControlKisiselBilgiler.TabIndex = 0;
+            this.DataLayoutControlKisiselBilgiler.Text = "myDataLayoutControl1";
+            // 
+            // txtKimlikTuru
+            // 
+            this.txtKimlikTuru.EnterMoveNextControl = true;
+            this.txtKimlikTuru.Id = null;
+            this.txtKimlikTuru.Location = new System.Drawing.Point(97, 36);
+            this.txtKimlikTuru.Name = "txtKimlikTuru";
+            this.txtKimlikTuru.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
+            this.txtKimlikTuru.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtKimlikTuru.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton()});
+            this.txtKimlikTuru.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.txtKimlikTuru.Size = new System.Drawing.Size(241, 20);
+            this.txtKimlikTuru.StatusBarAciklama = "Kimlik Türü Seçiniz";
+            this.txtKimlikTuru.StatusBarKisaYol = "F4 :";
+            this.txtKimlikTuru.StatusBarKisaYolAciklama = "Seçim Yap";
+            this.txtKimlikTuru.StyleController = this.DataLayoutControlKisiselBilgiler;
+            this.txtKimlikTuru.TabIndex = 37;
+            // 
+            // txtMeslek
+            // 
+            this.txtMeslek.EnterMoveNextControl = true;
+            this.txtMeslek.Id = null;
+            this.txtMeslek.Location = new System.Drawing.Point(457, 60);
+            this.txtMeslek.Name = "txtMeslek";
+            this.txtMeslek.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
+            this.txtMeslek.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtMeslek.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton()});
+            this.txtMeslek.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.txtMeslek.Size = new System.Drawing.Size(241, 20);
+            this.txtMeslek.StatusBarAciklama = "Meslek Seçiniz";
+            this.txtMeslek.StatusBarKisaYol = "F4 :";
+            this.txtMeslek.StatusBarKisaYolAciklama = "Seçim Yap";
+            this.txtMeslek.StyleController = this.DataLayoutControlKisiselBilgiler;
+            this.txtMeslek.TabIndex = 36;
+            // 
+            // txtAskerlikDurumu
+            // 
+            this.txtAskerlikDurumu.EnterMoveNextControl = true;
+            this.txtAskerlikDurumu.Location = new System.Drawing.Point(457, 132);
+            this.txtAskerlikDurumu.Name = "txtAskerlikDurumu";
+            this.txtAskerlikDurumu.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
+            this.txtAskerlikDurumu.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtAskerlikDurumu.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txtAskerlikDurumu.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.txtAskerlikDurumu.Size = new System.Drawing.Size(241, 20);
+            this.txtAskerlikDurumu.StatusBarAciklama = "Askerlik Durumu Seçiniz.";
+            this.txtAskerlikDurumu.StatusBarKisaYol = "F4 :";
+            this.txtAskerlikDurumu.StatusBarKisaYolAciklama = "Seçim Yap";
+            this.txtAskerlikDurumu.StyleController = this.DataLayoutControlKisiselBilgiler;
+            this.txtAskerlikDurumu.TabIndex = 35;
+            // 
+            // txtMedeniDurum
+            // 
+            this.txtMedeniDurum.EnterMoveNextControl = true;
+            this.txtMedeniDurum.Location = new System.Drawing.Point(97, 132);
+            this.txtMedeniDurum.Name = "txtMedeniDurum";
+            this.txtMedeniDurum.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
+            this.txtMedeniDurum.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtMedeniDurum.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txtMedeniDurum.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.txtMedeniDurum.Size = new System.Drawing.Size(241, 20);
+            this.txtMedeniDurum.StatusBarAciklama = "Cinsiyet Seçiniz.";
+            this.txtMedeniDurum.StatusBarKisaYol = "F4 :";
+            this.txtMedeniDurum.StatusBarKisaYolAciklama = "Seçim Yap";
+            this.txtMedeniDurum.StyleController = this.DataLayoutControlKisiselBilgiler;
+            this.txtMedeniDurum.TabIndex = 34;
+            // 
+            // txtSGKSicilNo
+            // 
+            this.txtSGKSicilNo.EnterMoveNextControl = true;
+            this.txtSGKSicilNo.Location = new System.Drawing.Point(97, 108);
+            this.txtSGKSicilNo.Name = "txtSGKSicilNo";
+            this.txtSGKSicilNo.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
+            this.txtSGKSicilNo.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtSGKSicilNo.Properties.MaxLength = 50;
+            this.txtSGKSicilNo.Size = new System.Drawing.Size(241, 20);
+            this.txtSGKSicilNo.StatusBarAciklama = "SGK Sicil No Giriniz.";
+            this.txtSGKSicilNo.StyleController = this.DataLayoutControlKisiselBilgiler;
+            this.txtSGKSicilNo.TabIndex = 33;
+            // 
+            // txtUyruk
+            // 
+            this.txtUyruk.EnterMoveNextControl = true;
+            this.txtUyruk.Id = null;
+            this.txtUyruk.Location = new System.Drawing.Point(97, 156);
+            this.txtUyruk.Name = "txtUyruk";
+            this.txtUyruk.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
+            this.txtUyruk.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtUyruk.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton()});
+            this.txtUyruk.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.txtUyruk.Size = new System.Drawing.Size(241, 20);
+            this.txtUyruk.StatusBarAciklama = "Uyruk Seçiniz";
+            this.txtUyruk.StatusBarKisaYol = "F4 :";
+            this.txtUyruk.StatusBarKisaYolAciklama = "Seçim Yap";
+            this.txtUyruk.StyleController = this.DataLayoutControlKisiselBilgiler;
+            this.txtUyruk.TabIndex = 32;
+            // 
+            // txtKanGrubu
+            // 
+            this.txtKanGrubu.EnterMoveNextControl = true;
+            this.txtKanGrubu.Location = new System.Drawing.Point(457, 156);
+            this.txtKanGrubu.Name = "txtKanGrubu";
+            this.txtKanGrubu.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
+            this.txtKanGrubu.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtKanGrubu.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txtKanGrubu.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.txtKanGrubu.Size = new System.Drawing.Size(241, 20);
+            this.txtKanGrubu.StatusBarAciklama = "Kan Grubu Seçiniz.";
+            this.txtKanGrubu.StatusBarKisaYol = "F4 :";
+            this.txtKanGrubu.StatusBarKisaYolAciklama = "Seçim Yap";
+            this.txtKanGrubu.StyleController = this.DataLayoutControlKisiselBilgiler;
+            this.txtKanGrubu.TabIndex = 31;
+            // 
+            // txtBabaAdi
+            // 
+            this.txtBabaAdi.EnterMoveNextControl = true;
+            this.txtBabaAdi.Location = new System.Drawing.Point(457, 108);
+            this.txtBabaAdi.Name = "txtBabaAdi";
+            this.txtBabaAdi.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
+            this.txtBabaAdi.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtBabaAdi.Properties.MaxLength = 50;
+            this.txtBabaAdi.Size = new System.Drawing.Size(241, 20);
+            this.txtBabaAdi.StatusBarAciklama = "Baba Adı Giriniz.";
+            this.txtBabaAdi.StyleController = this.DataLayoutControlKisiselBilgiler;
+            this.txtBabaAdi.TabIndex = 30;
+            // 
+            // txtAnaAdi
+            // 
+            this.txtAnaAdi.EnterMoveNextControl = true;
+            this.txtAnaAdi.Location = new System.Drawing.Point(457, 84);
+            this.txtAnaAdi.Name = "txtAnaAdi";
+            this.txtAnaAdi.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
+            this.txtAnaAdi.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtAnaAdi.Properties.MaxLength = 50;
+            this.txtAnaAdi.Size = new System.Drawing.Size(241, 20);
+            this.txtAnaAdi.StatusBarAciklama = "Ana Adı Giriniz.";
+            this.txtAnaAdi.StyleController = this.DataLayoutControlKisiselBilgiler;
+            this.txtAnaAdi.TabIndex = 29;
+            // 
+            // txtDogumTarihi
+            // 
+            this.txtDogumTarihi.EditValue = null;
+            this.txtDogumTarihi.EnterMoveNextControl = true;
+            this.txtDogumTarihi.Location = new System.Drawing.Point(97, 84);
+            this.txtDogumTarihi.Name = "txtDogumTarihi";
+            this.txtDogumTarihi.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
+            this.txtDogumTarihi.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtDogumTarihi.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.txtDogumTarihi.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
+            this.txtDogumTarihi.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtDogumTarihi.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txtDogumTarihi.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txtDogumTarihi.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.DateTimeMaskManager));
+            this.txtDogumTarihi.Properties.MaskSettings.Set("useAdvancingCaret", true);
+            this.txtDogumTarihi.Size = new System.Drawing.Size(241, 20);
+            this.txtDogumTarihi.StatusBarAciklama = "Tarih Seçiniz.";
+            this.txtDogumTarihi.StatusBarKisaYol = "F4 :";
+            this.txtDogumTarihi.StatusBarKisaYolAciklama = "Seçim Yap";
+            this.txtDogumTarihi.StyleController = this.DataLayoutControlKisiselBilgiler;
+            this.txtDogumTarihi.TabIndex = 25;
+            // 
+            // txtTcKimlikNo
+            // 
+            this.txtTcKimlikNo.EnterMoveNextControl = true;
+            this.txtTcKimlikNo.Location = new System.Drawing.Point(97, 60);
+            this.txtTcKimlikNo.Name = "txtTcKimlikNo";
+            this.txtTcKimlikNo.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtTcKimlikNo.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.txtTcKimlikNo.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
+            this.txtTcKimlikNo.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtTcKimlikNo.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.RegularMaskManager));
+            this.txtTcKimlikNo.Properties.MaskSettings.Set("mask", "\\d?\\d?\\d? \\d?\\d?\\d? \\d?\\d?\\d? \\d?\\d?");
+            this.txtTcKimlikNo.Properties.MaskSettings.Set("isAutoComplete", false);
+            this.txtTcKimlikNo.Properties.MaskSettings.Set("isOptimistic", false);
+            this.txtTcKimlikNo.Properties.MaxLength = 50;
+            this.txtTcKimlikNo.Size = new System.Drawing.Size(241, 20);
+            this.txtTcKimlikNo.StatusBarAciklama = "Tc Kimlik No Giriniz";
+            this.txtTcKimlikNo.StyleController = this.DataLayoutControlKisiselBilgiler;
+            this.txtTcKimlikNo.TabIndex = 24;
+            // 
+            // layoutControlGroup2
+            // 
+            this.layoutControlGroup2.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.layoutControlGroup2.GroupBordersVisible = false;
+            this.layoutControlGroup2.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem19,
+            this.layoutControlItem23,
+            this.layoutControlItem18,
+            this.layoutControlItem17,
+            this.layoutControlItem24,
+            this.layoutControlItem20,
+            this.layoutControlItem22,
+            this.layoutControlItem21,
+            this.layoutControlItem16,
+            this.layoutControlItem15,
+            this.layoutControlItem25});
+            this.layoutControlGroup2.LayoutMode = DevExpress.XtraLayout.Utils.LayoutMode.Table;
+            this.layoutControlGroup2.Name = "layoutControlGroup2";
+            columnDefinition9.SizeType = System.Windows.Forms.SizeType.Absolute;
+            columnDefinition9.Width = 330D;
+            columnDefinition10.SizeType = System.Windows.Forms.SizeType.Absolute;
+            columnDefinition10.Width = 30D;
+            columnDefinition11.SizeType = System.Windows.Forms.SizeType.Absolute;
+            columnDefinition11.Width = 330D;
+            columnDefinition12.SizeType = System.Windows.Forms.SizeType.Absolute;
+            columnDefinition12.Width = 30D;
+            this.layoutControlGroup2.OptionsTableLayoutGroup.ColumnDefinitions.AddRange(new DevExpress.XtraLayout.ColumnDefinition[] {
+            columnDefinition9,
+            columnDefinition10,
+            columnDefinition11,
+            columnDefinition12});
+            rowDefinition10.Height = 24D;
+            rowDefinition10.SizeType = System.Windows.Forms.SizeType.Absolute;
+            rowDefinition11.Height = 24D;
+            rowDefinition11.SizeType = System.Windows.Forms.SizeType.Absolute;
+            rowDefinition12.Height = 24D;
+            rowDefinition12.SizeType = System.Windows.Forms.SizeType.Absolute;
+            rowDefinition13.Height = 24D;
+            rowDefinition13.SizeType = System.Windows.Forms.SizeType.Absolute;
+            rowDefinition14.Height = 24D;
+            rowDefinition14.SizeType = System.Windows.Forms.SizeType.Absolute;
+            rowDefinition15.Height = 24D;
+            rowDefinition15.SizeType = System.Windows.Forms.SizeType.Absolute;
+            rowDefinition16.Height = 24D;
+            rowDefinition16.SizeType = System.Windows.Forms.SizeType.Absolute;
+            this.layoutControlGroup2.OptionsTableLayoutGroup.RowDefinitions.AddRange(new DevExpress.XtraLayout.RowDefinition[] {
+            rowDefinition10,
+            rowDefinition11,
+            rowDefinition12,
+            rowDefinition13,
+            rowDefinition14,
+            rowDefinition15,
+            rowDefinition16});
+            this.layoutControlGroup2.Size = new System.Drawing.Size(754, 223);
+            this.layoutControlGroup2.TextVisible = false;
             // 
             // pageAdresBilgileri
             // 
@@ -761,20 +1089,20 @@
             this.layoutControlItem2});
             this.Root.LayoutMode = DevExpress.XtraLayout.Utils.LayoutMode.Table;
             this.Root.Name = "Root";
-            columnDefinition9.SizeType = System.Windows.Forms.SizeType.Percent;
-            columnDefinition9.Width = 100D;
-            columnDefinition10.SizeType = System.Windows.Forms.SizeType.Absolute;
-            columnDefinition10.Width = 210D;
+            columnDefinition13.SizeType = System.Windows.Forms.SizeType.Percent;
+            columnDefinition13.Width = 100D;
+            columnDefinition14.SizeType = System.Windows.Forms.SizeType.Absolute;
+            columnDefinition14.Width = 210D;
             this.Root.OptionsTableLayoutGroup.ColumnDefinitions.AddRange(new DevExpress.XtraLayout.ColumnDefinition[] {
-            columnDefinition9,
-            columnDefinition10});
-            rowDefinition10.Height = 260D;
-            rowDefinition10.SizeType = System.Windows.Forms.SizeType.Absolute;
-            rowDefinition11.Height = 100D;
-            rowDefinition11.SizeType = System.Windows.Forms.SizeType.Percent;
+            columnDefinition13,
+            columnDefinition14});
+            rowDefinition17.Height = 260D;
+            rowDefinition17.SizeType = System.Windows.Forms.SizeType.Absolute;
+            rowDefinition18.Height = 100D;
+            rowDefinition18.SizeType = System.Windows.Forms.SizeType.Percent;
             this.Root.OptionsTableLayoutGroup.RowDefinitions.AddRange(new DevExpress.XtraLayout.RowDefinition[] {
-            rowDefinition10,
-            rowDefinition11});
+            rowDefinition17,
+            rowDefinition18});
             this.Root.Size = new System.Drawing.Size(778, 500);
             this.Root.TextVisible = false;
             // 
@@ -802,6 +1130,165 @@
             this.layoutControlItem2.Size = new System.Drawing.Size(758, 220);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
+            // 
+            // layoutControlItem19
+            // 
+            this.layoutControlItem19.AppearanceItemCaption.ForeColor = System.Drawing.Color.Maroon;
+            this.layoutControlItem19.AppearanceItemCaption.Options.UseForeColor = true;
+            this.layoutControlItem19.Control = this.txtKanGrubu;
+            this.layoutControlItem19.Location = new System.Drawing.Point(360, 144);
+            this.layoutControlItem19.Name = "layoutControlItem19";
+            this.layoutControlItem19.OptionsTableLayoutItem.ColumnIndex = 2;
+            this.layoutControlItem19.OptionsTableLayoutItem.RowIndex = 6;
+            this.layoutControlItem19.Size = new System.Drawing.Size(330, 59);
+            this.layoutControlItem19.Text = "Kan Grubu";
+            this.layoutControlItem19.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
+            this.layoutControlItem19.TextSize = new System.Drawing.Size(80, 20);
+            this.layoutControlItem19.TextToControlDistance = 5;
+            // 
+            // layoutControlItem23
+            // 
+            this.layoutControlItem23.AppearanceItemCaption.ForeColor = System.Drawing.Color.Maroon;
+            this.layoutControlItem23.AppearanceItemCaption.Options.UseForeColor = true;
+            this.layoutControlItem23.Control = this.txtAskerlikDurumu;
+            this.layoutControlItem23.Location = new System.Drawing.Point(360, 120);
+            this.layoutControlItem23.Name = "layoutControlItem23";
+            this.layoutControlItem23.OptionsTableLayoutItem.ColumnIndex = 2;
+            this.layoutControlItem23.OptionsTableLayoutItem.RowIndex = 5;
+            this.layoutControlItem23.Size = new System.Drawing.Size(330, 24);
+            this.layoutControlItem23.Text = "Askerlik";
+            this.layoutControlItem23.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
+            this.layoutControlItem23.TextSize = new System.Drawing.Size(80, 20);
+            this.layoutControlItem23.TextToControlDistance = 5;
+            // 
+            // layoutControlItem18
+            // 
+            this.layoutControlItem18.AppearanceItemCaption.ForeColor = System.Drawing.Color.Maroon;
+            this.layoutControlItem18.AppearanceItemCaption.Options.UseForeColor = true;
+            this.layoutControlItem18.Control = this.txtBabaAdi;
+            this.layoutControlItem18.Location = new System.Drawing.Point(360, 96);
+            this.layoutControlItem18.Name = "layoutControlItem18";
+            this.layoutControlItem18.OptionsTableLayoutItem.ColumnIndex = 2;
+            this.layoutControlItem18.OptionsTableLayoutItem.RowIndex = 4;
+            this.layoutControlItem18.Size = new System.Drawing.Size(330, 24);
+            this.layoutControlItem18.Text = "Baba Adı";
+            this.layoutControlItem18.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
+            this.layoutControlItem18.TextSize = new System.Drawing.Size(80, 20);
+            this.layoutControlItem18.TextToControlDistance = 5;
+            // 
+            // layoutControlItem17
+            // 
+            this.layoutControlItem17.AppearanceItemCaption.ForeColor = System.Drawing.Color.Maroon;
+            this.layoutControlItem17.AppearanceItemCaption.Options.UseForeColor = true;
+            this.layoutControlItem17.Control = this.txtAnaAdi;
+            this.layoutControlItem17.Location = new System.Drawing.Point(360, 72);
+            this.layoutControlItem17.Name = "layoutControlItem17";
+            this.layoutControlItem17.OptionsTableLayoutItem.ColumnIndex = 2;
+            this.layoutControlItem17.OptionsTableLayoutItem.RowIndex = 3;
+            this.layoutControlItem17.Size = new System.Drawing.Size(330, 24);
+            this.layoutControlItem17.Text = "Anne Adı";
+            this.layoutControlItem17.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
+            this.layoutControlItem17.TextSize = new System.Drawing.Size(80, 20);
+            this.layoutControlItem17.TextToControlDistance = 5;
+            // 
+            // layoutControlItem24
+            // 
+            this.layoutControlItem24.AppearanceItemCaption.ForeColor = System.Drawing.Color.Maroon;
+            this.layoutControlItem24.AppearanceItemCaption.Options.UseForeColor = true;
+            this.layoutControlItem24.Control = this.txtMeslek;
+            this.layoutControlItem24.Location = new System.Drawing.Point(360, 48);
+            this.layoutControlItem24.Name = "layoutControlItem24";
+            this.layoutControlItem24.OptionsTableLayoutItem.ColumnIndex = 2;
+            this.layoutControlItem24.OptionsTableLayoutItem.RowIndex = 2;
+            this.layoutControlItem24.Size = new System.Drawing.Size(330, 24);
+            this.layoutControlItem24.Text = "Meslek";
+            this.layoutControlItem24.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
+            this.layoutControlItem24.TextSize = new System.Drawing.Size(80, 20);
+            this.layoutControlItem24.TextToControlDistance = 5;
+            // 
+            // layoutControlItem20
+            // 
+            this.layoutControlItem20.AppearanceItemCaption.ForeColor = System.Drawing.Color.Maroon;
+            this.layoutControlItem20.AppearanceItemCaption.Options.UseForeColor = true;
+            this.layoutControlItem20.Control = this.txtUyruk;
+            this.layoutControlItem20.Location = new System.Drawing.Point(0, 144);
+            this.layoutControlItem20.Name = "layoutControlItem20";
+            this.layoutControlItem20.OptionsTableLayoutItem.RowIndex = 6;
+            this.layoutControlItem20.Size = new System.Drawing.Size(330, 59);
+            this.layoutControlItem20.Text = "Uyruk";
+            this.layoutControlItem20.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
+            this.layoutControlItem20.TextSize = new System.Drawing.Size(80, 20);
+            this.layoutControlItem20.TextToControlDistance = 5;
+            // 
+            // layoutControlItem22
+            // 
+            this.layoutControlItem22.AppearanceItemCaption.ForeColor = System.Drawing.Color.Maroon;
+            this.layoutControlItem22.AppearanceItemCaption.Options.UseForeColor = true;
+            this.layoutControlItem22.Control = this.txtMedeniDurum;
+            this.layoutControlItem22.Location = new System.Drawing.Point(0, 120);
+            this.layoutControlItem22.Name = "layoutControlItem22";
+            this.layoutControlItem22.OptionsTableLayoutItem.RowIndex = 5;
+            this.layoutControlItem22.Size = new System.Drawing.Size(330, 24);
+            this.layoutControlItem22.Text = "Medeni Durum";
+            this.layoutControlItem22.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
+            this.layoutControlItem22.TextSize = new System.Drawing.Size(80, 20);
+            this.layoutControlItem22.TextToControlDistance = 5;
+            // 
+            // layoutControlItem21
+            // 
+            this.layoutControlItem21.AppearanceItemCaption.ForeColor = System.Drawing.Color.Maroon;
+            this.layoutControlItem21.AppearanceItemCaption.Options.UseForeColor = true;
+            this.layoutControlItem21.Control = this.txtSGKSicilNo;
+            this.layoutControlItem21.Location = new System.Drawing.Point(0, 96);
+            this.layoutControlItem21.Name = "layoutControlItem21";
+            this.layoutControlItem21.OptionsTableLayoutItem.RowIndex = 4;
+            this.layoutControlItem21.Size = new System.Drawing.Size(330, 24);
+            this.layoutControlItem21.Text = "SGK Sicil No";
+            this.layoutControlItem21.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
+            this.layoutControlItem21.TextSize = new System.Drawing.Size(80, 20);
+            this.layoutControlItem21.TextToControlDistance = 5;
+            // 
+            // layoutControlItem16
+            // 
+            this.layoutControlItem16.AppearanceItemCaption.ForeColor = System.Drawing.Color.Maroon;
+            this.layoutControlItem16.AppearanceItemCaption.Options.UseForeColor = true;
+            this.layoutControlItem16.Control = this.txtDogumTarihi;
+            this.layoutControlItem16.Location = new System.Drawing.Point(0, 72);
+            this.layoutControlItem16.Name = "layoutControlItem16";
+            this.layoutControlItem16.OptionsTableLayoutItem.RowIndex = 3;
+            this.layoutControlItem16.Size = new System.Drawing.Size(330, 24);
+            this.layoutControlItem16.Text = "Doğum Tarihi";
+            this.layoutControlItem16.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
+            this.layoutControlItem16.TextSize = new System.Drawing.Size(80, 20);
+            this.layoutControlItem16.TextToControlDistance = 5;
+            // 
+            // layoutControlItem15
+            // 
+            this.layoutControlItem15.AppearanceItemCaption.ForeColor = System.Drawing.Color.Maroon;
+            this.layoutControlItem15.AppearanceItemCaption.Options.UseForeColor = true;
+            this.layoutControlItem15.Control = this.txtTcKimlikNo;
+            this.layoutControlItem15.Location = new System.Drawing.Point(0, 48);
+            this.layoutControlItem15.Name = "layoutControlItem15";
+            this.layoutControlItem15.OptionsTableLayoutItem.RowIndex = 2;
+            this.layoutControlItem15.Size = new System.Drawing.Size(330, 24);
+            this.layoutControlItem15.Text = "Kimlik No";
+            this.layoutControlItem15.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
+            this.layoutControlItem15.TextSize = new System.Drawing.Size(80, 20);
+            this.layoutControlItem15.TextToControlDistance = 5;
+            // 
+            // layoutControlItem25
+            // 
+            this.layoutControlItem25.AppearanceItemCaption.ForeColor = System.Drawing.Color.Maroon;
+            this.layoutControlItem25.AppearanceItemCaption.Options.UseForeColor = true;
+            this.layoutControlItem25.Control = this.txtKimlikTuru;
+            this.layoutControlItem25.Location = new System.Drawing.Point(0, 24);
+            this.layoutControlItem25.Name = "layoutControlItem25";
+            this.layoutControlItem25.OptionsTableLayoutItem.RowIndex = 1;
+            this.layoutControlItem25.Size = new System.Drawing.Size(330, 24);
+            this.layoutControlItem25.Text = "Kimlik Türü";
+            this.layoutControlItem25.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
+            this.layoutControlItem25.TextSize = new System.Drawing.Size(80, 20);
+            this.layoutControlItem25.TextToControlDistance = 5;
             // 
             // PersonelEditForm
             // 
@@ -851,9 +1338,36 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).EndInit();
+            this.pageKisiselBilgiler.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.DataLayoutControlKisiselBilgiler)).EndInit();
+            this.DataLayoutControlKisiselBilgiler.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.txtKimlikTuru.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMeslek.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAskerlikDurumu.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMedeniDurum.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSGKSicilNo.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtUyruk.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtKanGrubu.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBabaAdi.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAnaAdi.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDogumTarihi.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDogumTarihi.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTcKimlikNo.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem19)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem23)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem18)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem24)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem20)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem22)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem21)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem15)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem25)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -901,5 +1415,29 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem14;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem12;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem13;
+        private UserControls.Controls.MyDataLayoutControl DataLayoutControlKisiselBilgiler;
+        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup2;
+        private UserControls.Controls.MyTcKimlikNoTextEdit txtTcKimlikNo;
+        private UserControls.Controls.MyDateEdit txtDogumTarihi;
+        private UserControls.Controls.MyTextEdit txtAnaAdi;
+        private UserControls.Controls.MyTextEdit txtBabaAdi;
+        private UserControls.Controls.MyComboBoxEdit txtKanGrubu;
+        private UserControls.Controls.MyButtonEdit txtUyruk;
+        private UserControls.Controls.MyTextEdit txtSGKSicilNo;
+        private UserControls.Controls.MyComboBoxEdit txtMedeniDurum;
+        private UserControls.Controls.MyComboBoxEdit txtAskerlikDurumu;
+        private UserControls.Controls.MyButtonEdit txtMeslek;
+        private UserControls.Controls.MyButtonEdit txtKimlikTuru;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem19;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem23;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem18;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem17;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem24;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem20;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem22;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem21;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem16;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem15;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem25;
     }
 }

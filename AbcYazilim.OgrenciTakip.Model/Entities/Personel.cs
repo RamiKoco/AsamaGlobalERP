@@ -32,7 +32,7 @@ namespace AbcYazilim.OgrenciTakip.Model.Entities
         [StringLength(30)]
         public string AnaAdi { get; set; }
 
-        [StringLength(11), RegularExpression(@"^\d{11}$", ErrorMessage = "SGK Sicil No yalnızca rakamlardan oluşmalıdır.")]
+        [StringLength(11)]
         public string SGKSicilNo { get; set; }
 
         public KayitTuru KayitTuru { get; set; } = KayitTuru.Personel;

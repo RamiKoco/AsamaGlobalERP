@@ -24,11 +24,14 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.PersonelForms
         {
             InitializeComponent();
 
-            DataLayoutControls = new[] { DataLayoutGenel, DataLayoutGenelBilgiler };
+            DataLayoutControls = new[] { DataLayoutGenel, DataLayoutGenelBilgiler, DataLayoutControlKisiselBilgiler };
             Bll = new PersonelBll(DataLayoutGenelBilgiler);
             BaseKartTuru = KartTuru.Personel;
             EventsLoad();
             txtCinsiyet.Properties.Items.AddRange(EnumFunctions.GetEnumDescriptionList<Cinsiyet>());
+            txtKanGrubu.Properties.Items.AddRange(EnumFunctions.GetEnumDescriptionList<KanGrubu>());
+            txtAskerlikDurumu.Properties.Items.AddRange(EnumFunctions.GetEnumDescriptionList<AskerlikDurumu>());
+            txtMedeniDurum.Properties.Items.AddRange(EnumFunctions.GetEnumDescriptionList<MedeniDurum>());
         }
 
         public override void Yukle()
@@ -55,14 +58,28 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.PersonelForms
         protected override void NesneyiKontrollereBagla()
         {
             var entity = (PersonelS)OldEntity;
-            txtKod.Text = entity.Kod; 
+            txtKod.Text = entity.Kod;
+            txtTcKimlikNo.Text = entity.TcKimlikNo;
             txtAdi.Text = entity.Ad;
             txtSoyAdi.Text = entity.Soyad;          
+            txtAnaAdi.Text = entity.AnaAdi;          
+            txtBabaAdi.Text = entity.BabaAdi;
+            txtSGKSicilNo.Text = entity.SGKSicilNo;
             txtCinsiyet.SelectedItem = entity.Cinsiyet.ToName();           
+            txtKanGrubu.SelectedItem = entity.KanGrubu.ToName();
+            txtAskerlikDurumu.SelectedItem = entity.AskerlikDurumu.ToName();
+            txtMedeniDurum.SelectedItem = entity.MedeniDurum.ToName();
+            txtDogumTarihi.EditValue = entity.DogumTarihi;
             imgResim.EditValue = entity.Resim;
             txtAciklama.Text = entity.Aciklama;         
             txtDepartman.Id = entity.DepartmanId;
             txtDepartman.Text = entity.DepartmanAdi;
+            txtKimlikTuru.Id = entity.KimlikTuruId;
+            txtKimlikTuru.Text = entity.KimlikTuruAdi;
+            txtMeslek.Id = entity.MeslekId;
+            txtMeslek.Text = entity.MeslekAdi;
+            txtUyruk.Id = entity.UyrukId;
+            txtUyruk.Text = entity.UyrukAdi;
             txtPozisyon.Id = entity.PozisyonId;
             txtPozisyon.Text = entity.PozisyonAdi;   
             txtOzelKod1.Id = entity.OzelKod1Id;
@@ -91,12 +108,23 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.PersonelForms
             {
                 Id = Id,
                 Kod = txtKod.Text,
+                TcKimlikNo = txtTcKimlikNo.Text,
                 Ad = txtAdi.Text,
-                Soyad = txtSoyAdi.Text,                
+                Soyad = txtSoyAdi.Text,
+                BabaAdi = txtBabaAdi.Text,
+                AnaAdi = txtAnaAdi.Text,
+                SGKSicilNo=txtSGKSicilNo.Text,
                 Cinsiyet = txtCinsiyet.Text.GetEnum<Cinsiyet>(),              
+                KanGrubu = txtKanGrubu.Text.GetEnum<KanGrubu>(),
+                MedeniDurum = txtMedeniDurum.Text.GetEnum<MedeniDurum>(),
+                AskerlikDurumu = txtAskerlikDurumu.Text.GetEnum<AskerlikDurumu>(),
+                DogumTarihi = (DateTime?)txtDogumTarihi.EditValue,
                 Resim = (byte[])imgResim.EditValue,
                 Aciklama = txtAciklama.Text,
-                DepartmanId = txtDepartman.Id,              
+                DepartmanId = txtDepartman.Id,
+                UyrukId=txtUyruk.Id,
+                KimlikTuruId = txtKimlikTuru.Id,
+                MeslekId=txtMeslek.Id,
                 PozisyonId = txtPozisyon.Id,               
                 OzelKod1Id = txtOzelKod1.Id,
                 OzelKod2Id = txtOzelKod2.Id,
@@ -207,6 +235,12 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.PersonelForms
                     sec.Sec(txtDepartman);              
                 else if (sender == txtPozisyon)
                     sec.Sec(txtPozisyon);               
+                else if (sender == txtUyruk)
+                    sec.Sec(txtUyruk);             
+                else if (sender == txtKimlikTuru)
+                    sec.Sec(txtKimlikTuru);               
+                else if (sender == txtMeslek)
+                    sec.Sec(txtMeslek);               
                 else if (sender == txtOzelKod1)
                     sec.Sec(txtOzelKod1, KartTuru.Personel);
                 else if (sender == txtOzelKod2)

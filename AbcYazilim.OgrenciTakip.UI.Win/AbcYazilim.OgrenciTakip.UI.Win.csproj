@@ -1461,6 +1461,12 @@
     <Compile Include="UserControls\UserControl\KullaniciBirimYetkileriEditFormTable\SubeTable.Designer.cs">
       <DependentUpon>SubeTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UserControl\PersonelEditFormTable\KisiselBilgilerTable.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UserControl\PersonelEditFormTable\KisiselBilgilerTable.Designer.cs">
+      <DependentUpon>KisiselBilgilerTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UserControl\TahakkukEditFormTable\AileBilgileriTable.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -2145,6 +2151,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControl\KullaniciBirimYetkileriEditFormTable\SubeTable.resx">
       <DependentUpon>SubeTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControl\PersonelEditFormTable\KisiselBilgilerTable.resx">
+      <DependentUpon>KisiselBilgilerTable.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControl\TahakkukEditFormTable\AileBilgileriTable.resx">
       <DependentUpon>AileBilgileriTable.cs</DependentUpon>
