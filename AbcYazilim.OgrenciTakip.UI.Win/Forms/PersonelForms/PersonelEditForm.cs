@@ -55,12 +55,12 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.PersonelForms
         protected override void NesneyiKontrollereBagla()
         {
             var entity = (PersonelS)OldEntity;
-            txtKod.Text = entity.Kod;
+            txtKod.Text = entity.Kod; 
             txtAdi.Text = entity.Ad;
-            txtSoyAdi.Text = entity.Soyad;
-            txtCinsiyet.SelectedItem = entity.Cinsiyet.ToName();
+            txtSoyAdi.Text = entity.Soyad;          
+            txtCinsiyet.SelectedItem = entity.Cinsiyet.ToName();           
             imgResim.EditValue = entity.Resim;
-            txtAciklama.Text = entity.Aciklama;
+            txtAciklama.Text = entity.Aciklama;         
             txtDepartman.Id = entity.DepartmanId;
             txtDepartman.Text = entity.DepartmanAdi;
             txtPozisyon.Id = entity.PozisyonId;
@@ -92,11 +92,11 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.PersonelForms
                 Id = Id,
                 Kod = txtKod.Text,
                 Ad = txtAdi.Text,
-                Soyad = txtSoyAdi.Text,
-                Cinsiyet = txtCinsiyet.Text.GetEnum<Cinsiyet>(),
+                Soyad = txtSoyAdi.Text,                
+                Cinsiyet = txtCinsiyet.Text.GetEnum<Cinsiyet>(),              
                 Resim = (byte[])imgResim.EditValue,
                 Aciklama = txtAciklama.Text,
-                DepartmanId = txtDepartman.Id,
+                DepartmanId = txtDepartman.Id,              
                 PozisyonId = txtPozisyon.Id,               
                 OzelKod1Id = txtOzelKod1.Id,
                 OzelKod2Id = txtOzelKod2.Id,
@@ -206,7 +206,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.PersonelForms
                 if (sender == txtDepartman)
                     sec.Sec(txtDepartman);              
                 else if (sender == txtPozisyon)
-                    sec.Sec(txtPozisyon);
+                    sec.Sec(txtPozisyon);               
                 else if (sender == txtOzelKod1)
                     sec.Sec(txtOzelKod1, KartTuru.Personel);
                 else if (sender == txtOzelKod2)
