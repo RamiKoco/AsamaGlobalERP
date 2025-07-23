@@ -90,6 +90,7 @@
     <Compile Include="Dto\BankaHesapDto.cs" />
     <Compile Include="Dto\BelgeHareketleriDto.cs" />
     <Compile Include="Dto\BelgeSecimDto.cs" />
+    <Compile Include="Dto\BelgeTuruDto.cs" />
     <Compile Include="Dto\BilgiNotlariDto.cs" />
     <Compile Include="Dto\CariDto.cs" />
     <Compile Include="Dto\EposBilgileriDto.cs" />
@@ -115,6 +116,7 @@
     <Compile Include="Dto\KullaniciDto.cs" />
     <Compile Include="Dto\KullaniciParametreDto.cs" />
     <Compile Include="Dto\KurumBilgileriDto.cs" />
+    <Compile Include="Dto\KurumTuruDto.cs" />
     <Compile Include="Dto\MakbuzDto.cs" />
     <Compile Include="Dto\MakbuzHareketleriDto.cs" />
     <Compile Include="Dto\OdemeBilgileriDto.cs" />
@@ -139,6 +141,7 @@
     <Compile Include="Entities\AdresHareketleri.cs" />
     <Compile Include="Entities\AdresTurleri.cs" />
     <Compile Include="Entities\BaglantiAyarlari.cs" />
+    <Compile Include="Entities\BelgeTuru.cs" />
     <Compile Include="Entities\Departman.cs" />
     <Compile Include="Entities\DonemParametre.cs" />
     <Compile Include="Entities\Etiket.cs" />
@@ -194,6 +197,7 @@
     <Compile Include="Entities\Kurgu.cs" />
     <Compile Include="Entities\Kurum.cs" />
     <Compile Include="Entities\KurumBilgileri.cs" />
+    <Compile Include="Entities\KurumTuru.cs" />
     <Compile Include="Entities\Mahalle.cs" />
     <Compile Include="Entities\MailParametre.cs" />
     <Compile Include="Entities\Makbuz.cs" />

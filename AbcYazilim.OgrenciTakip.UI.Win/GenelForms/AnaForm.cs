@@ -11,6 +11,7 @@ using AbcYazilim.OgrenciTakip.UI.Win.Forms.AjandaForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.AvukatForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.BankaForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.BankaHesapForms;
+using AbcYazilim.OgrenciTakip.UI.Win.Forms.BelgeTuruForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.CariForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.DepartmanForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.EtiketForms;
@@ -32,6 +33,7 @@ using AbcYazilim.OgrenciTakip.UI.Win.Forms.KisiForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.KisiGrubuForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.KontenjanForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.KullaniciForms;
+using AbcYazilim.OgrenciTakip.UI.Win.Forms.KurumTuruForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.MakbuzForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.MeslekForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.OdemeTuruForms;
@@ -229,6 +231,10 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.GenelForms
                 ShowListForms<PozisyonListForm>.ShowListForm(KartTuru.Pozisyon);
             else if (e.Item == btnPersonelKartlari)
                 ShowListForms<PersonelListForm>.ShowListForm(KartTuru.Personel);
+            else if (e.Item == btnBelgeTuruKartlari)
+                ShowListForms<BelgeTuruListForm>.ShowListForm(KartTuru.BelgeTuru);
+            else if (e.Item == btnKurumTuruKartlari)
+                ShowListForms<KurumTuruListForm>.ShowListForm(KartTuru.KurumTuru);
             
             //else if (e.Item == btnAjandaKartlari)
             //{

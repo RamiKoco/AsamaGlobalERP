@@ -91,6 +91,7 @@
     <Compile Include="General\BankaSubeBll.cs" />
     <Compile Include="General\BelgeHareketleriBll.cs" />
     <Compile Include="General\BelgeSecimBll.cs" />
+    <Compile Include="General\BelgeTuruBll.cs" />
     <Compile Include="General\BilgiNotlariBll.cs" />
     <Compile Include="General\CariBll.cs" />
     <Compile Include="General\DepartmanBll.cs" />
@@ -137,6 +138,7 @@
     <Compile Include="General\KurguBll.cs" />
     <Compile Include="General\KurumBilgileriBll.cs" />
     <Compile Include="General\KurumBll.cs" />
+    <Compile Include="General\KurumTuruBll.cs" />
     <Compile Include="General\MahalleBll.cs" />
     <Compile Include="General\MailParametreBll.cs" />
     <Compile Include="General\MakbuzBll.cs" />
