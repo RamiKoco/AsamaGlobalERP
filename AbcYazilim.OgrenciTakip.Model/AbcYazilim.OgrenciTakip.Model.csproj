@@ -116,6 +116,7 @@
     <Compile Include="Dto\KullaniciDto.cs" />
     <Compile Include="Dto\KullaniciParametreDto.cs" />
     <Compile Include="Dto\KurumBilgileriDto.cs" />
+    <Compile Include="Dto\KurumlarDto.cs" />
     <Compile Include="Dto\KurumTuruDto.cs" />
     <Compile Include="Dto\MakbuzDto.cs" />
     <Compile Include="Dto\MakbuzHareketleriDto.cs" />
@@ -197,6 +198,7 @@
     <Compile Include="Entities\Kurgu.cs" />
     <Compile Include="Entities\Kurum.cs" />
     <Compile Include="Entities\KurumBilgileri.cs" />
+    <Compile Include="Entities\Kurumlar.cs" />
     <Compile Include="Entities\KurumTuru.cs" />
     <Compile Include="Entities\Mahalle.cs" />
     <Compile Include="Entities\MailParametre.cs" />

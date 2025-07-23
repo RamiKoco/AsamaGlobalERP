@@ -27,6 +27,7 @@ using AbcYazilim.OgrenciTakip.UI.Win.Forms.KitapTuruForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.KontenjanForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.KullaniciForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.KurguForms;
+using AbcYazilim.OgrenciTakip.UI.Win.Forms.KurumTuruForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.MahalleForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.MeslekForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.OdemeTuruForms;
@@ -426,6 +427,16 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Functions
                         {
                             _btnEdit.Id = entity.Id;
                             _btnEdit.EditValue = entity.KimlikAdi;
+                        }
+                    }
+                    break;
+                case "txtKurumTuru":
+                    {
+                        var entity = (KurumTuruL)ShowListForms<KurumTuruListForm>.ShowDialogListForm(KartTuru.KurumTuru, _btnEdit.Id);
+                        if (entity != null)
+                        {
+                            _btnEdit.Id = entity.Id;
+                            _btnEdit.EditValue = entity.Ad;
                         }
                     }
                     break;

@@ -33,6 +33,7 @@ using AbcYazilim.OgrenciTakip.UI.Win.Forms.KisiForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.KisiGrubuForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.KontenjanForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.KullaniciForms;
+using AbcYazilim.OgrenciTakip.UI.Win.Forms.KurumForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.KurumTuruForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.MakbuzForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.MeslekForms;
@@ -235,6 +236,8 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.GenelForms
                 ShowListForms<BelgeTuruListForm>.ShowListForm(KartTuru.BelgeTuru);
             else if (e.Item == btnKurumTuruKartlari)
                 ShowListForms<KurumTuruListForm>.ShowListForm(KartTuru.KurumTuru);
+            else if (e.Item == btnKurumlarKartlari)
+                ShowListForms<KurumlarListForm>.ShowListForm(KartTuru.Kurumlar);
             
             //else if (e.Item == btnAjandaKartlari)
             //{

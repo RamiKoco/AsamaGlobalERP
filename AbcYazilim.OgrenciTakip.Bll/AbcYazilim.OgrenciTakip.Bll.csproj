@@ -138,6 +138,7 @@
     <Compile Include="General\KurguBll.cs" />
     <Compile Include="General\KurumBilgileriBll.cs" />
     <Compile Include="General\KurumBll.cs" />
+    <Compile Include="General\KurumlarBll.cs" />
     <Compile Include="General\KurumTuruBll.cs" />
     <Compile Include="General\MahalleBll.cs" />
     <Compile Include="General\MailParametreBll.cs" />

@@ -118,5 +118,6 @@ namespace AbcYazilim.OgrenciTakip.Data.Contexts
         public DbSet<Personel> Personel { get; set; }
         public DbSet<BelgeTuru> BelgeTuru { get; set; }
         public DbSet<KurumTuru> KurumTuru { get; set; }
+        public DbSet<Kurumlar> Kurumlar { get; set; }
     }
 }

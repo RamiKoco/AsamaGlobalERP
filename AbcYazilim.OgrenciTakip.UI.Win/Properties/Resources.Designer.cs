@@ -443,6 +443,26 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap chart_16x161 {
+            get {
+                object obj = ResourceManager.GetObject("chart_16x161", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap chart_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("chart_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap chartsshowlegend_16x16 {
             get {
                 object obj = ResourceManager.GetObject("chartsshowlegend_16x16", resourceCulture);

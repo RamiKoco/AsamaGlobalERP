@@ -202,5 +202,7 @@ namespace AbcYazilim.OgrenciTakip.Common.Enums
         BelgeTuru = 98,
         [Description("Kurum Türü Kartı")]
         KurumTuru = 99,
+        [Description("Kurum Kartı")]
+        Kurumlar = 100,
     }
 }
