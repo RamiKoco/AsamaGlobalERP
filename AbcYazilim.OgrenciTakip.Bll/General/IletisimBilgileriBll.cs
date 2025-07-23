@@ -19,6 +19,7 @@ namespace AbcYazilim.OgrenciTakip.Bll.General
             {
                 Id = x.Id,
                 KisiId = (long)x.Iletisim.KisiId,
+                PersonelId = (long)x.Iletisim.PersonelId,
                 IletisimId = x.IletisimId,
                 Baslik = x.Iletisim.Baslik,
                 UlkeKodu = x.Iletisim.UlkeKodu,

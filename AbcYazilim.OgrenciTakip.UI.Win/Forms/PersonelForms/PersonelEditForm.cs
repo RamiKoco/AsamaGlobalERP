@@ -4,9 +4,12 @@ using AbcYazilim.OgrenciTakip.Common.Functions;
 using AbcYazilim.OgrenciTakip.Data.Contexts;
 using AbcYazilim.OgrenciTakip.Model.Dto;
 using AbcYazilim.OgrenciTakip.Model.Entities;
+using AbcYazilim.OgrenciTakip.Model.Entities.Base.Interfaces;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Functions;
 using AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls;
+using AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.Base;
+using AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.PersonelEditFormTable;
 using DevExpress.XtraBars.Navigation;
 using DevExpress.XtraEditors;
 using System;
@@ -17,6 +20,8 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.PersonelForms
 {
     public partial class PersonelEditForm : BaseEditForm
     {
+        private BaseTablo _adreslerTable;
+        private BaseTablo _iletisimBilgileriTable;
         private List<EtiketL> _tumEtiketler;
         private List<long> _oldEtiketIdListesi = new List<long>();
         private List<long> _guncelEtiketIdListesi = new List<long>();
@@ -40,11 +45,27 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.PersonelForms
             OldEntity = BaseIslemTuru == IslemTuru.EntityInsert ? new PersonelS() : ((PersonelBll)Bll).Single(FilterFunctions.Filter<Personel>(Id));
             NesneyiKontrollereBagla();
             TabloYukle();
-            
+
             if (BaseIslemTuru != IslemTuru.EntityInsert) return;
             Id = BaseIslemTuru.IdOlustur(OldEntity);
             txtKod.Text = ((PersonelBll)Bll).YeniKodVer();
             txtAdi.Focus();
+        }
+        protected override void BagliTabloYukle()
+        {
+            bool TableValueChanged(BaseTablo tablo)
+            {
+                return tablo.Tablo.DataController.ListSource.Cast<IBaseHareketEntity>()
+                    .Any(x => x.Insert || x.Update || x.Delete);
+            }
+
+
+            //if (_bilgiNotlariTable != null && TableValueChanged(_bilgiNotlariTable))
+            //    _bilgiNotlariTable.Yukle();
+            if (_iletisimBilgileriTable != null && TableValueChanged(_iletisimBilgileriTable))
+                _iletisimBilgileriTable.Yukle();
+            if (_adreslerTable != null && TableValueChanged(_adreslerTable))
+                _adreslerTable.Yukle();
         }
         private void EtiketleriYukle()
         {
@@ -61,17 +82,17 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.PersonelForms
             txtKod.Text = entity.Kod;
             txtTcKimlikNo.Text = entity.TcKimlikNo;
             txtAdi.Text = entity.Ad;
-            txtSoyAdi.Text = entity.Soyad;          
-            txtAnaAdi.Text = entity.AnaAdi;          
+            txtSoyAdi.Text = entity.Soyad;
+            txtAnaAdi.Text = entity.AnaAdi;
             txtBabaAdi.Text = entity.BabaAdi;
             txtSGKSicilNo.Text = entity.SGKSicilNo;
-            txtCinsiyet.SelectedItem = entity.Cinsiyet.ToName();           
+            txtCinsiyet.SelectedItem = entity.Cinsiyet.ToName();
             txtKanGrubu.SelectedItem = entity.KanGrubu.ToName();
             txtAskerlikDurumu.SelectedItem = entity.AskerlikDurumu.ToName();
             txtMedeniDurum.SelectedItem = entity.MedeniDurum.ToName();
             txtDogumTarihi.EditValue = entity.DogumTarihi;
             imgResim.EditValue = entity.Resim;
-            txtAciklama.Text = entity.Aciklama;         
+            txtAciklama.Text = entity.Aciklama;
             txtDepartman.Id = entity.DepartmanId;
             txtDepartman.Text = entity.DepartmanAdi;
             txtKimlikTuru.Id = entity.KimlikTuruId;
@@ -81,7 +102,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.PersonelForms
             txtUyruk.Id = entity.UyrukId;
             txtUyruk.Text = entity.UyrukAdi;
             txtPozisyon.Id = entity.PozisyonId;
-            txtPozisyon.Text = entity.PozisyonAdi;   
+            txtPozisyon.Text = entity.PozisyonAdi;
             txtOzelKod1.Id = entity.OzelKod1Id;
             txtOzelKod1.Text = entity.OzelKod1Adi;
             txtOzelKod2.Id = entity.OzelKod2Id;
@@ -113,8 +134,8 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.PersonelForms
                 Soyad = txtSoyAdi.Text,
                 BabaAdi = txtBabaAdi.Text,
                 AnaAdi = txtAnaAdi.Text,
-                SGKSicilNo=txtSGKSicilNo.Text,
-                Cinsiyet = txtCinsiyet.Text.GetEnum<Cinsiyet>(),              
+                SGKSicilNo = txtSGKSicilNo.Text,
+                Cinsiyet = txtCinsiyet.Text.GetEnum<Cinsiyet>(),
                 KanGrubu = txtKanGrubu.Text.GetEnum<KanGrubu>(),
                 MedeniDurum = txtMedeniDurum.Text.GetEnum<MedeniDurum>(),
                 AskerlikDurumu = txtAskerlikDurumu.Text.GetEnum<AskerlikDurumu>(),
@@ -122,10 +143,10 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.PersonelForms
                 Resim = (byte[])imgResim.EditValue,
                 Aciklama = txtAciklama.Text,
                 DepartmanId = txtDepartman.Id,
-                UyrukId=txtUyruk.Id,
+                UyrukId = txtUyruk.Id,
                 KimlikTuruId = txtKimlikTuru.Id,
-                MeslekId=txtMeslek.Id,
-                PozisyonId = txtPozisyon.Id,               
+                MeslekId = txtMeslek.Id,
+                PozisyonId = txtPozisyon.Id,
                 OzelKod1Id = txtOzelKod1.Id,
                 OzelKod2Id = txtOzelKod2.Id,
                 Durum = tglDurum.IsOn
@@ -133,6 +154,31 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.PersonelForms
             ButonEnabledDurumu();
         }
 
+        protected override bool BagliTabloHataliGirisKontrol()
+        {
+            //if (_bilgiNotlariTable != null && _bilgiNotlariTable.HataliGiris())
+            //{
+            //    tabUst.SelectedPage = pageNotlar;
+            //    _bilgiNotlariTable.Tablo.GridControl.Focus();
+            //    return true;
+            //}
+
+            if (_iletisimBilgileriTable != null && _iletisimBilgileriTable.HataliGiris())
+            {
+                tabUst.SelectedPage = pageIletisimBilgileri;
+                _iletisimBilgileriTable.Tablo.GridControl.Focus();
+                return true;
+            }
+
+            if (_adreslerTable != null && _adreslerTable.HataliGiris())
+            {
+                tabUst.SelectedPage = pageAdresBilgileri;
+                _adreslerTable.Tablo.GridControl.Focus();
+                return true;
+            }
+
+            return false;
+        }
         protected internal override void ButonEnabledDurumu()
         {
             if (!IsLoaded) return;
@@ -143,12 +189,9 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.PersonelForms
 
             bool TableValueChanged()
             {
-                //if (_iletisimBilgileriTable != null && _iletisimBilgileriTable.TableValueChanged) return true;
-                //if (_adreslerTable != null && _adreslerTable.TableValueChanged) return true;
-                //if (_bilgiNotlariTable != null && _bilgiNotlariTable.TableValueChanged) return true;
-
+                if (_iletisimBilgileriTable != null && _iletisimBilgileriTable.TableValueChanged) return true;
+                if (_adreslerTable != null && _adreslerTable.TableValueChanged) return true;
                 return false;
-
             }
 
             if (FarkliSubeIslemi)
@@ -174,10 +217,9 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.PersonelForms
                          ?.Select(x => long.TryParse(x, out var val) ? val : 0)
                          ?.Where(x => x > 0)
                          ?.ToArray();
+            if (_iletisimBilgileriTable != null && !_iletisimBilgileriTable.Kaydet()) return false;
+            if (_adreslerTable != null && !_adreslerTable.Kaydet()) return false;
 
-            //if (_bilgiNotlariTable != null && !_bilgiNotlariTable.Kaydet()) return false;
-            //if (_iletisimBilgileriTable != null && !_iletisimBilgileriTable.Kaydet()) return false;
-            //if (_adreslerTable != null && !_adreslerTable.Kaydet()) return false;
             if (seciliEtiketIdler != null)
             {
                 using (var db = new OgrenciTakipContext())
@@ -232,15 +274,15 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.PersonelForms
 
             using (var sec = new SelectFunctions())
                 if (sender == txtDepartman)
-                    sec.Sec(txtDepartman);              
+                    sec.Sec(txtDepartman);
                 else if (sender == txtPozisyon)
-                    sec.Sec(txtPozisyon);               
+                    sec.Sec(txtPozisyon);
                 else if (sender == txtUyruk)
-                    sec.Sec(txtUyruk);             
+                    sec.Sec(txtUyruk);
                 else if (sender == txtKimlikTuru)
-                    sec.Sec(txtKimlikTuru);               
+                    sec.Sec(txtKimlikTuru);
                 else if (sender == txtMeslek)
-                    sec.Sec(txtMeslek);               
+                    sec.Sec(txtMeslek);
                 else if (sender == txtOzelKod1)
                     sec.Sec(txtOzelKod1, KartTuru.Personel);
                 else if (sender == txtOzelKod2)
@@ -252,50 +294,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.PersonelForms
             if (!(sender is MyPictureEdit resim)) return;
             resim.Sec(resimMenu);
 
-        }
-
-        //protected override void BagliTabloYukle()
-        //{
-        //    bool TableValueChanged(BaseTablo tablo)
-        //    {
-        //        return tablo.Tablo.DataController.ListSource.Cast<IBaseHareketEntity>()
-        //            .Any(x => x.Insert || x.Update || x.Delete);
-        //    }
-
-
-        //    //if (_bilgiNotlariTable != null && TableValueChanged(_bilgiNotlariTable))
-        //    //    _bilgiNotlariTable.Yukle();
-        //    //if (_iletisimBilgileriTable != null && TableValueChanged(_iletisimBilgileriTable))
-        //    //    _iletisimBilgileriTable.Yukle();
-        //    //if (_adreslerTable != null && TableValueChanged(_adreslerTable))
-        //    //    _adreslerTable.Yukle();
-        //}
-
-        //protected override bool BagliTabloHataliGirisKontrol()
-        //{
-        //    if (_bilgiNotlariTable != null && _bilgiNotlariTable.HataliGiris())
-        //    {
-        //        tabUst.SelectedPage = pageNotlar;
-        //        _bilgiNotlariTable.Tablo.GridControl.Focus();
-        //        return true;
-        //    }
-
-        //    if (_iletisimBilgileriTable != null && _iletisimBilgileriTable.HataliGiris())
-        //    {
-        //        tabUst.SelectedPage = pageIletisimBilgileri;
-        //        _iletisimBilgileriTable.Tablo.GridControl.Focus();
-        //        return true;
-        //    }
-
-        //    if (_adreslerTable != null && _adreslerTable.HataliGiris())
-        //    {
-        //        tabUst.SelectedPage = pageAdresBilgileri;
-        //        _adreslerTable.Tablo.GridControl.Focus();
-        //        return true;
-        //    }
-
-        //    return false;
-        //}
+        }   
 
         protected override void Control_SelectedPageChanged(object sender, SelectedPageChangedEventArgs e)
         {
@@ -304,46 +303,31 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.PersonelForms
                 txtAdi.Focus();
                 txtSoyAdi.SelectAll();
             }
+            else if (e.Page == pageIletisimBilgileri)
+            {
+                if (pageIletisimBilgileri.Controls.Count == 0)
+                {
+                    _iletisimBilgileriTable = new IletisimBilgileriTable().AddTable(this);
+                    pageIletisimBilgileri.Controls.Add(_iletisimBilgileriTable);
+                    _iletisimBilgileriTable.Yukle();
 
-            //else if (e.Page == pageNotlar)
-            //{
-            //    if (pageNotlar.Controls.Count == 0)
-            //    {
-            //        _bilgiNotlariTable = new BilgiNotlariTable().AddTable(this);
-            //        pageNotlar.Controls.Add(_bilgiNotlariTable);
-            //        _bilgiNotlariTable.Yukle();
+                }
 
-            //    }
+                _iletisimBilgileriTable.Tablo.GridControl.Focus();
 
-            //    _bilgiNotlariTable.Tablo.GridControl.Focus();
+            }
+            else if (e.Page == pageAdresBilgileri)
+            {
+                if (pageAdresBilgileri.Controls.Count == 0)
+                {
+                    _adreslerTable = new AdreslerTable().AddTable(this);
+                    pageAdresBilgileri.Controls.Add(_adreslerTable);
+                    _adreslerTable.Yukle();
+                }
 
-            //}
+                _adreslerTable.Tablo.GridControl.Focus();
 
-            //else if (e.Page == pageIletisimBilgileri)
-            //{
-            //    if (pageIletisimBilgileri.Controls.Count == 0)
-            //    {
-            //        _iletisimBilgileriTable = new IletisimBilgileriTable().AddTable(this);
-            //        pageIletisimBilgileri.Controls.Add(_iletisimBilgileriTable);
-            //        _iletisimBilgileriTable.Yukle();
-
-            //    }
-
-            //    _iletisimBilgileriTable.Tablo.GridControl.Focus();
-            //}
-
-            //else if (e.Page == pageAdresBilgileri)
-            //{
-            //    if (pageAdresBilgileri.Controls.Count == 0)
-            //    {
-            //        _adreslerTable = new AdreslerTable().AddTable(this);
-            //        pageAdresBilgileri.Controls.Add(_adreslerTable);
-            //        _adreslerTable.Yukle();
-            //    }
-
-            //    _adreslerTable.Tablo.GridControl.Focus();
-
-            //}
+            }
         }
     }
 }

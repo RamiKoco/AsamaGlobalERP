@@ -9,8 +9,23 @@ namespace AbcYazilim.OgrenciTakip.Model.Dto
     public class AdresBilgileriS: AdresBilgileri
     {
         public string KisiAdi { get; set; }
+        public string PersonelAdi { get; set; }
         public string MeslekAdi { get; set; }
-        public new string KayitHesabiAdi => KayitTuru == KayitTuru.Kisi ? KisiAdi : MeslekAdi;
+        //public new string KayitHesabiAdi => KayitTuru == KayitTuru.Kisi ? KisiAdi : MeslekAdi;
+        public string KayitHesabiAdi
+        {
+            get
+            {
+                if (KayitTuru == KayitTuru.Kisi)
+                    return KisiAdi;
+                else if (KayitTuru == KayitTuru.Personel)
+                    return PersonelAdi;
+                else if (KayitTuru == KayitTuru.Meslek)
+                    return MeslekAdi;
+                else
+                    return null;
+            }
+        }
         public string UlkeAdi { get; set; }
         public string IlAdi { get; set; }
         public string IlceAdi { get; set; }
@@ -21,9 +36,25 @@ namespace AbcYazilim.OgrenciTakip.Model.Dto
     public class AdresBilgileriL : BaseEntity
     {
         public string KisiAdi { get; set; }
+        public string PersonelAdi { get; set; }
         public string MeslekAdi { get; set; }
-        public string KayitHesabiAdi =>
-        KayitTuru == KayitTuru.Kisi ? KisiAdi : MeslekAdi;
+        //public string KayitHesabiAdi =>
+        //KayitTuru == KayitTuru.Kisi ? KisiAdi : MeslekAdi;
+
+        public string KayitHesabiAdi
+        {
+            get
+            {
+                if (KayitTuru == KayitTuru.Kisi)
+                    return KisiAdi;
+                else if (KayitTuru == KayitTuru.Personel)
+                    return PersonelAdi;
+                else if (KayitTuru == KayitTuru.Meslek)
+                    return MeslekAdi;
+                else
+                    return null;
+            }
+        }
         public string UlkeAdi { get; set; }
         public string IlAdi { get; set; }
         public string IlceAdi { get; set; }

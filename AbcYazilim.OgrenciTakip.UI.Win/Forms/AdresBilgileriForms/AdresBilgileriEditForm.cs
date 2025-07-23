@@ -52,6 +52,8 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.AdresBilgiForms
    
             if (entity.KayitTuru == KayitTuru.Kisi)
                 txtKayitHesabi.Id = entity.KisiId ?? 0;
+            else if (entity.KayitTuru == KayitTuru.Personel)
+                txtKayitHesabi.Id = entity.PersonelId ?? 0;
             else if (entity.KayitTuru == KayitTuru.Meslek)
                 txtKayitHesabi.Id = entity.MeslekId ?? 0;
             else
@@ -84,6 +86,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.AdresBilgiForms
             var kayitTuru = txtKayitTuru.SelectedItem?.ToString().GetEnum<KayitTuru>() ?? KayitTuru.Kisi;
 
             var kisiId = kayitTuru == KayitTuru.Kisi ? txtKayitHesabi.Id : null;
+            var personelId = kayitTuru == KayitTuru.Personel ? txtKayitHesabi.Id : null;
             var meslekId = kayitTuru == KayitTuru.Meslek ? txtKayitHesabi.Id : null;
 
             CurrentEntity = new AdresBilgileri
@@ -95,6 +98,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.AdresBilgiForms
                 KayitTuru = kayitTuru,
                 AdresTipi = txtAdresTipi.Text.GetEnum<AdresTipi>(),               
                 KisiId = kisiId,
+                PersonelId = personelId,
                 MeslekId = meslekId,
                 UlkeId=txtUlke.Id,
                 IlId = txtIl.Id,
@@ -138,6 +142,8 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.AdresBilgiForms
                     var kayitTuru = txtKayitTuru.Text.GetEnum<KayitTuru>();
                     if (kayitTuru == KayitTuru.Kisi)
                         sec.Sec(txtKayitHesabi, KartTuru.Kisi);
+                    else if (kayitTuru == KayitTuru.Personel)
+                        sec.Sec(txtKayitHesabi, KartTuru.Personel);
                     else if (kayitTuru == KayitTuru.Meslek)
                         sec.Sec(txtKayitHesabi, KartTuru.Meslek);
                     else
@@ -168,6 +174,8 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.AdresBilgiForms
 
             var kayitTuru = txtKayitTuru.Text.GetEnum<KayitTuru>();
             var kisiId = kayitTuru == KayitTuru.Kisi ? txtKayitHesabi.Id : null;
+            var personelId = kayitTuru == KayitTuru.Personel ? txtKayitHesabi.Id :0 ;
+           
 
             if (kayitTuru == KayitTuru.Kisi && kisiId.HasValue && kisiId > 0)
             {
@@ -201,7 +209,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.AdresBilgiForms
                     context.SaveChanges();
                 }
             }
-
+          
 
             return true;
         }

@@ -11,8 +11,23 @@ namespace AbcYazilim.OgrenciTakip.Model.Dto
     {
      
         public string KisiAdi { get; set; }
+        public string PersonelAdi { get; set; }
         public string MeslekAdi { get; set; }
-        public string KayitHesabiAdi => KayitTuru == KayitTuru.Kisi ? KisiAdi : MeslekAdi;
+        //public string KayitHesabiAdi => KayitTuru == KayitTuru.Kisi ? KisiAdi : MeslekAdi;
+        public string KayitHesabiAdi
+        {
+            get
+            {
+                if (KayitTuru == KayitTuru.Kisi)
+                    return KisiAdi;
+                else if (KayitTuru == KayitTuru.Personel)
+                    return PersonelAdi;
+                else if (KayitTuru == KayitTuru.Meslek)
+                    return MeslekAdi;
+                else
+                    return null;
+            }
+        }
         public string SosyalMedyaPlatformuAdi { get; set; }
         public string OzelKod1Adi { get; set; }
         public string OzelKod2Adi { get; set; }
@@ -21,14 +36,30 @@ namespace AbcYazilim.OgrenciTakip.Model.Dto
     public class IletisimL : BaseEntity
     {
         public string KisiAdi { get; set; }
+        public string PersonelAdi { get; set; }
         public string MeslekAdi { get; set; }
         public IletisimTuru IletisimTuru { get; set; }
         public IletisimDurumu IzinDurumu { get; set; }
         public IletisimKanalTipi IletisimKanalTipi { get; set; }
         public string Kanallar { get; set; }
         public KayitTuru KayitTuru { get; set; }
-        public string KayitHesabiAdi =>
-         KayitTuru == KayitTuru.Kisi ? KisiAdi : MeslekAdi;
+        //public string KayitHesabiAdi =>
+        // KayitTuru == KayitTuru.Kisi ? KisiAdi : MeslekAdi;
+
+        public string KayitHesabiAdi
+        {
+            get
+            {
+                if (KayitTuru == KayitTuru.Kisi)
+                    return KisiAdi;
+                else if (KayitTuru == KayitTuru.Personel)
+                    return PersonelAdi;
+                else if (KayitTuru == KayitTuru.Meslek)
+                    return MeslekAdi;
+                else
+                    return null;
+            }
+        }
         public string Baslik { get; set; }
         public string UlkeKodu { get; set; }
         public string Numara { get; set; }

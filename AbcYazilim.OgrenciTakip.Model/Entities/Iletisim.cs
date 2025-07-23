@@ -53,6 +53,7 @@ namespace AbcYazilim.OgrenciTakip.Model.Entities
         public string Aciklama { get; set; }
         public long? SosyalMedyaPlatformuId { get; set; }
         public long? KisiId { get; set; }
+        public long? PersonelId { get; set; }
         public long? MeslekId { get; set; }
         public long? OzelKod1Id { get; set; }
         public long? OzelKod2Id { get; set; }
@@ -60,6 +61,7 @@ namespace AbcYazilim.OgrenciTakip.Model.Entities
 
         public SosyalMedyaPlatformu SosyalMedyaPlatformu { get; set; }
         public Kisi Kisi { get; set; }
+        public Personel Personel { get; set; }
         public Meslek Meslek { get; set; }
         public OzelKod OzelKod1 { get; set; }
         public OzelKod OzelKod2 { get; set; }

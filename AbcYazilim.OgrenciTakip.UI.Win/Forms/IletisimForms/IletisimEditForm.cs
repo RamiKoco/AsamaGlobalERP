@@ -65,6 +65,8 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.IletisimForms
             txtKayitTuru.SelectedItem = entity.KayitTuru.ToName();
             if (entity.KayitTuru == KayitTuru.Kisi)
                 txtKayitHesabi.Id = entity.KisiId ?? 0;
+            else if (entity.KayitTuru == KayitTuru.Personel)
+                txtKayitHesabi.Id = entity.PersonelId ?? 0;
             else if (entity.KayitTuru == KayitTuru.Meslek)
                 txtKayitHesabi.Id = entity.MeslekId ?? 0;
             else
@@ -103,6 +105,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.IletisimForms
 
             var kisiId = kayitTuru == KayitTuru.Kisi ? txtKayitHesabi.Id : null;
             var meslekId = kayitTuru == KayitTuru.Meslek ? txtKayitHesabi.Id : null;
+            var personelId = kayitTuru == KayitTuru.Personel ? txtKayitHesabi.Id : null;
             CurrentEntity = new Iletisim
             {
                 Id = Id,
@@ -113,6 +116,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.IletisimForms
                 Web = txtWeb.Text,
                 KayitTuru = kayitTuru,
                 KisiId = kisiId,
+                PersonelId = personelId,
                 MeslekId = meslekId,
                 IletisimTuru = txtIletisimTurleri.Text.GetEnum<IletisimTuru>(),
                 IzinDurumu = txtIzinDurumu.Text.GetEnum<IletisimDurumu>(),
@@ -252,6 +256,8 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.IletisimForms
                     var kayitTuru = txtKayitTuru.Text.GetEnum<KayitTuru>();
                     if (kayitTuru == KayitTuru.Kisi)
                         sec.Sec(txtKayitHesabi, KartTuru.Kisi);
+                    else if (kayitTuru == KayitTuru.Personel)
+                        sec.Sec(txtKayitHesabi, KartTuru.Personel);
                     else if (kayitTuru == KayitTuru.Meslek)
                         sec.Sec(txtKayitHesabi, KartTuru.Meslek);
                     else
@@ -278,6 +284,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.IletisimForms
             var kayitTuru = txtKayitTuru.Text.GetEnum<KayitTuru>();
 
             var kisiId = kayitTuru == KayitTuru.Kisi ? txtKayitHesabi.Id : null;
+            var personelId = kayitTuru == KayitTuru.Personel ? txtKayitHesabi.Id : null;
 
             if (kayitTuru == KayitTuru.Kisi && kisiId.HasValue && kisiId > 0)
             {
@@ -323,6 +330,49 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.IletisimForms
                 }
             }
 
+            if (kayitTuru == KayitTuru.Personel && personelId.HasValue && personelId > 0)
+            {
+                var iletisimEntity = CurrentEntity as Iletisim;
+                if (iletisimEntity == null) return false;
+
+                var entity = new IletisimBilgileri
+                {
+                    PersonelId = personelId.Value,
+                    IletisimId = iletisimEntity.Id,
+                    Veli = true,
+                    IletisimTuru = iletisimEntity.IletisimTuru
+                };
+
+                using (var context = new OgrenciTakipContext())
+                {
+                    // Aynı iletişim kaydına bağlı olan tüm kayıtları bul (yani IletisimId eşleşenler)
+                    var mevcutKayitlar = context.IletisimBilgileri
+                        .Where(x => x.IletisimId == iletisimEntity.Id)
+                        .ToList();
+
+                    // Eğer varsa hepsini sil
+                    if (mevcutKayitlar.Any())
+                    {
+                        foreach (var kayit in mevcutKayitlar)
+                        {
+                            context.IletisimBilgileri.Remove(kayit);
+                        }
+                        context.SaveChanges();
+                    }
+
+                    // Yeni kaydı ekle
+                    var yeniKayit = new IletisimBilgileri
+                    {
+                        PersonelId = personelId.Value,
+                        IletisimId = iletisimEntity.Id,
+                        Veli = true,
+                        IletisimTuru = iletisimEntity.IletisimTuru
+                    };
+
+                    context.IletisimBilgileri.Add(yeniKayit);
+                    context.SaveChanges();
+                }
+            }
             return true;
         }
        

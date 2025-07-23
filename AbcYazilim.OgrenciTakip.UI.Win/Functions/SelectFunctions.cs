@@ -32,6 +32,7 @@ using AbcYazilim.OgrenciTakip.UI.Win.Forms.MeslekForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.OdemeTuruForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.OkulForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.OzelKodForms;
+using AbcYazilim.OgrenciTakip.UI.Win.Forms.PersonelForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.PozisyonForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.RehberForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.RenkForms;
@@ -661,6 +662,15 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Functions
                             {
                                 _btnEdit.Id = entity.Id;
                                 _btnEdit.EditValue = entity.Ad ;
+                            }
+                        }
+                        else if (_kartTuru == KartTuru.Personel)
+                        {
+                            var entity = (PersonelL)ShowListForms<PersonelListForm>.ShowDialogListForm(KartTuru.Personel, _btnEdit.Id);
+                            if (entity != null)
+                            {
+                                _btnEdit.Id = entity.Id;
+                                _btnEdit.EditValue = entity.Ad;
                             }
                         }
                         else if (_kartTuru == KartTuru.Meslek)

@@ -27,6 +27,7 @@ namespace AbcYazilim.OgrenciTakip.Model.Entities
         public AdresTipi AdresTipi { get; set; } = AdresTipi.Genel;
         public string KayitHesabiAdi { get; set; }
         public long? KisiId { get; set; }
+        public long? PersonelId { get; set; }
         public long? MeslekId { get; set; }
         public long? UlkeId { get; set; } 
         public long? IlId { get; set; }
@@ -41,6 +42,7 @@ namespace AbcYazilim.OgrenciTakip.Model.Entities
         public bool VarsayilanSevkiyatMi { get; set; } = false;
       
         public Kisi Kisi { get; set; }
+        public Personel Personel { get; set; }
         public Meslek Meslek { get; set; }
         public Ulke Ulke { get; set; }
         public Il Il { get; set; }

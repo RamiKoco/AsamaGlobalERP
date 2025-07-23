@@ -19,6 +19,7 @@ namespace AbcYazilim.OgrenciTakip.Bll.General
             {
                 Id = x.Id,
                 KisiId = (long)x.AdresBilgileri.KisiId,
+                PersonelId = (long)x.AdresBilgileri.PersonelId,
                 AdresBilgileriId = x.AdresBilgileriId,
                 Baslik = x.AdresBilgileri.Baslik,
                 KayitTuru = x.AdresBilgileri.KayitTuru,
@@ -31,13 +32,7 @@ namespace AbcYazilim.OgrenciTakip.Bll.General
                 UlkeAdi = x.AdresBilgileri.Ulke.UlkeAdi,              
                 IlAdi = x.AdresBilgileri.Il.IlAdi,              
                 IlceAdi = x.AdresBilgileri.Ilce.IlceAdi,
-                AdresTurleriAdi = x.AdresBilgileri.AdresTurleri.Ad
-                //Aciklama = x.AdresBilgileri.Aciklama,
-                //VarsayilanMi = x.AdresBilgileri.VarsayilanMi,
-                //VarsayilanFaturaMi = x.AdresBilgileri.VarsayilanFaturaMi,
-                //VarsayilanSevkiyatMi = x.AdresBilgileri.VarsayilanSevkiyatMi,  
-                //OzelKod1Adi = x.AdresBilgileri.OzelKod1.OzelKodAdi,              
-                //OzelKod2Adi = x.AdresBilgileri.OzelKod2.OzelKodAdi,               
+                AdresTurleriAdi = x.AdresBilgileri.AdresTurleri.Ad            
 
 
             }).ToList();
