@@ -15,7 +15,6 @@ namespace AbcYazilim.OgrenciTakip.Model.Entities
 
         [StringLength(500)]
         public string Aciklama { get; set; }
-
         public int? KayitTuru { get; set; }
         public long? OzelKod1Id { get; set; }
         public long? OzelKod2Id { get; set; }
