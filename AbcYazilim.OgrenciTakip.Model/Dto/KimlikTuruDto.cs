@@ -19,5 +19,9 @@ namespace AbcYazilim.OgrenciTakip.Model.Dto
         public string OzelKod1Adi { get; set; }
         public string OzelKod2Adi { get; set; }
         public string Aciklama { get; set; }
+
+        // Yeni eklenen alanlar:
+        public string KarakterTipi { get; set; }
+        public int Uzunluk { get; set; }
     }
 }

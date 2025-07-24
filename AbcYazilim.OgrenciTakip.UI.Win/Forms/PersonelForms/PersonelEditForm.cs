@@ -37,8 +37,43 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.PersonelForms
             txtKanGrubu.Properties.Items.AddRange(EnumFunctions.GetEnumDescriptionList<KanGrubu>());
             txtAskerlikDurumu.Properties.Items.AddRange(EnumFunctions.GetEnumDescriptionList<AskerlikDurumu>());
             txtMedeniDurum.Properties.Items.AddRange(EnumFunctions.GetEnumDescriptionList<MedeniDurum>());
-        }
+            txtKimlikTuru.EditValueChanged += TxtKimlikTuru_EditValueChanged;
 
+
+        }
+        private void TxtKimlikTuru_IdChanged(object sender, EventArgs e)
+        {
+            if (txtKimlikTuru.Id == null)
+                return;
+
+            var bll = new KimlikTuruBll();
+            var secilen = bll.Single(x => x.Id == (long)txtKimlikTuru.Id) as KimlikTuru;
+
+            int yeniUzunluk = secilen?.Uzunluk ?? 11;
+            txtKimlikNo.Properties.MaxLength = yeniUzunluk;
+
+            if (txtKimlikNo.Text.Length > yeniUzunluk)
+                txtKimlikNo.Text = txtKimlikNo.Text.Substring(0, yeniUzunluk);
+        }
+        private void TxtKimlikTuru_EditValueChanged(object sender, EventArgs e)
+        {
+            if (txtKimlikTuru.EditValue == null)
+                return;
+
+            var bll = new KimlikTuruBll();
+
+            long secilenId;
+            if (long.TryParse(txtKimlikTuru.EditValue.ToString(), out secilenId))
+            {
+                var secilen = bll.Single(x => x.Id == secilenId) as KimlikTuru;
+                int yeniUzunluk = secilen?.Uzunluk ?? 11;
+
+                txtKimlikNo.Properties.MaxLength = yeniUzunluk;
+
+                if (txtKimlikNo.Text.Length > yeniUzunluk)
+                    txtKimlikNo.Text = txtKimlikNo.Text.Substring(0, yeniUzunluk);
+            }
+        }
         public override void Yukle()
         {
             EtiketleriYukle();
@@ -78,9 +113,9 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.PersonelForms
 
         protected override void NesneyiKontrollereBagla()
         {
-            var entity = (PersonelS)OldEntity;
+            var entity = (PersonelS)OldEntity;  
             txtKod.Text = entity.Kod;
-            txtTcKimlikNo.Text = entity.TcKimlikNo;
+            txtKimlikNo.Text = entity.KimlikNo;
             txtAdi.Text = entity.Ad;
             txtSoyAdi.Text = entity.Soyad;
             txtAnaAdi.Text = entity.AnaAdi;
@@ -96,7 +131,8 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.PersonelForms
             txtDepartman.Id = entity.DepartmanId;
             txtDepartman.Text = entity.DepartmanAdi;
             txtKimlikTuru.Id = entity.KimlikTuruId;
-            txtKimlikTuru.Text = entity.KimlikTuruAdi;
+            TxtKimlikTuru_IdChanged(txtKimlikTuru, EventArgs.Empty); 
+            txtKimlikTuru.Text = entity.KimlikTuruAdi;   
             txtMeslek.Id = entity.MeslekId;
             txtMeslek.Text = entity.MeslekAdi;
             txtUyruk.Id = entity.UyrukId;
@@ -129,7 +165,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.PersonelForms
             {
                 Id = Id,
                 Kod = txtKod.Text,
-                TcKimlikNo = txtTcKimlikNo.Text,
+                KimlikNo = txtKimlikNo.Text,
                 Ad = txtAdi.Text,
                 Soyad = txtSoyAdi.Text,
                 BabaAdi = txtBabaAdi.Text,
@@ -280,7 +316,33 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.PersonelForms
                 else if (sender == txtUyruk)
                     sec.Sec(txtUyruk);
                 else if (sender == txtKimlikTuru)
+                {
                     sec.Sec(txtKimlikTuru);
+                   
+                    if (txtKimlikTuru.Id != null)
+                    {
+                        var bll = new KimlikTuruBll();
+                        var secilen = bll.Single(x => x.Id == (long)txtKimlikTuru.Id) as KimlikTuru;
+                        int yeniUzunluk = secilen?.Uzunluk ?? 11;
+                        // MaxLength ayarla
+                        txtKimlikNo.Properties.MaxLength = yeniUzunluk;
+                        // Mask ayarı (karakter tipi)
+                        if (secilen?.KarakterTipi == "Numeric")
+                        {
+                            txtKimlikNo.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
+                            txtKimlikNo.Properties.Mask.EditMask = $@"\d{{0,{yeniUzunluk}}}"; // sadece rakam
+                        }
+                        else
+                        {
+                            txtKimlikNo.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
+                            txtKimlikNo.Properties.Mask.EditMask = null; // serbest giriş
+                        }
+
+                        // Mevcut metni kırp
+                        if (txtKimlikNo.Text.Length > yeniUzunluk)
+                            txtKimlikNo.Text = txtKimlikNo.Text.Substring(0, yeniUzunluk);
+                    }
+                }
                 else if (sender == txtMeslek)
                     sec.Sec(txtMeslek);
                 else if (sender == txtOzelKod1)

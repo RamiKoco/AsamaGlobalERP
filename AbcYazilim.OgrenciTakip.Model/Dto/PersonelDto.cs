@@ -22,7 +22,7 @@ namespace AbcYazilim.OgrenciTakip.Model.Dto
     {
         public override string Kod { get; set; }
 
-        public string TcKimlikNo { get; set; }      
+        public string KimlikNo { get; set; }      
         public string Ad { get; set; }     
         public string Soyad { get; set; }
         public Cinsiyet Cinsiyet { get; set; } 

@@ -1350,6 +1350,9 @@
     <Compile Include="UserControls\Controls\MyIbanTextEdit.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="UserControls\Controls\MyKimlikNoTextEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="UserControls\Controls\MyKodTextEdit.cs">
       <SubType>Component</SubType>
     </Compile>

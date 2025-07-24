@@ -17,6 +17,9 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.KimlikTuruForms
             Bll = new KimlikTuruBll(myDataLayoutControl);          
             BaseKartTuru = KartTuru.KimlikTuru;          
             EventsLoad();
+
+            txtKarakterTipi.Properties.Items.Clear();
+            txtKarakterTipi.Properties.Items.AddRange(new[] { "Numeric", "AlphaNumeric" });
         }
         public override void Yukle()
         {
@@ -42,10 +45,14 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.KimlikTuruForms
             txtOzelKod2.Text = entity.OzelKod2Adi;           
             txtAciklama.Text = entity.Aciklama;
             tglDurum.IsOn = entity.Durum;
+            txtKarakterTipi.Text = entity.KarakterTipi;
+            txtUzunluk.EditValue = entity.Uzunluk;
         }
 
         protected override void GuncelNesneOlustur()
         {
+            int uzunluk = 0;
+            int.TryParse(txtUzunluk.Text, out uzunluk);
             CurrentEntity = new KimlikTuru
             {
                 Id = Id,
@@ -54,6 +61,8 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.KimlikTuruForms
                 UlkeId = txtUlke.Id,
                 OzelKod1Id = txtOzelKod1.Id,
                 OzelKod2Id = txtOzelKod2.Id,
+                KarakterTipi = txtKarakterTipi.SelectedItem?.ToString() ?? "",
+                Uzunluk = uzunluk,
                 Aciklama = txtAciklama.Text,
                 Durum = tglDurum.IsOn
             };
@@ -72,6 +81,6 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.KimlikTuruForms
                     sec.Sec(txtUlke, KartTuru.KimlikTuru);
 
 
-        }
+        }     
     }
 }

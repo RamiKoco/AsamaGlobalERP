@@ -13,6 +13,11 @@ namespace AbcYazilim.OgrenciTakip.Model.Entities
         [Required, StringLength(50), ZorunluAlan("Kimlik Adı", "txtKimlikAdi")]
         public string KimlikAdi { get; set; }
 
+        [Required]
+        public string KarakterTipi { get; set; }// örn: "Numeric", "AlphaNumeric"
+        [Required]
+        public int Uzunluk { get; set; } // örn: 11 (T.C.), 9 (Pasaport)
+
         public long? UlkeId { get; set; }
         public long? OzelKod1Id { get; set; }
         public long? OzelKod2Id { get; set; }

@@ -1,6 +1,7 @@
 ﻿using AbcYazilim.OgrenciTakip.Bll.Base;
 using AbcYazilim.OgrenciTakip.Bll.Interfaces;
 using AbcYazilim.OgrenciTakip.Common.Enums;
+using AbcYazilim.OgrenciTakip.Data.Contexts;
 using AbcYazilim.OgrenciTakip.Model.Dto;
 using AbcYazilim.OgrenciTakip.Model.Entities;
 using AbcYazilim.OgrenciTakip.Model.Entities.Base;
@@ -24,7 +25,7 @@ namespace AbcYazilim.OgrenciTakip.Bll.General
 
                 Id = x.Id,
                 Kod = x.Kod,
-                TcKimlikNo = x.TcKimlikNo,
+                KimlikNo = x.KimlikNo,
                 Ad = x.Ad,
                 Soyad = x.Soyad,
                 BabaAdi = x.BabaAdi,
@@ -63,7 +64,7 @@ namespace AbcYazilim.OgrenciTakip.Bll.General
             {
                 Id = x.Id,
                 Kod = x.Kod,
-                TcKimlikNo = x.TcKimlikNo,
+                KimlikNo = x.KimlikNo,
                 Ad = x.Ad,
                 Soyad = x.Soyad,
                 BabaAdi = x.BabaAdi,
@@ -86,6 +87,15 @@ namespace AbcYazilim.OgrenciTakip.Bll.General
                 Aciklama = x.Aciklama
 
             }).OrderBy(x => x.Kod).ToList();
+        }
+        public KimlikTuru KimlikTuruGetir(long? kimlikTuruId)
+        {
+            if (kimlikTuruId == null) return null;
+
+            using (var db = new OgrenciTakipContext())
+            {
+                return db.KimlikTuru.SingleOrDefault(x => x.Id == kimlikTuruId);
+            }
         }
     }
 }
