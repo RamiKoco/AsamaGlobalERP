@@ -1,6 +1,7 @@
 ﻿using AbcYazilim.OgrenciTakip.Bll.General;
 using AbcYazilim.OgrenciTakip.Common.Enums;
 using AbcYazilim.OgrenciTakip.Common.Functions;
+using AbcYazilim.OgrenciTakip.Common.Message;
 using AbcYazilim.OgrenciTakip.Data.Contexts;
 using AbcYazilim.OgrenciTakip.Model.Dto;
 using AbcYazilim.OgrenciTakip.Model.Entities;
@@ -14,6 +15,7 @@ using DevExpress.XtraBars.Navigation;
 using DevExpress.XtraEditors;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 
 namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.PersonelForms
@@ -37,10 +39,11 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.PersonelForms
             txtKanGrubu.Properties.Items.AddRange(EnumFunctions.GetEnumDescriptionList<KanGrubu>());
             txtAskerlikDurumu.Properties.Items.AddRange(EnumFunctions.GetEnumDescriptionList<AskerlikDurumu>());
             txtMedeniDurum.Properties.Items.AddRange(EnumFunctions.GetEnumDescriptionList<MedeniDurum>());
+            // Diğer initializationlar...
+            txtKimlikNo.Validating += TxtKimlikNo_Validating;
             txtKimlikTuru.EditValueChanged += TxtKimlikTuru_EditValueChanged;
-
-
         }
+    
         private void TxtKimlikTuru_IdChanged(object sender, EventArgs e)
         {
             if (txtKimlikTuru.Id == null)
@@ -62,16 +65,65 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.PersonelForms
 
             var bll = new KimlikTuruBll();
 
-            long secilenId;
-            if (long.TryParse(txtKimlikTuru.EditValue.ToString(), out secilenId))
+            if (long.TryParse(txtKimlikTuru.EditValue.ToString(), out long secilenId))
             {
                 var secilen = bll.Single(x => x.Id == secilenId) as KimlikTuru;
-                int yeniUzunluk = secilen?.Uzunluk ?? 11;
+                if (secilen == null)
+                    return;
 
+                int yeniUzunluk = secilen.Uzunluk;
+
+                // MaxLength ayarla
                 txtKimlikNo.Properties.MaxLength = yeniUzunluk;
 
-                if (txtKimlikNo.Text.Length > yeniUzunluk)
-                    txtKimlikNo.Text = txtKimlikNo.Text.Substring(0, yeniUzunluk);
+                // Mask kapalı, çünkü Validating ile kontrol ediyoruz
+                txtKimlikNo.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
+                txtKimlikNo.Properties.Mask.EditMask = null;
+            }
+        }
+        private void TxtKimlikNo_Validating(object sender, CancelEventArgs e)
+        {
+            if (txtKimlikTuru.Id == null)
+                return;
+
+            var bll = new KimlikTuruBll();
+            var secilen = bll.Single(x => x.Id == (long)txtKimlikTuru.Id) as KimlikTuru;
+
+            if (secilen == null)
+                return;
+
+            int istenenUzunluk = secilen.Uzunluk;
+            string karakterTipi = secilen.KarakterTipi;
+            string girilen = txtKimlikNo.Text.Trim();
+
+            // Uzunluk kontrolü
+            if (girilen.Length != istenenUzunluk)
+            {
+                Messages.UyariMesaji($"Kimlik numarası {istenenUzunluk} karakter olmalıdır.");
+                e.Cancel = true;
+                return;
+            }
+
+            // Karakter tipi kontrolü
+            if (karakterTipi == "Numeric")
+            {
+                // Sadece rakam kontrolü
+                if (!System.Text.RegularExpressions.Regex.IsMatch(girilen, @"^\d+$"))
+                {
+                    Messages.UyariMesaji("Kimlik numarası sadece rakamlardan oluşmalıdır.");
+                    e.Cancel = true;
+                    return;
+                }
+            }
+            else if (karakterTipi == "AlphaNumeric")
+            {
+                // Harf ve rakam kontrolü
+                if (!System.Text.RegularExpressions.Regex.IsMatch(girilen, @"^[a-zA-Z0-9]+$"))
+                {
+                    Messages.UyariMesaji("Kimlik numarası sadece harf ve rakamlardan oluşmalıdır.");
+                    e.Cancel = true;
+                    return;
+                }
             }
         }
         public override void Yukle()
@@ -299,6 +351,38 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.PersonelForms
 
         public override bool Kaydet(bool kapanis)
         {
+            if (txtKimlikTuru.Id != null)
+            {
+                var bll = new KimlikTuruBll();
+                var secilen = bll.Single(x => x.Id == (long)txtKimlikTuru.Id) as KimlikTuru;
+                int istenenUzunluk = secilen?.Uzunluk ?? 0;
+                string karakterTipi = secilen?.KarakterTipi;
+                string girilen = txtKimlikNo.Text?.Trim();
+
+                // MASK boşluklarını temizle (örn: ____)
+                girilen = girilen?.Replace("_", "");
+
+                // Uzunluk kontrolü
+                if (girilen.Length != istenenUzunluk)
+                {
+                    Messages.UyariMesaji($"Kimlik numarası tam {istenenUzunluk} karakter olmalıdır.");
+                    return false;
+                }
+
+                // Karakter tipi kontrolü
+                if (karakterTipi == "Numeric" && !System.Text.RegularExpressions.Regex.IsMatch(girilen, @"^\d+$"))
+                {
+                    Messages.UyariMesaji("Kimlik numarası sadece sayılardan oluşmalıdır.");
+                    return false;
+                }
+
+                if (karakterTipi == "AlphaNumeric" && !System.Text.RegularExpressions.Regex.IsMatch(girilen, @"^[a-zA-Z0-9]+$"))
+                {
+                    Messages.UyariMesaji("Kimlik numarası sadece harf ve rakamlardan oluşmalıdır.");
+                    return false;
+                }
+            }
+
             BagliTabloKaydet();
             _oldEtiketIdListesi = _guncelEtiketIdListesi.ToList();
             var sonuc = base.Kaydet(kapanis);
@@ -318,27 +402,38 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.PersonelForms
                 else if (sender == txtKimlikTuru)
                 {
                     sec.Sec(txtKimlikTuru);
-                   
+
                     if (txtKimlikTuru.Id != null)
                     {
                         var bll = new KimlikTuruBll();
                         var secilen = bll.Single(x => x.Id == (long)txtKimlikTuru.Id) as KimlikTuru;
                         int yeniUzunluk = secilen?.Uzunluk ?? 11;
-                        // MaxLength ayarla
+                        string karakterTipi = secilen?.KarakterTipi;
+
+                        // Zorunlu uzunluk
                         txtKimlikNo.Properties.MaxLength = yeniUzunluk;
-                        // Mask ayarı (karakter tipi)
-                        if (secilen?.KarakterTipi == "Numeric")
+
+                        // Maske ayarları
+                        txtKimlikNo.Properties.Mask.AutoComplete = DevExpress.XtraEditors.Mask.AutoCompleteType.None;
+                        txtKimlikNo.Properties.Mask.UseMaskAsDisplayFormat = true;
+
+                        if (karakterTipi == "Numeric")
                         {
                             txtKimlikNo.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
-                            txtKimlikNo.Properties.Mask.EditMask = $@"\d{{0,{yeniUzunluk}}}"; // sadece rakam
+                            txtKimlikNo.Properties.Mask.EditMask = $@"\d{{{yeniUzunluk}}}";
+                        }
+                        else if (karakterTipi == "AlphaNumeric")
+                        {
+                            txtKimlikNo.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
+                            txtKimlikNo.Properties.Mask.EditMask = $@"[a-zA-Z0-9]{{{yeniUzunluk}}}";
                         }
                         else
                         {
                             txtKimlikNo.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
-                            txtKimlikNo.Properties.Mask.EditMask = null; // serbest giriş
+                            txtKimlikNo.Properties.Mask.EditMask = null;
                         }
 
-                        // Mevcut metni kırp
+                        // Giriş fazlaysa kırp
                         if (txtKimlikNo.Text.Length > yeniUzunluk)
                             txtKimlikNo.Text = txtKimlikNo.Text.Substring(0, yeniUzunluk);
                     }
