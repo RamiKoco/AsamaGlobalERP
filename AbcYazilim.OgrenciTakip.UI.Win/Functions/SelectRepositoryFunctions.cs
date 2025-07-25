@@ -1,21 +1,24 @@
-﻿using DevExpress.XtraEditors;
-using DevExpress.XtraEditors.Repository;
-using DevExpress.XtraGrid.Columns;
-using DevExpress.XtraGrid.Views.Grid;
-using System;
-using System.Windows.Forms;
-using AbcYazilim.OgrenciTakip.Common.Enums;
+﻿using AbcYazilim.OgrenciTakip.Common.Enums;
 using AbcYazilim.OgrenciTakip.Common.Functions;
 using AbcYazilim.OgrenciTakip.Model.Dto;
 using AbcYazilim.OgrenciTakip.Model.Entities;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.BankaForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.BankaHesapForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.BankaSubeForms;
+using AbcYazilim.OgrenciTakip.UI.Win.Forms.BelgeTuruForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.IptalNedeniForms;
+using AbcYazilim.OgrenciTakip.UI.Win.Forms.KasaForms;
+using AbcYazilim.OgrenciTakip.UI.Win.Forms.KurguForms;
+using AbcYazilim.OgrenciTakip.UI.Win.Forms.KurumForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.OkulForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.YakinlikForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Show;
-using AbcYazilim.OgrenciTakip.UI.Win.Forms.KasaForms;
+using DevExpress.XtraEditors;
+using DevExpress.XtraEditors.Repository;
+using DevExpress.XtraGrid.Columns;
+using DevExpress.XtraGrid.Views.Grid;
+using System;
+using System.Windows.Forms;
 
 namespace AbcYazilim.OgrenciTakip.UI.Win.Functions
 {
@@ -269,6 +272,30 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Functions
                     }
 
                 }
+                    break;
+
+                case "repositoryKurum":
+                    {
+                        var id = _tablo.GetRowCellId(_idColumn);                        
+                        var entity = (KurumlarL)ShowListForms<KurumlarListForm>.ShowDialogListForm(KartTuru.Kurumlar, id);
+                        if (entity == null) return;
+                        _tablo.SetFocusedRowCellValue(_idColumn, entity.Id);
+                        _tablo.SetFocusedRowCellValue(_nameColumn, entity.KurumTuruAdi);
+                        _navigator.Buttons.DoClick(_navigator.Buttons.EndEdit);   
+                    }
+                    break;
+
+                case "repositoryBelge":
+                    {
+
+                        var id = _tablo.GetRowCellId(_idColumn);
+                        var entity = (BelgeTuruL)ShowListForms<BelgeTuruListForm>.ShowDialogListForm(KartTuru.BelgeTuru, id);
+                        if (entity == null) return;
+                        _tablo.SetFocusedRowCellValue(_idColumn, entity.Id);
+                        _tablo.SetFocusedRowCellValue(_nameColumn, entity.BelgeAdi);
+                        _navigator.Buttons.DoClick(_navigator.Buttons.EndEdit);                        
+
+                    }
                     break;
             }
         }

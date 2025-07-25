@@ -18,7 +18,6 @@ using AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFormTa
 using DevExpress.XtraBars;
 using DevExpress.XtraBars.Navigation;
 using DevExpress.XtraEditors;
-using GeneralFunctions = AbcYazilim.OgrenciTakip.UI.Win.Functions.GeneralFunctions;
 
 namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.TahakkukForms
 {

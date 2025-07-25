@@ -1512,6 +1512,12 @@
     <Compile Include="UserControls\UserControl\PersonelEditFormTable\IletisimBilgileriTable.Designer.cs">
       <DependentUpon>IletisimBilgileriTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UserControl\PersonelEditFormTable\PersonelBelgeTable.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UserControl\PersonelEditFormTable\PersonelBelgeTable.Designer.cs">
+      <DependentUpon>PersonelBelgeTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UserControl\TahakkukEditFormTable\AileBilgileriTable.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -2220,6 +2226,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControl\PersonelEditFormTable\IletisimBilgileriTable.resx">
       <DependentUpon>IletisimBilgileriTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControl\PersonelEditFormTable\PersonelBelgeTable.resx">
+      <DependentUpon>PersonelBelgeTable.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControl\TahakkukEditFormTable\AileBilgileriTable.resx">
       <DependentUpon>AileBilgileriTable.cs</DependentUpon>

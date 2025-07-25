@@ -32,11 +32,9 @@ namespace AbcYazilim.OgrenciTakip.Bll.General
                 OzelKod2Id = x.OzelKod2Id,
                 OzelKod2Adi = x.OzelKod2.OzelKodAdi,
                 Aciklama = x.Aciklama,
-                Durum = x.Durum,
-
-                    // Yeni alanlar:
                 KarakterTipi = x.KarakterTipi,
-                Uzunluk = x.Uzunluk
+                Uzunluk = x.Uzunluk,
+                Durum = x.Durum              
 
             });
         }
@@ -51,8 +49,7 @@ namespace AbcYazilim.OgrenciTakip.Bll.General
                 UlkeAdi = x.Ulke.UlkeAdi,              
                 OzelKod1Adi = x.OzelKod1.OzelKodAdi,                
                 OzelKod2Adi = x.OzelKod2.OzelKodAdi,
-                Aciklama = x.Aciklama,
-                // Yeni alanlar:
+                Aciklama = x.Aciklama,                
                 KarakterTipi = x.KarakterTipi,
                 Uzunluk = x.Uzunluk
 

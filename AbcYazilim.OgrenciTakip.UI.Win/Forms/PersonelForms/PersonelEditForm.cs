@@ -24,6 +24,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.PersonelForms
     {
         private BaseTablo _adreslerTable;
         private BaseTablo _iletisimBilgileriTable;
+        private BaseTablo _personelBelgeTable;
         private List<EtiketL> _tumEtiketler;
         private List<long> _oldEtiketIdListesi = new List<long>();
         private List<long> _guncelEtiketIdListesi = new List<long>();
@@ -153,6 +154,9 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.PersonelForms
                 _iletisimBilgileriTable.Yukle();
             if (_adreslerTable != null && TableValueChanged(_adreslerTable))
                 _adreslerTable.Yukle();
+            if (_personelBelgeTable != null && TableValueChanged(_personelBelgeTable))
+                _personelBelgeTable.Yukle();
+          
         }
         private void EtiketleriYukle()
         {
@@ -265,6 +269,13 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.PersonelForms
                 return true;
             }
 
+            if (_personelBelgeTable != null && _personelBelgeTable.HataliGiris())
+            {
+                tabUst.SelectedPage = pageBelgeler;
+                _personelBelgeTable.Tablo.GridControl.Focus();
+                return true;
+            }
+         
             return false;
         }
         protected internal override void ButonEnabledDurumu()
@@ -279,6 +290,8 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.PersonelForms
             {
                 if (_iletisimBilgileriTable != null && _iletisimBilgileriTable.TableValueChanged) return true;
                 if (_adreslerTable != null && _adreslerTable.TableValueChanged) return true;
+                if (_personelBelgeTable != null && _personelBelgeTable.TableValueChanged) return true;
+             
                 return false;
             }
 
@@ -307,6 +320,8 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.PersonelForms
                          ?.ToArray();
             if (_iletisimBilgileriTable != null && !_iletisimBilgileriTable.Kaydet()) return false;
             if (_adreslerTable != null && !_adreslerTable.Kaydet()) return false;
+            if (_personelBelgeTable != null && !_personelBelgeTable.Kaydet()) return false;
+            
 
             if (seciliEtiketIdler != null)
             {
@@ -485,6 +500,19 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.PersonelForms
                 _adreslerTable.Tablo.GridControl.Focus();
 
             }
+            else if (e.Page == pageBelgeler)
+            {
+                if (pageBelgeler.Controls.Count == 0)
+                {
+                    _personelBelgeTable = new PersonelBelgeTable().AddTable(this);
+                    pageBelgeler.Controls.Add(_personelBelgeTable);
+                    _personelBelgeTable.Yukle();
+                }
+
+                _personelBelgeTable.Tablo.GridControl.Focus();
+
+            }
+           
         }
     }
 }

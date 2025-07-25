@@ -40,6 +40,8 @@
             DevExpress.XtraLayout.RowDefinition rowDefinition5 = new DevExpress.XtraLayout.RowDefinition();
             DevExpress.XtraLayout.RowDefinition rowDefinition6 = new DevExpress.XtraLayout.RowDefinition();
             this.myDataLayoutControl = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls.MyDataLayoutControl();
+            this.txtKarakterTipi = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls.MyComboBoxEdit();
+            this.txtUzunluk = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls.MySpinEdit();
             this.txtKod = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls.MyKodTextEdit();
             this.txtUlke = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls.MyButtonEdit();
             this.txtAciklama = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls.MyMemoEdit();
@@ -55,14 +57,14 @@
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.txtUzunluk = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls.MySpinEdit();
             this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.txtKarakterTipi = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls.MyComboBoxEdit();
             this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.resimMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.myDataLayoutControl)).BeginInit();
             this.myDataLayoutControl.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtKarakterTipi.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtUzunluk.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKod.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtUlke.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAciklama.Properties)).BeginInit();
@@ -78,9 +80,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtUzunluk.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtKarakterTipi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
             this.SuspendLayout();
             // 
@@ -110,6 +110,56 @@
             this.myDataLayoutControl.Size = new System.Drawing.Size(568, 184);
             this.myDataLayoutControl.TabIndex = 0;
             this.myDataLayoutControl.Text = "myDataLayoutControl1";
+            // 
+            // txtKarakterTipi
+            // 
+            this.txtKarakterTipi.EnterMoveNextControl = true;
+            this.txtKarakterTipi.Location = new System.Drawing.Point(94, 36);
+            this.txtKarakterTipi.MenuManager = this.ribbonControl;
+            this.txtKarakterTipi.Name = "txtKarakterTipi";
+            this.txtKarakterTipi.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
+            this.txtKarakterTipi.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtKarakterTipi.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txtKarakterTipi.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.txtKarakterTipi.Size = new System.Drawing.Size(114, 20);
+            this.txtKarakterTipi.StatusBarAciklama = "Karakter Tipi Seçiniz.";
+            this.txtKarakterTipi.StatusBarKisaYol = "F4 :";
+            this.txtKarakterTipi.StatusBarKisaYolAciklama = "Seçim Yap";
+            this.txtKarakterTipi.StyleController = this.myDataLayoutControl;
+            this.txtKarakterTipi.TabIndex = 9;
+            // 
+            // txtUzunluk
+            // 
+            this.txtUzunluk.EditValue = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.txtUzunluk.EnterMoveNextControl = true;
+            this.txtUzunluk.Location = new System.Drawing.Point(399, 36);
+            this.txtUzunluk.MenuManager = this.ribbonControl;
+            this.txtUzunluk.Name = "txtUzunluk";
+            this.txtUzunluk.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
+            this.txtUzunluk.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
+            this.txtUzunluk.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtUzunluk.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txtUzunluk.Properties.MaskSettings.Set("mask", "d");
+            this.txtUzunluk.Properties.MaxValue = new decimal(new int[] {
+            20,
+            0,
+            0,
+            0});
+            this.txtUzunluk.Properties.MinValue = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.txtUzunluk.Size = new System.Drawing.Size(157, 20);
+            this.txtUzunluk.StatusBarAciklama = null;
+            this.txtUzunluk.StyleController = this.myDataLayoutControl;
+            this.txtUzunluk.TabIndex = 8;
             // 
             // txtKod
             // 
@@ -377,38 +427,6 @@
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem4.TextVisible = false;
             // 
-            // txtUzunluk
-            // 
-            this.txtUzunluk.EditValue = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.txtUzunluk.EnterMoveNextControl = true;
-            this.txtUzunluk.Location = new System.Drawing.Point(399, 36);
-            this.txtUzunluk.MenuManager = this.ribbonControl;
-            this.txtUzunluk.Name = "txtUzunluk";
-            this.txtUzunluk.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
-            this.txtUzunluk.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
-            this.txtUzunluk.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtUzunluk.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.txtUzunluk.Properties.MaskSettings.Set("mask", "d");
-            this.txtUzunluk.Properties.MaxValue = new decimal(new int[] {
-            20,
-            0,
-            0,
-            0});
-            this.txtUzunluk.Properties.MinValue = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.txtUzunluk.Size = new System.Drawing.Size(157, 20);
-            this.txtUzunluk.StatusBarAciklama = null;
-            this.txtUzunluk.StyleController = this.myDataLayoutControl;
-            this.txtUzunluk.TabIndex = 8;
-            // 
             // layoutControlItem9
             // 
             this.layoutControlItem9.AppearanceItemCaption.ForeColor = System.Drawing.Color.Maroon;
@@ -422,24 +440,6 @@
             this.layoutControlItem9.Size = new System.Drawing.Size(243, 24);
             this.layoutControlItem9.Text = "Uzunluk";
             this.layoutControlItem9.TextSize = new System.Drawing.Size(70, 13);
-            // 
-            // txtKarakterTipi
-            // 
-            this.txtKarakterTipi.EnterMoveNextControl = true;
-            this.txtKarakterTipi.Location = new System.Drawing.Point(94, 36);
-            this.txtKarakterTipi.MenuManager = this.ribbonControl;
-            this.txtKarakterTipi.Name = "txtKarakterTipi";
-            this.txtKarakterTipi.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
-            this.txtKarakterTipi.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtKarakterTipi.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.txtKarakterTipi.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.txtKarakterTipi.Size = new System.Drawing.Size(114, 20);
-            this.txtKarakterTipi.StatusBarAciklama = null;
-            this.txtKarakterTipi.StatusBarKisaYol = "F4 :";
-            this.txtKarakterTipi.StatusBarKisaYolAciklama = null;
-            this.txtKarakterTipi.StyleController = this.myDataLayoutControl;
-            this.txtKarakterTipi.TabIndex = 9;
             // 
             // layoutControlItem8
             // 
@@ -469,6 +469,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.resimMenu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.myDataLayoutControl)).EndInit();
             this.myDataLayoutControl.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.txtKarakterTipi.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtUzunluk.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKod.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtUlke.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAciklama.Properties)).EndInit();
@@ -484,9 +486,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtUzunluk.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtKarakterTipi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -10,8 +10,8 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls
     {
         public MyKimlikNoTextEdit()
         {
-            Properties.Appearance.TextOptions.HAlignment = HorzAlignment.Center;           
-            //Properties.Mask.AutoComplete = AutoCompleteType.None;
+            Properties.Appearance.TextOptions.HAlignment = HorzAlignment.Center;
+            Properties.Mask.AutoComplete = AutoCompleteType.None;
             StatusBarAciklama = "Kimlik No Giriniz";
         }
     }

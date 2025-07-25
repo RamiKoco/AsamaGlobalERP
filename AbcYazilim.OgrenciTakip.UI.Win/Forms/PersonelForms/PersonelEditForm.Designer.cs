@@ -820,6 +820,7 @@
             this.txtKimlikNo.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.txtKimlikNo.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
             this.txtKimlikNo.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtKimlikNo.Properties.Mask.AutoComplete = DevExpress.XtraEditors.Mask.AutoCompleteType.None;
             this.txtKimlikNo.Properties.MaxLength = 50;
             this.txtKimlikNo.Size = new System.Drawing.Size(161, 20);
             this.txtKimlikNo.StatusBarAciklama = "Kimlik No Giriniz";
@@ -1261,7 +1262,7 @@
             this.pageBelgeler.Caption = "Belgeler";
             this.pageBelgeler.ImageOptions.Image = global::AbcYazilim.OgrenciTakip.UI.Win.Properties.Resources.article_16x161;
             this.pageBelgeler.Name = "pageBelgeler";
-            this.pageBelgeler.Size = new System.Drawing.Size(888, 241);
+            this.pageBelgeler.Size = new System.Drawing.Size(754, 223);
             // 
             // pageNotlar
             // 

@@ -14,9 +14,9 @@ namespace AbcYazilim.OgrenciTakip.Model.Entities
         public string KimlikAdi { get; set; }
 
         [Required]
-        public string KarakterTipi { get; set; }// örn: "Numeric", "AlphaNumeric"
+        public string KarakterTipi { get; set; }
         [Required]
-        public int Uzunluk { get; set; } // örn: 11 (T.C.), 9 (Pasaport)
+        public int Uzunluk { get; set; }
 
         public long? UlkeId { get; set; }
         public long? OzelKod1Id { get; set; }
