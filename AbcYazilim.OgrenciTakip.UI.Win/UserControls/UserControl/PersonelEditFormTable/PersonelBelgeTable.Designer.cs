@@ -33,8 +33,10 @@
             this.colBelgeTuruId = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
             this.colBelgeAdi = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
             this.repositoryBelge = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
-            this.colTarih = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
+            this.colBelgeNo = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
+            this.colVerilisTarihi = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
             this.repositoryTarih = new DevExpress.XtraEditors.Repository.RepositoryItemDateEdit();
+            this.colGecerlilikTarihi = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
             this.colKurumlarId = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
             this.colKurumAdi = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
             this.repositoryKurum = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
@@ -81,12 +83,16 @@
             this.tablo.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colBelgeTuruId,
             this.colBelgeAdi,
-            this.colTarih,
+            this.colBelgeNo,
+            this.colVerilisTarihi,
+            this.colGecerlilikTarihi,
             this.colKurumlarId,
             this.colKurumAdi,
             this.colAciklama});
             this.tablo.GridControl = this.grid;
             this.tablo.Name = "tablo";
+            this.tablo.OptionsCustomization.AllowColumnMoving = false;
+            this.tablo.OptionsCustomization.AllowSort = false;
             this.tablo.OptionsMenu.EnableColumnMenu = false;
             this.tablo.OptionsMenu.EnableFooterMenu = false;
             this.tablo.OptionsMenu.EnableGroupPanelMenu = false;
@@ -97,7 +103,6 @@
             this.tablo.OptionsView.ColumnAutoWidth = false;
             this.tablo.OptionsView.HeaderFilterButtonShowMode = DevExpress.XtraEditors.Controls.FilterButtonShowMode.Button;
             this.tablo.OptionsView.RowAutoHeight = true;
-            this.tablo.OptionsView.ShowAutoFilterRow = true;
             this.tablo.OptionsView.ShowGroupPanel = false;
             this.tablo.OptionsView.ShowViewCaption = true;
             this.tablo.StatusBarAciklama = null;
@@ -111,7 +116,6 @@
             this.colBelgeTuruId.FieldName = "BelgeTuruId";
             this.colBelgeTuruId.Name = "colBelgeTuruId";
             this.colBelgeTuruId.OptionsColumn.AllowEdit = false;
-            this.colBelgeTuruId.OptionsColumn.AllowMove = false;
             this.colBelgeTuruId.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
             this.colBelgeTuruId.OptionsColumn.ShowInCustomizationForm = false;
             this.colBelgeTuruId.OptionsFilter.AllowAutoFilter = false;
@@ -126,16 +130,15 @@
             this.colBelgeAdi.ColumnEdit = this.repositoryBelge;
             this.colBelgeAdi.FieldName = "BelgeAdi";
             this.colBelgeAdi.Name = "colBelgeAdi";
-            this.colBelgeAdi.OptionsColumn.AllowMove = false;
             this.colBelgeAdi.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
             this.colBelgeAdi.OptionsFilter.AllowAutoFilter = false;
             this.colBelgeAdi.OptionsFilter.AllowFilter = false;
-            this.colBelgeAdi.StatusBarAciklama = null;
-            this.colBelgeAdi.StatusBarKisaYol = null;
-            this.colBelgeAdi.StatusBarKisaYolAciklama = null;
+            this.colBelgeAdi.StatusBarAciklama = "Belge Türü Giriniz.";
+            this.colBelgeAdi.StatusBarKisaYol = "F4 :";
+            this.colBelgeAdi.StatusBarKisaYolAciklama = "Seçim Yap";
             this.colBelgeAdi.Visible = true;
             this.colBelgeAdi.VisibleIndex = 0;
-            this.colBelgeAdi.Width = 110;
+            this.colBelgeAdi.Width = 100;
             // 
             // repositoryBelge
             // 
@@ -145,24 +148,38 @@
             this.repositoryBelge.Name = "repositoryBelge";
             this.repositoryBelge.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             // 
-            // colTarih
+            // colBelgeNo
             // 
-            this.colTarih.AppearanceCell.Options.UseTextOptions = true;
-            this.colTarih.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colTarih.Caption = "Tarih";
-            this.colTarih.ColumnEdit = this.repositoryTarih;
-            this.colTarih.FieldName = "Tarih";
-            this.colTarih.Name = "colTarih";
-            this.colTarih.OptionsColumn.AllowMove = false;
-            this.colTarih.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
-            this.colTarih.OptionsFilter.AllowAutoFilter = false;
-            this.colTarih.OptionsFilter.AllowFilter = false;
-            this.colTarih.StatusBarAciklama = null;
-            this.colTarih.StatusBarKisaYol = null;
-            this.colTarih.StatusBarKisaYolAciklama = null;
-            this.colTarih.Visible = true;
-            this.colTarih.VisibleIndex = 1;
-            this.colTarih.Width = 133;
+            this.colBelgeNo.Caption = "Belge No";
+            this.colBelgeNo.FieldName = "BelgeNo";
+            this.colBelgeNo.Name = "colBelgeNo";
+            this.colBelgeNo.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
+            this.colBelgeNo.OptionsFilter.AllowAutoFilter = false;
+            this.colBelgeNo.OptionsFilter.AllowFilter = false;
+            this.colBelgeNo.StatusBarAciklama = "Belge No Giriniz.";
+            this.colBelgeNo.StatusBarKisaYol = null;
+            this.colBelgeNo.StatusBarKisaYolAciklama = null;
+            this.colBelgeNo.Visible = true;
+            this.colBelgeNo.VisibleIndex = 1;
+            this.colBelgeNo.Width = 90;
+            // 
+            // colVerilisTarihi
+            // 
+            this.colVerilisTarihi.AppearanceCell.Options.UseTextOptions = true;
+            this.colVerilisTarihi.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colVerilisTarihi.Caption = "Veriliş Tarihi";
+            this.colVerilisTarihi.ColumnEdit = this.repositoryTarih;
+            this.colVerilisTarihi.FieldName = "VerilisTarihi";
+            this.colVerilisTarihi.Name = "colVerilisTarihi";
+            this.colVerilisTarihi.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
+            this.colVerilisTarihi.OptionsFilter.AllowAutoFilter = false;
+            this.colVerilisTarihi.OptionsFilter.AllowFilter = false;
+            this.colVerilisTarihi.StatusBarAciklama = "Veriliş Tarihi Giriniz.";
+            this.colVerilisTarihi.StatusBarKisaYol = null;
+            this.colVerilisTarihi.StatusBarKisaYolAciklama = null;
+            this.colVerilisTarihi.Visible = true;
+            this.colVerilisTarihi.VisibleIndex = 2;
+            this.colVerilisTarihi.Width = 90;
             // 
             // repositoryTarih
             // 
@@ -177,13 +194,30 @@
             this.repositoryTarih.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.DateTimeMaskManager));
             this.repositoryTarih.Name = "repositoryTarih";
             // 
+            // colGecerlilikTarihi
+            // 
+            this.colGecerlilikTarihi.AppearanceCell.Options.UseTextOptions = true;
+            this.colGecerlilikTarihi.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colGecerlilikTarihi.Caption = "Geçerlilik Tarihi";
+            this.colGecerlilikTarihi.ColumnEdit = this.repositoryTarih;
+            this.colGecerlilikTarihi.FieldName = "GecerlilikTarihi";
+            this.colGecerlilikTarihi.Name = "colGecerlilikTarihi";
+            this.colGecerlilikTarihi.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
+            this.colGecerlilikTarihi.OptionsFilter.AllowAutoFilter = false;
+            this.colGecerlilikTarihi.OptionsFilter.AllowFilter = false;
+            this.colGecerlilikTarihi.StatusBarAciklama = "Geçerlilik Tarihi Giriniz.";
+            this.colGecerlilikTarihi.StatusBarKisaYol = null;
+            this.colGecerlilikTarihi.StatusBarKisaYolAciklama = null;
+            this.colGecerlilikTarihi.Visible = true;
+            this.colGecerlilikTarihi.VisibleIndex = 3;
+            this.colGecerlilikTarihi.Width = 90;
+            // 
             // colKurumlarId
             // 
             this.colKurumlarId.Caption = "KurumlarId";
             this.colKurumlarId.FieldName = "KurumlarId";
             this.colKurumlarId.Name = "colKurumlarId";
             this.colKurumlarId.OptionsColumn.AllowEdit = false;
-            this.colKurumlarId.OptionsColumn.AllowMove = false;
             this.colKurumlarId.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
             this.colKurumlarId.OptionsColumn.ShowInCustomizationForm = false;
             this.colKurumlarId.OptionsFilter.AllowAutoFilter = false;
@@ -198,16 +232,15 @@
             this.colKurumAdi.ColumnEdit = this.repositoryKurum;
             this.colKurumAdi.FieldName = "KurumAdi";
             this.colKurumAdi.Name = "colKurumAdi";
-            this.colKurumAdi.OptionsColumn.AllowMove = false;
             this.colKurumAdi.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
             this.colKurumAdi.OptionsFilter.AllowAutoFilter = false;
             this.colKurumAdi.OptionsFilter.AllowFilter = false;
-            this.colKurumAdi.StatusBarAciklama = null;
-            this.colKurumAdi.StatusBarKisaYol = null;
-            this.colKurumAdi.StatusBarKisaYolAciklama = null;
+            this.colKurumAdi.StatusBarAciklama = "Kurum Adı Seçiniz.";
+            this.colKurumAdi.StatusBarKisaYol = "F4 :";
+            this.colKurumAdi.StatusBarKisaYolAciklama = "Seçim Yap";
             this.colKurumAdi.Visible = true;
-            this.colKurumAdi.VisibleIndex = 2;
-            this.colKurumAdi.Width = 112;
+            this.colKurumAdi.VisibleIndex = 4;
+            this.colKurumAdi.Width = 100;
             // 
             // repositoryKurum
             // 
@@ -222,16 +255,15 @@
             this.colAciklama.Caption = "Açıklama";
             this.colAciklama.FieldName = "Aciklama";
             this.colAciklama.Name = "colAciklama";
-            this.colAciklama.OptionsColumn.AllowMove = false;
             this.colAciklama.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
             this.colAciklama.OptionsFilter.AllowAutoFilter = false;
             this.colAciklama.OptionsFilter.AllowFilter = false;
-            this.colAciklama.StatusBarAciklama = null;
+            this.colAciklama.StatusBarAciklama = "Açıklama Giriniz";
             this.colAciklama.StatusBarKisaYol = null;
             this.colAciklama.StatusBarKisaYolAciklama = null;
             this.colAciklama.Visible = true;
-            this.colAciklama.VisibleIndex = 3;
-            this.colAciklama.Width = 201;
+            this.colAciklama.VisibleIndex = 5;
+            this.colAciklama.Width = 200;
             // 
             // repositoryHesapTuru
             // 
@@ -265,7 +297,7 @@
 
         private Grid.MyGridControl grid;
         private Grid.MyGridView tablo;
-        private Grid.MyGridColumn colTarih;
+        private Grid.MyGridColumn colVerilisTarihi;
         private Grid.MyGridColumn colAciklama;
         private DevExpress.XtraEditors.Repository.RepositoryItemDateEdit repositoryTarih;
         private Grid.MyGridColumn colKurumlarId;
@@ -275,5 +307,7 @@
         private Grid.MyGridColumn colBelgeTuruId;
         private Grid.MyGridColumn colBelgeAdi;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryBelge;
+        private Grid.MyGridColumn colGecerlilikTarihi;
+        private Grid.MyGridColumn colBelgeNo;
     }
 }

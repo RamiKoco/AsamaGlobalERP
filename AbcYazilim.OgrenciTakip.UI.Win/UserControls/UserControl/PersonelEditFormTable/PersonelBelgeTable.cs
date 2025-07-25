@@ -28,7 +28,8 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.PersonelEditFo
             var row = new PersonelBelgeL
             {
                 PersonelId = OwnerForm.Id,
-                Tarih = DateTime.Now.Date,              
+                VerilisTarihi = DateTime.Now.Date,              
+                GecerlilikTarihi = DateTime.Now.Date,              
                 Insert = true
             };
 

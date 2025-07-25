@@ -20,7 +20,9 @@ namespace AbcYazilim.OgrenciTakip.Bll.General
             {
                 Id = x.Id,
                 PersonelId = x.PersonelId,
-                Tarih = x.Tarih,        
+                BelgeNo = x.BelgeNo,
+                VerilisTarihi = x.VerilisTarihi,
+                GecerlilikTarihi = x.GecerlilikTarihi,        
                 BelgeTuruId = x.BelgeTuruId,
                 BelgeAdi= x.BelgeTuru.Ad,
                 KurumlarId = x.KurumlarId,

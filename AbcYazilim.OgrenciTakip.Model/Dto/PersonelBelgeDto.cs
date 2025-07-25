@@ -19,7 +19,9 @@ namespace AbcYazilim.OgrenciTakip.Model.Dto
     [HighlightedClass]
     public class PersonelBelgeR
     {
-        public DateTime Tarih { get; set; }      
+        public string BelgeNo { get; set; }
+        public DateTime VerilisTarihi { get; set; }      
+        public DateTime GecerlilikTarihi { get; set; }      
         public string KurumAdi { get; set; }
         public string BelgeAdi { get; set; }
         public string Aciklama { get; set; }

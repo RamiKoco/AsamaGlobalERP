@@ -9,8 +9,14 @@ namespace AbcYazilim.OgrenciTakip.Model.Entities
     {
         public long PersonelId { get; set; }
 
+        [StringLength(30)]
+        public string BelgeNo { get; set; }
+
         [Column(TypeName = "date")]
-        public DateTime Tarih { get; set; }
+        public DateTime VerilisTarihi { get; set; }
+
+        [Column(TypeName = "date")]
+        public DateTime GecerlilikTarihi { get; set; }
 
         public long? BelgeTuruId { get; set; }
         public long? KurumlarId { get; set; }
