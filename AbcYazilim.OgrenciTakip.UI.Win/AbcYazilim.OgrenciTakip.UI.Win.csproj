@@ -1506,6 +1506,12 @@
     <Compile Include="UserControls\UserControl\PersonelEditFormTable\AdreslerTable.Designer.cs">
       <DependentUpon>AdreslerTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UserControl\PersonelEditFormTable\BilgiNotlariTable.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UserControl\PersonelEditFormTable\BilgiNotlariTable.Designer.cs">
+      <DependentUpon>BilgiNotlariTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UserControl\PersonelEditFormTable\IletisimBilgileriTable.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -2223,6 +2229,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControl\PersonelEditFormTable\AdreslerTable.resx">
       <DependentUpon>AdreslerTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControl\PersonelEditFormTable\BilgiNotlariTable.resx">
+      <DependentUpon>BilgiNotlariTable.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControl\PersonelEditFormTable\IletisimBilgileriTable.resx">
       <DependentUpon>IletisimBilgileriTable.cs</DependentUpon>

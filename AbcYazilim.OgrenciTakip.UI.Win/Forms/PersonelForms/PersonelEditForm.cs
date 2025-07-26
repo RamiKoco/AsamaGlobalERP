@@ -23,6 +23,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.PersonelForms
     public partial class PersonelEditForm : BaseEditForm
     {
         private BaseTablo _adreslerTable;
+        private BaseTablo _bilgiNotlariTable;
         private BaseTablo _iletisimBilgileriTable;
         private BaseTablo _personelBelgeTable;
         private List<EtiketL> _tumEtiketler;
@@ -147,8 +148,8 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.PersonelForms
             }
 
 
-            //if (_bilgiNotlariTable != null && TableValueChanged(_bilgiNotlariTable))
-            //    _bilgiNotlariTable.Yukle();
+            if (_bilgiNotlariTable != null && TableValueChanged(_bilgiNotlariTable))
+                _bilgiNotlariTable.Yukle();
             if (_iletisimBilgileriTable != null && TableValueChanged(_iletisimBilgileriTable))
                 _iletisimBilgileriTable.Yukle();
             if (_adreslerTable != null && TableValueChanged(_adreslerTable))
@@ -247,12 +248,12 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.PersonelForms
 
         protected override bool BagliTabloHataliGirisKontrol()
         {
-            //if (_bilgiNotlariTable != null && _bilgiNotlariTable.HataliGiris())
-            //{
-            //    tabUst.SelectedPage = pageNotlar;
-            //    _bilgiNotlariTable.Tablo.GridControl.Focus();
-            //    return true;
-            //}
+            if (_bilgiNotlariTable != null && _bilgiNotlariTable.HataliGiris())
+            {
+                tabUst.SelectedPage = pageNotlar;
+                _bilgiNotlariTable.Tablo.GridControl.Focus();
+                return true;
+            }
 
             if (_iletisimBilgileriTable != null && _iletisimBilgileriTable.HataliGiris())
             {
@@ -287,8 +288,9 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.PersonelForms
 
             bool TableValueChanged()
             {
-                if (_iletisimBilgileriTable != null && _iletisimBilgileriTable.TableValueChanged) return true;
                 if (_adreslerTable != null && _adreslerTable.TableValueChanged) return true;
+                if (_bilgiNotlariTable != null && _bilgiNotlariTable.TableValueChanged) return true;
+                if (_iletisimBilgileriTable != null && _iletisimBilgileriTable.TableValueChanged) return true;
                 if (_personelBelgeTable != null && _personelBelgeTable.TableValueChanged) return true;
              
                 return false;
@@ -317,8 +319,9 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.PersonelForms
                          ?.Select(x => long.TryParse(x, out var val) ? val : 0)
                          ?.Where(x => x > 0)
                          ?.ToArray();
-            if (_iletisimBilgileriTable != null && !_iletisimBilgileriTable.Kaydet()) return false;
             if (_adreslerTable != null && !_adreslerTable.Kaydet()) return false;
+            if (_bilgiNotlariTable != null && !_bilgiNotlariTable.Kaydet()) return false;
+            if (_iletisimBilgileriTable != null && !_iletisimBilgileriTable.Kaydet()) return false;            
             if (_personelBelgeTable != null && !_personelBelgeTable.Kaydet()) return false;
             
 
@@ -474,19 +477,6 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.PersonelForms
                 txtAdi.Focus();
                 txtSoyAdi.SelectAll();
             }
-            else if (e.Page == pageIletisimBilgileri)
-            {
-                if (pageIletisimBilgileri.Controls.Count == 0)
-                {
-                    _iletisimBilgileriTable = new IletisimBilgileriTable().AddTable(this);
-                    pageIletisimBilgileri.Controls.Add(_iletisimBilgileriTable);
-                    _iletisimBilgileriTable.Yukle();
-
-                }
-
-                _iletisimBilgileriTable.Tablo.GridControl.Focus();
-
-            }
             else if (e.Page == pageAdresBilgileri)
             {
                 if (pageAdresBilgileri.Controls.Count == 0)
@@ -499,6 +489,32 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.PersonelForms
                 _adreslerTable.Tablo.GridControl.Focus();
 
             }
+            else if (e.Page == pageNotlar)
+            {
+                if (pageNotlar.Controls.Count == 0)
+                {
+                    _bilgiNotlariTable = new BilgiNotlariTable().AddTable(this);
+                    pageNotlar.Controls.Add(_bilgiNotlariTable);
+                    _bilgiNotlariTable.Yukle();
+
+                }
+
+                _bilgiNotlariTable.Tablo.GridControl.Focus();
+
+            }
+            else if (e.Page == pageIletisimBilgileri)
+            {
+                if (pageIletisimBilgileri.Controls.Count == 0)
+                {
+                    _iletisimBilgileriTable = new IletisimBilgileriTable().AddTable(this);
+                    pageIletisimBilgileri.Controls.Add(_iletisimBilgileriTable);
+                    _iletisimBilgileriTable.Yukle();
+
+                }
+
+                _iletisimBilgileriTable.Tablo.GridControl.Focus();
+
+            }          
             else if (e.Page == pageBelgeler)
             {
                 if (pageBelgeler.Controls.Count == 0)
