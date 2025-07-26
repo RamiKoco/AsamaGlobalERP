@@ -39,8 +39,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.PersonelForms
             txtCinsiyet.Properties.Items.AddRange(EnumFunctions.GetEnumDescriptionList<Cinsiyet>());
             txtKanGrubu.Properties.Items.AddRange(EnumFunctions.GetEnumDescriptionList<KanGrubu>());
             txtAskerlikDurumu.Properties.Items.AddRange(EnumFunctions.GetEnumDescriptionList<AskerlikDurumu>());
-            txtMedeniDurum.Properties.Items.AddRange(EnumFunctions.GetEnumDescriptionList<MedeniDurum>());
-            // Diğer initializationlar...
+            txtMedeniDurum.Properties.Items.AddRange(EnumFunctions.GetEnumDescriptionList<MedeniDurum>());         
             txtKimlikNo.Validating += TxtKimlikNo_Validating;
             txtKimlikTuru.EditValueChanged += TxtKimlikTuru_EditValueChanged;
         }

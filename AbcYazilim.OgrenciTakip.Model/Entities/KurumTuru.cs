@@ -11,7 +11,7 @@ namespace AbcYazilim.OgrenciTakip.Model.Entities
         [Index("IX_Kod", IsUnique = false)]
         public override string Kod { get; set; }
 
-        [Required, StringLength(50), ZorunluAlan("Evrak Adı", "txtEvrakAdi")]
+        [Required, StringLength(50), ZorunluAlan("Kurum Adı", "txtKurumAdi")]
         public string Ad { get; set; }
 
         [StringLength(500)]
