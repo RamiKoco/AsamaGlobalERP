@@ -1,6 +1,7 @@
 ﻿using AbcYazilim.OgrenciTakip.Bll.General;
 using AbcYazilim.OgrenciTakip.Common.Enums;
 using AbcYazilim.OgrenciTakip.Common.Functions;
+using AbcYazilim.OgrenciTakip.Common.Message;
 using AbcYazilim.OgrenciTakip.Data.Contexts;
 using AbcYazilim.OgrenciTakip.Model.Dto;
 using AbcYazilim.OgrenciTakip.Model.Entities;
@@ -15,6 +16,7 @@ using DevExpress.XtraEditors;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Windows.Forms;
 
 namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.KisiForms
 {
@@ -248,7 +250,6 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.KisiForms
             }
             return true;
         }
-
         protected override void Control_SelectedPageChanged(object sender, SelectedPageChangedEventArgs e)
         {
             if (e.Page == pageGenelBilgiler)
@@ -299,9 +300,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.KisiForms
                 _adreslerTable.Tablo.GridControl.Focus();
 
             }
-
         }
-
         private void EtiketleriYukle()
         {
             var etiketBll = new EtiketBll();
@@ -309,14 +308,12 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.KisiForms
             txtEtiket.Properties.DataSource = _tumEtiketler;
             txtEtiket.Properties.DisplayMember = "EtiketAdi";
             txtEtiket.Properties.ValueMember = "Id";
-        }     
-      
+        }      
         protected override void TabloYukle()
         {
             etiketTablo.OwnerForm = this;
             etiketTablo.Yukle();
-        }
-      
+        }      
         private void KisiyeAitEtiketleriYukle()
         {
             using (var db = new OgrenciTakipContext())
@@ -329,15 +326,52 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.KisiForms
                 txtEtiket.EditValue = string.Join(",", seciliEtiketler);
                 _oldEtiketIdListesi = seciliEtiketler;
             }
-        }
+        }  
         public override bool Kaydet(bool kapanis)
         {
-            BagliTabloKaydet();
+            GuncelNesneOlustur();
+
+            bool etiketDegisti = !_oldEtiketIdListesi?.SequenceEqual(_guncelEtiketIdListesi ?? new List<long>()) ?? false;
+            bool entityDegisti = !OldEntity.Equals(CurrentEntity);
+
+            if (kapanis && !entityDegisti && !etiketDegisti && !FarkliSubeIslemi)
+                return true;
+
+            if (kapanis)
+            {
+                var result = Messages.KapanisMesaj(); // sadece 1 kez sor
+                switch (result)
+                {
+                    case DialogResult.Yes:
+                        if (!BagliTabloKaydet()) return false;
+
+                        _oldEtiketIdListesi = _guncelEtiketIdListesi.ToList();
+
+                        // base.Kaydet yerine doğrudan kayıt işlemini sen yap
+                        var sonuc = BaseIslemTuru == IslemTuru.EntityInsert
+                            ? EntityInsert()
+                            : EntityUpdate();
+
+                        if (!sonuc) return false;
+
+                        OldEntity = CurrentEntity;
+                        RefleshYapilacak = true;
+
+                        return true;
+
+                    case DialogResult.No:
+                        return true;
+
+                    case DialogResult.Cancel:
+                        return false;
+                }
+            }
+
+            // Menüden kaydet gibi durumlarda
+            if (!BagliTabloKaydet()) return false;
+
             _oldEtiketIdListesi = _guncelEtiketIdListesi.ToList();
-            var sonuc = base.Kaydet(kapanis);
-            return sonuc;
+            return base.Kaydet(kapanis);
         }
-
-
     }
 }

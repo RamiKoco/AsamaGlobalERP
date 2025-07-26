@@ -17,7 +17,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
-
+using System.Windows.Forms;
 namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.PersonelForms
 {
     public partial class PersonelEditForm : BaseEditForm
@@ -400,10 +400,49 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.PersonelForms
                 }
             }
 
-            BagliTabloKaydet();
+            GuncelNesneOlustur();
+
+            bool etiketDegisti = !_oldEtiketIdListesi?.SequenceEqual(_guncelEtiketIdListesi ?? new List<long>()) ?? false;
+            bool entityDegisti = !OldEntity.Equals(CurrentEntity);
+
+            if (kapanis && !entityDegisti && !etiketDegisti && !FarkliSubeIslemi)
+                return true;
+
+            if (kapanis)
+            {
+                var result = Messages.KapanisMesaj(); // sadece 1 kez sor
+                switch (result)
+                {
+                    case DialogResult.Yes:
+                        if (!BagliTabloKaydet()) return false;
+
+                        _oldEtiketIdListesi = _guncelEtiketIdListesi.ToList();
+
+                        // base.Kaydet yerine doğrudan kayıt işlemini sen yap
+                        var sonuc = BaseIslemTuru == IslemTuru.EntityInsert
+                            ? EntityInsert()
+                            : EntityUpdate();
+
+                        if (!sonuc) return false;
+
+                        OldEntity = CurrentEntity;
+                        RefleshYapilacak = true;
+
+                        return true;
+
+                    case DialogResult.No:
+                        return true;
+
+                    case DialogResult.Cancel:
+                        return false;
+                }
+            }
+
+            // Menüden kaydet gibi durumlarda
+            if (!BagliTabloKaydet()) return false;
+
             _oldEtiketIdListesi = _guncelEtiketIdListesi.ToList();
-            var sonuc = base.Kaydet(kapanis);
-            return sonuc;
+            return base.Kaydet(kapanis);
         }
         protected override void SecimYap(object sender)
         {
