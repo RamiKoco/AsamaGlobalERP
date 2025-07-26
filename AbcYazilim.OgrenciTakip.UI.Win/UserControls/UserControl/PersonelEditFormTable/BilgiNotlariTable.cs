@@ -20,7 +20,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.PersonelEditFo
 
         protected internal override void Listele()
         {
-            tablo.GridControl.DataSource = ((BilgiNotlariBll)Bll).List(x => x.KisiId == OwnerForm.Id).ToBindingList<BilgiNotlariL>();
+            tablo.GridControl.DataSource = ((BilgiNotlariBll)Bll).List(x => x.PersonelId == OwnerForm.Id).ToBindingList<BilgiNotlariL>();
         }
 
         protected override void HareketEkle()
@@ -28,7 +28,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.PersonelEditFo
             var source = tablo.DataController.ListSource;
             var row = new BilgiNotlariL
             {
-                KisiId = OwnerForm.Id,
+                PersonelId = OwnerForm.Id,
                 Tarih = DateTime.Now,
                 Insert = true
             };
