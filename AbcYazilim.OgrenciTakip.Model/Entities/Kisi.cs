@@ -2,7 +2,6 @@
 using AbcYazilim.OgrenciTakip.Model.Attributes;
 using AbcYazilim.OgrenciTakip.Model.Entities.Base;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -23,26 +22,22 @@ namespace AbcYazilim.OgrenciTakip.Model.Entities
         [Column(TypeName = "date")]
         public DateTime? DogumTarihi { get; set; }
         [StringLength(500)]
-        public string Aciklama { get; set; }       
-        //public long? SorumluPersonelId { get; set; }   
-        public long? PersonelId { get; set; }
-        public long? KisiGrubuId { get; set; }
-        public long? KayitKaynakId { get; set; }
+        public string Aciklama { get; set; }
+
         public long? EtiketId { get; set; }
+        public long? KisiGrubuId { get; set; }
+        public long? PersonelId { get; set; }
+        public long? KayitKaynakId { get; set; }
         public long? MeslekId { get; set; }
         public long? OzelKod1Id { get; set; }
         public long? OzelKod2Id { get; set; }
 
-        public Personel Personel { get; set; }
+        public Etiket Etiket { get; set; }
         public KisiGrubu KisiGrubu { get; set; }
+        public Personel Personel { get; set; }
         public KayitKaynak KayitKaynak { get; set; }
-        public Meslek Meslek { get; set; }       
+        public Meslek Meslek { get; set; }
         public OzelKod OzelKod1 { get; set; }
         public OzelKod OzelKod2 { get; set; }
-  
-        [InverseProperty("Kisi")]
-        public virtual ICollection<KisiEtiket> KisiEtiketleri { get; set; }
-        public virtual ICollection<EtiketKayitTuruBaglanti> EtiketKayitTuruBaglanti { get; set; }
-
     }
 }

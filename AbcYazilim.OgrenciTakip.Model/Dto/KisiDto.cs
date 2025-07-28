@@ -2,6 +2,7 @@
 using AbcYazilim.OgrenciTakip.Model.Entities;
 using AbcYazilim.OgrenciTakip.Model.Entities.Base;
 using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace AbcYazilim.OgrenciTakip.Model.Dto
@@ -12,9 +13,11 @@ namespace AbcYazilim.OgrenciTakip.Model.Dto
         public string PersonelAdi { get; set; }
         public string KisiGrubuAdi { get; set; }
         public string KayitKaynakAdi { get; set; }
+        public string EtiketAdi { get; set; }
         public string MeslekAdi { get; set; }
         public string OzelKod1Adi { get; set; }
         public string OzelKod2Adi { get; set; }
+        public List<Etiket> Etiketler { get; set; }
     }
     public class KisiL : BaseEntity
     {
@@ -23,9 +26,10 @@ namespace AbcYazilim.OgrenciTakip.Model.Dto
         public Cinsiyet Cinsiyet { get; set; }
         public DateTime? DogumTarihi { get; set; }
         public KayitTuru KayitTuru { get; set; }
+        public string EtiketAdi { get; set; }
         public string Aciklama { get; set; }
-        public string PersonelAdi { get; set; }
         public string KisiGrubuAdi { get; set; }
+        public string PersonelAdi { get; set; }
         public string KayitKaynakAdi { get; set; }
         public string MeslekAdi { get; set; }
         public string OzelKod1Adi { get; set; }

@@ -28,8 +28,7 @@ namespace AbcYazilim.OgrenciTakip.Data.Contexts
             //modelBuilder.Entity<Ulke>().HasMany(x => x.Il).WithRequired().WillCascadeOnDelete(true);
             modelBuilder.Entity<Il>().HasMany(x => x.Ilce).WithRequired().WillCascadeOnDelete(true);
             modelBuilder.Entity<Banka>().HasMany(x => x.BankaSube).WithRequired().WillCascadeOnDelete(true);
-            modelBuilder.Entity<Indirim>().HasMany(x => x.IndiriminUygulanacagiHizmetBilgileri).WithRequired().WillCascadeOnDelete(true);
-            modelBuilder.Entity<Kisi>().HasMany(x => x.KisiEtiketleri).WithRequired().WillCascadeOnDelete(true);
+            modelBuilder.Entity<Indirim>().HasMany(x => x.IndiriminUygulanacagiHizmetBilgileri).WithRequired().WillCascadeOnDelete(true);           
         }
 
         public DbSet<Ulke> Ulke { get; set; }
