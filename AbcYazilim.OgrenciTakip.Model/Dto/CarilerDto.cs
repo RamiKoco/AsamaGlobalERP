@@ -25,6 +25,9 @@ namespace AbcYazilim.OgrenciTakip.Model.Dto
         public string VergiDairesi { get; set; }
         public string VergiNo { get; set; }
         public string VergiKodu { get; set; }
+        public string YetkiKodu { get; set; }
+        public string HesapKodu { get; set; }
+        public string ProjeKodu { get; set; }
         public string Aciklama { get; set; }
         public string KimlikTuruAdi { get; set; }
         public string OzelKod1Adi { get; set; }

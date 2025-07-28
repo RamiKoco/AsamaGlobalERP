@@ -3068,5 +3068,11 @@
   <ItemGroup>
     <None Include="Resources\other charts.svg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\groupbydate.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chart.svg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

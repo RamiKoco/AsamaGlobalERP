@@ -9,27 +9,28 @@ namespace AbcYazilim.OgrenciTakip.Model.Entities
     {
         [Index("IX_Kod", IsUnique = true)]
         public override string Kod { get; set; }
-
         [Required, StringLength(50), ZorunluAlan("Cari Adı", "txtCariAdi")]
         public string CariAdi { get; set; }
         [StringLength(30)]
         public string Unvan { get; set; }
-
         [StringLength(14)]
         public string KimlikNo { get; set; }
         [Required, StringLength(30), ZorunluAlan("Adı", "txtAdi")]
         public string Ad { get; set; }
-
         [Required, StringLength(30), ZorunluAlan("SoyAdı", "txtSoyAdi")]
         public string Soyad { get; set; }
-
         [StringLength(50)]
         public string VergiDairesi { get; set; }
-
         [StringLength(20)]
         public string VergiNo { get; set; }
         [StringLength(20)]
         public string VergiKodu { get; set; }
+        [StringLength(20)]
+        public string YetkiKodu { get; set; }
+        [StringLength(20)]
+        public string HesapKodu { get; set; }
+        [StringLength(20)]
+        public string ProjeKodu { get; set; }
         public bool Sahis { get; set; }
         [StringLength(500)]
         public string Aciklama { get; set; }

@@ -45,6 +45,9 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.CarilerForms
             txtVergiDairesi.Text = entity.VergiDairesi;
             txtVergiNo.Text = entity.VergiNo;
             txtVergiKodu.Text = entity.VergiKodu;
+            txtHesapKodu.Text = entity.HesapKodu;
+            txtYetkiKodu.Text = entity.YetkiKodu;
+            txtProjeKodu.Text = entity.ProjeKodu;
             txtUnvan.Text = entity.Unvan;
             tglSahis.IsOn = entity.Sahis;
             txtKimlikTuru.Id = entity.KimlikTuruId;
@@ -78,6 +81,9 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.CarilerForms
                 VergiDairesi = txtVergiDairesi.Text,
                 VergiNo = txtVergiNo.Text,
                 VergiKodu = txtVergiKodu.Text,
+                HesapKodu = txtHesapKodu.Text,
+                YetkiKodu = txtYetkiKodu.Text,
+                ProjeKodu = txtProjeKodu.Text,
                 KimlikTuruId = txtKimlikTuru.Id,
                 OzelKod1Id = txtOzelKod1.Id,
                 OzelKod2Id = txtOzelKod2.Id,
