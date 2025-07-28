@@ -2,7 +2,6 @@
 using AbcYazilim.OgrenciTakip.Common.Enums;
 using AbcYazilim.OgrenciTakip.Model.Entities;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms;
-using AbcYazilim.OgrenciTakip.UI.Win.Forms.PersonelForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Functions;
 using AbcYazilim.OgrenciTakip.UI.Win.Show;
 

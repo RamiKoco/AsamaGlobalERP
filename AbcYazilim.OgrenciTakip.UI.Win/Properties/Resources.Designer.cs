@@ -1221,6 +1221,16 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type DevExpress.Utils.Svg.SvgImage.
+        /// </summary>
+        internal static DevExpress.Utils.Svg.SvgImage grouplabels {
+            get {
+                object obj = ResourceManager.GetObject("grouplabels", resourceCulture);
+                return ((DevExpress.Utils.Svg.SvgImage)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap highlightactiveelements_16x16 {
@@ -1627,6 +1637,16 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Properties {
             get {
                 object obj = ResourceManager.GetObject("office_32x32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type DevExpress.Utils.Svg.SvgImage.
+        /// </summary>
+        internal static DevExpress.Utils.Svg.SvgImage other_charts {
+            get {
+                object obj = ResourceManager.GetObject("other charts", resourceCulture);
+                return ((DevExpress.Utils.Svg.SvgImage)(obj));
             }
         }
         

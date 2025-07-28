@@ -31,19 +31,28 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CarilerListForm));
             this.grid = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridControl();
             this.tablo = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridView();
+            this.gridBand1 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.colKod = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.colUnvan = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
+            this.colCariAdi = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
+            this.gridBand4 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
+            this.colKimlikNo = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
+            this.colAd = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
+            this.colSoyad = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
+            this.gridBand3 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
+            this.VergiKodu = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
+            this.colVergiDairesi = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
+            this.colVergiNo = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
+            this.gridBand2 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
+            this.colOzelKod1Adi = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
+            this.colOzelKod2Adi = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
+            this.colOzelKod3Adi = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
+            this.colOzelKod4Adi = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
+            this.colOzelKod5Adi = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
+            this.gridBand5 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.colAciklama = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colId = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.longNavigator = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Navigators.LongNavigator();
-            this.colAd = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
-            this.colSoyad = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
-            this.colCariAdi = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
-            this.colUnvan = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
-            this.colKimlikNo = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
-            this.colVergiDairesi = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
-            this.colVergiNo = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
-            this.VergiKodu = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
-            this.gridBand1 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablo)).BeginInit();
@@ -106,7 +115,11 @@
             this.tablo.Appearance.ViewCaption.Options.UseForeColor = true;
             this.tablo.BandPanelRowHeight = 40;
             this.tablo.Bands.AddRange(new DevExpress.XtraGrid.Views.BandedGrid.GridBand[] {
-            this.gridBand1});
+            this.gridBand1,
+            this.gridBand4,
+            this.gridBand3,
+            this.gridBand2,
+            this.gridBand5});
             this.tablo.Columns.AddRange(new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn[] {
             this.colId,
             this.colKod,
@@ -118,7 +131,12 @@
             this.colKimlikNo,
             this.colVergiDairesi,
             this.colVergiNo,
-            this.VergiKodu});
+            this.VergiKodu,
+            this.colOzelKod1Adi,
+            this.colOzelKod2Adi,
+            this.colOzelKod3Adi,
+            this.colOzelKod4Adi,
+            this.colOzelKod5Adi});
             this.tablo.GridControl = this.grid;
             this.tablo.Name = "tablo";
             this.tablo.OptionsMenu.EnableColumnMenu = false;
@@ -139,6 +157,16 @@
             this.tablo.StatusBarKisaYolAciklama = null;
             this.tablo.ViewCaption = "Cari Bilgiler";
             // 
+            // gridBand1
+            // 
+            this.gridBand1.Caption = "Genel Bilgiler";
+            this.gridBand1.Columns.Add(this.colKod);
+            this.gridBand1.Columns.Add(this.colUnvan);
+            this.gridBand1.Columns.Add(this.colCariAdi);
+            this.gridBand1.Name = "gridBand1";
+            this.gridBand1.VisibleIndex = 0;
+            this.gridBand1.Width = 292;
+            // 
             // colKod
             // 
             this.colKod.AppearanceCell.Options.UseTextOptions = true;
@@ -148,7 +176,203 @@
             this.colKod.Name = "colKod";
             this.colKod.OptionsColumn.AllowEdit = false;
             this.colKod.Visible = true;
-            this.colKod.Width = 146;
+            this.colKod.Width = 114;
+            // 
+            // colUnvan
+            // 
+            this.colUnvan.Caption = "Unvan";
+            this.colUnvan.FieldName = "Unvan";
+            this.colUnvan.Name = "colUnvan";
+            this.colUnvan.OptionsColumn.AllowEdit = false;
+            this.colUnvan.StatusBarAciklama = null;
+            this.colUnvan.StatusBarKisaYol = null;
+            this.colUnvan.StatusBarKisaYolAciklama = null;
+            this.colUnvan.Visible = true;
+            this.colUnvan.Width = 87;
+            // 
+            // colCariAdi
+            // 
+            this.colCariAdi.Caption = "Cari Adı";
+            this.colCariAdi.FieldName = "CariAdi";
+            this.colCariAdi.Name = "colCariAdi";
+            this.colCariAdi.OptionsColumn.AllowEdit = false;
+            this.colCariAdi.StatusBarAciklama = null;
+            this.colCariAdi.StatusBarKisaYol = null;
+            this.colCariAdi.StatusBarKisaYolAciklama = null;
+            this.colCariAdi.Visible = true;
+            this.colCariAdi.Width = 91;
+            // 
+            // gridBand4
+            // 
+            this.gridBand4.Caption = "Kişisel Bilgiler";
+            this.gridBand4.Columns.Add(this.colKimlikNo);
+            this.gridBand4.Columns.Add(this.colAd);
+            this.gridBand4.Columns.Add(this.colSoyad);
+            this.gridBand4.Name = "gridBand4";
+            this.gridBand4.VisibleIndex = 1;
+            this.gridBand4.Width = 269;
+            // 
+            // colKimlikNo
+            // 
+            this.colKimlikNo.Caption = "Kimlik No";
+            this.colKimlikNo.FieldName = "KimlikNo";
+            this.colKimlikNo.Name = "colKimlikNo";
+            this.colKimlikNo.OptionsColumn.AllowEdit = false;
+            this.colKimlikNo.StatusBarAciklama = null;
+            this.colKimlikNo.StatusBarKisaYol = null;
+            this.colKimlikNo.StatusBarKisaYolAciklama = null;
+            this.colKimlikNo.Visible = true;
+            this.colKimlikNo.Width = 89;
+            // 
+            // colAd
+            // 
+            this.colAd.Caption = "Ad";
+            this.colAd.FieldName = "Ad";
+            this.colAd.Name = "colAd";
+            this.colAd.OptionsColumn.AllowEdit = false;
+            this.colAd.StatusBarAciklama = null;
+            this.colAd.StatusBarKisaYol = null;
+            this.colAd.StatusBarKisaYolAciklama = null;
+            this.colAd.Visible = true;
+            this.colAd.Width = 89;
+            // 
+            // colSoyad
+            // 
+            this.colSoyad.Caption = "Soyad";
+            this.colSoyad.FieldName = "Soyad";
+            this.colSoyad.Name = "colSoyad";
+            this.colSoyad.OptionsColumn.AllowEdit = false;
+            this.colSoyad.StatusBarAciklama = null;
+            this.colSoyad.StatusBarKisaYol = null;
+            this.colSoyad.StatusBarKisaYolAciklama = null;
+            this.colSoyad.Visible = true;
+            this.colSoyad.Width = 91;
+            // 
+            // gridBand3
+            // 
+            this.gridBand3.Caption = "Vergi Bilgileri";
+            this.gridBand3.Columns.Add(this.VergiKodu);
+            this.gridBand3.Columns.Add(this.colVergiDairesi);
+            this.gridBand3.Columns.Add(this.colVergiNo);
+            this.gridBand3.Name = "gridBand3";
+            this.gridBand3.VisibleIndex = 2;
+            this.gridBand3.Width = 311;
+            // 
+            // VergiKodu
+            // 
+            this.VergiKodu.Caption = "Vergi Kodu";
+            this.VergiKodu.FieldName = "VergiKodu";
+            this.VergiKodu.Name = "VergiKodu";
+            this.VergiKodu.OptionsColumn.AllowEdit = false;
+            this.VergiKodu.StatusBarAciklama = null;
+            this.VergiKodu.StatusBarKisaYol = null;
+            this.VergiKodu.StatusBarKisaYolAciklama = null;
+            this.VergiKodu.Visible = true;
+            this.VergiKodu.Width = 103;
+            // 
+            // colVergiDairesi
+            // 
+            this.colVergiDairesi.Caption = "Vergi Dairesi";
+            this.colVergiDairesi.FieldName = "VergiDairesi";
+            this.colVergiDairesi.Name = "colVergiDairesi";
+            this.colVergiDairesi.OptionsColumn.AllowEdit = false;
+            this.colVergiDairesi.StatusBarAciklama = null;
+            this.colVergiDairesi.StatusBarKisaYol = null;
+            this.colVergiDairesi.StatusBarKisaYolAciklama = null;
+            this.colVergiDairesi.Visible = true;
+            this.colVergiDairesi.Width = 103;
+            // 
+            // colVergiNo
+            // 
+            this.colVergiNo.Caption = "Vergi No";
+            this.colVergiNo.FieldName = "VergiNo";
+            this.colVergiNo.Name = "colVergiNo";
+            this.colVergiNo.OptionsColumn.AllowEdit = false;
+            this.colVergiNo.StatusBarAciklama = null;
+            this.colVergiNo.StatusBarKisaYol = null;
+            this.colVergiNo.StatusBarKisaYolAciklama = null;
+            this.colVergiNo.Visible = true;
+            this.colVergiNo.Width = 105;
+            // 
+            // gridBand2
+            // 
+            this.gridBand2.Caption = "Özel Kod";
+            this.gridBand2.Columns.Add(this.colOzelKod1Adi);
+            this.gridBand2.Columns.Add(this.colOzelKod2Adi);
+            this.gridBand2.Columns.Add(this.colOzelKod3Adi);
+            this.gridBand2.Columns.Add(this.colOzelKod4Adi);
+            this.gridBand2.Columns.Add(this.colOzelKod5Adi);
+            this.gridBand2.Name = "gridBand2";
+            this.gridBand2.VisibleIndex = 3;
+            this.gridBand2.Width = 400;
+            // 
+            // colOzelKod1Adi
+            // 
+            this.colOzelKod1Adi.Caption = "Özel Kod-1";
+            this.colOzelKod1Adi.FieldName = "OzelKod1Adi";
+            this.colOzelKod1Adi.Name = "colOzelKod1Adi";
+            this.colOzelKod1Adi.OptionsColumn.AllowEdit = false;
+            this.colOzelKod1Adi.StatusBarAciklama = null;
+            this.colOzelKod1Adi.StatusBarKisaYol = null;
+            this.colOzelKod1Adi.StatusBarKisaYolAciklama = null;
+            this.colOzelKod1Adi.Visible = true;
+            this.colOzelKod1Adi.Width = 79;
+            // 
+            // colOzelKod2Adi
+            // 
+            this.colOzelKod2Adi.Caption = "Özel Kod-2";
+            this.colOzelKod2Adi.FieldName = "OzelKod2Adi";
+            this.colOzelKod2Adi.Name = "colOzelKod2Adi";
+            this.colOzelKod2Adi.OptionsColumn.AllowEdit = false;
+            this.colOzelKod2Adi.StatusBarAciklama = null;
+            this.colOzelKod2Adi.StatusBarKisaYol = null;
+            this.colOzelKod2Adi.StatusBarKisaYolAciklama = null;
+            this.colOzelKod2Adi.Visible = true;
+            this.colOzelKod2Adi.Width = 79;
+            // 
+            // colOzelKod3Adi
+            // 
+            this.colOzelKod3Adi.Caption = "Özel Kod-3";
+            this.colOzelKod3Adi.FieldName = "OzelKod3Adi";
+            this.colOzelKod3Adi.Name = "colOzelKod3Adi";
+            this.colOzelKod3Adi.OptionsColumn.AllowEdit = false;
+            this.colOzelKod3Adi.StatusBarAciklama = null;
+            this.colOzelKod3Adi.StatusBarKisaYol = null;
+            this.colOzelKod3Adi.StatusBarKisaYolAciklama = null;
+            this.colOzelKod3Adi.Visible = true;
+            this.colOzelKod3Adi.Width = 79;
+            // 
+            // colOzelKod4Adi
+            // 
+            this.colOzelKod4Adi.Caption = "Özel Kod-4";
+            this.colOzelKod4Adi.FieldName = "OzelKod4Adi";
+            this.colOzelKod4Adi.Name = "colOzelKod4Adi";
+            this.colOzelKod4Adi.OptionsColumn.AllowEdit = false;
+            this.colOzelKod4Adi.StatusBarAciklama = null;
+            this.colOzelKod4Adi.StatusBarKisaYol = null;
+            this.colOzelKod4Adi.StatusBarKisaYolAciklama = null;
+            this.colOzelKod4Adi.Visible = true;
+            this.colOzelKod4Adi.Width = 79;
+            // 
+            // colOzelKod5Adi
+            // 
+            this.colOzelKod5Adi.Caption = "Özel Kod-5";
+            this.colOzelKod5Adi.FieldName = "OzelKod5Adi";
+            this.colOzelKod5Adi.Name = "colOzelKod5Adi";
+            this.colOzelKod5Adi.OptionsColumn.AllowEdit = false;
+            this.colOzelKod5Adi.StatusBarAciklama = null;
+            this.colOzelKod5Adi.StatusBarKisaYol = null;
+            this.colOzelKod5Adi.StatusBarKisaYolAciklama = null;
+            this.colOzelKod5Adi.Visible = true;
+            this.colOzelKod5Adi.Width = 84;
+            // 
+            // gridBand5
+            // 
+            this.gridBand5.Caption = "Ek Bilgiler";
+            this.gridBand5.Columns.Add(this.colAciklama);
+            this.gridBand5.Name = "gridBand5";
+            this.gridBand5.VisibleIndex = 4;
+            this.gridBand5.Width = 204;
             // 
             // colAciklama
             // 
@@ -160,7 +384,7 @@
             this.colAciklama.StatusBarKisaYol = null;
             this.colAciklama.StatusBarKisaYolAciklama = null;
             this.colAciklama.Visible = true;
-            this.colAciklama.Width = 147;
+            this.colAciklama.Width = 204;
             // 
             // colId
             // 
@@ -178,111 +402,6 @@
             this.longNavigator.Size = new System.Drawing.Size(1058, 24);
             this.longNavigator.TabIndex = 3;
             // 
-            // colAd
-            // 
-            this.colAd.Caption = "Ad";
-            this.colAd.FieldName = "Ad";
-            this.colAd.Name = "colAd";
-            this.colAd.OptionsColumn.AllowEdit = false;
-            this.colAd.StatusBarAciklama = null;
-            this.colAd.StatusBarKisaYol = null;
-            this.colAd.StatusBarKisaYolAciklama = null;
-            this.colAd.Visible = true;
-            // 
-            // colSoyad
-            // 
-            this.colSoyad.Caption = "Soyad";
-            this.colSoyad.FieldName = "Soyad";
-            this.colSoyad.Name = "colSoyad";
-            this.colSoyad.OptionsColumn.AllowEdit = false;
-            this.colSoyad.StatusBarAciklama = null;
-            this.colSoyad.StatusBarKisaYol = null;
-            this.colSoyad.StatusBarKisaYolAciklama = null;
-            this.colSoyad.Visible = true;
-            // 
-            // colCariAdi
-            // 
-            this.colCariAdi.Caption = "Cari Adı";
-            this.colCariAdi.FieldName = "CariAdi";
-            this.colCariAdi.Name = "colCariAdi";
-            this.colCariAdi.OptionsColumn.AllowEdit = false;
-            this.colCariAdi.StatusBarAciklama = null;
-            this.colCariAdi.StatusBarKisaYol = null;
-            this.colCariAdi.StatusBarKisaYolAciklama = null;
-            this.colCariAdi.Visible = true;
-            // 
-            // colUnvan
-            // 
-            this.colUnvan.Caption = "Unvan";
-            this.colUnvan.FieldName = "Unvan";
-            this.colUnvan.Name = "colUnvan";
-            this.colUnvan.OptionsColumn.AllowEdit = false;
-            this.colUnvan.StatusBarAciklama = null;
-            this.colUnvan.StatusBarKisaYol = null;
-            this.colUnvan.StatusBarKisaYolAciklama = null;
-            this.colUnvan.Visible = true;
-            // 
-            // colKimlikNo
-            // 
-            this.colKimlikNo.Caption = "Kimlik No";
-            this.colKimlikNo.FieldName = "KimlikNo";
-            this.colKimlikNo.Name = "colKimlikNo";
-            this.colKimlikNo.OptionsColumn.AllowEdit = false;
-            this.colKimlikNo.StatusBarAciklama = null;
-            this.colKimlikNo.StatusBarKisaYol = null;
-            this.colKimlikNo.StatusBarKisaYolAciklama = null;
-            this.colKimlikNo.Visible = true;
-            // 
-            // colVergiDairesi
-            // 
-            this.colVergiDairesi.Caption = "Vergi Dairesi";
-            this.colVergiDairesi.FieldName = "VergiDairesi";
-            this.colVergiDairesi.Name = "colVergiDairesi";
-            this.colVergiDairesi.OptionsColumn.AllowEdit = false;
-            this.colVergiDairesi.StatusBarAciklama = null;
-            this.colVergiDairesi.StatusBarKisaYol = null;
-            this.colVergiDairesi.StatusBarKisaYolAciklama = null;
-            this.colVergiDairesi.Visible = true;
-            // 
-            // colVergiNo
-            // 
-            this.colVergiNo.Caption = "Vergi No";
-            this.colVergiNo.FieldName = "VergiNo";
-            this.colVergiNo.Name = "colVergiNo";
-            this.colVergiNo.OptionsColumn.AllowEdit = false;
-            this.colVergiNo.StatusBarAciklama = null;
-            this.colVergiNo.StatusBarKisaYol = null;
-            this.colVergiNo.StatusBarKisaYolAciklama = null;
-            this.colVergiNo.Visible = true;
-            // 
-            // VergiKodu
-            // 
-            this.VergiKodu.Caption = "Vergi Kodu";
-            this.VergiKodu.FieldName = "VergiKodu";
-            this.VergiKodu.Name = "VergiKodu";
-            this.VergiKodu.OptionsColumn.AllowEdit = false;
-            this.VergiKodu.StatusBarAciklama = null;
-            this.VergiKodu.StatusBarKisaYol = null;
-            this.VergiKodu.StatusBarKisaYolAciklama = null;
-            this.VergiKodu.Visible = true;
-            // 
-            // gridBand1
-            // 
-            this.gridBand1.Caption = "Test";
-            this.gridBand1.Columns.Add(this.colKod);
-            this.gridBand1.Columns.Add(this.colUnvan);
-            this.gridBand1.Columns.Add(this.colCariAdi);
-            this.gridBand1.Columns.Add(this.colKimlikNo);
-            this.gridBand1.Columns.Add(this.colAd);
-            this.gridBand1.Columns.Add(this.colSoyad);
-            this.gridBand1.Columns.Add(this.colVergiDairesi);
-            this.gridBand1.Columns.Add(this.VergiKodu);
-            this.gridBand1.Columns.Add(this.colVergiNo);
-            this.gridBand1.Columns.Add(this.colAciklama);
-            this.gridBand1.Name = "gridBand1";
-            this.gridBand1.VisibleIndex = 0;
-            this.gridBand1.Width = 893;
-            // 
             // CarilerListForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -292,7 +411,7 @@
             this.Controls.Add(this.grid);
             this.IconOptions.ShowIcon = false;
             this.Name = "CarilerListForm";
-            this.Text = "CarilerListForm";
+            this.Text = "Cari Kartları";
             this.Controls.SetChildIndex(this.ribbonControl, 0);
             this.Controls.SetChildIndex(this.grid, 0);
             this.Controls.SetChildIndex(this.longNavigator, 0);
@@ -321,5 +440,14 @@
         private UserControls.Grid.MyBandedGridColumn colVergiNo;
         private UserControls.Grid.MyBandedGridColumn VergiKodu;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand1;
+        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand4;
+        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand3;
+        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand2;
+        private UserControls.Grid.MyBandedGridColumn colOzelKod1Adi;
+        private UserControls.Grid.MyBandedGridColumn colOzelKod2Adi;
+        private UserControls.Grid.MyBandedGridColumn colOzelKod3Adi;
+        private UserControls.Grid.MyBandedGridColumn colOzelKod4Adi;
+        private UserControls.Grid.MyBandedGridColumn colOzelKod5Adi;
+        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand5;
     }
 }

@@ -16,8 +16,8 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.CarilerForms
         public CarilerEditForm()
         {
             InitializeComponent();
-            DataLayoutControl = myDataLayoutControl;
-            Bll = new CarilerBll(myDataLayoutControl);
+            DataLayoutControls = new[] { DataLayoutGenel, DataLayoutGenelBilgiler };
+            Bll = new CarilerBll(DataLayoutGenelBilgiler);
             BaseKartTuru = KartTuru.Cariler;
             EventsLoad();
             txtKimlikNo.Validating += TxtKimlikNo_Validating;
@@ -45,6 +45,8 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.CarilerForms
             txtVergiDairesi.Text = entity.VergiDairesi;
             txtVergiNo.Text = entity.VergiNo;
             txtVergiKodu.Text = entity.VergiKodu;
+            txtUnvan.Text = entity.Unvan;
+            tglSahis.IsOn = entity.Sahis;
             txtKimlikTuru.Id = entity.KimlikTuruId;
             TxtKimlikTuru_IdChanged(txtKimlikTuru, EventArgs.Empty);
             txtKimlikTuru.Text = entity.KimlikTuruAdi;
@@ -72,6 +74,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.CarilerForms
                 KimlikNo = txtKimlikNo.Text,
                 Ad = txtAdi.Text,
                 Soyad = txtSoyAdi.Text,
+                Unvan = txtUnvan.Text,
                 VergiDairesi = txtVergiDairesi.Text,
                 VergiNo = txtVergiNo.Text,
                 VergiKodu = txtVergiKodu.Text,
@@ -82,6 +85,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.CarilerForms
                 OzelKod4Id = txtOzelKod4.Id,
                 OzelKod5Id = txtOzelKod5.Id,
                 Aciklama = txtAciklama.Text,
+                Sahis = tglSahis.IsOn,
                 Durum = tglDurum.IsOn
             };
             ButonEnabledDurumu();
