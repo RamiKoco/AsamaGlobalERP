@@ -93,7 +93,7 @@
             this.layoutControlItem20 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem18 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem19 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.tabNavigationPage2 = new DevExpress.XtraBars.Navigation.TabNavigationPage();
+            this.pageAdresler = new DevExpress.XtraBars.Navigation.TabNavigationPage();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -166,7 +166,7 @@
             this.DataLayoutGenel.OptionsFocus.EnableAutoTabOrder = false;
             this.DataLayoutGenel.Root = this.Root;
             this.DataLayoutGenel.Size = new System.Drawing.Size(817, 364);
-            this.DataLayoutGenel.TabIndex = 2;
+            this.DataLayoutGenel.TabIndex = 0;
             this.DataLayoutGenel.Text = "myDataLayoutControl1";
             // 
             // tabAlt
@@ -209,17 +209,17 @@
             this.tabUst.AppearanceButton.Pressed.Options.UseFont = true;
             this.tabUst.AppearanceButton.Pressed.Options.UseForeColor = true;
             this.tabUst.Controls.Add(this.pageGenelBilgiler);
-            this.tabUst.Controls.Add(this.tabNavigationPage2);
+            this.tabUst.Controls.Add(this.pageAdresler);
             this.tabUst.Location = new System.Drawing.Point(12, 12);
             this.tabUst.Name = "tabUst";
             this.tabUst.PageProperties.ShowMode = DevExpress.XtraBars.Navigation.ItemShowMode.ImageAndText;
             this.tabUst.Pages.AddRange(new DevExpress.XtraBars.Navigation.NavigationPageBase[] {
             this.pageGenelBilgiler,
-            this.tabNavigationPage2});
+            this.pageAdresler});
             this.tabUst.RegularSize = new System.Drawing.Size(793, 246);
             this.tabUst.SelectedPage = this.pageGenelBilgiler;
             this.tabUst.Size = new System.Drawing.Size(793, 246);
-            this.tabUst.TabIndex = 4;
+            this.tabUst.TabIndex = 0;
             this.tabUst.Text = "tabPane1";
             // 
             // pageGenelBilgiler
@@ -281,7 +281,7 @@
             this.txtUnvan.Size = new System.Drawing.Size(171, 20);
             this.txtUnvan.StatusBarAciklama = "Unvan Giriniz.";
             this.txtUnvan.StyleController = this.DataLayoutGenelBilgiler;
-            this.txtUnvan.TabIndex = 62;
+            this.txtUnvan.TabIndex = 3;
             // 
             // tglSahis
             // 
@@ -299,7 +299,7 @@
             this.tglSahis.Size = new System.Drawing.Size(47, 20);
             this.tglSahis.StatusBarAciklama = "Kartın Kullanım Durumunu Seçiniz.";
             this.tglSahis.StyleController = this.DataLayoutGenelBilgiler;
-            this.tglSahis.TabIndex = 61;
+            this.tglSahis.TabIndex = 4;
             // 
             // txtKod
             // 
@@ -317,7 +317,7 @@
             this.txtKod.Size = new System.Drawing.Size(171, 20);
             this.txtKod.StatusBarAciklama = "Kod Giriniz";
             this.txtKod.StyleController = this.DataLayoutGenelBilgiler;
-            this.txtKod.TabIndex = 60;
+            this.txtKod.TabIndex = 17;
             // 
             // txtOzelKod5
             // 
@@ -336,7 +336,7 @@
             this.txtOzelKod5.StatusBarKisaYol = "F4 :";
             this.txtOzelKod5.StatusBarKisaYolAciklama = "Seçim Yap";
             this.txtOzelKod5.StyleController = this.DataLayoutGenelBilgiler;
-            this.txtOzelKod5.TabIndex = 59;
+            this.txtOzelKod5.TabIndex = 15;
             // 
             // txtOzelKod4
             // 
@@ -355,7 +355,7 @@
             this.txtOzelKod4.StatusBarKisaYol = "F4 :";
             this.txtOzelKod4.StatusBarKisaYolAciklama = "Seçim Yap";
             this.txtOzelKod4.StyleController = this.DataLayoutGenelBilgiler;
-            this.txtOzelKod4.TabIndex = 58;
+            this.txtOzelKod4.TabIndex = 14;
             // 
             // txtOzelKod3
             // 
@@ -374,7 +374,7 @@
             this.txtOzelKod3.StatusBarKisaYol = "F4 :";
             this.txtOzelKod3.StatusBarKisaYolAciklama = "Seçim Yap";
             this.txtOzelKod3.StyleController = this.DataLayoutGenelBilgiler;
-            this.txtOzelKod3.TabIndex = 57;
+            this.txtOzelKod3.TabIndex = 13;
             // 
             // txtOzelKod2
             // 
@@ -393,7 +393,7 @@
             this.txtOzelKod2.StatusBarKisaYol = "F4 :";
             this.txtOzelKod2.StatusBarKisaYolAciklama = "Seçim Yap";
             this.txtOzelKod2.StyleController = this.DataLayoutGenelBilgiler;
-            this.txtOzelKod2.TabIndex = 56;
+            this.txtOzelKod2.TabIndex = 12;
             // 
             // txtOzelKod1
             // 
@@ -408,11 +408,11 @@
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.txtOzelKod1.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.txtOzelKod1.Size = new System.Drawing.Size(142, 20);
-            this.txtOzelKod1.StatusBarAciklama = "Medeni Durum Seçiniz";
+            this.txtOzelKod1.StatusBarAciklama = "Özel Kod Seçiniz";
             this.txtOzelKod1.StatusBarKisaYol = "F4 :";
             this.txtOzelKod1.StatusBarKisaYolAciklama = "Seçim Yap";
             this.txtOzelKod1.StyleController = this.DataLayoutGenelBilgiler;
-            this.txtOzelKod1.TabIndex = 55;
+            this.txtOzelKod1.TabIndex = 11;
             // 
             // txtKimlikNo
             // 
@@ -424,14 +424,13 @@
             this.txtKimlikNo.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.txtKimlikNo.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
             this.txtKimlikNo.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtKimlikNo.Properties.Mask.AutoComplete = DevExpress.XtraEditors.Mask.AutoCompleteType.None;
             this.txtKimlikNo.Properties.MaskSettings.Set("isAutoComplete", false);
             this.txtKimlikNo.Properties.MaskSettings.Set("isOptimistic", false);
             this.txtKimlikNo.Properties.MaxLength = 50;
             this.txtKimlikNo.Size = new System.Drawing.Size(162, 20);
             this.txtKimlikNo.StatusBarAciklama = "Kimlik No Giriniz";
             this.txtKimlikNo.StyleController = this.DataLayoutGenelBilgiler;
-            this.txtKimlikNo.TabIndex = 54;
+            this.txtKimlikNo.TabIndex = 7;
             // 
             // txtKimlikTuru
             // 
@@ -451,7 +450,7 @@
             this.txtKimlikTuru.StatusBarKisaYol = "F4 :";
             this.txtKimlikTuru.StatusBarKisaYolAciklama = "Seçim Yap";
             this.txtKimlikTuru.StyleController = this.DataLayoutGenelBilgiler;
-            this.txtKimlikTuru.TabIndex = 53;
+            this.txtKimlikTuru.TabIndex = 6;
             // 
             // tglDurum
             // 
@@ -469,7 +468,7 @@
             this.tglDurum.Size = new System.Drawing.Size(73, 20);
             this.tglDurum.StatusBarAciklama = "Kartın Kullanım Durumunu Seçiniz.";
             this.tglDurum.StyleController = this.DataLayoutGenelBilgiler;
-            this.tglDurum.TabIndex = 52;
+            this.tglDurum.TabIndex = 16;
             // 
             // txtAciklama
             // 
@@ -483,7 +482,7 @@
             this.txtAciklama.Size = new System.Drawing.Size(431, 35);
             this.txtAciklama.StatusBarAciklama = "Açıklama Giriniz.";
             this.txtAciklama.StyleController = this.DataLayoutGenelBilgiler;
-            this.txtAciklama.TabIndex = 51;
+            this.txtAciklama.TabIndex = 5;
             // 
             // txtVergiKodu
             // 
@@ -497,7 +496,7 @@
             this.txtVergiKodu.Size = new System.Drawing.Size(162, 20);
             this.txtVergiKodu.StatusBarAciklama = "Vergi Kodu Giriniz.";
             this.txtVergiKodu.StyleController = this.DataLayoutGenelBilgiler;
-            this.txtVergiKodu.TabIndex = 50;
+            this.txtVergiKodu.TabIndex = 9;
             // 
             // txtVergiNo
             // 
@@ -511,7 +510,7 @@
             this.txtVergiNo.Size = new System.Drawing.Size(161, 20);
             this.txtVergiNo.StatusBarAciklama = "Vergi No Giriniz.";
             this.txtVergiNo.StyleController = this.DataLayoutGenelBilgiler;
-            this.txtVergiNo.TabIndex = 49;
+            this.txtVergiNo.TabIndex = 10;
             // 
             // txtVergiDairesi
             // 
@@ -525,7 +524,7 @@
             this.txtVergiDairesi.Size = new System.Drawing.Size(161, 20);
             this.txtVergiDairesi.StatusBarAciklama = "Vergi Dairesi Giriniz.";
             this.txtVergiDairesi.StyleController = this.DataLayoutGenelBilgiler;
-            this.txtVergiDairesi.TabIndex = 48;
+            this.txtVergiDairesi.TabIndex = 8;
             // 
             // txtSoyAdi
             // 
@@ -539,7 +538,7 @@
             this.txtSoyAdi.Size = new System.Drawing.Size(171, 20);
             this.txtSoyAdi.StatusBarAciklama = "Soyad Giriniz.";
             this.txtSoyAdi.StyleController = this.DataLayoutGenelBilgiler;
-            this.txtSoyAdi.TabIndex = 47;
+            this.txtSoyAdi.TabIndex = 2;
             // 
             // txtAdi
             // 
@@ -553,7 +552,7 @@
             this.txtAdi.Size = new System.Drawing.Size(171, 20);
             this.txtAdi.StatusBarAciklama = "Ad Giriniz.";
             this.txtAdi.StyleController = this.DataLayoutGenelBilgiler;
-            this.txtAdi.TabIndex = 46;
+            this.txtAdi.TabIndex = 1;
             // 
             // txtCariAdi
             // 
@@ -567,7 +566,7 @@
             this.txtCariAdi.Size = new System.Drawing.Size(171, 20);
             this.txtCariAdi.StatusBarAciklama = "Cari Adı Giriniz.";
             this.txtCariAdi.StyleController = this.DataLayoutGenelBilgiler;
-            this.txtCariAdi.TabIndex = 45;
+            this.txtCariAdi.TabIndex = 0;
             // 
             // layoutControlGroup1
             // 
@@ -906,12 +905,13 @@
             this.layoutControlItem19.TextSize = new System.Drawing.Size(70, 20);
             this.layoutControlItem19.TextToControlDistance = 5;
             // 
-            // tabNavigationPage2
+            // pageAdresler
             // 
-            this.tabNavigationPage2.BackgroundPadding = new System.Windows.Forms.Padding(2);
-            this.tabNavigationPage2.Caption = "tabNavigationPage2";
-            this.tabNavigationPage2.Name = "tabNavigationPage2";
-            this.tabNavigationPage2.Size = new System.Drawing.Size(799, 246);
+            this.pageAdresler.BackgroundPadding = new System.Windows.Forms.Padding(2);
+            this.pageAdresler.Caption = "Adresler";
+            this.pageAdresler.ImageOptions.Image = global::AbcYazilim.OgrenciTakip.UI.Win.Properties.Resources.city_32x32;
+            this.pageAdresler.Name = "pageAdresler";
+            this.pageAdresler.Size = new System.Drawing.Size(793, 246);
             // 
             // Root
             // 
@@ -1039,7 +1039,7 @@
         private UserControls.Controls.MyDataLayoutControl DataLayoutGenel;
         private DevExpress.XtraBars.Navigation.TabPane tabUst;
         private DevExpress.XtraBars.Navigation.TabNavigationPage pageGenelBilgiler;
-        private DevExpress.XtraBars.Navigation.TabNavigationPage tabNavigationPage2;
+        private DevExpress.XtraBars.Navigation.TabNavigationPage pageAdresler;
         private DevExpress.XtraLayout.LayoutControlGroup Root;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
         private DevExpress.XtraBars.Navigation.TabPane tabAlt;
