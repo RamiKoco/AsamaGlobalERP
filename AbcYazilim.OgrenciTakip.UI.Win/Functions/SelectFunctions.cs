@@ -430,6 +430,17 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Functions
                         }
                     }
                     break;
+
+                case "txtSorumlu":
+                    {
+                        var entity = (PersonelL)ShowListForms<PersonelListForm>.ShowDialogListForm(KartTuru.Personel, _btnEdit.Id);
+                        if (entity != null)
+                        {
+                            _btnEdit.Id = entity.Id;
+                            _btnEdit.EditValue = entity.Ad;
+                        }
+                    }
+                    break;
                 case "txtKurumTuru":
                     {
                         var entity = (KurumTuruL)ShowListForms<KurumTuruListForm>.ShowDialogListForm(KartTuru.KurumTuru, _btnEdit.Id);

@@ -2,7 +2,6 @@
 using AbcYazilim.OgrenciTakip.Model.Entities;
 using AbcYazilim.OgrenciTakip.Model.Entities.Base;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace AbcYazilim.OgrenciTakip.Model.Dto
@@ -10,6 +9,7 @@ namespace AbcYazilim.OgrenciTakip.Model.Dto
     [NotMapped]
     public class KisiS : Kisi
     {
+        public string PersonelAdi { get; set; }
         public string KisiGrubuAdi { get; set; }
         public string KayitKaynakAdi { get; set; }
         public string MeslekAdi { get; set; }
@@ -24,6 +24,7 @@ namespace AbcYazilim.OgrenciTakip.Model.Dto
         public DateTime? DogumTarihi { get; set; }
         public KayitTuru KayitTuru { get; set; }
         public string Aciklama { get; set; }
+        public string PersonelAdi { get; set; }
         public string KisiGrubuAdi { get; set; }
         public string KayitKaynakAdi { get; set; }
         public string MeslekAdi { get; set; }

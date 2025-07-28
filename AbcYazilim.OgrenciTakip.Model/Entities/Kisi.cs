@@ -25,6 +25,7 @@ namespace AbcYazilim.OgrenciTakip.Model.Entities
         [StringLength(500)]
         public string Aciklama { get; set; }       
         //public long? SorumluPersonelId { get; set; }   
+        public long? PersonelId { get; set; }
         public long? KisiGrubuId { get; set; }
         public long? KayitKaynakId { get; set; }
         public long? EtiketId { get; set; }
@@ -32,6 +33,7 @@ namespace AbcYazilim.OgrenciTakip.Model.Entities
         public long? OzelKod1Id { get; set; }
         public long? OzelKod2Id { get; set; }
 
+        public Personel Personel { get; set; }
         public KisiGrubu KisiGrubu { get; set; }
         public KayitKaynak KayitKaynak { get; set; }
         public Meslek Meslek { get; set; }       

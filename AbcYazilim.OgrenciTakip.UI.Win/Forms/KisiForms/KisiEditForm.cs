@@ -79,6 +79,8 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.KisiForms
             txtCinsiyet.SelectedItem = entity.Cinsiyet.ToName();
             txtDogumTarihi.EditValue = entity.DogumTarihi;
             txtAciklama.Text = entity.Aciklama;
+            txtSorumlu.Id = entity.PersonelId;
+            txtSorumlu.Text = entity.PersonelAdi;
             txtKayitKaynak.Id = entity.KayitKaynakId;
             txtKayitKaynak.Text = entity.KayitKaynakAdi;
             txtMeslek.Id = entity.MeslekId;
@@ -115,6 +117,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.KisiForms
                 Cinsiyet = txtCinsiyet.Text.GetEnum<Cinsiyet>(),
                 DogumTarihi = (DateTime?)txtDogumTarihi.EditValue,
                 Aciklama = txtAciklama.Text,
+                PersonelId = txtSorumlu.Id,
                 KayitKaynakId = txtKayitKaynak.Id,
                 MeslekId = txtMeslek.Id,
                 KisiGrubuId = txtKisiGrubu.Id,
@@ -172,6 +175,8 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.KisiForms
                     sec.Sec(txtMeslek);
                 else if (sender == txtKisiGrubu)
                     sec.Sec(txtKisiGrubu);
+                else if (sender == txtSorumlu)
+                    sec.Sec(txtSorumlu);
                 else if (sender == txtKayitKaynak)
                     sec.Sec(txtKayitKaynak);
                 else if (sender == txtOzelKod1)
