@@ -117,6 +117,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.GenelForms
             this.btnPersonelKartlari = new DevExpress.XtraBars.BarButtonItem();
             this.btnBelgeTuruKartlari = new DevExpress.XtraBars.BarButtonItem();
             this.btnKurumTuruKartlari = new DevExpress.XtraBars.BarButtonItem();
+            this.btnKurumlarKartlari = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup9 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup10 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -149,7 +150,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.GenelForms
             this.ribbonPage11 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPage13 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.imgArkaPlanResim = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls.MyPictureEdit();
-            this.btnKurumlarKartlari = new DevExpress.XtraBars.BarButtonItem();
+            this.btnCarilerKartlari = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgArkaPlanResim.Properties)).BeginInit();
@@ -242,9 +243,10 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.GenelForms
             this.btnPersonelKartlari,
             this.btnBelgeTuruKartlari,
             this.btnKurumTuruKartlari,
-            this.btnKurumlarKartlari});
+            this.btnKurumlarKartlari,
+            this.btnCarilerKartlari});
             this.ribbonControl.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl.MaxItemId = 85;
+            this.ribbonControl.MaxItemId = 86;
             this.ribbonControl.Name = "ribbonControl";
             this.ribbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
@@ -923,6 +925,14 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.GenelForms
             this.btnKurumTuruKartlari.ImageOptions.LargeImage = global::AbcYazilim.OgrenciTakip.UI.Win.Properties.Resources.city_32x32;
             this.btnKurumTuruKartlari.Name = "btnKurumTuruKartlari";
             // 
+            // btnKurumlarKartlari
+            // 
+            this.btnKurumlarKartlari.Caption = "Kurum Kartları";
+            this.btnKurumlarKartlari.Id = 84;
+            this.btnKurumlarKartlari.ImageOptions.Image = global::AbcYazilim.OgrenciTakip.UI.Win.Properties.Resources.chart_16x161;
+            this.btnKurumlarKartlari.ImageOptions.LargeImage = global::AbcYazilim.OgrenciTakip.UI.Win.Properties.Resources.chart_32x32;
+            this.btnKurumlarKartlari.Name = "btnKurumlarKartlari";
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -999,6 +1009,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.GenelForms
             this.ribbonPageGroup3.ItemLinks.Add(this.btnBelgeTuruKartlari);
             this.ribbonPageGroup3.ItemLinks.Add(this.btnKurumTuruKartlari);
             this.ribbonPageGroup3.ItemLinks.Add(this.btnKurumlarKartlari);
+            this.ribbonPageGroup3.ItemLinks.Add(this.btnCarilerKartlari);
             this.ribbonPageGroup3.Name = "ribbonPageGroup3";
             this.ribbonPageGroup3.Text = "Veli";
             // 
@@ -1217,13 +1228,12 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.GenelForms
             this.imgArkaPlanResim.StatusBarKisaYolAciklama = null;
             this.imgArkaPlanResim.TabIndex = 3;
             // 
-            // btnKurumlarKartlari
+            // btnCarilerKartlari
             // 
-            this.btnKurumlarKartlari.Caption = "Kurum Kartları";
-            this.btnKurumlarKartlari.Id = 84;
-            this.btnKurumlarKartlari.ImageOptions.Image = global::AbcYazilim.OgrenciTakip.UI.Win.Properties.Resources.chart_16x161;
-            this.btnKurumlarKartlari.ImageOptions.LargeImage = global::AbcYazilim.OgrenciTakip.UI.Win.Properties.Resources.chart_32x32;
-            this.btnKurumlarKartlari.Name = "btnKurumlarKartlari";
+            this.btnCarilerKartlari.Caption = "Cari Kartları";
+            this.btnCarilerKartlari.Id = 85;
+            this.btnCarilerKartlari.ImageOptions.SvgImage = global::AbcYazilim.OgrenciTakip.UI.Win.Properties.Resources.allowuserstoeditranges;
+            this.btnCarilerKartlari.Name = "btnCarilerKartlari";
             // 
             // AnaForm
             // 
@@ -1364,5 +1374,6 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.GenelForms
         private DevExpress.XtraBars.BarButtonItem btnBelgeTuruKartlari;
         private DevExpress.XtraBars.BarButtonItem btnKurumTuruKartlari;
         private DevExpress.XtraBars.BarButtonItem btnKurumlarKartlari;
+        private DevExpress.XtraBars.BarButtonItem btnCarilerKartlari;
     }
 }

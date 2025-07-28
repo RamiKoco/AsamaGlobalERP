@@ -13,6 +13,7 @@ using AbcYazilim.OgrenciTakip.UI.Win.Forms.BankaForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.BankaHesapForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.BelgeTuruForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.CariForms;
+using AbcYazilim.OgrenciTakip.UI.Win.Forms.CarilerForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.DepartmanForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.EtiketForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.EvrakForms;
@@ -200,7 +201,6 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.GenelForms
                 ShowListForms<YabanciDilListForm>.ShowListForm(KartTuru.YabanciDil);
             else if (e.Item == btnTesvikKartlari)
                 ShowListForms<TesvikListForm>.ShowListForm(KartTuru.Tesvik);
-
             else if (e.Item == btnRamiDeneme)
                 ShowListForms<RamiDenemeListForm>.ShowListForm(KartTuru.Rami);
             else if (e.Item == btnYazar)
@@ -215,7 +215,6 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.GenelForms
                 ShowListForms<EtiketListForm>.ShowListForm(KartTuru.Etiket);
             else if (e.Item == btnRenkKartlari)
                 ShowListForms<RenkListForm>.ShowListForm(KartTuru.Renk);
-
             else if (e.Item == btnAdresKartlari)
                 ShowListForms<AdresBilgileriListForm>.ShowListForm(KartTuru.AdresBilgileri);
             else if (e.Item == btnAdresTurleriKartlari)
@@ -238,6 +237,8 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.GenelForms
                 ShowListForms<KurumTuruListForm>.ShowListForm(KartTuru.KurumTuru);
             else if (e.Item == btnKurumlarKartlari)
                 ShowListForms<KurumlarListForm>.ShowListForm(KartTuru.Kurumlar);
+            else if (e.Item == btnCarilerKartlari)
+                ShowListForms<CarilerListForm>.ShowListForm(KartTuru.Cariler);
             
             //else if (e.Item == btnAjandaKartlari)
             //{

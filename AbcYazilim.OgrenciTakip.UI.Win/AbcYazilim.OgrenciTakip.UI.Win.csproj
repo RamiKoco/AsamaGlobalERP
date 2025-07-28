@@ -309,6 +309,18 @@
     <Compile Include="Forms\CariForms\CariListForm.Designer.cs">
       <DependentUpon>CariListForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\CarilerForms\CarilerEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CarilerForms\CarilerEditForm.Designer.cs">
+      <DependentUpon>CarilerEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CarilerForms\CarilerListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CarilerForms\CarilerListForm.Designer.cs">
+      <DependentUpon>CarilerListForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\DepartmanForms\DepartmanEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1669,6 +1681,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CariForms\CariListForm.resx">
       <DependentUpon>CariListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CarilerForms\CarilerEditForm.resx">
+      <DependentUpon>CarilerEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CarilerForms\CarilerListForm.resx">
+      <DependentUpon>CarilerListForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\DepartmanForms\DepartmanEditForm.resx">
       <DependentUpon>DepartmanEditForm.cs</DependentUpon>
@@ -3040,6 +3058,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\chart_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\allowuserstoeditranges.svg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

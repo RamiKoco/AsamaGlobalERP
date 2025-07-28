@@ -94,6 +94,7 @@
     <Compile Include="General\BelgeTuruBll.cs" />
     <Compile Include="General\BilgiNotlariBll.cs" />
     <Compile Include="General\CariBll.cs" />
+    <Compile Include="General\CarilerBll.cs" />
     <Compile Include="General\DepartmanBll.cs" />
     <Compile Include="General\DonemBll.cs" />
     <Compile Include="General\DonemParametreBll.cs" />
