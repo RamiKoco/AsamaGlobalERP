@@ -27,7 +27,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.CariSubelerForms
         }
         public override void Yukle()
         {
-            OldEntity = BaseIslemTuru == IslemTuru.EntityInsert ? new CariSubeler() : ((CariSubelerBll)Bll).Single(FilterFunctions.Filter<CariSubeler>(Id));
+            OldEntity = BaseIslemTuru == IslemTuru.EntityInsert ? new CariSubelerS() : ((CariSubelerBll)Bll).Single(FilterFunctions.Filter<CariSubeler>(Id));
             NesneyiKontrollereBagla();
             Text = Text + $" - ( {_carilerAdi} )";
 
@@ -83,5 +83,21 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.CariSubelerForms
                 else if (sender == txtOzelKod2)
                     sec.Sec(txtOzelKod2, KartTuru.CariSubeler);
         }
+
+        protected internal override void ButonEnabledDurumu()
+        {
+            var oldEntity = (CariSubeler)OldEntity;
+            var currentEntity = (CariSubeler)CurrentEntity;
+
+            btnKaydet.Enabled = oldEntity.Id != currentEntity.Id ||
+                                oldEntity.Kod != currentEntity.Kod ||
+                                oldEntity.CariSubeAdi != currentEntity.CariSubeAdi ||
+                                oldEntity.OzelKod1Id != currentEntity.OzelKod1Id ||
+                                oldEntity.OzelKod2Id != currentEntity.OzelKod2Id ||
+                                oldEntity.Aciklama != currentEntity.Aciklama ||
+                                oldEntity.Durum != currentEntity.Durum;
+        }
+
+
     }
 }
