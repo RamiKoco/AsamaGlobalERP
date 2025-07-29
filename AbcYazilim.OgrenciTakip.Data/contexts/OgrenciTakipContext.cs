@@ -27,6 +27,7 @@ namespace AbcYazilim.OgrenciTakip.Data.Contexts
             
             //modelBuilder.Entity<Ulke>().HasMany(x => x.Il).WithRequired().WillCascadeOnDelete(true);
             modelBuilder.Entity<Il>().HasMany(x => x.Ilce).WithRequired().WillCascadeOnDelete(true);
+            modelBuilder.Entity<Cariler>().HasMany(x => x.CariSubeler).WithRequired().WillCascadeOnDelete(true);
             modelBuilder.Entity<Banka>().HasMany(x => x.BankaSube).WithRequired().WillCascadeOnDelete(true);
             modelBuilder.Entity<Indirim>().HasMany(x => x.IndiriminUygulanacagiHizmetBilgileri).WithRequired().WillCascadeOnDelete(true);           
         }
@@ -120,5 +121,6 @@ namespace AbcYazilim.OgrenciTakip.Data.Contexts
         public DbSet<Kurumlar> Kurumlar { get; set; }
         public DbSet<PersonelBelge> PersonelBelge { get; set; }
         public DbSet<Cariler> Cariler { get; set; }
+        public DbSet<CariSubeler> CariSubeler { get; set; }
     }
 }

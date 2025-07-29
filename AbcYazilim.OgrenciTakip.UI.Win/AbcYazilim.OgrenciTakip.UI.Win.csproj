@@ -321,6 +321,18 @@
     <Compile Include="Forms\CarilerForms\CarilerListForm.Designer.cs">
       <DependentUpon>CarilerListForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\CariSubelerForms\CariSubelerEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CariSubelerForms\CariSubelerEditForm.Designer.cs">
+      <DependentUpon>CariSubelerEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CariSubelerForms\CariSubelerListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CariSubelerForms\CariSubelerListForm.Designer.cs">
+      <DependentUpon>CariSubelerListForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\DepartmanForms\DepartmanEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1687,6 +1699,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CarilerForms\CarilerListForm.resx">
       <DependentUpon>CarilerListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CariSubelerForms\CariSubelerEditForm.resx">
+      <DependentUpon>CariSubelerEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CariSubelerForms\CariSubelerListForm.resx">
+      <DependentUpon>CariSubelerListForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\DepartmanForms\DepartmanEditForm.resx">
       <DependentUpon>DepartmanEditForm.cs</DependentUpon>
@@ -3073,6 +3091,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\chart.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\business_piechart.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\createdoughnutchart.svg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

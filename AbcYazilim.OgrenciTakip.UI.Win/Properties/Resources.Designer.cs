@@ -371,6 +371,16 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type DevExpress.Utils.Svg.SvgImage.
+        /// </summary>
+        internal static DevExpress.Utils.Svg.SvgImage business_piechart {
+            get {
+                object obj = ResourceManager.GetObject("business_piechart", resourceCulture);
+                return ((DevExpress.Utils.Svg.SvgImage)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap calculator_32x32 {
@@ -737,6 +747,16 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Properties {
             get {
                 object obj = ResourceManager.GetObject("country_32x32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type DevExpress.Utils.Svg.SvgImage.
+        /// </summary>
+        internal static DevExpress.Utils.Svg.SvgImage createdoughnutchart {
+            get {
+                object obj = ResourceManager.GetObject("createdoughnutchart", resourceCulture);
+                return ((DevExpress.Utils.Svg.SvgImage)(obj));
             }
         }
         

@@ -1,5 +1,6 @@
 ﻿using AbcYazilim.OgrenciTakip.Model.Attributes;
 using AbcYazilim.OgrenciTakip.Model.Entities.Base;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -47,6 +48,9 @@ namespace AbcYazilim.OgrenciTakip.Model.Entities
         public OzelKod OzelKod3 { get; set; }
         public OzelKod OzelKod4 { get; set; }
         public OzelKod OzelKod5 { get; set; }
+
+        [InverseProperty("Cariler")]
+        public ICollection<CariSubeler> CariSubeler { get; set; }
 
     }
 }
