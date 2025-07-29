@@ -112,6 +112,11 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms
             DevExpress.Utils.ToolTipItem toolTipItem31 = new DevExpress.Utils.ToolTipItem();
             DevExpress.Utils.ToolTipSeparatorItem toolTipSeparatorItem17 = new DevExpress.Utils.ToolTipSeparatorItem();
             DevExpress.Utils.ToolTipItem toolTipItem32 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip17 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem17 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem33 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.ToolTipSeparatorItem toolTipSeparatorItem18 = new DevExpress.Utils.ToolTipSeparatorItem();
+            DevExpress.Utils.ToolTipItem toolTipItem34 = new DevExpress.Utils.ToolTipItem();
             this.ribbonControl = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.btnYeni = new DevExpress.XtraBars.BarButtonItem();
             this.btnSil = new DevExpress.XtraBars.BarButtonItem();
@@ -204,6 +209,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms
             this.barF4 = new DevExpress.XtraBars.BarStaticItem();
             this.barF4Aciklama = new DevExpress.XtraBars.BarStaticItem();
             this.btnAnimeEkle = new DevExpress.XtraBars.BarButtonItem();
+            this.btnIletisimKartlari = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
@@ -310,9 +316,10 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms
             this.btnParametreler,
             this.barF4,
             this.barF4Aciklama,
-            this.btnAnimeEkle});
+            this.btnAnimeEkle,
+            this.btnIletisimKartlari});
             this.ribbonControl.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl.MaxItemId = 96;
+            this.ribbonControl.MaxItemId = 97;
             this.ribbonControl.Name = "ribbonControl";
             this.ribbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
@@ -1302,6 +1309,26 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms
             this.btnAnimeEkle.SuperTip = superToolTip16;
             this.btnAnimeEkle.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             // 
+            // btnIletisimKartlari
+            // 
+            this.btnIletisimKartlari.Caption = "İletişim Kartları";
+            this.btnIletisimKartlari.Id = 96;
+            this.btnIletisimKartlari.ImageOptions.Image = global::AbcYazilim.OgrenciTakip.UI.Win.Properties.Resources.contact_32x32;
+            this.btnIletisimKartlari.ImageOptions.LargeImage = global::AbcYazilim.OgrenciTakip.UI.Win.Properties.Resources.contact_32x32;
+            this.btnIletisimKartlari.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A));
+            this.btnIletisimKartlari.Name = "btnIletisimKartlari";
+            toolTipTitleItem17.ImageOptions.Image = global::AbcYazilim.OgrenciTakip.UI.Win.Properties.Resources.comment_16x16;
+            toolTipTitleItem17.Text = "(Ctrl+A)";
+            toolTipItem33.Text = "İletişimler Kartları";
+            toolTipItem34.ImageOptions.Image = global::AbcYazilim.OgrenciTakip.UI.Win.Properties.Resources.suggestion_16x16;
+            toolTipItem34.Text = "Bağlı İletişim Kartlarını Göster.";
+            superToolTip17.Items.Add(toolTipTitleItem17);
+            superToolTip17.Items.Add(toolTipItem33);
+            superToolTip17.Items.Add(toolTipSeparatorItem18);
+            superToolTip17.Items.Add(toolTipItem34);
+            this.btnIletisimKartlari.SuperTip = superToolTip17;
+            this.btnIletisimKartlari.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -1320,6 +1347,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms
             this.ribbonPageGroup1.ItemLinks.Add(this.btnYenile);
             this.ribbonPageGroup1.ItemLinks.Add(this.btnFiltrele);
             this.ribbonPageGroup1.ItemLinks.Add(this.btnKolonlar);
+            this.ribbonPageGroup1.ItemLinks.Add(this.btnIletisimKartlari);
             this.ribbonPageGroup1.ItemLinks.Add(this.btnTahakkukYap);
             this.ribbonPageGroup1.ItemLinks.Add(this.btnBagliKartlar);
             this.ribbonPageGroup1.ItemLinks.Add(this.btnParametreler);
@@ -1495,5 +1523,6 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms
         protected DevExpress.XtraBars.BarStaticItem barF4;
         protected DevExpress.XtraBars.BarStaticItem barF4Aciklama;
         protected DevExpress.XtraBars.BarButtonItem btnAnimeEkle;
+        protected DevExpress.XtraBars.BarButtonItem btnIletisimKartlari;
     }
 }
