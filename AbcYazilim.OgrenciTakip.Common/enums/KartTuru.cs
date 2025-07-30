@@ -208,5 +208,7 @@ namespace AbcYazilim.OgrenciTakip.Common.Enums
         Cariler = 101,
         [Description("Cari Şube Kartı")]
         CariSubeler = 102,
+        [Description("Kişi İletişim Kartı")]
+        KisiIletisim = 103,
     }
 }

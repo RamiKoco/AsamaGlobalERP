@@ -312,6 +312,8 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms
 
             else if (e.Item == btnBagliKartlar)
                 BagliKartAc();
+            else if (e.Item == btnIletisimKartlari)
+                BagliKartAc();
 
             else if (e.Item == btnParametreler)
                 BagliKartAc();

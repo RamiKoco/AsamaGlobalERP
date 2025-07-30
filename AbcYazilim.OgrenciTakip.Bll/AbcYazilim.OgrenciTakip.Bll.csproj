@@ -132,6 +132,7 @@
     <Compile Include="General\KisiBll.cs" />
     <Compile Include="General\KisiEtiketBll.cs" />
     <Compile Include="General\KisiGrubuBll.cs" />
+    <Compile Include="General\KisiIletisimBll.cs" />
     <Compile Include="General\KitapTuruBll.cs" />
     <Compile Include="General\KontenjanBll.cs" />
     <Compile Include="General\KullaniciBirimYetkileriBll.cs" />

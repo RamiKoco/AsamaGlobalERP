@@ -114,6 +114,7 @@
     <Compile Include="Dto\KimlikTuruDto.cs" />
     <Compile Include="Dto\KisiDto.cs" />
     <Compile Include="Dto\KisiEtiketDto.cs" />
+    <Compile Include="Dto\KisiIletisimDto.cs" />
     <Compile Include="Dto\KullaniciBirimYetkileriDto.cs" />
     <Compile Include="Dto\KullaniciDto.cs" />
     <Compile Include="Dto\KullaniciParametreDto.cs" />
@@ -195,6 +196,7 @@
     <Compile Include="Entities\Kisi.cs" />
     <Compile Include="Entities\KisiEtiket.cs" />
     <Compile Include="Entities\KisiGrubu.cs" />
+    <Compile Include="Entities\KisiIletisim.cs" />
     <Compile Include="Entities\KitapTuru.cs" />
     <Compile Include="Entities\Kontenjan.cs" />
     <Compile Include="Entities\Kullanici.cs" />

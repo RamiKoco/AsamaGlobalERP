@@ -1,0 +1,56 @@
+﻿using AbcYazilim.OgrenciTakip.Common.Enums;
+using AbcYazilim.OgrenciTakip.Model.Attributes;
+using AbcYazilim.OgrenciTakip.Model.Entities.Base;
+using System;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace AbcYazilim.OgrenciTakip.Model.Entities
+{
+    public class KisiIletisim : BaseEntityDurum
+    {
+        [Index("IX_Kod", IsUnique = false)]
+        public override string Kod { get; set; }
+        [Required, StringLength(30), ZorunluAlan("Baslik", "txtBaslik")]
+        public string Baslik { get; set; }
+        public IletisimTuru IletisimTuru { get; set; } = IletisimTuru.Telefon;
+        public IletisimDurumu IzinDurumu { get; set; } = IletisimDurumu.Belirtilmedi;
+        public IletisimKanalTipi IletisimKanalTipi { get; set; } = IletisimKanalTipi.Arama;
+
+        [StringLength(6)]
+        public string UlkeKodu { get; set; }
+
+        [StringLength(17)]
+        public string Numara { get; set; }
+
+        [StringLength(10)]
+        public string DahiliNo { get; set; }
+        [StringLength(30)]
+        public string EPosta { get; set; }
+        public string Kanallar { get; set; }
+        public string KullaniciAdi { get; set; }
+        public string SosyalMedyaUrl { get; set; }
+        public string SIPKullaniciAdi { get; set; }
+        public string SIPServer { get; set; }
+        public string Ilgili { get; set; }
+        public short Oncelik { get; set; }
+        public bool VoipMi { get; set; }
+        [Column(TypeName = "date")]
+        public DateTime? IzinTarihi { get; set; }
+
+        [StringLength(50)]
+        public string Web { get; set; }
+        public long KisiId { get; set; }
+        public long? SosyalMedyaPlatformuId { get; set; }
+        public long? OzelKod1Id { get; set; }
+        public long? OzelKod2Id { get; set; }
+
+        [StringLength(500)]
+        public string Aciklama { get; set; }
+
+        public Kisi Kisi { get; set; }
+        public SosyalMedyaPlatformu SosyalMedyaPlatformu { get; set; }
+        public OzelKod OzelKod1 { get; set; }
+        public OzelKod OzelKod2 { get; set; }
+    }
+}

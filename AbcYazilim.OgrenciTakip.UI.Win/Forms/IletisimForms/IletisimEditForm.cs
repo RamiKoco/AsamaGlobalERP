@@ -60,8 +60,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.IletisimForms
             var entity = (IletisimS)OldEntity;
             txtKod.Text = entity.Kod;
             txtBaslik.Text = entity.Baslik;
-            txtIlgili.Text = entity.Ilgili;          
-            txtWeb.Text = entity.Web;          
+            txtIlgili.Text = entity.Ilgili;            
             txtKayitTuru.SelectedItem = entity.KayitTuru.ToName();
             if (entity.KayitTuru == KayitTuru.Kisi)
                 txtKayitHesabi.Id = entity.KisiId ?? 0;

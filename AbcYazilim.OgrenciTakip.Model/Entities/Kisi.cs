@@ -2,6 +2,7 @@
 using AbcYazilim.OgrenciTakip.Model.Attributes;
 using AbcYazilim.OgrenciTakip.Model.Entities.Base;
 using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -39,5 +40,8 @@ namespace AbcYazilim.OgrenciTakip.Model.Entities
         public Meslek Meslek { get; set; }
         public OzelKod OzelKod1 { get; set; }
         public OzelKod OzelKod2 { get; set; }
+
+        [InverseProperty("Kisi")]
+        public ICollection<KisiIletisim> KisiIletisim { get; set; }
     }
 }
