@@ -102,7 +102,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.KisiForms
                 SIPKullaniciAdi = txtSIPKullaniciAdi.Text,
                 SosyalMedyaUrl = txtSosyalMedyaUrl.Text,
                 SosyalMedyaPlatformuId = txtSosyalMedyaPlatformu.Id,
-                KisiId = _kisiId,
+                KisiId = BaseIslemTuru == IslemTuru.EntityInsert ? _kisiId : ((KisiIletisimS)OldEntity).KisiId,
                 OzelKod1Id = txtOzelKod1.Id,
                 OzelKod2Id = txtOzelKod2.Id,
                 Aciklama = txtAciklama.Text,
@@ -116,35 +116,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.KisiForms
         {
             if (!IsLoaded) return;
 
-            base.ButonEnabledDurumu();
-            var oldEntity = (KisiIletisim)OldEntity;
-            var currentEntity = (KisiIletisim)CurrentEntity;
-
-            btnKaydet.Enabled = oldEntity.Id != currentEntity.Id ||
-                                oldEntity.Kod != currentEntity.Kod ||
-                                oldEntity.Baslik != currentEntity.Baslik ||
-                                oldEntity.IletisimTuru != currentEntity.IletisimTuru ||
-                                oldEntity.IzinDurumu != currentEntity.IzinDurumu ||
-                                oldEntity.IletisimKanalTipi != currentEntity.IletisimKanalTipi ||
-                                oldEntity.Kanallar != currentEntity.Kanallar ||
-                                //oldEntity.KullaniciAdi != currentEntity.KullaniciAdi ||
-                                //oldEntity.SosyalMedyaUrl != currentEntity.SosyalMedyaUrl ||
-                                oldEntity.SIPKullaniciAdi != currentEntity.SIPKullaniciAdi ||
-                                oldEntity.SIPServer != currentEntity.SIPServer ||
-                                oldEntity.Ilgili != currentEntity.Ilgili ||
-                                oldEntity.Oncelik != currentEntity.Oncelik ||
-                                oldEntity.VoipMi != currentEntity.VoipMi ||
-                                oldEntity.IzinTarihi != currentEntity.IzinTarihi ||
-                                //oldEntity.Web != currentEntity.Web ||
-                                oldEntity.SosyalMedyaPlatformuId != currentEntity.SosyalMedyaPlatformuId ||
-                                oldEntity.UlkeKodu != currentEntity.UlkeKodu ||
-                                oldEntity.Numara != currentEntity.Numara ||
-                                oldEntity.DahiliNo != currentEntity.DahiliNo ||
-                                oldEntity.EPosta != currentEntity.EPosta ||
-                                oldEntity.OzelKod1Id != currentEntity.OzelKod1Id ||
-                                oldEntity.OzelKod2Id != currentEntity.OzelKod2Id ||
-                                oldEntity.Aciklama != currentEntity.Aciklama ||
-                                oldEntity.Durum != currentEntity.Durum;
+            base.ButonEnabledDurumu();         
 
             if (txtIletisimTurleri.EditValue == null) return;
 
