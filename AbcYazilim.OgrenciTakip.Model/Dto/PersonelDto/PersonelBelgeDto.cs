@@ -1,10 +1,10 @@
-﻿using AbcYazilim.OgrenciTakip.Model.Entities;
+﻿using AbcYazilim.OgrenciTakip.Model.Entities.Personel;
 using AbcYazilim.OgrenciTakip.Model.Entities.Base.Interfaces;
 using DevExpress.DataAccess.ObjectBinding;
 using System;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace AbcYazilim.OgrenciTakip.Model.Dto
+namespace AbcYazilim.OgrenciTakip.Model.Dto.PersonelDto
 {
     [NotMapped]
     public class PersonelBelgeL: PersonelBelge, IBaseHareketEntity

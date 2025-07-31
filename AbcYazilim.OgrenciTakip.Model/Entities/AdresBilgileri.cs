@@ -43,7 +43,7 @@ namespace AbcYazilim.OgrenciTakip.Model.Entities
         public bool VarsayilanSevkiyatMi { get; set; } = false;
       
         public Kisi.Kisi Kisi { get; set; }
-        public Personel Personel { get; set; }
+        public Personel.Personel Personel { get; set; }
         public Meslek Meslek { get; set; }
         public Ulke Ulke { get; set; }
         public Il Il { get; set; }

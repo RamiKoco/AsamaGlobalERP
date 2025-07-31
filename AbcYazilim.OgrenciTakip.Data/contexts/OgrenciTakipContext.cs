@@ -4,6 +4,7 @@ using AbcYazilim.OgrenciTakip.Data.OgrenciTakipMigration;
 using AbcYazilim.OgrenciTakip.Model.Entities;
 using AbcYazilim.OgrenciTakip.Model.Entities.Kisi;
 using AbcYazilim.OgrenciTakip.Model.Entities.KitapTuru;
+using AbcYazilim.OgrenciTakip.Model.Entities.Personel;
 namespace AbcYazilim.OgrenciTakip.Data.Contexts
 {
     public class OgrenciTakipContext : BaseDbContext<OgrenciTakipContext,Configuration>

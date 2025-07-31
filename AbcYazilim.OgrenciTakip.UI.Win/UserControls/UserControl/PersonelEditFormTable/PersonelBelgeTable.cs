@@ -1,5 +1,5 @@
-﻿using AbcYazilim.OgrenciTakip.Bll.General;
-using AbcYazilim.OgrenciTakip.Model.Dto;
+﻿using AbcYazilim.OgrenciTakip.Bll.General.PersonelBll;
+using AbcYazilim.OgrenciTakip.Model.Dto.PersonelDto;
 using AbcYazilim.OgrenciTakip.UI.Win.Functions;
 using AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.Base;
 using DevExpress.XtraGrid.Views.Base;

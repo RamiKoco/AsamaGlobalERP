@@ -62,7 +62,7 @@ namespace AbcYazilim.OgrenciTakip.Model.Entities
 
         public SosyalMedyaPlatformu SosyalMedyaPlatformu { get; set; }       
         public Kisi.Kisi Kisi { get; set; }
-        public Personel Personel { get; set; }
+        public Personel.Personel Personel { get; set; }
         public Meslek Meslek { get; set; }
         public OzelKod OzelKod1 { get; set; }
         public OzelKod OzelKod2 { get; set; }

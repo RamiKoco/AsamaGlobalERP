@@ -2,16 +2,17 @@
 using AbcYazilim.OgrenciTakip.Bll.Interfaces;
 using AbcYazilim.OgrenciTakip.Common.Enums;
 using AbcYazilim.OgrenciTakip.Data.Contexts;
-using AbcYazilim.OgrenciTakip.Model.Dto;
+using AbcYazilim.OgrenciTakip.Model.Dto.PersonelDto;
 using AbcYazilim.OgrenciTakip.Model.Entities;
 using AbcYazilim.OgrenciTakip.Model.Entities.Base;
+using AbcYazilim.OgrenciTakip.Model.Entities.Personel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Windows.Forms;
 
-namespace AbcYazilim.OgrenciTakip.Bll.General
+namespace AbcYazilim.OgrenciTakip.Bll.General.PersonelBll
 {
     public class PersonelBll : BaseGenelBll<Personel>, IBaseGenelBll, IBaseCommonBll
     {

@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace AbcYazilim.OgrenciTakip.Model.Entities
+namespace AbcYazilim.OgrenciTakip.Model.Entities.Personel
 {
     public class Personel : BaseEntityDurum
     {
