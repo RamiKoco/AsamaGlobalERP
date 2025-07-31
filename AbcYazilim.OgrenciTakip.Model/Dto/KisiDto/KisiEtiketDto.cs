@@ -1,8 +1,8 @@
-﻿using AbcYazilim.OgrenciTakip.Model.Entities;
-using AbcYazilim.OgrenciTakip.Model.Entities.Base.Interfaces;
+﻿using AbcYazilim.OgrenciTakip.Model.Entities.Base.Interfaces;
+using AbcYazilim.OgrenciTakip.Model.Entities.Kisi;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace AbcYazilim.OgrenciTakip.Model.Dto
+namespace AbcYazilim.OgrenciTakip.Model.Dto.KisiDto
 {
     [NotMapped]
     public class KisiEtiketL : KisiEtiket, IBaseHareketEntity

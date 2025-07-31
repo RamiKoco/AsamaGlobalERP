@@ -1,15 +1,14 @@
 ﻿using AbcYazilim.OgrenciTakip.Bll.Functions;
-using AbcYazilim.OgrenciTakip.Bll.General;
 using AbcYazilim.OgrenciTakip.Common.Enums;
-using System.Drawing;
 using AbcYazilim.OgrenciTakip.Model.Dto;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.EtiketForms;
 
 using AbcYazilim.OgrenciTakip.UI.Win.Functions;
-using AbcYazilim.OgrenciTakip.UI.Win.GenelForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Show;
 using AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.Base;
 using System.Linq;
+using AbcYazilim.OgrenciTakip.Model.Dto.KisiDto;
+using AbcYazilim.OgrenciTakip.Bll.General.KisiBll;
 
 
 namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.KisiEtiketEditFormTable

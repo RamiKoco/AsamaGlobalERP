@@ -2,7 +2,9 @@
 using AbcYazilim.OgrenciTakip.Common.Enums;
 using AbcYazilim.OgrenciTakip.Common.Message;
 using AbcYazilim.OgrenciTakip.Model.Dto;
+using AbcYazilim.OgrenciTakip.Model.Dto.KisiDto;
 using AbcYazilim.OgrenciTakip.Model.Entities;
+using AbcYazilim.OgrenciTakip.Model.Entities.Kisi;
 using AbcYazilim.OgrenciTakip.Model.Entities.KitapTuru;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.AdresTurleriForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.AvukatForms;

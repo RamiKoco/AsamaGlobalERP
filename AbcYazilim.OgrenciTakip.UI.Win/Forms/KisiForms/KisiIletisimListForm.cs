@@ -1,4 +1,4 @@
-﻿using AbcYazilim.OgrenciTakip.Bll.General;
+﻿using AbcYazilim.OgrenciTakip.Bll.General.KisiBll;
 using AbcYazilim.OgrenciTakip.Common.Enums;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Show;

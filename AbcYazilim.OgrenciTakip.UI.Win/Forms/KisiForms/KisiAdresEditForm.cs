@@ -1,8 +1,8 @@
-﻿using AbcYazilim.OgrenciTakip.Bll.General;
+﻿using AbcYazilim.OgrenciTakip.Bll.General.KisiBll;
 using AbcYazilim.OgrenciTakip.Common.Enums;
 using AbcYazilim.OgrenciTakip.Common.Functions;
-using AbcYazilim.OgrenciTakip.Model.Dto;
-using AbcYazilim.OgrenciTakip.Model.Entities;
+using AbcYazilim.OgrenciTakip.Model.Dto.KisiDto;
+using AbcYazilim.OgrenciTakip.Model.Entities.Kisi;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Functions;
 using DevExpress.XtraEditors;
@@ -93,7 +93,15 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.KisiForms
             };
             ButonEnabledDurumu();
         }
-     
+        protected override bool EntityInsert()
+        {
+            return ((KisiAdresBll)Bll).Insert(CurrentEntity, x => x.Kod == CurrentEntity.Kod && x.KisiId == _kisiId);
+        }
+
+        protected override bool EntityUpdate()
+        {
+            return ((KisiAdresBll)Bll).Update(OldEntity, CurrentEntity, x => x.Kod == CurrentEntity.Kod && x.KisiId == _kisiId);
+        }
         protected override void SecimYap(object sender)
         {
             if (!(sender is ButtonEdit)) return;

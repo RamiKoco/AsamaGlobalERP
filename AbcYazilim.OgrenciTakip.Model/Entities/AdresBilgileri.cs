@@ -1,6 +1,7 @@
 ﻿using AbcYazilim.OgrenciTakip.Common.Enums;
 using AbcYazilim.OgrenciTakip.Model.Attributes;
 using AbcYazilim.OgrenciTakip.Model.Entities.Base;
+using AbcYazilim.OgrenciTakip.Model.Entities;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -41,7 +42,7 @@ namespace AbcYazilim.OgrenciTakip.Model.Entities
         public bool VarsayilanFaturaMi { get; set; } = false;
         public bool VarsayilanSevkiyatMi { get; set; } = false;
       
-        public Kisi Kisi { get; set; }
+        public Kisi.Kisi Kisi { get; set; }
         public Personel Personel { get; set; }
         public Meslek Meslek { get; set; }
         public Ulke Ulke { get; set; }

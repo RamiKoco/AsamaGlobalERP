@@ -4,7 +4,7 @@ using AbcYazilim.OgrenciTakip.Model.Entities.Base;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace AbcYazilim.OgrenciTakip.Model.Entities
+namespace AbcYazilim.OgrenciTakip.Model.Entities.Kisi
 {
     public class KisiAdres : BaseEntityDurum
     {

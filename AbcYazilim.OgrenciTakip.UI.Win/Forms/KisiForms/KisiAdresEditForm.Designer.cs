@@ -198,7 +198,7 @@
             this.txtKod.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
             this.txtKod.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtKod.Properties.MaxLength = 20;
-            this.txtKod.Size = new System.Drawing.Size(81, 20);
+            this.txtKod.Size = new System.Drawing.Size(181, 20);
             this.txtKod.StatusBarAciklama = "Kod Giriniz";
             this.txtKod.StyleController = this.myDataLayoutControl;
             this.txtKod.TabIndex = 15;
@@ -507,7 +507,8 @@
             this.layoutControlItem17.Control = this.txtKod;
             this.layoutControlItem17.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem17.Name = "layoutControlItem17";
-            this.layoutControlItem17.Size = new System.Drawing.Size(150, 24);
+            this.layoutControlItem17.OptionsTableLayoutItem.ColumnSpan = 2;
+            this.layoutControlItem17.Size = new System.Drawing.Size(250, 24);
             this.layoutControlItem17.Text = "Kod";
             this.layoutControlItem17.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
             this.layoutControlItem17.TextSize = new System.Drawing.Size(60, 20);
@@ -817,4 +818,4 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem13;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem16;
     }
-    }
+}

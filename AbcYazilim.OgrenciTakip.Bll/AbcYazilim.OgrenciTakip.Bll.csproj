@@ -129,11 +129,11 @@
     <Compile Include="General\KasaBll.cs" />
     <Compile Include="General\KayitKaynakBll.cs" />
     <Compile Include="General\KimlikTuruBll.cs" />
-    <Compile Include="General\KisiAdresBll.cs" />
-    <Compile Include="General\KisiBll.cs" />
-    <Compile Include="General\KisiEtiketBll.cs" />
-    <Compile Include="General\KisiGrubuBll.cs" />
-    <Compile Include="General\KisiIletisimBll.cs" />
+    <Compile Include="General\KisiBll\KisiAdresBll.cs" />
+    <Compile Include="General\KisiBll\KisiBll.cs" />
+    <Compile Include="General\KisiBll\KisiEtiketBll.cs" />
+    <Compile Include="General\KisiBll\KisiGrubuBll.cs" />
+    <Compile Include="General\KisiBll\KisiIletisimBll.cs" />
     <Compile Include="General\KitapTuruBll.cs" />
     <Compile Include="General\KontenjanBll.cs" />
     <Compile Include="General\KullaniciBirimYetkileriBll.cs" />

@@ -1,16 +1,16 @@
 ﻿using AbcYazilim.OgrenciTakip.Bll.Base;
 using AbcYazilim.OgrenciTakip.Bll.Interfaces;
 using AbcYazilim.OgrenciTakip.Common.Enums;
-using AbcYazilim.OgrenciTakip.Model.Dto;
-using AbcYazilim.OgrenciTakip.Model.Entities;
+using AbcYazilim.OgrenciTakip.Model.Dto.KisiDto;
 using AbcYazilim.OgrenciTakip.Model.Entities.Base;
+using AbcYazilim.OgrenciTakip.Model.Entities.Kisi;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Windows.Forms;
 
-namespace AbcYazilim.OgrenciTakip.Bll.General
+namespace AbcYazilim.OgrenciTakip.Bll.General.KisiBll
 {
     public class KisiBll : BaseGenelBll<Kisi>, IBaseGenelBll, IBaseCommonBll
     {

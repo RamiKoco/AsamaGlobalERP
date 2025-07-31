@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using AbcYazilim.OgrenciTakip.Common.Enums;
 using AbcYazilim.OgrenciTakip.Model.Attributes;
 using AbcYazilim.OgrenciTakip.Model.Entities.Base;
+using AbcYazilim.OgrenciTakip.Model.Entities.Kisi;
 
 namespace AbcYazilim.OgrenciTakip.Model.Entities
 {
@@ -59,8 +60,8 @@ namespace AbcYazilim.OgrenciTakip.Model.Entities
         public long? OzelKod2Id { get; set; }
 
 
-        public SosyalMedyaPlatformu SosyalMedyaPlatformu { get; set; }
-        public Kisi Kisi { get; set; }
+        public SosyalMedyaPlatformu SosyalMedyaPlatformu { get; set; }       
+        public Kisi.Kisi Kisi { get; set; }
         public Personel Personel { get; set; }
         public Meslek Meslek { get; set; }
         public OzelKod OzelKod1 { get; set; }
