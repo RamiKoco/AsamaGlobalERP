@@ -18,6 +18,10 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.KisiForms
             Bll = new KisiBll();
 
             btnIletisimKartlari.Caption = "İletişim Kartları";
+            btnAdresKartlari.Caption = "Adres Kartları";
+
+            btnIletisimKartlari.ItemClick += BarItem_ItemClick;
+            btnAdresKartlari.ItemClick += BarItem_ItemClick;
         }
         protected override void DegiskenleriDoldur()
         {
@@ -27,18 +31,30 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.KisiForms
             Navigator = longNavigator.Navigator;
 
             if (IsMdiChild)
-                ShowItems = new BarItem[] { btnIletisimKartlari };
+                ShowItems = new BarItem[] { btnIletisimKartlari, btnAdresKartlari };
         }
 
         protected override void Listele()
         {
             Tablo.GridControl.DataSource = ((KisiBll)Bll).List(FilterFunctions.Filter<Kisi>(AktifKartlariGoster));
         }
-        protected override void BagliKartAc()
+        private void BarItem_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            BagliKartAc(e.Item);
+        }
+        protected override void BagliKartAc(BarItem barItem)
         {
             var entity = Tablo.GetRow<KisiL>();
             if (entity == null) return;
-            ShowListForms<KisiIletisimListForm>.ShowListForm(KartTuru.KisiIletisim, entity.Id, entity.Ad);
+
+            if (barItem == btnIletisimKartlari)
+            {
+                ShowListForms<KisiIletisimListForm>.ShowListForm(KartTuru.KisiIletisim, entity.Id, entity.Ad);
+            }
+            else if (barItem == btnAdresKartlari)
+            {
+                ShowListForms<KisiAdresListForm>.ShowListForm(KartTuru.KisiAdres, entity.Id, entity.Ad);
+            }
         }
     }
 }

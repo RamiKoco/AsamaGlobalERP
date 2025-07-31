@@ -42,6 +42,8 @@ namespace AbcYazilim.OgrenciTakip.Model.Entities
         public OzelKod OzelKod2 { get; set; }
 
         [InverseProperty("Kisi")]
+        public ICollection<KisiAdres> KisiAdres { get; set; }
+        [InverseProperty("Kisi")]
         public ICollection<KisiIletisim> KisiIletisim { get; set; }
     }
 }

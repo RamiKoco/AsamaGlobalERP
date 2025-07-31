@@ -214,6 +214,11 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms
         }
         protected virtual void BaskiOnizleme() { }
         protected virtual void BagliKartAc() { }
+        protected virtual void BagliKartAc(BarItem barItem)
+        {
+            // Default davranış: parametresiz olanı çağır.
+            BagliKartAc();
+        }
         protected internal void Yukle()
         {
             DegiskenleriDoldur();
@@ -313,6 +318,8 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms
             else if (e.Item == btnBagliKartlar)
                 BagliKartAc();
             else if (e.Item == btnIletisimKartlari)
+                BagliKartAc();
+            else if (e.Item == btnAdresKartlari)
                 BagliKartAc();
 
             else if (e.Item == btnParametreler)

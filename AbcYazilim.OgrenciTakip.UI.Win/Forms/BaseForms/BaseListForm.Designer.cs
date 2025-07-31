@@ -210,6 +210,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms
             this.barF4Aciklama = new DevExpress.XtraBars.BarStaticItem();
             this.btnAnimeEkle = new DevExpress.XtraBars.BarButtonItem();
             this.btnIletisimKartlari = new DevExpress.XtraBars.BarButtonItem();
+            this.btnAdresKartlari = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
@@ -317,9 +318,10 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms
             this.barF4,
             this.barF4Aciklama,
             this.btnAnimeEkle,
-            this.btnIletisimKartlari});
+            this.btnIletisimKartlari,
+            this.btnAdresKartlari});
             this.ribbonControl.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl.MaxItemId = 97;
+            this.ribbonControl.MaxItemId = 98;
             this.ribbonControl.Name = "ribbonControl";
             this.ribbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
@@ -1329,6 +1331,16 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms
             this.btnIletisimKartlari.SuperTip = superToolTip17;
             this.btnIletisimKartlari.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             // 
+            // btnAdresKartlari
+            // 
+            this.btnAdresKartlari.Caption = "Adres Kartları";
+            this.btnAdresKartlari.Id = 97;
+            this.btnAdresKartlari.ImageOptions.Image = global::AbcYazilim.OgrenciTakip.UI.Win.Properties.Resources.country_16x163;
+            this.btnAdresKartlari.ImageOptions.LargeImage = global::AbcYazilim.OgrenciTakip.UI.Win.Properties.Resources.country_32x321;
+            this.btnAdresKartlari.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A));
+            this.btnAdresKartlari.Name = "btnAdresKartlari";
+            this.btnAdresKartlari.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -1347,6 +1359,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms
             this.ribbonPageGroup1.ItemLinks.Add(this.btnYenile);
             this.ribbonPageGroup1.ItemLinks.Add(this.btnFiltrele);
             this.ribbonPageGroup1.ItemLinks.Add(this.btnKolonlar);
+            this.ribbonPageGroup1.ItemLinks.Add(this.btnAdresKartlari);
             this.ribbonPageGroup1.ItemLinks.Add(this.btnIletisimKartlari);
             this.ribbonPageGroup1.ItemLinks.Add(this.btnTahakkukYap);
             this.ribbonPageGroup1.ItemLinks.Add(this.btnBagliKartlar);
@@ -1524,5 +1537,6 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms
         protected DevExpress.XtraBars.BarStaticItem barF4Aciklama;
         protected DevExpress.XtraBars.BarButtonItem btnAnimeEkle;
         protected DevExpress.XtraBars.BarButtonItem btnIletisimKartlari;
+        protected DevExpress.XtraBars.BarButtonItem btnAdresKartlari;
     }
 }

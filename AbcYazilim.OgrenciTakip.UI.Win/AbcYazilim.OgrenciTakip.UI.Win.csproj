@@ -591,6 +591,18 @@
     <Compile Include="Forms\KimlikTuruForms\KimlikTuruListForm.Designer.cs">
       <DependentUpon>KimlikTuruListForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\KisiForms\KisiAdresEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\KisiForms\KisiAdresEditForm.Designer.cs">
+      <DependentUpon>KisiAdresEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\KisiForms\KisiAdresListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\KisiForms\KisiAdresListForm.Designer.cs">
+      <DependentUpon>KisiAdresListForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\KisiForms\KisiEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1846,6 +1858,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\KimlikTuruForms\KimlikTuruListForm.resx">
       <DependentUpon>KimlikTuruListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\KisiForms\KisiAdresEditForm.resx">
+      <DependentUpon>KisiAdresEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\KisiForms\KisiAdresListForm.resx">
+      <DependentUpon>KisiAdresListForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\KisiForms\KisiEditForm.resx">
       <DependentUpon>KisiEditForm.cs</DependentUpon>
@@ -3115,6 +3133,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\createdoughnutchart.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\country_16x163.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\country_32x321.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

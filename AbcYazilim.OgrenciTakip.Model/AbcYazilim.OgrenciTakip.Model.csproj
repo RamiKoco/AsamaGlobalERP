@@ -112,6 +112,7 @@
     <Compile Include="Dto\KardesBilgileriDto.cs" />
     <Compile Include="Dto\KasaDto.cs" />
     <Compile Include="Dto\KimlikTuruDto.cs" />
+    <Compile Include="Dto\KisiAdresDto.cs" />
     <Compile Include="Dto\KisiDto.cs" />
     <Compile Include="Dto\KisiEtiketDto.cs" />
     <Compile Include="Dto\KisiIletisimDto.cs" />
@@ -194,6 +195,7 @@
     <Compile Include="Entities\KayitKaynak.cs" />
     <Compile Include="Entities\KimlikTuru.cs" />
     <Compile Include="Entities\Kisi.cs" />
+    <Compile Include="Entities\KisiAdres.cs" />
     <Compile Include="Entities\KisiEtiket.cs" />
     <Compile Include="Entities\KisiGrubu.cs" />
     <Compile Include="Entities\KisiIletisim.cs" />

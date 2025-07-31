@@ -129,6 +129,7 @@
     <Compile Include="General\KasaBll.cs" />
     <Compile Include="General\KayitKaynakBll.cs" />
     <Compile Include="General\KimlikTuruBll.cs" />
+    <Compile Include="General\KisiAdresBll.cs" />
     <Compile Include="General\KisiBll.cs" />
     <Compile Include="General\KisiEtiketBll.cs" />
     <Compile Include="General\KisiGrubuBll.cs" />

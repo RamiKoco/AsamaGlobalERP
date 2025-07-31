@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace AbcYazilim.OgrenciTakip.Bll.General
 {
-    public class KisiIletisimBll : BaseGenelBll<KisiIletisim>, IBaseCommonBll
+    public class KisiIletisimBll : BaseGenelBll<KisiIletisim>, IBaseGenelBll, IBaseCommonBll
     {
         public KisiIletisimBll() : base(KartTuru.KisiIletisim) { }
 

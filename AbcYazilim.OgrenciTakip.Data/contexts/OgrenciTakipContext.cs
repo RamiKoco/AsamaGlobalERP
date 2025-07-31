@@ -27,6 +27,7 @@ namespace AbcYazilim.OgrenciTakip.Data.Contexts
             
             //modelBuilder.Entity<Ulke>().HasMany(x => x.Il).WithRequired().WillCascadeOnDelete(true);
             modelBuilder.Entity<Il>().HasMany(x => x.Ilce).WithRequired().WillCascadeOnDelete(true);
+            modelBuilder.Entity<Kisi>().HasMany(x => x.KisiAdres).WithRequired().WillCascadeOnDelete(true);
             modelBuilder.Entity<Kisi>().HasMany(x => x.KisiIletisim).WithRequired().WillCascadeOnDelete(true);
             modelBuilder.Entity<Cariler>().HasMany(x => x.CariSubeler).WithRequired().WillCascadeOnDelete(true);
             modelBuilder.Entity<Banka>().HasMany(x => x.BankaSube).WithRequired().WillCascadeOnDelete(true);
@@ -124,5 +125,6 @@ namespace AbcYazilim.OgrenciTakip.Data.Contexts
         public DbSet<Cariler> Cariler { get; set; }
         public DbSet<CariSubeler> CariSubeler { get; set; }
         public DbSet<KisiIletisim> KisiIletisim { get; set; }
+        public DbSet<KisiAdres> KisiAdres { get; set; }
     }
 }
