@@ -129,6 +129,7 @@
     <Compile Include="Dto\OkulDto.cs" />
     <Compile Include="Dto\PersonelDto\PersonelBelgeDto.cs" />
     <Compile Include="Dto\PersonelDto\PersonelDto.cs" />
+    <Compile Include="Dto\PersonelDto\PersonelIletisimDto.cs" />
     <Compile Include="Dto\PozisyonDto.cs" />
     <Compile Include="Dto\PromosyonBilgileriDto.cs" />
     <Compile Include="Dto\RamiDenemeDto.cs" />
@@ -218,8 +219,9 @@
     <Compile Include="Entities\Ogrenci.cs" />
     <Compile Include="Entities\Okul.cs" />
     <Compile Include="Entities\OzelKod.cs" />
-    <Compile Include="Entities\Personel\Personel.cs" />
-    <Compile Include="Entities\Personel\PersonelBelge.cs" />
+    <Compile Include="Entities\PersonelEntity\Personel.cs" />
+    <Compile Include="Entities\PersonelEntity\PersonelBelge.cs" />
+    <Compile Include="Entities\PersonelEntity\PersonelIletisim.cs" />
     <Compile Include="Entities\Pozisyon.cs" />
     <Compile Include="Entities\Promosyon.cs" />
     <Compile Include="Entities\PromosyonBilgileri.cs" />

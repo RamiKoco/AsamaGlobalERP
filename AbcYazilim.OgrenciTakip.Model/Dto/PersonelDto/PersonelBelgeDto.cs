@@ -1,4 +1,4 @@
-﻿using AbcYazilim.OgrenciTakip.Model.Entities.Personel;
+﻿using AbcYazilim.OgrenciTakip.Model.Entities.PersonelEntity;
 using AbcYazilim.OgrenciTakip.Model.Entities.Base.Interfaces;
 using DevExpress.DataAccess.ObjectBinding;
 using System;

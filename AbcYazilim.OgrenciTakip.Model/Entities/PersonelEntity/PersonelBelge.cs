@@ -3,7 +3,7 @@ using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace AbcYazilim.OgrenciTakip.Model.Entities.Personel
+namespace AbcYazilim.OgrenciTakip.Model.Entities.PersonelEntity
 {
     public class PersonelBelge : BaseHareketEntity
     {

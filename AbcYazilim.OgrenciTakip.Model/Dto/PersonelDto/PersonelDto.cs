@@ -1,5 +1,5 @@
 ﻿using AbcYazilim.OgrenciTakip.Common.Enums;
-using AbcYazilim.OgrenciTakip.Model.Entities.Personel;
+using AbcYazilim.OgrenciTakip.Model.Entities.PersonelEntity;
 using AbcYazilim.OgrenciTakip.Model.Entities.Base;
 using System;
 using System.ComponentModel.DataAnnotations.Schema;

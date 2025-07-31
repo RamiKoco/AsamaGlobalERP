@@ -4,7 +4,7 @@ using AbcYazilim.OgrenciTakip.Data.OgrenciTakipMigration;
 using AbcYazilim.OgrenciTakip.Model.Entities;
 using AbcYazilim.OgrenciTakip.Model.Entities.Kisi;
 using AbcYazilim.OgrenciTakip.Model.Entities.KitapTuru;
-using AbcYazilim.OgrenciTakip.Model.Entities.Personel;
+using AbcYazilim.OgrenciTakip.Model.Entities.PersonelEntity;
 namespace AbcYazilim.OgrenciTakip.Data.Contexts
 {
     public class OgrenciTakipContext : BaseDbContext<OgrenciTakipContext,Configuration>
@@ -31,6 +31,9 @@ namespace AbcYazilim.OgrenciTakip.Data.Contexts
             modelBuilder.Entity<Il>().HasMany(x => x.Ilce).WithRequired().WillCascadeOnDelete(true);
             modelBuilder.Entity<Kisi>().HasMany(x => x.KisiAdres).WithRequired().WillCascadeOnDelete(true);
             modelBuilder.Entity<Kisi>().HasMany(x => x.KisiIletisim).WithRequired().WillCascadeOnDelete(true);
+
+            modelBuilder.Entity<Personel>().HasMany(x => x.PersonelIletisim).WithRequired().WillCascadeOnDelete(true);
+
             modelBuilder.Entity<Cariler>().HasMany(x => x.CariSubeler).WithRequired().WillCascadeOnDelete(true);
             modelBuilder.Entity<Banka>().HasMany(x => x.BankaSube).WithRequired().WillCascadeOnDelete(true);
             modelBuilder.Entity<Indirim>().HasMany(x => x.IndiriminUygulanacagiHizmetBilgileri).WithRequired().WillCascadeOnDelete(true);           
@@ -128,5 +131,6 @@ namespace AbcYazilim.OgrenciTakip.Data.Contexts
         public DbSet<CariSubeler> CariSubeler { get; set; }
         public DbSet<KisiIletisim> KisiIletisim { get; set; }
         public DbSet<KisiAdres> KisiAdres { get; set; }
+        public DbSet<PersonelIletisim> PersonelIletisim { get; set; }
     }
 }

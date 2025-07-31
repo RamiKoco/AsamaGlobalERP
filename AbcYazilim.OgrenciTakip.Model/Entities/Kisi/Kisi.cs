@@ -1,7 +1,7 @@
 ﻿using AbcYazilim.OgrenciTakip.Common.Enums;
 using AbcYazilim.OgrenciTakip.Model.Attributes;
 using AbcYazilim.OgrenciTakip.Model.Entities.Base;
-using AbcYazilim.OgrenciTakip.Model.Entities.Personel;
+using AbcYazilim.OgrenciTakip.Model.Entities.PersonelEntity;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -36,7 +36,7 @@ namespace AbcYazilim.OgrenciTakip.Model.Entities.Kisi
 
         public Etiket Etiket { get; set; }
         public KisiGrubu KisiGrubu { get; set; }
-        public Personel.Personel Personel { get; set; }
+        public Personel Personel { get; set; }
         public KayitKaynak KayitKaynak { get; set; }
         public Meslek Meslek { get; set; }
         public OzelKod OzelKod1 { get; set; }

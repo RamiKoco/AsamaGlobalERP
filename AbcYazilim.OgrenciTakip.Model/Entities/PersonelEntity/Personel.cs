@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace AbcYazilim.OgrenciTakip.Model.Entities.Personel
+namespace AbcYazilim.OgrenciTakip.Model.Entities.PersonelEntity
 {
     public class Personel : BaseEntityDurum
     {
@@ -62,5 +62,8 @@ namespace AbcYazilim.OgrenciTakip.Model.Entities.Personel
         public OzelKod OzelKod2 { get; set; }
 
         public virtual ICollection<EtiketKayitTuruBaglanti> EtiketKayitTuruBaglanti { get; set; }
+
+        [InverseProperty("Personel")]
+        public ICollection<PersonelIletisim> PersonelIletisim { get; set; }
     }
 }

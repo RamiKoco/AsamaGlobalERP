@@ -160,6 +160,7 @@
     <Compile Include="General\OzelKodBll.cs" />
     <Compile Include="General\PersonelBll\PersonelBelgeBll.cs" />
     <Compile Include="General\PersonelBll\PersonelBll.cs" />
+    <Compile Include="General\PersonelBll\PersonelIletisimBll.cs" />
     <Compile Include="General\PozisyonBll.cs" />
     <Compile Include="General\PromosyonBilgileriBll.cs" />
     <Compile Include="General\PromosyonBll.cs" />

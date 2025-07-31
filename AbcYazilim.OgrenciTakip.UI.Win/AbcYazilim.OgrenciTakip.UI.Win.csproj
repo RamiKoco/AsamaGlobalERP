@@ -849,6 +849,18 @@
     <Compile Include="Forms\PersonelForms\PersonelEditForm.Designer.cs">
       <DependentUpon>PersonelEditForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\PersonelForms\PersonelIletisimEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PersonelForms\PersonelIletisimEditForm.Designer.cs">
+      <DependentUpon>PersonelIletisimEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PersonelForms\PersonelIletisimListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PersonelForms\PersonelIletisimListForm.Designer.cs">
+      <DependentUpon>PersonelIletisimListForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\PersonelForms\PersonelListForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1987,6 +1999,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\PersonelForms\PersonelEditForm.resx">
       <DependentUpon>PersonelEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PersonelForms\PersonelIletisimEditForm.resx">
+      <DependentUpon>PersonelIletisimEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PersonelForms\PersonelIletisimListForm.resx">
+      <DependentUpon>PersonelIletisimListForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\PersonelForms\PersonelListForm.resx">
       <DependentUpon>PersonelListForm.cs</DependentUpon>

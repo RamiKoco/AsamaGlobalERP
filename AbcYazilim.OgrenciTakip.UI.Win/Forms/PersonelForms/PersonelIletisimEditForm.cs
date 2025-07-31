@@ -1,8 +1,9 @@
-﻿using AbcYazilim.OgrenciTakip.Bll.General.KisiBll;
+﻿
+using AbcYazilim.OgrenciTakip.Bll.General.PersonelBll;
 using AbcYazilim.OgrenciTakip.Common.Enums;
 using AbcYazilim.OgrenciTakip.Common.Functions;
-using AbcYazilim.OgrenciTakip.Model.Dto.KisiDto;
-using AbcYazilim.OgrenciTakip.Model.Entities.Kisi;
+using AbcYazilim.OgrenciTakip.Model.Dto.PersonelDto;
+using AbcYazilim.OgrenciTakip.Model.Entities.PersonelEntity;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Functions;
 using DevExpress.XtraEditors;
@@ -10,47 +11,47 @@ using DevExpress.XtraEditors.Controls;
 using System;
 using System.Linq;
 
-namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.KisiForms
+namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.PersonelForms
 {
-    public partial class KisiIletisimEditForm : BaseEditForm
+    public partial class PersonelIletisimEditForm : BaseEditForm
     {
         #region Variables
-        private readonly long _kisiId;
-        private readonly string _kisiAdi;
+        private readonly long _personelId;
+        private readonly string _personelAdi;
         #endregion
-        public KisiIletisimEditForm(params object[] prm)
+        public PersonelIletisimEditForm(params object[] prm)
         {
             InitializeComponent();
 
-            _kisiId = (long)prm[0];
-            _kisiAdi = prm[1].ToString();
+            _personelId = (long)prm[0];
+            _personelAdi = prm[1].ToString();
 
             DataLayoutControl = myDataLayoutControl;
-            Bll = new KisiIletisimBll(myDataLayoutControl);
+            Bll = new PersonelIletisimBll(myDataLayoutControl);
             txtIletisimTurleri.Properties.Items.AddRange(EnumFunctions.GetEnumDescriptionList<IletisimTuru>());
             txtIzinDurumu.Properties.Items.AddRange(EnumFunctions.GetEnumDescriptionList<IletisimDurumu>());
             txtKanallar.Properties.Items.AddRange(EnumFunctions.GetEnumDescriptionList<IletisimKanalTipi>()
                         .Cast<string>()
                         .Select(x => new CheckedListBoxItem(x))
                         .ToArray());
-            BaseKartTuru = KartTuru.KisiIletisim;
+            BaseKartTuru = KartTuru.PersonelIletisim;
             txtIletisimTurleri.EditValueChanged += TxtIletisimTurleri_EditValueChanged;
             EventsLoad();
         }
         public override void Yukle()
         {
-            OldEntity = BaseIslemTuru == IslemTuru.EntityInsert ? new KisiIletisimS() : ((KisiIletisimBll)Bll).Single(FilterFunctions.Filter<KisiIletisim>(Id));
+            OldEntity = BaseIslemTuru == IslemTuru.EntityInsert ? new PersonelIletisimS() : ((PersonelIletisimBll)Bll).Single(FilterFunctions.Filter<PersonelIletisim>(Id));
             NesneyiKontrollereBagla();
-            Text = Text + $" - ( {_kisiAdi} )";
+            Text = Text + $" - ( {_personelAdi} )";
 
             if (BaseIslemTuru != IslemTuru.EntityInsert) return;
             Id = BaseIslemTuru.IdOlustur(OldEntity);
-            txtKod.Text = ((KisiIletisimBll)Bll).YeniKodVer(x => x.KisiId == _kisiId);
+            txtKod.Text = ((PersonelIletisimBll)Bll).YeniKodVer(x => x.PersonelId == _personelId);
             txtBaslik.Focus();
         }
         protected override void NesneyiKontrollereBagla()
         {
-            var entity = (KisiIletisimS)OldEntity;
+            var entity = (PersonelIletisimS)OldEntity;
             txtKod.Text = entity.Kod;
             txtBaslik.Text = entity.Baslik;
             txtIlgili.Text = entity.Ilgili;
@@ -81,7 +82,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.KisiForms
         }
         protected override void GuncelNesneOlustur()
         {
-            CurrentEntity = new KisiIletisim
+            CurrentEntity = new PersonelIletisim
             {
                 Id = Id,
                 Kod = txtKod.Text,
@@ -102,7 +103,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.KisiForms
                 SIPKullaniciAdi = txtSIPKullaniciAdi.Text,
                 SosyalMedyaUrl = txtSosyalMedyaUrl.Text,
                 SosyalMedyaPlatformuId = txtSosyalMedyaPlatformu.Id,
-                KisiId = BaseIslemTuru == IslemTuru.EntityInsert ? _kisiId : ((KisiIletisimS)OldEntity).KisiId,
+                PersonelId = BaseIslemTuru == IslemTuru.EntityInsert ? _personelId : ((PersonelIletisimS)OldEntity).PersonelId,
                 OzelKod1Id = txtOzelKod1.Id,
                 OzelKod2Id = txtOzelKod2.Id,
                 Aciklama = txtAciklama.Text,
@@ -116,7 +117,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.KisiForms
         {
             if (!IsLoaded) return;
 
-            base.ButonEnabledDurumu();         
+            base.ButonEnabledDurumu();
 
             if (txtIletisimTurleri.EditValue == null) return;
 
@@ -208,12 +209,12 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.KisiForms
         }
         protected override bool EntityInsert()
         {
-            return ((KisiIletisimBll)Bll).Insert(CurrentEntity, x => x.Kod == CurrentEntity.Kod && x.KisiId == _kisiId);
+            return ((PersonelIletisimBll)Bll).Insert(CurrentEntity, x => x.Kod == CurrentEntity.Kod && x.PersonelId == _personelId);
         }
-
+     
         protected override bool EntityUpdate()
         {
-            return ((KisiIletisimBll)Bll).Update(OldEntity, CurrentEntity, x => x.Kod == CurrentEntity.Kod && x.KisiId == _kisiId);
+            return ((PersonelIletisimBll)Bll).Update(OldEntity, CurrentEntity, x => x.Kod == CurrentEntity.Kod && x.PersonelId == _personelId);
         }
         protected override void SecimYap(object sender)
         {
@@ -221,9 +222,9 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.KisiForms
 
             using (var sec = new SelectFunctions())
                 if (sender == txtOzelKod1)
-                    sec.Sec(txtOzelKod1, KartTuru.KisiIletisim);
+                    sec.Sec(txtOzelKod1, KartTuru.PersonelIletisim);
                 else if (sender == txtOzelKod2)
-                    sec.Sec(txtOzelKod2, KartTuru.KisiIletisim);
+                    sec.Sec(txtOzelKod2, KartTuru.PersonelIletisim);
                 else if (sender == txtSosyalMedyaPlatformu)
                     sec.Sec(txtSosyalMedyaPlatformu, KartTuru.SosyalMedyaPlatformu);
         }

@@ -5,7 +5,7 @@ using AbcYazilim.OgrenciTakip.Data.Contexts;
 using AbcYazilim.OgrenciTakip.Model.Dto.PersonelDto;
 using AbcYazilim.OgrenciTakip.Model.Entities;
 using AbcYazilim.OgrenciTakip.Model.Entities.Base;
-using AbcYazilim.OgrenciTakip.Model.Entities.Personel;
+using AbcYazilim.OgrenciTakip.Model.Entities.PersonelEntity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
