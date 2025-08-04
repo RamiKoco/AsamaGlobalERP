@@ -135,7 +135,8 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.PersonelForms
             EtiketleriYukle();
             OldEntity = BaseIslemTuru == IslemTuru.EntityInsert ? new PersonelS() : ((PersonelBll)Bll).Single(FilterFunctions.Filter<Personel>(Id));
             NesneyiKontrollereBagla();
-            TabloYukle();
+            BagliTabloYukle();
+            //TabloYukle();
 
             if (BaseIslemTuru != IslemTuru.EntityInsert) return;
             Id = BaseIslemTuru.IdOlustur(OldEntity);
