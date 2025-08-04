@@ -158,6 +158,7 @@
     <Compile Include="General\OgrenciBll.cs" />
     <Compile Include="General\OkulBll.cs" />
     <Compile Include="General\OzelKodBll.cs" />
+    <Compile Include="General\PersonelBll\PersonelAdresBll.cs" />
     <Compile Include="General\PersonelBll\PersonelBelgeBll.cs" />
     <Compile Include="General\PersonelBll\PersonelBll.cs" />
     <Compile Include="General\PersonelBll\PersonelIletisimBll.cs" />

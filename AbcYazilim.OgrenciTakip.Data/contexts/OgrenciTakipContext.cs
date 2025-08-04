@@ -33,6 +33,7 @@ namespace AbcYazilim.OgrenciTakip.Data.Contexts
             modelBuilder.Entity<Kisi>().HasMany(x => x.KisiIletisim).WithRequired().WillCascadeOnDelete(true);
 
             modelBuilder.Entity<Personel>().HasMany(x => x.PersonelIletisim).WithRequired().WillCascadeOnDelete(true);
+            modelBuilder.Entity<Personel>().HasMany(x => x.PersonelAdres).WithRequired().WillCascadeOnDelete(true);
 
             modelBuilder.Entity<Cariler>().HasMany(x => x.CariSubeler).WithRequired().WillCascadeOnDelete(true);
             modelBuilder.Entity<Banka>().HasMany(x => x.BankaSube).WithRequired().WillCascadeOnDelete(true);
@@ -132,5 +133,6 @@ namespace AbcYazilim.OgrenciTakip.Data.Contexts
         public DbSet<KisiIletisim> KisiIletisim { get; set; }
         public DbSet<KisiAdres> KisiAdres { get; set; }
         public DbSet<PersonelIletisim> PersonelIletisim { get; set; }
+        public DbSet<PersonelAdres> PersonelAdres { get; set; }
     }
 }

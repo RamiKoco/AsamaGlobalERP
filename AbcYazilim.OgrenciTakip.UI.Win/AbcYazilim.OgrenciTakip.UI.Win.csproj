@@ -843,6 +843,18 @@
     <Compile Include="Forms\OzelKodForms\OzelKodListForm.Designer.cs">
       <DependentUpon>OzelKodListForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\PersonelForms\PersonelAdresEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PersonelForms\PersonelAdresEditForm.Designer.cs">
+      <DependentUpon>PersonelAdresEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PersonelForms\PersonelAdresListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PersonelForms\PersonelAdresListForm.Designer.cs">
+      <DependentUpon>PersonelAdresListForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\PersonelForms\PersonelEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1392,6 +1404,9 @@
     <Compile Include="UserControls\Controls\MyComboBoxEdit.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="UserControls\Controls\MyDahiliNoTextEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="UserControls\Controls\MyDataLayoutControl.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -1444,6 +1459,9 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="UserControls\Controls\MyToogleSwitch.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControls\Controls\MyUlkeKoduTextEdit.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="UserControls\Controls\MyXtraReport.cs">
@@ -1996,6 +2014,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\OzelKodForms\OzelKodListForm.resx">
       <DependentUpon>OzelKodListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PersonelForms\PersonelAdresEditForm.resx">
+      <DependentUpon>PersonelAdresEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PersonelForms\PersonelAdresListForm.resx">
+      <DependentUpon>PersonelAdresListForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\PersonelForms\PersonelEditForm.resx">
       <DependentUpon>PersonelEditForm.cs</DependentUpon>

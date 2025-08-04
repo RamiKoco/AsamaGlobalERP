@@ -17,13 +17,13 @@ namespace AbcYazilim.OgrenciTakip.Model.Entities.Kisi
         public IletisimDurumu IzinDurumu { get; set; } = IletisimDurumu.Belirtilmedi;
         public IletisimKanalTipi IletisimKanalTipi { get; set; } = IletisimKanalTipi.Arama;
 
-        [StringLength(6)]
+        [StringLength(4)]
         public string UlkeKodu { get; set; }
 
         [StringLength(17)]
         public string Numara { get; set; }
 
-        [StringLength(10)]
+        [StringLength(6)]
         public string DahiliNo { get; set; }
         [StringLength(30)]
         public string EPosta { get; set; }

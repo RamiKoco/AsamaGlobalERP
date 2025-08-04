@@ -17,10 +17,10 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.PersonelForms
             Bll = new PersonelBll();
 
             btnIletisimKartlari.Caption = "İletişim Kartları";
-
+            btnAdresKartlari.Caption = "Adres Kartları";
 
             btnIletisimKartlari.ItemClick += BarItem_ItemClick;
-            //btnAdresKartlari.ItemClick += BarItem_ItemClick;
+            btnAdresKartlari.ItemClick += BarItem_ItemClick;
         }
 
         protected override void DegiskenleriDoldur()
@@ -31,7 +31,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.PersonelForms
             Navigator = longNavigator.Navigator;
 
             if (IsMdiChild)
-                ShowItems = new BarItem[] { btnIletisimKartlari };
+                ShowItems = new BarItem[] { btnIletisimKartlari, btnAdresKartlari };
         }
         protected override void Listele()
         {
@@ -51,10 +51,10 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.PersonelForms
             {
                 ShowListForms<PersonelIletisimListForm>.ShowListForm(KartTuru.PersonelIletisim, entity.Id, entity.Ad);
             }
-            //else if (barItem == btnAdresKartlari)
-            //{
-            //    ShowListForms<PersonelAdresListForm>.ShowListForm(KartTuru.PersonelIletisim, entity.Id, entity.Ad);
-            //}
+            else if (barItem == btnAdresKartlari)
+            {
+                ShowListForms<PersonelAdresListForm>.ShowListForm(KartTuru.PersonelAdres, entity.Id, entity.Ad);
+            }
         }
     }
 }

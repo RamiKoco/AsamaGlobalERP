@@ -64,6 +64,9 @@ namespace AbcYazilim.OgrenciTakip.Model.Entities.PersonelEntity
         public virtual ICollection<EtiketKayitTuruBaglanti> EtiketKayitTuruBaglanti { get; set; }
 
         [InverseProperty("Personel")]
+        public ICollection<PersonelAdres> PersonelAdres { get; set; }
+
+        [InverseProperty("Personel")]
         public ICollection<PersonelIletisim> PersonelIletisim { get; set; }
     }
 }
