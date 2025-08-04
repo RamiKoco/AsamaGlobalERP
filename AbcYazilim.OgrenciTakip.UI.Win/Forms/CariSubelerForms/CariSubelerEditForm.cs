@@ -1,6 +1,7 @@
 ﻿using AbcYazilim.OgrenciTakip.Bll.General;
 using AbcYazilim.OgrenciTakip.Common.Enums;
 using AbcYazilim.OgrenciTakip.Model.Dto;
+using AbcYazilim.OgrenciTakip.Model.Dto.KisiDto;
 using AbcYazilim.OgrenciTakip.Model.Entities;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Functions;
@@ -54,10 +55,10 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.CariSubelerForms
             {
                 Id = Id,
                 Kod = txtKod.Text,
-                CariSubeAdi = txtCariSubeAdi.Text,
-                CarilerId = _carilerId,
+                CariSubeAdi = txtCariSubeAdi.Text,              
                 OzelKod1Id = txtOzelKod1.Id,
                 OzelKod2Id = txtOzelKod2.Id,
+                CarilerId = BaseIslemTuru == IslemTuru.EntityInsert ? _carilerId : ((CariSubelerS)OldEntity).CarilerId,
                 Aciklama = txtAciklama.Text,
                 Durum = tglDurum.IsOn
             };
@@ -83,21 +84,5 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.CariSubelerForms
                 else if (sender == txtOzelKod2)
                     sec.Sec(txtOzelKod2, KartTuru.CariSubeler);
         }
-
-        protected internal override void ButonEnabledDurumu()
-        {
-            var oldEntity = (CariSubeler)OldEntity;
-            var currentEntity = (CariSubeler)CurrentEntity;
-
-            btnKaydet.Enabled = oldEntity.Id != currentEntity.Id ||
-                                oldEntity.Kod != currentEntity.Kod ||
-                                oldEntity.CariSubeAdi != currentEntity.CariSubeAdi ||
-                                oldEntity.OzelKod1Id != currentEntity.OzelKod1Id ||
-                                oldEntity.OzelKod2Id != currentEntity.OzelKod2Id ||
-                                oldEntity.Aciklama != currentEntity.Aciklama ||
-                                oldEntity.Durum != currentEntity.Durum;
-        }
-
-
     }
 }
