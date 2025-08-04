@@ -47,13 +47,15 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.KisiForms
             EtiketleriYukle();
             OldEntity = BaseIslemTuru == IslemTuru.EntityInsert ? new KisiS() : ((KisiBll)Bll).Single(FilterFunctions.Filter<Kisi>(Id));
             NesneyiKontrollereBagla();
-            TabloYukle();
+            BagliTabloYukle();
+            //TabloYukle();
 
             if (BaseIslemTuru != IslemTuru.EntityInsert) return;
             Id = BaseIslemTuru.IdOlustur(OldEntity);
             txtKod.Text = ((KisiBll)Bll).YeniKodVer();
             txtAdi.Focus();
         }
+
         protected override void NesneyiKontrollereBagla()
         {
             var entity = (KisiS)OldEntity;
@@ -262,12 +264,13 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.KisiForms
             }
             else if (TableValueChanged())
             {
-                GeneralFunctions.ButtonEnabledDurumu(btnYeni, btnKaydet, btnGerial, btnSil, OldEntity, CurrentEntity, true);
+                GeneralFunctions.ButtonEnabledDurumu(btnYeni, btnKaydet, btnGerial, btnSil, OldEntity, CurrentEntity, TableValueChanged());
             }
             else
             {
                 GeneralFunctions.ButtonEnabledDurumu(btnYeni, btnKaydet, btnGerial, btnSil, OldEntity, CurrentEntity, etiketDegisti);
             }
+
         }
         protected override bool BagliTabloKaydet()
         {
@@ -355,6 +358,27 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.KisiForms
                 _adreslerTable.Tablo.GridControl.Focus();
 
             }
+        }
+
+        protected override bool EntityInsert()
+        {            
+            if (BagliTabloHataliGirisKontrol()) return false;
+            var result = ((KisiBll)Bll).Insert(CurrentEntity, x => x.Kod == CurrentEntity.Kod) && BagliTabloKaydet();
+
+            if (result && !KayitSonrasiFormuKapat)
+                BagliTabloYukle();
+
+            return result;
+        }
+        protected override bool EntityUpdate()
+        {           
+            if (BagliTabloHataliGirisKontrol()) return false;
+            var result = ((KisiBll)Bll).Update(OldEntity, CurrentEntity, x => x.Kod == CurrentEntity.Kod) && BagliTabloKaydet();
+
+            if (result && !KayitSonrasiFormuKapat)
+                BagliTabloYukle();
+
+            return result;
         }
     }
 }
