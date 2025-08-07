@@ -1,7 +1,6 @@
-﻿using AbcYazilim.OgrenciTakip.Bll.General;
-using AbcYazilim.OgrenciTakip.Common.Enums;
-using AbcYazilim.OgrenciTakip.Common.Message;
+﻿using AbcYazilim.OgrenciTakip.Common.Enums;
 using AbcYazilim.OgrenciTakip.Model.Dto;
+using AbcYazilim.OgrenciTakip.Model.Dto.CariDto;
 using AbcYazilim.OgrenciTakip.Model.Dto.KisiDto;
 using AbcYazilim.OgrenciTakip.Model.Dto.PersonelDto;
 using AbcYazilim.OgrenciTakip.Model.Entities;
@@ -51,7 +50,6 @@ using AbcYazilim.OgrenciTakip.UI.Win.Forms.YabancıDilForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Show;
 using AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls;
 using System;
-using System.Windows.Forms;
 
 namespace AbcYazilim.OgrenciTakip.UI.Win.Functions
 {

@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using AbcYazilim.OgrenciTakip.Model.Attributes;
 using AbcYazilim.OgrenciTakip.Model.Entities.Base;
 
-namespace AbcYazilim.OgrenciTakip.Model.Entities
+namespace AbcYazilim.OgrenciTakip.Model.Entities.CariEntity
 {
     public class Cari:BaseEntityDurum
     {

@@ -1,7 +1,7 @@
-﻿using AbcYazilim.OgrenciTakip.Bll.General;
+﻿using AbcYazilim.OgrenciTakip.Bll.General.CarilerBll.CariSubeBll;
 using AbcYazilim.OgrenciTakip.Common.Enums;
-using AbcYazilim.OgrenciTakip.Model.Dto;
-using AbcYazilim.OgrenciTakip.Model.Entities;
+using AbcYazilim.OgrenciTakip.Model.Dto.CariDto.CariSubeDto;
+using AbcYazilim.OgrenciTakip.Model.Entities.CariEntity.CariSube;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Functions;
 using DevExpress.XtraEditors;

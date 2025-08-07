@@ -1,17 +1,17 @@
 ﻿using AbcYazilim.OgrenciTakip.Bll.Base;
 using AbcYazilim.OgrenciTakip.Bll.Interfaces;
 using AbcYazilim.OgrenciTakip.Common.Enums;
-using AbcYazilim.OgrenciTakip.Model.Dto;
-using AbcYazilim.OgrenciTakip.Model.Entities;
+using AbcYazilim.OgrenciTakip.Model.Dto.CariDto.CariSubeDto;
 using AbcYazilim.OgrenciTakip.Model.Entities.Base;
+using AbcYazilim.OgrenciTakip.Model.Entities.CariEntity.CariSube;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Windows.Forms;
-namespace AbcYazilim.OgrenciTakip.Bll.General
+namespace AbcYazilim.OgrenciTakip.Bll.General.CarilerBll.CariSubeBll
 {
-    public class CariSubelerBll : BaseGenelBll<CariSubeler>, IBaseCommonBll
+    public class CariSubelerBll : BaseGenelBll<CariSubeler>, IBaseGenelBll, IBaseCommonBll
     {
         public CariSubelerBll() : base(KartTuru.CariSubeler) { }
 
@@ -21,7 +21,6 @@ namespace AbcYazilim.OgrenciTakip.Bll.General
         {
             return BaseSingle(filter, x => new CariSubelerS
             {
-
                 Id = x.Id,
                 Kod = x.Kod,
                 CariSubeAdi = x.CariSubeAdi,
@@ -31,7 +30,6 @@ namespace AbcYazilim.OgrenciTakip.Bll.General
                 OzelKod2Adi = x.OzelKod2.OzelKodAdi,
                 Aciklama = x.Aciklama,
                 Durum = x.Durum
-
             });
         }
         public override IEnumerable<BaseEntity> List(Expression<Func<CariSubeler, bool>> filter)

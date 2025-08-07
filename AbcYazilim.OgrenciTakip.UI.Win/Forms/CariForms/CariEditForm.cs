@@ -1,7 +1,7 @@
-﻿using AbcYazilim.OgrenciTakip.Bll.General;
+﻿using AbcYazilim.OgrenciTakip.Bll.General.CarilerBll;
 using AbcYazilim.OgrenciTakip.Common.Enums;
-using AbcYazilim.OgrenciTakip.Model.Dto;
-using AbcYazilim.OgrenciTakip.Model.Entities;
+using AbcYazilim.OgrenciTakip.Model.Dto.CariDto;
+using AbcYazilim.OgrenciTakip.Model.Entities.CariEntity;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Functions;
 //using DevExpress.Text.Interop;
@@ -90,8 +90,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.CariForms
                 if (sender == txtOzelKod1)
                     sec.Sec(txtOzelKod1, KartTuru.Cari);
             else if (sender == txtOzelKod2)
-                sec.Sec(txtOzelKod2, KartTuru.Cari);
-            
+                sec.Sec(txtOzelKod2, KartTuru.Cari);           
 
         }
     }

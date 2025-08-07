@@ -1,8 +1,8 @@
-﻿using AbcYazilim.OgrenciTakip.Model.Entities;
-using AbcYazilim.OgrenciTakip.Model.Entities.Base;
+﻿using AbcYazilim.OgrenciTakip.Model.Entities.Base;
+using AbcYazilim.OgrenciTakip.Model.Entities.CariEntity;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace AbcYazilim.OgrenciTakip.Model.Dto
+namespace AbcYazilim.OgrenciTakip.Model.Dto.CariDto
 {
     [NotMapped]
     public class CarilerS: Cariler

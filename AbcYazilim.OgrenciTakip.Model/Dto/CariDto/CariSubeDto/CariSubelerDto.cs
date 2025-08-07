@@ -1,8 +1,8 @@
-﻿using AbcYazilim.OgrenciTakip.Model.Entities;
-using AbcYazilim.OgrenciTakip.Model.Entities.Base;
+﻿using AbcYazilim.OgrenciTakip.Model.Entities.Base;
+using AbcYazilim.OgrenciTakip.Model.Entities.CariEntity.CariSube;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace AbcYazilim.OgrenciTakip.Model.Dto
+namespace AbcYazilim.OgrenciTakip.Model.Dto.CariDto.CariSubeDto
 {
     [NotMapped]
     public class CariSubelerS : CariSubeler

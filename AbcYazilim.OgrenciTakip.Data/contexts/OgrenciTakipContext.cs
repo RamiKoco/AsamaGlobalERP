@@ -2,6 +2,8 @@ using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
 using AbcYazilim.OgrenciTakip.Data.OgrenciTakipMigration;
 using AbcYazilim.OgrenciTakip.Model.Entities;
+using AbcYazilim.OgrenciTakip.Model.Entities.CariEntity;
+using AbcYazilim.OgrenciTakip.Model.Entities.CariEntity.CariSube;
 using AbcYazilim.OgrenciTakip.Model.Entities.Kisi;
 using AbcYazilim.OgrenciTakip.Model.Entities.KitapTuru;
 using AbcYazilim.OgrenciTakip.Model.Entities.PersonelEntity;
@@ -36,6 +38,7 @@ namespace AbcYazilim.OgrenciTakip.Data.Contexts
             modelBuilder.Entity<Personel>().HasMany(x => x.PersonelAdres).WithRequired().WillCascadeOnDelete(true);
 
             modelBuilder.Entity<Cariler>().HasMany(x => x.CariSubeler).WithRequired().WillCascadeOnDelete(true);
+            modelBuilder.Entity<Cariler>().HasMany(x => x.CariIletisim).WithRequired().WillCascadeOnDelete(true);
             modelBuilder.Entity<Banka>().HasMany(x => x.BankaSube).WithRequired().WillCascadeOnDelete(true);
             modelBuilder.Entity<Indirim>().HasMany(x => x.IndiriminUygulanacagiHizmetBilgileri).WithRequired().WillCascadeOnDelete(true);           
         }
@@ -134,5 +137,6 @@ namespace AbcYazilim.OgrenciTakip.Data.Contexts
         public DbSet<KisiAdres> KisiAdres { get; set; }
         public DbSet<PersonelIletisim> PersonelIletisim { get; set; }
         public DbSet<PersonelAdres> PersonelAdres { get; set; }
+        public DbSet<CariIletisim> CariIletisim { get; set; }
     }
 }

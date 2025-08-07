@@ -1,8 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
-using AbcYazilim.OgrenciTakip.Model.Entities;
 using AbcYazilim.OgrenciTakip.Model.Entities.Base;
+using AbcYazilim.OgrenciTakip.Model.Entities.CariEntity;
 
-namespace AbcYazilim.OgrenciTakip.Model.Dto
+namespace AbcYazilim.OgrenciTakip.Model.Dto.CariDto
 {
     [NotMapped]
     public class CariS:Cari
@@ -28,8 +28,7 @@ namespace AbcYazilim.OgrenciTakip.Model.Dto
         public string Adres { get; set; }
         public string OzelKod1Adi { get; set; }
         public string OzelKod2Adi { get; set; }
-        public string Aciklama { get; set; } 
-       
+        public string Aciklama { get; set; }       
 
     }
 }

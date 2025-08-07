@@ -1,10 +1,11 @@
 ﻿using AbcYazilim.OgrenciTakip.Model.Attributes;
 using AbcYazilim.OgrenciTakip.Model.Entities.Base;
+using AbcYazilim.OgrenciTakip.Model.Entities.CariEntity.CariSube;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace AbcYazilim.OgrenciTakip.Model.Entities
+namespace AbcYazilim.OgrenciTakip.Model.Entities.CariEntity
 {
     public class Cariler : BaseEntityDurum
     {
@@ -51,6 +52,8 @@ namespace AbcYazilim.OgrenciTakip.Model.Entities
 
         [InverseProperty("Cariler")]
         public ICollection<CariSubeler> CariSubeler { get; set; }
+        [InverseProperty("Cariler")]
+        public ICollection<CariIletisim> CariIletisim { get; set; }
 
     }
 }

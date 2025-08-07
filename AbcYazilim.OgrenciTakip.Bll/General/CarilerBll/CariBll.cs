@@ -6,11 +6,11 @@ using System.Windows.Forms;
 using AbcYazilim.OgrenciTakip.Bll.Base;
 using AbcYazilim.OgrenciTakip.Bll.Interfaces;
 using AbcYazilim.OgrenciTakip.Common.Enums;
-using AbcYazilim.OgrenciTakip.Model.Dto;
-using AbcYazilim.OgrenciTakip.Model.Entities;
+using AbcYazilim.OgrenciTakip.Model.Dto.CariDto;
 using AbcYazilim.OgrenciTakip.Model.Entities.Base;
+using AbcYazilim.OgrenciTakip.Model.Entities.CariEntity;
 
-namespace AbcYazilim.OgrenciTakip.Bll.General
+namespace AbcYazilim.OgrenciTakip.Bll.General.CarilerBll
 {
     public class CariBll : BaseGenelBll<Cari>, IBaseGenelBll, IBaseCommonBll
     {
@@ -20,7 +20,6 @@ namespace AbcYazilim.OgrenciTakip.Bll.General
         {
             return BaseSingle(filter, x => new CariS
             {
-
                 Id = x.Id,
                 Kod = x.Kod,
                 CariAdi = x.CariAdi,
@@ -41,7 +40,6 @@ namespace AbcYazilim.OgrenciTakip.Bll.General
                 OzelKod2Adi = x.OzelKod2.OzelKodAdi,
                 Aciklama = x.Aciklama,
                 Durum = x.Durum
-
             });
         }
 
@@ -66,7 +64,6 @@ namespace AbcYazilim.OgrenciTakip.Bll.General
                 OzelKod1Adi = x.OzelKod1.OzelKodAdi,
                 OzelKod2Adi = x.OzelKod2.OzelKodAdi,
                 Aciklama = x.Aciklama
-
             }).OrderBy(x => x.Kod).ToList();
         }
     }

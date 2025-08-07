@@ -3,6 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using AbcYazilim.OgrenciTakip.Common.Enums;
 using AbcYazilim.OgrenciTakip.Model.Attributes;
 using AbcYazilim.OgrenciTakip.Model.Entities.Base;
+using AbcYazilim.OgrenciTakip.Model.Entities.CariEntity;
 
 namespace AbcYazilim.OgrenciTakip.Model.Entities
 {

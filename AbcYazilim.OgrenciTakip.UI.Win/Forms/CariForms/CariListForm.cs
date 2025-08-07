@@ -1,6 +1,6 @@
-﻿using AbcYazilim.OgrenciTakip.Bll.General;
+﻿using AbcYazilim.OgrenciTakip.Bll.General.CarilerBll;
 using AbcYazilim.OgrenciTakip.Common.Enums;
-using AbcYazilim.OgrenciTakip.Model.Entities;
+using AbcYazilim.OgrenciTakip.Model.Entities.CariEntity;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Functions;
 using AbcYazilim.OgrenciTakip.UI.Win.Show;
@@ -13,9 +13,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.CariForms
         {
             InitializeComponent();
             Bll = new CariBll();
-
         }
-
         protected override void DegiskenleriDoldur()
         {
             Tablo = tablo;
@@ -23,11 +21,9 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.CariForms
             FormShow = new ShowEditForms<CariEditForm>();
             Navigator = longNavigator.Navigator;
         }
-
         protected override void Listele()
         {
             Tablo.GridControl.DataSource = ((CariBll) Bll).List(FilterFunctions.Filter<Cari>(AktifKartlariGoster));
-
         }
     }
 }
