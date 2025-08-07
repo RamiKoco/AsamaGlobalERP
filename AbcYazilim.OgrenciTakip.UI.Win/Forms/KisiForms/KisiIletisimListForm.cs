@@ -2,6 +2,7 @@
 using AbcYazilim.OgrenciTakip.Common.Enums;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Show;
+using System.Drawing;
 
 namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.KisiForms
 {
@@ -10,6 +11,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.KisiForms
         #region Variables
         private readonly long _kisiId;
         private readonly string _kisiAdi;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridView view;
         #endregion
         public KisiIletisimListForm(params object[] prm)
         {
@@ -19,17 +21,20 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.KisiForms
             _kisiId = (long)prm[0];
             _kisiAdi = prm[1].ToString();
 
+            //view = grid.MainView as DevExpress.XtraGrid.Views.BandedGrid.BandedGridView;
+            //if (view != null)
+            //    view.RowCellStyle += View_RowCellStyle;
         }
         protected override void DegiskenleriDoldur()
         {
-            Tablo = tablo;            
+            Tablo = tablo;
             BaseKartTuru = KartTuru.KisiIletisim;
             Navigator = longNavigator.Navigator;
             Text = Text + $" - ( {_kisiAdi} )";
         }
         protected override void Listele()
         {
-            Tablo.GridControl.DataSource = ((KisiIletisimBll)Bll).List(x => x.Durum == AktifKartlariGoster && x.KisiId == _kisiId);            
+            Tablo.GridControl.DataSource = ((KisiIletisimBll)Bll).List(x => x.Durum == AktifKartlariGoster && x.KisiId == _kisiId);
         }
         protected override void ShowEditForm(long id)
         {
@@ -37,5 +42,25 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.KisiForms
             ShowEditFormDefault(result);
 
         }
+        //private void View_RowCellStyle(object sender, DevExpress.XtraGrid.Views.Grid.RowCellStyleEventArgs e)
+        //{
+        //    if (e.Column.FieldName == "Whatsapp" || e.Column.FieldName == "Arama" || e.Column.FieldName == "Sms" || e.Column.FieldName == "EPBool")
+        //    {
+        //        var view = sender as DevExpress.XtraGrid.Views.BandedGrid.BandedGridView;
+        //        var value = view.GetRowCellValue(e.RowHandle, e.Column);
+
+        //        if (value is bool boolValue && boolValue)
+        //        {
+        //            e.Appearance.BackColor = Color.GreenYellow;
+        //            e.Appearance.ForeColor = Color.DarkBlue;
+        //        }
+        //        else
+        //        {
+        //            e.Appearance.BackColor = Color.White;
+        //            e.Appearance.ForeColor = Color.Black; // Dilersen başka renk seçebilirsin
+        //        }
+        //    }
+        //}
+
     }
 }

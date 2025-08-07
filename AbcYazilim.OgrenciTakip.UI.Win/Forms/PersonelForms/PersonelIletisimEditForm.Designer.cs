@@ -59,7 +59,6 @@
             this.txtSosyalMedyaUrl = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls.MyTextEdit();
             this.txtSosyalMedyaPlatformu = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls.MyButtonEdit();
             this.txtWeb = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls.MyTextEdit();
-            this.txtIlgili = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls.MyTextEdit();
             this.txtKanallar = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls.MyCheckedComboBoxEdit();
             this.txtIletisimTurleri = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls.MyComboBoxEdit();
             this.txtKod = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls.MyKodTextEdit();
@@ -88,7 +87,6 @@
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem13 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem16 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem17 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -111,7 +109,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtSosyalMedyaUrl.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSosyalMedyaPlatformu.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtWeb.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtIlgili.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKanallar.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtIletisimTurleri.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKod.Properties)).BeginInit();
@@ -140,7 +137,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).BeginInit();
@@ -168,7 +164,6 @@
             this.myDataLayoutControl.Controls.Add(this.txtSosyalMedyaUrl);
             this.myDataLayoutControl.Controls.Add(this.txtSosyalMedyaPlatformu);
             this.myDataLayoutControl.Controls.Add(this.txtWeb);
-            this.myDataLayoutControl.Controls.Add(this.txtIlgili);
             this.myDataLayoutControl.Controls.Add(this.txtKanallar);
             this.myDataLayoutControl.Controls.Add(this.txtIletisimTurleri);
             this.myDataLayoutControl.Controls.Add(this.txtKod);
@@ -362,19 +357,6 @@
             this.txtWeb.StatusBarAciklama = "Web Adresi Giriniz.";
             this.txtWeb.StyleController = this.myDataLayoutControl;
             this.txtWeb.TabIndex = 14;
-            // 
-            // txtIlgili
-            // 
-            this.txtIlgili.EnterMoveNextControl = true;
-            this.txtIlgili.Location = new System.Drawing.Point(97, 156);
-            this.txtIlgili.Name = "txtIlgili";
-            this.txtIlgili.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
-            this.txtIlgili.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtIlgili.Properties.MaxLength = 50;
-            this.txtIlgili.Size = new System.Drawing.Size(216, 20);
-            this.txtIlgili.StatusBarAciklama = "İlgili Giriniz.";
-            this.txtIlgili.StyleController = this.myDataLayoutControl;
-            this.txtIlgili.TabIndex = 7;
             // 
             // txtKanallar
             // 
@@ -608,7 +590,6 @@
             this.layoutControlItem3,
             this.layoutControlItem12,
             this.layoutControlItem5,
-            this.layoutControlItem13,
             this.layoutControlItem9,
             this.layoutControlItem16,
             this.layoutControlItem17,
@@ -908,21 +889,6 @@
             this.layoutControlItem5.TextSize = new System.Drawing.Size(80, 13);
             this.layoutControlItem5.TextToControlDistance = 5;
             // 
-            // layoutControlItem13
-            // 
-            this.layoutControlItem13.AppearanceItemCaption.ForeColor = System.Drawing.Color.Maroon;
-            this.layoutControlItem13.AppearanceItemCaption.Options.UseForeColor = true;
-            this.layoutControlItem13.Control = this.txtIlgili;
-            this.layoutControlItem13.Location = new System.Drawing.Point(0, 144);
-            this.layoutControlItem13.Name = "layoutControlItem13";
-            this.layoutControlItem13.OptionsTableLayoutItem.ColumnSpan = 3;
-            this.layoutControlItem13.OptionsTableLayoutItem.RowIndex = 6;
-            this.layoutControlItem13.Size = new System.Drawing.Size(305, 24);
-            this.layoutControlItem13.Text = "İlgili";
-            this.layoutControlItem13.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
-            this.layoutControlItem13.TextSize = new System.Drawing.Size(80, 20);
-            this.layoutControlItem13.TextToControlDistance = 5;
-            // 
             // layoutControlItem9
             // 
             this.layoutControlItem9.AppearanceItemCaption.ForeColor = System.Drawing.Color.Maroon;
@@ -1053,7 +1019,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtSosyalMedyaUrl.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSosyalMedyaPlatformu.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtWeb.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtIlgili.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKanallar.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtIletisimTurleri.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKod.Properties)).EndInit();
@@ -1082,7 +1047,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).EndInit();
@@ -1115,7 +1079,6 @@
             private UserControls.Controls.MyCheckedComboBoxEdit txtKanallar;
             private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
             private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
-            private UserControls.Controls.MyTextEdit txtIlgili;
             private UserControls.Controls.MyTextEdit txtWeb;
             private DevExpress.XtraLayout.LayoutControlItem layoutControlItem14;
             private UserControls.Controls.MyButtonEdit txtSosyalMedyaPlatformu;
@@ -1137,7 +1100,6 @@
             private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
             private DevExpress.XtraLayout.LayoutControlItem layoutControlItem12;
             private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
-            private DevExpress.XtraLayout.LayoutControlItem layoutControlItem13;
             private DevExpress.XtraLayout.LayoutControlItem layoutControlItem9;
             private DevExpress.XtraLayout.LayoutControlItem layoutControlItem16;
             private DevExpress.XtraLayout.LayoutControlItem layoutControlItem17;

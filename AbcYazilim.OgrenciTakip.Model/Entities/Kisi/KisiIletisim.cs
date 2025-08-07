@@ -28,11 +28,14 @@ namespace AbcYazilim.OgrenciTakip.Model.Entities.Kisi
         [StringLength(30)]
         public string EPosta { get; set; }
         public string Kanallar { get; set; }
+        public bool Arama { get; set; }
+        public bool Sms { get; set; }
+        public bool Whatsapp { get; set; }
+        public bool EPBool { get; set; }
         public string KullaniciAdi { get; set; }
         public string SosyalMedyaUrl { get; set; }
         public string SIPKullaniciAdi { get; set; }
         public string SIPServer { get; set; }
-        public string Ilgili { get; set; }
         public short Oncelik { get; set; }
         public bool VoipMi { get; set; }
         [Column(TypeName = "date")]

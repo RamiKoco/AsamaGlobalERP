@@ -9,6 +9,7 @@ using AbcYazilim.OgrenciTakip.UI.Win.Functions;
 using DevExpress.XtraEditors;
 using DevExpress.XtraEditors.Controls;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.PersonelForms
@@ -36,6 +37,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.PersonelForms
                         .ToArray());
             BaseKartTuru = KartTuru.PersonelIletisim;
             txtIletisimTurleri.EditValueChanged += TxtIletisimTurleri_EditValueChanged;
+            tglVoip.EditValueChanged += tglVoip_EditValueChanged;
             EventsLoad();
         }
         public override void Yukle()
@@ -54,7 +56,6 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.PersonelForms
             var entity = (PersonelIletisimS)OldEntity;
             txtKod.Text = entity.Kod;
             txtBaslik.Text = entity.Baslik;
-            txtIlgili.Text = entity.Ilgili;
             txtIletisimTurleri.EditValue = entity.IletisimTuru.ToName();
             txtKanallar.SetEditValue(entity.Kanallar);
             txtIzinDurumu.SelectedItem = entity.IzinDurumu.ToName();
@@ -78,21 +79,40 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.PersonelForms
             txtAciklama.Text = entity.Aciklama;
             tglVoip.IsOn = entity.VoipMi;
             tglDurum.IsOn = entity.Durum;
-            ButonEnabledDurumu();
+            //ButonEnabledDurumu();
         }
         protected override void GuncelNesneOlustur()
         {
+            var eskiEntity = OldEntity as PersonelIletisimS; // Burada cast ediyoruz.
+
+            var kanalListesi = (txtKanallar.EditValue?.ToString() ?? "")
+                               .Split(new[] { ',', ';' }, StringSplitOptions.RemoveEmptyEntries)
+                               .Select(x => x.Trim())
+                               .ToList();
+
+            bool eskiArama = eskiEntity?.Arama ?? false;
+            bool eskiSms = eskiEntity?.Sms ?? false;
+            bool eskiWhatsapp = eskiEntity?.Whatsapp ?? false;
+            bool eskiEposta = eskiEntity?.EPBool ?? false;
+
+            bool yeniArama = kanalListesi.Any() ? kanalListesi.Contains("Arama") : eskiArama;
+            bool yeniSms = kanalListesi.Any() ? kanalListesi.Contains("SMS") : eskiSms;
+            bool yeniWhatsapp = kanalListesi.Any() ? kanalListesi.Contains("Whatsapp") : eskiWhatsapp;
+            bool yeniEposta = kanalListesi.Any() ? kanalListesi.Contains("E-Posta") : eskiEposta;
             CurrentEntity = new PersonelIletisim
             {
                 Id = Id,
                 Kod = txtKod.Text,
                 Baslik = txtBaslik.Text,
-                Ilgili = txtIlgili.Text,
                 Oncelik = (short)txtOncelik.Value,
                 Web = txtWeb.Text,
                 IletisimTuru = txtIletisimTurleri.Text.GetEnum<IletisimTuru>(),
                 IzinDurumu = txtIzinDurumu.Text.GetEnum<IletisimDurumu>(),
                 Kanallar = txtKanallar.EditValue?.ToString(),
+                Arama = yeniArama,
+                Sms = yeniSms,
+                Whatsapp = yeniWhatsapp,
+                EPBool = yeniEposta,
                 IzinTarihi = (DateTime?)txtIzinTarihi.EditValue,
                 UlkeKodu = txtUlkeKodu.Text,
                 Numara = txtTelefonVeFax.Text,
@@ -113,12 +133,62 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.PersonelForms
 
             ButonEnabledDurumu();
         }
+        private void tglVoip_EditValueChanged(object sender, EventArgs e)
+        {
+            bool isVoip = Convert.ToBoolean(tglVoip.EditValue);
+
+            txtSIPKullaniciAdi.Enabled = isVoip;
+            txtSIPServer.Enabled = isVoip;
+        }
         protected internal override void ButonEnabledDurumu()
         {
             if (!IsLoaded) return;
 
             base.ButonEnabledDurumu();
 
+            if (txtIletisimTurleri.EditValue == null) return;
+
+            IletisimTuru iletisimTuru;
+
+            try
+            {
+                iletisimTuru = EnumFunctions.GetValueFromDescription<IletisimTuru>(txtIletisimTurleri.EditValue.ToString());
+            }
+            catch
+            {
+                return;
+            }
+
+
+        }
+        private void SetKanallarByIletisimTuru(IletisimTuru tur)
+        {
+            txtKanallar.Properties.Items.Clear();
+
+            ICollection<string> kanalListesi;
+
+            switch (tur)
+            {
+                case IletisimTuru.Telefon:
+                    kanalListesi = EnumFunctions.GetEnumDescriptionList<IletisimKanalTipi>().Cast<string>().ToList();
+                    break;
+                case IletisimTuru.EPosta:
+                    kanalListesi = EnumFunctions.GetEnumDescriptionList<IletisimKanalTipiEposta>().Cast<string>().ToList();
+                    break;
+                default:
+                    kanalListesi = new List<string>();
+                    break;
+            }
+
+            foreach (var item in kanalListesi)
+            {
+                txtKanallar.Properties.Items.Add(new CheckedListBoxItem(item));
+            }
+
+            txtKanallar.SetEditValue(null); // önceki seçimleri temizle
+        }
+        private void TxtIletisimTurleri_EditValueChanged(object sender, EventArgs e)
+        {
             if (txtIletisimTurleri.EditValue == null) return;
 
             IletisimTuru iletisimTuru;
@@ -143,69 +213,137 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.PersonelForms
             txtSIPKullaniciAdi.Enabled = true;
             txtSIPServer.Enabled = true;
             tglVoip.Enabled = true;
-
+            txtIzinDurumu.Enabled = true;
+            txtIzinTarihi.Enabled = true;
+            txtKanallar.Enabled = true;
+            tglVoip.Enabled = true;
+            txtSIPServer.Enabled = true;
+            txtSIPKullaniciAdi.Enabled = true;
             switch (iletisimTuru)
             {
                 case IletisimTuru.Telefon:
                     txtEPosta.Enabled = false;
+                    txtEPosta.Text = "";
                     txtSosyalMedyaPlatformu.Enabled = false;
+                    txtSosyalMedyaPlatformu.Id = null;
+                    txtSosyalMedyaPlatformu.Text = "";
                     txtWeb.Enabled = false;
+                    txtWeb.Text = "";
                     txtSosyalMedyaUrl.Enabled = false;
+                    txtSosyalMedyaUrl.Text = "";
                     txtKullaniciAdi.Enabled = false;
+                    txtKullaniciAdi.Text = "";
+                    tglVoip.EditValue = false;
+                    txtSIPKullaniciAdi.Enabled = Convert.ToBoolean(tglVoip.EditValue);
+                    txtSIPServer.Enabled = Convert.ToBoolean(tglVoip.EditValue);
+                    SetKanallarByIletisimTuru(IletisimTuru.Telefon);
                     break;
 
                 case IletisimTuru.EPosta:
                     txtUlkeKodu.Enabled = false;
+                    txtUlkeKodu.Text = "";
                     txtTelefonVeFax.Enabled = false;
+                    txtTelefonVeFax.Text = "";
                     txtDahili.Enabled = false;
-                    txtSosyalMedyaPlatformu.Enabled = false;
+                    txtDahili.Text = "";
+                    SetKanallarByIletisimTuru(IletisimTuru.EPosta);
                     txtWeb.Enabled = false;
+                    txtWeb.Text = "";
+                    txtSosyalMedyaPlatformu.Enabled = false;
+                    txtSosyalMedyaPlatformu.Id = null;
+                    txtSosyalMedyaPlatformu.Text = "";
                     txtSosyalMedyaUrl.Enabled = false;
+                    txtSosyalMedyaUrl.Text = "";
                     txtKullaniciAdi.Enabled = false;
-                    txtSIPKullaniciAdi.Enabled = false;
-                    txtSIPServer.Enabled = false;
+                    txtKullaniciAdi.Text = "";
+                    tglVoip.EditValue = false;
                     tglVoip.Enabled = false;
+                    txtSIPKullaniciAdi.Enabled = Convert.ToBoolean(tglVoip.EditValue);
+                    txtSIPKullaniciAdi.Text = "";
+                    txtSIPServer.Enabled = Convert.ToBoolean(tglVoip.EditValue);
+                    txtSIPServer.Text = "";
                     break;
 
                 case IletisimTuru.Web:
                     txtUlkeKodu.Enabled = false;
+                    txtUlkeKodu.Text = "";
                     txtTelefonVeFax.Enabled = false;
+                    txtTelefonVeFax.Text = "";
                     txtDahili.Enabled = false;
+                    txtDahili.Text = "";
                     txtEPosta.Enabled = false;
+                    txtEPosta.Text = "";
+                    txtKanallar.Enabled = false;
+                    txtKanallar.Text = "";
+                    txtIzinDurumu.Enabled = false;
+                    txtIzinDurumu.Text = null;
+                    txtIzinTarihi.Enabled = false;
+                    txtIzinTarihi.Text = null;
                     txtSosyalMedyaPlatformu.Enabled = false;
+                    txtSosyalMedyaPlatformu.Id = null;
+                    txtSosyalMedyaPlatformu.Text = "";
                     txtSosyalMedyaUrl.Enabled = false;
+                    txtSosyalMedyaUrl.Text = "";
                     txtKullaniciAdi.Enabled = false;
-                    txtSIPKullaniciAdi.Enabled = false;
-                    txtSIPServer.Enabled = false;
+                    txtKullaniciAdi.Text = "";
+                    tglVoip.EditValue = false;
                     tglVoip.Enabled = false;
+                    txtSIPKullaniciAdi.Enabled = Convert.ToBoolean(tglVoip.EditValue);
+                    txtSIPKullaniciAdi.Text = "";
+                    txtSIPServer.Enabled = Convert.ToBoolean(tglVoip.EditValue);
+                    txtSIPServer.Text = "";
                     break;
 
                 case IletisimTuru.SosyalMedya:
                     txtUlkeKodu.Enabled = false;
+                    txtUlkeKodu.Text = "";
                     txtTelefonVeFax.Enabled = false;
+                    txtTelefonVeFax.Text = "";
                     txtDahili.Enabled = false;
+                    txtDahili.Text = "";
                     txtEPosta.Enabled = false;
+                    txtEPosta.Text = "";
+                    txtKanallar.Enabled = false;
+                    txtKanallar.Text = "";
                     txtWeb.Enabled = false;
-                    txtSIPKullaniciAdi.Enabled = false;
-                    txtSIPServer.Enabled = false;
+                    txtWeb.Text = "";
+                    tglVoip.EditValue = false;
                     tglVoip.Enabled = false;
+                    txtSIPKullaniciAdi.Enabled = Convert.ToBoolean(tglVoip.EditValue);
+                    txtSIPKullaniciAdi.Text = "";
+                    txtSIPServer.Enabled = Convert.ToBoolean(tglVoip.EditValue);
+                    txtSIPServer.Text = "";
                     break;
 
                 case IletisimTuru.Fax:
+                    txtDahili.Enabled = false;
+                    txtDahili.Text = "";
                     txtEPosta.Enabled = false;
-                    txtSosyalMedyaPlatformu.Enabled = false;
+                    txtEPosta.Text = "";
+                    txtKanallar.Enabled = false;
+                    txtKanallar.Text = "";
+                    txtIzinDurumu.Enabled = false;
+                    txtIzinDurumu.Text = null;
+                    txtIzinTarihi.Enabled = false;
+                    txtIzinTarihi.Text = null;
                     txtWeb.Enabled = false;
+                    txtWeb.Text = "";
+                    txtSosyalMedyaPlatformu.Enabled = false;
+                    txtSosyalMedyaPlatformu.Id = null;
+                    txtSosyalMedyaPlatformu.Text = "";
                     txtSosyalMedyaUrl.Enabled = false;
+                    txtSosyalMedyaUrl.Text = "";
                     txtKullaniciAdi.Enabled = false;
-                    txtSIPKullaniciAdi.Enabled = false;
-                    txtSIPServer.Enabled = false;
+                    txtKullaniciAdi.Text = "";
+                    tglVoip.EditValue = false;
                     tglVoip.Enabled = false;
+                    txtSIPKullaniciAdi.Enabled = Convert.ToBoolean(tglVoip.EditValue);
+                    txtSIPKullaniciAdi.Text = "";
+                    txtSIPServer.Enabled = Convert.ToBoolean(tglVoip.EditValue);
+                    txtSIPServer.Text = "";
                     break;
+
             }
-        }
-        private void TxtIletisimTurleri_EditValueChanged(object sender, EventArgs e)
-        {
-            ButonEnabledDurumu();
         }
         protected override bool EntityInsert()
         {

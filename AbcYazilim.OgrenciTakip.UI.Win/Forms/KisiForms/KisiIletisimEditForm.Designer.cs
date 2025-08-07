@@ -49,6 +49,7 @@
             DevExpress.XtraLayout.RowDefinition rowDefinition11 = new DevExpress.XtraLayout.RowDefinition();
             DevExpress.XtraLayout.RowDefinition rowDefinition12 = new DevExpress.XtraLayout.RowDefinition();
             this.myDataLayoutControl = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls.MyDataLayoutControl();
+            this.txtDahili = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls.MyDahiliNoTextEdit();
             this.txtUlkeKodu = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls.MyUlkeKoduTextEdit();
             this.txtOncelik = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls.MySpinEdit();
             this.txtIzinTarihi = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls.MyDateEdit();
@@ -60,7 +61,6 @@
             this.txtSosyalMedyaUrl = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls.MyTextEdit();
             this.txtSosyalMedyaPlatformu = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls.MyButtonEdit();
             this.txtWeb = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls.MyTextEdit();
-            this.txtIlgili = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls.MyTextEdit();
             this.txtKanallar = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls.MyCheckedComboBoxEdit();
             this.txtIletisimTurleri = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls.MyComboBoxEdit();
             this.txtKod = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls.MyKodTextEdit();
@@ -85,7 +85,6 @@
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem13 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem16 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem17 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -94,12 +93,12 @@
             this.layoutControlItem23 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.txtDahili = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls.MyDahiliNoTextEdit();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.resimMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.myDataLayoutControl)).BeginInit();
             this.myDataLayoutControl.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDahili.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtUlkeKodu.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtOncelik.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtIzinTarihi.Properties)).BeginInit();
@@ -112,7 +111,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtSosyalMedyaUrl.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSosyalMedyaPlatformu.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtWeb.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtIlgili.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKanallar.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtIletisimTurleri.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKod.Properties)).BeginInit();
@@ -137,7 +135,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).BeginInit();
@@ -146,7 +143,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem23)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDahili.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             this.SuspendLayout();
             // 
@@ -170,7 +166,6 @@
             this.myDataLayoutControl.Controls.Add(this.txtSosyalMedyaUrl);
             this.myDataLayoutControl.Controls.Add(this.txtSosyalMedyaPlatformu);
             this.myDataLayoutControl.Controls.Add(this.txtWeb);
-            this.myDataLayoutControl.Controls.Add(this.txtIlgili);
             this.myDataLayoutControl.Controls.Add(this.txtKanallar);
             this.myDataLayoutControl.Controls.Add(this.txtIletisimTurleri);
             this.myDataLayoutControl.Controls.Add(this.txtKod);
@@ -189,6 +184,31 @@
             this.myDataLayoutControl.Size = new System.Drawing.Size(658, 300);
             this.myDataLayoutControl.TabIndex = 0;
             this.myDataLayoutControl.Text = "myDataLayoutControl1";
+            // 
+            // txtDahili
+            // 
+            this.txtDahili.EnterMoveNextControl = true;
+            this.txtDahili.Location = new System.Drawing.Point(257, 108);
+            this.txtDahili.MenuManager = this.ribbonControl;
+            this.txtDahili.Name = "txtDahili";
+            this.txtDahili.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtDahili.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.txtDahili.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
+            this.txtDahili.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtDahili.Properties.Mask.AutoComplete = DevExpress.XtraEditors.Mask.AutoCompleteType.None;
+            this.txtDahili.Properties.Mask.EditMask = "\\d?\\d?\\d?\\d?\\d?\\d?";
+            this.txtDahili.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Regular;
+            this.txtDahili.Properties.Mask.PlaceHolder = ' ';
+            this.txtDahili.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.RegularMaskManager));
+            this.txtDahili.Properties.MaskSettings.Set("mask", "\\d?\\d?\\d?\\d?\\d?\\d?");
+            this.txtDahili.Properties.MaskSettings.Set("isAutoComplete", false);
+            this.txtDahili.Properties.MaskSettings.Set("isOptimistic", false);
+            this.txtDahili.Properties.MaskSettings.Set("placeholder", ' ');
+            this.txtDahili.Properties.MaxLength = 50;
+            this.txtDahili.Size = new System.Drawing.Size(56, 20);
+            this.txtDahili.StatusBarAciklama = "Dahili No Giriniz.";
+            this.txtDahili.StyleController = this.myDataLayoutControl;
+            this.txtDahili.TabIndex = 26;
             // 
             // txtUlkeKodu
             // 
@@ -387,19 +407,6 @@
             this.txtWeb.StatusBarAciklama = "Web Adresi Giriniz.";
             this.txtWeb.StyleController = this.myDataLayoutControl;
             this.txtWeb.TabIndex = 14;
-            // 
-            // txtIlgili
-            // 
-            this.txtIlgili.EnterMoveNextControl = true;
-            this.txtIlgili.Location = new System.Drawing.Point(97, 156);
-            this.txtIlgili.Name = "txtIlgili";
-            this.txtIlgili.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
-            this.txtIlgili.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtIlgili.Properties.MaxLength = 50;
-            this.txtIlgili.Size = new System.Drawing.Size(216, 20);
-            this.txtIlgili.StatusBarAciklama = "İlgili Giriniz.";
-            this.txtIlgili.StyleController = this.myDataLayoutControl;
-            this.txtIlgili.TabIndex = 7;
             // 
             // txtKanallar
             // 
@@ -603,7 +610,6 @@
             this.layoutControlItem3,
             this.layoutControlItem12,
             this.layoutControlItem5,
-            this.layoutControlItem13,
             this.layoutControlItem9,
             this.layoutControlItem16,
             this.layoutControlItem17,
@@ -878,21 +884,6 @@
             this.layoutControlItem5.TextSize = new System.Drawing.Size(80, 13);
             this.layoutControlItem5.TextToControlDistance = 5;
             // 
-            // layoutControlItem13
-            // 
-            this.layoutControlItem13.AppearanceItemCaption.ForeColor = System.Drawing.Color.Maroon;
-            this.layoutControlItem13.AppearanceItemCaption.Options.UseForeColor = true;
-            this.layoutControlItem13.Control = this.txtIlgili;
-            this.layoutControlItem13.Location = new System.Drawing.Point(0, 144);
-            this.layoutControlItem13.Name = "layoutControlItem13";
-            this.layoutControlItem13.OptionsTableLayoutItem.ColumnSpan = 3;
-            this.layoutControlItem13.OptionsTableLayoutItem.RowIndex = 6;
-            this.layoutControlItem13.Size = new System.Drawing.Size(305, 24);
-            this.layoutControlItem13.Text = "İlgili";
-            this.layoutControlItem13.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
-            this.layoutControlItem13.TextSize = new System.Drawing.Size(80, 20);
-            this.layoutControlItem13.TextToControlDistance = 5;
-            // 
             // layoutControlItem9
             // 
             this.layoutControlItem9.AppearanceItemCaption.ForeColor = System.Drawing.Color.Maroon;
@@ -1010,27 +1001,6 @@
             this.layoutControlItem2.TextSize = new System.Drawing.Size(80, 20);
             this.layoutControlItem2.TextToControlDistance = 5;
             // 
-            // txtDahili
-            // 
-            this.txtDahili.EnterMoveNextControl = true;
-            this.txtDahili.Location = new System.Drawing.Point(257, 108);
-            this.txtDahili.MenuManager = this.ribbonControl;
-            this.txtDahili.Name = "txtDahili";
-            this.txtDahili.Properties.Appearance.Options.UseTextOptions = true;
-            this.txtDahili.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.txtDahili.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
-            this.txtDahili.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtDahili.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.RegularMaskManager));
-            this.txtDahili.Properties.MaskSettings.Set("mask", "\\d?\\d?\\d?\\d?\\d?\\d?");
-            this.txtDahili.Properties.MaskSettings.Set("isAutoComplete", false);
-            this.txtDahili.Properties.MaskSettings.Set("isOptimistic", false);
-            this.txtDahili.Properties.MaskSettings.Set("placeholder", ' ');
-            this.txtDahili.Properties.MaxLength = 50;
-            this.txtDahili.Size = new System.Drawing.Size(56, 20);
-            this.txtDahili.StatusBarAciklama = "Dahili No Giriniz.";
-            this.txtDahili.StyleController = this.myDataLayoutControl;
-            this.txtDahili.TabIndex = 26;
-            // 
             // layoutControlItem4
             // 
             this.layoutControlItem4.AppearanceItemCaption.ForeColor = System.Drawing.Color.Maroon;
@@ -1060,6 +1030,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.resimMenu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.myDataLayoutControl)).EndInit();
             this.myDataLayoutControl.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.txtDahili.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtUlkeKodu.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtOncelik.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtIzinTarihi.Properties.CalendarTimeProperties)).EndInit();
@@ -1072,7 +1043,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtSosyalMedyaUrl.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSosyalMedyaPlatformu.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtWeb.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtIlgili.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKanallar.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtIletisimTurleri.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKod.Properties)).EndInit();
@@ -1097,7 +1067,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).EndInit();
@@ -1106,7 +1075,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem23)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDahili.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -1131,7 +1099,6 @@
         private UserControls.Controls.MyCheckedComboBoxEdit txtKanallar;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
-        private UserControls.Controls.MyTextEdit txtIlgili;
         private UserControls.Controls.MyTextEdit txtWeb;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem14;
         private UserControls.Controls.MyButtonEdit txtSosyalMedyaPlatformu;
@@ -1151,7 +1118,6 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem12;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem13;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem9;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem16;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem17;

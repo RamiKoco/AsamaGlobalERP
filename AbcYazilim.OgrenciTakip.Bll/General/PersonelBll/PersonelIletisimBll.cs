@@ -29,6 +29,10 @@ namespace AbcYazilim.OgrenciTakip.Bll.General.PersonelBll
                 IzinDurumu = x.IzinDurumu,
                 IletisimKanalTipi = x.IletisimKanalTipi,
                 Kanallar = x.Kanallar,
+                Arama = x.Arama,
+                Sms = x.Sms,
+                Whatsapp = x.Whatsapp,
+                EPBool = x.EPBool,
                 Baslik = x.Baslik,
                 UlkeKodu = x.UlkeKodu,
                 Numara = x.Numara,
@@ -38,7 +42,6 @@ namespace AbcYazilim.OgrenciTakip.Bll.General.PersonelBll
                 SosyalMedyaUrl = x.SosyalMedyaUrl,
                 SIPKullaniciAdi = x.SIPKullaniciAdi,
                 SIPServer = x.SIPServer,
-                Ilgili = x.Ilgili,
                 Oncelik = x.Oncelik,
                 VoipMi = x.VoipMi,
                 SosyalMedyaPlatformuId = x.SosyalMedyaPlatformuId,
@@ -51,7 +54,6 @@ namespace AbcYazilim.OgrenciTakip.Bll.General.PersonelBll
                 OzelKod2Adi = x.OzelKod2.OzelKodAdi,
                 Aciklama = x.Aciklama,
                 Durum = x.Durum
-
             });
         }
         public override IEnumerable<BaseEntity> List(Expression<Func<PersonelIletisim, bool>> filter)
@@ -70,12 +72,15 @@ namespace AbcYazilim.OgrenciTakip.Bll.General.PersonelBll
                 SosyalMedyaUrl = x.SosyalMedyaUrl,
                 SIPKullaniciAdi = x.SIPKullaniciAdi,
                 SIPServer = x.SIPServer,
-                Ilgili = x.Ilgili,
                 Oncelik = x.Oncelik,
                 VoipMi = x.VoipMi,
                 IzinDurumu = x.IzinDurumu,
                 IletisimKanalTipi = x.IletisimKanalTipi,
                 Kanallar = x.Kanallar,
+                Arama = x.Arama,
+                Sms = x.Sms,
+                Whatsapp = x.Whatsapp,
+                EPBool = x.EPBool,
                 SosyalMedyaPlatformuAdi = x.SosyalMedyaPlatformu.Ad,
                 IzinTarihi = x.IzinTarihi,
                 Web = x.Web,

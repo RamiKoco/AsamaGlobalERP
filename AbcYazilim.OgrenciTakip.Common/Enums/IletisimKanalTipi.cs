@@ -8,9 +8,13 @@ namespace AbcYazilim.OgrenciTakip.Common.Enums
         Arama = 1,
         [Description("SMS")]
         SMS = 2,
-        [Description("E-Posta")]
-        EPosta = 3,
         [Description("Whatsapp")]
-        Whatsapp = 4
+        Whatsapp = 3
+    }
+    public enum IletisimKanalTipiEposta : byte
+    {
+        [Description("E-Posta")]
+        EPosta = 1,
+
     }
 }
