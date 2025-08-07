@@ -39,6 +39,8 @@ namespace AbcYazilim.OgrenciTakip.Data.Contexts
 
             modelBuilder.Entity<Cariler>().HasMany(x => x.CariSubeler).WithRequired().WillCascadeOnDelete(true);
             modelBuilder.Entity<Cariler>().HasMany(x => x.CariIletisim).WithRequired().WillCascadeOnDelete(true);
+            modelBuilder.Entity<Cariler>().HasMany(x => x.CariAdres).WithRequired().WillCascadeOnDelete(true);
+
             modelBuilder.Entity<Banka>().HasMany(x => x.BankaSube).WithRequired().WillCascadeOnDelete(true);
             modelBuilder.Entity<Indirim>().HasMany(x => x.IndiriminUygulanacagiHizmetBilgileri).WithRequired().WillCascadeOnDelete(true);           
         }
@@ -138,5 +140,6 @@ namespace AbcYazilim.OgrenciTakip.Data.Contexts
         public DbSet<PersonelIletisim> PersonelIletisim { get; set; }
         public DbSet<PersonelAdres> PersonelAdres { get; set; }
         public DbSet<CariIletisim> CariIletisim { get; set; }
+        public DbSet<CariAdres> CariAdres { get; set; }
     }
 }

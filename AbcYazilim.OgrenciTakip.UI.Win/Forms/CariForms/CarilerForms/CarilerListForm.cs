@@ -58,10 +58,10 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.CarilerForms
             {
                 ShowListForms<CariIletisimListForm>.ShowListForm(KartTuru.CariIletisim, entity.Id, entity.CariAdi);
             }
-            //else if (barItem == btnAdresKartlari)
-            //{
-            //    ShowListForms<CariAdresListForm>.ShowListForm(KartTuru.CariAdres, entity.Id, entity.CariAdi);
-            //}
+            else if (barItem == btnAdresKartlari)
+            {
+                ShowListForms<CariAdresListForm>.ShowListForm(KartTuru.CariAdres, entity.Id, entity.CariAdi);
+            }
         }
     }
 }

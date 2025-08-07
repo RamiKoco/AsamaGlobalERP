@@ -93,6 +93,7 @@
     <Compile Include="General\BelgeSecimBll.cs" />
     <Compile Include="General\BelgeTuruBll.cs" />
     <Compile Include="General\BilgiNotlariBll.cs" />
+    <Compile Include="General\CarilerBll\CariAdresBll.cs" />
     <Compile Include="General\CarilerBll\CariBll.cs" />
     <Compile Include="General\CarilerBll\CariIletisimBll.cs" />
     <Compile Include="General\CarilerBll\CarilerBll.cs" />

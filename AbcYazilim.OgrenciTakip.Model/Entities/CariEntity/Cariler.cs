@@ -53,6 +53,8 @@ namespace AbcYazilim.OgrenciTakip.Model.Entities.CariEntity
         [InverseProperty("Cariler")]
         public ICollection<CariSubeler> CariSubeler { get; set; }
         [InverseProperty("Cariler")]
+        public ICollection<CariAdres> CariAdres { get; set; }
+        [InverseProperty("Cariler")]
         public ICollection<CariIletisim> CariIletisim { get; set; }
 
     }
