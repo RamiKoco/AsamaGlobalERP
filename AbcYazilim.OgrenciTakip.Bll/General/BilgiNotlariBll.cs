@@ -21,6 +21,8 @@ namespace AbcYazilim.OgrenciTakip.Bll.General
                 TahakkukId = x.TahakkukId,
                 KisiId = x.KisiId,
                 PersonelId = x.PersonelId,
+                CarilerId = x.CarilerId,
+                CariSubelerId = x.CariSubelerId,
                 Tarih = x.Tarih,
                 BilgiNotu = x.BilgiNotu
               

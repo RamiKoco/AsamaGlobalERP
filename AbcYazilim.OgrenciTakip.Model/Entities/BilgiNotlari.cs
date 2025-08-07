@@ -10,6 +10,8 @@ namespace AbcYazilim.OgrenciTakip.Model.Entities
         public long TahakkukId { get; set; }
         public long KisiId { get; set; }
         public long PersonelId { get; set; }
+        public long CarilerId { get; set; }
+        public long CariSubelerId { get; set; }
         public DateTime Tarih { get; set; }
 
         [Required,StringLength(1000)]

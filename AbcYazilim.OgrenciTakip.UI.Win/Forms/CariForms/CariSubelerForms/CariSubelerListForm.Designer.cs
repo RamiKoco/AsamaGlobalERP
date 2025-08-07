@@ -34,10 +34,10 @@
             this.colId = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
             this.colKod = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
             this.colCariSubeAdi = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
-            this.colAciklama = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
-            this.longNavigator = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Navigators.LongNavigator();
             this.colOzelKod1Adi = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
             this.colOzelKod2Adi = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
+            this.colAciklama = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
+            this.longNavigator = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Navigators.LongNavigator();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablo)).BeginInit();
@@ -117,7 +117,7 @@
             this.tablo.StatusBarAciklama = null;
             this.tablo.StatusBarKisaYol = null;
             this.tablo.StatusBarKisaYolAciklama = null;
-            this.tablo.ViewCaption = "Cari Şubeler Kartı";
+            this.tablo.ViewCaption = "Cari Şube Kartları";
             // 
             // colId
             // 
@@ -158,27 +158,6 @@
             this.colCariSubeAdi.VisibleIndex = 1;
             this.colCariSubeAdi.Width = 120;
             // 
-            // colAciklama
-            // 
-            this.colAciklama.Caption = "Açıklama";
-            this.colAciklama.FieldName = "Aciklama";
-            this.colAciklama.Name = "colAciklama";
-            this.colAciklama.OptionsColumn.AllowEdit = false;
-            this.colAciklama.StatusBarAciklama = null;
-            this.colAciklama.StatusBarKisaYol = null;
-            this.colAciklama.StatusBarKisaYolAciklama = null;
-            this.colAciklama.Visible = true;
-            this.colAciklama.VisibleIndex = 4;
-            this.colAciklama.Width = 250;
-            // 
-            // longNavigator
-            // 
-            this.longNavigator.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.longNavigator.Location = new System.Drawing.Point(0, 434);
-            this.longNavigator.Name = "longNavigator";
-            this.longNavigator.Size = new System.Drawing.Size(1058, 24);
-            this.longNavigator.TabIndex = 3;
-            // 
             // colOzelKod1Adi
             // 
             this.colOzelKod1Adi.Caption = "Özel Kod-1";
@@ -204,6 +183,27 @@
             this.colOzelKod2Adi.Visible = true;
             this.colOzelKod2Adi.VisibleIndex = 3;
             this.colOzelKod2Adi.Width = 120;
+            // 
+            // colAciklama
+            // 
+            this.colAciklama.Caption = "Açıklama";
+            this.colAciklama.FieldName = "Aciklama";
+            this.colAciklama.Name = "colAciklama";
+            this.colAciklama.OptionsColumn.AllowEdit = false;
+            this.colAciklama.StatusBarAciklama = null;
+            this.colAciklama.StatusBarKisaYol = null;
+            this.colAciklama.StatusBarKisaYolAciklama = null;
+            this.colAciklama.Visible = true;
+            this.colAciklama.VisibleIndex = 4;
+            this.colAciklama.Width = 250;
+            // 
+            // longNavigator
+            // 
+            this.longNavigator.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.longNavigator.Location = new System.Drawing.Point(0, 434);
+            this.longNavigator.Name = "longNavigator";
+            this.longNavigator.Size = new System.Drawing.Size(1058, 24);
+            this.longNavigator.TabIndex = 3;
             // 
             // CariSubelerListForm
             // 

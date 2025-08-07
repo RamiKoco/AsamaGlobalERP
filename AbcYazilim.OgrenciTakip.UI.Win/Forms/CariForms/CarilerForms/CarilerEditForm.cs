@@ -4,17 +4,23 @@ using AbcYazilim.OgrenciTakip.Common.Enums;
 using AbcYazilim.OgrenciTakip.Common.Message;
 using AbcYazilim.OgrenciTakip.Model.Dto.CariDto;
 using AbcYazilim.OgrenciTakip.Model.Entities;
+using AbcYazilim.OgrenciTakip.Model.Entities.Base.Interfaces;
 using AbcYazilim.OgrenciTakip.Model.Entities.CariEntity;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms;
 using AbcYazilim.OgrenciTakip.UI.Win.Functions;
+using AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.Base;
+using AbcYazilim.OgrenciTakip.UI.Win.UserControls.UserControl.CariEditFormTable;
+using DevExpress.XtraBars.Navigation;
 using DevExpress.XtraEditors;
 using System;
 using System.ComponentModel;
+using System.Linq;
 
 namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.CarilerForms
 {
     public partial class CarilerEditForm : BaseEditForm
     {
+        private BaseTablo _bilgiNotlariTable;
         public CarilerEditForm()
         {
             InitializeComponent();
@@ -29,6 +35,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.CarilerForms
         {
             OldEntity = BaseIslemTuru == IslemTuru.EntityInsert ? new CarilerS() : ((CarilerBll)Bll).Single(FilterFunctions.Filter<Cariler>(Id));
             NesneyiKontrollereBagla();
+            BagliTabloYukle();
 
             if (BaseIslemTuru != IslemTuru.EntityInsert) return;
             Id = BaseIslemTuru.IdOlustur(OldEntity);
@@ -68,6 +75,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.CarilerForms
             txtAciklama.Text = entity.Aciklama;
             tglDurum.IsOn = entity.Durum;
         }
+
         protected override void GuncelNesneOlustur()
         {
             CurrentEntity = new Cariler
@@ -151,7 +159,9 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.CarilerForms
                             txtKimlikNo.Text = txtKimlikNo.Text.Substring(0, yeniUzunluk);
                     }
                 }
+
         }
+
         private void TxtKimlikTuru_IdChanged(object sender, EventArgs e)
         {
             if (txtKimlikTuru.Id == null)
@@ -232,6 +242,97 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.CarilerForms
                     e.Cancel = true;
                     return;
                 }
+            }
+        }
+
+        protected override void BagliTabloYukle()
+        {
+            bool TableValueChanged(BaseTablo tablo)
+            {
+                return tablo.Tablo.DataController.ListSource.Cast<IBaseHareketEntity>()
+                    .Any(x => x.Insert || x.Update || x.Delete);
+            }
+
+            if (_bilgiNotlariTable != null && TableValueChanged(_bilgiNotlariTable))
+                _bilgiNotlariTable.Yukle();
+
+        }
+        protected override bool EntityInsert()
+        {
+
+            if (BagliTabloHataliGirisKontrol()) return false;
+            var result = ((CarilerBll)Bll).Insert(CurrentEntity, x => x.Kod == CurrentEntity.Kod) && BagliTabloKaydet();
+
+            if (result && !KayitSonrasiFormuKapat)
+                BagliTabloYukle();
+
+            return result;
+        }
+
+        protected override bool EntityUpdate()
+        {
+            if (BagliTabloHataliGirisKontrol()) return false;
+            var result = ((CarilerBll)Bll).Update(OldEntity, CurrentEntity, x => x.Kod == CurrentEntity.Kod) && BagliTabloKaydet();
+
+            if (result && !KayitSonrasiFormuKapat)
+                BagliTabloYukle();
+
+            return result;
+        }
+        protected override bool BagliTabloHataliGirisKontrol()
+        {
+            if (_bilgiNotlariTable != null && _bilgiNotlariTable.HataliGiris())
+            {
+                tabUst.SelectedPage = pageNotlar;
+                _bilgiNotlariTable.Tablo.GridControl.Focus();
+                return true;
+            }
+
+            return false;
+        }
+        protected internal override void ButonEnabledDurumu()
+        {
+            if (!IsLoaded) return;
+
+            bool TableValueChanged()
+            {
+                if (_bilgiNotlariTable != null && _bilgiNotlariTable.TableValueChanged) return true;
+
+                return false;
+            }
+
+            if (FarkliSubeIslemi)
+                Functions.GeneralFunctions.ButtonEnabledDurumu(btnYeni, btnKaydet, btnGerial, btnSil);
+            else
+                Functions.GeneralFunctions.ButtonEnabledDurumu(btnYeni, btnKaydet, btnGerial, btnSil, OldEntity, CurrentEntity,
+                     TableValueChanged());
+
+        }
+        protected override bool BagliTabloKaydet()
+        {
+            if (_bilgiNotlariTable != null && !_bilgiNotlariTable.Kaydet()) return false;
+
+            return true;
+        }
+        protected override void Control_SelectedPageChanged(object sender, SelectedPageChangedEventArgs e)
+        {
+            if (e.Page == pageGenelBilgiler)
+            {
+                txtCariAdi.Focus();
+                txtKimlikNo.SelectAll();
+            }
+
+            else if (e.Page == pageNotlar)
+            {
+                if (pageNotlar.Controls.Count == 0)
+                {
+                    _bilgiNotlariTable = new BilgiNotlariTable().AddTable(this);
+                    pageNotlar.Controls.Add(_bilgiNotlariTable);
+                    _bilgiNotlariTable.Yukle();
+
+                }
+
+                _bilgiNotlariTable.Tablo.GridControl.Focus();
             }
         }
     }
