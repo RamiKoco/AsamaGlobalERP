@@ -1,5 +1,6 @@
 ﻿using AbcYazilim.OgrenciTakip.Model.Attributes;
 using AbcYazilim.OgrenciTakip.Model.Entities.Base;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -11,7 +12,7 @@ namespace AbcYazilim.OgrenciTakip.Model.Entities.CariEntity.CariSube
         public override string Kod { get; set; }
 
         [Required, StringLength(50), ZorunluAlan("Cari Şube", "txtCariSube")]
-        public string CariSubeAdi { get; set; }    
+        public string CariSubeAdi { get; set; }
         public long CarilerId { get; set; }
         public long? OzelKod1Id { get; set; }
         public long? OzelKod2Id { get; set; }
@@ -21,5 +22,10 @@ namespace AbcYazilim.OgrenciTakip.Model.Entities.CariEntity.CariSube
         public Cariler Cariler { get; set; }
         public OzelKod OzelKod1 { get; set; }
         public OzelKod OzelKod2 { get; set; }
+
+        //[InverseProperty("CariSubeler")]
+        //public ICollection<CariSubeAdres> CariSubeAdres { get; set; }
+        [InverseProperty("CariSubeler")]
+        public ICollection<CariSubeIletisim> CariSubeIletisim { get; set; }
     }
 }

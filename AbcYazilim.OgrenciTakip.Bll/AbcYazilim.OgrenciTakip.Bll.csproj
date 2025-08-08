@@ -97,6 +97,7 @@
     <Compile Include="General\CarilerBll\CariBll.cs" />
     <Compile Include="General\CarilerBll\CariIletisimBll.cs" />
     <Compile Include="General\CarilerBll\CarilerBll.cs" />
+    <Compile Include="General\CarilerBll\CariSubeBll\CariSubeIletisimBll.cs" />
     <Compile Include="General\CarilerBll\CariSubeBll\CariSubelerBll.cs" />
     <Compile Include="General\DepartmanBll.cs" />
     <Compile Include="General\DonemBll.cs" />

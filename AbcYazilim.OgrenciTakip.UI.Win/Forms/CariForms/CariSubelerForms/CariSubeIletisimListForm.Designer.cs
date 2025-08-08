@@ -1,6 +1,6 @@
-﻿namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.PersonelForms
+﻿namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.CariForms.CariSubelerForms
 {
-    partial class PersonelIletisimListForm
+    partial class CariSubeIletisimListForm
     {
             /// <summary>
             /// Required designer variable.
@@ -28,7 +28,7 @@
             /// </summary>
             private void InitializeComponent()
             {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PersonelIletisimListForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CariSubeIletisimListForm));
             this.longNavigator = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Navigators.LongNavigator();
             this.grid = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridControl();
             this.tablo = new AbcYazilim.OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridView();
@@ -167,7 +167,7 @@
             this.tablo.StatusBarAciklama = null;
             this.tablo.StatusBarKisaYol = null;
             this.tablo.StatusBarKisaYolAciklama = null;
-            this.tablo.ViewCaption = "Personel İletişm Kartları";
+            this.tablo.ViewCaption = "Cari-Şube İletişm Kartları";
             // 
             // colIletisimTuru
             // 
@@ -232,6 +232,8 @@
             // 
             // colNumara
             // 
+            this.colNumara.AppearanceCell.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
+            this.colNumara.AppearanceCell.Options.UseFont = true;
             this.colNumara.AppearanceCell.Options.UseTextOptions = true;
             this.colNumara.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colNumara.Caption = "Numara";
@@ -444,7 +446,7 @@
             this.gridBand4.VisibleIndex = 4;
             this.gridBand4.Width = 300;
             // 
-            // PersonelIletisimListForm
+            // CariSubeIletisimListForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -452,8 +454,8 @@
             this.Controls.Add(this.grid);
             this.Controls.Add(this.longNavigator);
             this.IconOptions.ShowIcon = false;
-            this.Name = "PersonelIletisimListForm";
-            this.Text = "Personel İletişim Kartları";
+            this.Name = "CariSubeIletisimListForm";
+            this.Text = "Cari-Şube İletişim Kartları";
             this.Controls.SetChildIndex(this.ribbonControl, 0);
             this.Controls.SetChildIndex(this.longNavigator, 0);
             this.Controls.SetChildIndex(this.grid, 0);

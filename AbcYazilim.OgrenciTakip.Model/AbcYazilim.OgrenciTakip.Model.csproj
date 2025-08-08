@@ -96,6 +96,7 @@
     <Compile Include="Dto\CariDto\CariDto.cs" />
     <Compile Include="Dto\CariDto\CariIletisimDto.cs" />
     <Compile Include="Dto\CariDto\CarilerDto.cs" />
+    <Compile Include="Dto\CariDto\CariSubeDto\CariSubeIletisimDto.cs" />
     <Compile Include="Dto\CariDto\CariSubeDto\CariSubelerDto.cs" />
     <Compile Include="Dto\EposBilgileriDto.cs" />
     <Compile Include="Dto\EtiketDto.cs" />
@@ -155,6 +156,7 @@
     <Compile Include="Entities\CariEntity\CariAdres.cs" />
     <Compile Include="Entities\CariEntity\CariIletisim.cs" />
     <Compile Include="Entities\CariEntity\Cariler.cs" />
+    <Compile Include="Entities\CariEntity\CariSube\CariSubeIletisim.cs" />
     <Compile Include="Entities\CariEntity\CariSube\CariSubeler.cs" />
     <Compile Include="Entities\Departman.cs" />
     <Compile Include="Entities\DonemParametre.cs" />
