@@ -198,21 +198,21 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AbcYazilim.Dal\AbcYazilim.Dal.csproj">
+    <ProjectReference Include="..\AbcYazilim.Dal\AsamaGlobal.Dal.csproj">
       <Project>{1230B10B-2823-4613-8690-B8764A838C5A}</Project>
-      <Name>AbcYazilim.Dal</Name>
+      <Name>AsamaGlobal.Dal</Name>
     </ProjectReference>
-    <ProjectReference Include="..\AbcYazilim.OgrenciTakip.Common\AbcYazilim.OgrenciTakip.Common.csproj">
+    <ProjectReference Include="..\AbcYazilim.OgrenciTakip.Common\AsamaGlobal.ERP.Common.csproj">
       <Project>{1F1D308C-664F-4D6D-9821-1CAE074855F8}</Project>
-      <Name>AbcYazilim.OgrenciTakip.Common</Name>
+      <Name>AsamaGlobal.ERP.Common</Name>
     </ProjectReference>
-    <ProjectReference Include="..\AbcYazilim.OgrenciTakip.Data\AbcYazilim.OgrenciTakip.Data.csproj">
+    <ProjectReference Include="..\AbcYazilim.OgrenciTakip.Data\AsamaGlobal.ERP.Data.csproj">
       <Project>{a802b8f3-b36b-4780-b069-c9740dbf65dd}</Project>
-      <Name>AbcYazilim.OgrenciTakip.Data</Name>
+      <Name>AsamaGlobal.ERP.Data</Name>
     </ProjectReference>
-    <ProjectReference Include="..\AbcYazilim.OgrenciTakip.Model\AbcYazilim.OgrenciTakip.Model.csproj">
+    <ProjectReference Include="..\AbcYazilim.OgrenciTakip.Model\AsamaGlobal.ERP.Model.csproj">
       <Project>{BB5EAA8A-8D31-4C9E-B408-31B57EF0E8C5}</Project>
-      <Name>AbcYazilim.OgrenciTakip.Model</Name>
+      <Name>AsamaGlobal.ERP.Model</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

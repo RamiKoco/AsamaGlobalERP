@@ -260,9 +260,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AbcYazilim.OgrenciTakip.Common\AbcYazilim.OgrenciTakip.Common.csproj">
+    <ProjectReference Include="..\AbcYazilim.OgrenciTakip.Common\AsamaGlobal.ERP.Common.csproj">
       <Project>{1F1D308C-664F-4D6D-9821-1CAE074855F8}</Project>
-      <Name>AbcYazilim.OgrenciTakip.Common</Name>
+      <Name>AsamaGlobal.ERP.Common</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

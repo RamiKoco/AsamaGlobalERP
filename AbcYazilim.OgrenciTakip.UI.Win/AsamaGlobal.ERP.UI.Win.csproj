@@ -2574,21 +2574,21 @@
     <None Include="Resources\article_32x32.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AbcYazilim.OgrenciTakip.Bll\AbcYazilim.OgrenciTakip.Bll.csproj">
+    <ProjectReference Include="..\AbcYazilim.OgrenciTakip.Bll\AsamaGlobal.ERP.Bll.csproj">
       <Project>{0D2B8A32-0177-4693-B3F2-56F8EDE45F51}</Project>
-      <Name>AbcYazilim.OgrenciTakip.Bll</Name>
+      <Name>AsamaGlobal.ERP.Bll</Name>
     </ProjectReference>
-    <ProjectReference Include="..\AbcYazilim.OgrenciTakip.Common\AbcYazilim.OgrenciTakip.Common.csproj">
+    <ProjectReference Include="..\AbcYazilim.OgrenciTakip.Common\AsamaGlobal.ERP.Common.csproj">
       <Project>{1F1D308C-664F-4D6D-9821-1CAE074855F8}</Project>
-      <Name>AbcYazilim.OgrenciTakip.Common</Name>
+      <Name>AsamaGlobal.ERP.Common</Name>
     </ProjectReference>
-    <ProjectReference Include="..\AbcYazilim.OgrenciTakip.Data\AbcYazilim.OgrenciTakip.Data.csproj">
+    <ProjectReference Include="..\AbcYazilim.OgrenciTakip.Data\AsamaGlobal.ERP.Data.csproj">
       <Project>{A802B8F3-B36B-4780-B069-C9740DBF65DD}</Project>
-      <Name>AbcYazilim.OgrenciTakip.Data</Name>
+      <Name>AsamaGlobal.ERP.Data</Name>
     </ProjectReference>
-    <ProjectReference Include="..\AbcYazilim.OgrenciTakip.Model\AbcYazilim.OgrenciTakip.Model.csproj">
+    <ProjectReference Include="..\AbcYazilim.OgrenciTakip.Model\AsamaGlobal.ERP.Model.csproj">
       <Project>{BB5EAA8A-8D31-4C9E-B408-31B57EF0E8C5}</Project>
-      <Name>AbcYazilim.OgrenciTakip.Model</Name>
+      <Name>AsamaGlobal.ERP.Model</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

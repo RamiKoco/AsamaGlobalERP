@@ -232,9 +232,9 @@
     <None Include="Resources\coordination_16x16.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AbcYazilim.OgrenciTakip.UI.Win\AbcYazilim.OgrenciTakip.UI.Win.csproj">
+    <ProjectReference Include="..\AbcYazilim.OgrenciTakip.UI.Win\AsamaGlobal.ERP.UI.Win.csproj">
       <Project>{EA68AA16-C501-4B84-AA4A-C516A43803E1}</Project>
-      <Name>AbcYazilim.OgrenciTakip.UI.Win</Name>
+      <Name>AsamaGlobal.ERP.UI.Win</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
