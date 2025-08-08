@@ -57,11 +57,11 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.CariSubelerForms
             var entity = Tablo.GetRow<CariSubelerL>();
             if (entity == null) return;
 
-            //if (barItem == btnAdresKartlari)
-            //{
-            //    ShowListForms<CariSubeAdresListForm>.ShowListForm(KartTuru.CariSubeAdres, entity.Id, entity.CariSubeAdi);
-            //}
-            if (barItem == btnIletisimKartlari)
+            if (barItem == btnAdresKartlari)
+            {
+                ShowListForms<CariSubeAdresListForm>.ShowListForm(KartTuru.CariSubeAdres, entity.Id, entity.CariSubeAdi);
+            }
+            else if (barItem == btnIletisimKartlari)
             {
                 ShowListForms<CariSubeIletisimListForm>.ShowListForm(KartTuru.CariSubeIletisim, entity.Id, entity.CariSubeAdi);
             }

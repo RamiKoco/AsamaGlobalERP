@@ -23,8 +23,8 @@ namespace AbcYazilim.OgrenciTakip.Model.Entities.CariEntity.CariSube
         public OzelKod OzelKod1 { get; set; }
         public OzelKod OzelKod2 { get; set; }
 
-        //[InverseProperty("CariSubeler")]
-        //public ICollection<CariSubeAdres> CariSubeAdres { get; set; }
+        [InverseProperty("CariSubeler")]
+        public ICollection<CariSubeAdres> CariSubeAdres { get; set; }
         [InverseProperty("CariSubeler")]
         public ICollection<CariSubeIletisim> CariSubeIletisim { get; set; }
     }

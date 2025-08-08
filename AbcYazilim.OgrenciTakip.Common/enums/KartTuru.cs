@@ -222,5 +222,7 @@ namespace AbcYazilim.OgrenciTakip.Common.Enums
         CariAdres = 108,
         [Description("Cari-Şube İletişim Kartı")]
         CariSubeIletisim = 109,
+        [Description("Cari-Şube Adres Kartı")]
+        CariSubeAdres = 110,
     }
 }
