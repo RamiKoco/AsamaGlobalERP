@@ -2,13 +2,15 @@
 using AbcYazilim.OgrenciTakip.Model.Entities;
 using AsamaGlobal.ERP.Model.Attributes;
 using AsamaGlobal.ERP.Model.Entities.Base;
+using AsamaGlobal.ERP.Model.Entities.KisiEntity;
+using AsamaGlobal.ERP.Model.Entities.PersonelEntity;
 using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace AsamaGlobal.ERP.Model.Entities.Kisi
+namespace AsamaGlobal.ERP.Model.Entities
 {
-    public class KisiIletisim : BaseEntityDurum
+    public class GenelIletisim : BaseEntityDurum
     {
         [Index("IX_Kod", IsUnique = false)]
         public override string Kod { get; set; }

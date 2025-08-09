@@ -3,7 +3,7 @@ using AsamaGlobal.ERP.Bll.General.KisiBll;
 using AsamaGlobal.ERP.Common.Enums;
 using AsamaGlobal.ERP.Common.Functions;
 using AsamaGlobal.ERP.Model.Dto.KisiDto;
-using AsamaGlobal.ERP.Model.Entities.Kisi;
+using AsamaGlobal.ERP.Model.Entities.KisiEntity;
 using AsamaGlobal.ERP.UI.Win.Forms.BaseForms;
 using AsamaGlobal.ERP.UI.Win.Functions;
 using DevExpress.XtraEditors;

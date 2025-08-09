@@ -214,5 +214,7 @@ namespace AsamaGlobal.ERP.Common.Enums
         CariSubeAdres = 104,
         [Description("Cari-Şube İletişim Kartı")]
         CariSubeIletisim = 105,
+        [Description("Genel İletişim Kartı")]
+        GenelIletisim = 106,
     }
 }

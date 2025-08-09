@@ -76,6 +76,7 @@
     <Compile Include="Dto\EvrakBilgileriDto.cs" />
     <Compile Include="Dto\FaturaDto.cs" />
     <Compile Include="Dto\GecikmeAciklamalariDto.cs" />
+    <Compile Include="Dto\GenelIletisimDto.cs" />
     <Compile Include="Dto\GeriOdemeBilgileriDto.cs" />
     <Compile Include="Dto\HizmetBilgileriDto.cs" />
     <Compile Include="Dto\HizmetDto.cs" />
@@ -155,6 +156,7 @@
     <Compile Include="Entities\EvrakBilgileri.cs" />
     <Compile Include="Entities\Fatura.cs" />
     <Compile Include="Entities\Filtre.cs" />
+    <Compile Include="Entities\GenelIletisim.cs" />
     <Compile Include="Entities\GeriOdemeBilgileri.cs" />
     <Compile Include="Entities\Gorev.cs" />
     <Compile Include="Entities\Hizmet.cs" />
@@ -176,10 +178,10 @@
     <Compile Include="Entities\Kasa.cs" />
     <Compile Include="Entities\KayitKaynak.cs" />
     <Compile Include="Entities\KimlikTuru.cs" />
-    <Compile Include="Entities\Kisi\Kisi.cs" />
-    <Compile Include="Entities\Kisi\KisiAdres.cs" />
-    <Compile Include="Entities\Kisi\KisiGrubu.cs" />
-    <Compile Include="Entities\Kisi\KisiIletisim.cs" />
+    <Compile Include="Entities\KisiEntity\Kisi.cs" />
+    <Compile Include="Entities\KisiEntity\KisiAdres.cs" />
+    <Compile Include="Entities\KisiEntity\KisiGrubu.cs" />
+    <Compile Include="Entities\KisiEntity\KisiIletisim.cs" />
     <Compile Include="Entities\Kontenjan.cs" />
     <Compile Include="Entities\Kullanici.cs" />
     <Compile Include="Entities\KullaniciBirimYetkileri.cs" />

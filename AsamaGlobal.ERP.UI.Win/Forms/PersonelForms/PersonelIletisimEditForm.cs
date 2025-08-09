@@ -1,9 +1,12 @@
 ﻿using AbcYazilim.OgrenciTakip.Common.Enums;
+using AsamaGlobal.ERP.Bll.General;
 using AsamaGlobal.ERP.Bll.General.PersonelBll;
 using AsamaGlobal.ERP.Common.Enums;
 using AsamaGlobal.ERP.Common.Functions;
+using AsamaGlobal.ERP.Model.Dto;
 using AsamaGlobal.ERP.Model.Dto.KisiDto;
 using AsamaGlobal.ERP.Model.Dto.PersonelDto;
+using AsamaGlobal.ERP.Model.Entities;
 using AsamaGlobal.ERP.Model.Entities.PersonelEntity;
 using AsamaGlobal.ERP.UI.Win.Forms.BaseForms;
 using AsamaGlobal.ERP.UI.Win.Functions;
@@ -144,13 +147,9 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.PersonelForms
         protected internal override void ButonEnabledDurumu()
         {
             if (!IsLoaded) return;
-
             base.ButonEnabledDurumu();
-
             if (txtIletisimTurleri.EditValue == null) return;
-
             IletisimTuru iletisimTuru;
-
             try
             {
                 iletisimTuru = EnumFunctions.GetValueFromDescription<IletisimTuru>(txtIletisimTurleri.EditValue.ToString());
@@ -159,15 +158,11 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.PersonelForms
             {
                 return;
             }
-
-
         }
         private void SetKanallarByIletisimTuru(IletisimTuru tur)
         {
             txtKanallar.Properties.Items.Clear();
-
             ICollection<string> kanalListesi;
-
             switch (tur)
             {
                 case IletisimTuru.Telefon:
@@ -180,12 +175,10 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.PersonelForms
                     kanalListesi = new List<string>();
                     break;
             }
-
             foreach (var item in kanalListesi)
             {
                 txtKanallar.Properties.Items.Add(new CheckedListBoxItem(item));
             }
-
             txtKanallar.SetEditValue(null); // önceki seçimleri temizle
         }
         private void TxtIletisimTurleri_EditValueChanged(object sender, EventArgs e)

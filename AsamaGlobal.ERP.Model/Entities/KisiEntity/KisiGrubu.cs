@@ -3,7 +3,7 @@ using AsamaGlobal.ERP.Model.Entities.Base;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace AsamaGlobal.ERP.Model.Entities.Kisi
+namespace AsamaGlobal.ERP.Model.Entities.KisiEntity
 {
     public class KisiGrubu : BaseEntityDurum
     {

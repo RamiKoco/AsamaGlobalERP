@@ -5,7 +5,7 @@ using AsamaGlobal.ERP.Common.Enums;
 using AsamaGlobal.ERP.Model.Dto;
 using AsamaGlobal.ERP.Model.Dto.PersonelDto;
 using AsamaGlobal.ERP.Model.Entities;
-using AsamaGlobal.ERP.Model.Entities.Kisi;
+using AsamaGlobal.ERP.Model.Entities.KisiEntity;
 using AsamaGlobal.ERP.UI.Win.Forms.AdresTurleriForms;
 using AsamaGlobal.ERP.UI.Win.Forms.AvukatForms;
 using AsamaGlobal.ERP.UI.Win.Forms.BankaForms;
