@@ -1,5 +1,4 @@
-﻿using AbcYazilim.OgrenciTakip.Bll.General;
-using AbcYazilim.OgrenciTakip.Model.Dto.IletisimlerDto;
+﻿using AbcYazilim.OgrenciTakip.Model.Dto.IletisimlerDto;
 using AsamaGlobal.ERP.Common.Message;
 using AsamaGlobal.ERP.UI.Win.Functions;
 using AsamaGlobal.ERP.UI.Win.UserControls.UserControl.Base;

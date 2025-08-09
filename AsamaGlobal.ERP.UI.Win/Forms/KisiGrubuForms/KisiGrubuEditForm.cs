@@ -1,6 +1,4 @@
-﻿using AbcYazilim.OgrenciTakip.Bll.General;
-using AbcYazilim.OgrenciTakip.Model.Entities;
-using AsamaGlobal.ERP.Bll.General.KisiBll;
+﻿using AsamaGlobal.ERP.Bll.General.KisiBll;
 using AsamaGlobal.ERP.Common.Enums;
 using AsamaGlobal.ERP.Model.Entities.Kisi;
 using AsamaGlobal.ERP.UI.Win.Forms.BaseForms;

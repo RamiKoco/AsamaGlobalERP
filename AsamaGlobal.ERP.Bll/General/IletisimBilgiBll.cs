@@ -8,10 +8,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
-using AbcYazilim.OgrenciTakip.Bll.General;
-using AbcYazilim;
-using AbcYazilim.OgrenciTakip;
-using AbcYazilim.OgrenciTakip.Bll;
 
 namespace AsamaGlobal.ERP.Bll.General
 {

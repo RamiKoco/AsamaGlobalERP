@@ -1,5 +1,4 @@
-﻿using AbcYazilim.OgrenciTakip.Bll.General;
-using AbcYazilim.OgrenciTakip.Model.Entities;
+﻿using AbcYazilim.OgrenciTakip.Model.Entities;
 using AsamaGlobal.ERP.Bll.General.CarilerBll;
 using AsamaGlobal.ERP.Common.Enums;
 using AsamaGlobal.ERP.Common.Message;
@@ -15,12 +14,6 @@ using DevExpress.XtraEditors;
 using System;
 using System.ComponentModel;
 using System.Linq;
-using AsamaGlobal.ERP.UI.Win.Forms.CariForms;
-using AsamaGlobal;
-using AsamaGlobal.ERP;
-using AsamaGlobal.ERP.UI;
-using AsamaGlobal.ERP.UI.Win;
-using AsamaGlobal.ERP.UI.Win.Forms;
 
 namespace AsamaGlobal.ERP.UI.Win.Forms.CariForms.CarilerForms
 {

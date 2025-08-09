@@ -1,5 +1,4 @@
-﻿using AbcYazilim.OgrenciTakip.Bll.General;
-using AbcYazilim.OgrenciTakip.Model.Dto;
+﻿using AbcYazilim.OgrenciTakip.Model.Dto;
 using AsamaGlobal.ERP.Common.Enums;
 using AsamaGlobal.ERP.Common.Message;
 using AsamaGlobal.ERP.UI.Win.Forms.KisiForms;

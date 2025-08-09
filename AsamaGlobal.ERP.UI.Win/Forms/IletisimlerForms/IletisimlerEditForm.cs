@@ -1,12 +1,10 @@
-﻿using AbcYazilim.OgrenciTakip.Bll.General;
-using AbcYazilim.OgrenciTakip.Common.Enums;
+﻿using AbcYazilim.OgrenciTakip.Common.Enums;
 using AbcYazilim.OgrenciTakip.Model.Dto.IletisimlerDto;
 using AbcYazilim.OgrenciTakip.Model.Entities;
 using AsamaGlobal.ERP.Common.Enums;
 using AsamaGlobal.ERP.Common.Functions;
 using AsamaGlobal.ERP.Common.Message;
 using AsamaGlobal.ERP.Data.Contexts;
-using AsamaGlobal.ERP.Model.Entities;
 using AsamaGlobal.ERP.UI.Win.Forms.BaseForms;
 using AsamaGlobal.ERP.UI.Win.Functions;
 using DevExpress.XtraEditors;
