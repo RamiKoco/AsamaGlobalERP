@@ -49,7 +49,7 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.PersonelForms
 
             else if (barItem == btnIletisimKartlari)
             {
-                ShowListForms<PersonelIletisimListForm>.ShowListForm(KartTuru.PersonelIletisim, entity.Id, entity.Ad);
+                ShowListForms<GenelIletisimListForm>.ShowListForm(KartTuru.GenelIletisim, entity.Id, entity.Ad);
             }
             else if (barItem == btnAdresKartlari)
             {

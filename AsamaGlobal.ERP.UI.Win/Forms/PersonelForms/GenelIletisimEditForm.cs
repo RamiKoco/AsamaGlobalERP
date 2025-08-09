@@ -13,20 +13,19 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace AsamaGlobal.ERP.UI.Win.Forms.KisiForms
+namespace AsamaGlobal.ERP.UI.Win.Forms.PersonelForms
 {
     public partial class GenelIletisimEditForm : BaseEditForm
     {
         #region Variables
-        private readonly long _kisiId;
-        private readonly string _kisiAdi;
-        private int? _kisId;
+        private readonly long _personelId;
+        private readonly string _personelAdi;    
         #endregion
         public GenelIletisimEditForm(params object[] prm)
         {
             InitializeComponent();
-            _kisiId = (long)prm[0];
-            _kisiAdi = prm[1].ToString();
+            _personelId = (long)prm[0];
+            _personelAdi = prm[1].ToString();
 
             DataLayoutControl = myDataLayoutControl;
             Bll = new GenelIletisimBll(myDataLayoutControl);
@@ -45,14 +44,14 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.KisiForms
         {
             OldEntity = BaseIslemTuru == IslemTuru.EntityInsert ? new GenelIletisimS() : ((GenelIletisimBll)Bll).Single(FilterFunctions.Filter<GenelIletisim>(Id));
             NesneyiKontrollereBagla();
-            Text = Text + $" - ( {_kisiAdi} )";
+            Text = Text + $" - ( {_personelAdi} )";
 
             if (BaseIslemTuru != IslemTuru.EntityInsert) return;
             Id = BaseIslemTuru.IdOlustur(OldEntity);
-            txtKod.Text = ((GenelIletisimBll)Bll).YeniKodVer(x => x.KisiId == _kisiId);
+            txtKod.Text = ((GenelIletisimBll)Bll).YeniKodVer(x => x.PersonelId == _personelId);
             txtBaslik.Focus();
         }
-      
+
         protected override void NesneyiKontrollereBagla()
         {
 
@@ -60,7 +59,7 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.KisiForms
             txtKod.Text = entity.Kod;
             txtBaslik.Text = entity.Baslik;
             txtIletisimTurleri.EditValue = entity.IletisimTuru.ToName();
-            entity.KayitTuru = KayitTuru.Kisi;
+            entity.KayitTuru = KayitTuru.Personel;
             //entity.KisiId = _kisId;
             txtKayitHesabi.Text = entity.KayitHesabiAdi;
             txtKanallar.SetEditValue(entity.Kanallar);
@@ -114,7 +113,7 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.KisiForms
                 Baslik = txtBaslik.Text,
                 Oncelik = (short)txtOncelik.Value,
                 Web = txtWeb.Text,
-                KayitTuru = KayitTuru.Kisi,
+                KayitTuru = KayitTuru.Personel,
                 IletisimTuru = txtIletisimTurleri.Text.GetEnum<IletisimTuru>(),
                 IzinDurumu = txtIzinDurumu.Text.GetEnum<IletisimDurumu>(),
                 Kanallar = txtKanallar.EditValue?.ToString(),
@@ -132,7 +131,7 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.KisiForms
                 SIPKullaniciAdi = txtSIPKullaniciAdi.Text,
                 SosyalMedyaUrl = txtSosyalMedyaUrl.Text,
                 SosyalMedyaPlatformuId = txtSosyalMedyaPlatformu.Id,
-                KisiId = BaseIslemTuru == IslemTuru.EntityInsert ? _kisiId : ((GenelIletisimS)OldEntity).KisiId,
+                PersonelId = BaseIslemTuru == IslemTuru.EntityInsert ? _personelId : ((GenelIletisimS)OldEntity).PersonelId,
                 OzelKod1Id = txtOzelKod1.Id,
                 OzelKod2Id = txtOzelKod2.Id,
                 Aciklama = txtAciklama.Text,
@@ -361,11 +360,11 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.KisiForms
         }
         protected override bool EntityInsert()
         {
-            return ((GenelIletisimBll)Bll).Insert(CurrentEntity, x => x.Kod == CurrentEntity.Kod && x.KisiId == _kisiId);
+            return ((GenelIletisimBll)Bll).Insert(CurrentEntity, x => x.Kod == CurrentEntity.Kod && x.PersonelId == _personelId);
         }
         protected override bool EntityUpdate()
         {
-            return ((GenelIletisimBll)Bll).Update(OldEntity, CurrentEntity, x => x.Kod == CurrentEntity.Kod && x.KisiId == _kisiId);
+            return ((GenelIletisimBll)Bll).Update(OldEntity, CurrentEntity, x => x.Kod == CurrentEntity.Kod && x.PersonelId == _personelId);
         }
         protected override void SecimYap(object sender)
         {

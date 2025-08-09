@@ -23,6 +23,7 @@ namespace AsamaGlobal.ERP.Bll.General
 
                 Id = x.Id,
                 Kod = x.Kod,
+                KayitTuru = x.KayitTuru,
                 IletisimTuru = x.IletisimTuru,
                 IzinDurumu = x.IzinDurumu,
                 IletisimKanalTipi = x.IletisimKanalTipi,
@@ -63,6 +64,7 @@ namespace AsamaGlobal.ERP.Bll.General
                 Id = x.Id,
                 Kod = x.Kod,
                 Baslik = x.Baslik,
+                KayitTuru = x.KayitTuru,
                 IletisimTuru = x.IletisimTuru,
                 UlkeKodu = x.UlkeKodu,
                 Numara = x.Numara,

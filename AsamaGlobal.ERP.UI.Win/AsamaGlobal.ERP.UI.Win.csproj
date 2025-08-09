@@ -807,6 +807,18 @@
     <Compile Include="Forms\OzelKodForms\OzelKodListForm.Designer.cs">
       <DependentUpon>OzelKodListForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\PersonelForms\GenelIletisimEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PersonelForms\GenelIletisimEditForm.Designer.cs">
+      <DependentUpon>GenelIletisimEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PersonelForms\GenelIletisimListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PersonelForms\GenelIletisimListForm.Designer.cs">
+      <DependentUpon>GenelIletisimListForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\PersonelForms\PersonelAdresEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1946,6 +1958,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\OzelKodForms\OzelKodListForm.resx">
       <DependentUpon>OzelKodListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PersonelForms\GenelIletisimEditForm.resx">
+      <DependentUpon>GenelIletisimEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PersonelForms\GenelIletisimListForm.resx">
+      <DependentUpon>GenelIletisimListForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\PersonelForms\PersonelAdresEditForm.resx">
       <DependentUpon>PersonelAdresEditForm.cs</DependentUpon>

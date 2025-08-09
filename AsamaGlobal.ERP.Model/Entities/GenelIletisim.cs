@@ -16,6 +16,7 @@ namespace AsamaGlobal.ERP.Model.Entities
         public override string Kod { get; set; }
         [Required, StringLength(30), ZorunluAlan("Baslik", "txtBaslik")]
         public string Baslik { get; set; }
+        public KayitTuru KayitTuru { get; set; }
         public IletisimTuru IletisimTuru { get; set; } = IletisimTuru.Telefon;
         public IletisimDurumu IzinDurumu { get; set; } = IletisimDurumu.Belirtilmedi;
         public IletisimKanalTipi IletisimKanalTipi { get; set; } = IletisimKanalTipi.Arama;
@@ -48,7 +49,8 @@ namespace AsamaGlobal.ERP.Model.Entities
 
         [StringLength(50)]
         public string Web { get; set; }
-        public long KisiId { get; set; }
+        public long? KisiId { get; set; }
+        public long? PersonelId { get; set; }
         public long? SosyalMedyaPlatformuId { get; set; }
         public long? OzelKod1Id { get; set; }
         public long? OzelKod2Id { get; set; }
@@ -57,6 +59,7 @@ namespace AsamaGlobal.ERP.Model.Entities
         public string Aciklama { get; set; }
 
         public Kisi Kisi { get; set; }
+        public Personel Personel { get; set; }
         public SosyalMedyaPlatformu SosyalMedyaPlatformu { get; set; }
         public OzelKod OzelKod1 { get; set; }
         public OzelKod OzelKod2 { get; set; }
