@@ -57,9 +57,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+=======
+>>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
     <ProjectReference Include="..\AsamaGlobal.ERP.Common\AsamaGlobal.ERP.Common.csproj">
       <Project>{1f1d308c-664f-4d6d-9821-1cae074855f8}</Project>
       <Name>AsamaGlobal.ERP.Common</Name>

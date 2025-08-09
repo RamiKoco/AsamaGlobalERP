@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 ﻿namespace AsamaGlobal.ERP.UI.Win.Reports.XtraReports.Tahakkuk
+=======
+﻿namespace AbcYazilim.OgrenciTakip.UI.Win.Reports.XtraReports.Tahakkuk
+>>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
 {
     partial class IndirimDilekcesiRaporu
     {
@@ -110,7 +114,11 @@
             // 
             this.xrLabel5.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[VeliBilgileri].[AdiSoyadi]")});
+<<<<<<< HEAD
             this.xrLabel5.Font = new DevExpress.Drawing.DXFont("Arial", 9.75F, DevExpress.Drawing.DXFontStyle.Bold);
+=======
+            this.xrLabel5.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
+>>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrLabel5.LocationFloat = new DevExpress.Utils.PointFloat(452.0833F, 167.7917F);
             this.xrLabel5.Multiline = true;
             this.xrLabel5.Name = "xrLabel5";
@@ -125,7 +133,11 @@
             // 
             this.xrLabel4.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[KayitTarihi]")});
+<<<<<<< HEAD
             this.xrLabel4.Font = new DevExpress.Drawing.DXFont("Arial", 9.75F, DevExpress.Drawing.DXFontStyle.Bold);
+=======
+            this.xrLabel4.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
+>>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrLabel4.LocationFloat = new DevExpress.Utils.PointFloat(452.0833F, 144.7917F);
             this.xrLabel4.Multiline = true;
             this.xrLabel4.Name = "xrLabel4";
@@ -148,7 +160,11 @@
             // 
             // xrLabel2
             // 
+<<<<<<< HEAD
             this.xrLabel2.Font = new DevExpress.Drawing.DXFont("Arial", 9.75F, DevExpress.Drawing.DXFontStyle.Bold);
+=======
+            this.xrLabel2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
+>>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrLabel2.LocationFloat = new DevExpress.Utils.PointFloat(0F, 22.99999F);
             this.xrLabel2.Multiline = true;
             this.xrLabel2.Name = "xrLabel2";
@@ -163,7 +179,11 @@
             // 
             this.xrLabel1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[SubeAdi]")});
+<<<<<<< HEAD
             this.xrLabel1.Font = new DevExpress.Drawing.DXFont("Arial", 9.75F, DevExpress.Drawing.DXFontStyle.Bold);
+=======
+            this.xrLabel1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
+>>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.xrLabel1.Multiline = true;
             this.xrLabel1.Name = "xrLabel1";
@@ -175,7 +195,11 @@
             // 
             // Ogrenci_Bilgileri
             // 
+<<<<<<< HEAD
             this.Ogrenci_Bilgileri.DataSource = typeof(AsamaGlobal.ERP.Model.Dto.OgrenciR);
+=======
+            this.Ogrenci_Bilgileri.DataSource = typeof(AbcYazilim.OgrenciTakip.Model.Dto.OgrenciR);
+>>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.Ogrenci_Bilgileri.Name = "Ogrenci_Bilgileri";
             // 
             // DetailReportIndirimBilgileri
@@ -199,7 +223,11 @@
             // 
             this.xrTable1.BackColor = System.Drawing.Color.Transparent;
             this.xrTable1.Borders = DevExpress.XtraPrinting.BorderSide.None;
+<<<<<<< HEAD
             this.xrTable1.Font = new DevExpress.Drawing.DXFont("Arial", 8F, DevExpress.Drawing.DXFontStyle.Bold);
+=======
+            this.xrTable1.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold);
+>>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrTable1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.xrTable1.Name = "xrTable1";
             this.xrTable1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -217,7 +245,11 @@
             this.xrTableRow1.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
             this.xrTableCell1,
             this.xrTableCell2});
+<<<<<<< HEAD
             this.xrTableRow1.Font = new DevExpress.Drawing.DXFont("Arial", 10F, DevExpress.Drawing.DXFontStyle.Bold);
+=======
+            this.xrTableRow1.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
+>>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrTableRow1.Name = "xrTableRow1";
             this.xrTableRow1.StylePriority.UseFont = false;
             this.xrTableRow1.Weight = 1.4716981091334662D;
@@ -264,7 +296,11 @@
             // 
             this.xrTable4.BackColor = System.Drawing.Color.Gainsboro;
             this.xrTable4.Borders = DevExpress.XtraPrinting.BorderSide.None;
+<<<<<<< HEAD
             this.xrTable4.Font = new DevExpress.Drawing.DXFont("Arial", 8F, DevExpress.Drawing.DXFontStyle.Bold);
+=======
+            this.xrTable4.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold);
+>>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrTable4.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.xrTable4.Name = "xrTable4";
             this.xrTable4.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -282,7 +318,11 @@
             this.xrTableRow12.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
             this.xrTableCell48,
             this.xrTableCell51});
+<<<<<<< HEAD
             this.xrTableRow12.Font = new DevExpress.Drawing.DXFont("Arial", 10F, DevExpress.Drawing.DXFontStyle.Bold);
+=======
+            this.xrTableRow12.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
+>>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrTableRow12.Name = "xrTableRow12";
             this.xrTableRow12.StylePriority.UseFont = false;
             this.xrTableRow12.Weight = 1.4716981091334662D;
@@ -378,7 +418,11 @@
             // 
             this.xrTable3.BackColor = System.Drawing.Color.Gainsboro;
             this.xrTable3.Borders = DevExpress.XtraPrinting.BorderSide.None;
+<<<<<<< HEAD
             this.xrTable3.Font = new DevExpress.Drawing.DXFont("Arial", 8F, DevExpress.Drawing.DXFontStyle.Bold);
+=======
+            this.xrTable3.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold);
+>>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrTable3.LocationFloat = new DevExpress.Utils.PointFloat(0F, 51.99998F);
             this.xrTable3.Name = "xrTable3";
             this.xrTable3.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -395,7 +439,11 @@
             // 
             this.xrTableRow3.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
             this.xrTableCell5});
+<<<<<<< HEAD
             this.xrTableRow3.Font = new DevExpress.Drawing.DXFont("Arial", 10F, DevExpress.Drawing.DXFontStyle.Bold);
+=======
+            this.xrTableRow3.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
+>>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrTableRow3.Name = "xrTableRow3";
             this.xrTableRow3.StylePriority.UseFont = false;
             this.xrTableRow3.Weight = 1.4716981091334662D;
@@ -415,7 +463,11 @@
             // 
             this.xrTable2.BackColor = System.Drawing.Color.Gainsboro;
             this.xrTable2.Borders = DevExpress.XtraPrinting.BorderSide.None;
+<<<<<<< HEAD
             this.xrTable2.Font = new DevExpress.Drawing.DXFont("Arial", 8F, DevExpress.Drawing.DXFontStyle.Bold);
+=======
+            this.xrTable2.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold);
+>>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrTable2.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.xrTable2.Name = "xrTable2";
             this.xrTable2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -433,7 +485,11 @@
             this.xrTableRow2.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
             this.xrTableCell3,
             this.xrTableCell4});
+<<<<<<< HEAD
             this.xrTableRow2.Font = new DevExpress.Drawing.DXFont("Arial", 10F, DevExpress.Drawing.DXFontStyle.Bold);
+=======
+            this.xrTableRow2.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
+>>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrTableRow2.Name = "xrTableRow2";
             this.xrTableRow2.StylePriority.UseFont = false;
             this.xrTableRow2.Weight = 1.4716981091334662D;
@@ -470,7 +526,11 @@
             // 
             // Indirim_Bilgileri
             // 
+<<<<<<< HEAD
             this.Indirim_Bilgileri.DataSource = typeof(AsamaGlobal.ERP.Model.Dto.IndirimBilgileriR);
+=======
+            this.Indirim_Bilgileri.DataSource = typeof(AbcYazilim.OgrenciTakip.Model.Dto.IndirimBilgileriR);
+>>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.Indirim_Bilgileri.Name = "Indirim_Bilgileri";
             // 
             // IndirimDilekcesiRaporu
@@ -485,8 +545,13 @@
             this.Ogrenci_Bilgileri,
             this.Indirim_Bilgileri});
             this.DataSource = this.Ogrenci_Bilgileri;
+<<<<<<< HEAD
             this.Font = new DevExpress.Drawing.DXFont("Arial", 9.75F);
             this.Margins = new DevExpress.Drawing.DXMargins(100, 100, 200, 44);
+=======
+            this.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.Margins = new System.Drawing.Printing.Margins(100, 100, 200, 44);
+>>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.Version = "22.1";
             ((System.ComponentModel.ISupportInitialize)(this.Ogrenci_Bilgileri)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).EndInit();

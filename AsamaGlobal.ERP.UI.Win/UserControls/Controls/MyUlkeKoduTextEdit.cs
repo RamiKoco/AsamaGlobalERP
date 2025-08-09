@@ -1,9 +1,15 @@
 ﻿using DevExpress.Utils;
 using DevExpress.XtraEditors.Mask;
+<<<<<<< HEAD
 using System;
 using System.ComponentModel;
 
 namespace AsamaGlobal.ERP.UI.Win.UserControls.Controls
+=======
+using System.ComponentModel;
+
+namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls
+>>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
 {
     [ToolboxItem(true)]
     public class MyUlkeKoduTextEdit : MyTextEdit
@@ -11,6 +17,7 @@ namespace AsamaGlobal.ERP.UI.Win.UserControls.Controls
         public MyUlkeKoduTextEdit()
         {
             Properties.Appearance.TextOptions.HAlignment = HorzAlignment.Center;
+<<<<<<< HEAD
             //Properties.Mask.MaskType = MaskType.Regular;            
             //Properties.Mask.EditMask = @"\+\d?\d?\d?";
             //Properties.Mask.AutoComplete = AutoCompleteType.None;         
@@ -31,6 +38,13 @@ namespace AsamaGlobal.ERP.UI.Win.UserControls.Controls
             {
                 BeginInvoke(new Action(() => this.Select(1, 0)));
             };
+=======
+            Properties.Mask.MaskType = MaskType.Regular;
+            Properties.Mask.PlaceHolder = ' ';
+            Properties.Mask.EditMask = @"\+\d?\d?\d?";
+            Properties.Mask.AutoComplete = AutoCompleteType.None;
+            StatusBarAciklama = "Ülke Kodu Giriniz.";
+>>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
         }
     }
 }

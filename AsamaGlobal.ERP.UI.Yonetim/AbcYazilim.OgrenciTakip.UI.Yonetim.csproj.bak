@@ -203,7 +203,11 @@
     <None Include="Resources\coordination_16x16.png" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<<< HEAD:AsamaGlobal.ERP.UI.Yonetim/AbcYazilim.OgrenciTakip.UI.Yonetim.csproj.bak
     <ProjectReference Include="..\AbcYazilim.OgrenciTakip.UI.Win\AbcYazilim.OgrenciTakip.UI.Win.csproj">
+========
+    <ProjectReference Include="..\AsamaGlobal.ERP.UI.Win\AsamaGlobal.ERP.UI.Win.csproj">
+>>>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec:AsamaGlobal.ERP.UI.Yonetim/AsamaGlobal.ERP.UI.Yonetim.csproj
       <Project>{EA68AA16-C501-4B84-AA4A-C516A43803E1}</Project>
       <Name>AbcYazilim.OgrenciTakip.UI.Win</Name>
     </ProjectReference>

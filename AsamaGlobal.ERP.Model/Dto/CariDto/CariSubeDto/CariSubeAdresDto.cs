@@ -1,4 +1,5 @@
 ﻿using AbcYazilim.OgrenciTakip.Common.Enums;
+<<<<<<< HEAD
 using AsamaGlobal.ERP.Model.Entities.Base;
 using AsamaGlobal.ERP.Model.Entities.CariEntity.CariSube;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -7,6 +8,17 @@ namespace AsamaGlobal.ERP.Model.Dto.CariDto.CariSubeDto
 {
     [NotMapped]
     public class CariSubeAdresS: CariSubeAdres
+=======
+using AbcYazilim.OgrenciTakip.Model.Entities.Base;
+using AbcYazilim.OgrenciTakip.Model.Entities.CariEntity.CariSube;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace AbcYazilim.OgrenciTakip.Model.Dto.CariDto.CariSubeDto
+{
+
+    [NotMapped]
+    public class CariSubeAdresS : CariSubeAdres
+>>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
     {
         public string AdresTurleriAdi { get; set; }
         public string UlkeAdi { get; set; }
@@ -15,7 +27,11 @@ namespace AsamaGlobal.ERP.Model.Dto.CariDto.CariSubeDto
         public string OzelKod1Adi { get; set; }
         public string OzelKod2Adi { get; set; }
     }
+<<<<<<< HEAD
     public class CariSubeAdresL: BaseEntity
+=======
+    public class CariSubeAdresL : BaseEntity
+>>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
     {
         public string UlkeAdi { get; set; }
         public string IlAdi { get; set; }

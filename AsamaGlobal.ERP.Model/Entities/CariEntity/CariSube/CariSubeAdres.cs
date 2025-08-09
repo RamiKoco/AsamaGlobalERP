@@ -1,4 +1,5 @@
 ﻿using AbcYazilim.OgrenciTakip.Common.Enums;
+<<<<<<< HEAD
 using AbcYazilim.OgrenciTakip.Model.Entities;
 using AsamaGlobal.ERP.Model.Attributes;
 using AsamaGlobal.ERP.Model.Entities.Base;
@@ -6,6 +7,14 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace AsamaGlobal.ERP.Model.Entities.CariEntity.CariSube
+=======
+using AbcYazilim.OgrenciTakip.Model.Attributes;
+using AbcYazilim.OgrenciTakip.Model.Entities.Base;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace AbcYazilim.OgrenciTakip.Model.Entities.CariEntity.CariSube
+>>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
 {
     public class CariSubeAdres : BaseEntityDurum
     {

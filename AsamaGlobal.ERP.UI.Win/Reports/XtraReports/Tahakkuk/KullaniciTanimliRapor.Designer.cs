@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 ﻿namespace AsamaGlobal.ERP.UI.Win.Reports.XtraReports.Tahakkuk
+=======
+﻿namespace AbcYazilim.OgrenciTakip.UI.Win.Reports.XtraReports.Tahakkuk
+>>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
 {
     partial class KullaniciTanimliRapor
     {
@@ -62,37 +66,65 @@
             // 
             // Epos_Bilgileri
             // 
+<<<<<<< HEAD
             this.Epos_Bilgileri.DataSource = typeof(AsamaGlobal.ERP.Model.Dto.EposBilgileriR);
+=======
+            this.Epos_Bilgileri.DataSource = typeof(AbcYazilim.OgrenciTakip.Model.Dto.EposBilgileriR);
+>>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.Epos_Bilgileri.Name = "Epos_Bilgileri";
             // 
             // Geri_Odeme_Bilgileri
             // 
+<<<<<<< HEAD
             this.Geri_Odeme_Bilgileri.DataSource = typeof(AsamaGlobal.ERP.Model.Dto.GeriOdemeBilgileriR);
+=======
+            this.Geri_Odeme_Bilgileri.DataSource = typeof(AbcYazilim.OgrenciTakip.Model.Dto.GeriOdemeBilgileriR);
+>>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.Geri_Odeme_Bilgileri.Name = "Geri_Odeme_Bilgileri";
             // 
             // Hizmet_Bilgileri
             // 
+<<<<<<< HEAD
             this.Hizmet_Bilgileri.DataSource = typeof(AsamaGlobal.ERP.Model.Dto.HizmetBilgileriR);
+=======
+            this.Hizmet_Bilgileri.DataSource = typeof(AbcYazilim.OgrenciTakip.Model.Dto.HizmetBilgileriR);
+>>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.Hizmet_Bilgileri.Name = "Hizmet_Bilgileri";
             // 
             // Iletisim_Bilgileri
             // 
+<<<<<<< HEAD
             this.Iletisim_Bilgileri.DataSource = typeof(AsamaGlobal.ERP.Model.Dto.IletisimBilgileriR);
+=======
+            this.Iletisim_Bilgileri.DataSource = typeof(AbcYazilim.OgrenciTakip.Model.Dto.IletisimBilgileriR);
+>>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.Iletisim_Bilgileri.Name = "Iletisim_Bilgileri";
             // 
             // Indirim_Bilgileri
             // 
+<<<<<<< HEAD
             this.Indirim_Bilgileri.DataSource = typeof(AsamaGlobal.ERP.Model.Dto.IndirimBilgileriR);
+=======
+            this.Indirim_Bilgileri.DataSource = typeof(AbcYazilim.OgrenciTakip.Model.Dto.IndirimBilgileriR);
+>>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.Indirim_Bilgileri.Name = "Indirim_Bilgileri";
             // 
             // Odeme_Bilgileri
             // 
+<<<<<<< HEAD
             this.Odeme_Bilgileri.DataSource = typeof(AsamaGlobal.ERP.Model.Dto.OdemeBilgileriR);
+=======
+            this.Odeme_Bilgileri.DataSource = typeof(AbcYazilim.OgrenciTakip.Model.Dto.OdemeBilgileriR);
+>>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.Odeme_Bilgileri.Name = "Odeme_Bilgileri";
             // 
             // Ogrenci_Bilgileri
             // 
+<<<<<<< HEAD
             this.Ogrenci_Bilgileri.DataSource = typeof(AsamaGlobal.ERP.Model.Dto.OgrenciR);
+=======
+            this.Ogrenci_Bilgileri.DataSource = typeof(AbcYazilim.OgrenciTakip.Model.Dto.OgrenciR);
+>>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.Ogrenci_Bilgileri.Name = "Ogrenci_Bilgileri";
             // 
             // KullaniciTanimliRapor
@@ -111,7 +143,11 @@
             this.Odeme_Bilgileri,
             this.Ogrenci_Bilgileri});
             this.DataSource = this.Ogrenci_Bilgileri;
+<<<<<<< HEAD
             this.Font = new DevExpress.Drawing.DXFont("Arial", 9.75F);
+=======
+            this.Font = new System.Drawing.Font("Arial", 9.75F);
+>>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.Version = "22.1";
             ((System.ComponentModel.ISupportInitialize)(this.Epos_Bilgileri)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Geri_Odeme_Bilgileri)).EndInit();

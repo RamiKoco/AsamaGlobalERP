@@ -177,6 +177,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -186,6 +187,14 @@
     </ProjectReference>
     <ProjectReference Include="..\AsamaGlobal.ERP.Common\AsamaGlobal.ERP.Common.csproj">
       <Project>{1f1d308c-664f-4d6d-9821-1cae074855f8}</Project>
+=======
+    <ProjectReference Include="..\AsamaGlobal.Dal\AsamaGlobal.Dal.csproj">
+      <Project>{1230B10B-2823-4613-8690-B8764A838C5A}</Project>
+      <Name>AsamaGlobal.Dal</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AsamaGlobal.ERP.Common\AsamaGlobal.ERP.Common.csproj">
+      <Project>{1F1D308C-664F-4D6D-9821-1CAE074855F8}</Project>
+>>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
       <Name>AsamaGlobal.ERP.Common</Name>
     </ProjectReference>
     <ProjectReference Include="..\AsamaGlobal.ERP.Data\AsamaGlobal.ERP.Data.csproj">
@@ -193,7 +202,11 @@
       <Name>AsamaGlobal.ERP.Data</Name>
     </ProjectReference>
     <ProjectReference Include="..\AsamaGlobal.ERP.Model\AsamaGlobal.ERP.Model.csproj">
+<<<<<<< HEAD
       <Project>{bb5eaa8a-8d31-4c9e-b408-31b57ef0e8c5}</Project>
+=======
+      <Project>{BB5EAA8A-8D31-4C9E-B408-31B57EF0E8C5}</Project>
+>>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
       <Name>AsamaGlobal.ERP.Model</Name>
     </ProjectReference>
   </ItemGroup>

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 ﻿namespace AsamaGlobal.ERP.UI.Win.UserControls.UserControl.KisiEditFormTable
+=======
+﻿namespace AsamaGlobal.ERP.UI.Win.UserControls.UserControl.CariSubelerEditFormTable
+>>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
 {
     partial class BilgiNotlariTable
     {
@@ -34,7 +38,10 @@
             this.repositoryTarih = new DevExpress.XtraEditors.Repository.RepositoryItemDateEdit();
             this.colBilgiNotu = new AsamaGlobal.ERP.UI.Win.UserControls.Grid.MyGridColumn();
             this.repositoryNot = new DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit();
+<<<<<<< HEAD
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu)).BeginInit();
+=======
+>>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             ((System.ComponentModel.ISupportInitialize)(this.grid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryTarih)).BeginInit();
@@ -102,7 +109,10 @@
             this.colTarih.ColumnEdit = this.repositoryTarih;
             this.colTarih.FieldName = "Tarih";
             this.colTarih.Name = "colTarih";
+<<<<<<< HEAD
             this.colTarih.OptionsColumn.AllowEdit = false;
+=======
+>>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.colTarih.OptionsColumn.FixedWidth = true;
             this.colTarih.OptionsFilter.AllowAutoFilter = false;
             this.colTarih.OptionsFilter.AllowFilter = false;
@@ -125,7 +135,10 @@
             this.repositoryTarih.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.repositoryTarih.EditFormat.FormatString = "G";
             this.repositoryTarih.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+<<<<<<< HEAD
             this.repositoryTarih.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTimeAdvancingCaret;
+=======
+>>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.repositoryTarih.MaskSettings.Set("useAdvancingCaret", true);
             this.repositoryTarih.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.DateTimeMaskManager));
             this.repositoryTarih.Name = "repositoryTarih";
@@ -160,7 +173,10 @@
             this.Size = new System.Drawing.Size(774, 396);
             this.Controls.SetChildIndex(this.insUptNavigator, 0);
             this.Controls.SetChildIndex(this.grid, 0);
+<<<<<<< HEAD
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu)).EndInit();
+=======
+>>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             ((System.ComponentModel.ISupportInitialize)(this.grid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryTarih.CalendarTimeProperties)).EndInit();
