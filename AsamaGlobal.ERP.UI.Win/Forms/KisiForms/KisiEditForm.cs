@@ -9,7 +9,7 @@ using AsamaGlobal.ERP.Common.Functions;
 using AsamaGlobal.ERP.Common.Message;
 using AsamaGlobal.ERP.Data.Contexts;
 using AsamaGlobal.ERP.Model.Entities.Base.Interfaces;
-using AsamaGlobal.ERP.Model.Entities.Kisi;
+using AsamaGlobal.ERP.Model.Entities.KisiEntity;
 using AsamaGlobal.ERP.UI.Win.Forms.BaseForms;
 using AsamaGlobal.ERP.UI.Win.Functions;
 using AsamaGlobal.ERP.UI.Win.UserControls.UserControl.Base;

@@ -3,7 +3,7 @@ using AsamaGlobal.ERP.Bll.Interfaces;
 using AsamaGlobal.ERP.Common.Enums;
 using AsamaGlobal.ERP.Model.Dto.KisiDto;
 using AsamaGlobal.ERP.Model.Entities.Base;
-using AsamaGlobal.ERP.Model.Entities.Kisi;
+using AsamaGlobal.ERP.Model.Entities.KisiEntity;
 using System;
 using System.Collections.Generic;
 using System.Linq;

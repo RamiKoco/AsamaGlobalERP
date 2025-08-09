@@ -1,10 +1,10 @@
 ﻿using AbcYazilim.OgrenciTakip.Common.Enums;
-using AsamaGlobal.ERP.Bll.General.KisiBll;
+using AsamaGlobal.ERP.Bll.General;
 using AsamaGlobal.ERP.Common.Enums;
 using AsamaGlobal.ERP.Common.Functions;
 using AsamaGlobal.ERP.Data.Contexts;
-using AsamaGlobal.ERP.Model.Dto.KisiDto;
-using AsamaGlobal.ERP.Model.Entities.KisiEntity;
+using AsamaGlobal.ERP.Model.Dto;
+using AsamaGlobal.ERP.Model.Entities;
 using AsamaGlobal.ERP.UI.Win.Forms.BaseForms;
 using AsamaGlobal.ERP.UI.Win.Functions;
 using DevExpress.XtraEditors;
@@ -15,50 +15,47 @@ using System.Linq;
 
 namespace AsamaGlobal.ERP.UI.Win.Forms.KisiForms
 {
-    public partial class KisiIletisimEditForm : BaseEditForm
+    public partial class IletisimTestEditForm : BaseEditForm
     {
         #region Variables
         private readonly long _kisiId;
         private readonly string _kisiAdi;
         #endregion
-        public KisiIletisimEditForm(params object[] prm)
+        public IletisimTestEditForm(params object[] prm)
         {
             InitializeComponent();
-
             _kisiId = (long)prm[0];
             _kisiAdi = prm[1].ToString();
 
             DataLayoutControl = myDataLayoutControl;
-            Bll = new KisiIletisimBll(myDataLayoutControl);
+            Bll = new IletisimTestBll(myDataLayoutControl);
             txtIletisimTurleri.Properties.Items.AddRange(EnumFunctions.GetEnumDescriptionList<IletisimTuru>());
             txtIzinDurumu.Properties.Items.AddRange(EnumFunctions.GetEnumDescriptionList<IletisimDurumu>());
             txtKanallar.Properties.Items.AddRange(EnumFunctions.GetEnumDescriptionList<IletisimKanalTipi>()
                         .Cast<string>()
                         .Select(x => new CheckedListBoxItem(x))
                         .ToArray());
-            BaseKartTuru = KartTuru.KisiIletisim;
+            BaseKartTuru = KartTuru.IletisimTest;
             txtIletisimTurleri.EditValueChanged += TxtIletisimTurleri_EditValueChanged;
             tglVoip.EditValueChanged += tglVoip_EditValueChanged;
             EventsLoad();
         }
-
         public override void Yukle()
         {
-            OldEntity = BaseIslemTuru == IslemTuru.EntityInsert ? new KisiIletisimS() : ((KisiIletisimBll)Bll).Single(FilterFunctions.Filter<KisiIletisim>(Id));
+            OldEntity = BaseIslemTuru == IslemTuru.EntityInsert ? new IletisimTestS() : ((IletisimTestBll)Bll).Single(FilterFunctions.Filter<IletisimTest>(Id));
             NesneyiKontrollereBagla();
             Text = Text + $" - ( {_kisiAdi} )";
 
             if (BaseIslemTuru != IslemTuru.EntityInsert) return;
             Id = BaseIslemTuru.IdOlustur(OldEntity);
-            txtKod.Text = ((KisiIletisimBll)Bll).YeniKodVer(x => x.KisiId == _kisiId);
+            txtKod.Text = ((IletisimTestBll)Bll).YeniKodVer(x => x.KisiId == _kisiId);
             txtBaslik.Focus();
         }
         protected override void NesneyiKontrollereBagla()
         {
-          
-            var entity = (KisiIletisimS)OldEntity;
+            var entity = (IletisimTestS)OldEntity;
             txtKod.Text = entity.Kod;
-            txtBaslik.Text = entity.Baslik;        
+            txtBaslik.Text = entity.Baslik;
             txtIletisimTurleri.EditValue = entity.IletisimTuru.ToName();
             txtKanallar.SetEditValue(entity.Kanallar);
             txtIzinDurumu.SelectedItem = entity.IzinDurumu.ToName();
@@ -83,12 +80,12 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.KisiForms
             tglVarsayilanYap.IsOn = entity.VarsayilanYap;
             tglVoip.IsOn = entity.VoipMi;
             tglDurum.IsOn = entity.Durum;
-            tglVarsayilanYap.IsOn = entity.VarsayilanYap;        
+            tglVarsayilanYap.IsOn = entity.VarsayilanYap;
             ButonEnabledDurumu();
         }
         protected override void GuncelNesneOlustur()
         {
-            var eskiEntity = OldEntity as KisiIletisimS; // Burada cast ediyoruz.
+            var eskiEntity = OldEntity as IletisimTestS; // Burada cast ediyoruz.
 
             var kanalListesi = (txtKanallar.EditValue?.ToString() ?? "")
                                .Split(new[] { ',', ';' }, StringSplitOptions.RemoveEmptyEntries)
@@ -104,11 +101,11 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.KisiForms
             bool yeniSms = kanalListesi.Any() ? kanalListesi.Contains("SMS") : eskiSms;
             bool yeniWhatsapp = kanalListesi.Any() ? kanalListesi.Contains("Whatsapp") : eskiWhatsapp;
             bool yeniEposta = kanalListesi.Any() ? kanalListesi.Contains("E-Posta") : eskiEposta;
-            CurrentEntity = new KisiIletisim
+            CurrentEntity = new IletisimTest
             {
                 Id = Id,
                 Kod = txtKod.Text,
-                Baslik = txtBaslik.Text,               
+                Baslik = txtBaslik.Text,
                 Oncelik = (short)txtOncelik.Value,
                 Web = txtWeb.Text,
                 IletisimTuru = txtIletisimTurleri.Text.GetEnum<IletisimTuru>(),
@@ -128,7 +125,7 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.KisiForms
                 SIPKullaniciAdi = txtSIPKullaniciAdi.Text,
                 SosyalMedyaUrl = txtSosyalMedyaUrl.Text,
                 SosyalMedyaPlatformuId = txtSosyalMedyaPlatformu.Id,
-                KisiId = BaseIslemTuru == IslemTuru.EntityInsert ? _kisiId : ((KisiIletisimS)OldEntity).KisiId,
+                KisiId = BaseIslemTuru == IslemTuru.EntityInsert ? _kisiId : ((IletisimTestS)OldEntity).KisiId,
                 OzelKod1Id = txtOzelKod1.Id,
                 OzelKod2Id = txtOzelKod2.Id,
                 Aciklama = txtAciklama.Text,
@@ -152,18 +149,16 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.KisiForms
             }
             ButonEnabledDurumu();
         }
-
         private void tglVoip_EditValueChanged(object sender, EventArgs e)
         {
             bool isVoip = Convert.ToBoolean(tglVoip.EditValue);
-
             txtSIPKullaniciAdi.Enabled = isVoip;
             txtSIPServer.Enabled = isVoip;
         }
         protected internal override void ButonEnabledDurumu()
         {
             if (!IsLoaded) return;
-            base.ButonEnabledDurumu();  
+            base.ButonEnabledDurumu();
             if (txtIletisimTurleri.EditValue == null) return;
             IletisimTuru iletisimTuru;
 
@@ -174,14 +169,12 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.KisiForms
             catch
             {
                 return;
-            }  
+            }
         }
         private void SetKanallarByIletisimTuru(IletisimTuru tur)
         {
             txtKanallar.Properties.Items.Clear();
-
             ICollection<string> kanalListesi;
-
             switch (tur)
             {
                 case IletisimTuru.Telefon:
@@ -194,20 +187,16 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.KisiForms
                     kanalListesi = new List<string>();
                     break;
             }
-
             foreach (var item in kanalListesi)
             {
                 txtKanallar.Properties.Items.Add(new CheckedListBoxItem(item));
             }
-
             txtKanallar.SetEditValue(null); // önceki seçimleri temizle
         }
         private void TxtIletisimTurleri_EditValueChanged(object sender, EventArgs e)
         {
             if (txtIletisimTurleri.EditValue == null) return;
-
             IletisimTuru iletisimTuru;
-
             try
             {
                 iletisimTuru = EnumFunctions.GetValueFromDescription<IletisimTuru>(txtIletisimTurleri.EditValue.ToString());
@@ -216,7 +205,6 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.KisiForms
             {
                 return;
             }
-
             txtUlkeKodu.Enabled = true;
             txtTelefonVeFax.Enabled = true;
             txtDahili.Enabled = true;
@@ -229,7 +217,7 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.KisiForms
             txtSIPServer.Enabled = true;
             tglVoip.Enabled = true;
             txtIzinDurumu.Enabled = true;
-            txtIzinTarihi.Enabled = true;           
+            txtIzinTarihi.Enabled = true;
             txtKanallar.Enabled = true;
             tglVoip.Enabled = true;
             txtSIPServer.Enabled = true;
@@ -289,7 +277,7 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.KisiForms
                     txtEPosta.Enabled = false;
                     txtEPosta.Text = "";
                     txtKanallar.Enabled = false;
-                    txtKanallar.Text = "";                
+                    txtKanallar.Text = "";
                     txtIzinDurumu.Enabled = false;
                     txtIzinDurumu.Text = null;
                     txtIzinTarihi.Enabled = false;
@@ -319,7 +307,7 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.KisiForms
                     txtEPosta.Enabled = false;
                     txtEPosta.Text = "";
                     txtKanallar.Enabled = false;
-                    txtKanallar.Text = "";                 
+                    txtKanallar.Text = "";
                     txtWeb.Enabled = false;
                     txtWeb.Text = "";
                     tglVoip.EditValue = false;
@@ -340,7 +328,7 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.KisiForms
                     txtIzinDurumu.Enabled = false;
                     txtIzinDurumu.Text = null;
                     txtIzinTarihi.Enabled = false;
-                    txtIzinTarihi.Text = null;                   
+                    txtIzinTarihi.Text = null;
                     txtWeb.Enabled = false;
                     txtWeb.Text = "";
                     txtSosyalMedyaPlatformu.Enabled = false;
@@ -357,16 +345,15 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.KisiForms
                     txtSIPServer.Enabled = Convert.ToBoolean(tglVoip.EditValue);
                     txtSIPServer.Text = "";
                     break;
-                   
             }
         }
         protected override bool EntityInsert()
         {
-            return ((KisiIletisimBll)Bll).Insert(CurrentEntity, x => x.Kod == CurrentEntity.Kod && x.KisiId == _kisiId);
+            return ((IletisimTestBll)Bll).Insert(CurrentEntity, x => x.Kod == CurrentEntity.Kod && x.KisiId == _kisiId);
         }
         protected override bool EntityUpdate()
         {
-            return ((KisiIletisimBll)Bll).Update(OldEntity, CurrentEntity, x => x.Kod == CurrentEntity.Kod && x.KisiId == _kisiId);
+            return ((IletisimTestBll)Bll).Update(OldEntity, CurrentEntity, x => x.Kod == CurrentEntity.Kod && x.KisiId == _kisiId);
         }
         protected override void SecimYap(object sender)
         {
@@ -374,9 +361,9 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.KisiForms
 
             using (var sec = new SelectFunctions())
                 if (sender == txtOzelKod1)
-                    sec.Sec(txtOzelKod1, KartTuru.KisiIletisim);
+                    sec.Sec(txtOzelKod1, KartTuru.IletisimTest);
                 else if (sender == txtOzelKod2)
-                    sec.Sec(txtOzelKod2, KartTuru.KisiIletisim);
+                    sec.Sec(txtOzelKod2, KartTuru.IletisimTest);
                 else if (sender == txtSosyalMedyaPlatformu)
                     sec.Sec(txtSosyalMedyaPlatformu, KartTuru.SosyalMedyaPlatformu);
         }

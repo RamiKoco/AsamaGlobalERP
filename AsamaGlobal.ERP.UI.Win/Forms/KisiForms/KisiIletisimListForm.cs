@@ -21,7 +21,7 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.KisiForms
             _kisiId = (long)prm[0];
             _kisiAdi = prm[1].ToString();
 
-            view = grid.MainView as DevExpress.XtraGrid.Views.BandedGrid.BandedGridView;
+            //view = grid.MainView as DevExpress.XtraGrid.Views.BandedGrid.BandedGridView;
             //if (view != null)
             //    //view.RowCellStyle += View_RowCellStyle;
         }

@@ -9,7 +9,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace AsamaGlobal.ERP.Model.Entities.Kisi
+namespace AsamaGlobal.ERP.Model.Entities.KisiEntity
 {
     public class Kisi : BaseEntityDurum
     {
@@ -48,6 +48,8 @@ namespace AsamaGlobal.ERP.Model.Entities.Kisi
         public ICollection<KisiAdres> KisiAdres { get; set; }
 
         [InverseProperty("Kisi")]
-        public ICollection<KisiIletisim> KisiIletisim { get; set; }
+        //public ICollection<KisiIletisim> KisiIletisim { get; set; }
+        //[InverseProperty("Kisi")]
+        public ICollection<IletisimTest> IletisimTest { get; set; }
     }
 }

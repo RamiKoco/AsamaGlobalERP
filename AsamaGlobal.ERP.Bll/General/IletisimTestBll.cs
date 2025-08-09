@@ -1,24 +1,24 @@
 ﻿using AsamaGlobal.ERP.Bll.Base;
 using AsamaGlobal.ERP.Bll.Interfaces;
 using AsamaGlobal.ERP.Common.Enums;
-using AsamaGlobal.ERP.Model.Dto.KisiDto;
+using AsamaGlobal.ERP.Model.Dto;
+using AsamaGlobal.ERP.Model.Entities;
 using AsamaGlobal.ERP.Model.Entities.Base;
-using AsamaGlobal.ERP.Model.Entities.KisiEntity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Windows.Forms;
 
-namespace AsamaGlobal.ERP.Bll.General.KisiBll
+namespace AsamaGlobal.ERP.Bll.General
 {
-    public class KisiIletisimBll : BaseGenelBll<KisiIletisim>, IBaseGenelBll, IBaseCommonBll
+    public class IletisimTestBll : BaseGenelBll<IletisimTest>, IBaseGenelBll, IBaseCommonBll
     {
-        public KisiIletisimBll() : base(KartTuru.KisiIletisim) { }
-        public KisiIletisimBll(Control ctrl) : base(ctrl, KartTuru.KisiIletisim) { }
-        public override BaseEntity Single(Expression<Func<KisiIletisim, bool>> filter)
+        public IletisimTestBll() : base(KartTuru.IletisimTest) { }
+        public IletisimTestBll(Control ctrl) : base(ctrl, KartTuru.IletisimTest) { }
+        public override BaseEntity Single(Expression<Func<IletisimTest, bool>> filter)
         {
-            return BaseSingle(filter, x => new KisiIletisimS
+            return BaseSingle(filter, x => new IletisimTestS
             {
 
                 Id = x.Id,
@@ -27,9 +27,9 @@ namespace AsamaGlobal.ERP.Bll.General.KisiBll
                 IzinDurumu = x.IzinDurumu,
                 IletisimKanalTipi = x.IletisimKanalTipi,
                 Kanallar = x.Kanallar,
-                Arama=x.Arama,
-                Sms=x.Sms,
-                Whatsapp=x.Whatsapp,
+                Arama = x.Arama,
+                Sms = x.Sms,
+                Whatsapp = x.Whatsapp,
                 EPBool = x.EPBool,
                 VarsayilanYap = x.VarsayilanYap,
                 Baslik = x.Baslik,
@@ -56,9 +56,9 @@ namespace AsamaGlobal.ERP.Bll.General.KisiBll
                 Durum = x.Durum
             });
         }
-        public override IEnumerable<BaseEntity> List(Expression<Func<KisiIletisim, bool>> filter)
+        public override IEnumerable<BaseEntity> List(Expression<Func<IletisimTest, bool>> filter)
         {
-            return BaseList(filter, x => new KisiIletisimL
+            return BaseList(filter, x => new IletisimTestL
             {
                 Id = x.Id,
                 Kod = x.Kod,

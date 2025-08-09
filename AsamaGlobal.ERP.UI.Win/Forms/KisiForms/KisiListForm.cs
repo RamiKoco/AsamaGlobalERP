@@ -1,7 +1,7 @@
 ﻿using AbcYazilim.OgrenciTakip.Model.Dto.KisiDto;
 using AsamaGlobal.ERP.Bll.General.KisiBll;
 using AsamaGlobal.ERP.Common.Enums;
-using AsamaGlobal.ERP.Model.Entities.Kisi;
+using AsamaGlobal.ERP.Model.Entities.KisiEntity;
 using AsamaGlobal.ERP.UI.Win.Forms.BaseForms;
 using AsamaGlobal.ERP.UI.Win.Functions;
 using AsamaGlobal.ERP.UI.Win.Show;
@@ -48,7 +48,7 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.KisiForms
 
             if (barItem == btnIletisimKartlari)
             {
-                ShowListForms<KisiIletisimListForm>.ShowListForm(KartTuru.KisiIletisim, entity.Id, entity.Ad);
+                ShowListForms<IletisimTestListForm>.ShowListForm(KartTuru.IletisimTest, entity.Id, entity.Ad);
             }
             else if (barItem == btnAdresKartlari)
             {

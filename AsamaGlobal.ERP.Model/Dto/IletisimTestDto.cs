@@ -1,25 +1,25 @@
 ﻿using AbcYazilim.OgrenciTakip.Common.Enums;
+using AsamaGlobal.ERP.Model.Entities;
 using AsamaGlobal.ERP.Model.Entities.Base;
-using AsamaGlobal.ERP.Model.Entities.KisiEntity;
 using System;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace AsamaGlobal.ERP.Model.Dto.KisiDto
+namespace AsamaGlobal.ERP.Model.Dto
 {
     [NotMapped]
-    public class KisiIletisimS : KisiIletisim
+    public class IletisimTestS: IletisimTest
     {
         public string SosyalMedyaPlatformuAdi { get; set; }
         public string OzelKod1Adi { get; set; }
         public string OzelKod2Adi { get; set; }
     }
-    public class KisiIletisimL : BaseEntity
+    public class IletisimTestL : BaseEntity
     {
         public IletisimTuru IletisimTuru { get; set; }
         public IletisimDurumu IzinDurumu { get; set; }
         public IletisimKanalTipi IletisimKanalTipi { get; set; }
         public string Baslik { get; set; }
-        public string Kanallar { get; set; }       
+        public string Kanallar { get; set; }
         public bool Arama { get; set; }
         public bool Sms { get; set; }
         public bool Whatsapp { get; set; }

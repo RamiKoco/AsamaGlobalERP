@@ -2,13 +2,13 @@
 using AbcYazilim.OgrenciTakip.Model.Entities;
 using AsamaGlobal.ERP.Model.Attributes;
 using AsamaGlobal.ERP.Model.Entities.Base;
+using AsamaGlobal.ERP.Model.Entities.KisiEntity;
 using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-
-namespace AsamaGlobal.ERP.Model.Entities.Kisi
+namespace AsamaGlobal.ERP.Model.Entities
 {
-    public class KisiIletisim : BaseEntityDurum
+    public class IletisimTest : BaseEntityDurum
     {
         [Index("IX_Kod", IsUnique = false)]
         public override string Kod { get; set; }
@@ -43,17 +43,14 @@ namespace AsamaGlobal.ERP.Model.Entities.Kisi
         public bool VoipMi { get; set; } = false;
         [Column(TypeName = "date")]
         public DateTime? IzinTarihi { get; set; }
-
         [StringLength(50)]
         public string Web { get; set; }
         public long KisiId { get; set; }
         public long? SosyalMedyaPlatformuId { get; set; }
         public long? OzelKod1Id { get; set; }
         public long? OzelKod2Id { get; set; }
-
         [StringLength(500)]
         public string Aciklama { get; set; }
-
         public Kisi Kisi { get; set; }
         public SosyalMedyaPlatformu SosyalMedyaPlatformu { get; set; }
         public OzelKod OzelKod1 { get; set; }

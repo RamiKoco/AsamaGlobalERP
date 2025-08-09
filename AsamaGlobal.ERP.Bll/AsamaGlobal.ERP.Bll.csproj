@@ -105,6 +105,7 @@
     <Compile Include="General\IletisimBilgileriBll.cs" />
     <Compile Include="General\IletisimBll.cs" />
     <Compile Include="General\IletisimlerBll.cs" />
+    <Compile Include="General\IletisimTestBll.cs" />
     <Compile Include="General\IndirimBilgileriBll.cs" />
     <Compile Include="General\IndirimBll.cs" />
     <Compile Include="General\IndirimDagilimRaporuBll.cs" />

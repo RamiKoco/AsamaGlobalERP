@@ -1,8 +1,6 @@
-﻿using AbcYazilim.OgrenciTakip.Bll.General;
-using AbcYazilim.OgrenciTakip.Model.Entities;
-using AsamaGlobal.ERP.Bll.General.KisiBll;
+﻿using AsamaGlobal.ERP.Bll.General.KisiBll;
 using AsamaGlobal.ERP.Common.Enums;
-using AsamaGlobal.ERP.Model.Entities.Kisi;
+using AsamaGlobal.ERP.Model.Entities.KisiEntity;
 using AsamaGlobal.ERP.UI.Win.Forms.BaseForms;
 using AsamaGlobal.ERP.UI.Win.Functions;
 
@@ -29,15 +27,12 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.KisiGrubuForms
             txtKod.Text = ((KisiGrubuBll)Bll).YeniKodVer();
             txtKisiGrubuAdi.Focus();
         }
-
         protected override void NesneyiKontrollereBagla()
         {
             var entity = (KisiGrubu)OldEntity;
-
             txtKod.Text = entity.Kod;
             txtKisiGrubuAdi.Text = entity.GrupAdi;
             tglDurum.IsOn = entity.Durum;
-
         }
         protected override void GuncelNesneOlustur()
         {
