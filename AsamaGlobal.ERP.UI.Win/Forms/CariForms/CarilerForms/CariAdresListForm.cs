@@ -2,8 +2,14 @@
 using AsamaGlobal.ERP.Common.Enums;
 using AsamaGlobal.ERP.UI.Win.Forms.BaseForms;
 using AsamaGlobal.ERP.UI.Win.Show;
+using AsamaGlobal.ERP.UI.Win.Forms.CariForms;
+using AsamaGlobal;
+using AsamaGlobal.ERP;
+using AsamaGlobal.ERP.UI;
+using AsamaGlobal.ERP.UI.Win;
+using AsamaGlobal.ERP.UI.Win.Forms;
 
-namespace AsamaGlobal.ERP.UI.Win.Forms.CariForms
+namespace AsamaGlobal.ERP.UI.Win.Forms.CariForms.CarilerForms
 {
     public partial class CariAdresListForm :BaseListForm
     {
@@ -32,7 +38,7 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.CariForms
         }
         protected override void ShowEditForm(long id)
         {
-            var result = ShowEditForms<CariAdresEditForm>.ShowDialogEditForm(KartTuru.CariAdres, id, _cariId, _cariAdi);
+            var result = ShowEditForms<CarilerForms.CariAdresEditForm>.ShowDialogEditForm(KartTuru.CariAdres, id, _cariId, _cariAdi);
             ShowEditFormDefault(result);
 
         }

@@ -1,4 +1,11 @@
-﻿namespace AsamaGlobal.ERP.UI.Win.Forms.CariForms
+﻿using AsamaGlobal.ERP.UI.Win.Forms.CariForms;
+using AsamaGlobal;
+using AsamaGlobal.ERP;
+using AsamaGlobal.ERP.UI;
+using AsamaGlobal.ERP.UI.Win;
+using AsamaGlobal.ERP.UI.Win.Forms;
+
+namespace AsamaGlobal.ERP.UI.Win.Forms.CariForms.CarilerForms
 {
     partial class CarilerListForm
     {
@@ -28,7 +35,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CarilerListForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CarilerForms.CarilerListForm));
             this.grid = new AsamaGlobal.ERP.UI.Win.UserControls.Grid.MyBandedGridControl();
             this.tablo = new AsamaGlobal.ERP.UI.Win.UserControls.Grid.MyBandedGridView();
             this.gridBand1 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();

@@ -1,7 +1,7 @@
 ﻿using AsamaGlobal.ERP.Bll.Base;
 using AsamaGlobal.ERP.Bll.Interfaces;
 using AsamaGlobal.ERP.Common.Enums;
-using AsamaGlobal.ERP.Model.Entities.KisiEntity;
+using AsamaGlobal.ERP.Model.Entities.Kisi;
 using System.Windows.Forms;
 
 namespace AsamaGlobal.ERP.Bll.General.KisiBll

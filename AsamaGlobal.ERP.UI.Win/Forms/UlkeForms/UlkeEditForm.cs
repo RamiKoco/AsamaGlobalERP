@@ -13,19 +13,19 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.UlkeForms
             InitializeComponent();
 
             DataLayoutControl = myDataLayoutControl;
-            Bll = new UlkeBll(myDataLayoutControl);
+            Bll = new Bll.General.UlkeBll(myDataLayoutControl);
             BaseKartTuru = KartTuru.Ulke;
             EventsLoad();
         }
 
         public override void Yukle()
         {
-            OldEntity = BaseIslemTuru == IslemTuru.EntityInsert ? new Ulke() : ((UlkeBll)Bll).Single(FilterFunctions.Filter<Ulke>(Id));
+            OldEntity = BaseIslemTuru == IslemTuru.EntityInsert ? new Ulke() : ((Bll.General.UlkeBll)Bll).Single(FilterFunctions.Filter<Ulke>(Id));
             NesneyiKontrollereBagla();
 
             if (BaseIslemTuru != IslemTuru.EntityInsert) return;
             Id = BaseIslemTuru.IdOlustur(OldEntity);
-            txtKod.Text = ((UlkeBll)Bll).YeniKodVer();
+            txtKod.Text = ((Bll.General.UlkeBll)Bll).YeniKodVer();
             txtUlkeAdi.Focus();
         }
 

@@ -12,7 +12,7 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.PozisyonForms
         public PozisyonListForm()
         {
             InitializeComponent();
-            Bll = new PozisyonBll();
+            Bll = new Bll.General.PozisyonBll();
         }
 
         protected override void DegiskenleriDoldur()
@@ -25,7 +25,7 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.PozisyonForms
 
         protected override void Listele()
         {
-            Tablo.GridControl.DataSource = ((PozisyonBll)Bll).List(FilterFunctions.Filter<Pozisyon>(AktifKartlariGoster));
+            Tablo.GridControl.DataSource = ((Bll.General.PozisyonBll)Bll).List(FilterFunctions.Filter<Pozisyon>(AktifKartlariGoster));
         }
     }
 }

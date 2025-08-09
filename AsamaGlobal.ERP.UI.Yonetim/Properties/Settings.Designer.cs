@@ -8,11 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-<<<<<<< HEAD
 namespace AsamaGlobal.ERP.UI.Yonetim.Properties {
-=======
-namespace AsamaGlobal.ERP.UI.Win.Properties {
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]

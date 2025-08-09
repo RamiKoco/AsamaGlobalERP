@@ -14,19 +14,19 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.DepartmanForms
             InitializeComponent();
 
             DataLayoutControl = myDataLayoutControl;
-            Bll = new DepartmanBll(myDataLayoutControl);
+            Bll = new Bll.General.DepartmanBll(myDataLayoutControl);
             BaseKartTuru = KartTuru.Departman;
             EventsLoad();
         }
 
         public override void Yukle()
         {
-            OldEntity = BaseIslemTuru == IslemTuru.EntityInsert ? new Departman() : ((DepartmanBll)Bll).Single(FilterFunctions.Filter<Departman>(Id));
+            OldEntity = BaseIslemTuru == IslemTuru.EntityInsert ? new Departman() : ((Bll.General.DepartmanBll)Bll).Single(FilterFunctions.Filter<Departman>(Id));
             NesneyiKontrollereBagla();
 
             if (BaseIslemTuru != IslemTuru.EntityInsert) return;
             Id = BaseIslemTuru.IdOlustur(OldEntity);
-            txtKod.Text = ((DepartmanBll)Bll).YeniKodVer();
+            txtKod.Text = ((Bll.General.DepartmanBll)Bll).YeniKodVer();
             txtDepartmanAdi.Focus();
         }
 

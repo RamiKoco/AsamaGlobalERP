@@ -14,19 +14,19 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.UyrukForms
         {
             InitializeComponent();
             DataLayoutControl = myDataLayoutControl;
-            Bll = new UyrukBll(myDataLayoutControl);
+            Bll = new Bll.General.UyrukBll(myDataLayoutControl);
             BaseKartTuru = KartTuru.Uyruk;
             EventsLoad();
         }
 
         public override void Yukle()
         {
-            OldEntity = BaseIslemTuru == IslemTuru.EntityInsert ? new UyrukS() : ((UyrukBll)Bll).Single(FilterFunctions.Filter<Uyruk>(Id));
+            OldEntity = BaseIslemTuru == IslemTuru.EntityInsert ? new UyrukS() : ((Bll.General.UyrukBll)Bll).Single(FilterFunctions.Filter<Uyruk>(Id));
             NesneyiKontrollereBagla();
             TabloYukle();
             if (BaseIslemTuru != IslemTuru.EntityInsert) return;
             Id = BaseIslemTuru.IdOlustur(OldEntity);
-            txtKod.Text = ((UyrukBll)Bll).YeniKodVer();
+            txtKod.Text = ((Bll.General.UyrukBll)Bll).YeniKodVer();
             txtUyrukAdi.Focus();
         }
 

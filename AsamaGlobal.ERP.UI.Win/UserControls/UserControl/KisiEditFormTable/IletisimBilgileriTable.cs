@@ -16,7 +16,7 @@ namespace AsamaGlobal.ERP.UI.Win.UserControls.UserControl.KisiEditFormTable
         {
             InitializeComponent();
 
-            Bll = new IletisimBilgiBll();
+            Bll = new Bll.General.IletisimBilgiBll();
             Tablo = tablo;
             EventsLoad();
             HideItems = new BarItem[] { btnBelgeHareketleri };
@@ -58,7 +58,7 @@ namespace AsamaGlobal.ERP.UI.Win.UserControls.UserControl.KisiEditFormTable
         protected internal override void Listele()
         {
 
-            var list = ((IletisimBilgiBll)Bll)
+            var list = ((Bll.General.IletisimBilgiBll)Bll)
                 .List(x => x.KisiId == OwnerForm.Id)
                 .ToBindingList<IletisimBilgiL>();
 

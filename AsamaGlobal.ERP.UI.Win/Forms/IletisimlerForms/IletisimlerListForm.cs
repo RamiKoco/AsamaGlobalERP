@@ -12,7 +12,7 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.IletisimlerForms
         public IletisimlerListForm()
         {
             InitializeComponent();
-            Bll = new IletisimlerBll();
+            Bll = new Bll.General.IletisimlerBll();
         }
         protected override void DegiskenleriDoldur()
         {
@@ -23,7 +23,7 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.IletisimlerForms
         }
         protected override void Listele()
         {
-            Tablo.GridControl.DataSource = ((IletisimlerBll)Bll).List(FilterFunctions.Filter<Iletisimler>(AktifKartlariGoster));
+            Tablo.GridControl.DataSource = ((Bll.General.IletisimlerBll)Bll).List(FilterFunctions.Filter<Iletisimler>(AktifKartlariGoster));
         }
     }
 }

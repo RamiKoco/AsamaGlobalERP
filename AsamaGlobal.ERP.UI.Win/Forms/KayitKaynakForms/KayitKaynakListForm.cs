@@ -12,7 +12,7 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.KayitKaynakForms
         public KayitKaynakListForm()
         {
             InitializeComponent();
-            Bll = new KayitKaynakBll();
+            Bll = new Bll.General.KayitKaynakBll();
         }
         protected override void DegiskenleriDoldur()
         {
@@ -23,7 +23,7 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.KayitKaynakForms
         }
         protected override void Listele()
         {
-            Tablo.GridControl.DataSource = ((KayitKaynakBll)Bll).List(FilterFunctions.Filter<KayitKaynak>(AktifKartlariGoster));
+            Tablo.GridControl.DataSource = ((Bll.General.KayitKaynakBll)Bll).List(FilterFunctions.Filter<KayitKaynak>(AktifKartlariGoster));
 
         }
     }

@@ -1,6 +1,6 @@
 ﻿using AbcYazilim.OgrenciTakip.Common.Enums;
 using AsamaGlobal.ERP.Model.Entities.Base;
-using AsamaGlobal.ERP.Model.Entities.KisiEntity;
+using AsamaGlobal.ERP.Model.Entities.Kisi;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace AsamaGlobal.ERP.Model.Dto.KisiDto

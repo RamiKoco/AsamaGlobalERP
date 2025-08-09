@@ -5,7 +5,8 @@ using AsamaGlobal.ERP.Model.Entities.Base;
 using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-namespace AsamaGlobal.ERP.Model.Entities.KisiEntity
+
+namespace AsamaGlobal.ERP.Model.Entities.Kisi
 {
     public class KisiIletisim : BaseEntityDurum
     {
@@ -49,8 +50,10 @@ namespace AsamaGlobal.ERP.Model.Entities.KisiEntity
         public long? SosyalMedyaPlatformuId { get; set; }
         public long? OzelKod1Id { get; set; }
         public long? OzelKod2Id { get; set; }
+
         [StringLength(500)]
         public string Aciklama { get; set; }
+
         public Kisi Kisi { get; set; }
         public SosyalMedyaPlatformu SosyalMedyaPlatformu { get; set; }
         public OzelKod OzelKod1 { get; set; }

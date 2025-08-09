@@ -1,29 +1,16 @@
-<<<<<<< HEAD
 ﻿using AsamaGlobal.ERP.Bll.Base;
 using AsamaGlobal.ERP.Bll.Interfaces;
 using AsamaGlobal.ERP.Common.Enums;
 using AsamaGlobal.ERP.Model.Dto.CariDto.CariSubeDto;
 using AsamaGlobal.ERP.Model.Entities.Base;
 using AsamaGlobal.ERP.Model.Entities.CariEntity.CariSube;
-=======
-﻿using AbcYazilim.OgrenciTakip.Bll.Base;
-using AbcYazilim.OgrenciTakip.Bll.Interfaces;
-using AbcYazilim.OgrenciTakip.Common.Enums;
-using AbcYazilim.OgrenciTakip.Model.Dto.CariDto.CariSubeDto;
-using AbcYazilim.OgrenciTakip.Model.Entities.Base;
-using AbcYazilim.OgrenciTakip.Model.Entities.CariEntity.CariSube;
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Windows.Forms;
 
-<<<<<<< HEAD
 namespace AsamaGlobal.ERP.Bll.General.CarilerBll.CariSubeBll
-=======
-namespace AbcYazilim.OgrenciTakip.Bll.General.CarilerBll.CariSubeBll
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
 {
     public class CariSubeAdresBll : BaseGenelBll<CariSubeAdres>, IBaseGenelBll, IBaseCommonBll
     {

@@ -17,20 +17,20 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.SosyalMedyaForms
 
 
             DataLayoutControl = myDataLayoutControl;
-            Bll = new SosyalMedyaPlatformuBll(myDataLayoutControl);
+            Bll = new Bll.General.SosyalMedyaPlatformuBll(myDataLayoutControl);
             BaseKartTuru = KartTuru.SosyalMedyaPlatformu;
             EventsLoad();
         }
 
         public override void Yukle()
         {
-            OldEntity = BaseIslemTuru == IslemTuru.EntityInsert ? new SosyalMedyaPlatformuS() : ((SosyalMedyaPlatformuBll)Bll).Single(FilterFunctions.Filter<SosyalMedyaPlatformu>(Id));
+            OldEntity = BaseIslemTuru == IslemTuru.EntityInsert ? new SosyalMedyaPlatformuS() : ((Bll.General.SosyalMedyaPlatformuBll)Bll).Single(FilterFunctions.Filter<SosyalMedyaPlatformu>(Id));
             NesneyiKontrollereBagla();
             TabloYukle();
 
             if (BaseIslemTuru != IslemTuru.EntityInsert) return;
             Id = BaseIslemTuru.IdOlustur(OldEntity);
-            txtKod.Text = ((SosyalMedyaPlatformuBll)Bll).YeniKodVer();
+            txtKod.Text = ((Bll.General.SosyalMedyaPlatformuBll)Bll).YeniKodVer();
             txtAd.Focus();
         }
 

@@ -4,14 +4,16 @@ using AsamaGlobal.ERP.Common.Enums;
 using AsamaGlobal.ERP.Common.Functions;
 using AsamaGlobal.ERP.Data.Contexts;
 using AsamaGlobal.ERP.Model.Dto.KisiDto;
-using AsamaGlobal.ERP.Model.Entities.KisiEntity;
+using AsamaGlobal.ERP.Model.Entities.Kisi;
 using AsamaGlobal.ERP.UI.Win.Forms.BaseForms;
 using AsamaGlobal.ERP.UI.Win.Functions;
 using DevExpress.XtraEditors;
 using DevExpress.XtraEditors.Controls;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
+using System.Runtime.Remoting.Contexts;
 
 namespace AsamaGlobal.ERP.UI.Win.Forms.KisiForms
 {

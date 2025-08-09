@@ -23,7 +23,7 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.IletisimlerForms
             InitializeComponent();
 
             DataLayoutControl = myDataLayoutControl;
-            Bll = new IletisimlerBll(myDataLayoutControl);
+            Bll = new Bll.General.IletisimlerBll(myDataLayoutControl);
             txtKayitTuru.Properties.Items.AddRange(EnumFunctions.GetEnumDescriptionList<KayitTuru>());
             txtIletisimTurleri.Properties.Items.AddRange(EnumFunctions.GetEnumDescriptionList<IletisimTuru>());
             txtIzinDurumu.Properties.Items.AddRange(EnumFunctions.GetEnumDescriptionList<IletisimDurumu>());
@@ -46,13 +46,13 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.IletisimlerForms
         {
             OldEntity = BaseIslemTuru == IslemTuru.EntityInsert
                 ? new IletisimlerS()
-                : ((IletisimlerBll)Bll).Single(FilterFunctions.Filter<Iletisimler>(Id));
+                : ((Bll.General.IletisimlerBll)Bll).Single(FilterFunctions.Filter<Iletisimler>(Id));
             NesneyiKontrollereBagla();
             TabloYukle();
 
             if (BaseIslemTuru != IslemTuru.EntityInsert) return;
             Id = BaseIslemTuru.IdOlustur(OldEntity);
-            txtKod.Text = ((IletisimlerBll)Bll).YeniKodVer();
+            txtKod.Text = ((Bll.General.IletisimlerBll)Bll).YeniKodVer();
             txtBaslik.Focus();
         }
 

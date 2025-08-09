@@ -15,8 +15,14 @@ using DevExpress.XtraEditors;
 using System;
 using System.ComponentModel;
 using System.Linq;
+using AsamaGlobal.ERP.UI.Win.Forms.CariForms;
+using AsamaGlobal;
+using AsamaGlobal.ERP;
+using AsamaGlobal.ERP.UI;
+using AsamaGlobal.ERP.UI.Win;
+using AsamaGlobal.ERP.UI.Win.Forms;
 
-namespace AsamaGlobal.ERP.UI.Win.Forms.CariForms
+namespace AsamaGlobal.ERP.UI.Win.Forms.CariForms.CarilerForms
 {
     public partial class CarilerEditForm : BaseEditForm
     {
@@ -126,7 +132,7 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.CariForms
 
                     if (txtKimlikTuru.Id != null)
                     {
-                        var bll = new KimlikTuruBll();
+                        var bll = new Bll.General.KimlikTuruBll();
                         var secilen = bll.Single(x => x.Id == (long)txtKimlikTuru.Id) as KimlikTuru;
                         int yeniUzunluk = secilen?.Uzunluk ?? 11;
                         string karakterTipi = secilen?.KarakterTipi;
@@ -167,7 +173,7 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.CariForms
             if (txtKimlikTuru.Id == null)
                 return;
 
-            var bll = new KimlikTuruBll();
+            var bll = new Bll.General.KimlikTuruBll();
             var secilen = bll.Single(x => x.Id == (long)txtKimlikTuru.Id) as KimlikTuru;
 
             int yeniUzunluk = secilen?.Uzunluk ?? 11;
@@ -181,7 +187,7 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.CariForms
             if (txtKimlikTuru.EditValue == null)
                 return;
 
-            var bll = new KimlikTuruBll();
+            var bll = new Bll.General.KimlikTuruBll();
 
             if (long.TryParse(txtKimlikTuru.EditValue.ToString(), out long secilenId))
             {
@@ -204,7 +210,7 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.CariForms
             if (txtKimlikTuru.Id == null)
                 return;
 
-            var bll = new KimlikTuruBll();
+            var bll = new Bll.General.KimlikTuruBll();
             var secilen = bll.Single(x => x.Id == (long)txtKimlikTuru.Id) as KimlikTuru;
 
             if (secilen == null)

@@ -9,8 +9,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Windows.Forms;
+using AsamaGlobal.ERP.Bll.General.CarilerBll;
+using AsamaGlobal;
+using AsamaGlobal.ERP;
+using AsamaGlobal.ERP.Bll;
+using AsamaGlobal.ERP.Bll.General;
 
-namespace AsamaGlobal.ERP.Bll.General.CarilerBll
+namespace AsamaGlobal.ERP.Bll.General.CarilerBll.CariSubeBll
 {
     public class CariSubelerBll : BaseGenelBll<CariSubeler>, IBaseCommonBll
     {

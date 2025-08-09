@@ -5,7 +5,7 @@ using AsamaGlobal.ERP.Model.Entities.Base;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace AsamaGlobal.ERP.Model.Entities.KisiEntity
+namespace AsamaGlobal.ERP.Model.Entities.Kisi
 {
     public class KisiAdres : BaseEntityDurum
     {

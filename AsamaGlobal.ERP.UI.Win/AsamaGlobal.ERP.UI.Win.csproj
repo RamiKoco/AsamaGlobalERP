@@ -273,23 +273,7 @@
     <Compile Include="Forms\CariForms\CarilerForms\CarilerListForm.Designer.cs">
       <DependentUpon>CarilerListForm.cs</DependentUpon>
     </Compile>
-<<<<<<< HEAD
     <Compile Include="Forms\CariForms\CariListForm.cs">
-=======
-    <Compile Include="Forms\CariForms\CariSubelerForms\CariSubeAdresEditForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\CariForms\CariSubelerForms\CariSubeAdresEditForm.Designer.cs">
-      <DependentUpon>CariSubeAdresEditForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\CariForms\CariSubelerForms\CariSubeAdresListForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\CariForms\CariSubelerForms\CariSubeAdresListForm.Designer.cs">
-      <DependentUpon>CariSubeAdresListForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\CariForms\CariSubelerForms\CariSubeIletisimEditForm.cs">
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\CariForms\CariListForm.Designer.cs">
@@ -594,18 +578,6 @@
     </Compile>
     <Compile Include="Forms\KimlikTuruForms\KimlikTuruListForm.Designer.cs">
       <DependentUpon>KimlikTuruListForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\KisiForms\IletisimTestEditForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\KisiForms\IletisimTestEditForm.Designer.cs">
-      <DependentUpon>IletisimTestEditForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\KisiForms\IletisimTestListForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\KisiForms\IletisimTestListForm.Designer.cs">
-      <DependentUpon>IletisimTestListForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\KisiForms\KisiAdresEditForm.cs">
       <SubType>Form</SubType>
@@ -1696,7 +1668,6 @@
     <EmbeddedResource Include="Forms\CariForms\CarilerForms\CarilerListForm.resx">
       <DependentUpon>CarilerListForm.cs</DependentUpon>
     </EmbeddedResource>
-<<<<<<< HEAD
     <EmbeddedResource Include="Forms\CariForms\CariListForm.resx">
       <DependentUpon>CariListForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -1707,15 +1678,6 @@
       <DependentUpon>CariSubeAdresListForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CariForms\CariSubeForms\CariSubeIletisimEditForm.resx">
-=======
-    <EmbeddedResource Include="Forms\CariForms\CariSubelerForms\CariSubeAdresEditForm.resx">
-      <DependentUpon>CariSubeAdresEditForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\CariForms\CariSubelerForms\CariSubeAdresListForm.resx">
-      <DependentUpon>CariSubeAdresListForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\CariForms\CariSubelerForms\CariSubeIletisimEditForm.resx">
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
       <DependentUpon>CariSubeIletisimEditForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CariForms\CariSubeForms\CariSubeIletisimListForm.resx">
@@ -1858,12 +1820,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\KimlikTuruForms\KimlikTuruListForm.resx">
       <DependentUpon>KimlikTuruListForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\KisiForms\IletisimTestEditForm.resx">
-      <DependentUpon>IletisimTestEditForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\KisiForms\IletisimTestListForm.resx">
-      <DependentUpon>IletisimTestListForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\KisiForms\KisiAdresEditForm.resx">
       <DependentUpon>KisiAdresEditForm.cs</DependentUpon>
@@ -2431,27 +2387,6 @@
     <None Include="Resources\article_32x32.png" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
-=======
-    <ProjectReference Include="..\AsamaGlobal.ERP.Bll\AsamaGlobal.ERP.Bll.csproj">
-      <Project>{0D2B8A32-0177-4693-B3F2-56F8EDE45F51}</Project>
-      <Name>AsamaGlobal.ERP.Bll</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\AsamaGlobal.ERP.Common\AsamaGlobal.ERP.Common.csproj">
-      <Project>{1F1D308C-664F-4D6D-9821-1CAE074855F8}</Project>
-      <Name>AsamaGlobal.ERP.Common</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\AsamaGlobal.ERP.Data\AsamaGlobal.ERP.Data.csproj">
-      <Project>{A802B8F3-B36B-4780-B069-C9740DBF65DD}</Project>
-      <Name>AsamaGlobal.ERP.Data</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\AsamaGlobal.ERP.Model\AsamaGlobal.ERP.Model.csproj">
-      <Project>{BB5EAA8A-8D31-4C9E-B408-31B57EF0E8C5}</Project>
-      <Name>AsamaGlobal.ERP.Model</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
     <None Include="Resources\exporttoxlsx_32x32.png" />
   </ItemGroup>
   <ItemGroup>

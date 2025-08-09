@@ -16,7 +16,7 @@ namespace AsamaGlobal.ERP.UI.Win.UserControls.UserControl.PersonelEditFormTable
         {
             InitializeComponent();
 
-            Bll = new IletisimBilgiBll();
+            Bll = new Bll.General.IletisimBilgiBll();
             Tablo = tablo;
             EventsLoad();
             HideItems = new BarItem[] { btnBelgeHareketleri };
@@ -58,7 +58,7 @@ namespace AsamaGlobal.ERP.UI.Win.UserControls.UserControl.PersonelEditFormTable
         protected internal override void Listele()
         {
 
-            var list = ((IletisimBilgiBll)Bll)
+            var list = ((Bll.General.IletisimBilgiBll)Bll)
                 .List(x => x.PersonelId == OwnerForm.Id)
                 .ToBindingList<IletisimBilgiL>();
 

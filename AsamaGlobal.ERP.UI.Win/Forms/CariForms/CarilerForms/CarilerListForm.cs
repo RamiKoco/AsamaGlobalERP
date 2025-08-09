@@ -6,8 +6,14 @@ using AsamaGlobal.ERP.UI.Win.Forms.BaseForms;
 using AsamaGlobal.ERP.UI.Win.Functions;
 using AsamaGlobal.ERP.UI.Win.Show;
 using DevExpress.XtraBars;
+using AsamaGlobal.ERP.UI.Win.Forms.CariForms;
+using AsamaGlobal;
+using AsamaGlobal.ERP;
+using AsamaGlobal.ERP.UI;
+using AsamaGlobal.ERP.UI.Win;
+using AsamaGlobal.ERP.UI.Win.Forms;
 
-namespace AsamaGlobal.ERP.UI.Win.Forms.CariForms
+namespace AsamaGlobal.ERP.UI.Win.Forms.CariForms.CarilerForms
 {
     public partial class CarilerListForm : BaseListForm
     {
@@ -29,7 +35,7 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.CariForms
         {
             Tablo = tablo;
             BaseKartTuru = KartTuru.Cariler;
-            FormShow = new ShowEditForms<CarilerEditForm>();
+            FormShow = new ShowEditForms<CarilerForms.CarilerEditForm>();
             Navigator = longNavigator.Navigator;
 
             if (IsMdiChild)
@@ -50,16 +56,16 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.CariForms
 
             if (barItem == btnBagliKartlar)
             {
-                ShowListForms<CariSubelerListForm>.ShowListForm(KartTuru.CariSubeler, entity.Id, entity.CariAdi);
+                ShowListForms<CariSubeForms.CariSubelerListForm>.ShowListForm(KartTuru.CariSubeler, entity.Id, entity.CariAdi);
             }
 
             else if (barItem == btnIletisimKartlari)
             {
-                ShowListForms<CariIletisimListForm>.ShowListForm(KartTuru.CariIletisim, entity.Id, entity.CariAdi);
+                ShowListForms<CarilerForms.CariIletisimListForm>.ShowListForm(KartTuru.CariIletisim, entity.Id, entity.CariAdi);
             }
             else if (barItem == btnAdresKartlari)
             {
-                ShowListForms<CariAdresListForm>.ShowListForm(KartTuru.CariAdres, entity.Id, entity.CariAdi);
+                ShowListForms<CarilerForms.CariAdresListForm>.ShowListForm(KartTuru.CariAdres, entity.Id, entity.CariAdi);
             }
         }
     }

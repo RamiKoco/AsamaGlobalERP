@@ -17,19 +17,19 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.RenkForms
             InitializeComponent();
 
             DataLayoutControl = myDataLayoutControl;
-            Bll = new RenkBll(myDataLayoutControl);
+            Bll = new Bll.General.RenkBll(myDataLayoutControl);
             BaseKartTuru = KartTuru.Renk;
             EventsLoad();
         }
 
         public override void Yukle()
         {
-            OldEntity = BaseIslemTuru == IslemTuru.EntityInsert ? new RenkS() : ((RenkBll)Bll).Single(FilterFunctions.Filter<Renk>(Id));
+            OldEntity = BaseIslemTuru == IslemTuru.EntityInsert ? new RenkS() : ((Bll.General.RenkBll)Bll).Single(FilterFunctions.Filter<Renk>(Id));
             NesneyiKontrollereBagla();
             TabloYukle();
             if (BaseIslemTuru != IslemTuru.EntityInsert) return;
             Id = BaseIslemTuru.IdOlustur(OldEntity);
-            txtKod.Text = ((RenkBll)Bll).YeniKodVer();
+            txtKod.Text = ((Bll.General.RenkBll)Bll).YeniKodVer();
             txtRenkAdi.Focus();
         }
         protected override void NesneyiKontrollereBagla()

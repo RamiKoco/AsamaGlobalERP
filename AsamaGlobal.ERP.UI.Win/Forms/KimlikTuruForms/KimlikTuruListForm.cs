@@ -12,7 +12,7 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.KimlikTuruForms
         public KimlikTuruListForm()
         {
             InitializeComponent();
-            Bll = new KimlikTuruBll();
+            Bll = new Bll.General.KimlikTuruBll();
         }
 
         protected override void DegiskenleriDoldur()
@@ -25,7 +25,7 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.KimlikTuruForms
 
         protected override void Listele()
         {
-            Tablo.GridControl.DataSource = ((KimlikTuruBll)Bll).List(FilterFunctions.Filter<KimlikTuru>(AktifKartlariGoster));
+            Tablo.GridControl.DataSource = ((Bll.General.KimlikTuruBll)Bll).List(FilterFunctions.Filter<KimlikTuru>(AktifKartlariGoster));
         }
     }
 }

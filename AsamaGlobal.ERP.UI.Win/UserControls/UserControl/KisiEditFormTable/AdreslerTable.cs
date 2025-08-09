@@ -16,7 +16,7 @@ namespace AsamaGlobal.ERP.UI.Win.UserControls.UserControl.KisiEditFormTable
         {
             InitializeComponent();
 
-            Bll = new AdresHareketleriBll();
+            Bll = new Bll.General.AdresHareketleriBll();
             Tablo = tablo;
             EventsLoad();
             TabloEventsYukle();
@@ -30,7 +30,7 @@ namespace AsamaGlobal.ERP.UI.Win.UserControls.UserControl.KisiEditFormTable
         protected internal override void Listele()
         {
 
-            var list = ((AdresHareketleriBll)Bll)
+            var list = ((Bll.General.AdresHareketleriBll)Bll)
                 .List(x => x.KisiId == OwnerForm.Id)
                 .ToBindingList<AdresHareketleriL>();
 

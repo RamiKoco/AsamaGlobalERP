@@ -12,7 +12,7 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.AdresTurleriForms
         public AdresTurleriListForm()
         {
             InitializeComponent();
-            Bll = new AdresTurleriBll();
+            Bll = new Bll.General.AdresTurleriBll();
         }
 
         protected override void DegiskenleriDoldur()
@@ -24,7 +24,7 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.AdresTurleriForms
         }
         protected override void Listele()
         {
-            Tablo.GridControl.DataSource = ((AdresTurleriBll)Bll).List(FilterFunctions.Filter<AdresTurleri>(AktifKartlariGoster));
+            Tablo.GridControl.DataSource = ((Bll.General.AdresTurleriBll)Bll).List(FilterFunctions.Filter<AdresTurleri>(AktifKartlariGoster));
         }
     }
 }

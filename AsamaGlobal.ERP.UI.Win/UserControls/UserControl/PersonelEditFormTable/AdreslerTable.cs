@@ -15,7 +15,7 @@ namespace AsamaGlobal.ERP.UI.Win.UserControls.UserControl.PersonelEditFormTable
         public AdreslerTable()
         {
             InitializeComponent();
-            Bll = new AdresHareketleriBll();
+            Bll = new Bll.General.AdresHareketleriBll();
             Tablo = tablo;
             EventsLoad();
             TabloEventsYukle();
@@ -28,7 +28,7 @@ namespace AsamaGlobal.ERP.UI.Win.UserControls.UserControl.PersonelEditFormTable
         protected internal override void Listele()
         {
 
-            var list = ((AdresHareketleriBll)Bll)
+            var list = ((Bll.General.AdresHareketleriBll)Bll)
                 .List(x => x.PersonelId == OwnerForm.Id)
                 .ToBindingList<AdresHareketleriL>();
 

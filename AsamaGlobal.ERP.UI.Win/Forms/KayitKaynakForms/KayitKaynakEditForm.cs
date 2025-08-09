@@ -14,18 +14,18 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.KayitKaynakForms
             InitializeComponent();
 
             DataLayoutControl = myDataLayoutControl;
-            Bll = new KayitKaynakBll(myDataLayoutControl);
+            Bll = new Bll.General.KayitKaynakBll(myDataLayoutControl);
             BaseKartTuru = KartTuru.KayitKaynak;
             EventsLoad();
         }
         public override void Yukle()
         {
-            OldEntity = BaseIslemTuru == IslemTuru.EntityInsert ? new KayitKaynak() : ((KayitKaynakBll)Bll).Single(FilterFunctions.Filter<KayitKaynak>(Id));
+            OldEntity = BaseIslemTuru == IslemTuru.EntityInsert ? new KayitKaynak() : ((Bll.General.KayitKaynakBll)Bll).Single(FilterFunctions.Filter<KayitKaynak>(Id));
             NesneyiKontrollereBagla();
 
             if (BaseIslemTuru != IslemTuru.EntityInsert) return;
             Id = BaseIslemTuru.IdOlustur(OldEntity);
-            txtKod.Text = ((KayitKaynakBll)Bll).YeniKodVer();
+            txtKod.Text = ((Bll.General.KayitKaynakBll)Bll).YeniKodVer();
             txtKayitKaynakAdi.Focus();
         }
 

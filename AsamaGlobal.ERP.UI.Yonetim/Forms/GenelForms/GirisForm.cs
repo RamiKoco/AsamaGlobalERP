@@ -1,4 +1,7 @@
-﻿using AsamaGlobal.ERP.Bll.Functions;
+﻿using System.Collections.Generic;
+using System.Drawing;
+using System.Reflection;
+using System.Windows.Forms;
 using AsamaGlobal.ERP.Common.Enums;
 using AsamaGlobal.ERP.Common.Functions;
 using AsamaGlobal.ERP.Data.Contexts;
@@ -6,11 +9,7 @@ using AsamaGlobal.ERP.UI.Win.Show;
 using AsamaGlobal.ERP.UI.Win.UserControls.Controls;
 using DevExpress.Utils.Extensions;
 using DevExpress.XtraEditors;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
-using System.Reflection;
-using System.Windows.Forms;
+using AsamaGlobal.ERP.Bll.Functions;
 
 namespace AsamaGlobal.ERP.UI.Yonetim.Forms.GenelForms
 {
@@ -66,14 +65,11 @@ namespace AsamaGlobal.ERP.UI.Yonetim.Forms.GenelForms
             var connectionStringArray = Bll.Functions.GeneralFunctions.GetConnectionString().Split(';');
             var dictionary = new Dictionary<string, string>();
 
-            connectionStringArray
-                .Where(x => !string.IsNullOrWhiteSpace(x) && x.Contains("="))
-                .ForEach(x =>
-                {
-                    var parts = x.Split('=');
-                    if (parts.Length >= 2)
-                        dictionary[parts[0]] = parts[1];
-                });
+            connectionStringArray.ForEach(x =>
+            {
+                var row = x.Split('=');
+                dictionary.Add(row[0], row[1]);
+            });
 
             txtServer.Text = dictionary.GetValueOrDefault("Data Source", "");
             txtYetkilendirme.SelectedItem = dictionary.ContainsKey("Password")

@@ -1,4 +1,11 @@
-﻿namespace AsamaGlobal.ERP.UI.Win.Forms.CariForms
+﻿using AsamaGlobal.ERP.UI.Win.Forms.CariForms;
+using AsamaGlobal;
+using AsamaGlobal.ERP;
+using AsamaGlobal.ERP.UI;
+using AsamaGlobal.ERP.UI.Win;
+using AsamaGlobal.ERP.UI.Win.Forms;
+
+namespace AsamaGlobal.ERP.UI.Win.Forms.CariForms.CariSubeForms
 {
     partial class CariSubelerListForm
     {
@@ -28,7 +35,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CariSubelerListForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CariSubeForms.CariSubelerListForm));
             this.grid = new AsamaGlobal.ERP.UI.Win.UserControls.Grid.MyGridControl();
             this.tablo = new AsamaGlobal.ERP.UI.Win.UserControls.Grid.MyGridView();
             this.colId = new AsamaGlobal.ERP.UI.Win.UserControls.Grid.MyGridColumn();

@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 ﻿namespace AsamaGlobal.ERP.UI.Win.Reports.XtraReports.Makbuz
-=======
-﻿namespace AbcYazilim.OgrenciTakip.UI.Win.Reports.XtraReports.Makbuz
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
 {
     partial class TeslimatMakbuzuRaporu
     {
@@ -130,11 +126,7 @@
             // 
             this.xrTable9.BackColor = System.Drawing.Color.Transparent;
             this.xrTable9.Borders = DevExpress.XtraPrinting.BorderSide.None;
-<<<<<<< HEAD
             this.xrTable9.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
-=======
-            this.xrTable9.Font = new System.Drawing.Font("Arial", 8F);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrTable9.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.xrTable9.Name = "xrTable9";
             this.xrTable9.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -160,11 +152,7 @@
             this.xrTableCell84,
             this.xrTableCell85,
             this.xrTableCell86});
-<<<<<<< HEAD
             this.xrTableRow19.Font = new DevExpress.Drawing.DXFont("Calibri Light", 7F);
-=======
-            this.xrTableRow19.Font = new System.Drawing.Font("Calibri Light", 7F);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrTableRow19.Name = "xrTableRow19";
             this.xrTableRow19.StylePriority.UseFont = false;
             this.xrTableRow19.Weight = 1D;
@@ -296,11 +284,7 @@
             // 
             this.xrTable8.BackColor = System.Drawing.Color.Gainsboro;
             this.xrTable8.Borders = DevExpress.XtraPrinting.BorderSide.None;
-<<<<<<< HEAD
             this.xrTable8.Font = new DevExpress.Drawing.DXFont("Calibri Light", 8F, DevExpress.Drawing.DXFontStyle.Bold);
-=======
-            this.xrTable8.Font = new System.Drawing.Font("Calibri Light", 8F, System.Drawing.FontStyle.Bold);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrTable8.LocationFloat = new DevExpress.Utils.PointFloat(0F, 103F);
             this.xrTable8.Name = "xrTable8";
             this.xrTable8.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -325,11 +309,7 @@
             // 
             this.xrTableCell70.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
             | DevExpress.XtraPrinting.BorderSide.Right)));
-<<<<<<< HEAD
             this.xrTableCell70.Font = new DevExpress.Drawing.DXFont("Calibri Light", 10F, DevExpress.Drawing.DXFontStyle.Bold);
-=======
-            this.xrTableCell70.Font = new System.Drawing.Font("Calibri Light", 10F, System.Drawing.FontStyle.Bold);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrTableCell70.Multiline = true;
             this.xrTableCell70.Name = "xrTableCell70";
             this.xrTableCell70.StylePriority.UseBorders = false;
@@ -350,11 +330,7 @@
             this.xrTableCell74,
             this.xrTableCell75,
             this.xrTableCell76});
-<<<<<<< HEAD
             this.xrTableRow18.Font = new DevExpress.Drawing.DXFont("Calibri Light", 8F, DevExpress.Drawing.DXFontStyle.Bold);
-=======
-            this.xrTableRow18.Font = new System.Drawing.Font("Calibri Light", 8F, System.Drawing.FontStyle.Bold);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrTableRow18.Name = "xrTableRow18";
             this.xrTableRow18.StylePriority.UseFont = false;
             this.xrTableRow18.Weight = 1.0001888291900933D;
@@ -452,11 +428,7 @@
             // 
             // xrTable1
             // 
-<<<<<<< HEAD
             this.xrTable1.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
-=======
-            this.xrTable1.Font = new System.Drawing.Font("Arial", 8F);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrTable1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.xrTable1.Name = "xrTable1";
             this.xrTable1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -482,11 +454,7 @@
             // 
             // xrTableCell3
             // 
-<<<<<<< HEAD
             this.xrTableCell3.Font = new DevExpress.Drawing.DXFont("Calibri Light", 16F, DevExpress.Drawing.DXFontStyle.Bold);
-=======
-            this.xrTableCell3.Font = new System.Drawing.Font("Calibri Light", 16F, System.Drawing.FontStyle.Bold);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrTableCell3.Multiline = true;
             this.xrTableCell3.Name = "xrTableCell3";
             this.xrTableCell3.StylePriority.UseFont = false;
@@ -504,11 +472,7 @@
             // 
             // xrTableCell18
             // 
-<<<<<<< HEAD
             this.xrTableCell18.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
-=======
-            this.xrTableCell18.Font = new System.Drawing.Font("Arial", 8F);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrTableCell18.Multiline = true;
             this.xrTableCell18.Name = "xrTableCell18";
             this.xrTableCell18.StylePriority.UseFont = false;
@@ -534,11 +498,7 @@
             // 
             // xrTableCell28
             // 
-<<<<<<< HEAD
             this.xrTableCell28.Font = new DevExpress.Drawing.DXFont("Arial", 8F, DevExpress.Drawing.DXFontStyle.Bold);
-=======
-            this.xrTableCell28.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrTableCell28.Multiline = true;
             this.xrTableCell28.Name = "xrTableCell28";
             this.xrTableCell28.StylePriority.UseFont = false;
@@ -547,11 +507,7 @@
             // 
             // xrTableCell29
             // 
-<<<<<<< HEAD
             this.xrTableCell29.Font = new DevExpress.Drawing.DXFont("Calibri Light", 10F, DevExpress.Drawing.DXFontStyle.Bold);
-=======
-            this.xrTableCell29.Font = new System.Drawing.Font("Calibri Light", 10F, System.Drawing.FontStyle.Bold);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrTableCell29.Multiline = true;
             this.xrTableCell29.Name = "xrTableCell29";
             this.xrTableCell29.StylePriority.UseFont = false;
@@ -564,11 +520,7 @@
             // 
             this.xrTableCell30.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[MakbuzNo]")});
-<<<<<<< HEAD
             this.xrTableCell30.Font = new DevExpress.Drawing.DXFont("Calibri Light", 10F);
-=======
-            this.xrTableCell30.Font = new System.Drawing.Font("Calibri Light", 10F);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrTableCell30.Multiline = true;
             this.xrTableCell30.Name = "xrTableCell30";
             this.xrTableCell30.StylePriority.UseFont = false;
@@ -576,11 +528,7 @@
             // 
             // xrTableCell32
             // 
-<<<<<<< HEAD
             this.xrTableCell32.Font = new DevExpress.Drawing.DXFont("Calibri Light", 10F, DevExpress.Drawing.DXFontStyle.Bold);
-=======
-            this.xrTableCell32.Font = new System.Drawing.Font("Calibri Light", 10F, System.Drawing.FontStyle.Bold);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrTableCell32.Multiline = true;
             this.xrTableCell32.Name = "xrTableCell32";
             this.xrTableCell32.StylePriority.UseFont = false;
@@ -591,11 +539,7 @@
             // 
             // xrTableCell34
             // 
-<<<<<<< HEAD
             this.xrTableCell34.Font = new DevExpress.Drawing.DXFont("Calibri Light", 10F, DevExpress.Drawing.DXFontStyle.Bold);
-=======
-            this.xrTableCell34.Font = new System.Drawing.Font("Calibri Light", 10F, System.Drawing.FontStyle.Bold);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrTableCell34.Multiline = true;
             this.xrTableCell34.Name = "xrTableCell34";
             this.xrTableCell34.StylePriority.UseFont = false;
@@ -604,11 +548,7 @@
             // 
             // xrTableCell35
             // 
-<<<<<<< HEAD
             this.xrTableCell35.Font = new DevExpress.Drawing.DXFont("Calibri Light", 10F, DevExpress.Drawing.DXFontStyle.Bold);
-=======
-            this.xrTableCell35.Font = new System.Drawing.Font("Calibri Light", 10F, System.Drawing.FontStyle.Bold);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrTableCell35.Multiline = true;
             this.xrTableCell35.Name = "xrTableCell35";
             this.xrTableCell35.StylePriority.UseFont = false;
@@ -642,11 +582,7 @@
             // 
             // xrTableCell37
             // 
-<<<<<<< HEAD
             this.xrTableCell37.Font = new DevExpress.Drawing.DXFont("Calibri Light", 10F, DevExpress.Drawing.DXFontStyle.Bold);
-=======
-            this.xrTableCell37.Font = new System.Drawing.Font("Calibri Light", 10F, System.Drawing.FontStyle.Bold);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrTableCell37.Multiline = true;
             this.xrTableCell37.Name = "xrTableCell37";
             this.xrTableCell37.StylePriority.UseFont = false;
@@ -655,11 +591,7 @@
             // 
             // xrTableCell38
             // 
-<<<<<<< HEAD
             this.xrTableCell38.Font = new DevExpress.Drawing.DXFont("Calibri Light", 10F, DevExpress.Drawing.DXFontStyle.Bold);
-=======
-            this.xrTableCell38.Font = new System.Drawing.Font("Calibri Light", 10F, System.Drawing.FontStyle.Bold);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrTableCell38.Multiline = true;
             this.xrTableCell38.Name = "xrTableCell38";
             this.xrTableCell38.StylePriority.UseFont = false;
@@ -672,11 +604,7 @@
             // 
             this.xrTableCell39.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Tarih]")});
-<<<<<<< HEAD
             this.xrTableCell39.Font = new DevExpress.Drawing.DXFont("Calibri Light", 10F);
-=======
-            this.xrTableCell39.Font = new System.Drawing.Font("Calibri Light", 10F);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrTableCell39.Multiline = true;
             this.xrTableCell39.Name = "xrTableCell39";
             this.xrTableCell39.StylePriority.UseFont = false;
@@ -685,11 +613,7 @@
             // 
             // xrTableCell41
             // 
-<<<<<<< HEAD
             this.xrTableCell41.Font = new DevExpress.Drawing.DXFont("Calibri Light", 10F, DevExpress.Drawing.DXFontStyle.Bold);
-=======
-            this.xrTableCell41.Font = new System.Drawing.Font("Calibri Light", 10F, System.Drawing.FontStyle.Bold);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrTableCell41.Multiline = true;
             this.xrTableCell41.Name = "xrTableCell41";
             this.xrTableCell41.StylePriority.UseFont = false;
@@ -699,11 +623,7 @@
             // 
             // xrTableCell43
             // 
-<<<<<<< HEAD
             this.xrTableCell43.Font = new DevExpress.Drawing.DXFont("Calibri Light", 10F, DevExpress.Drawing.DXFontStyle.Bold);
-=======
-            this.xrTableCell43.Font = new System.Drawing.Font("Calibri Light", 10F, System.Drawing.FontStyle.Bold);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrTableCell43.Multiline = true;
             this.xrTableCell43.Name = "xrTableCell43";
             this.xrTableCell43.StylePriority.UseFont = false;
@@ -712,11 +632,7 @@
             // 
             // xrTableCell44
             // 
-<<<<<<< HEAD
             this.xrTableCell44.Font = new DevExpress.Drawing.DXFont("Calibri Light", 10F, DevExpress.Drawing.DXFontStyle.Bold);
-=======
-            this.xrTableCell44.Font = new System.Drawing.Font("Calibri Light", 10F, System.Drawing.FontStyle.Bold);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrTableCell44.Multiline = true;
             this.xrTableCell44.Name = "xrTableCell44";
             this.xrTableCell44.StylePriority.UseFont = false;
@@ -729,11 +645,7 @@
             // 
             this.xrTableCell45.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[HesapAdi]")});
-<<<<<<< HEAD
             this.xrTableCell45.Font = new DevExpress.Drawing.DXFont("Calibri Light", 10F);
-=======
-            this.xrTableCell45.Font = new System.Drawing.Font("Calibri Light", 10F);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrTableCell45.Multiline = true;
             this.xrTableCell45.Name = "xrTableCell45";
             this.xrTableCell45.StylePriority.UseFont = false;
@@ -771,11 +683,7 @@
             // 
             // xrTableCell8
             // 
-<<<<<<< HEAD
             this.xrTableCell8.Font = new DevExpress.Drawing.DXFont("Calibri Light", 8F, DevExpress.Drawing.DXFontStyle.Bold);
-=======
-            this.xrTableCell8.Font = new System.Drawing.Font("Calibri Light", 8F, System.Drawing.FontStyle.Bold);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrTableCell8.Multiline = true;
             this.xrTableCell8.Name = "xrTableCell8";
             this.xrTableCell8.StylePriority.UseFont = false;
@@ -795,11 +703,7 @@
             // 
             this.xrTableCell9.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Right) 
             | DevExpress.XtraPrinting.BorderSide.Bottom)));
-<<<<<<< HEAD
             this.xrTableCell9.Font = new DevExpress.Drawing.DXFont("Calibri Light", 8F, DevExpress.Drawing.DXFontStyle.Bold);
-=======
-            this.xrTableCell9.Font = new System.Drawing.Font("Calibri Light", 8F, System.Drawing.FontStyle.Bold);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrTableCell9.Multiline = true;
             this.xrTableCell9.Name = "xrTableCell9";
             this.xrTableCell9.StylePriority.UseBorders = false;
@@ -810,11 +714,7 @@
             // 
             // xrPageInfo1
             // 
-<<<<<<< HEAD
             this.xrPageInfo1.Font = new DevExpress.Drawing.DXFont("Calibri Light", 8F, DevExpress.Drawing.DXFontStyle.Bold);
-=======
-            this.xrPageInfo1.Font = new System.Drawing.Font("Calibri Light", 8F, System.Drawing.FontStyle.Bold);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrPageInfo1.LocationFloat = new DevExpress.Utils.PointFloat(552.2358F, 40.50013F);
             this.xrPageInfo1.Name = "xrPageInfo1";
             this.xrPageInfo1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -829,11 +729,7 @@
             // 
             this.xrTable12.BackColor = System.Drawing.Color.Transparent;
             this.xrTable12.Borders = DevExpress.XtraPrinting.BorderSide.None;
-<<<<<<< HEAD
             this.xrTable12.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
-=======
-            this.xrTable12.Font = new System.Drawing.Font("Arial", 8F);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrTable12.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.xrTable12.Name = "xrTable12";
             this.xrTable12.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -854,11 +750,7 @@
             this.xrTableCell6,
             this.xrTableCell7,
             this.xrTableCell112});
-<<<<<<< HEAD
             this.xrTableRow22.Font = new DevExpress.Drawing.DXFont("Calibri Light", 7F);
-=======
-            this.xrTableRow22.Font = new System.Drawing.Font("Calibri Light", 7F);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrTableRow22.Name = "xrTableRow22";
             this.xrTableRow22.StylePriority.UseBackColor = false;
             this.xrTableRow22.StylePriority.UseFont = false;
@@ -869,11 +761,7 @@
             this.xrTableCell103.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
             | DevExpress.XtraPrinting.BorderSide.Right) 
             | DevExpress.XtraPrinting.BorderSide.Bottom)));
-<<<<<<< HEAD
             this.xrTableCell103.Font = new DevExpress.Drawing.DXFont("Calibri Light", 7F, DevExpress.Drawing.DXFontStyle.Bold);
-=======
-            this.xrTableCell103.Font = new System.Drawing.Font("Calibri Light", 7F, System.Drawing.FontStyle.Bold);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrTableCell103.Multiline = true;
             this.xrTableCell103.Name = "xrTableCell103";
             this.xrTableCell103.StylePriority.UseBorders = false;
@@ -888,11 +776,7 @@
             | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.xrTableCell6.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "sumSum([Tutar])")});
-<<<<<<< HEAD
             this.xrTableCell6.Font = new DevExpress.Drawing.DXFont("Arial", 7F, DevExpress.Drawing.DXFontStyle.Bold);
-=======
-            this.xrTableCell6.Font = new System.Drawing.Font("Arial", 7F, System.Drawing.FontStyle.Bold);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrTableCell6.Multiline = true;
             this.xrTableCell6.Name = "xrTableCell6";
             this.xrTableCell6.StylePriority.UseBorders = false;
@@ -911,11 +795,7 @@
             | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.xrTableCell7.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "sumSum([IslemTutari])")});
-<<<<<<< HEAD
             this.xrTableCell7.Font = new DevExpress.Drawing.DXFont("Arial", 7F, DevExpress.Drawing.DXFontStyle.Bold);
-=======
-            this.xrTableCell7.Font = new System.Drawing.Font("Arial", 7F, System.Drawing.FontStyle.Bold);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrTableCell7.Multiline = true;
             this.xrTableCell7.Name = "xrTableCell7";
             this.xrTableCell7.StylePriority.UseBorders = false;
@@ -931,11 +811,7 @@
             // 
             this.xrTableCell112.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Top | DevExpress.XtraPrinting.BorderSide.Right) 
             | DevExpress.XtraPrinting.BorderSide.Bottom)));
-<<<<<<< HEAD
             this.xrTableCell112.Font = new DevExpress.Drawing.DXFont("Arial", 7F, DevExpress.Drawing.DXFontStyle.Bold);
-=======
-            this.xrTableCell112.Font = new System.Drawing.Font("Arial", 7F, System.Drawing.FontStyle.Bold);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrTableCell112.Multiline = true;
             this.xrTableCell112.Name = "xrTableCell112";
             this.xrTableCell112.StylePriority.UseBorders = false;
@@ -947,11 +823,7 @@
             // 
             // Makbuz_Bilgileri
             // 
-<<<<<<< HEAD
             this.Makbuz_Bilgileri.DataSource = typeof(AsamaGlobal.ERP.Model.Dto.MakbuzHareketleriR);
-=======
-            this.Makbuz_Bilgileri.DataSource = typeof(AbcYazilim.OgrenciTakip.Model.Dto.MakbuzHareketleriR);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.Makbuz_Bilgileri.Name = "Makbuz_Bilgileri";
             // 
             // TeslimatMakbuzuRaporu
@@ -966,13 +838,8 @@
             this.ComponentStorage.AddRange(new System.ComponentModel.IComponent[] {
             this.Makbuz_Bilgileri});
             this.DataSource = this.Makbuz_Bilgileri;
-<<<<<<< HEAD
             this.Font = new DevExpress.Drawing.DXFont("Arial", 9.75F);
             this.Margins = new DevExpress.Drawing.DXMargins(61, 53, 100, 51);
-=======
-            this.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.Margins = new System.Drawing.Printing.Margins(61, 53, 100, 51);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.Version = "22.1";
             ((System.ComponentModel.ISupportInitialize)(this.xrTable9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable8)).EndInit();

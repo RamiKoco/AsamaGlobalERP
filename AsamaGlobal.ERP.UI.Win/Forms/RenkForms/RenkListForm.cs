@@ -26,7 +26,7 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.RenkForms
         public RenkListForm()
         {
             InitializeComponent();
-            Bll = new RenkBll();
+            Bll = new Bll.General.RenkBll();
             //tablo.RowCellStyle += tablo_RowCellStyle; // <-- bu satırı ekle          
         }
         protected override void DegiskenleriDoldur()
@@ -39,7 +39,7 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.RenkForms
         }
         protected override void Listele()
         {
-            Tablo.GridControl.DataSource = ((RenkBll)Bll).List(FilterFunctions.Filter<Renk>(AktifKartlariGoster));
+            Tablo.GridControl.DataSource = ((Bll.General.RenkBll)Bll).List(FilterFunctions.Filter<Renk>(AktifKartlariGoster));
 
         }
         private void GridRenkAyarla()

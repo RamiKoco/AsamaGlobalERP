@@ -14,7 +14,7 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.KimlikTuruForms
         {
             InitializeComponent();
             DataLayoutControl = myDataLayoutControl;
-            Bll = new KimlikTuruBll(myDataLayoutControl);
+            Bll = new Bll.General.KimlikTuruBll(myDataLayoutControl);
             BaseKartTuru = KartTuru.KimlikTuru;
             EventsLoad();
             txtKarakterTipi.Properties.Items.Clear();
@@ -22,12 +22,12 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.KimlikTuruForms
         }
         public override void Yukle()
         {
-            OldEntity = BaseIslemTuru == IslemTuru.EntityInsert ? new KimlikTuruS() : ((KimlikTuruBll)Bll).Single(FilterFunctions.Filter<KimlikTuru>(Id));
+            OldEntity = BaseIslemTuru == IslemTuru.EntityInsert ? new KimlikTuruS() : ((Bll.General.KimlikTuruBll)Bll).Single(FilterFunctions.Filter<KimlikTuru>(Id));
             NesneyiKontrollereBagla();
             TabloYukle();
             if (BaseIslemTuru != IslemTuru.EntityInsert) return;
             Id = BaseIslemTuru.IdOlustur(OldEntity);
-            txtKod.Text = ((KimlikTuruBll)Bll).YeniKodVer();
+            txtKod.Text = ((Bll.General.KimlikTuruBll)Bll).YeniKodVer();
             txtKimlikTuruAdi.Focus();
         }
 

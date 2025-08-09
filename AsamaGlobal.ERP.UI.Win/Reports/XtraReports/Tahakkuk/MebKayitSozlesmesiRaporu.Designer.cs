@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 ﻿namespace AsamaGlobal.ERP.UI.Win.Reports.XtraReports.Tahakkuk
-=======
-﻿namespace AbcYazilim.OgrenciTakip.UI.Win.Reports.XtraReports.Tahakkuk
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
 {
     partial class MebKayitSozlesmesiRaporu
     {
@@ -218,11 +214,7 @@
             // 
             // xrLabel5
             // 
-<<<<<<< HEAD
             this.xrLabel5.Font = new DevExpress.Drawing.DXFont("Microsoft Sans Serif", 12F, DevExpress.Drawing.DXFontStyle.Bold);
-=======
-            this.xrLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrLabel5.LocationFloat = new DevExpress.Utils.PointFloat(490.4583F, 2072.5F);
             this.xrLabel5.Multiline = true;
             this.xrLabel5.Name = "xrLabel5";
@@ -237,11 +229,7 @@
             // 
             this.xrLabel4.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[KayitTarihi]")});
-<<<<<<< HEAD
             this.xrLabel4.Font = new DevExpress.Drawing.DXFont("Microsoft Sans Serif", 12F, DevExpress.Drawing.DXFontStyle.Bold);
-=======
-            this.xrLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrLabel4.LocationFloat = new DevExpress.Utils.PointFloat(240.2916F, 2072.5F);
             this.xrLabel4.Multiline = true;
             this.xrLabel4.Name = "xrLabel4";
@@ -254,11 +242,7 @@
             // 
             // xrLabel3
             // 
-<<<<<<< HEAD
             this.xrLabel3.Font = new DevExpress.Drawing.DXFont("Microsoft Sans Serif", 12F);
-=======
-            this.xrLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrLabel3.LocationFloat = new DevExpress.Utils.PointFloat(20.79166F, 2137.083F);
             this.xrLabel3.Multiline = true;
             this.xrLabel3.Name = "xrLabel3";
@@ -273,11 +257,7 @@
             // 
             this.xrLabel2.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[VeliBilgileri].[AdiSoyadi]")});
-<<<<<<< HEAD
             this.xrLabel2.Font = new DevExpress.Drawing.DXFont("Microsoft Sans Serif", 12F);
-=======
-            this.xrLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrLabel2.LocationFloat = new DevExpress.Utils.PointFloat(20.79166F, 2114.083F);
             this.xrLabel2.Multiline = true;
             this.xrLabel2.Name = "xrLabel2";
@@ -288,11 +268,7 @@
             // 
             // xrLabel1
             // 
-<<<<<<< HEAD
             this.xrLabel1.Font = new DevExpress.Drawing.DXFont("Microsoft Sans Serif", 12F, DevExpress.Drawing.DXFontStyle.Bold);
-=======
-            this.xrLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(20.79166F, 2072.5F);
             this.xrLabel1.Multiline = true;
             this.xrLabel1.Name = "xrLabel1";
@@ -305,11 +281,7 @@
             // 
             // xrRichText2
             // 
-<<<<<<< HEAD
             this.xrRichText2.Font = new DevExpress.Drawing.DXFont("Arial", 9.75F);
-=======
-            this.xrRichText2.Font = new System.Drawing.Font("Arial", 9.75F);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrRichText2.LocationFloat = new DevExpress.Utils.PointFloat(4.999892F, 1077.167F);
             this.xrRichText2.Name = "xrRichText2";
             this.xrRichText2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -319,11 +291,7 @@
             // 
             // xrTable4
             // 
-<<<<<<< HEAD
             this.xrTable4.Font = new DevExpress.Drawing.DXFont("Microsoft Sans Serif", 12F);
-=======
-            this.xrTable4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrTable4.LocationFloat = new DevExpress.Utils.PointFloat(4.999878F, 695F);
             this.xrTable4.Name = "xrTable4";
             this.xrTable4.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -355,11 +323,7 @@
             // 
             this.xrTableCell50.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
             | DevExpress.XtraPrinting.BorderSide.Right)));
-<<<<<<< HEAD
             this.xrTableCell50.Font = new DevExpress.Drawing.DXFont("Microsoft Sans Serif", 9.75F, DevExpress.Drawing.DXFontStyle.Bold);
-=======
-            this.xrTableCell50.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrTableCell50.Multiline = true;
             this.xrTableCell50.Name = "xrTableCell50";
             this.xrTableCell50.StylePriority.UseBorders = false;
@@ -380,11 +344,7 @@
             // xrTableCell51
             // 
             this.xrTableCell51.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top)));
-<<<<<<< HEAD
             this.xrTableCell51.Font = new DevExpress.Drawing.DXFont("Microsoft Sans Serif", 12F, DevExpress.Drawing.DXFontStyle.Bold);
-=======
-            this.xrTableCell51.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrTableCell51.Multiline = true;
             this.xrTableCell51.Name = "xrTableCell51";
             this.xrTableCell51.StylePriority.UseBorders = false;
@@ -412,11 +372,7 @@
             // xrTableCell53
             // 
             this.xrTableCell53.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top)));
-<<<<<<< HEAD
             this.xrTableCell53.Font = new DevExpress.Drawing.DXFont("Microsoft Sans Serif", 12F, DevExpress.Drawing.DXFontStyle.Bold);
-=======
-            this.xrTableCell53.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrTableCell53.Multiline = true;
             this.xrTableCell53.Name = "xrTableCell53";
             this.xrTableCell53.StylePriority.UseBorders = false;
@@ -444,11 +400,7 @@
             // xrTableCell55
             // 
             this.xrTableCell55.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top)));
-<<<<<<< HEAD
             this.xrTableCell55.Font = new DevExpress.Drawing.DXFont("Microsoft Sans Serif", 12F, DevExpress.Drawing.DXFontStyle.Bold);
-=======
-            this.xrTableCell55.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrTableCell55.Multiline = true;
             this.xrTableCell55.Name = "xrTableCell55";
             this.xrTableCell55.StylePriority.UseBorders = false;
@@ -476,11 +428,7 @@
             // xrTableCell57
             // 
             this.xrTableCell57.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top)));
-<<<<<<< HEAD
             this.xrTableCell57.Font = new DevExpress.Drawing.DXFont("Microsoft Sans Serif", 12F, DevExpress.Drawing.DXFontStyle.Bold);
-=======
-            this.xrTableCell57.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrTableCell57.Multiline = true;
             this.xrTableCell57.Name = "xrTableCell57";
             this.xrTableCell57.StylePriority.UseBorders = false;
@@ -508,11 +456,7 @@
             // xrTableCell59
             // 
             this.xrTableCell59.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top)));
-<<<<<<< HEAD
             this.xrTableCell59.Font = new DevExpress.Drawing.DXFont("Microsoft Sans Serif", 12F, DevExpress.Drawing.DXFontStyle.Bold);
-=======
-            this.xrTableCell59.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrTableCell59.Multiline = true;
             this.xrTableCell59.Name = "xrTableCell59";
             this.xrTableCell59.StylePriority.UseBorders = false;
@@ -565,11 +509,7 @@
             // xrTableCell61
             // 
             this.xrTableCell61.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top)));
-<<<<<<< HEAD
             this.xrTableCell61.Font = new DevExpress.Drawing.DXFont("Microsoft Sans Serif", 12F, DevExpress.Drawing.DXFontStyle.Bold);
-=======
-            this.xrTableCell61.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrTableCell61.Multiline = true;
             this.xrTableCell61.Name = "xrTableCell61";
             this.xrTableCell61.StylePriority.UseBorders = false;
@@ -597,11 +537,7 @@
             // xrTableCell63
             // 
             this.xrTableCell63.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top)));
-<<<<<<< HEAD
             this.xrTableCell63.Font = new DevExpress.Drawing.DXFont("Microsoft Sans Serif", 12F, DevExpress.Drawing.DXFontStyle.Bold);
-=======
-            this.xrTableCell63.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrTableCell63.Multiline = true;
             this.xrTableCell63.Name = "xrTableCell63";
             this.xrTableCell63.StylePriority.UseBorders = false;
@@ -629,11 +565,7 @@
             // xrTableCell65
             // 
             this.xrTableCell65.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top)));
-<<<<<<< HEAD
             this.xrTableCell65.Font = new DevExpress.Drawing.DXFont("Microsoft Sans Serif", 12F, DevExpress.Drawing.DXFontStyle.Bold);
-=======
-            this.xrTableCell65.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrTableCell65.Multiline = true;
             this.xrTableCell65.Name = "xrTableCell65";
             this.xrTableCell65.StylePriority.UseBorders = false;
@@ -661,11 +593,7 @@
             // xrTableCell67
             // 
             this.xrTableCell67.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top)));
-<<<<<<< HEAD
             this.xrTableCell67.Font = new DevExpress.Drawing.DXFont("Microsoft Sans Serif", 12F, DevExpress.Drawing.DXFontStyle.Bold);
-=======
-            this.xrTableCell67.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrTableCell67.Multiline = true;
             this.xrTableCell67.Name = "xrTableCell67";
             this.xrTableCell67.StylePriority.UseBorders = false;
@@ -718,11 +646,7 @@
             // xrTableCell69
             // 
             this.xrTableCell69.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top)));
-<<<<<<< HEAD
             this.xrTableCell69.Font = new DevExpress.Drawing.DXFont("Microsoft Sans Serif", 12F, DevExpress.Drawing.DXFontStyle.Bold);
-=======
-            this.xrTableCell69.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrTableCell69.Multiline = true;
             this.xrTableCell69.Name = "xrTableCell69";
             this.xrTableCell69.StylePriority.UseBorders = false;
@@ -750,11 +674,7 @@
             // xrTableCell71
             // 
             this.xrTableCell71.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top)));
-<<<<<<< HEAD
             this.xrTableCell71.Font = new DevExpress.Drawing.DXFont("Microsoft Sans Serif", 12F, DevExpress.Drawing.DXFontStyle.Bold);
-=======
-            this.xrTableCell71.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrTableCell71.Multiline = true;
             this.xrTableCell71.Name = "xrTableCell71";
             this.xrTableCell71.StylePriority.UseBorders = false;
@@ -808,11 +728,7 @@
             // 
             this.xrTableCell73.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
             | DevExpress.XtraPrinting.BorderSide.Bottom)));
-<<<<<<< HEAD
             this.xrTableCell73.Font = new DevExpress.Drawing.DXFont("Microsoft Sans Serif", 12F, DevExpress.Drawing.DXFontStyle.Bold);
-=======
-            this.xrTableCell73.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrTableCell73.Multiline = true;
             this.xrTableCell73.Name = "xrTableCell73";
             this.xrTableCell73.StylePriority.UseBorders = false;
@@ -912,11 +828,7 @@
             // 
             // xrTable3
             // 
-<<<<<<< HEAD
             this.xrTable3.Font = new DevExpress.Drawing.DXFont("Microsoft Sans Serif", 12F);
-=======
-            this.xrTable3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrTable3.LocationFloat = new DevExpress.Utils.PointFloat(0F, 437F);
             this.xrTable3.Name = "xrTable3";
             this.xrTable3.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -944,11 +856,7 @@
             // 
             this.xrTableCell4.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
             | DevExpress.XtraPrinting.BorderSide.Right)));
-<<<<<<< HEAD
             this.xrTableCell4.Font = new DevExpress.Drawing.DXFont("Microsoft Sans Serif", 9.75F, DevExpress.Drawing.DXFontStyle.Bold);
-=======
-            this.xrTableCell4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrTableCell4.Multiline = true;
             this.xrTableCell4.Name = "xrTableCell4";
             this.xrTableCell4.StylePriority.UseBorders = false;
@@ -969,11 +877,7 @@
             // xrTableCell29
             // 
             this.xrTableCell29.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top)));
-<<<<<<< HEAD
             this.xrTableCell29.Font = new DevExpress.Drawing.DXFont("Microsoft Sans Serif", 12F, DevExpress.Drawing.DXFontStyle.Bold);
-=======
-            this.xrTableCell29.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrTableCell29.Multiline = true;
             this.xrTableCell29.Name = "xrTableCell29";
             this.xrTableCell29.StylePriority.UseBorders = false;
@@ -1003,11 +907,7 @@
             // xrTableCell36
             // 
             this.xrTableCell36.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top)));
-<<<<<<< HEAD
             this.xrTableCell36.Font = new DevExpress.Drawing.DXFont("Microsoft Sans Serif", 12F, DevExpress.Drawing.DXFontStyle.Bold);
-=======
-            this.xrTableCell36.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrTableCell36.Multiline = true;
             this.xrTableCell36.Name = "xrTableCell36";
             this.xrTableCell36.StylePriority.UseBorders = false;
@@ -1037,11 +937,7 @@
             // xrTableCell38
             // 
             this.xrTableCell38.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top)));
-<<<<<<< HEAD
             this.xrTableCell38.Font = new DevExpress.Drawing.DXFont("Microsoft Sans Serif", 12F, DevExpress.Drawing.DXFontStyle.Bold);
-=======
-            this.xrTableCell38.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrTableCell38.Multiline = true;
             this.xrTableCell38.Name = "xrTableCell38";
             this.xrTableCell38.StylePriority.UseBorders = false;
@@ -1071,11 +967,7 @@
             // xrTableCell40
             // 
             this.xrTableCell40.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top)));
-<<<<<<< HEAD
             this.xrTableCell40.Font = new DevExpress.Drawing.DXFont("Microsoft Sans Serif", 12F, DevExpress.Drawing.DXFontStyle.Bold);
-=======
-            this.xrTableCell40.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrTableCell40.Multiline = true;
             this.xrTableCell40.Name = "xrTableCell40";
             this.xrTableCell40.StylePriority.UseBorders = false;
@@ -1105,11 +997,7 @@
             // xrTableCell42
             // 
             this.xrTableCell42.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top)));
-<<<<<<< HEAD
             this.xrTableCell42.Font = new DevExpress.Drawing.DXFont("Microsoft Sans Serif", 12F, DevExpress.Drawing.DXFontStyle.Bold);
-=======
-            this.xrTableCell42.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrTableCell42.Multiline = true;
             this.xrTableCell42.Name = "xrTableCell42";
             this.xrTableCell42.StylePriority.UseBorders = false;
@@ -1139,11 +1027,7 @@
             // xrTableCell48
             // 
             this.xrTableCell48.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top)));
-<<<<<<< HEAD
             this.xrTableCell48.Font = new DevExpress.Drawing.DXFont("Microsoft Sans Serif", 12F, DevExpress.Drawing.DXFontStyle.Bold);
-=======
-            this.xrTableCell48.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrTableCell48.Multiline = true;
             this.xrTableCell48.Name = "xrTableCell48";
             this.xrTableCell48.StylePriority.UseBorders = false;
@@ -1173,11 +1057,7 @@
             // xrTableCell44
             // 
             this.xrTableCell44.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top)));
-<<<<<<< HEAD
             this.xrTableCell44.Font = new DevExpress.Drawing.DXFont("Microsoft Sans Serif", 12F, DevExpress.Drawing.DXFontStyle.Bold);
-=======
-            this.xrTableCell44.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrTableCell44.Multiline = true;
             this.xrTableCell44.Name = "xrTableCell44";
             this.xrTableCell44.StylePriority.UseBorders = false;
@@ -1208,11 +1088,7 @@
             // 
             this.xrTableCell46.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
             | DevExpress.XtraPrinting.BorderSide.Bottom)));
-<<<<<<< HEAD
             this.xrTableCell46.Font = new DevExpress.Drawing.DXFont("Microsoft Sans Serif", 12F, DevExpress.Drawing.DXFontStyle.Bold);
-=======
-            this.xrTableCell46.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrTableCell46.Multiline = true;
             this.xrTableCell46.Name = "xrTableCell46";
             this.xrTableCell46.StylePriority.UseBorders = false;
@@ -1232,11 +1108,7 @@
             // 
             // xrTable2
             // 
-<<<<<<< HEAD
             this.xrTable2.Font = new DevExpress.Drawing.DXFont("Microsoft Sans Serif", 12F);
-=======
-            this.xrTable2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrTable2.LocationFloat = new DevExpress.Utils.PointFloat(0F, 231F);
             this.xrTable2.Name = "xrTable2";
             this.xrTable2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -1263,11 +1135,7 @@
             // 
             this.xrTableCell8.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
             | DevExpress.XtraPrinting.BorderSide.Right)));
-<<<<<<< HEAD
             this.xrTableCell8.Font = new DevExpress.Drawing.DXFont("Microsoft Sans Serif", 9.75F, DevExpress.Drawing.DXFontStyle.Bold);
-=======
-            this.xrTableCell8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrTableCell8.Multiline = true;
             this.xrTableCell8.Name = "xrTableCell8";
             this.xrTableCell8.StylePriority.UseBorders = false;
@@ -1288,11 +1156,7 @@
             // xrTableCell11
             // 
             this.xrTableCell11.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top)));
-<<<<<<< HEAD
             this.xrTableCell11.Font = new DevExpress.Drawing.DXFont("Microsoft Sans Serif", 12F, DevExpress.Drawing.DXFontStyle.Bold);
-=======
-            this.xrTableCell11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrTableCell11.Multiline = true;
             this.xrTableCell11.Name = "xrTableCell11";
             this.xrTableCell11.StylePriority.UseBorders = false;
@@ -1322,11 +1186,7 @@
             // xrTableCell20
             // 
             this.xrTableCell20.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top)));
-<<<<<<< HEAD
             this.xrTableCell20.Font = new DevExpress.Drawing.DXFont("Microsoft Sans Serif", 12F, DevExpress.Drawing.DXFontStyle.Bold);
-=======
-            this.xrTableCell20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrTableCell20.Multiline = true;
             this.xrTableCell20.Name = "xrTableCell20";
             this.xrTableCell20.StylePriority.UseBorders = false;
@@ -1356,11 +1216,7 @@
             // xrTableCell24
             // 
             this.xrTableCell24.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top)));
-<<<<<<< HEAD
             this.xrTableCell24.Font = new DevExpress.Drawing.DXFont("Microsoft Sans Serif", 12F, DevExpress.Drawing.DXFontStyle.Bold);
-=======
-            this.xrTableCell24.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrTableCell24.Multiline = true;
             this.xrTableCell24.Name = "xrTableCell24";
             this.xrTableCell24.StylePriority.UseBorders = false;
@@ -1390,11 +1246,7 @@
             // xrTableCell26
             // 
             this.xrTableCell26.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top)));
-<<<<<<< HEAD
             this.xrTableCell26.Font = new DevExpress.Drawing.DXFont("Microsoft Sans Serif", 12F, DevExpress.Drawing.DXFontStyle.Bold);
-=======
-            this.xrTableCell26.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrTableCell26.Multiline = true;
             this.xrTableCell26.Name = "xrTableCell26";
             this.xrTableCell26.StylePriority.UseBorders = false;
@@ -1424,11 +1276,7 @@
             // xrTableCell28
             // 
             this.xrTableCell28.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top)));
-<<<<<<< HEAD
             this.xrTableCell28.Font = new DevExpress.Drawing.DXFont("Microsoft Sans Serif", 12F, DevExpress.Drawing.DXFontStyle.Bold);
-=======
-            this.xrTableCell28.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrTableCell28.Multiline = true;
             this.xrTableCell28.Name = "xrTableCell28";
             this.xrTableCell28.StylePriority.UseBorders = false;
@@ -1458,11 +1306,7 @@
             // xrTableCell31
             // 
             this.xrTableCell31.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top)));
-<<<<<<< HEAD
             this.xrTableCell31.Font = new DevExpress.Drawing.DXFont("Microsoft Sans Serif", 12F, DevExpress.Drawing.DXFontStyle.Bold);
-=======
-            this.xrTableCell31.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrTableCell31.Multiline = true;
             this.xrTableCell31.Name = "xrTableCell31";
             this.xrTableCell31.StylePriority.UseBorders = false;
@@ -1493,11 +1337,7 @@
             // 
             this.xrTableCell33.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
             | DevExpress.XtraPrinting.BorderSide.Bottom)));
-<<<<<<< HEAD
             this.xrTableCell33.Font = new DevExpress.Drawing.DXFont("Microsoft Sans Serif", 12F, DevExpress.Drawing.DXFontStyle.Bold);
-=======
-            this.xrTableCell33.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrTableCell33.Multiline = true;
             this.xrTableCell33.Name = "xrTableCell33";
             this.xrTableCell33.StylePriority.UseBorders = false;
@@ -1517,11 +1357,7 @@
             // 
             // xrTable1
             // 
-<<<<<<< HEAD
             this.xrTable1.Font = new DevExpress.Drawing.DXFont("Microsoft Sans Serif", 12F);
-=======
-            this.xrTable1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrTable1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.xrTable1.Name = "xrTable1";
             this.xrTable1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -1547,11 +1383,7 @@
             // 
             // xrTableCell3
             // 
-<<<<<<< HEAD
             this.xrTableCell3.Font = new DevExpress.Drawing.DXFont("Microsoft Sans Serif", 12F, DevExpress.Drawing.DXFontStyle.Bold);
-=======
-            this.xrTableCell3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrTableCell3.Multiline = true;
             this.xrTableCell3.Name = "xrTableCell3";
             this.xrTableCell3.StylePriority.UseFont = false;
@@ -1569,11 +1401,7 @@
             // 
             this.xrTableCell6.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
             | DevExpress.XtraPrinting.BorderSide.Right)));
-<<<<<<< HEAD
             this.xrTableCell6.Font = new DevExpress.Drawing.DXFont("Microsoft Sans Serif", 9.75F, DevExpress.Drawing.DXFontStyle.Bold);
-=======
-            this.xrTableCell6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrTableCell6.Multiline = true;
             this.xrTableCell6.Name = "xrTableCell6";
             this.xrTableCell6.StylePriority.UseBorders = false;
@@ -1594,11 +1422,7 @@
             // xrTableCell7
             // 
             this.xrTableCell7.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top)));
-<<<<<<< HEAD
             this.xrTableCell7.Font = new DevExpress.Drawing.DXFont("Microsoft Sans Serif", 12F, DevExpress.Drawing.DXFontStyle.Bold);
-=======
-            this.xrTableCell7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrTableCell7.Multiline = true;
             this.xrTableCell7.Name = "xrTableCell7";
             this.xrTableCell7.StylePriority.UseBorders = false;
@@ -1628,11 +1452,7 @@
             // xrTableCell10
             // 
             this.xrTableCell10.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top)));
-<<<<<<< HEAD
             this.xrTableCell10.Font = new DevExpress.Drawing.DXFont("Microsoft Sans Serif", 12F, DevExpress.Drawing.DXFontStyle.Bold);
-=======
-            this.xrTableCell10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrTableCell10.Multiline = true;
             this.xrTableCell10.Name = "xrTableCell10";
             this.xrTableCell10.StylePriority.UseBorders = false;
@@ -1662,11 +1482,7 @@
             // xrTableCell13
             // 
             this.xrTableCell13.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top)));
-<<<<<<< HEAD
             this.xrTableCell13.Font = new DevExpress.Drawing.DXFont("Microsoft Sans Serif", 12F, DevExpress.Drawing.DXFontStyle.Bold);
-=======
-            this.xrTableCell13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrTableCell13.Multiline = true;
             this.xrTableCell13.Name = "xrTableCell13";
             this.xrTableCell13.StylePriority.UseBorders = false;
@@ -1696,11 +1512,7 @@
             // xrTableCell1
             // 
             this.xrTableCell1.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top)));
-<<<<<<< HEAD
             this.xrTableCell1.Font = new DevExpress.Drawing.DXFont("Microsoft Sans Serif", 12F, DevExpress.Drawing.DXFontStyle.Bold);
-=======
-            this.xrTableCell1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrTableCell1.Multiline = true;
             this.xrTableCell1.Name = "xrTableCell1";
             this.xrTableCell1.StylePriority.UseBorders = false;
@@ -1731,11 +1543,7 @@
             // xrTableCell5
             // 
             this.xrTableCell5.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top)));
-<<<<<<< HEAD
             this.xrTableCell5.Font = new DevExpress.Drawing.DXFont("Microsoft Sans Serif", 12F, DevExpress.Drawing.DXFontStyle.Bold);
-=======
-            this.xrTableCell5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrTableCell5.Multiline = true;
             this.xrTableCell5.Name = "xrTableCell5";
             this.xrTableCell5.StylePriority.UseBorders = false;
@@ -1777,11 +1585,7 @@
             // xrTableCell18
             // 
             this.xrTableCell18.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top)));
-<<<<<<< HEAD
             this.xrTableCell18.Font = new DevExpress.Drawing.DXFont("Microsoft Sans Serif", 12F, DevExpress.Drawing.DXFontStyle.Bold);
-=======
-            this.xrTableCell18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrTableCell18.Multiline = true;
             this.xrTableCell18.Name = "xrTableCell18";
             this.xrTableCell18.StylePriority.UseBorders = false;
@@ -1813,11 +1617,7 @@
             // 
             this.xrTableCell21.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
             | DevExpress.XtraPrinting.BorderSide.Bottom)));
-<<<<<<< HEAD
             this.xrTableCell21.Font = new DevExpress.Drawing.DXFont("Microsoft Sans Serif", 12F, DevExpress.Drawing.DXFontStyle.Bold);
-=======
-            this.xrTableCell21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrTableCell21.Multiline = true;
             this.xrTableCell21.Name = "xrTableCell21";
             this.xrTableCell21.StylePriority.UseBorders = false;
@@ -1846,11 +1646,7 @@
             // 
             // xrRichText1
             // 
-<<<<<<< HEAD
             this.xrRichText1.Font = new DevExpress.Drawing.DXFont("Arial", 9.75F, DevExpress.Drawing.DXFontStyle.Bold);
-=======
-            this.xrRichText1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrRichText1.LocationFloat = new DevExpress.Utils.PointFloat(10.00001F, 10.00001F);
             this.xrRichText1.Name = "xrRichText1";
             this.xrRichText1.Padding = new DevExpress.XtraPrinting.PaddingInfo(1, 1, 1, 1, 100F);
@@ -1861,20 +1657,12 @@
             // 
             // Ogrenci_Bilgileri
             // 
-<<<<<<< HEAD
             this.Ogrenci_Bilgileri.DataSource = typeof(AsamaGlobal.ERP.Model.Dto.OgrenciR);
-=======
-            this.Ogrenci_Bilgileri.DataSource = typeof(AbcYazilim.OgrenciTakip.Model.Dto.OgrenciR);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.Ogrenci_Bilgileri.Name = "Ogrenci_Bilgileri";
             // 
             // xrPageInfo1
             // 
-<<<<<<< HEAD
             this.xrPageInfo1.Font = new DevExpress.Drawing.DXFont("Calibri", 8.25F, DevExpress.Drawing.DXFontStyle.Bold, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(162)))});
-=======
-            this.xrPageInfo1.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrPageInfo1.LocationFloat = new DevExpress.Utils.PointFloat(656F, 0F);
             this.xrPageInfo1.Name = "xrPageInfo1";
             this.xrPageInfo1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -1896,13 +1684,8 @@
             this.Ogrenci_Bilgileri});
             this.DataSource = this.Ogrenci_Bilgileri;
             this.DrawGrid = false;
-<<<<<<< HEAD
             this.Font = new DevExpress.Drawing.DXFont("Arial", 9.75F);
             this.Margins = new DevExpress.Drawing.DXMargins(49, 45, 53, 50);
-=======
-            this.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.Margins = new System.Drawing.Printing.Margins(49, 45, 53, 50);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.Version = "22.1";
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable4)).EndInit();

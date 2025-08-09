@@ -9,7 +9,7 @@ using AsamaGlobal.ERP.Common.Functions;
 using AsamaGlobal.ERP.Common.Message;
 using AsamaGlobal.ERP.Data.Contexts;
 using AsamaGlobal.ERP.Model.Entities.Base.Interfaces;
-using AsamaGlobal.ERP.Model.Entities.KisiEntity;
+using AsamaGlobal.ERP.Model.Entities.Kisi;
 using AsamaGlobal.ERP.UI.Win.Forms.BaseForms;
 using AsamaGlobal.ERP.UI.Win.Functions;
 using AsamaGlobal.ERP.UI.Win.UserControls.UserControl.Base;
@@ -114,7 +114,7 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.KisiForms
         }
         private void EtiketleriYukle()
         {
-            var etiketBll = new EtiketBll();
+            var etiketBll = new Bll.General.EtiketBll();
             _tumEtiketler = etiketBll.List(x => x.Durum == true && x.KayitTuru == KayitTuru.Kisi).Cast<EtiketL>().ToList();
             txtEtiket.Properties.DataSource = _tumEtiketler;
             txtEtiket.Properties.DisplayMember = "EtiketAdi";

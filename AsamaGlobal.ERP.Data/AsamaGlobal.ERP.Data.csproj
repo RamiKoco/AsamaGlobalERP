@@ -58,16 +58,11 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AsamaGlobal.ERP.Model\AsamaGlobal.ERP.Model.csproj">
       <Project>{bb5eaa8a-8d31-4c9e-b408-31b57ef0e8c5}</Project>
-=======
-    <ProjectReference Include="..\AsamaGlobal.ERP.Model\AsamaGlobal.ERP.Model.csproj">
-      <Project>{BB5EAA8A-8D31-4C9E-B408-31B57EF0E8C5}</Project>
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
       <Name>AsamaGlobal.ERP.Model</Name>
     </ProjectReference>
   </ItemGroup>

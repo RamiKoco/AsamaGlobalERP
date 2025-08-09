@@ -27,20 +27,20 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.CariForms.CariSubeForms
             _carilerAdi = prm[1].ToString();
 
             DataLayoutControls = new[] { DataLayoutGenel, DataLayoutGenelBilgiler };
-            Bll = new CariSubelerBll(DataLayoutGenelBilgiler);
+            Bll = new Bll.General.CarilerBll.CariSubeBll.CariSubelerBll(DataLayoutGenelBilgiler);
             BaseKartTuru = KartTuru.CariSubeler;
             EventsLoad();
         }
         public override void Yukle()
         {
-            OldEntity = BaseIslemTuru == IslemTuru.EntityInsert ? new CariSubelerS() : ((CariSubelerBll)Bll).Single(FilterFunctions.Filter<CariSubeler>(Id));
+            OldEntity = BaseIslemTuru == IslemTuru.EntityInsert ? new CariSubelerS() : ((Bll.General.CarilerBll.CariSubeBll.CariSubelerBll)Bll).Single(FilterFunctions.Filter<CariSubeler>(Id));
             NesneyiKontrollereBagla();
             BagliTabloYukle();
             Text = Text + $" - ( {_carilerAdi} )";
 
             if (BaseIslemTuru != IslemTuru.EntityInsert) return;
             Id = BaseIslemTuru.IdOlustur(OldEntity);
-            txtKod.Text = ((CariSubelerBll)Bll).YeniKodVer(x => x.CarilerId == _carilerId);
+            txtKod.Text = ((Bll.General.CarilerBll.CariSubeBll.CariSubelerBll)Bll).YeniKodVer(x => x.CarilerId == _carilerId);
             txtCariSubeAdi.Focus();
         }
         protected override void BagliTabloYukle()
@@ -99,7 +99,7 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.CariForms.CariSubeForms
         {
 
             if (BagliTabloHataliGirisKontrol()) return false;
-            var result = ((CariSubelerBll)Bll).Insert(CurrentEntity, x => x.Kod == CurrentEntity.Kod && x.CarilerId == _carilerId) && BagliTabloKaydet();
+            var result = ((Bll.General.CarilerBll.CariSubeBll.CariSubelerBll)Bll).Insert(CurrentEntity, x => x.Kod == CurrentEntity.Kod && x.CarilerId == _carilerId) && BagliTabloKaydet();
 
             if (result && !KayitSonrasiFormuKapat)
                 BagliTabloYukle();
@@ -110,7 +110,7 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.CariForms.CariSubeForms
         protected override bool EntityUpdate()
         {
             if (BagliTabloHataliGirisKontrol()) return false;
-            var result = ((CariSubelerBll)Bll).Update(OldEntity, CurrentEntity, x => x.Kod == CurrentEntity.Kod && x.CarilerId == _carilerId) && BagliTabloKaydet();
+            var result = ((Bll.General.CarilerBll.CariSubeBll.CariSubelerBll)Bll).Update(OldEntity, CurrentEntity, x => x.Kod == CurrentEntity.Kod && x.CarilerId == _carilerId) && BagliTabloKaydet();
 
             if (result && !KayitSonrasiFormuKapat)
                 BagliTabloYukle();

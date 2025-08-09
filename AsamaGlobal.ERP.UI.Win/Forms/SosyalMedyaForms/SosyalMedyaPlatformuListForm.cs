@@ -12,7 +12,7 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.SosyalMedyaForms
         public SosyalMedyaPlatformuListForm()
         {
             InitializeComponent();
-            Bll = new SosyalMedyaPlatformuBll();
+            Bll = new Bll.General.SosyalMedyaPlatformuBll();
         }
 
         protected override void DegiskenleriDoldur()
@@ -25,7 +25,7 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.SosyalMedyaForms
 
         protected override void Listele()
         {
-            Tablo.GridControl.DataSource = ((SosyalMedyaPlatformuBll)Bll).List(FilterFunctions.Filter<SosyalMedyaPlatformu>(AktifKartlariGoster));
+            Tablo.GridControl.DataSource = ((Bll.General.SosyalMedyaPlatformuBll)Bll).List(FilterFunctions.Filter<SosyalMedyaPlatformu>(AktifKartlariGoster));
         }
     }
 }

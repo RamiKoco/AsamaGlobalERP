@@ -29,7 +29,7 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.EtiketForms
             InitializeComponent();
 
             DataLayoutControl = myDataLayoutControl;
-            Bll = new EtiketBll(myDataLayoutControl);
+            Bll = new Bll.General.EtiketBll(myDataLayoutControl);
             BaseKartTuru = KartTuru.Etiket;
             EventsLoad();
             txtYaziRgbKodu.ColorChanged += TxtYaziRgbKodu_ColorChanged;
@@ -41,12 +41,12 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.EtiketForms
         }
         public override void Yukle()
         {
-            OldEntity = BaseIslemTuru == IslemTuru.EntityInsert ? new EtiketS() : ((EtiketBll)Bll).Single(FilterFunctions.Filter<Etiket>(Id));
+            OldEntity = BaseIslemTuru == IslemTuru.EntityInsert ? new EtiketS() : ((Bll.General.EtiketBll)Bll).Single(FilterFunctions.Filter<Etiket>(Id));
             NesneyiKontrollereBagla();
             TabloYukle();
             if (BaseIslemTuru != IslemTuru.EntityInsert) return;
             Id = BaseIslemTuru.IdOlustur(OldEntity);
-            txtKod.Text = ((EtiketBll)Bll).YeniKodVer();
+            txtKod.Text = ((Bll.General.EtiketBll)Bll).YeniKodVer();
             txtKod.Focus();
         }
 

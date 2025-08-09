@@ -12,7 +12,7 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.UlkeForms
         public UlkeListForm()
         {
             InitializeComponent();
-            Bll = new UlkeBll();
+            Bll = new Bll.General.UlkeBll();
             //btnBagliKartlar.Caption = "İl Kartları";
         }
         protected override void DegiskenleriDoldur()
@@ -28,7 +28,7 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.UlkeForms
 
         protected override void Listele()
         {
-            Tablo.GridControl.DataSource = ((UlkeBll)Bll).List(FilterFunctions.Filter<Ulke>(AktifKartlariGoster));
+            Tablo.GridControl.DataSource = ((Bll.General.UlkeBll)Bll).List(FilterFunctions.Filter<Ulke>(AktifKartlariGoster));
 
         }
 

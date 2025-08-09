@@ -12,7 +12,7 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.DepartmanForms
         public DepartmanListForm()
         {
             InitializeComponent();
-            Bll = new DepartmanBll();
+            Bll = new Bll.General.DepartmanBll();
         }
         protected override void DegiskenleriDoldur()
         {
@@ -23,7 +23,7 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.DepartmanForms
         }
         protected override void Listele()
         {
-            Tablo.GridControl.DataSource = ((DepartmanBll)Bll).List(FilterFunctions.Filter<Departman>(AktifKartlariGoster));
+            Tablo.GridControl.DataSource = ((Bll.General.DepartmanBll)Bll).List(FilterFunctions.Filter<Departman>(AktifKartlariGoster));
         }
     }
 }

@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 ﻿namespace AsamaGlobal.ERP.UI.Win.Reports.XtraReports.Fatura
-=======
-﻿namespace AbcYazilim.OgrenciTakip.UI.Win.Reports.XtraReports.Fatura
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
 {
     partial class FaturaRaporu
     {
@@ -173,11 +169,7 @@
             // 
             // xrLabel28
             // 
-<<<<<<< HEAD
             this.xrLabel28.Font = new DevExpress.Drawing.DXFont("Arial", 9.75F, DevExpress.Drawing.DXFontStyle.Bold);
-=======
-            this.xrLabel28.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrLabel28.LocationFloat = new DevExpress.Utils.PointFloat(10.00001F, 502.7917F);
             this.xrLabel28.Multiline = true;
             this.xrLabel28.Name = "xrLabel28";
@@ -190,11 +182,7 @@
             // 
             // xrLabel29
             // 
-<<<<<<< HEAD
             this.xrLabel29.Font = new DevExpress.Drawing.DXFont("Arial", 9.75F, DevExpress.Drawing.DXFontStyle.Bold);
-=======
-            this.xrLabel29.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrLabel29.LocationFloat = new DevExpress.Utils.PointFloat(10.00001F, 525.7917F);
             this.xrLabel29.Multiline = true;
             this.xrLabel29.Name = "xrLabel29";
@@ -207,11 +195,7 @@
             // 
             // xrLabel30
             // 
-<<<<<<< HEAD
             this.xrLabel30.Font = new DevExpress.Drawing.DXFont("Arial", 9.75F, DevExpress.Drawing.DXFontStyle.Bold);
-=======
-            this.xrLabel30.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrLabel30.LocationFloat = new DevExpress.Utils.PointFloat(10.00001F, 548.7917F);
             this.xrLabel30.Multiline = true;
             this.xrLabel30.Name = "xrLabel30";
@@ -224,11 +208,7 @@
             // 
             // xrLabel31
             // 
-<<<<<<< HEAD
             this.xrLabel31.Font = new DevExpress.Drawing.DXFont("Arial", 9.75F, DevExpress.Drawing.DXFontStyle.Bold);
-=======
-            this.xrLabel31.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrLabel31.LocationFloat = new DevExpress.Utils.PointFloat(10.00001F, 571.7917F);
             this.xrLabel31.Multiline = true;
             this.xrLabel31.Name = "xrLabel31";
@@ -241,11 +221,7 @@
             // 
             // xrLabel32
             // 
-<<<<<<< HEAD
             this.xrLabel32.Font = new DevExpress.Drawing.DXFont("Arial", 9.75F, DevExpress.Drawing.DXFontStyle.Bold);
-=======
-            this.xrLabel32.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrLabel32.LocationFloat = new DevExpress.Utils.PointFloat(10.00001F, 594.7917F);
             this.xrLabel32.Multiline = true;
             this.xrLabel32.Name = "xrLabel32";
@@ -260,11 +236,7 @@
             // 
             this.xrLabel33.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[TcKimlikNo]")});
-<<<<<<< HEAD
             this.xrLabel33.Font = new DevExpress.Drawing.DXFont("Arial", 9.75F);
-=======
-            this.xrLabel33.Font = new System.Drawing.Font("Arial", 9.75F);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrLabel33.LocationFloat = new DevExpress.Utils.PointFloat(249.5833F, 502.7917F);
             this.xrLabel33.Multiline = true;
             this.xrLabel33.Name = "xrLabel33";
@@ -278,11 +250,7 @@
             // 
             this.xrLabel34.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Adi]")});
-<<<<<<< HEAD
             this.xrLabel34.Font = new DevExpress.Drawing.DXFont("Arial", 9.75F);
-=======
-            this.xrLabel34.Font = new System.Drawing.Font("Arial", 9.75F);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrLabel34.LocationFloat = new DevExpress.Utils.PointFloat(249.5833F, 525.7917F);
             this.xrLabel34.Multiline = true;
             this.xrLabel34.Name = "xrLabel34";
@@ -296,11 +264,7 @@
             // 
             this.xrLabel35.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[SinifAdi]")});
-<<<<<<< HEAD
             this.xrLabel35.Font = new DevExpress.Drawing.DXFont("Arial", 9.75F);
-=======
-            this.xrLabel35.Font = new System.Drawing.Font("Arial", 9.75F);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrLabel35.LocationFloat = new DevExpress.Utils.PointFloat(249.5833F, 548.7917F);
             this.xrLabel35.Multiline = true;
             this.xrLabel35.Name = "xrLabel35";
@@ -314,11 +278,7 @@
             // 
             this.xrLabel36.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[VeliAdi]")});
-<<<<<<< HEAD
             this.xrLabel36.Font = new DevExpress.Drawing.DXFont("Arial", 9.75F);
-=======
-            this.xrLabel36.Font = new System.Drawing.Font("Arial", 9.75F);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrLabel36.LocationFloat = new DevExpress.Utils.PointFloat(249.5833F, 571.7917F);
             this.xrLabel36.Multiline = true;
             this.xrLabel36.Name = "xrLabel36";
@@ -332,11 +292,7 @@
             // 
             this.xrLabel37.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[VeliSoyadi]")});
-<<<<<<< HEAD
             this.xrLabel37.Font = new DevExpress.Drawing.DXFont("Arial", 9.75F);
-=======
-            this.xrLabel37.Font = new System.Drawing.Font("Arial", 9.75F);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrLabel37.LocationFloat = new DevExpress.Utils.PointFloat(381.625F, 571.7917F);
             this.xrLabel37.Multiline = true;
             this.xrLabel37.Name = "xrLabel37";
@@ -351,11 +307,7 @@
             // 
             this.xrLabel38.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[FaturaAdres]")});
-<<<<<<< HEAD
             this.xrLabel38.Font = new DevExpress.Drawing.DXFont("Arial", 9.75F);
-=======
-            this.xrLabel38.Font = new System.Drawing.Font("Arial", 9.75F);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrLabel38.LocationFloat = new DevExpress.Utils.PointFloat(249.5833F, 594.7917F);
             this.xrLabel38.Multiline = true;
             this.xrLabel38.Name = "xrLabel38";
@@ -369,11 +321,7 @@
             // 
             this.xrLabel39.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[FaturaAdresIlceAdi]")});
-<<<<<<< HEAD
             this.xrLabel39.Font = new DevExpress.Drawing.DXFont("Arial", 9.75F);
-=======
-            this.xrLabel39.Font = new System.Drawing.Font("Arial", 9.75F);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrLabel39.LocationFloat = new DevExpress.Utils.PointFloat(249.5833F, 670.625F);
             this.xrLabel39.Multiline = true;
             this.xrLabel39.Name = "xrLabel39";
@@ -387,11 +335,7 @@
             // 
             this.xrLabel40.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[FaturaAdresIlAdi]")});
-<<<<<<< HEAD
             this.xrLabel40.Font = new DevExpress.Drawing.DXFont("Arial", 9.75F);
-=======
-            this.xrLabel40.Font = new System.Drawing.Font("Arial", 9.75F);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrLabel40.LocationFloat = new DevExpress.Utils.PointFloat(381.625F, 670.625F);
             this.xrLabel40.Multiline = true;
             this.xrLabel40.Name = "xrLabel40";
@@ -405,11 +349,7 @@
             // 
             this.xrLabel41.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Tarih]")});
-<<<<<<< HEAD
             this.xrLabel41.Font = new DevExpress.Drawing.DXFont("Arial", 9.75F);
-=======
-            this.xrLabel41.Font = new System.Drawing.Font("Arial", 9.75F);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrLabel41.LocationFloat = new DevExpress.Utils.PointFloat(539.9999F, 502.7917F);
             this.xrLabel41.Multiline = true;
             this.xrLabel41.Name = "xrLabel41";
@@ -424,11 +364,7 @@
             // 
             this.xrLabel42.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[FaturaNo]")});
-<<<<<<< HEAD
             this.xrLabel42.Font = new DevExpress.Drawing.DXFont("Arial", 9.75F);
-=======
-            this.xrLabel42.Font = new System.Drawing.Font("Arial", 9.75F);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrLabel42.LocationFloat = new DevExpress.Utils.PointFloat(540F, 548.7917F);
             this.xrLabel42.Multiline = true;
             this.xrLabel42.Name = "xrLabel42";
@@ -442,11 +378,7 @@
             // 
             this.xrLabel43.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Aciklama]")});
-<<<<<<< HEAD
             this.xrLabel43.Font = new DevExpress.Drawing.DXFont("Arial", 9.75F);
-=======
-            this.xrLabel43.Font = new System.Drawing.Font("Arial", 9.75F);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrLabel43.LocationFloat = new DevExpress.Utils.PointFloat(10.00001F, 767.75F);
             this.xrLabel43.Multiline = true;
             this.xrLabel43.Name = "xrLabel43";
@@ -458,11 +390,7 @@
             // 
             this.xrLabel44.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[KdvOrani]")});
-<<<<<<< HEAD
             this.xrLabel44.Font = new DevExpress.Drawing.DXFont("Arial", 9.75F);
-=======
-            this.xrLabel44.Font = new System.Drawing.Font("Arial", 9.75F);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrLabel44.LocationFloat = new DevExpress.Utils.PointFloat(339.1666F, 767.75F);
             this.xrLabel44.Multiline = true;
             this.xrLabel44.Name = "xrLabel44";
@@ -476,11 +404,7 @@
             // 
             this.xrLabel45.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[KdvHaricTutar]")});
-<<<<<<< HEAD
             this.xrLabel45.Font = new DevExpress.Drawing.DXFont("Arial", 9.75F);
-=======
-            this.xrLabel45.Font = new System.Drawing.Font("Arial", 9.75F);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrLabel45.LocationFloat = new DevExpress.Utils.PointFloat(539.9999F, 767.75F);
             this.xrLabel45.Multiline = true;
             this.xrLabel45.Name = "xrLabel45";
@@ -493,11 +417,7 @@
             // 
             // xrLabel46
             // 
-<<<<<<< HEAD
             this.xrLabel46.Font = new DevExpress.Drawing.DXFont("Arial", 9.75F, DevExpress.Drawing.DXFontStyle.Bold);
-=======
-            this.xrLabel46.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrLabel46.LocationFloat = new DevExpress.Utils.PointFloat(10.00001F, 883.375F);
             this.xrLabel46.Multiline = true;
             this.xrLabel46.Name = "xrLabel46";
@@ -510,11 +430,7 @@
             // 
             this.xrLabel47.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[TutarYazi]")});
-<<<<<<< HEAD
             this.xrLabel47.Font = new DevExpress.Drawing.DXFont("Arial", 9.75F);
-=======
-            this.xrLabel47.Font = new System.Drawing.Font("Arial", 9.75F);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrLabel47.LocationFloat = new DevExpress.Utils.PointFloat(66.25007F, 883.375F);
             this.xrLabel47.Multiline = true;
             this.xrLabel47.Name = "xrLabel47";
@@ -524,11 +440,7 @@
             // 
             // xrLabel48
             // 
-<<<<<<< HEAD
             this.xrLabel48.Font = new DevExpress.Drawing.DXFont("Arial", 9.75F);
-=======
-            this.xrLabel48.Font = new System.Drawing.Font("Arial", 9.75F);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrLabel48.LocationFloat = new DevExpress.Utils.PointFloat(393.3333F, 883.375F);
             this.xrLabel48.Multiline = true;
             this.xrLabel48.Name = "xrLabel48";
@@ -543,11 +455,7 @@
             // 
             this.xrLabel49.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[KdvHaricTutar]")});
-<<<<<<< HEAD
             this.xrLabel49.Font = new DevExpress.Drawing.DXFont("Arial", 9.75F);
-=======
-            this.xrLabel49.Font = new System.Drawing.Font("Arial", 9.75F);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrLabel49.LocationFloat = new DevExpress.Utils.PointFloat(539.9999F, 883.375F);
             this.xrLabel49.Multiline = true;
             this.xrLabel49.Name = "xrLabel49";
@@ -560,11 +468,7 @@
             // 
             // xrLabel50
             // 
-<<<<<<< HEAD
             this.xrLabel50.Font = new DevExpress.Drawing.DXFont("Arial", 9.75F);
-=======
-            this.xrLabel50.Font = new System.Drawing.Font("Arial", 9.75F);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrLabel50.LocationFloat = new DevExpress.Utils.PointFloat(393.3333F, 906.3749F);
             this.xrLabel50.Multiline = true;
             this.xrLabel50.Name = "xrLabel50";
@@ -579,11 +483,7 @@
             // 
             this.xrLabel51.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[KdvTutari]")});
-<<<<<<< HEAD
             this.xrLabel51.Font = new DevExpress.Drawing.DXFont("Arial", 9.75F);
-=======
-            this.xrLabel51.Font = new System.Drawing.Font("Arial", 9.75F);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrLabel51.LocationFloat = new DevExpress.Utils.PointFloat(539.9999F, 906.3749F);
             this.xrLabel51.Multiline = true;
             this.xrLabel51.Name = "xrLabel51";
@@ -596,11 +496,7 @@
             // 
             // xrLabel52
             // 
-<<<<<<< HEAD
             this.xrLabel52.Font = new DevExpress.Drawing.DXFont("Arial", 9.75F);
-=======
-            this.xrLabel52.Font = new System.Drawing.Font("Arial", 9.75F);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrLabel52.LocationFloat = new DevExpress.Utils.PointFloat(393.3333F, 929.3749F);
             this.xrLabel52.Multiline = true;
             this.xrLabel52.Name = "xrLabel52";
@@ -615,11 +511,7 @@
             // 
             this.xrLabel53.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[ToplamTutar]")});
-<<<<<<< HEAD
             this.xrLabel53.Font = new DevExpress.Drawing.DXFont("Arial", 9.75F);
-=======
-            this.xrLabel53.Font = new System.Drawing.Font("Arial", 9.75F);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrLabel53.LocationFloat = new DevExpress.Utils.PointFloat(540F, 929.3749F);
             this.xrLabel53.Multiline = true;
             this.xrLabel53.Name = "xrLabel53";
@@ -634,11 +526,7 @@
             // 
             this.xrLabel54.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Soyadi]")});
-<<<<<<< HEAD
             this.xrLabel54.Font = new DevExpress.Drawing.DXFont("Arial", 9.75F);
-=======
-            this.xrLabel54.Font = new System.Drawing.Font("Arial", 9.75F);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrLabel54.LocationFloat = new DevExpress.Utils.PointFloat(381.625F, 525.7917F);
             this.xrLabel54.Multiline = true;
             this.xrLabel54.Name = "xrLabel54";
@@ -652,11 +540,7 @@
             // 
             this.xrLabel27.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Soyadi]")});
-<<<<<<< HEAD
             this.xrLabel27.Font = new DevExpress.Drawing.DXFont("Arial", 9.75F);
-=======
-            this.xrLabel27.Font = new System.Drawing.Font("Arial", 9.75F);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrLabel27.LocationFloat = new DevExpress.Utils.PointFloat(381.625F, 33.00001F);
             this.xrLabel27.Multiline = true;
             this.xrLabel27.Name = "xrLabel27";
@@ -670,11 +554,7 @@
             // 
             this.xrLabel26.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[ToplamTutar]")});
-<<<<<<< HEAD
             this.xrLabel26.Font = new DevExpress.Drawing.DXFont("Arial", 9.75F);
-=======
-            this.xrLabel26.Font = new System.Drawing.Font("Arial", 9.75F);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrLabel26.LocationFloat = new DevExpress.Utils.PointFloat(540F, 436.5833F);
             this.xrLabel26.Multiline = true;
             this.xrLabel26.Name = "xrLabel26";
@@ -687,11 +567,7 @@
             // 
             // xrLabel25
             // 
-<<<<<<< HEAD
             this.xrLabel25.Font = new DevExpress.Drawing.DXFont("Arial", 9.75F);
-=======
-            this.xrLabel25.Font = new System.Drawing.Font("Arial", 9.75F);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrLabel25.LocationFloat = new DevExpress.Utils.PointFloat(393.3333F, 436.5833F);
             this.xrLabel25.Multiline = true;
             this.xrLabel25.Name = "xrLabel25";
@@ -706,11 +582,7 @@
             // 
             this.xrLabel24.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[KdvTutari]")});
-<<<<<<< HEAD
             this.xrLabel24.Font = new DevExpress.Drawing.DXFont("Arial", 9.75F);
-=======
-            this.xrLabel24.Font = new System.Drawing.Font("Arial", 9.75F);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrLabel24.LocationFloat = new DevExpress.Utils.PointFloat(539.9999F, 413.5833F);
             this.xrLabel24.Multiline = true;
             this.xrLabel24.Name = "xrLabel24";
@@ -723,11 +595,7 @@
             // 
             // xrLabel23
             // 
-<<<<<<< HEAD
             this.xrLabel23.Font = new DevExpress.Drawing.DXFont("Arial", 9.75F);
-=======
-            this.xrLabel23.Font = new System.Drawing.Font("Arial", 9.75F);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrLabel23.LocationFloat = new DevExpress.Utils.PointFloat(393.3333F, 413.5833F);
             this.xrLabel23.Multiline = true;
             this.xrLabel23.Name = "xrLabel23";
@@ -742,11 +610,7 @@
             // 
             this.xrLabel22.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[KdvHaricTutar]")});
-<<<<<<< HEAD
             this.xrLabel22.Font = new DevExpress.Drawing.DXFont("Arial", 9.75F);
-=======
-            this.xrLabel22.Font = new System.Drawing.Font("Arial", 9.75F);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrLabel22.LocationFloat = new DevExpress.Utils.PointFloat(539.9999F, 390.5833F);
             this.xrLabel22.Multiline = true;
             this.xrLabel22.Name = "xrLabel22";
@@ -759,11 +623,7 @@
             // 
             // xrLabel21
             // 
-<<<<<<< HEAD
             this.xrLabel21.Font = new DevExpress.Drawing.DXFont("Arial", 9.75F);
-=======
-            this.xrLabel21.Font = new System.Drawing.Font("Arial", 9.75F);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrLabel21.LocationFloat = new DevExpress.Utils.PointFloat(393.3333F, 390.5833F);
             this.xrLabel21.Multiline = true;
             this.xrLabel21.Name = "xrLabel21";
@@ -778,11 +638,7 @@
             // 
             this.xrLabel20.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[TutarYazi]")});
-<<<<<<< HEAD
             this.xrLabel20.Font = new DevExpress.Drawing.DXFont("Arial", 9.75F);
-=======
-            this.xrLabel20.Font = new System.Drawing.Font("Arial", 9.75F);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrLabel20.LocationFloat = new DevExpress.Utils.PointFloat(66.25004F, 390.5833F);
             this.xrLabel20.Multiline = true;
             this.xrLabel20.Name = "xrLabel20";
@@ -792,11 +648,7 @@
             // 
             // xrLabel19
             // 
-<<<<<<< HEAD
             this.xrLabel19.Font = new DevExpress.Drawing.DXFont("Arial", 9.75F, DevExpress.Drawing.DXFontStyle.Bold);
-=======
-            this.xrLabel19.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrLabel19.LocationFloat = new DevExpress.Utils.PointFloat(10.00001F, 390.5833F);
             this.xrLabel19.Multiline = true;
             this.xrLabel19.Name = "xrLabel19";
@@ -809,11 +661,7 @@
             // 
             this.xrLabel18.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[KdvHaricTutar]")});
-<<<<<<< HEAD
             this.xrLabel18.Font = new DevExpress.Drawing.DXFont("Arial", 9.75F);
-=======
-            this.xrLabel18.Font = new System.Drawing.Font("Arial", 9.75F);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrLabel18.LocationFloat = new DevExpress.Utils.PointFloat(539.9999F, 274.9583F);
             this.xrLabel18.Multiline = true;
             this.xrLabel18.Name = "xrLabel18";
@@ -828,11 +676,7 @@
             // 
             this.xrLabel17.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[KdvOrani]")});
-<<<<<<< HEAD
             this.xrLabel17.Font = new DevExpress.Drawing.DXFont("Arial", 9.75F);
-=======
-            this.xrLabel17.Font = new System.Drawing.Font("Arial", 9.75F);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrLabel17.LocationFloat = new DevExpress.Utils.PointFloat(339.1666F, 274.9583F);
             this.xrLabel17.Multiline = true;
             this.xrLabel17.Name = "xrLabel17";
@@ -846,11 +690,7 @@
             // 
             this.xrLabel16.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Aciklama]")});
-<<<<<<< HEAD
             this.xrLabel16.Font = new DevExpress.Drawing.DXFont("Arial", 9.75F);
-=======
-            this.xrLabel16.Font = new System.Drawing.Font("Arial", 9.75F);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrLabel16.LocationFloat = new DevExpress.Utils.PointFloat(10.00001F, 274.9583F);
             this.xrLabel16.Multiline = true;
             this.xrLabel16.Name = "xrLabel16";
@@ -862,11 +702,7 @@
             // 
             this.xrLabel15.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[FaturaNo]")});
-<<<<<<< HEAD
             this.xrLabel15.Font = new DevExpress.Drawing.DXFont("Arial", 9.75F);
-=======
-            this.xrLabel15.Font = new System.Drawing.Font("Arial", 9.75F);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrLabel15.LocationFloat = new DevExpress.Utils.PointFloat(540F, 56.00001F);
             this.xrLabel15.Multiline = true;
             this.xrLabel15.Name = "xrLabel15";
@@ -880,11 +716,7 @@
             // 
             this.xrLabel14.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Tarih]")});
-<<<<<<< HEAD
             this.xrLabel14.Font = new DevExpress.Drawing.DXFont("Arial", 9.75F);
-=======
-            this.xrLabel14.Font = new System.Drawing.Font("Arial", 9.75F);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrLabel14.LocationFloat = new DevExpress.Utils.PointFloat(539.9999F, 10.00001F);
             this.xrLabel14.Multiline = true;
             this.xrLabel14.Name = "xrLabel14";
@@ -899,11 +731,7 @@
             // 
             this.xrLabel13.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[FaturaAdresIlAdi]")});
-<<<<<<< HEAD
             this.xrLabel13.Font = new DevExpress.Drawing.DXFont("Arial", 9.75F);
-=======
-            this.xrLabel13.Font = new System.Drawing.Font("Arial", 9.75F);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrLabel13.LocationFloat = new DevExpress.Utils.PointFloat(381.625F, 177.8334F);
             this.xrLabel13.Multiline = true;
             this.xrLabel13.Name = "xrLabel13";
@@ -917,11 +745,7 @@
             // 
             this.xrLabel12.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[FaturaAdresIlceAdi]")});
-<<<<<<< HEAD
             this.xrLabel12.Font = new DevExpress.Drawing.DXFont("Arial", 9.75F);
-=======
-            this.xrLabel12.Font = new System.Drawing.Font("Arial", 9.75F);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrLabel12.LocationFloat = new DevExpress.Utils.PointFloat(249.5833F, 177.8334F);
             this.xrLabel12.Multiline = true;
             this.xrLabel12.Name = "xrLabel12";
@@ -935,11 +759,7 @@
             // 
             this.xrLabel11.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[FaturaAdres]")});
-<<<<<<< HEAD
             this.xrLabel11.Font = new DevExpress.Drawing.DXFont("Arial", 9.75F);
-=======
-            this.xrLabel11.Font = new System.Drawing.Font("Arial", 9.75F);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrLabel11.LocationFloat = new DevExpress.Utils.PointFloat(249.5833F, 102F);
             this.xrLabel11.Multiline = true;
             this.xrLabel11.Name = "xrLabel11";
@@ -953,11 +773,7 @@
             // 
             this.xrLabel10.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[VeliSoyadi]")});
-<<<<<<< HEAD
             this.xrLabel10.Font = new DevExpress.Drawing.DXFont("Arial", 9.75F);
-=======
-            this.xrLabel10.Font = new System.Drawing.Font("Arial", 9.75F);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrLabel10.LocationFloat = new DevExpress.Utils.PointFloat(381.625F, 79.00003F);
             this.xrLabel10.Multiline = true;
             this.xrLabel10.Name = "xrLabel10";
@@ -972,11 +788,7 @@
             // 
             this.xrLabel9.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[VeliAdi]")});
-<<<<<<< HEAD
             this.xrLabel9.Font = new DevExpress.Drawing.DXFont("Arial", 9.75F);
-=======
-            this.xrLabel9.Font = new System.Drawing.Font("Arial", 9.75F);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrLabel9.LocationFloat = new DevExpress.Utils.PointFloat(249.5833F, 79.00003F);
             this.xrLabel9.Multiline = true;
             this.xrLabel9.Name = "xrLabel9";
@@ -990,11 +802,7 @@
             // 
             this.xrLabel8.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[SinifAdi]")});
-<<<<<<< HEAD
             this.xrLabel8.Font = new DevExpress.Drawing.DXFont("Arial", 9.75F);
-=======
-            this.xrLabel8.Font = new System.Drawing.Font("Arial", 9.75F);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrLabel8.LocationFloat = new DevExpress.Utils.PointFloat(249.5833F, 56.00001F);
             this.xrLabel8.Multiline = true;
             this.xrLabel8.Name = "xrLabel8";
@@ -1008,11 +816,7 @@
             // 
             this.xrLabel7.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Adi]")});
-<<<<<<< HEAD
             this.xrLabel7.Font = new DevExpress.Drawing.DXFont("Arial", 9.75F);
-=======
-            this.xrLabel7.Font = new System.Drawing.Font("Arial", 9.75F);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrLabel7.LocationFloat = new DevExpress.Utils.PointFloat(249.5833F, 33.00001F);
             this.xrLabel7.Multiline = true;
             this.xrLabel7.Name = "xrLabel7";
@@ -1026,11 +830,7 @@
             // 
             this.xrLabel6.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[TcKimlikNo]")});
-<<<<<<< HEAD
             this.xrLabel6.Font = new DevExpress.Drawing.DXFont("Arial", 9.75F);
-=======
-            this.xrLabel6.Font = new System.Drawing.Font("Arial", 9.75F);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrLabel6.LocationFloat = new DevExpress.Utils.PointFloat(249.5833F, 10.00001F);
             this.xrLabel6.Multiline = true;
             this.xrLabel6.Name = "xrLabel6";
@@ -1042,11 +842,7 @@
             // 
             // xrLabel5
             // 
-<<<<<<< HEAD
             this.xrLabel5.Font = new DevExpress.Drawing.DXFont("Arial", 9.75F, DevExpress.Drawing.DXFontStyle.Bold);
-=======
-            this.xrLabel5.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrLabel5.LocationFloat = new DevExpress.Utils.PointFloat(10.00001F, 102F);
             this.xrLabel5.Multiline = true;
             this.xrLabel5.Name = "xrLabel5";
@@ -1059,11 +855,7 @@
             // 
             // xrLabel4
             // 
-<<<<<<< HEAD
             this.xrLabel4.Font = new DevExpress.Drawing.DXFont("Arial", 9.75F, DevExpress.Drawing.DXFontStyle.Bold);
-=======
-            this.xrLabel4.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrLabel4.LocationFloat = new DevExpress.Utils.PointFloat(10.00001F, 79.00003F);
             this.xrLabel4.Multiline = true;
             this.xrLabel4.Name = "xrLabel4";
@@ -1076,11 +868,7 @@
             // 
             // xrLabel3
             // 
-<<<<<<< HEAD
             this.xrLabel3.Font = new DevExpress.Drawing.DXFont("Arial", 9.75F, DevExpress.Drawing.DXFontStyle.Bold);
-=======
-            this.xrLabel3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrLabel3.LocationFloat = new DevExpress.Utils.PointFloat(10.00001F, 56.00001F);
             this.xrLabel3.Multiline = true;
             this.xrLabel3.Name = "xrLabel3";
@@ -1093,11 +881,7 @@
             // 
             // xrLabel2
             // 
-<<<<<<< HEAD
             this.xrLabel2.Font = new DevExpress.Drawing.DXFont("Arial", 9.75F, DevExpress.Drawing.DXFontStyle.Bold);
-=======
-            this.xrLabel2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrLabel2.LocationFloat = new DevExpress.Utils.PointFloat(10.00001F, 33.00001F);
             this.xrLabel2.Multiline = true;
             this.xrLabel2.Name = "xrLabel2";
@@ -1110,11 +894,7 @@
             // 
             // xrLabel1
             // 
-<<<<<<< HEAD
             this.xrLabel1.Font = new DevExpress.Drawing.DXFont("Arial", 9.75F, DevExpress.Drawing.DXFontStyle.Bold);
-=======
-            this.xrLabel1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(10.00001F, 10.00001F);
             this.xrLabel1.Multiline = true;
             this.xrLabel1.Name = "xrLabel1";
@@ -1127,11 +907,7 @@
             // 
             // Fatura_Bilgileri
             // 
-<<<<<<< HEAD
             this.Fatura_Bilgileri.DataSource = typeof(AsamaGlobal.ERP.Model.Dto.FaturaR);
-=======
-            this.Fatura_Bilgileri.DataSource = typeof(AbcYazilim.OgrenciTakip.Model.Dto.FaturaR);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.Fatura_Bilgileri.Name = "Fatura_Bilgileri";
             // 
             // FaturaRaporu
@@ -1144,13 +920,8 @@
             this.ComponentStorage.AddRange(new System.ComponentModel.IComponent[] {
             this.Fatura_Bilgileri});
             this.DataSource = this.Fatura_Bilgileri;
-<<<<<<< HEAD
             this.Font = new DevExpress.Drawing.DXFont("Arial", 9.75F);
             this.Margins = new DevExpress.Drawing.DXMargins(100, 100, 52, 43);
-=======
-            this.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.Margins = new System.Drawing.Printing.Margins(100, 100, 52, 43);
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
             this.Version = "22.1";
             ((System.ComponentModel.ISupportInitialize)(this.Fatura_Bilgileri)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();

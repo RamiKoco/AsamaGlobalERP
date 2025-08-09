@@ -6,8 +6,14 @@ using AsamaGlobal.ERP.UI.Win.Forms.CariForms.CariSubeForms;
 using AsamaGlobal.ERP.UI.Win.Functions;
 using AsamaGlobal.ERP.UI.Win.Show;
 using DevExpress.XtraBars;
+using AsamaGlobal.ERP.UI.Win.Forms.CariForms;
+using AsamaGlobal;
+using AsamaGlobal.ERP;
+using AsamaGlobal.ERP.UI;
+using AsamaGlobal.ERP.UI.Win;
+using AsamaGlobal.ERP.UI.Win.Forms;
 
-namespace AsamaGlobal.ERP.UI.Win.Forms.CariForms
+namespace AsamaGlobal.ERP.UI.Win.Forms.CariForms.CariSubeForms
 {
     public partial class CariSubelerListForm : BaseListForm
     {
@@ -18,7 +24,7 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.CariForms
         public CariSubelerListForm(params object[] prm)
         {
             InitializeComponent();
-            Bll = new CariSubelerBll();
+            Bll = new Bll.General.CarilerBll.CariSubeBll.CariSubelerBll();
 
             _carilerId = (long)prm[0];
             _carilerAdi = prm[1].ToString();
@@ -39,7 +45,7 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.CariForms
         }
         protected override void Listele()
         {
-            Tablo.GridControl.DataSource = ((CariSubelerBll)Bll).List(x => x.Durum == AktifKartlariGoster && x.CarilerId == _carilerId);
+            Tablo.GridControl.DataSource = ((Bll.General.CarilerBll.CariSubeBll.CariSubelerBll)Bll).List(x => x.Durum == AktifKartlariGoster && x.CarilerId == _carilerId);
         }
 
         protected override void ShowEditForm(long id)

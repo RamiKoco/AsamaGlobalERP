@@ -3,7 +3,7 @@ using AsamaGlobal.ERP.Data.ERPMigration;
 using AsamaGlobal.ERP.Model.Entities;
 using AsamaGlobal.ERP.Model.Entities.CariEntity;
 using AsamaGlobal.ERP.Model.Entities.CariEntity.CariSube;
-using AsamaGlobal.ERP.Model.Entities.KisiEntity;
+using AsamaGlobal.ERP.Model.Entities.Kisi;
 using AsamaGlobal.ERP.Model.Entities.PersonelEntity;
 using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
@@ -32,8 +32,7 @@ namespace AsamaGlobal.ERP.Data.Contexts
             
             modelBuilder.Entity<Il>().HasMany(x => x.Ilce).WithRequired().WillCascadeOnDelete(true);
             modelBuilder.Entity<Kisi>().HasMany(x => x.KisiAdres).WithRequired().WillCascadeOnDelete(true);
-            //modelBuilder.Entity<Kisi>().HasMany(x => x.KisiIletisim).WithRequired().WillCascadeOnDelete(true);
-            modelBuilder.Entity<Kisi>().HasMany(x => x.IletisimTest).WithRequired().WillCascadeOnDelete(true);
+            modelBuilder.Entity<Kisi>().HasMany(x => x.KisiIletisim).WithRequired().WillCascadeOnDelete(true);
             modelBuilder.Entity<Personel>().HasMany(x => x.PersonelIletisim).WithRequired().WillCascadeOnDelete(true);
             modelBuilder.Entity<Personel>().HasMany(x => x.PersonelAdres).WithRequired().WillCascadeOnDelete(true);
             modelBuilder.Entity<Cariler>().HasMany(x => x.CariSubeler).WithRequired().WillCascadeOnDelete(true);
@@ -41,7 +40,6 @@ namespace AsamaGlobal.ERP.Data.Contexts
             modelBuilder.Entity<Cariler>().HasMany(x => x.CariAdres).WithRequired().WillCascadeOnDelete(true);
             modelBuilder.Entity<CariSubeler>().HasMany(x => x.CariSubeAdres).WithRequired().WillCascadeOnDelete(true);
             modelBuilder.Entity<CariSubeler>().HasMany(x => x.CariSubeIletisim).WithRequired().WillCascadeOnDelete(true);
-            modelBuilder.Entity<CariSubeler>().HasMany(x => x.CariSubeAdres).WithRequired().WillCascadeOnDelete(true);
 
             modelBuilder.Entity<Banka>().HasMany(x => x.BankaSube).WithRequired().WillCascadeOnDelete(true);
             modelBuilder.Entity<Indirim>().HasMany(x => x.IndiriminUygulanacagiHizmetBilgileri).WithRequired().WillCascadeOnDelete(true);
@@ -140,10 +138,5 @@ namespace AsamaGlobal.ERP.Data.Contexts
         public DbSet<CariAdres> CariAdres { get; set; }
         public DbSet<CariSubeAdres> CariSubeAdres { get; set; }
         public DbSet<CariSubeIletisim> CariSubeIletisim { get; set; }
-<<<<<<<< HEAD:AsamaGlobal.ERP.Data/Contexts/ERPContext.cs
-        public DbSet<IletisimTest> IletisimTest { get; set; }
-========
-        public DbSet<CariSubeAdres> CariSubeAdres { get; set; }
->>>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec:AsamaGlobal.ERP.Data/Contexts/OgrenciTakipContext.cs
     }
 }

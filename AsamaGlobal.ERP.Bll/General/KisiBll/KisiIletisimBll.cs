@@ -3,7 +3,7 @@ using AsamaGlobal.ERP.Bll.Interfaces;
 using AsamaGlobal.ERP.Common.Enums;
 using AsamaGlobal.ERP.Model.Dto.KisiDto;
 using AsamaGlobal.ERP.Model.Entities.Base;
-using AsamaGlobal.ERP.Model.Entities.KisiEntity;
+using AsamaGlobal.ERP.Model.Entities.Kisi;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace AsamaGlobal.ERP.Bll.General.KisiBll
 {
-    public class KisiIletisimBll : BaseGenelBll<KisiIletisim>, IBaseGenelBll, IBaseCommonBll
+    public class KisiIletisimBll : BaseGenelBll<KisiIletisim>, IBaseCommonBll
     {
         public KisiIletisimBll() : base(KartTuru.KisiIletisim) { }
         public KisiIletisimBll(Control ctrl) : base(ctrl, KartTuru.KisiIletisim) { }

@@ -11,8 +11,14 @@ using DevExpress.XtraEditors.Controls;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using AsamaGlobal.ERP.UI.Win.Forms.CariForms;
+using AsamaGlobal;
+using AsamaGlobal.ERP;
+using AsamaGlobal.ERP.UI;
+using AsamaGlobal.ERP.UI.Win;
+using AsamaGlobal.ERP.UI.Win.Forms;
 
-namespace AsamaGlobal.ERP.UI.Win.Forms.CariForms
+namespace AsamaGlobal.ERP.UI.Win.Forms.CariForms.CarilerForms
 {
     public partial class CariIletisimEditForm : BaseEditForm
     {

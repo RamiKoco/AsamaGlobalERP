@@ -2,7 +2,7 @@
 using AsamaGlobal.ERP.Model.Attributes;
 using AsamaGlobal.ERP.Model.Entities;
 using AsamaGlobal.ERP.Model.Entities.Base;
-using AsamaGlobal.ERP.Model.Entities.KisiEntity;
+using AsamaGlobal.ERP.Model.Entities.Kisi;
 using AsamaGlobal.ERP.Model.Entities.PersonelEntity;
 using System;
 using System.ComponentModel.DataAnnotations;

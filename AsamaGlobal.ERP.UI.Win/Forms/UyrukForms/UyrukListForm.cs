@@ -12,7 +12,7 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.UyrukForms
         public UyrukListForm()
         {
             InitializeComponent();
-            Bll = new UyrukBll();
+            Bll = new Bll.General.UyrukBll();
         }
         protected override void DegiskenleriDoldur()
         {
@@ -24,7 +24,7 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.UyrukForms
 
         protected override void Listele()
         {
-            Tablo.GridControl.DataSource = ((UyrukBll)Bll).List(FilterFunctions.Filter<Uyruk>(AktifKartlariGoster));
+            Tablo.GridControl.DataSource = ((Bll.General.UyrukBll)Bll).List(FilterFunctions.Filter<Uyruk>(AktifKartlariGoster));
         }
     }
 }

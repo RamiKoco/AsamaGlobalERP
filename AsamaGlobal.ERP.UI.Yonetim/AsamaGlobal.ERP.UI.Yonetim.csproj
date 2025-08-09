@@ -8,13 +8,8 @@
     <ProjectGuid>{D5EDFC25-5BCC-4184-B84F-55D4AB97DE50}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-<<<<<<< HEAD
     <RootNamespace>AsamaGlobal.ERP.UI.Yonetim</RootNamespace>
     <AssemblyName>YonetimModulu</AssemblyName>
-=======
-    <RootNamespace>AbcYazilim.OgrenciTakip.UI.Yonetim</RootNamespace>
-    <AssemblyName>Yönetim Modülü</AssemblyName>
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
@@ -44,7 +39,6 @@
     <ApplicationIcon>Resources\Webalys-Kameleon.pics-Programming.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-<<<<<<< HEAD
     <Reference Include="DevExpress.BonusSkins.v24.1" />
     <Reference Include="DevExpress.Data.Desktop.v24.1" />
     <Reference Include="DevExpress.Data.v24.1" />
@@ -62,35 +56,6 @@
     <Reference Include="DevExpress.XtraCharts.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraReports.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraReports.v24.1.Extensions, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-=======
-    <Reference Include="AbcYazilim.OgrenciTakip.Bll">
-      <HintPath>..\AbcYazilim.OgrenciTakip.Bll\bin\Debug\AbcYazilim.OgrenciTakip.Bll.dll</HintPath>
-    </Reference>
-    <Reference Include="AbcYazilim.OgrenciTakip.Common">
-      <HintPath>..\AbcYazilim.OgrenciTakip.Common\bin\Debug\AbcYazilim.OgrenciTakip.Common.dll</HintPath>
-    </Reference>
-    <Reference Include="AbcYazilim.OgrenciTakip.Data">
-      <HintPath>..\AbcYazilim.OgrenciTakip.Data\bin\Debug\AbcYazilim.OgrenciTakip.Data.dll</HintPath>
-    </Reference>
-    <Reference Include="AbcYazilim.OgrenciTakip.Model">
-      <HintPath>..\AbcYazilim.OgrenciTakip.Model\bin\Debug\AbcYazilim.OgrenciTakip.Model.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.BonusSkins.v22.1" />
-    <Reference Include="DevExpress.Data.Desktop.v22.1" />
-    <Reference Include="DevExpress.Data.v22.1" />
-    <Reference Include="DevExpress.DataAccess.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Drawing.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Utils.v22.1" />
-    <Reference Include="DevExpress.Sparkline.v22.1.Core" />
-    <Reference Include="DevExpress.XtraBars.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraEditors.v22.1" />
-    <Reference Include="DevExpress.Printing.v22.1.Core" />
-    <Reference Include="DevExpress.XtraGrid.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraLayout.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraPrinting.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraReports.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraReports.v22.1.Extensions, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -162,11 +127,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-<<<<<<< HEAD
     <None Include="..\AsamaGlobal.ERP.UI.Win\App.config">
-=======
-    <None Include="..\AbcYazilim.OgrenciTakip.UI.Win\App.config">
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
       <Link>App.config</Link>
     </None>
     <None Include="packages.config" />
@@ -232,19 +193,6 @@
     <None Include="Resources\coordination_16x16.png" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
-=======
-<<<<<<<< HEAD:AsamaGlobal.ERP.UI.Yonetim/AbcYazilim.OgrenciTakip.UI.Yonetim.csproj.bak
-    <ProjectReference Include="..\AbcYazilim.OgrenciTakip.UI.Win\AbcYazilim.OgrenciTakip.UI.Win.csproj">
-========
-    <ProjectReference Include="..\AsamaGlobal.ERP.UI.Win\AsamaGlobal.ERP.UI.Win.csproj">
->>>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec:AsamaGlobal.ERP.UI.Yonetim/AsamaGlobal.ERP.UI.Yonetim.csproj
-      <Project>{EA68AA16-C501-4B84-AA4A-C516A43803E1}</Project>
-      <Name>AbcYazilim.OgrenciTakip.UI.Win</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
     <None Include="Resources\background-image-g4b741baf0_640.png" />
   </ItemGroup>
   <ItemGroup>
@@ -256,7 +204,6 @@
   <ItemGroup>
     <None Include="Resources\Webalys-Kameleon.pics-Programming.ico" />
   </ItemGroup>
-<<<<<<< HEAD
   <ItemGroup>
     <ProjectReference Include="..\AsamaGlobal.ERP.Bll\AsamaGlobal.ERP.Bll.csproj">
       <Project>{0d2b8a32-0177-4693-b3f2-56f8ede45f51}</Project>
@@ -279,8 +226,6 @@
       <Name>AsamaGlobal.ERP.UI.Win</Name>
     </ProjectReference>
   </ItemGroup>
-=======
->>>>>>> 92ec3194ed8d28bb6f8a79583dd73b2b425724ec
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
