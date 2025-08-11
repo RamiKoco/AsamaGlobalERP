@@ -2,12 +2,13 @@
 using AbcYazilim.OgrenciTakip.Model.Entities;
 using AsamaGlobal.ERP.Model.Attributes;
 using AsamaGlobal.ERP.Model.Entities.Base;
+using AsamaGlobal.ERP.Model.Entities.CariEntity;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace AsamaGlobal.ERP.Model.Entities.CariEntity
+namespace AsamaGlobal.ERP.Model.Entities
 {
-    public class CariAdres : BaseEntityDurum
+    public class GenelAdres : BaseEntityDurum
     {
         [Index("IX_Kod", IsUnique = false)]
         public override string Kod { get; set; }
@@ -24,10 +25,10 @@ namespace AsamaGlobal.ERP.Model.Entities.CariEntity
 
         [StringLength(500)]
         public string Aciklama { get; set; }
-
+        public KayitTuru KayitTuru { get; set; }
         public AdresTipi AdresTipi { get; set; } = AdresTipi.Genel;
 
-        public long CarilerId { get; set; }
+        public long? CarilerId { get; set; }
 
         public long? UlkeId { get; set; }
         public long? IlId { get; set; }

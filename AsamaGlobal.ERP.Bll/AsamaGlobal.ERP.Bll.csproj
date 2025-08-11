@@ -75,7 +75,6 @@
     <Compile Include="General\BelgeTuruBll.cs" />
     <Compile Include="General\BilgiNotlariBll.cs" />
     <Compile Include="General\CariBll.cs" />
-    <Compile Include="General\CarilerBll\CariAdresBll.cs" />
     <Compile Include="General\CarilerBll\CarilerBll.cs" />
     <Compile Include="General\CarilerBll\CariSubeBll\CariSubeAdresBll.cs" />
     <Compile Include="General\CarilerBll\CariSubeBll\CariSubelerBll.cs" />
@@ -90,6 +89,7 @@
     <Compile Include="General\FiltreBll.cs" />
     <Compile Include="General\GecikmeAciklamalariBll.cs" />
     <Compile Include="General\GelirDagilimRaporuBll.cs" />
+    <Compile Include="General\GenelAdresBll.cs" />
     <Compile Include="General\GenelAmacliRaporBll.cs" />
     <Compile Include="General\GenelIletisimBll.cs" />
     <Compile Include="General\GeriOdemeBilgileriBll.cs" />

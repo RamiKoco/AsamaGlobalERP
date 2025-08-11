@@ -1,12 +1,12 @@
 ﻿using AbcYazilim.OgrenciTakip.Common.Enums;
+using AsamaGlobal.ERP.Model.Entities;
 using AsamaGlobal.ERP.Model.Entities.Base;
-using AsamaGlobal.ERP.Model.Entities.CariEntity;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace AsamaGlobal.ERP.Model.Dto.CariDto
+namespace AsamaGlobal.ERP.Model.Dto
 {
     [NotMapped]
-    public class CariAdresS: CariAdres
+    public class GenelAdresS: GenelAdres
     {
         public string AdresTurleriAdi { get; set; }
         public string UlkeAdi { get; set; }
@@ -15,8 +15,9 @@ namespace AsamaGlobal.ERP.Model.Dto.CariDto
         public string OzelKod1Adi { get; set; }
         public string OzelKod2Adi { get; set; }
     }
-    public class CariAdresL : BaseEntity
+    public class GenelAdresL: BaseEntity
     {
+        public KayitTuru KayitTuru { get; set; }
         public string UlkeAdi { get; set; }
         public string IlAdi { get; set; }
         public string IlceAdi { get; set; }

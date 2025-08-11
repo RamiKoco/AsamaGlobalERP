@@ -1,26 +1,20 @@
-﻿using AsamaGlobal.ERP.Bll.General.CarilerBll;
+﻿using AsamaGlobal.ERP.Bll.General;
 using AsamaGlobal.ERP.Common.Enums;
 using AsamaGlobal.ERP.UI.Win.Forms.BaseForms;
 using AsamaGlobal.ERP.UI.Win.Show;
-using AsamaGlobal.ERP.UI.Win.Forms.CariForms;
-using AsamaGlobal;
-using AsamaGlobal.ERP;
-using AsamaGlobal.ERP.UI;
-using AsamaGlobal.ERP.UI.Win;
-using AsamaGlobal.ERP.UI.Win.Forms;
 
 namespace AsamaGlobal.ERP.UI.Win.Forms.CariForms.CarilerForms
 {
-    public partial class CariAdresListForm :BaseListForm
+    public partial class GenelAdresListForm : BaseListForm
     {
         #region Variables
         private readonly long _cariId;
         private readonly string _cariAdi;
         #endregion
-        public CariAdresListForm(params object[] prm)
+        public GenelAdresListForm(params object[] prm)
         {
             InitializeComponent();
-            Bll = new CariAdresBll();
+            Bll = new GenelAdresBll();
 
             _cariId = (long)prm[0];
             _cariAdi = prm[1].ToString();
@@ -28,17 +22,17 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.CariForms.CarilerForms
         protected override void DegiskenleriDoldur()
         {
             Tablo = tablo;
-            BaseKartTuru = KartTuru.CariAdres;
+            BaseKartTuru = KartTuru.GenelAdres;
             Navigator = longNavigator.Navigator;
             Text = Text + $" - ( {_cariAdi} )";
         }
         protected override void Listele()
         {
-            Tablo.GridControl.DataSource = ((CariAdresBll)Bll).List(x => x.Durum == AktifKartlariGoster && x.CarilerId == _cariId);
+            Tablo.GridControl.DataSource = ((GenelAdresBll)Bll).List(x => x.Durum == AktifKartlariGoster && x.CarilerId == _cariId);
         }
         protected override void ShowEditForm(long id)
         {
-            var result = ShowEditForms<CarilerForms.CariAdresEditForm>.ShowDialogEditForm(KartTuru.CariAdres, id, _cariId, _cariAdi);
+            var result = ShowEditForms<CarilerForms.GenelAdresEditForm>.ShowDialogEditForm(KartTuru.GenelAdres, id, _cariId, _cariAdi);
             ShowEditFormDefault(result);
 
         }

@@ -1,29 +1,28 @@
 ﻿using AsamaGlobal.ERP.Bll.Base;
 using AsamaGlobal.ERP.Bll.Interfaces;
 using AsamaGlobal.ERP.Common.Enums;
-using AsamaGlobal.ERP.Model.Dto.CariDto;
+using AsamaGlobal.ERP.Model.Dto;
+using AsamaGlobal.ERP.Model.Entities;
 using AsamaGlobal.ERP.Model.Entities.Base;
-using AsamaGlobal.ERP.Model.Entities.CariEntity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Windows.Forms;
 
-namespace AsamaGlobal.ERP.Bll.General.CarilerBll
+namespace AsamaGlobal.ERP.Bll.General
 {
-    public class CariAdresBll : BaseGenelBll<CariAdres>, IBaseGenelBll, IBaseCommonBll
+    public class GenelAdresBll : BaseGenelBll<GenelAdres>, IBaseGenelBll, IBaseCommonBll
     {
-        public CariAdresBll() : base(KartTuru.CariAdres) { }
-
-        public CariAdresBll(Control ctrl) : base(ctrl, KartTuru.CariAdres) { }
-        public override BaseEntity Single(Expression<Func<CariAdres, bool>> filter)
+        public GenelAdresBll() : base(KartTuru.GenelAdres) { }
+        public GenelAdresBll(Control ctrl) : base(ctrl, KartTuru.GenelAdres) { }
+        public override BaseEntity Single(Expression<Func<GenelAdres, bool>> filter)
         {
-            return BaseSingle(filter, x => new CariAdresS
+            return BaseSingle(filter, x => new GenelAdresS
             {
-
                 Id = x.Id,
                 Kod = x.Kod,
+                KayitTuru = x.KayitTuru,
                 Baslik = x.Baslik,
                 AdresTipi = x.AdresTipi,
                 AdresNotu = x.AdresNotu,
@@ -51,12 +50,13 @@ namespace AsamaGlobal.ERP.Bll.General.CarilerBll
 
             });
         }
-        public override IEnumerable<BaseEntity> List(Expression<Func<CariAdres, bool>> filter)
+        public override IEnumerable<BaseEntity> List(Expression<Func<GenelAdres, bool>> filter)
         {
-            return BaseList(filter, x => new CariAdresL
+            return BaseList(filter, x => new GenelAdresL
             {
                 Id = x.Id,
                 Kod = x.Kod,
+                KayitTuru = x.KayitTuru,
                 Baslik = x.Baslik,
                 AdresTipi = x.AdresTipi,
                 AdresNotu = x.AdresNotu,

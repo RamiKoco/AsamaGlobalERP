@@ -6,12 +6,6 @@ using AsamaGlobal.ERP.UI.Win.Forms.BaseForms;
 using AsamaGlobal.ERP.UI.Win.Functions;
 using AsamaGlobal.ERP.UI.Win.Show;
 using DevExpress.XtraBars;
-using AsamaGlobal.ERP.UI.Win.Forms.CariForms;
-using AsamaGlobal;
-using AsamaGlobal.ERP;
-using AsamaGlobal.ERP.UI;
-using AsamaGlobal.ERP.UI.Win;
-using AsamaGlobal.ERP.UI.Win.Forms;
 
 namespace AsamaGlobal.ERP.UI.Win.Forms.CariForms.CarilerForms
 {
@@ -65,7 +59,7 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.CariForms.CarilerForms
             }
             else if (barItem == btnAdresKartlari)
             {
-                ShowListForms<CarilerForms.CariAdresListForm>.ShowListForm(KartTuru.CariAdres, entity.Id, entity.CariAdi);
+                ShowListForms<CarilerForms.GenelAdresListForm>.ShowListForm(KartTuru.GenelAdres, entity.Id, entity.CariAdi);
             }
         }
     }

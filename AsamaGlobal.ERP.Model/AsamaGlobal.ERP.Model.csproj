@@ -65,7 +65,6 @@
     <Compile Include="Dto\BelgeTuruDto.cs" />
     <Compile Include="Dto\BilgiNotlariDto.cs" />
     <Compile Include="Dto\CariDto.cs" />
-    <Compile Include="Dto\CariDto\CariAdresDto.cs" />
     <Compile Include="Dto\CariDto\CarilerDto.cs" />
     <Compile Include="Dto\CariDto\CariSubeDto\CariSubeAdresDto.cs" />
     <Compile Include="Dto\CariDto\CariSubeDto\CariSubelerDto.cs" />
@@ -74,6 +73,7 @@
     <Compile Include="Dto\EvrakBilgileriDto.cs" />
     <Compile Include="Dto\FaturaDto.cs" />
     <Compile Include="Dto\GecikmeAciklamalariDto.cs" />
+    <Compile Include="Dto\GenelAdresDto.cs" />
     <Compile Include="Dto\GenelIletisimDto.cs" />
     <Compile Include="Dto\GeriOdemeBilgileriDto.cs" />
     <Compile Include="Dto\HizmetBilgileriDto.cs" />
@@ -121,7 +121,6 @@
     <Compile Include="Entities\AdresTurleri.cs" />
     <Compile Include="Entities\BaglantiAyarlari.cs" />
     <Compile Include="Entities\BelgeTuru.cs" />
-    <Compile Include="Entities\CariEntity\CariAdres.cs" />
     <Compile Include="Entities\CariEntity\Cariler.cs" />
     <Compile Include="Entities\CariEntity\CariSube\CariSubeAdres.cs" />
     <Compile Include="Entities\CariEntity\CariSube\CariSubeler.cs" />
@@ -150,6 +149,7 @@
     <Compile Include="Entities\EvrakBilgileri.cs" />
     <Compile Include="Entities\Fatura.cs" />
     <Compile Include="Entities\Filtre.cs" />
+    <Compile Include="Entities\GenelAdres.cs" />
     <Compile Include="Entities\GenelIletisim.cs" />
     <Compile Include="Entities\GeriOdemeBilgileri.cs" />
     <Compile Include="Entities\Gorev.cs" />

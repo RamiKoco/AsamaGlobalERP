@@ -52,9 +52,6 @@ namespace AsamaGlobal.ERP.Model.Entities.CariEntity
         public OzelKod OzelKod5 { get; set; }
 
         [InverseProperty("Cariler")]
-        public ICollection<CariSubeler> CariSubeler { get; set; }
-        [InverseProperty("Cariler")]
-        public ICollection<CariAdres> CariAdres { get; set; }      
-
+        public ICollection<CariSubeler> CariSubeler { get; set; } 
     }
 }

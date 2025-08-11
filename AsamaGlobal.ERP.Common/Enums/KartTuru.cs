@@ -216,6 +216,8 @@ namespace AsamaGlobal.ERP.Common.Enums
         KisiIletisim = 105,
         [Description("Cari İletişim Kartı")]
         CariIletisim = 106,
+        [Description("Genel Adres Kartı")]
+        GenelAdres = 107,
 
     }
 }
