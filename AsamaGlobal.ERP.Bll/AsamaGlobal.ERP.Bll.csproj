@@ -76,7 +76,6 @@
     <Compile Include="General\BilgiNotlariBll.cs" />
     <Compile Include="General\CariBll.cs" />
     <Compile Include="General\CarilerBll\CarilerBll.cs" />
-    <Compile Include="General\CarilerBll\CariSubeBll\CariSubeAdresBll.cs" />
     <Compile Include="General\CarilerBll\CariSubeBll\CariSubelerBll.cs" />
     <Compile Include="General\DepartmanBll.cs" />
     <Compile Include="General\DonemBll.cs" />

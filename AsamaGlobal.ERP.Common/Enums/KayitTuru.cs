@@ -10,7 +10,7 @@ namespace AbcYazilim.OgrenciTakip.Common.Enums
         Cari = 2,
         [Description("Personel Kartı")]
         Personel = 3,
-        [Description("Cari-Şube Kartı")]
+        [Description("Cari Şube Kartı")]
         CariSube = 4,
 
     }

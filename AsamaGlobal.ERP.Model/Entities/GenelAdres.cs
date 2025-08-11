@@ -3,6 +3,7 @@ using AbcYazilim.OgrenciTakip.Model.Entities;
 using AsamaGlobal.ERP.Model.Attributes;
 using AsamaGlobal.ERP.Model.Entities.Base;
 using AsamaGlobal.ERP.Model.Entities.CariEntity;
+using AsamaGlobal.ERP.Model.Entities.CariEntity.CariSube;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -29,7 +30,7 @@ namespace AsamaGlobal.ERP.Model.Entities
         public AdresTipi AdresTipi { get; set; } = AdresTipi.Genel;
 
         public long? CarilerId { get; set; }
-
+        public long? CariSubelerId { get; set; }
         public long? UlkeId { get; set; }
         public long? IlId { get; set; }
         public long? IlceId { get; set; }
@@ -43,6 +44,7 @@ namespace AsamaGlobal.ERP.Model.Entities
         public bool VarsayilanSevkiyatMi { get; set; } = false;
 
         public Cariler Cariler { get; set; }
+        public CariSubeler CariSubeler { get; set; }
         public Ulke Ulke { get; set; }
         public Il Il { get; set; }
         public Ilce Ilce { get; set; }

@@ -818,4 +818,4 @@
             private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
             private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
         }
-    }
+}

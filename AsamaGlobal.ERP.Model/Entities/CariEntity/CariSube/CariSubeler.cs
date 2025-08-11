@@ -1,6 +1,5 @@
 ﻿using AsamaGlobal.ERP.Model.Attributes;
 using AsamaGlobal.ERP.Model.Entities.Base;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -24,8 +23,5 @@ namespace AsamaGlobal.ERP.Model.Entities.CariEntity.CariSube
         public Cariler Cariler { get; set; }
         public OzelKod OzelKod1 { get; set; }
         public OzelKod OzelKod2 { get; set; }
-
-        [InverseProperty("CariSubeler")]
-        public ICollection<CariSubeAdres> CariSubeAdres { get; set; }
     }
 }

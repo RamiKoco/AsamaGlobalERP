@@ -32,7 +32,7 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.CariForms.CarilerForms
         }
         protected override void ShowEditForm(long id)
         {
-            var result = ShowEditForms<CarilerForms.GenelAdresEditForm>.ShowDialogEditForm(KartTuru.GenelAdres, id, _cariId, _cariAdi);
+            var result = ShowEditForms<GenelAdresEditForm>.ShowDialogEditForm(KartTuru.GenelAdres, id, _cariId, _cariAdi);
             ShowEditFormDefault(result);
 
         }

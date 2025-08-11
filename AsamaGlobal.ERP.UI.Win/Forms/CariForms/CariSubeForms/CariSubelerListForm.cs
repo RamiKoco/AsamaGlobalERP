@@ -57,7 +57,7 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.CariForms.CariSubeForms
 
             if (barItem == btnAdresKartlari)
             {
-                ShowListForms<CariSubeAdresListForm>.ShowListForm(KartTuru.CariSubeAdres, entity.Id, entity.CariSubeAdi);
+                ShowListForms<GenelAdresListForm>.ShowListForm(KartTuru.GenelAdres, entity.Id, entity.CariSubeAdi);
             }
             else if (barItem == btnIletisimKartlari)
             {

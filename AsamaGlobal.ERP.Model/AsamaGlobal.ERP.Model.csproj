@@ -66,7 +66,6 @@
     <Compile Include="Dto\BilgiNotlariDto.cs" />
     <Compile Include="Dto\CariDto.cs" />
     <Compile Include="Dto\CariDto\CarilerDto.cs" />
-    <Compile Include="Dto\CariDto\CariSubeDto\CariSubeAdresDto.cs" />
     <Compile Include="Dto\CariDto\CariSubeDto\CariSubelerDto.cs" />
     <Compile Include="Dto\EposBilgileriDto.cs" />
     <Compile Include="Dto\EtiketDto.cs" />
@@ -122,7 +121,6 @@
     <Compile Include="Entities\BaglantiAyarlari.cs" />
     <Compile Include="Entities\BelgeTuru.cs" />
     <Compile Include="Entities\CariEntity\Cariler.cs" />
-    <Compile Include="Entities\CariEntity\CariSube\CariSubeAdres.cs" />
     <Compile Include="Entities\CariEntity\CariSube\CariSubeler.cs" />
     <Compile Include="Entities\Departman.cs" />
     <Compile Include="Entities\DonemParametre.cs" />

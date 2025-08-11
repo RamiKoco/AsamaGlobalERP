@@ -279,18 +279,6 @@
     <Compile Include="Forms\CariForms\CariListForm.Designer.cs">
       <DependentUpon>CariListForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\CariForms\CariSubeForms\CariSubeAdresEditForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\CariForms\CariSubeForms\CariSubeAdresEditForm.Designer.cs">
-      <DependentUpon>CariSubeAdresEditForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\CariForms\CariSubeForms\CariSubeAdresListForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\CariForms\CariSubeForms\CariSubeAdresListForm.Designer.cs">
-      <DependentUpon>CariSubeAdresListForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\CariForms\CariSubeForms\CariSubelerEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -302,6 +290,18 @@
     </Compile>
     <Compile Include="Forms\CariForms\CariSubeForms\CariSubelerListForm.Designer.cs">
       <DependentUpon>CariSubelerListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CariForms\CariSubeForms\GenelAdresEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CariForms\CariSubeForms\GenelAdresEditForm.Designer.cs">
+      <DependentUpon>GenelAdresEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CariForms\CariSubeForms\GenelAdresListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CariForms\CariSubeForms\GenelAdresListForm.Designer.cs">
+      <DependentUpon>GenelAdresListForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\CariForms\CariSubeForms\GenelIletisimEditForm.cs">
       <SubType>Form</SubType>
@@ -1671,17 +1671,17 @@
     <EmbeddedResource Include="Forms\CariForms\CariListForm.resx">
       <DependentUpon>CariListForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\CariForms\CariSubeForms\CariSubeAdresEditForm.resx">
-      <DependentUpon>CariSubeAdresEditForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\CariForms\CariSubeForms\CariSubeAdresListForm.resx">
-      <DependentUpon>CariSubeAdresListForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\CariForms\CariSubeForms\CariSubelerEditForm.resx">
       <DependentUpon>CariSubelerEditForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CariForms\CariSubeForms\CariSubelerListForm.resx">
       <DependentUpon>CariSubelerListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CariForms\CariSubeForms\GenelAdresEditForm.resx">
+      <DependentUpon>GenelAdresEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CariForms\CariSubeForms\GenelAdresListForm.resx">
+      <DependentUpon>GenelAdresListForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CariForms\CariSubeForms\GenelIletisimEditForm.resx">
       <DependentUpon>GenelIletisimEditForm.cs</DependentUpon>

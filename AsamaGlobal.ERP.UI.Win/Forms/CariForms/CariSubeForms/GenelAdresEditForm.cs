@@ -1,9 +1,9 @@
 ﻿using AbcYazilim.OgrenciTakip.Common.Enums;
-using AsamaGlobal.ERP.Bll.General.CarilerBll.CariSubeBll;
+using AsamaGlobal.ERP.Bll.General;
 using AsamaGlobal.ERP.Common.Enums;
 using AsamaGlobal.ERP.Common.Functions;
-using AsamaGlobal.ERP.Model.Dto.CariDto.CariSubeDto;
-using AsamaGlobal.ERP.Model.Entities.CariEntity.CariSube;
+using AsamaGlobal.ERP.Model.Dto;
+using AsamaGlobal.ERP.Model.Entities;
 using AsamaGlobal.ERP.UI.Win.Forms.BaseForms;
 using AsamaGlobal.ERP.UI.Win.Functions;
 using DevExpress.XtraEditors;
@@ -11,38 +11,38 @@ using System;
 
 namespace AsamaGlobal.ERP.UI.Win.Forms.CariForms.CariSubeForms
 {
-    public partial class CariSubeAdresEditForm : BaseEditForm
+    public partial class GenelAdresEditForm : BaseEditForm
     {
         #region Variables
         private readonly long _cariSubeId;
         private readonly string _cariSubeAdi;
         #endregion
-        public CariSubeAdresEditForm(params object[] prm)
+        public GenelAdresEditForm(params object[] prm)
         {
             InitializeComponent();
             _cariSubeId = (long)prm[0];
             _cariSubeAdi = prm[1].ToString();
-
             DataLayoutControl = myDataLayoutControl;
-            Bll = new CariSubeAdresBll(myDataLayoutControl);
+            Bll = new GenelAdresBll(myDataLayoutControl);
             txtAdresTipi.Properties.Items.AddRange(EnumFunctions.GetEnumDescriptionList<AdresTipi>());
-            BaseKartTuru = KartTuru.CariSubeAdres;
+            BaseKartTuru = KartTuru.GenelAdres;
             EventsLoad();
         }
         public override void Yukle()
         {
-            OldEntity = BaseIslemTuru == IslemTuru.EntityInsert ? new CariSubeAdresS() : ((CariSubeAdresBll)Bll).Single(FilterFunctions.Filter<CariSubeAdres>(Id));
+            OldEntity = BaseIslemTuru == IslemTuru.EntityInsert ? new GenelAdresS() : ((GenelAdresBll)Bll).Single(FilterFunctions.Filter<GenelAdres>(Id));
             NesneyiKontrollereBagla();
             Text = Text + $" - ( {_cariSubeAdi} )";
             if (BaseIslemTuru != IslemTuru.EntityInsert) return;
             Id = BaseIslemTuru.IdOlustur(OldEntity);
-            txtKod.Text = ((CariSubeAdresBll)Bll).YeniKodVer(x => x.CariSubelerId == _cariSubeId);
+            txtKod.Text = ((GenelAdresBll)Bll).YeniKodVer(x => x.CariSubelerId == _cariSubeId);
             txtBaslik.Focus();
         }
         protected override void NesneyiKontrollereBagla()
         {
-            var entity = (CariSubeAdresS)OldEntity;
+            var entity = (GenelAdresS)OldEntity;
             txtKod.Text = entity.Kod;
+            entity.KayitTuru = KayitTuru.CariSube;
             txtBaslik.Text = entity.Baslik;
             txtAdresNotu.Text = entity.AdresNotu;
             txtAdresTipi.SelectedItem = entity.AdresTipi.ToName();
@@ -70,10 +70,11 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.CariForms.CariSubeForms
             decimal.TryParse(txtEnlem.EditValue?.ToString(), out var enlem);
             decimal.TryParse(txtBoylam.EditValue?.ToString(), out var boylam);
 
-            CurrentEntity = new CariSubeAdres
+            CurrentEntity = new GenelAdres
             {
                 Id = Id,
                 Kod = txtKod.Text,
+                KayitTuru = KayitTuru.CariSube,
                 Baslik = txtBaslik.Text,
                 AdresNotu = txtAdresNotu.Text,
                 AdresTipi = txtAdresTipi.Text.GetEnum<AdresTipi>(),
@@ -85,7 +86,7 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.CariForms.CariSubeForms
                 AdresTurleriId = txtAdresTurleri.Id,
                 PostaKodu = txtPostaKodu.Text,
                 Adres = txtAdres.Text,
-                CariSubelerId = BaseIslemTuru == IslemTuru.EntityInsert ? _cariSubeId : ((CariSubeAdresS)OldEntity).CariSubelerId,
+                CariSubelerId = BaseIslemTuru == IslemTuru.EntityInsert ? _cariSubeId : ((GenelAdresS)OldEntity).CariSubelerId,
                 Enlem = enlem,
                 Boylam = boylam,
                 Aciklama = txtAciklama.Text,
@@ -95,12 +96,12 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.CariForms.CariSubeForms
         }
         protected override bool EntityInsert()
         {
-            return ((CariSubeAdresBll)Bll).Insert(CurrentEntity, x => x.Kod == CurrentEntity.Kod && x.CariSubelerId == _cariSubeId);
+            return ((GenelAdresBll)Bll).Insert(CurrentEntity, x => x.Kod == CurrentEntity.Kod && x.CariSubelerId == _cariSubeId);
         }
 
         protected override bool EntityUpdate()
         {
-            return ((CariSubeAdresBll)Bll).Update(OldEntity, CurrentEntity, x => x.Kod == CurrentEntity.Kod && x.CariSubelerId == _cariSubeId);
+            return ((GenelAdresBll)Bll).Update(OldEntity, CurrentEntity, x => x.Kod == CurrentEntity.Kod && x.CariSubelerId == _cariSubeId);
         }
         protected override void SecimYap(object sender)
         {
