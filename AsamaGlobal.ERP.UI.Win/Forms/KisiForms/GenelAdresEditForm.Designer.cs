@@ -1,6 +1,6 @@
 ﻿namespace AsamaGlobal.ERP.UI.Win.Forms.KisiForms
 {
-    partial class KisiAdresEditForm
+    partial class GenelAdresEditForm
     {
         /// <summary>
         /// Required designer variable.
@@ -727,7 +727,7 @@
             this.layoutControlItem5.TextSize = new System.Drawing.Size(60, 20);
             this.layoutControlItem5.TextToControlDistance = 5;
             // 
-            // KisiAdresEditForm
+            // GenelAdresEditForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -735,7 +735,7 @@
             this.Controls.Add(this.myDataLayoutControl);
             this.IconOptions.ShowIcon = false;
             this.MinimumSize = new System.Drawing.Size(565, 400);
-            this.Name = "KisiAdresEditForm";
+            this.Name = "GenelAdresEditForm";
             this.Text = "Kişi Adres Kartı";
             this.Controls.SetChildIndex(this.ribbonControl, 0);
             this.Controls.SetChildIndex(this.myDataLayoutControl, 0);

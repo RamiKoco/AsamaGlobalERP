@@ -1,9 +1,9 @@
 ﻿using AbcYazilim.OgrenciTakip.Common.Enums;
-using AsamaGlobal.ERP.Bll.General.KisiBll;
+using AsamaGlobal.ERP.Bll.General;
 using AsamaGlobal.ERP.Common.Enums;
 using AsamaGlobal.ERP.Common.Functions;
-using AsamaGlobal.ERP.Model.Dto.KisiDto;
-using AsamaGlobal.ERP.Model.Entities.KisiEntity;
+using AsamaGlobal.ERP.Model.Dto;
+using AsamaGlobal.ERP.Model.Entities;
 using AsamaGlobal.ERP.UI.Win.Forms.BaseForms;
 using AsamaGlobal.ERP.UI.Win.Functions;
 using DevExpress.XtraEditors;
@@ -11,39 +11,38 @@ using System;
 
 namespace AsamaGlobal.ERP.UI.Win.Forms.KisiForms
 {
-    public partial class KisiAdresEditForm : BaseEditForm
+    public partial class GenelAdresEditForm : BaseEditForm
     {
         #region Variables
         private readonly long _kisiId;
         private readonly string _kisiAdi;
         #endregion
-        public KisiAdresEditForm(params object[] prm)
+        public GenelAdresEditForm(params object[] prm)
         {
             InitializeComponent();
             _kisiId = (long)prm[0];
             _kisiAdi = prm[1].ToString();
-
             DataLayoutControl = myDataLayoutControl;
-            Bll = new KisiAdresBll(myDataLayoutControl);
+            Bll = new GenelAdresBll(myDataLayoutControl);
             txtAdresTipi.Properties.Items.AddRange(EnumFunctions.GetEnumDescriptionList<AdresTipi>());
-            BaseKartTuru = KartTuru.KisiAdres;
-
+            BaseKartTuru = KartTuru.GenelAdres;
             EventsLoad();
         }
         public override void Yukle()
         {
-            OldEntity = BaseIslemTuru == IslemTuru.EntityInsert ? new KisiAdresS() : ((KisiAdresBll)Bll).Single(FilterFunctions.Filter<KisiAdres>(Id));
+            OldEntity = BaseIslemTuru == IslemTuru.EntityInsert ? new GenelAdresS() : ((GenelAdresBll)Bll).Single(FilterFunctions.Filter<GenelAdres>(Id));
             NesneyiKontrollereBagla();
             Text = Text + $" - ( {_kisiAdi} )";
             if (BaseIslemTuru != IslemTuru.EntityInsert) return;
             Id = BaseIslemTuru.IdOlustur(OldEntity);
-            txtKod.Text = ((KisiAdresBll)Bll).YeniKodVer(x => x.KisiId == _kisiId);
+            txtKod.Text = ((GenelAdresBll)Bll).YeniKodVer(x => x.KisiId == _kisiId);
             txtBaslik.Focus();
         }
         protected override void NesneyiKontrollereBagla()
         {
-            var entity = (KisiAdresS)OldEntity;
+            var entity = (GenelAdresS)OldEntity;
             txtKod.Text = entity.Kod;
+            entity.KayitTuru = KayitTuru.Kisi;
             txtBaslik.Text = entity.Baslik;
             txtAdresNotu.Text = entity.AdresNotu;
             txtAdresTipi.SelectedItem = entity.AdresTipi.ToName();
@@ -71,10 +70,11 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.KisiForms
             decimal.TryParse(txtEnlem.EditValue?.ToString(), out var enlem);
             decimal.TryParse(txtBoylam.EditValue?.ToString(), out var boylam);
 
-            CurrentEntity = new KisiAdres
+            CurrentEntity = new GenelAdres
             {
                 Id = Id,
                 Kod = txtKod.Text,
+                KayitTuru = KayitTuru.Kisi,
                 Baslik = txtBaslik.Text,
                 AdresNotu = txtAdresNotu.Text,
                 AdresTipi = txtAdresTipi.Text.GetEnum<AdresTipi>(),
@@ -86,7 +86,7 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.KisiForms
                 AdresTurleriId = txtAdresTurleri.Id,
                 PostaKodu = txtPostaKodu.Text,
                 Adres = txtAdres.Text,
-                KisiId = BaseIslemTuru == IslemTuru.EntityInsert ? _kisiId : ((KisiAdresS)OldEntity).KisiId,
+                KisiId = BaseIslemTuru == IslemTuru.EntityInsert ? _kisiId : ((GenelAdresS)OldEntity).KisiId,
                 Enlem = enlem,
                 Boylam = boylam,
                 Aciklama = txtAciklama.Text,
@@ -96,12 +96,12 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.KisiForms
         }
         protected override bool EntityInsert()
         {
-            return ((KisiAdresBll)Bll).Insert(CurrentEntity, x => x.Kod == CurrentEntity.Kod && x.KisiId == _kisiId);
+            return ((GenelAdresBll)Bll).Insert(CurrentEntity, x => x.Kod == CurrentEntity.Kod && x.KisiId == _kisiId);
         }
 
         protected override bool EntityUpdate()
         {
-            return ((KisiAdresBll)Bll).Update(OldEntity, CurrentEntity, x => x.Kod == CurrentEntity.Kod && x.KisiId == _kisiId);
+            return ((GenelAdresBll)Bll).Update(OldEntity, CurrentEntity, x => x.Kod == CurrentEntity.Kod && x.KisiId == _kisiId);
         }
         protected override void SecimYap(object sender)
         {
@@ -127,6 +127,5 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.KisiForms
             if (sender != txtIl) return;
             txtIl.ControlEnabledChange(txtIlce);
         }
-
     }
 }

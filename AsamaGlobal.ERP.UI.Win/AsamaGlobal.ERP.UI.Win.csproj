@@ -579,6 +579,18 @@
     <Compile Include="Forms\KimlikTuruForms\KimlikTuruListForm.Designer.cs">
       <DependentUpon>KimlikTuruListForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\KisiForms\GenelAdresEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\KisiForms\GenelAdresEditForm.Designer.cs">
+      <DependentUpon>GenelAdresEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\KisiForms\GenelAdresListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\KisiForms\GenelAdresListForm.Designer.cs">
+      <DependentUpon>GenelAdresListForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\KisiForms\GenelIletisimEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -590,18 +602,6 @@
     </Compile>
     <Compile Include="Forms\KisiForms\GenelIletisimListForm.Designer.cs">
       <DependentUpon>GenelIletisimListForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\KisiForms\KisiAdresEditForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\KisiForms\KisiAdresEditForm.Designer.cs">
-      <DependentUpon>KisiAdresEditForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\KisiForms\KisiAdresListForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\KisiForms\KisiAdresListForm.Designer.cs">
-      <DependentUpon>KisiAdresListForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\KisiForms\KisiEditForm.cs">
       <SubType>Form</SubType>
@@ -1821,17 +1821,17 @@
     <EmbeddedResource Include="Forms\KimlikTuruForms\KimlikTuruListForm.resx">
       <DependentUpon>KimlikTuruListForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\KisiForms\GenelAdresEditForm.resx">
+      <DependentUpon>GenelAdresEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\KisiForms\GenelAdresListForm.resx">
+      <DependentUpon>GenelAdresListForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\KisiForms\GenelIletisimEditForm.resx">
       <DependentUpon>GenelIletisimEditForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\KisiForms\GenelIletisimListForm.resx">
       <DependentUpon>GenelIletisimListForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\KisiForms\KisiAdresEditForm.resx">
-      <DependentUpon>KisiAdresEditForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\KisiForms\KisiAdresListForm.resx">
-      <DependentUpon>KisiAdresListForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\KisiForms\KisiEditForm.resx">
       <DependentUpon>KisiEditForm.cs</DependentUpon>

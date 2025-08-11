@@ -42,10 +42,7 @@ namespace AsamaGlobal.ERP.Model.Entities.KisiEntity
         public KayitKaynak KayitKaynak { get; set; }
         public Meslek Meslek { get; set; }
         public OzelKod OzelKod1 { get; set; }
-        public OzelKod OzelKod2 { get; set; }
-
-        [InverseProperty("Kisi")]
-        public ICollection<KisiAdres> KisiAdres { get; set; }
+        public OzelKod OzelKod2 { get; set; }      
 
         [InverseProperty("Kisi")]
         public ICollection<GenelIletisim> GenelIletisim { get; set; }

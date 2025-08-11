@@ -4,6 +4,7 @@ using AsamaGlobal.ERP.Model.Attributes;
 using AsamaGlobal.ERP.Model.Entities.Base;
 using AsamaGlobal.ERP.Model.Entities.CariEntity;
 using AsamaGlobal.ERP.Model.Entities.CariEntity.CariSube;
+using AsamaGlobal.ERP.Model.Entities.KisiEntity;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -31,6 +32,7 @@ namespace AsamaGlobal.ERP.Model.Entities
 
         public long? CarilerId { get; set; }
         public long? CariSubelerId { get; set; }
+        public long? KisiId { get; set; }
         public long? UlkeId { get; set; }
         public long? IlId { get; set; }
         public long? IlceId { get; set; }
@@ -45,6 +47,7 @@ namespace AsamaGlobal.ERP.Model.Entities
 
         public Cariler Cariler { get; set; }
         public CariSubeler CariSubeler { get; set; }
+        public Kisi Kisi { get; set; }
         public Ulke Ulke { get; set; }
         public Il Il { get; set; }
         public Ilce Ilce { get; set; }
