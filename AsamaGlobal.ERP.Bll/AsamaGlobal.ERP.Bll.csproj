@@ -120,7 +120,6 @@
     <Compile Include="General\KisiBll\KisiAdresBll.cs" />
     <Compile Include="General\KisiBll\KisiBll.cs" />
     <Compile Include="General\KisiBll\KisiGrubuBll.cs" />
-    <Compile Include="General\KisiBll\KisiIletisimBll.cs" />
     <Compile Include="General\KontenjanBll.cs" />
     <Compile Include="General\KullaniciBirimYetkileriBll.cs" />
     <Compile Include="General\KullaniciBll.cs" />
@@ -145,7 +144,6 @@
     <Compile Include="General\PersonelBll\PersonelAdresBll.cs" />
     <Compile Include="General\PersonelBll\PersonelBelgeBll.cs" />
     <Compile Include="General\PersonelBll\PersonelBll.cs" />
-    <Compile Include="General\PersonelBll\PersonelIletisimBll.cs" />
     <Compile Include="General\PozisyonBll.cs" />
     <Compile Include="General\PromosyonBilgileriBll.cs" />
     <Compile Include="General\PromosyonBll.cs" />

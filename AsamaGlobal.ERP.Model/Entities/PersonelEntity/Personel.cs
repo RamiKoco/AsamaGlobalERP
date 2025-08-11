@@ -64,9 +64,7 @@ namespace AsamaGlobal.ERP.Model.Entities.PersonelEntity
         public OzelKod OzelKod2 { get; set; }
 
         public virtual ICollection<EtiketKayitTuruBaglanti> EtiketKayitTuruBaglanti { get; set; }
-
-        [InverseProperty("Personel")]
-        public ICollection<PersonelIletisim> PersonelIletisim { get; set; }
+     
         [InverseProperty("Personel")]
         public ICollection<PersonelAdres> PersonelAdres { get; set; }
     }

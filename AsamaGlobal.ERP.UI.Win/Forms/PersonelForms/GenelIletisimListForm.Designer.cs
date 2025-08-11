@@ -30,33 +30,33 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.PersonelForms
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KisiIletisimListForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GenelIletisimListForm));
             this.longNavigator = new AsamaGlobal.ERP.UI.Win.UserControls.Navigators.LongNavigator();
             this.grid = new AsamaGlobal.ERP.UI.Win.UserControls.Grid.MyBandedGridControl();
             this.tablo = new AsamaGlobal.ERP.UI.Win.UserControls.Grid.MyBandedGridView();
+            this.gridBand1 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
+            this.colOncelik = new AsamaGlobal.ERP.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colIletisimTuru = new AsamaGlobal.ERP.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colBaslik = new AsamaGlobal.ERP.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colKod = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.colIzinDurumu = new AsamaGlobal.ERP.UI.Win.UserControls.Grid.MyBandedGridColumn();
+            this.gridBand2 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.colUlkeKodu = new AsamaGlobal.ERP.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colNumara = new AsamaGlobal.ERP.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colDahiliNo = new AsamaGlobal.ERP.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colArama = new AsamaGlobal.ERP.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colSms = new AsamaGlobal.ERP.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colWhatsapp = new AsamaGlobal.ERP.UI.Win.UserControls.Grid.MyBandedGridColumn();
+            this.gridBand5 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.colEPBool = new AsamaGlobal.ERP.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colEPosta = new AsamaGlobal.ERP.UI.Win.UserControls.Grid.MyBandedGridColumn();
+            this.gridBand3 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.colOzelKod1Adi = new AsamaGlobal.ERP.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colOzelKod2Adi = new AsamaGlobal.ERP.UI.Win.UserControls.Grid.MyBandedGridColumn();
+            this.gridBand4 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.colWeb = new AsamaGlobal.ERP.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colAciklama = new AsamaGlobal.ERP.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colId = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
-            this.colOncelik = new AsamaGlobal.ERP.UI.Win.UserControls.Grid.MyBandedGridColumn();
-            this.gridBand1 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
-            this.gridBand2 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
-            this.gridBand5 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
-            this.gridBand3 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
-            this.gridBand4 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablo)).BeginInit();
@@ -169,7 +169,35 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.PersonelForms
             this.tablo.StatusBarAciklama = null;
             this.tablo.StatusBarKisaYol = null;
             this.tablo.StatusBarKisaYolAciklama = null;
-            this.tablo.ViewCaption = "Kişi İletişm Kartları";
+            this.tablo.ViewCaption = "Personel İletişm Kartları";
+            // 
+            // gridBand1
+            // 
+            this.gridBand1.Caption = "Genel Bilgiler";
+            this.gridBand1.Columns.Add(this.colOncelik);
+            this.gridBand1.Columns.Add(this.colIletisimTuru);
+            this.gridBand1.Columns.Add(this.colBaslik);
+            this.gridBand1.Columns.Add(this.colKod);
+            this.gridBand1.Columns.Add(this.colIzinDurumu);
+            this.gridBand1.Name = "gridBand1";
+            this.gridBand1.VisibleIndex = 0;
+            this.gridBand1.Width = 443;
+            // 
+            // colOncelik
+            // 
+            this.colOncelik.AppearanceCell.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
+            this.colOncelik.AppearanceCell.Options.UseFont = true;
+            this.colOncelik.AppearanceCell.Options.UseTextOptions = true;
+            this.colOncelik.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colOncelik.Caption = "Öncelik";
+            this.colOncelik.FieldName = "Oncelik";
+            this.colOncelik.Name = "colOncelik";
+            this.colOncelik.OptionsColumn.AllowEdit = false;
+            this.colOncelik.StatusBarAciklama = null;
+            this.colOncelik.StatusBarKisaYol = null;
+            this.colOncelik.StatusBarKisaYolAciklama = null;
+            this.colOncelik.Visible = true;
+            this.colOncelik.Width = 50;
             // 
             // colIletisimTuru
             // 
@@ -218,6 +246,19 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.PersonelForms
             this.colIzinDurumu.Visible = true;
             this.colIzinDurumu.Width = 100;
             // 
+            // gridBand2
+            // 
+            this.gridBand2.Caption = "Numara ve Kanal Bilgileri";
+            this.gridBand2.Columns.Add(this.colUlkeKodu);
+            this.gridBand2.Columns.Add(this.colNumara);
+            this.gridBand2.Columns.Add(this.colDahiliNo);
+            this.gridBand2.Columns.Add(this.colArama);
+            this.gridBand2.Columns.Add(this.colSms);
+            this.gridBand2.Columns.Add(this.colWhatsapp);
+            this.gridBand2.Name = "gridBand2";
+            this.gridBand2.VisibleIndex = 1;
+            this.gridBand2.Width = 541;
+            // 
             // colUlkeKodu
             // 
             this.colUlkeKodu.AppearanceCell.Options.UseTextOptions = true;
@@ -265,7 +306,6 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.PersonelForms
             // 
             this.colArama.Caption = "Arama";
             this.colArama.FieldName = "Arama";
-            this.colArama.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("colArama.ImageOptions.Image")));
             this.colArama.Name = "colArama";
             this.colArama.OptionsColumn.AllowEdit = false;
             this.colArama.OptionsColumn.AllowMove = false;
@@ -279,7 +319,6 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.PersonelForms
             // 
             this.colSms.Caption = "SMS";
             this.colSms.FieldName = "Sms";
-            this.colSms.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("colSms.ImageOptions.Image")));
             this.colSms.Name = "colSms";
             this.colSms.OptionsColumn.AllowEdit = false;
             this.colSms.OptionsColumn.AllowMove = false;
@@ -293,7 +332,6 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.PersonelForms
             // 
             this.colWhatsapp.Caption = "Whatsapp";
             this.colWhatsapp.FieldName = "Whatsapp";
-            this.colWhatsapp.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("colWhatsapp.ImageOptions.Image")));
             this.colWhatsapp.Name = "colWhatsapp";
             this.colWhatsapp.OptionsColumn.AllowEdit = false;
             this.colWhatsapp.OptionsColumn.AllowMove = false;
@@ -303,11 +341,19 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.PersonelForms
             this.colWhatsapp.Visible = true;
             this.colWhatsapp.Width = 95;
             // 
+            // gridBand5
+            // 
+            this.gridBand5.Caption = "E-Posta ve Kanal Bilgileri";
+            this.gridBand5.Columns.Add(this.colEPBool);
+            this.gridBand5.Columns.Add(this.colEPosta);
+            this.gridBand5.Name = "gridBand5";
+            this.gridBand5.VisibleIndex = 2;
+            this.gridBand5.Width = 180;
+            // 
             // colEPBool
             // 
             this.colEPBool.Caption = "Mail";
             this.colEPBool.FieldName = "EPBool";
-            this.colEPBool.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("colEPBool.ImageOptions.Image")));
             this.colEPBool.Name = "colEPBool";
             this.colEPBool.OptionsColumn.AllowEdit = false;
             this.colEPBool.StatusBarAciklama = null;
@@ -327,6 +373,15 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.PersonelForms
             this.colEPosta.StatusBarKisaYolAciklama = null;
             this.colEPosta.Visible = true;
             this.colEPosta.Width = 114;
+            // 
+            // gridBand3
+            // 
+            this.gridBand3.Caption = "Özel Kod";
+            this.gridBand3.Columns.Add(this.colOzelKod1Adi);
+            this.gridBand3.Columns.Add(this.colOzelKod2Adi);
+            this.gridBand3.Name = "gridBand3";
+            this.gridBand3.VisibleIndex = 3;
+            this.gridBand3.Width = 200;
             // 
             // colOzelKod1Adi
             // 
@@ -351,6 +406,15 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.PersonelForms
             this.colOzelKod2Adi.StatusBarKisaYolAciklama = null;
             this.colOzelKod2Adi.Visible = true;
             this.colOzelKod2Adi.Width = 100;
+            // 
+            // gridBand4
+            // 
+            this.gridBand4.Caption = "Ek Bilgiler";
+            this.gridBand4.Columns.Add(this.colWeb);
+            this.gridBand4.Columns.Add(this.colAciklama);
+            this.gridBand4.Name = "gridBand4";
+            this.gridBand4.VisibleIndex = 4;
+            this.gridBand4.Width = 300;
             // 
             // colWeb
             // 
@@ -384,75 +448,7 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.PersonelForms
             this.colId.OptionsColumn.AllowEdit = false;
             this.colId.OptionsColumn.ShowInCustomizationForm = false;
             // 
-            // colOncelik
-            // 
-            this.colOncelik.AppearanceCell.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
-            this.colOncelik.AppearanceCell.Options.UseFont = true;
-            this.colOncelik.AppearanceCell.Options.UseTextOptions = true;
-            this.colOncelik.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colOncelik.Caption = "Öncelik";
-            this.colOncelik.FieldName = "Oncelik";
-            this.colOncelik.Name = "colOncelik";
-            this.colOncelik.OptionsColumn.AllowEdit = false;
-            this.colOncelik.StatusBarAciklama = null;
-            this.colOncelik.StatusBarKisaYol = null;
-            this.colOncelik.StatusBarKisaYolAciklama = null;
-            this.colOncelik.Visible = true;
-            this.colOncelik.Width = 50;
-            // 
-            // gridBand1
-            // 
-            this.gridBand1.Caption = "Genel Bilgiler";
-            this.gridBand1.Columns.Add(this.colOncelik);
-            this.gridBand1.Columns.Add(this.colIletisimTuru);
-            this.gridBand1.Columns.Add(this.colBaslik);
-            this.gridBand1.Columns.Add(this.colKod);
-            this.gridBand1.Columns.Add(this.colIzinDurumu);
-            this.gridBand1.Name = "gridBand1";
-            this.gridBand1.VisibleIndex = 0;
-            this.gridBand1.Width = 443;
-            // 
-            // gridBand2
-            // 
-            this.gridBand2.Caption = "Numara ve Kanal Bilgileri";
-            this.gridBand2.Columns.Add(this.colUlkeKodu);
-            this.gridBand2.Columns.Add(this.colNumara);
-            this.gridBand2.Columns.Add(this.colDahiliNo);
-            this.gridBand2.Columns.Add(this.colArama);
-            this.gridBand2.Columns.Add(this.colSms);
-            this.gridBand2.Columns.Add(this.colWhatsapp);
-            this.gridBand2.Name = "gridBand2";
-            this.gridBand2.VisibleIndex = 1;
-            this.gridBand2.Width = 541;
-            // 
-            // gridBand5
-            // 
-            this.gridBand5.Caption = "E-Posta ve Kanal Bilgileri";
-            this.gridBand5.Columns.Add(this.colEPBool);
-            this.gridBand5.Columns.Add(this.colEPosta);
-            this.gridBand5.Name = "gridBand5";
-            this.gridBand5.VisibleIndex = 2;
-            this.gridBand5.Width = 180;
-            // 
-            // gridBand3
-            // 
-            this.gridBand3.Caption = "Özel Kod";
-            this.gridBand3.Columns.Add(this.colOzelKod1Adi);
-            this.gridBand3.Columns.Add(this.colOzelKod2Adi);
-            this.gridBand3.Name = "gridBand3";
-            this.gridBand3.VisibleIndex = 3;
-            this.gridBand3.Width = 200;
-            // 
-            // gridBand4
-            // 
-            this.gridBand4.Caption = "Ek Bilgiler";
-            this.gridBand4.Columns.Add(this.colWeb);
-            this.gridBand4.Columns.Add(this.colAciklama);
-            this.gridBand4.Name = "gridBand4";
-            this.gridBand4.VisibleIndex = 4;
-            this.gridBand4.Width = 300;
-            // 
-            // KisiIletisimListForm
+            // GenelIletisimListForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -460,8 +456,8 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.PersonelForms
             this.Controls.Add(this.grid);
             this.Controls.Add(this.longNavigator);
             this.IconOptions.ShowIcon = false;
-            this.Name = "KisiIletisimListForm";
-            this.Text = "Kişi İletişim Kartları";
+            this.Name = "GenelIletisimListForm";
+            this.Text = "Personel İletişim Kartları";
             this.Controls.SetChildIndex(this.ribbonControl, 0);
             this.Controls.SetChildIndex(this.longNavigator, 0);
             this.Controls.SetChildIndex(this.grid, 0);

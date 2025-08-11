@@ -2,6 +2,7 @@
 using AbcYazilim.OgrenciTakip.Model.Entities;
 using AsamaGlobal.ERP.Model.Attributes;
 using AsamaGlobal.ERP.Model.Entities.Base;
+using AsamaGlobal.ERP.Model.Entities.CariEntity;
 using AsamaGlobal.ERP.Model.Entities.KisiEntity;
 using AsamaGlobal.ERP.Model.Entities.PersonelEntity;
 using System;
@@ -49,6 +50,7 @@ namespace AsamaGlobal.ERP.Model.Entities
 
         [StringLength(50)]
         public string Web { get; set; }
+        public long? CarilerId { get; set; }
         public long? KisiId { get; set; }
         public long? PersonelId { get; set; }
         public long? SosyalMedyaPlatformuId { get; set; }
@@ -58,6 +60,7 @@ namespace AsamaGlobal.ERP.Model.Entities
         [StringLength(500)]
         public string Aciklama { get; set; }
 
+        public Cariler Cariler { get; set; }
         public Kisi Kisi { get; set; }
         public Personel Personel { get; set; }
         public SosyalMedyaPlatformu SosyalMedyaPlatformu { get; set; }

@@ -12,6 +12,7 @@ using DevExpress.XtraEditors.Controls;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Windows.Forms;
 
 namespace AsamaGlobal.ERP.UI.Win.Forms.PersonelForms
 {
@@ -60,8 +61,7 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.PersonelForms
             txtBaslik.Text = entity.Baslik;
             txtIletisimTurleri.EditValue = entity.IletisimTuru.ToName();
             entity.KayitTuru = KayitTuru.Personel;
-            //entity.KisiId = _kisId;
-            txtKayitHesabi.Text = entity.KayitHesabiAdi;
+            //txtKayitHesabi.Text = entity.KayitHesabiAdi;
             txtKanallar.SetEditValue(entity.Kanallar);
             txtIzinDurumu.SelectedItem = entity.IzinDurumu.ToName();
             txtIzinTarihi.EditValue = entity.IzinTarihi;
@@ -196,9 +196,29 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.PersonelForms
             }
             foreach (var item in kanalListesi)
             {
-                txtKanallar.Properties.Items.Add(new CheckedListBoxItem(item));
+                var listItem = new CheckedListBoxItem(item);
+
+                if (tur == IletisimTuru.EPosta && item == "E-Posta")
+                {
+                    listItem.CheckState = CheckState.Checked;
+                }
+                else
+                {
+                    listItem.CheckState = CheckState.Unchecked;
+                }
+
+                txtKanallar.Properties.Items.Add(listItem);
             }
-            txtKanallar.SetEditValue(null); // önceki seçimleri temizle
+
+            // Telefon gibi diğer türlerde seçimleri temizlemek için:
+            if (tur != IletisimTuru.EPosta)
+            {
+                txtKanallar.SetEditValue(null); // Önceki seçimleri temizle
+            }
+            else
+            {
+                // E-Posta için default seçili zaten ayarlandı, ekstra işlem yok
+            }
         }
         private void TxtIletisimTurleri_EditValueChanged(object sender, EventArgs e)
         {

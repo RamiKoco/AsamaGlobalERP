@@ -193,13 +193,13 @@ namespace AsamaGlobal.ERP.Common.Enums
         [Description("Kurum Kartları")]
         Kurumlar = 94,
         [Description("Personel Belge Kartları")]
-        PersonelBelge = 95,
-        [Description("Kişi İletişim Kartları")]
-        KisiIletisim = 96,
+        PersonelBelge = 95,       
+        [Description("Genel İletişim Kartı")]
+        GenelIletisim = 96,
         [Description("Kişi Adres Kartları")]
-        KisiAdres = 97,
-        [Description("Personel İletişim Kartları")]
-        PersonelIletisim = 98,
+        KisiAdres = 97,       
+        [Description("Cari-Şube İletişim Kartı")]
+        CariSubeIletisim = 98,
         [Description("Personel Adres Kartları")]
         PersonelAdres = 99,
         [Description("Cari Kart")]
@@ -212,9 +212,7 @@ namespace AsamaGlobal.ERP.Common.Enums
         CariAdres = 103,
         [Description("Cari-Şube Adres Kartı")]
         CariSubeAdres = 104,
-        [Description("Cari-Şube İletişim Kartı")]
-        CariSubeIletisim = 105,
-        [Description("Genel İletişim Kartı")]
-        GenelIletisim = 106,
+       
+       
     }
 }

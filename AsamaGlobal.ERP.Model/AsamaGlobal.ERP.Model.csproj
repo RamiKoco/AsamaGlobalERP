@@ -92,7 +92,6 @@
     <Compile Include="Dto\KimlikTuruDto.cs" />
     <Compile Include="Dto\KisiDto\KisiAdresDto.cs" />
     <Compile Include="Dto\KisiDto\KisiDto.cs" />
-    <Compile Include="Dto\KisiDto\KisiIletisimDto.cs" />
     <Compile Include="Dto\KullaniciBirimYetkileriDto.cs" />
     <Compile Include="Dto\KullaniciDto.cs" />
     <Compile Include="Dto\KullaniciParametreDto.cs" />
@@ -107,7 +106,6 @@
     <Compile Include="Dto\PersonelDto\PersonelAdresDto.cs" />
     <Compile Include="Dto\PersonelDto\PersonelBelgeDto.cs" />
     <Compile Include="Dto\PersonelDto\PersonelDto.cs" />
-    <Compile Include="Dto\PersonelDto\PersonelIletisimDto.cs" />
     <Compile Include="Dto\PozisyonDto.cs" />
     <Compile Include="Dto\PromosyonBilgileriDto.cs" />
     <Compile Include="Dto\RaporDto.cs" />
@@ -181,7 +179,6 @@
     <Compile Include="Entities\KisiEntity\Kisi.cs" />
     <Compile Include="Entities\KisiEntity\KisiAdres.cs" />
     <Compile Include="Entities\KisiEntity\KisiGrubu.cs" />
-    <Compile Include="Entities\KisiEntity\KisiIletisim.cs" />
     <Compile Include="Entities\Kontenjan.cs" />
     <Compile Include="Entities\Kullanici.cs" />
     <Compile Include="Entities\KullaniciBirimYetkileri.cs" />
@@ -201,7 +198,6 @@
     <Compile Include="Entities\PersonelEntity\Personel.cs" />
     <Compile Include="Entities\PersonelEntity\PersonelAdres.cs" />
     <Compile Include="Entities\PersonelEntity\PersonelBelge.cs" />
-    <Compile Include="Entities\PersonelEntity\PersonelIletisim.cs" />
     <Compile Include="Entities\Pozisyon.cs" />
     <Compile Include="Entities\Promosyon.cs" />
     <Compile Include="Entities\PromosyonBilgileri.cs" />

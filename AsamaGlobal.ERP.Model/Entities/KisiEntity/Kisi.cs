@@ -48,9 +48,6 @@ namespace AsamaGlobal.ERP.Model.Entities.KisiEntity
         public ICollection<KisiAdres> KisiAdres { get; set; }
 
         [InverseProperty("Kisi")]
-        public ICollection<KisiIletisim> KisiIletisim { get; set; }
-
-        [InverseProperty("Kisi")]
         public ICollection<GenelIletisim> GenelIletisim { get; set; }
     }
 }

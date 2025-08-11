@@ -49,7 +49,6 @@
             DevExpress.XtraLayout.RowDefinition rowDefinition11 = new DevExpress.XtraLayout.RowDefinition();
             DevExpress.XtraLayout.RowDefinition rowDefinition12 = new DevExpress.XtraLayout.RowDefinition();
             this.myDataLayoutControl = new AsamaGlobal.ERP.UI.Win.UserControls.Controls.MyDataLayoutControl();
-            this.txtKayitHesabi = new AsamaGlobal.ERP.UI.Win.UserControls.Controls.MyTextEdit();
             this.txtDahili = new AsamaGlobal.ERP.UI.Win.UserControls.Controls.MyDahiliNoTextEdit();
             this.tglVarsayilanYap = new AsamaGlobal.ERP.UI.Win.UserControls.Controls.MyToogleSwitch();
             this.txtUlkeKodu = new AsamaGlobal.ERP.UI.Win.UserControls.Controls.MyUlkeKoduTextEdit();
@@ -98,13 +97,11 @@
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem24 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem25 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.resimMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.myDataLayoutControl)).BeginInit();
             this.myDataLayoutControl.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtKayitHesabi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDahili.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tglVarsayilanYap.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtUlkeKodu.Properties)).BeginInit();
@@ -154,7 +151,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem24)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem25)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
             this.SuspendLayout();
             // 
@@ -166,7 +162,6 @@
             // 
             // myDataLayoutControl
             // 
-            this.myDataLayoutControl.Controls.Add(this.txtKayitHesabi);
             this.myDataLayoutControl.Controls.Add(this.txtDahili);
             this.myDataLayoutControl.Controls.Add(this.tglVarsayilanYap);
             this.myDataLayoutControl.Controls.Add(this.txtUlkeKodu);
@@ -199,21 +194,6 @@
             this.myDataLayoutControl.Size = new System.Drawing.Size(658, 300);
             this.myDataLayoutControl.TabIndex = 0;
             this.myDataLayoutControl.Text = "myDataLayoutControl1";
-            // 
-            // txtKayitHesabi
-            // 
-            this.txtKayitHesabi.EnterMoveNextControl = true;
-            this.txtKayitHesabi.Location = new System.Drawing.Point(157, 180);
-            this.txtKayitHesabi.MenuManager = this.ribbonControl;
-            this.txtKayitHesabi.Name = "txtKayitHesabi";
-            this.txtKayitHesabi.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
-            this.txtKayitHesabi.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtKayitHesabi.Properties.MaxLength = 50;
-            this.txtKayitHesabi.Size = new System.Drawing.Size(96, 20);
-            this.txtKayitHesabi.StatusBarAciklama = "Bu İletişim bilgisine kısa bir ad verin.";
-            this.txtKayitHesabi.StyleController = this.myDataLayoutControl;
-            this.txtKayitHesabi.TabIndex = 24;
-            this.txtKayitHesabi.Visible = false;
             // 
             // txtDahili
             // 
@@ -686,7 +666,6 @@
             this.layoutControlItem2,
             this.layoutControlItem24,
             this.layoutControlItem4,
-            this.layoutControlItem25,
             this.layoutControlItem10});
             this.Root.LayoutMode = DevExpress.XtraLayout.Utils.LayoutMode.Table;
             this.Root.Name = "Root";
@@ -1105,19 +1084,6 @@
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem4.TextVisible = false;
             // 
-            // layoutControlItem25
-            // 
-            this.layoutControlItem25.AppearanceItemCaption.ForeColor = System.Drawing.Color.Maroon;
-            this.layoutControlItem25.AppearanceItemCaption.Options.UseForeColor = true;
-            this.layoutControlItem25.Control = this.txtKayitHesabi;
-            this.layoutControlItem25.Location = new System.Drawing.Point(145, 168);
-            this.layoutControlItem25.Name = "layoutControlItem25";
-            this.layoutControlItem25.OptionsTableLayoutItem.ColumnIndex = 1;
-            this.layoutControlItem25.OptionsTableLayoutItem.RowIndex = 7;
-            this.layoutControlItem25.Size = new System.Drawing.Size(100, 24);
-            this.layoutControlItem25.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem25.TextVisible = false;
-            // 
             // layoutControlItem10
             // 
             this.layoutControlItem10.AppearanceItemCaption.ForeColor = System.Drawing.Color.Maroon;
@@ -1148,7 +1114,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.resimMenu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.myDataLayoutControl)).EndInit();
             this.myDataLayoutControl.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.txtKayitHesabi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDahili.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tglVarsayilanYap.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtUlkeKodu.Properties)).EndInit();
@@ -1198,7 +1163,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem24)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem25)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -1256,8 +1220,6 @@
             private DevExpress.XtraLayout.LayoutControlItem layoutControlItem24;
             private UserControls.Controls.MyDahiliNoTextEdit txtDahili;
             private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
-        private UserControls.Controls.MyTextEdit txtKayitHesabi;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem25;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem10;
     }
 }

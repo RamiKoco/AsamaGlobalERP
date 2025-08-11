@@ -32,10 +32,9 @@ namespace AsamaGlobal.ERP.Data.Contexts
             
             modelBuilder.Entity<Il>().HasMany(x => x.Ilce).WithRequired().WillCascadeOnDelete(true);
             modelBuilder.Entity<Kisi>().HasMany(x => x.KisiAdres).WithRequired().WillCascadeOnDelete(true);
-            modelBuilder.Entity<Kisi>().HasMany(x => x.KisiIletisim).WithRequired().WillCascadeOnDelete(true);
             modelBuilder.Entity<Kisi>().HasMany(x => x.GenelIletisim).WithRequired().WillCascadeOnDelete(true);
 
-            modelBuilder.Entity<Personel>().HasMany(x => x.PersonelIletisim).WithRequired().WillCascadeOnDelete(true);
+          
             modelBuilder.Entity<Personel>().HasMany(x => x.PersonelAdres).WithRequired().WillCascadeOnDelete(true);
             modelBuilder.Entity<Cariler>().HasMany(x => x.CariSubeler).WithRequired().WillCascadeOnDelete(true);
             modelBuilder.Entity<Cariler>().HasMany(x => x.CariIletisim).WithRequired().WillCascadeOnDelete(true);
@@ -130,9 +129,7 @@ namespace AsamaGlobal.ERP.Data.Contexts
         public DbSet<KurumTuru> KurumTuru { get; set; }
         public DbSet<Kurumlar> Kurumlar { get; set; }
         public DbSet<PersonelBelge> PersonelBelge { get; set; }
-        public DbSet<KisiIletisim> KisiIletisim { get; set; }
         public DbSet<KisiAdres> KisiAdres { get; set; }
-        public DbSet<PersonelIletisim> PersonelIletisim { get; set; }
         public DbSet<PersonelAdres> PersonelAdres { get; set; }
         public DbSet<Cariler> Cariler { get; set; }
         public DbSet<CariSubeler> CariSubeler { get; set; }

@@ -609,18 +609,6 @@
     <Compile Include="Forms\KisiForms\KisiEditForm.Designer.cs">
       <DependentUpon>KisiEditForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\KisiForms\KisiIletisimEditForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\KisiForms\KisiIletisimEditForm.Designer.cs">
-      <DependentUpon>KisiIletisimEditForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\KisiForms\KisiIletisimListForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\KisiForms\KisiIletisimListForm.Designer.cs">
-      <DependentUpon>KisiIletisimListForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\KisiForms\KisiListForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -836,18 +824,6 @@
     </Compile>
     <Compile Include="Forms\PersonelForms\PersonelEditForm.Designer.cs">
       <DependentUpon>PersonelEditForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\PersonelForms\PersonelIletisimEditForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\PersonelForms\PersonelIletisimEditForm.Designer.cs">
-      <DependentUpon>PersonelIletisimEditForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\PersonelForms\PersonelIletisimListForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\PersonelForms\PersonelIletisimListForm.Designer.cs">
-      <DependentUpon>PersonelIletisimListForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\PersonelForms\PersonelListForm.cs">
       <SubType>Form</SubType>
@@ -1860,12 +1836,6 @@
     <EmbeddedResource Include="Forms\KisiForms\KisiEditForm.resx">
       <DependentUpon>KisiEditForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\KisiForms\KisiIletisimEditForm.resx">
-      <DependentUpon>KisiIletisimEditForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\KisiForms\KisiIletisimListForm.resx">
-      <DependentUpon>KisiIletisimListForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\KisiForms\KisiListForm.resx">
       <DependentUpon>KisiListForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -1973,12 +1943,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\PersonelForms\PersonelEditForm.resx">
       <DependentUpon>PersonelEditForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\PersonelForms\PersonelIletisimEditForm.resx">
-      <DependentUpon>PersonelIletisimEditForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\PersonelForms\PersonelIletisimListForm.resx">
-      <DependentUpon>PersonelIletisimListForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\PersonelForms\PersonelListForm.resx">
       <DependentUpon>PersonelListForm.cs</DependentUpon>
