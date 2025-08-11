@@ -33,15 +33,10 @@ namespace AsamaGlobal.ERP.Data.Contexts
             modelBuilder.Entity<Il>().HasMany(x => x.Ilce).WithRequired().WillCascadeOnDelete(true);
             modelBuilder.Entity<Kisi>().HasMany(x => x.KisiAdres).WithRequired().WillCascadeOnDelete(true);
             modelBuilder.Entity<Kisi>().HasMany(x => x.GenelIletisim).WithRequired().WillCascadeOnDelete(true);
-
-          
             modelBuilder.Entity<Personel>().HasMany(x => x.PersonelAdres).WithRequired().WillCascadeOnDelete(true);
             modelBuilder.Entity<Cariler>().HasMany(x => x.CariSubeler).WithRequired().WillCascadeOnDelete(true);
-            modelBuilder.Entity<Cariler>().HasMany(x => x.CariIletisim).WithRequired().WillCascadeOnDelete(true);
             modelBuilder.Entity<Cariler>().HasMany(x => x.CariAdres).WithRequired().WillCascadeOnDelete(true);
-            modelBuilder.Entity<CariSubeler>().HasMany(x => x.CariSubeAdres).WithRequired().WillCascadeOnDelete(true);
-            modelBuilder.Entity<CariSubeler>().HasMany(x => x.CariSubeIletisim).WithRequired().WillCascadeOnDelete(true);
-
+            modelBuilder.Entity<CariSubeler>().HasMany(x => x.CariSubeAdres).WithRequired().WillCascadeOnDelete(true); 
             modelBuilder.Entity<Banka>().HasMany(x => x.BankaSube).WithRequired().WillCascadeOnDelete(true);
             modelBuilder.Entity<Indirim>().HasMany(x => x.IndiriminUygulanacagiHizmetBilgileri).WithRequired().WillCascadeOnDelete(true);
         }
@@ -133,10 +128,8 @@ namespace AsamaGlobal.ERP.Data.Contexts
         public DbSet<PersonelAdres> PersonelAdres { get; set; }
         public DbSet<Cariler> Cariler { get; set; }
         public DbSet<CariSubeler> CariSubeler { get; set; }
-        public DbSet<CariIletisim> CariIletisim { get; set; }
         public DbSet<CariAdres> CariAdres { get; set; }
         public DbSet<CariSubeAdres> CariSubeAdres { get; set; }
-        public DbSet<CariSubeIletisim> CariSubeIletisim { get; set; }
         public DbSet<GenelIletisim> GenelIletisim { get; set; }
     }
 }

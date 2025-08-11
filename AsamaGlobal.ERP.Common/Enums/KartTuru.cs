@@ -205,14 +205,17 @@ namespace AsamaGlobal.ERP.Common.Enums
         [Description("Cari Kart")]
         Cariler = 100,
         [Description("Cari Şube Kartı")]
-        CariSubeler = 101,
-        [Description("Cari İletişim Kartı")]
-        CariIletisim = 102,
+        CariSubeler = 101,      
         [Description("Cari Adres Kartı")]
-        CariAdres = 103,
+        CariAdres = 102,
         [Description("Cari-Şube Adres Kartı")]
-        CariSubeAdres = 104,
-       
-       
+        CariSubeAdres = 103,
+        [Description("Personel İletişim Kartı")]
+        PersonelIletisim = 104,
+        [Description("Kişi İletişim Kartı")]
+        KisiIletisim = 105,
+        [Description("Cari İletişim Kartı")]
+        CariIletisim = 106,
+
     }
 }

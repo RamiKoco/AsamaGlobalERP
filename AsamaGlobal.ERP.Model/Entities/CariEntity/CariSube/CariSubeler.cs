@@ -27,7 +27,5 @@ namespace AsamaGlobal.ERP.Model.Entities.CariEntity.CariSube
 
         [InverseProperty("CariSubeler")]
         public ICollection<CariSubeAdres> CariSubeAdres { get; set; }
-        [InverseProperty("CariSubeler")]
-        public ICollection<CariSubeIletisim> CariSubeIletisim { get; set; }
     }
 }

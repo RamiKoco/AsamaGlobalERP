@@ -14,7 +14,6 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.KisiForms
         public GenelIletisimListForm(params object[] prm)
         {
             InitializeComponent();
-            InitializeComponent();
             Bll = new GenelIletisimBll();
 
             _kisiId = (long)prm[0];

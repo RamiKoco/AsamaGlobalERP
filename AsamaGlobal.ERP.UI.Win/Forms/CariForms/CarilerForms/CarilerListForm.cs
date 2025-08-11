@@ -61,7 +61,7 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.CariForms.CarilerForms
 
             else if (barItem == btnIletisimKartlari)
             {
-                ShowListForms<CarilerForms.CariIletisimListForm>.ShowListForm(KartTuru.CariIletisim, entity.Id, entity.CariAdi);
+                ShowListForms<CarilerForms.GenelIletisimListForm>.ShowListForm(KartTuru.GenelIletisim, entity.Id, entity.CariAdi);
             }
             else if (barItem == btnAdresKartlari)
             {

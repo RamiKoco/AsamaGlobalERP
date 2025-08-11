@@ -1,9 +1,10 @@
 ﻿using AbcYazilim.OgrenciTakip.Common.Enums;
-using AsamaGlobal.ERP.Bll.General.CarilerBll.CariSubeBll;
+using AsamaGlobal.ERP.Bll.General;
 using AsamaGlobal.ERP.Common.Enums;
 using AsamaGlobal.ERP.Common.Functions;
-using AsamaGlobal.ERP.Model.Dto.CariDto.CariSubeDto;
-using AsamaGlobal.ERP.Model.Entities.CariEntity.CariSube;
+using AsamaGlobal.ERP.Data.Contexts;
+using AsamaGlobal.ERP.Model.Dto;
+using AsamaGlobal.ERP.Model.Entities;
 using AsamaGlobal.ERP.UI.Win.Forms.BaseForms;
 using AsamaGlobal.ERP.UI.Win.Functions;
 using DevExpress.XtraEditors;
@@ -11,51 +12,56 @@ using DevExpress.XtraEditors.Controls;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Windows.Forms;
 
 namespace AsamaGlobal.ERP.UI.Win.Forms.CariForms.CariSubeForms
 {
-    public partial class CariSubeIletisimEditForm : BaseEditForm
+    public partial class GenelIletisimEditForm : BaseEditForm
     {
         #region Variables
         private readonly long _cariSubeId;
         private readonly string _cariSubeAdi;
         #endregion
-        public CariSubeIletisimEditForm(params object[] prm)
+        public GenelIletisimEditForm(params object[] prm)
         {
             InitializeComponent();
             _cariSubeId = (long)prm[0];
             _cariSubeAdi = prm[1].ToString();
 
             DataLayoutControl = myDataLayoutControl;
-            Bll = new CariSubeIletisimBll(myDataLayoutControl);
+            Bll = new GenelIletisimBll(myDataLayoutControl);
             txtIletisimTurleri.Properties.Items.AddRange(EnumFunctions.GetEnumDescriptionList<IletisimTuru>());
             txtIzinDurumu.Properties.Items.AddRange(EnumFunctions.GetEnumDescriptionList<IletisimDurumu>());
             txtKanallar.Properties.Items.AddRange(EnumFunctions.GetEnumDescriptionList<IletisimKanalTipi>()
                         .Cast<string>()
                         .Select(x => new CheckedListBoxItem(x))
                         .ToArray());
-            BaseKartTuru = KartTuru.CariSubeIletisim;
+            BaseKartTuru = KartTuru.GenelIletisim;// Kontrol Et
             txtIletisimTurleri.EditValueChanged += TxtIletisimTurleri_EditValueChanged;
             tglVoip.EditValueChanged += tglVoip_EditValueChanged;
             EventsLoad();
         }
         public override void Yukle()
         {
-            OldEntity = BaseIslemTuru == IslemTuru.EntityInsert ? new CariSubeIletisimS() : ((CariSubeIletisimBll)Bll).Single(FilterFunctions.Filter<CariSubeIletisim>(Id));
+            OldEntity = BaseIslemTuru == IslemTuru.EntityInsert ? new GenelIletisimS() : ((GenelIletisimBll)Bll).Single(FilterFunctions.Filter<GenelIletisim>(Id));
             NesneyiKontrollereBagla();
             Text = Text + $" - ( {_cariSubeAdi} )";
 
             if (BaseIslemTuru != IslemTuru.EntityInsert) return;
             Id = BaseIslemTuru.IdOlustur(OldEntity);
-            txtKod.Text = ((CariSubeIletisimBll)Bll).YeniKodVer(x => x.CariSubelerId == _cariSubeId);
+            txtKod.Text = ((GenelIletisimBll)Bll).YeniKodVer(x => x.CariSubelerId == _cariSubeId);
             txtBaslik.Focus();
         }
         protected override void NesneyiKontrollereBagla()
         {
-            var entity = (CariSubeIletisimS)OldEntity;
+
+            var entity = (GenelIletisimS)OldEntity;
             txtKod.Text = entity.Kod;
             txtBaslik.Text = entity.Baslik;
             txtIletisimTurleri.EditValue = entity.IletisimTuru.ToName();
+            entity.KayitTuru = KayitTuru.CariSube;
+            //entity.KisiId = _kisId;
+            //txtKayitHesabi.Text = entity.KayitHesabiAdi;
             txtKanallar.SetEditValue(entity.Kanallar);
             txtIzinDurumu.SelectedItem = entity.IzinDurumu.ToName();
             txtIzinTarihi.EditValue = entity.IzinTarihi;
@@ -76,12 +82,14 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.CariForms.CariSubeForms
             txtOzelKod2.Id = entity.OzelKod2Id;
             txtOzelKod2.Text = entity.OzelKod2Adi;
             txtAciklama.Text = entity.Aciklama;
+            tglVarsayilanYap.IsOn = entity.VarsayilanYap;
             tglVoip.IsOn = entity.VoipMi;
             tglDurum.IsOn = entity.Durum;
+            tglVarsayilanYap.IsOn = entity.VarsayilanYap;
         }
         protected override void GuncelNesneOlustur()
         {
-            var eskiEntity = OldEntity as CariSubeIletisimS; // Burada cast ediyoruz.
+            var eskiEntity = OldEntity as GenelIletisimS; // Burada cast ediyoruz.
 
             var kanalListesi = (txtKanallar.EditValue?.ToString() ?? "")
                                .Split(new[] { ',', ';' }, StringSplitOptions.RemoveEmptyEntries)
@@ -97,13 +105,14 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.CariForms.CariSubeForms
             bool yeniSms = kanalListesi.Any() ? kanalListesi.Contains("SMS") : eskiSms;
             bool yeniWhatsapp = kanalListesi.Any() ? kanalListesi.Contains("Whatsapp") : eskiWhatsapp;
             bool yeniEposta = kanalListesi.Any() ? kanalListesi.Contains("E-Posta") : eskiEposta;
-            CurrentEntity = new CariSubeIletisim
+            CurrentEntity = new GenelIletisim
             {
                 Id = Id,
                 Kod = txtKod.Text,
                 Baslik = txtBaslik.Text,
                 Oncelik = (short)txtOncelik.Value,
                 Web = txtWeb.Text,
+                KayitTuru = KayitTuru.CariSube,
                 IletisimTuru = txtIletisimTurleri.Text.GetEnum<IletisimTuru>(),
                 IzinDurumu = txtIzinDurumu.Text.GetEnum<IletisimDurumu>(),
                 Kanallar = txtKanallar.EditValue?.ToString(),
@@ -121,14 +130,28 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.CariForms.CariSubeForms
                 SIPKullaniciAdi = txtSIPKullaniciAdi.Text,
                 SosyalMedyaUrl = txtSosyalMedyaUrl.Text,
                 SosyalMedyaPlatformuId = txtSosyalMedyaPlatformu.Id,
-                CariSubelerId = BaseIslemTuru == IslemTuru.EntityInsert ? _cariSubeId : ((CariSubeIletisimS)OldEntity).CariSubelerId,
+                CariSubelerId = BaseIslemTuru == IslemTuru.EntityInsert ? _cariSubeId : ((GenelIletisimS)OldEntity).CariSubelerId,
                 OzelKod1Id = txtOzelKod1.Id,
                 OzelKod2Id = txtOzelKod2.Id,
                 Aciklama = txtAciklama.Text,
+                VarsayilanYap = tglVarsayilanYap.IsOn,
                 VoipMi = tglVoip.IsOn,
                 Durum = tglDurum.IsOn
             };
+            if (tglVarsayilanYap.IsOn)
+            {
+                using (var context = new ERPContext())
+                {
+                    var digerKayitlar = context.GenelIletisim
+                                        .Where(x => x.VarsayilanYap && x.Id != CurrentEntity.Id)
+                                        .ToList();
 
+                    foreach (var kayit in digerKayitlar)
+                        kayit.VarsayilanYap = false;
+
+                    context.SaveChanges();
+                }
+            }
             ButonEnabledDurumu();
         }
         private void tglVoip_EditValueChanged(object sender, EventArgs e)
@@ -169,11 +192,33 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.CariForms.CariSubeForms
                     kanalListesi = new List<string>();
                     break;
             }
+
             foreach (var item in kanalListesi)
             {
-                txtKanallar.Properties.Items.Add(new CheckedListBoxItem(item));
+                var listItem = new CheckedListBoxItem(item);
+
+                if (tur == IletisimTuru.EPosta && item == "E-Posta")
+                {
+                    listItem.CheckState = CheckState.Checked;
+                }
+                else
+                {
+                    listItem.CheckState = CheckState.Unchecked;
+                }
+
+                txtKanallar.Properties.Items.Add(listItem);
             }
-            txtKanallar.SetEditValue(null); // önceki seçimleri temizle
+
+            // Telefon gibi diğer türlerde seçimleri temizlemek için:
+            if (tur != IletisimTuru.EPosta)
+            {
+                txtKanallar.SetEditValue(null); // Önceki seçimleri temizle
+            }
+            else
+            {
+                // E-Posta için default seçili zaten ayarlandı, ekstra işlem yok
+            }
+
         }
         private void TxtIletisimTurleri_EditValueChanged(object sender, EventArgs e)
         {
@@ -335,12 +380,11 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.CariForms.CariSubeForms
         }
         protected override bool EntityInsert()
         {
-            return ((CariSubeIletisimBll)Bll).Insert(CurrentEntity, x => x.Kod == CurrentEntity.Kod && x.CariSubelerId == _cariSubeId);
+            return ((GenelIletisimBll)Bll).Insert(CurrentEntity, x => x.Kod == CurrentEntity.Kod && x.CariSubelerId == _cariSubeId);
         }
-
         protected override bool EntityUpdate()
         {
-            return ((CariSubeIletisimBll)Bll).Update(OldEntity, CurrentEntity, x => x.Kod == CurrentEntity.Kod && x.CariSubelerId == _cariSubeId);
+            return ((GenelIletisimBll)Bll).Update(OldEntity, CurrentEntity, x => x.Kod == CurrentEntity.Kod && x.CariSubelerId == _cariSubeId);
         }
         protected override void SecimYap(object sender)
         {

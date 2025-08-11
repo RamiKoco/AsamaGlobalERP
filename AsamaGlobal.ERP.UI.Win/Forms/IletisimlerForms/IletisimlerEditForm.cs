@@ -66,7 +66,7 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.IletisimlerForms
                 txtKayitHesabi.Id = entity.KisiId ?? 0;
             else if (entity.KayitTuru == KayitTuru.Personel)
                 txtKayitHesabi.Id = entity.PersonelId ?? 0;
-            else if (entity.KayitTuru == KayitTuru.Meslek)
+            else if (entity.KayitTuru == KayitTuru.Cari)
                 txtKayitHesabi.Id = entity.MeslekId ?? 0;
             else
                 txtKayitHesabi.Id = 0;
@@ -103,7 +103,7 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.IletisimlerForms
             var kayitTuru = txtKayitTuru.SelectedItem?.ToString().GetEnum<KayitTuru>() ?? KayitTuru.Kisi;
 
             var kisiId = kayitTuru == KayitTuru.Kisi ? txtKayitHesabi.Id : null;
-            var meslekId = kayitTuru == KayitTuru.Meslek ? txtKayitHesabi.Id : null;
+            var meslekId = kayitTuru == KayitTuru.Cari ? txtKayitHesabi.Id : null;
             var personelId = kayitTuru == KayitTuru.Personel ? txtKayitHesabi.Id : null;
             CurrentEntity = new Iletisimler
             {
@@ -257,7 +257,7 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.IletisimlerForms
                         sec.Sec(txtKayitHesabi, KartTuru.Kisi);
                     else if (kayitTuru == KayitTuru.Personel)
                         sec.Sec(txtKayitHesabi, KartTuru.Personel);
-                    else if (kayitTuru == KayitTuru.Meslek)
+                    else if (kayitTuru == KayitTuru.Cari)
                         sec.Sec(txtKayitHesabi, KartTuru.Meslek);
                     else
                         sec.Sec(txtKayitHesabi);

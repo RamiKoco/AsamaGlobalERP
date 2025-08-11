@@ -1,17 +1,9 @@
-﻿using AsamaGlobal.ERP.Bll.General.CarilerBll;
-using AsamaGlobal.ERP.Common.Enums;
+﻿using AsamaGlobal.ERP.Common.Enums;
 using AsamaGlobal.ERP.Model.Dto.CariDto.CariSubeDto;
 using AsamaGlobal.ERP.UI.Win.Forms.BaseForms;
-using AsamaGlobal.ERP.UI.Win.Forms.CariForms.CariSubeForms;
 using AsamaGlobal.ERP.UI.Win.Functions;
 using AsamaGlobal.ERP.UI.Win.Show;
 using DevExpress.XtraBars;
-using AsamaGlobal.ERP.UI.Win.Forms.CariForms;
-using AsamaGlobal;
-using AsamaGlobal.ERP;
-using AsamaGlobal.ERP.UI;
-using AsamaGlobal.ERP.UI.Win;
-using AsamaGlobal.ERP.UI.Win.Forms;
 
 namespace AsamaGlobal.ERP.UI.Win.Forms.CariForms.CariSubeForms
 {
@@ -69,7 +61,7 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.CariForms.CariSubeForms
             }
             else if (barItem == btnIletisimKartlari)
             {
-                ShowListForms<CariSubeIletisimListForm>.ShowListForm(KartTuru.CariSubeIletisim, entity.Id, entity.CariSubeAdi);
+                ShowListForms<GenelIletisimListForm>.ShowListForm(KartTuru.GenelIletisim, entity.Id, entity.CariSubeAdi);
             }
         }
     }

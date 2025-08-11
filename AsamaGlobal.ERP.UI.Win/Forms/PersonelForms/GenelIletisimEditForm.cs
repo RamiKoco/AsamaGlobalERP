@@ -392,9 +392,9 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.PersonelForms
 
             using (var sec = new SelectFunctions())
                 if (sender == txtOzelKod1)
-                    sec.Sec(txtOzelKod1, KartTuru.GenelIletisim);
+                    sec.Sec(txtOzelKod1, KartTuru.PersonelIletisim);
                 else if (sender == txtOzelKod2)
-                    sec.Sec(txtOzelKod2, KartTuru.GenelIletisim);
+                    sec.Sec(txtOzelKod2, KartTuru.PersonelIletisim);
                 else if (sender == txtSosyalMedyaPlatformu)
                     sec.Sec(txtSosyalMedyaPlatformu, KartTuru.SosyalMedyaPlatformu);
         }

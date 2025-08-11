@@ -20,8 +20,7 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.KisiForms
     {
         #region Variables
         private readonly long _kisiId;
-        private readonly string _kisiAdi;
-        private int? _kisId;
+        private readonly string _kisiAdi;       
         #endregion
         public GenelIletisimEditForm(params object[] prm)
         {
@@ -88,7 +87,6 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.KisiForms
             tglVoip.IsOn = entity.VoipMi;
             tglDurum.IsOn = entity.Durum;
             tglVarsayilanYap.IsOn = entity.VarsayilanYap;
-            ButonEnabledDurumu();
         }
         protected override void GuncelNesneOlustur()
         {
@@ -396,9 +394,9 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.KisiForms
 
             using (var sec = new SelectFunctions())
                 if (sender == txtOzelKod1)
-                    sec.Sec(txtOzelKod1, KartTuru.GenelIletisim);
+                    sec.Sec(txtOzelKod1, KartTuru.KisiIletisim);
                 else if (sender == txtOzelKod2)
-                    sec.Sec(txtOzelKod2, KartTuru.GenelIletisim);
+                    sec.Sec(txtOzelKod2, KartTuru.KisiIletisim);
                 else if (sender == txtSosyalMedyaPlatformu)
                     sec.Sec(txtSosyalMedyaPlatformu, KartTuru.SosyalMedyaPlatformu);
         }

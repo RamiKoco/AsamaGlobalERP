@@ -1,40 +1,33 @@
-﻿using AsamaGlobal.ERP.UI.Win.Forms.CariForms;
-using AsamaGlobal;
-using AsamaGlobal.ERP;
-using AsamaGlobal.ERP.UI;
-using AsamaGlobal.ERP.UI.Win;
-using AsamaGlobal.ERP.UI.Win.Forms;
-
-namespace AsamaGlobal.ERP.UI.Win.Forms.CariForms.CarilerForms
+﻿namespace AsamaGlobal.ERP.UI.Win.Forms.CariForms.CarilerForms
 {
-    partial class CariIletisimEditForm
+    partial class GenelIletisimEditForm
     {
-            /// <summary>
-            /// Required designer variable.
-            /// </summary>
-            private System.ComponentModel.IContainer components = null;
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
 
-            /// <summary>
-            /// Clean up any resources being used.
-            /// </summary>
-            /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-            protected override void Dispose(bool disposing)
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
             {
-                if (disposing && (components != null))
-                {
-                    components.Dispose();
-                }
-                base.Dispose(disposing);
+                components.Dispose();
             }
+            base.Dispose(disposing);
+        }
 
-            #region Windows Form Designer generated code
+        #region Windows Form Designer generated code
 
-            /// <summary>
-            /// Required method for Designer support - do not modify
-            /// the contents of this method with the code editor.
-            /// </summary>
-            private void InitializeComponent()
-            {
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
             DevExpress.XtraLayout.ColumnDefinition columnDefinition1 = new DevExpress.XtraLayout.ColumnDefinition();
             DevExpress.XtraLayout.ColumnDefinition columnDefinition2 = new DevExpress.XtraLayout.ColumnDefinition();
             DevExpress.XtraLayout.ColumnDefinition columnDefinition3 = new DevExpress.XtraLayout.ColumnDefinition();
@@ -57,6 +50,7 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.CariForms.CarilerForms
             DevExpress.XtraLayout.RowDefinition rowDefinition12 = new DevExpress.XtraLayout.RowDefinition();
             this.myDataLayoutControl = new AsamaGlobal.ERP.UI.Win.UserControls.Controls.MyDataLayoutControl();
             this.txtDahili = new AsamaGlobal.ERP.UI.Win.UserControls.Controls.MyDahiliNoTextEdit();
+            this.tglVarsayilanYap = new AsamaGlobal.ERP.UI.Win.UserControls.Controls.MyToogleSwitch();
             this.txtUlkeKodu = new AsamaGlobal.ERP.UI.Win.UserControls.Controls.MyUlkeKoduTextEdit();
             this.txtOncelik = new AsamaGlobal.ERP.UI.Win.UserControls.Controls.MySpinEdit();
             this.txtIzinTarihi = new AsamaGlobal.ERP.UI.Win.UserControls.Controls.MyDateEdit();
@@ -89,7 +83,6 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.CariForms.CarilerForms
             this.layoutControlItem18 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem19 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem20 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -102,12 +95,15 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.CariForms.CarilerForms
             this.layoutControlItem23 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem24 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.resimMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.myDataLayoutControl)).BeginInit();
             this.myDataLayoutControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtDahili.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tglVarsayilanYap.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtUlkeKodu.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtOncelik.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtIzinTarihi.Properties)).BeginInit();
@@ -141,7 +137,6 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.CariForms.CarilerForms
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem18)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem19)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem20)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
@@ -154,7 +149,9 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.CariForms.CarilerForms
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem23)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem24)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbonControl
@@ -166,6 +163,7 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.CariForms.CarilerForms
             // myDataLayoutControl
             // 
             this.myDataLayoutControl.Controls.Add(this.txtDahili);
+            this.myDataLayoutControl.Controls.Add(this.tglVarsayilanYap);
             this.myDataLayoutControl.Controls.Add(this.txtUlkeKodu);
             this.myDataLayoutControl.Controls.Add(this.txtOncelik);
             this.myDataLayoutControl.Controls.Add(this.txtIzinTarihi);
@@ -223,6 +221,24 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.CariForms.CarilerForms
             this.txtDahili.StatusBarAciklama = "Dahili No Giriniz.";
             this.txtDahili.StyleController = this.myDataLayoutControl;
             this.txtDahili.TabIndex = 5;
+            // 
+            // tglVarsayilanYap
+            // 
+            this.tglVarsayilanYap.EnterMoveNextControl = true;
+            this.tglVarsayilanYap.Location = new System.Drawing.Point(447, 12);
+            this.tglVarsayilanYap.MenuManager = this.ribbonControl;
+            this.tglVarsayilanYap.Name = "tglVarsayilanYap";
+            this.tglVarsayilanYap.Properties.Appearance.ForeColor = System.Drawing.Color.Maroon;
+            this.tglVarsayilanYap.Properties.Appearance.Options.UseForeColor = true;
+            this.tglVarsayilanYap.Properties.AutoHeight = false;
+            this.tglVarsayilanYap.Properties.AutoWidth = true;
+            this.tglVarsayilanYap.Properties.GlyphAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.tglVarsayilanYap.Properties.OffText = "";
+            this.tglVarsayilanYap.Properties.OnText = "";
+            this.tglVarsayilanYap.Size = new System.Drawing.Size(47, 20);
+            this.tglVarsayilanYap.StatusBarAciklama = "Varsayılan Yap";
+            this.tglVarsayilanYap.StyleController = this.myDataLayoutControl;
+            this.tglVarsayilanYap.TabIndex = 23;
             // 
             // txtUlkeKodu
             // 
@@ -636,7 +652,6 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.CariForms.CarilerForms
             this.layoutControlItem18,
             this.layoutControlItem19,
             this.layoutControlItem20,
-            this.layoutControlItem10,
             this.layoutControlItem3,
             this.layoutControlItem12,
             this.layoutControlItem5,
@@ -649,7 +664,9 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.CariForms.CarilerForms
             this.layoutControlItem23,
             this.layoutControlItem8,
             this.layoutControlItem2,
-            this.layoutControlItem4});
+            this.layoutControlItem24,
+            this.layoutControlItem4,
+            this.layoutControlItem10});
             this.Root.LayoutMode = DevExpress.XtraLayout.Utils.LayoutMode.Table;
             this.Root.Name = "Root";
             columnDefinition1.SizeType = System.Windows.Forms.SizeType.Absolute;
@@ -858,20 +875,6 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.CariForms.CarilerForms
             this.layoutControlItem20.TextSize = new System.Drawing.Size(60, 20);
             this.layoutControlItem20.TextToControlDistance = 5;
             // 
-            // layoutControlItem10
-            // 
-            this.layoutControlItem10.AppearanceItemCaption.ForeColor = System.Drawing.Color.Maroon;
-            this.layoutControlItem10.AppearanceItemCaption.Options.UseForeColor = true;
-            this.layoutControlItem10.Control = this.txtKod;
-            this.layoutControlItem10.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlItem10.Name = "layoutControlItem10";
-            this.layoutControlItem10.OptionsTableLayoutItem.ColumnSpan = 2;
-            this.layoutControlItem10.Size = new System.Drawing.Size(245, 24);
-            this.layoutControlItem10.Text = "Kod";
-            this.layoutControlItem10.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
-            this.layoutControlItem10.TextSize = new System.Drawing.Size(80, 13);
-            this.layoutControlItem10.TextToControlDistance = 5;
-            // 
             // layoutControlItem3
             // 
             this.layoutControlItem3.AppearanceItemCaption.ForeColor = System.Drawing.Color.Maroon;
@@ -1048,6 +1051,26 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.CariForms.CarilerForms
             this.layoutControlItem2.TextSize = new System.Drawing.Size(80, 20);
             this.layoutControlItem2.TextToControlDistance = 5;
             // 
+            // layoutControlItem24
+            // 
+            this.layoutControlItem24.AppearanceItemCaption.BackColor = System.Drawing.Color.White;
+            this.layoutControlItem24.AppearanceItemCaption.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
+            this.layoutControlItem24.AppearanceItemCaption.ForeColor = System.Drawing.Color.Navy;
+            this.layoutControlItem24.AppearanceItemCaption.Options.UseBackColor = true;
+            this.layoutControlItem24.AppearanceItemCaption.Options.UseFont = true;
+            this.layoutControlItem24.AppearanceItemCaption.Options.UseForeColor = true;
+            this.layoutControlItem24.Control = this.tglVarsayilanYap;
+            this.layoutControlItem24.Location = new System.Drawing.Point(305, 0);
+            this.layoutControlItem24.Name = "layoutControlItem24";
+            this.layoutControlItem24.OptionsTableLayoutItem.ColumnIndex = 3;
+            this.layoutControlItem24.OptionsTableLayoutItem.ColumnSpan = 3;
+            this.layoutControlItem24.Size = new System.Drawing.Size(210, 24);
+            this.layoutControlItem24.Text = "Varsayılan Yap";
+            this.layoutControlItem24.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
+            this.layoutControlItem24.TextSize = new System.Drawing.Size(125, 16);
+            this.layoutControlItem24.TextToControlDistance = 5;
+            this.layoutControlItem24.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
+            // 
             // layoutControlItem4
             // 
             this.layoutControlItem4.AppearanceItemCaption.ForeColor = System.Drawing.Color.Maroon;
@@ -1061,7 +1084,21 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.CariForms.CarilerForms
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem4.TextVisible = false;
             // 
-            // CariIletisimEditForm
+            // layoutControlItem10
+            // 
+            this.layoutControlItem10.AppearanceItemCaption.ForeColor = System.Drawing.Color.Maroon;
+            this.layoutControlItem10.AppearanceItemCaption.Options.UseForeColor = true;
+            this.layoutControlItem10.Control = this.txtKod;
+            this.layoutControlItem10.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem10.Name = "layoutControlItem10";
+            this.layoutControlItem10.OptionsTableLayoutItem.ColumnSpan = 2;
+            this.layoutControlItem10.Size = new System.Drawing.Size(245, 24);
+            this.layoutControlItem10.Text = "Kod";
+            this.layoutControlItem10.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
+            this.layoutControlItem10.TextSize = new System.Drawing.Size(80, 13);
+            this.layoutControlItem10.TextToControlDistance = 5;
+            // 
+            // GenelIletisimEditForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -1069,8 +1106,8 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.CariForms.CarilerForms
             this.Controls.Add(this.myDataLayoutControl);
             this.IconOptions.ShowIcon = false;
             this.MinimumSize = new System.Drawing.Size(660, 460);
-            this.Name = "CariIletisimEditForm";
-            this.Text = "Cari İletişim Kartı";
+            this.Name = "GenelIletisimEditForm";
+            this.Text = "Genel İletişim Kartı";
             this.Controls.SetChildIndex(this.ribbonControl, 0);
             this.Controls.SetChildIndex(this.myDataLayoutControl, 0);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).EndInit();
@@ -1078,6 +1115,7 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.CariForms.CarilerForms
             ((System.ComponentModel.ISupportInitialize)(this.myDataLayoutControl)).EndInit();
             this.myDataLayoutControl.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.txtDahili.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tglVarsayilanYap.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtUlkeKodu.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtOncelik.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtIzinTarihi.Properties.CalendarTimeProperties)).EndInit();
@@ -1111,7 +1149,6 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.CariForms.CarilerForms
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem18)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem19)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem20)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
@@ -1124,61 +1161,65 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.CariForms.CarilerForms
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem23)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem24)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
-            }
+        }
 
-            #endregion
+        #endregion
 
-            private UserControls.Controls.MyDataLayoutControl myDataLayoutControl;
-            private DevExpress.XtraLayout.LayoutControlGroup Root;
-            private UserControls.Controls.MyTextEdit txtBaslik;
-            private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
-            private UserControls.Controls.MyTelefonNoTextEdit txtTelefonVeFax;
-            private UserControls.Controls.MyEmailTextEdit txtEPosta;
-            private UserControls.Controls.MyButtonEdit txtOzelKod1;
-            private UserControls.Controls.MyButtonEdit txtOzelKod2;
-            private UserControls.Controls.MyMemoEdit txtAciklama;
-            private UserControls.Controls.MyToogleSwitch tglDurum;
-            private UserControls.Controls.MyKodTextEdit txtKod;
-            private UserControls.Controls.MyComboBoxEdit txtIletisimTurleri;
-            private DevExpress.XtraLayout.LayoutControlItem layoutControlItem11;
-            private UserControls.Controls.MyCheckedComboBoxEdit txtKanallar;
-            private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
-            private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
-            private UserControls.Controls.MyTextEdit txtIlgili;
-            private UserControls.Controls.MyTextEdit txtWeb;
-            private DevExpress.XtraLayout.LayoutControlItem layoutControlItem14;
-            private UserControls.Controls.MyButtonEdit txtSosyalMedyaPlatformu;
-            private DevExpress.XtraLayout.LayoutControlItem layoutControlItem15;
-            private UserControls.Controls.MyTextEdit txtSosyalMedyaUrl;
-            private UserControls.Controls.MyTextEdit txtKullaniciAdi;
-            private UserControls.Controls.MyToogleSwitch tglVoip;
-            private DevExpress.XtraLayout.LayoutControlItem layoutControlItem18;
-            private UserControls.Controls.MyTextEdit txtSIPKullaniciAdi;
-            private DevExpress.XtraLayout.LayoutControlItem layoutControlItem19;
-            private UserControls.Controls.MyTextEdit txtSIPServer;
-            private DevExpress.XtraLayout.LayoutControlItem layoutControlItem20;
-            private UserControls.Controls.MyComboBoxEdit txtIzinDurumu;
-            private UserControls.Controls.MyDateEdit txtIzinTarihi;
-            private UserControls.Controls.MySpinEdit txtOncelik;
-            private DevExpress.XtraLayout.LayoutControlItem layoutControlItem10;
-            private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
-            private DevExpress.XtraLayout.LayoutControlItem layoutControlItem12;
-            private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
-            private DevExpress.XtraLayout.LayoutControlItem layoutControlItem13;
-            private DevExpress.XtraLayout.LayoutControlItem layoutControlItem9;
-            private DevExpress.XtraLayout.LayoutControlItem layoutControlItem16;
-            private DevExpress.XtraLayout.LayoutControlItem layoutControlItem17;
-            private DevExpress.XtraLayout.LayoutControlItem layoutControlItem22;
-            private DevExpress.XtraLayout.LayoutControlItem layoutControlItem21;
-            private DevExpress.XtraLayout.LayoutControlItem layoutControlItem23;
-            private DevExpress.XtraLayout.LayoutControlItem layoutControlItem8;
-            private UserControls.Controls.MyUlkeKoduTextEdit txtUlkeKodu;
-            private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
+        private UserControls.Controls.MyDataLayoutControl myDataLayoutControl;
+        private DevExpress.XtraLayout.LayoutControlGroup Root;
+        private UserControls.Controls.MyTextEdit txtBaslik;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
+        private UserControls.Controls.MyTelefonNoTextEdit txtTelefonVeFax;
+        private UserControls.Controls.MyEmailTextEdit txtEPosta;
+        private UserControls.Controls.MyButtonEdit txtOzelKod1;
+        private UserControls.Controls.MyButtonEdit txtOzelKod2;
+        private UserControls.Controls.MyMemoEdit txtAciklama;
+        private UserControls.Controls.MyToogleSwitch tglDurum;
+        private UserControls.Controls.MyKodTextEdit txtKod;
+        private UserControls.Controls.MyComboBoxEdit txtIletisimTurleri;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem11;
+        private UserControls.Controls.MyCheckedComboBoxEdit txtKanallar;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
+        private UserControls.Controls.MyTextEdit txtIlgili;
+        private UserControls.Controls.MyTextEdit txtWeb;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem14;
+        private UserControls.Controls.MyButtonEdit txtSosyalMedyaPlatformu;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem15;
+        private UserControls.Controls.MyTextEdit txtSosyalMedyaUrl;
+        private UserControls.Controls.MyTextEdit txtKullaniciAdi;
+        private UserControls.Controls.MyToogleSwitch tglVoip;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem18;
+        private UserControls.Controls.MyTextEdit txtSIPKullaniciAdi;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem19;
+        private UserControls.Controls.MyTextEdit txtSIPServer;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem20;
+        private UserControls.Controls.MyComboBoxEdit txtIzinDurumu;
+        private UserControls.Controls.MyDateEdit txtIzinTarihi;
+        private UserControls.Controls.MySpinEdit txtOncelik;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem12;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem13;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem9;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem16;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem17;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem22;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem21;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem23;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem8;
+        private UserControls.Controls.MyUlkeKoduTextEdit txtUlkeKodu;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
+        private UserControls.Controls.MyToogleSwitch tglVarsayilanYap;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem24;
         private UserControls.Controls.MyDahiliNoTextEdit txtDahili;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem10;
     }
 }

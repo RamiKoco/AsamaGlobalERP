@@ -6,10 +6,12 @@ namespace AbcYazilim.OgrenciTakip.Common.Enums
     {
         [Description("Kişi Kartı")]
         Kisi = 1,
-        [Description("Meslek Kartı")]
-        Meslek = 2,
+        [Description("Cari Kartı")]
+        Cari = 2,
         [Description("Personel Kartı")]
         Personel = 3,
+        [Description("Cari-Şube Kartı")]
+        CariSube = 4,
 
     }
 }

@@ -249,18 +249,6 @@
     <Compile Include="Forms\CariForms\CariEditForm.Designer.cs">
       <DependentUpon>CariEditForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\CariForms\CarilerForms\CariIletisimEditForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\CariForms\CarilerForms\CariIletisimEditForm.Designer.cs">
-      <DependentUpon>CariIletisimEditForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\CariForms\CarilerForms\CariIletisimListForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\CariForms\CarilerForms\CariIletisimListForm.Designer.cs">
-      <DependentUpon>CariIletisimListForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\CariForms\CarilerForms\CarilerEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -272,6 +260,18 @@
     </Compile>
     <Compile Include="Forms\CariForms\CarilerForms\CarilerListForm.Designer.cs">
       <DependentUpon>CarilerListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CariForms\CarilerForms\GenelIletisimEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CariForms\CarilerForms\GenelIletisimEditForm.Designer.cs">
+      <DependentUpon>GenelIletisimEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CariForms\CarilerForms\GenelIletisimListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CariForms\CarilerForms\GenelIletisimListForm.Designer.cs">
+      <DependentUpon>GenelIletisimListForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\CariForms\CariListForm.cs">
       <SubType>Form</SubType>
@@ -291,18 +291,6 @@
     <Compile Include="Forms\CariForms\CariSubeForms\CariSubeAdresListForm.Designer.cs">
       <DependentUpon>CariSubeAdresListForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\CariForms\CariSubeForms\CariSubeIletisimEditForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\CariForms\CariSubeForms\CariSubeIletisimEditForm.Designer.cs">
-      <DependentUpon>CariSubeIletisimEditForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\CariForms\CariSubeForms\CariSubeIletisimListForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\CariForms\CariSubeForms\CariSubeIletisimListForm.Designer.cs">
-      <DependentUpon>CariSubeIletisimListForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\CariForms\CariSubeForms\CariSubelerEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -314,6 +302,18 @@
     </Compile>
     <Compile Include="Forms\CariForms\CariSubeForms\CariSubelerListForm.Designer.cs">
       <DependentUpon>CariSubelerListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CariForms\CariSubeForms\GenelIletisimEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CariForms\CariSubeForms\GenelIletisimEditForm.Designer.cs">
+      <DependentUpon>GenelIletisimEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CariForms\CariSubeForms\GenelIletisimListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CariForms\CariSubeForms\GenelIletisimListForm.Designer.cs">
+      <DependentUpon>GenelIletisimListForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\DepartmanForms\DepartmanEditForm.cs">
       <SubType>Form</SubType>
@@ -1656,17 +1656,17 @@
     <EmbeddedResource Include="Forms\CariForms\CariEditForm.resx">
       <DependentUpon>CariEditForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\CariForms\CarilerForms\CariIletisimEditForm.resx">
-      <DependentUpon>CariIletisimEditForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\CariForms\CarilerForms\CariIletisimListForm.resx">
-      <DependentUpon>CariIletisimListForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\CariForms\CarilerForms\CarilerEditForm.resx">
       <DependentUpon>CarilerEditForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CariForms\CarilerForms\CarilerListForm.resx">
       <DependentUpon>CarilerListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CariForms\CarilerForms\GenelIletisimEditForm.resx">
+      <DependentUpon>GenelIletisimEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CariForms\CarilerForms\GenelIletisimListForm.resx">
+      <DependentUpon>GenelIletisimListForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CariForms\CariListForm.resx">
       <DependentUpon>CariListForm.cs</DependentUpon>
@@ -1677,17 +1677,17 @@
     <EmbeddedResource Include="Forms\CariForms\CariSubeForms\CariSubeAdresListForm.resx">
       <DependentUpon>CariSubeAdresListForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\CariForms\CariSubeForms\CariSubeIletisimEditForm.resx">
-      <DependentUpon>CariSubeIletisimEditForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\CariForms\CariSubeForms\CariSubeIletisimListForm.resx">
-      <DependentUpon>CariSubeIletisimListForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\CariForms\CariSubeForms\CariSubelerEditForm.resx">
       <DependentUpon>CariSubelerEditForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CariForms\CariSubeForms\CariSubelerListForm.resx">
       <DependentUpon>CariSubelerListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CariForms\CariSubeForms\GenelIletisimEditForm.resx">
+      <DependentUpon>GenelIletisimEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CariForms\CariSubeForms\GenelIletisimListForm.resx">
+      <DependentUpon>GenelIletisimListForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\DepartmanForms\DepartmanEditForm.resx">
       <DependentUpon>DepartmanEditForm.cs</DependentUpon>
