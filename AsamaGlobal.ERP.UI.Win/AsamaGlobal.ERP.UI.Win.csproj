@@ -795,6 +795,18 @@
     <Compile Include="Forms\OzelKodForms\OzelKodListForm.Designer.cs">
       <DependentUpon>OzelKodListForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\PersonelForms\GenelAdresEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PersonelForms\GenelAdresEditForm.Designer.cs">
+      <DependentUpon>GenelAdresEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PersonelForms\GenelAdresListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PersonelForms\GenelAdresListForm.Designer.cs">
+      <DependentUpon>GenelAdresListForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\PersonelForms\GenelIletisimEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -806,18 +818,6 @@
     </Compile>
     <Compile Include="Forms\PersonelForms\GenelIletisimListForm.Designer.cs">
       <DependentUpon>GenelIletisimListForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\PersonelForms\PersonelAdresEditForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\PersonelForms\PersonelAdresEditForm.Designer.cs">
-      <DependentUpon>PersonelAdresEditForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\PersonelForms\PersonelAdresListForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\PersonelForms\PersonelAdresListForm.Designer.cs">
-      <DependentUpon>PersonelAdresListForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\PersonelForms\PersonelEditForm.cs">
       <SubType>Form</SubType>
@@ -1929,17 +1929,17 @@
     <EmbeddedResource Include="Forms\OzelKodForms\OzelKodListForm.resx">
       <DependentUpon>OzelKodListForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PersonelForms\GenelAdresEditForm.resx">
+      <DependentUpon>GenelAdresEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PersonelForms\GenelAdresListForm.resx">
+      <DependentUpon>GenelAdresListForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\PersonelForms\GenelIletisimEditForm.resx">
       <DependentUpon>GenelIletisimEditForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\PersonelForms\GenelIletisimListForm.resx">
       <DependentUpon>GenelIletisimListForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\PersonelForms\PersonelAdresEditForm.resx">
-      <DependentUpon>PersonelAdresEditForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\PersonelForms\PersonelAdresListForm.resx">
-      <DependentUpon>PersonelAdresListForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\PersonelForms\PersonelEditForm.resx">
       <DependentUpon>PersonelEditForm.cs</DependentUpon>

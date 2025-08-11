@@ -53,7 +53,7 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.PersonelForms
             }
             else if (barItem == btnAdresKartlari)
             {
-                ShowListForms<PersonelAdresListForm>.ShowListForm(KartTuru.PersonelAdres, entity.Id, entity.Ad);
+                ShowListForms<GenelAdresListForm>.ShowListForm(KartTuru.GenelAdres, entity.Id, entity.Ad);
             }
         }
     }

@@ -54,7 +54,6 @@ namespace AsamaGlobal.ERP.Model.Entities.PersonelEntity
         public long? UyrukId { get; set; }
         public long? OzelKod1Id { get; set; }
         public long? OzelKod2Id { get; set; }
-
         public Departman Departman { get; set; }
         public Pozisyon Pozisyon { get; set; }
         public KimlikTuru KimlikTuru { get; set; }
@@ -62,10 +61,6 @@ namespace AsamaGlobal.ERP.Model.Entities.PersonelEntity
         public Uyruk Uyruk { get; set; }
         public OzelKod OzelKod1 { get; set; }
         public OzelKod OzelKod2 { get; set; }
-
-        public virtual ICollection<EtiketKayitTuruBaglanti> EtiketKayitTuruBaglanti { get; set; }
-     
-        [InverseProperty("Personel")]
-        public ICollection<PersonelAdres> PersonelAdres { get; set; }
+        public virtual ICollection<EtiketKayitTuruBaglanti> EtiketKayitTuruBaglanti { get; set; }          
     }
 }

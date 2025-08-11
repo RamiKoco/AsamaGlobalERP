@@ -1,34 +1,34 @@
 ﻿namespace AsamaGlobal.ERP.UI.Win.Forms.PersonelForms
 {
-    partial class PersonelAdresListForm
+    partial class GenelAdresListForm
     {
-            /// <summary>
-            /// Required designer variable.
-            /// </summary>
-            private System.ComponentModel.IContainer components = null;
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
 
-            /// <summary>
-            /// Clean up any resources being used.
-            /// </summary>
-            /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-            protected override void Dispose(bool disposing)
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
             {
-                if (disposing && (components != null))
-                {
-                    components.Dispose();
-                }
-                base.Dispose(disposing);
+                components.Dispose();
             }
+            base.Dispose(disposing);
+        }
 
-            #region Windows Form Designer generated code
+        #region Windows Form Designer generated code
 
-            /// <summary>
-            /// Required method for Designer support - do not modify
-            /// the contents of this method with the code editor.
-            /// </summary>
-            private void InitializeComponent()
-            {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PersonelAdresListForm));
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GenelAdresListForm));
             this.longNavigator = new AsamaGlobal.ERP.UI.Win.UserControls.Navigators.LongNavigator();
             this.grid = new AsamaGlobal.ERP.UI.Win.UserControls.Grid.MyBandedGridControl();
             this.tablo = new AsamaGlobal.ERP.UI.Win.UserControls.Grid.MyBandedGridView();
@@ -36,14 +36,15 @@
             this.colKod = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.colBaslik = new AsamaGlobal.ERP.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colAdresNotu = new AsamaGlobal.ERP.UI.Win.UserControls.Grid.MyBandedGridColumn();
-            this.gridBand2 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
+            this.gridBand4 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.colAdresTurleriAdi = new AsamaGlobal.ERP.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colAdresTipi = new AsamaGlobal.ERP.UI.Win.UserControls.Grid.MyBandedGridColumn();
+            this.gridBand2 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.colUlkeAdi = new AsamaGlobal.ERP.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colIlAdi = new AsamaGlobal.ERP.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colIlceAdi = new AsamaGlobal.ERP.UI.Win.UserControls.Grid.MyBandedGridColumn();
-            this.colPostaKodu = new AsamaGlobal.ERP.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colAdres = new AsamaGlobal.ERP.UI.Win.UserControls.Grid.MyBandedGridColumn();
+            this.colPostaKodu = new AsamaGlobal.ERP.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.gridBand3 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.colEnlem = new AsamaGlobal.ERP.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colBoylam = new AsamaGlobal.ERP.UI.Win.UserControls.Grid.MyBandedGridColumn();
@@ -124,6 +125,7 @@
             this.tablo.BandPanelRowHeight = 40;
             this.tablo.Bands.AddRange(new DevExpress.XtraGrid.Views.BandedGrid.GridBand[] {
             this.gridBand1,
+            this.gridBand4,
             this.gridBand2,
             this.gridBand3,
             this.gridBand6,
@@ -210,19 +212,14 @@
             this.colAdresNotu.Visible = true;
             this.colAdresNotu.Width = 84;
             // 
-            // gridBand2
+            // gridBand4
             // 
-            this.gridBand2.Caption = "Adres Bilgileri";
-            this.gridBand2.Columns.Add(this.colAdresTurleriAdi);
-            this.gridBand2.Columns.Add(this.colAdresTipi);
-            this.gridBand2.Columns.Add(this.colUlkeAdi);
-            this.gridBand2.Columns.Add(this.colIlAdi);
-            this.gridBand2.Columns.Add(this.colIlceAdi);
-            this.gridBand2.Columns.Add(this.colPostaKodu);
-            this.gridBand2.Columns.Add(this.colAdres);
-            this.gridBand2.Name = "gridBand2";
-            this.gridBand2.VisibleIndex = 1;
-            this.gridBand2.Width = 572;
+            this.gridBand4.Caption = "Adres Türü Bilgileri";
+            this.gridBand4.Columns.Add(this.colAdresTurleriAdi);
+            this.gridBand4.Columns.Add(this.colAdresTipi);
+            this.gridBand4.Name = "gridBand4";
+            this.gridBand4.VisibleIndex = 1;
+            this.gridBand4.Width = 177;
             // 
             // colAdresTurleriAdi
             // 
@@ -234,7 +231,7 @@
             this.colAdresTurleriAdi.StatusBarKisaYol = null;
             this.colAdresTurleriAdi.StatusBarKisaYolAciklama = null;
             this.colAdresTurleriAdi.Visible = true;
-            this.colAdresTurleriAdi.Width = 81;
+            this.colAdresTurleriAdi.Width = 88;
             // 
             // colAdresTipi
             // 
@@ -246,7 +243,19 @@
             this.colAdresTipi.StatusBarKisaYol = null;
             this.colAdresTipi.StatusBarKisaYolAciklama = null;
             this.colAdresTipi.Visible = true;
-            this.colAdresTipi.Width = 81;
+            this.colAdresTipi.Width = 89;
+            // 
+            // gridBand2
+            // 
+            this.gridBand2.Caption = "Adres Bilgileri";
+            this.gridBand2.Columns.Add(this.colUlkeAdi);
+            this.gridBand2.Columns.Add(this.colIlAdi);
+            this.gridBand2.Columns.Add(this.colIlceAdi);
+            this.gridBand2.Columns.Add(this.colAdres);
+            this.gridBand2.Columns.Add(this.colPostaKodu);
+            this.gridBand2.Name = "gridBand2";
+            this.gridBand2.VisibleIndex = 2;
+            this.gridBand2.Width = 452;
             // 
             // colUlkeAdi
             // 
@@ -258,7 +267,7 @@
             this.colUlkeAdi.StatusBarKisaYol = null;
             this.colUlkeAdi.StatusBarKisaYolAciklama = null;
             this.colUlkeAdi.Visible = true;
-            this.colUlkeAdi.Width = 81;
+            this.colUlkeAdi.Width = 87;
             // 
             // colIlAdi
             // 
@@ -270,7 +279,7 @@
             this.colIlAdi.StatusBarKisaYol = null;
             this.colIlAdi.StatusBarKisaYolAciklama = null;
             this.colIlAdi.Visible = true;
-            this.colIlAdi.Width = 81;
+            this.colIlAdi.Width = 87;
             // 
             // colIlceAdi
             // 
@@ -282,19 +291,6 @@
             this.colIlceAdi.StatusBarKisaYol = null;
             this.colIlceAdi.StatusBarKisaYolAciklama = null;
             this.colIlceAdi.Visible = true;
-            this.colIlceAdi.Width = 81;
-            // 
-            // colPostaKodu
-            // 
-            this.colPostaKodu.Caption = "Posta Kodu";
-            this.colPostaKodu.FieldName = "PostaKodu";
-            this.colPostaKodu.Name = "colPostaKodu";
-            this.colPostaKodu.OptionsColumn.AllowEdit = false;
-            this.colPostaKodu.StatusBarAciklama = null;
-            this.colPostaKodu.StatusBarKisaYol = null;
-            this.colPostaKodu.StatusBarKisaYolAciklama = null;
-            this.colPostaKodu.Visible = true;
-            this.colPostaKodu.Width = 81;
             // 
             // colAdres
             // 
@@ -306,7 +302,19 @@
             this.colAdres.StatusBarKisaYol = null;
             this.colAdres.StatusBarKisaYolAciklama = null;
             this.colAdres.Visible = true;
-            this.colAdres.Width = 86;
+            this.colAdres.Width = 114;
+            // 
+            // colPostaKodu
+            // 
+            this.colPostaKodu.Caption = "Posta Kodu";
+            this.colPostaKodu.FieldName = "PostaKodu";
+            this.colPostaKodu.Name = "colPostaKodu";
+            this.colPostaKodu.OptionsColumn.AllowEdit = false;
+            this.colPostaKodu.StatusBarAciklama = null;
+            this.colPostaKodu.StatusBarKisaYol = null;
+            this.colPostaKodu.StatusBarKisaYolAciklama = null;
+            this.colPostaKodu.Visible = true;
+            this.colPostaKodu.Width = 89;
             // 
             // gridBand3
             // 
@@ -314,7 +322,7 @@
             this.gridBand3.Columns.Add(this.colEnlem);
             this.gridBand3.Columns.Add(this.colBoylam);
             this.gridBand3.Name = "gridBand3";
-            this.gridBand3.VisibleIndex = 2;
+            this.gridBand3.VisibleIndex = 3;
             this.gridBand3.Width = 171;
             // 
             // colEnlem
@@ -347,7 +355,7 @@
             this.gridBand6.Columns.Add(this.colOzelKod1Adi);
             this.gridBand6.Columns.Add(this.colOzelKod2Adi);
             this.gridBand6.Name = "gridBand6";
-            this.gridBand6.VisibleIndex = 3;
+            this.gridBand6.VisibleIndex = 4;
             this.gridBand6.Width = 184;
             // 
             // colOzelKod1Adi
@@ -379,7 +387,7 @@
             this.gridBand7.Caption = "Ek Bilgiler";
             this.gridBand7.Columns.Add(this.colAciklama);
             this.gridBand7.Name = "gridBand7";
-            this.gridBand7.VisibleIndex = 4;
+            this.gridBand7.VisibleIndex = 5;
             this.gridBand7.Width = 244;
             // 
             // colAciklama
@@ -402,7 +410,7 @@
             this.colId.OptionsColumn.AllowEdit = false;
             this.colId.OptionsColumn.ShowInCustomizationForm = false;
             // 
-            // PersonelAdresListForm
+            // GenelAdresListForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -410,7 +418,7 @@
             this.Controls.Add(this.grid);
             this.Controls.Add(this.longNavigator);
             this.IconOptions.ShowIcon = false;
-            this.Name = "PersonelAdresListForm";
+            this.Name = "GenelAdresListForm";
             this.Text = "Personel Adres Kartları";
             this.Controls.SetChildIndex(this.ribbonControl, 0);
             this.Controls.SetChildIndex(this.longNavigator, 0);
@@ -421,32 +429,33 @@
             this.ResumeLayout(false);
             this.PerformLayout();
 
-            }
+        }
 
-            #endregion
-            private UserControls.Navigators.LongNavigator longNavigator;
-            private UserControls.Grid.MyBandedGridControl grid;
-            private UserControls.Grid.MyBandedGridView tablo;
-            private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn colKod;
-            private UserControls.Grid.MyBandedGridColumn colBaslik;
-            private UserControls.Grid.MyBandedGridColumn colAdresNotu;
-            private UserControls.Grid.MyBandedGridColumn colAdresTurleriAdi;
-            private UserControls.Grid.MyBandedGridColumn colAdresTipi;
-            private UserControls.Grid.MyBandedGridColumn colUlkeAdi;
-            private UserControls.Grid.MyBandedGridColumn colIlAdi;
-            private UserControls.Grid.MyBandedGridColumn colIlceAdi;
-            private UserControls.Grid.MyBandedGridColumn colPostaKodu;
-            private UserControls.Grid.MyBandedGridColumn colAdres;
-            private UserControls.Grid.MyBandedGridColumn colEnlem;
-            private UserControls.Grid.MyBandedGridColumn colBoylam;
-            private UserControls.Grid.MyBandedGridColumn colOzelKod1Adi;
-            private UserControls.Grid.MyBandedGridColumn colOzelKod2Adi;
-            private UserControls.Grid.MyBandedGridColumn colAciklama;
-            private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn colId;
-            private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand1;
-            private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand2;
-            private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand3;
-            private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand6;
-            private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand7;
+        #endregion
+        private UserControls.Navigators.LongNavigator longNavigator;
+        private UserControls.Grid.MyBandedGridControl grid;
+        private UserControls.Grid.MyBandedGridView tablo;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn colKod;
+        private UserControls.Grid.MyBandedGridColumn colBaslik;
+        private UserControls.Grid.MyBandedGridColumn colAdresNotu;
+        private UserControls.Grid.MyBandedGridColumn colAdresTurleriAdi;
+        private UserControls.Grid.MyBandedGridColumn colAdresTipi;
+        private UserControls.Grid.MyBandedGridColumn colUlkeAdi;
+        private UserControls.Grid.MyBandedGridColumn colIlAdi;
+        private UserControls.Grid.MyBandedGridColumn colIlceAdi;
+        private UserControls.Grid.MyBandedGridColumn colPostaKodu;
+        private UserControls.Grid.MyBandedGridColumn colAdres;
+        private UserControls.Grid.MyBandedGridColumn colEnlem;
+        private UserControls.Grid.MyBandedGridColumn colBoylam;
+        private UserControls.Grid.MyBandedGridColumn colOzelKod1Adi;
+        private UserControls.Grid.MyBandedGridColumn colOzelKod2Adi;
+        private UserControls.Grid.MyBandedGridColumn colAciklama;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn colId;
+        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand1;
+        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand4;
+        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand2;
+        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand3;
+        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand6;
+        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand7;
     }
 }
