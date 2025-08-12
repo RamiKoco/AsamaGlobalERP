@@ -11,7 +11,7 @@ namespace AsamaGlobal.ERP.Model.Dto
         public string SosyalMedyaPlatformuAdi { get; set; }
         public string OzelKod1Adi { get; set; }
         public string OzelKod2Adi { get; set; }
-        public string KisiAdi { get; set; }
+        //public string KisiAdi { get; set; }
         //public string KayitHesabiAdi
         //{
         //    get
@@ -29,7 +29,7 @@ namespace AsamaGlobal.ERP.Model.Dto
     }
     public class GenelIletisimL:BaseEntity
     {
-        public string KisiAdi { get; set; }
+        //public string KisiAdi { get; set; }
         public KayitTuru KayitTuru { get; set; }
         //public string KayitHesabiAdi
         //{

@@ -61,8 +61,6 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.KisiForms
             txtBaslik.Text = entity.Baslik;
             txtIletisimTurleri.EditValue = entity.IletisimTuru.ToName();
             entity.KayitTuru = KayitTuru.Kisi;
-            //entity.KisiId = _kisId;
-            //txtKayitHesabi.Text = entity.KayitHesabiAdi;
             txtKanallar.SetEditValue(entity.Kanallar);
             txtIzinDurumu.SelectedItem = entity.IzinDurumu.ToName();
             txtIzinTarihi.EditValue = entity.IzinTarihi;

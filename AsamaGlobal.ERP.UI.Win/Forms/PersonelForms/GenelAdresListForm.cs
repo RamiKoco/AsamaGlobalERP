@@ -2,8 +2,6 @@
 using AsamaGlobal.ERP.Common.Enums;
 using AsamaGlobal.ERP.UI.Win.Forms.BaseForms;
 using AsamaGlobal.ERP.UI.Win.Show;
-using AsamaGlobal.ERP.UI.Win.UserControls.Navigators;
-
 namespace AsamaGlobal.ERP.UI.Win.Forms.PersonelForms
 {
     public partial class GenelAdresListForm : BaseListForm
