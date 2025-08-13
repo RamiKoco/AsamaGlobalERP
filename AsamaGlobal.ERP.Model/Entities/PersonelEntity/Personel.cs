@@ -34,7 +34,7 @@ namespace AsamaGlobal.ERP.Model.Entities.PersonelEntity
         [StringLength(30)]
         public string AnaAdi { get; set; }
 
-        [StringLength(11)]
+        [StringLength(14)]
         public string SGKSicilNo { get; set; }
 
         public KayitTuru KayitTuru { get; set; } = KayitTuru.Personel;
