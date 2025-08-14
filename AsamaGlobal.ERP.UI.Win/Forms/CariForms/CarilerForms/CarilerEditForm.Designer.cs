@@ -79,7 +79,6 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.CariForms.CarilerForms
             this.tglDurum = new AsamaGlobal.ERP.UI.Win.UserControls.Controls.MyToogleSwitch();
             this.txtAciklama = new AsamaGlobal.ERP.UI.Win.UserControls.Controls.MyMemoEdit();
             this.txtVergiKodu = new AsamaGlobal.ERP.UI.Win.UserControls.Controls.MyTextEdit();
-            this.txtVergiNo = new AsamaGlobal.ERP.UI.Win.UserControls.Controls.MyTextEdit();
             this.txtVergiDairesi = new AsamaGlobal.ERP.UI.Win.UserControls.Controls.MyTextEdit();
             this.txtSoyAdi = new AsamaGlobal.ERP.UI.Win.UserControls.Controls.MyTextEdit();
             this.txtAdi = new AsamaGlobal.ERP.UI.Win.UserControls.Controls.MyTextEdit();
@@ -95,7 +94,6 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.CariForms.CarilerForms
             this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem21 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem22 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem17 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -110,6 +108,8 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.CariForms.CarilerForms
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.txtVergiNo = new AsamaGlobal.ERP.UI.Win.UserControls.Controls.MySGKSicilNoTextEdit();
+            this.layoutControlItem24 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.resimMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataLayoutGenel)).BeginInit();
@@ -137,7 +137,6 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.CariForms.CarilerForms
             ((System.ComponentModel.ISupportInitialize)(this.tglDurum.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAciklama.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtVergiKodu.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtVergiNo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtVergiDairesi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSoyAdi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAdi.Properties)).BeginInit();
@@ -153,7 +152,6 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.CariForms.CarilerForms
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem21)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem22)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).BeginInit();
@@ -167,6 +165,8 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.CariForms.CarilerForms
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtVergiNo.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem24)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbonControl
@@ -253,6 +253,7 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.CariForms.CarilerForms
             // 
             // DataLayoutGenelBilgiler
             // 
+            this.DataLayoutGenelBilgiler.Controls.Add(this.txtVergiNo);
             this.DataLayoutGenelBilgiler.Controls.Add(this.txtHesapKodu);
             this.DataLayoutGenelBilgiler.Controls.Add(this.txtYetkiKodu);
             this.DataLayoutGenelBilgiler.Controls.Add(this.txtProjeKodu);
@@ -269,7 +270,6 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.CariForms.CarilerForms
             this.DataLayoutGenelBilgiler.Controls.Add(this.tglDurum);
             this.DataLayoutGenelBilgiler.Controls.Add(this.txtAciklama);
             this.DataLayoutGenelBilgiler.Controls.Add(this.txtVergiKodu);
-            this.DataLayoutGenelBilgiler.Controls.Add(this.txtVergiNo);
             this.DataLayoutGenelBilgiler.Controls.Add(this.txtVergiDairesi);
             this.DataLayoutGenelBilgiler.Controls.Add(this.txtSoyAdi);
             this.DataLayoutGenelBilgiler.Controls.Add(this.txtAdi);
@@ -488,7 +488,6 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.CariForms.CarilerForms
             this.txtKimlikNo.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.txtKimlikNo.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
             this.txtKimlikNo.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtKimlikNo.Properties.Mask.AutoComplete = DevExpress.XtraEditors.Mask.AutoCompleteType.None;
             this.txtKimlikNo.Properties.MaskSettings.Set("isAutoComplete", false);
             this.txtKimlikNo.Properties.MaskSettings.Set("isOptimistic", false);
             this.txtKimlikNo.Properties.MaxLength = 50;
@@ -563,20 +562,6 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.CariForms.CarilerForms
             this.txtVergiKodu.StyleController = this.DataLayoutGenelBilgiler;
             this.txtVergiKodu.TabIndex = 9;
             // 
-            // txtVergiNo
-            // 
-            this.txtVergiNo.EnterMoveNextControl = true;
-            this.txtVergiNo.Location = new System.Drawing.Point(357, 108);
-            this.txtVergiNo.MenuManager = this.ribbonControl;
-            this.txtVergiNo.Name = "txtVergiNo";
-            this.txtVergiNo.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
-            this.txtVergiNo.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtVergiNo.Properties.MaxLength = 50;
-            this.txtVergiNo.Size = new System.Drawing.Size(161, 20);
-            this.txtVergiNo.StatusBarAciklama = "Vergi No Giriniz.";
-            this.txtVergiNo.StyleController = this.DataLayoutGenelBilgiler;
-            this.txtVergiNo.TabIndex = 10;
-            // 
             // txtVergiDairesi
             // 
             this.txtVergiDairesi.EnterMoveNextControl = true;
@@ -648,7 +633,6 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.CariForms.CarilerForms
             this.layoutControlItem12,
             this.layoutControlItem6,
             this.layoutControlItem8,
-            this.layoutControlItem7,
             this.layoutControlItem21,
             this.layoutControlItem22,
             this.layoutControlItem17,
@@ -658,7 +642,8 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.CariForms.CarilerForms
             this.layoutControlItem13,
             this.layoutControlItem19,
             this.layoutControlItem23,
-            this.layoutControlItem18});
+            this.layoutControlItem18,
+            this.layoutControlItem24});
             this.layoutControlGroup1.LayoutMode = DevExpress.XtraLayout.Utils.LayoutMode.Table;
             this.layoutControlGroup1.Name = "Root";
             columnDefinition1.SizeType = System.Windows.Forms.SizeType.Absolute;
@@ -857,22 +842,6 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.CariForms.CarilerForms
             this.layoutControlItem8.Size = new System.Drawing.Size(230, 24);
             this.layoutControlItem8.Text = "Vergi Kodu";
             this.layoutControlItem8.TextSize = new System.Drawing.Size(52, 13);
-            // 
-            // layoutControlItem7
-            // 
-            this.layoutControlItem7.AppearanceItemCaption.ForeColor = System.Drawing.Color.Maroon;
-            this.layoutControlItem7.AppearanceItemCaption.Options.UseForeColor = true;
-            this.layoutControlItem7.Control = this.txtVergiNo;
-            this.layoutControlItem7.Location = new System.Drawing.Point(280, 96);
-            this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.OptionsTableLayoutItem.ColumnIndex = 3;
-            this.layoutControlItem7.OptionsTableLayoutItem.ColumnSpan = 2;
-            this.layoutControlItem7.OptionsTableLayoutItem.RowIndex = 4;
-            this.layoutControlItem7.Size = new System.Drawing.Size(230, 24);
-            this.layoutControlItem7.Text = "Vergi No";
-            this.layoutControlItem7.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
-            this.layoutControlItem7.TextSize = new System.Drawing.Size(60, 20);
-            this.layoutControlItem7.TextToControlDistance = 5;
             // 
             // layoutControlItem21
             // 
@@ -1081,6 +1050,45 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.CariForms.CarilerForms
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
+            // txtVergiNo
+            // 
+            this.txtVergiNo.EnterMoveNextControl = true;
+            this.txtVergiNo.Location = new System.Drawing.Point(357, 108);
+            this.txtVergiNo.MenuManager = this.ribbonControl;
+            this.txtVergiNo.Name = "txtVergiNo";
+            this.txtVergiNo.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtVergiNo.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.txtVergiNo.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
+            this.txtVergiNo.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtVergiNo.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtVergiNo.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.RegExpMaskManager));
+            this.txtVergiNo.Properties.MaskSettings.Set("allowBlankInput", true);
+            this.txtVergiNo.Properties.MaskSettings.Set("mask", "\\d{11}");
+            this.txtVergiNo.Properties.MaskSettings.Set("isAutoComplete", false);
+            this.txtVergiNo.Properties.MaskSettings.Set("isOptimistic", false);
+            this.txtVergiNo.Properties.MaskSettings.Set("placeholder", ' ');
+            this.txtVergiNo.Properties.MaxLength = 50;
+            this.txtVergiNo.Size = new System.Drawing.Size(161, 20);
+            this.txtVergiNo.StatusBarAciklama = "SGK Sicil No Giriniz. Örn: 12345678912";
+            this.txtVergiNo.StyleController = this.DataLayoutGenelBilgiler;
+            this.txtVergiNo.TabIndex = 21;
+            // 
+            // layoutControlItem24
+            // 
+            this.layoutControlItem24.AppearanceItemCaption.ForeColor = System.Drawing.Color.Maroon;
+            this.layoutControlItem24.AppearanceItemCaption.Options.UseForeColor = true;
+            this.layoutControlItem24.Control = this.txtVergiNo;
+            this.layoutControlItem24.Location = new System.Drawing.Point(280, 96);
+            this.layoutControlItem24.Name = "layoutControlItem24";
+            this.layoutControlItem24.OptionsTableLayoutItem.ColumnIndex = 3;
+            this.layoutControlItem24.OptionsTableLayoutItem.ColumnSpan = 2;
+            this.layoutControlItem24.OptionsTableLayoutItem.RowIndex = 4;
+            this.layoutControlItem24.Size = new System.Drawing.Size(230, 24);
+            this.layoutControlItem24.Text = "Vergi No";
+            this.layoutControlItem24.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
+            this.layoutControlItem24.TextSize = new System.Drawing.Size(60, 20);
+            this.layoutControlItem24.TextToControlDistance = 5;
+            // 
             // CarilerEditForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1120,7 +1128,6 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.CariForms.CarilerForms
             ((System.ComponentModel.ISupportInitialize)(this.tglDurum.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAciklama.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtVergiKodu.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtVergiNo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtVergiDairesi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSoyAdi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAdi.Properties)).EndInit();
@@ -1136,7 +1143,6 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.CariForms.CarilerForms
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem21)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem22)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).EndInit();
@@ -1150,6 +1156,8 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.CariForms.CarilerForms
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtVergiNo.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem24)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1175,7 +1183,6 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.CariForms.CarilerForms
         private UserControls.Controls.MyTextEdit txtSoyAdi;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
         private UserControls.Controls.MyTextEdit txtVergiDairesi;
-        private UserControls.Controls.MyTextEdit txtVergiNo;
         private UserControls.Controls.MyTextEdit txtVergiKodu;
         private UserControls.Controls.MyMemoEdit txtAciklama;
         private UserControls.Controls.MyToogleSwitch tglDurum;
@@ -1197,7 +1204,6 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.CariForms.CarilerForms
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem12;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem8;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem21;
         private UserControls.Controls.MyTextEdit txtYetkiKodu;
         private UserControls.Controls.MyTextEdit txtHesapKodu;
@@ -1211,5 +1217,7 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.CariForms.CarilerForms
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem23;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem18;
         private DevExpress.XtraBars.Navigation.TabNavigationPage pageNotlar;
+        private UserControls.Controls.MySGKSicilNoTextEdit txtVergiNo;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem24;
     }
 }

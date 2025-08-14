@@ -26,7 +26,7 @@ namespace AsamaGlobal.ERP.Data.Contexts
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+            modelBuilder.Conventions.Remove<PluralizingTableNameConvention>(); // isimleri çoðul olarak istemiyoruz. Aksi halde Il tablosunu ILs olarak kaydederdi. 
             modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
             modelBuilder.Conventions.Remove<ManyToManyCascadeDeleteConvention>();
             
