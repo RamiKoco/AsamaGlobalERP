@@ -3010,5 +3010,17 @@
   <ItemGroup>
     <None Include="Resources\tag_16x16.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2754601_call_communication_contact_phone_support_icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\love_like_review_feedback_icon_229986.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\whatsapp_icon_161055 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folderbluemail_93279 %281%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

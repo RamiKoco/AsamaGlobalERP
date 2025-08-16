@@ -83,6 +83,16 @@ namespace AsamaGlobal.ERP.UI.Win.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _2754601_call_communication_contact_phone_support_icon__1_ {
+            get {
+                object obj = ResourceManager.GetObject("2754601_call_communication_contact_phone_support_icon (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _46 {
             get {
                 object obj = ResourceManager.GetObject("46", resourceCulture);
@@ -1111,6 +1121,16 @@ namespace AsamaGlobal.ERP.UI.Win.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap folderbluemail_93279__1_ {
+            get {
+                object obj = ResourceManager.GetObject("folderbluemail_93279 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
         /// </summary>
         internal static System.Drawing.Icon Graphicloads_Flat_Finance_Stat {
@@ -1336,6 +1356,16 @@ namespace AsamaGlobal.ERP.UI.Win.Properties {
         internal static System.Drawing.Bitmap lawyer_32x32 {
             get {
                 object obj = ResourceManager.GetObject("lawyer_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap love_like_review_feedback_icon_229986 {
+            get {
+                object obj = ResourceManager.GetObject("love_like_review_feedback_icon_229986", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -2336,6 +2366,16 @@ namespace AsamaGlobal.ERP.UI.Win.Properties {
         internal static System.Drawing.Bitmap weekend_32x32 {
             get {
                 object obj = ResourceManager.GetObject("weekend_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap whatsapp_icon_161055__1_ {
+            get {
+                object obj = ResourceManager.GetObject("whatsapp_icon_161055 (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
