@@ -32,20 +32,20 @@
             this.longNavigator = new AsamaGlobal.ERP.UI.Win.UserControls.Navigators.LongNavigator();
             this.grid = new AsamaGlobal.ERP.UI.Win.UserControls.Grid.MyBandedGridControl();
             this.tablo = new AsamaGlobal.ERP.UI.Win.UserControls.Grid.MyBandedGridView();
-            this.colId = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.gridBand1 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.colKod = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.colAdiSoyadi = new AsamaGlobal.ERP.UI.Win.UserControls.Grid.MyBandedGridColumn();
+            this.gridBand2 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.colSozlesmeNo = new AsamaGlobal.ERP.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colSozlesmeBaslamaTarihi = new AsamaGlobal.ERP.UI.Win.UserControls.Grid.MyBandedGridColumn();
+            this.repositoryTarih = new DevExpress.XtraEditors.Repository.RepositoryItemDateEdit();
             this.colSozlesmeBitisTarihi = new AsamaGlobal.ERP.UI.Win.UserControls.Grid.MyBandedGridColumn();
+            this.gridBand3 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.colOzelKod1Adi = new AsamaGlobal.ERP.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colOzelKod2Adi = new AsamaGlobal.ERP.UI.Win.UserControls.Grid.MyBandedGridColumn();
-            this.colAciklama = new AsamaGlobal.ERP.UI.Win.UserControls.Grid.MyBandedGridColumn();
-            this.gridBand1 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
-            this.gridBand2 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
-            this.gridBand3 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.gridBand4 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
-            this.repositoryTarih = new DevExpress.XtraEditors.Repository.RepositoryItemDateEdit();
+            this.colAciklama = new AsamaGlobal.ERP.UI.Win.UserControls.Grid.MyBandedGridColumn();
+            this.colId = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablo)).BeginInit();
@@ -56,21 +56,27 @@
             // ribbonControl
             // 
             this.ribbonControl.ExpandCollapseItem.Id = 0;
-            // 
-            // 
-            // 
-            this.ribbonControl.SearchEditItem.AccessibleName = "Search Item";
-            this.ribbonControl.SearchEditItem.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Left;
-            this.ribbonControl.SearchEditItem.EditWidth = 150;
-            this.ribbonControl.SearchEditItem.Id = -5000;
-            this.ribbonControl.SearchEditItem.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
-            this.ribbonControl.Size = new System.Drawing.Size(1319, 109);
+            this.ribbonControl.Size = new System.Drawing.Size(1319, 135);
             this.ribbonControl.Toolbar.ShowCustomizeItem = false;
             // 
             // btnGonder
             // 
             this.btnGonder.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnGonder.ImageOptions.Image")));
             this.btnGonder.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnGonder.ImageOptions.LargeImage")));
+            // 
+            // btnYeniMakbuz
+            // 
+            this.btnYeniMakbuz.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnYeniMakbuz.ImageOptions.Image")));
+            this.btnYeniMakbuz.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnYeniMakbuz.ImageOptions.LargeImage")));
+            // 
+            // btnYeniRapor
+            // 
+            this.btnYeniRapor.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnYeniRapor.ImageOptions.Image")));
+            this.btnYeniRapor.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnYeniRapor.ImageOptions.LargeImage")));
+            // 
+            // barSubItem8
+            // 
+            this.barSubItem8.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barSubItem8.ImageOptions.Image")));
             // 
             // longNavigator
             // 
@@ -83,13 +89,13 @@
             // grid
             // 
             this.grid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grid.Location = new System.Drawing.Point(0, 109);
+            this.grid.Location = new System.Drawing.Point(0, 135);
             this.grid.MainView = this.tablo;
             this.grid.MenuManager = this.ribbonControl;
             this.grid.Name = "grid";
             this.grid.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryTarih});
-            this.grid.Size = new System.Drawing.Size(1319, 325);
+            this.grid.Size = new System.Drawing.Size(1319, 299);
             this.grid.TabIndex = 3;
             this.grid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.tablo});
@@ -148,13 +154,14 @@
             this.tablo.StatusBarKisaYolAciklama = null;
             this.tablo.ViewCaption = "Avukat Kartları";
             // 
-            // colId
+            // gridBand1
             // 
-            this.colId.Caption = "Id";
-            this.colId.FieldName = "Id";
-            this.colId.Name = "colId";
-            this.colId.OptionsColumn.AllowEdit = false;
-            this.colId.OptionsColumn.ShowInCustomizationForm = false;
+            this.gridBand1.Caption = "Avukat Bilgileri";
+            this.gridBand1.Columns.Add(this.colKod);
+            this.gridBand1.Columns.Add(this.colAdiSoyadi);
+            this.gridBand1.Name = "gridBand1";
+            this.gridBand1.VisibleIndex = 0;
+            this.gridBand1.Width = 310;
             // 
             // colKod
             // 
@@ -178,6 +185,16 @@
             this.colAdiSoyadi.StatusBarKisaYolAciklama = null;
             this.colAdiSoyadi.Visible = true;
             this.colAdiSoyadi.Width = 200;
+            // 
+            // gridBand2
+            // 
+            this.gridBand2.Caption = "Sözleşme Bilgileri";
+            this.gridBand2.Columns.Add(this.colSozlesmeNo);
+            this.gridBand2.Columns.Add(this.colSozlesmeBaslamaTarihi);
+            this.gridBand2.Columns.Add(this.colSozlesmeBitisTarihi);
+            this.gridBand2.Name = "gridBand2";
+            this.gridBand2.VisibleIndex = 1;
+            this.gridBand2.Width = 350;
             // 
             // colSozlesmeNo
             // 
@@ -207,6 +224,16 @@
             this.colSozlesmeBaslamaTarihi.Visible = true;
             this.colSozlesmeBaslamaTarihi.Width = 100;
             // 
+            // repositoryTarih
+            // 
+            this.repositoryTarih.AutoHeight = false;
+            this.repositoryTarih.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryTarih.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryTarih.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTimeAdvancingCaret;
+            this.repositoryTarih.Name = "repositoryTarih";
+            // 
             // colSozlesmeBitisTarihi
             // 
             this.colSozlesmeBitisTarihi.AppearanceCell.Options.UseTextOptions = true;
@@ -222,6 +249,15 @@
             this.colSozlesmeBitisTarihi.StatusBarKisaYolAciklama = null;
             this.colSozlesmeBitisTarihi.Visible = true;
             this.colSozlesmeBitisTarihi.Width = 100;
+            // 
+            // gridBand3
+            // 
+            this.gridBand3.Caption = "Özel Kod";
+            this.gridBand3.Columns.Add(this.colOzelKod1Adi);
+            this.gridBand3.Columns.Add(this.colOzelKod2Adi);
+            this.gridBand3.Name = "gridBand3";
+            this.gridBand3.VisibleIndex = 2;
+            this.gridBand3.Width = 230;
             // 
             // colOzelKod1Adi
             // 
@@ -247,6 +283,14 @@
             this.colOzelKod2Adi.Visible = true;
             this.colOzelKod2Adi.Width = 115;
             // 
+            // gridBand4
+            // 
+            this.gridBand4.Caption = "Ek Bilgiler";
+            this.gridBand4.Columns.Add(this.colAciklama);
+            this.gridBand4.Name = "gridBand4";
+            this.gridBand4.VisibleIndex = 3;
+            this.gridBand4.Width = 300;
+            // 
             // colAciklama
             // 
             this.colAciklama.Caption = "Açıklama";
@@ -259,51 +303,13 @@
             this.colAciklama.Visible = true;
             this.colAciklama.Width = 300;
             // 
-            // gridBand1
+            // colId
             // 
-            this.gridBand1.Caption = "Avukat Bilgileri";
-            this.gridBand1.Columns.Add(this.colKod);
-            this.gridBand1.Columns.Add(this.colAdiSoyadi);
-            this.gridBand1.Name = "gridBand1";
-            this.gridBand1.VisibleIndex = 0;
-            this.gridBand1.Width = 310;
-            // 
-            // gridBand2
-            // 
-            this.gridBand2.Caption = "Sözleşme Bilgileri";
-            this.gridBand2.Columns.Add(this.colSozlesmeNo);
-            this.gridBand2.Columns.Add(this.colSozlesmeBaslamaTarihi);
-            this.gridBand2.Columns.Add(this.colSozlesmeBitisTarihi);
-            this.gridBand2.Name = "gridBand2";
-            this.gridBand2.VisibleIndex = 1;
-            this.gridBand2.Width = 350;
-            // 
-            // gridBand3
-            // 
-            this.gridBand3.Caption = "Özel Kod";
-            this.gridBand3.Columns.Add(this.colOzelKod1Adi);
-            this.gridBand3.Columns.Add(this.colOzelKod2Adi);
-            this.gridBand3.Name = "gridBand3";
-            this.gridBand3.VisibleIndex = 2;
-            this.gridBand3.Width = 230;
-            // 
-            // gridBand4
-            // 
-            this.gridBand4.Caption = "Ek Bilgiler";
-            this.gridBand4.Columns.Add(this.colAciklama);
-            this.gridBand4.Name = "gridBand4";
-            this.gridBand4.VisibleIndex = 3;
-            this.gridBand4.Width = 300;
-            // 
-            // repositoryTarih
-            // 
-            this.repositoryTarih.AutoHeight = false;
-            this.repositoryTarih.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.repositoryTarih.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.repositoryTarih.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTimeAdvancingCaret;
-            this.repositoryTarih.Name = "repositoryTarih";
+            this.colId.Caption = "Id";
+            this.colId.FieldName = "Id";
+            this.colId.Name = "colId";
+            this.colId.OptionsColumn.AllowEdit = false;
+            this.colId.OptionsColumn.ShowInCustomizationForm = false;
             // 
             // AvukatListForm
             // 

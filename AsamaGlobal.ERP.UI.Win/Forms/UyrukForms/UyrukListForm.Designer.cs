@@ -33,10 +33,10 @@
             this.tablo = new AsamaGlobal.ERP.UI.Win.UserControls.Grid.MyGridView();
             this.colId = new AsamaGlobal.ERP.UI.Win.UserControls.Grid.MyGridColumn();
             this.colKod = new AsamaGlobal.ERP.UI.Win.UserControls.Grid.MyGridColumn();
-            this.longNavigator = new AsamaGlobal.ERP.UI.Win.UserControls.Navigators.LongNavigator();
             this.colAd = new AsamaGlobal.ERP.UI.Win.UserControls.Grid.MyGridColumn();
             this.colUlkeAdi = new AsamaGlobal.ERP.UI.Win.UserControls.Grid.MyGridColumn();
             this.colAciklama = new AsamaGlobal.ERP.UI.Win.UserControls.Grid.MyGridColumn();
+            this.longNavigator = new AsamaGlobal.ERP.UI.Win.UserControls.Navigators.LongNavigator();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablo)).BeginInit();
@@ -74,7 +74,7 @@
             this.grid.MainView = this.tablo;
             this.grid.MenuManager = this.ribbonControl;
             this.grid.Name = "grid";
-            this.grid.Size = new System.Drawing.Size(1058, 323);
+            this.grid.Size = new System.Drawing.Size(1058, 299);
             this.grid.TabIndex = 2;
             this.grid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.tablo});
@@ -143,14 +143,6 @@
             this.colKod.VisibleIndex = 0;
             this.colKod.Width = 124;
             // 
-            // longNavigator
-            // 
-            this.longNavigator.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.longNavigator.Location = new System.Drawing.Point(0, 434);
-            this.longNavigator.Name = "longNavigator";
-            this.longNavigator.Size = new System.Drawing.Size(1058, 24);
-            this.longNavigator.TabIndex = 3;
-            // 
             // colAd
             // 
             this.colAd.Caption = "Uyruk Adı";
@@ -190,19 +182,27 @@
             this.colAciklama.VisibleIndex = 3;
             this.colAciklama.Width = 344;
             // 
+            // longNavigator
+            // 
+            this.longNavigator.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.longNavigator.Location = new System.Drawing.Point(0, 434);
+            this.longNavigator.Name = "longNavigator";
+            this.longNavigator.Size = new System.Drawing.Size(1058, 24);
+            this.longNavigator.TabIndex = 3;
+            // 
             // UyrukListForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1058, 482);
-            this.Controls.Add(this.longNavigator);
             this.Controls.Add(this.grid);
+            this.Controls.Add(this.longNavigator);
             this.IconOptions.ShowIcon = false;
             this.Name = "UyrukListForm";
             this.Text = "Uyruk Kartları";
             this.Controls.SetChildIndex(this.ribbonControl, 0);
-            this.Controls.SetChildIndex(this.grid, 0);
             this.Controls.SetChildIndex(this.longNavigator, 0);
+            this.Controls.SetChildIndex(this.grid, 0);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablo)).EndInit();

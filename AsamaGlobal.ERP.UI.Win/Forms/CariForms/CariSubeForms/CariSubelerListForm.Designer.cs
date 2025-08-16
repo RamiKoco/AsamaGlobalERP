@@ -35,17 +35,17 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.CariForms.CariSubeForms
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CariSubeForms.CariSubelerListForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CariSubelerListForm));
             this.grid = new AsamaGlobal.ERP.UI.Win.UserControls.Grid.MyGridControl();
             this.tablo = new AsamaGlobal.ERP.UI.Win.UserControls.Grid.MyGridView();
             this.colId = new AsamaGlobal.ERP.UI.Win.UserControls.Grid.MyGridColumn();
             this.colKod = new AsamaGlobal.ERP.UI.Win.UserControls.Grid.MyGridColumn();
             this.colCariSubeAdi = new AsamaGlobal.ERP.UI.Win.UserControls.Grid.MyGridColumn();
+            this.colIlgili = new AsamaGlobal.ERP.UI.Win.UserControls.Grid.MyGridColumn();
             this.colOzelKod1Adi = new AsamaGlobal.ERP.UI.Win.UserControls.Grid.MyGridColumn();
             this.colOzelKod2Adi = new AsamaGlobal.ERP.UI.Win.UserControls.Grid.MyGridColumn();
             this.colAciklama = new AsamaGlobal.ERP.UI.Win.UserControls.Grid.MyGridColumn();
             this.longNavigator = new AsamaGlobal.ERP.UI.Win.UserControls.Navigators.LongNavigator();
-            this.colIlgili = new AsamaGlobal.ERP.UI.Win.UserControls.Grid.MyGridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablo)).BeginInit();
@@ -83,7 +83,7 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.CariForms.CariSubeForms
             this.grid.MainView = this.tablo;
             this.grid.MenuManager = this.ribbonControl;
             this.grid.Name = "grid";
-            this.grid.Size = new System.Drawing.Size(1058, 323);
+            this.grid.Size = new System.Drawing.Size(1058, 299);
             this.grid.TabIndex = 2;
             this.grid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.tablo});
@@ -167,6 +167,19 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.CariForms.CariSubeForms
             this.colCariSubeAdi.VisibleIndex = 1;
             this.colCariSubeAdi.Width = 120;
             // 
+            // colIlgili
+            // 
+            this.colIlgili.Caption = "İlgili Kişi";
+            this.colIlgili.FieldName = "Ilgili";
+            this.colIlgili.Name = "colIlgili";
+            this.colIlgili.OptionsColumn.AllowEdit = false;
+            this.colIlgili.StatusBarAciklama = null;
+            this.colIlgili.StatusBarKisaYol = null;
+            this.colIlgili.StatusBarKisaYolAciklama = null;
+            this.colIlgili.Visible = true;
+            this.colIlgili.VisibleIndex = 2;
+            this.colIlgili.Width = 120;
+            // 
             // colOzelKod1Adi
             // 
             this.colOzelKod1Adi.Caption = "Özel Kod-1";
@@ -214,32 +227,19 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.CariForms.CariSubeForms
             this.longNavigator.Size = new System.Drawing.Size(1058, 24);
             this.longNavigator.TabIndex = 3;
             // 
-            // colIlgili
-            // 
-            this.colIlgili.Caption = "İlgili Kişi";
-            this.colIlgili.FieldName = "Ilgili";
-            this.colIlgili.Name = "colIlgili";
-            this.colIlgili.OptionsColumn.AllowEdit = false;
-            this.colIlgili.StatusBarAciklama = null;
-            this.colIlgili.StatusBarKisaYol = null;
-            this.colIlgili.StatusBarKisaYolAciklama = null;
-            this.colIlgili.Visible = true;
-            this.colIlgili.VisibleIndex = 2;
-            this.colIlgili.Width = 120;
-            // 
             // CariSubelerListForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1058, 482);
-            this.Controls.Add(this.longNavigator);
             this.Controls.Add(this.grid);
+            this.Controls.Add(this.longNavigator);
             this.IconOptions.ShowIcon = false;
             this.Name = "CariSubelerListForm";
             this.Text = "Cari Şube Kartları";
             this.Controls.SetChildIndex(this.ribbonControl, 0);
-            this.Controls.SetChildIndex(this.grid, 0);
             this.Controls.SetChildIndex(this.longNavigator, 0);
+            this.Controls.SetChildIndex(this.grid, 0);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablo)).EndInit();

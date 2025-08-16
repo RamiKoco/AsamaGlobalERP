@@ -31,20 +31,20 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PersonelListForm));
             this.grid = new AsamaGlobal.ERP.UI.Win.UserControls.Grid.MyBandedGridControl();
             this.tablo = new AsamaGlobal.ERP.UI.Win.UserControls.Grid.MyBandedGridView();
-            this.colId = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.gridBand1 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.colKod = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
-            this.longNavigator = new AsamaGlobal.ERP.UI.Win.UserControls.Navigators.LongNavigator();
             this.colAd = new AsamaGlobal.ERP.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colSoyad = new AsamaGlobal.ERP.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colCinsiyet = new AsamaGlobal.ERP.UI.Win.UserControls.Grid.MyBandedGridColumn();
+            this.gridBand2 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
+            this.colOzelKod1Adi = new AsamaGlobal.ERP.UI.Win.UserControls.Grid.MyBandedGridColumn();
+            this.colOzelKod2Adi = new AsamaGlobal.ERP.UI.Win.UserControls.Grid.MyBandedGridColumn();
+            this.gridBand3 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.colDepartmanAdi = new AsamaGlobal.ERP.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colPozisyonAdi = new AsamaGlobal.ERP.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colAciklama = new AsamaGlobal.ERP.UI.Win.UserControls.Grid.MyBandedGridColumn();
-            this.colOzelKod1Adi = new AsamaGlobal.ERP.UI.Win.UserControls.Grid.MyBandedGridColumn();
-            this.colOzelKod2Adi = new AsamaGlobal.ERP.UI.Win.UserControls.Grid.MyBandedGridColumn();
-            this.gridBand1 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
-            this.gridBand2 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
-            this.gridBand3 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
+            this.colId = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.longNavigator = new AsamaGlobal.ERP.UI.Win.UserControls.Navigators.LongNavigator();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablo)).BeginInit();
@@ -82,7 +82,7 @@
             this.grid.MainView = this.tablo;
             this.grid.MenuManager = this.ribbonControl;
             this.grid.Name = "grid";
-            this.grid.Size = new System.Drawing.Size(1058, 323);
+            this.grid.Size = new System.Drawing.Size(1058, 299);
             this.grid.TabIndex = 2;
             this.grid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.tablo});
@@ -141,13 +141,16 @@
             this.tablo.StatusBarKisaYolAciklama = null;
             this.tablo.ViewCaption = "Personel Kartları";
             // 
-            // colId
+            // gridBand1
             // 
-            this.colId.Caption = "Id";
-            this.colId.FieldName = "Id";
-            this.colId.Name = "colId";
-            this.colId.OptionsColumn.AllowEdit = false;
-            this.colId.OptionsColumn.ShowInCustomizationForm = false;
+            this.gridBand1.Caption = "Genel Bilgiler";
+            this.gridBand1.Columns.Add(this.colKod);
+            this.gridBand1.Columns.Add(this.colAd);
+            this.gridBand1.Columns.Add(this.colSoyad);
+            this.gridBand1.Columns.Add(this.colCinsiyet);
+            this.gridBand1.Name = "gridBand1";
+            this.gridBand1.VisibleIndex = 0;
+            this.gridBand1.Width = 499;
             // 
             // colKod
             // 
@@ -159,14 +162,6 @@
             this.colKod.OptionsColumn.AllowEdit = false;
             this.colKod.Visible = true;
             this.colKod.Width = 121;
-            // 
-            // longNavigator
-            // 
-            this.longNavigator.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.longNavigator.Location = new System.Drawing.Point(0, 434);
-            this.longNavigator.Name = "longNavigator";
-            this.longNavigator.Size = new System.Drawing.Size(1058, 24);
-            this.longNavigator.TabIndex = 3;
             // 
             // colAd
             // 
@@ -204,6 +199,49 @@
             this.colCinsiyet.Visible = true;
             this.colCinsiyet.Width = 85;
             // 
+            // gridBand2
+            // 
+            this.gridBand2.Caption = "Özel Kod";
+            this.gridBand2.Columns.Add(this.colOzelKod1Adi);
+            this.gridBand2.Columns.Add(this.colOzelKod2Adi);
+            this.gridBand2.Name = "gridBand2";
+            this.gridBand2.VisibleIndex = 1;
+            this.gridBand2.Width = 286;
+            // 
+            // colOzelKod1Adi
+            // 
+            this.colOzelKod1Adi.Caption = "Özel Kod-1";
+            this.colOzelKod1Adi.FieldName = "OzelKod1Adi";
+            this.colOzelKod1Adi.Name = "colOzelKod1Adi";
+            this.colOzelKod1Adi.OptionsColumn.AllowEdit = false;
+            this.colOzelKod1Adi.StatusBarAciklama = null;
+            this.colOzelKod1Adi.StatusBarKisaYol = null;
+            this.colOzelKod1Adi.StatusBarKisaYolAciklama = null;
+            this.colOzelKod1Adi.Visible = true;
+            this.colOzelKod1Adi.Width = 143;
+            // 
+            // colOzelKod2Adi
+            // 
+            this.colOzelKod2Adi.Caption = "Özel Kod-2";
+            this.colOzelKod2Adi.FieldName = "OzelKod2Adi";
+            this.colOzelKod2Adi.Name = "colOzelKod2Adi";
+            this.colOzelKod2Adi.OptionsColumn.AllowEdit = false;
+            this.colOzelKod2Adi.StatusBarAciklama = null;
+            this.colOzelKod2Adi.StatusBarKisaYol = null;
+            this.colOzelKod2Adi.StatusBarKisaYolAciklama = null;
+            this.colOzelKod2Adi.Visible = true;
+            this.colOzelKod2Adi.Width = 143;
+            // 
+            // gridBand3
+            // 
+            this.gridBand3.Caption = "Ek Bilgiler";
+            this.gridBand3.Columns.Add(this.colDepartmanAdi);
+            this.gridBand3.Columns.Add(this.colPozisyonAdi);
+            this.gridBand3.Columns.Add(this.colAciklama);
+            this.gridBand3.Name = "gridBand3";
+            this.gridBand3.VisibleIndex = 2;
+            this.gridBand3.Width = 678;
+            // 
             // colDepartmanAdi
             // 
             this.colDepartmanAdi.Caption = "Departman";
@@ -240,73 +278,35 @@
             this.colAciklama.Visible = true;
             this.colAciklama.Width = 321;
             // 
-            // colOzelKod1Adi
+            // colId
             // 
-            this.colOzelKod1Adi.Caption = "Özel Kod-1";
-            this.colOzelKod1Adi.FieldName = "OzelKod1Adi";
-            this.colOzelKod1Adi.Name = "colOzelKod1Adi";
-            this.colOzelKod1Adi.OptionsColumn.AllowEdit = false;
-            this.colOzelKod1Adi.StatusBarAciklama = null;
-            this.colOzelKod1Adi.StatusBarKisaYol = null;
-            this.colOzelKod1Adi.StatusBarKisaYolAciklama = null;
-            this.colOzelKod1Adi.Visible = true;
-            this.colOzelKod1Adi.Width = 143;
+            this.colId.Caption = "Id";
+            this.colId.FieldName = "Id";
+            this.colId.Name = "colId";
+            this.colId.OptionsColumn.AllowEdit = false;
+            this.colId.OptionsColumn.ShowInCustomizationForm = false;
             // 
-            // colOzelKod2Adi
+            // longNavigator
             // 
-            this.colOzelKod2Adi.Caption = "Özel Kod-2";
-            this.colOzelKod2Adi.FieldName = "OzelKod2Adi";
-            this.colOzelKod2Adi.Name = "colOzelKod2Adi";
-            this.colOzelKod2Adi.OptionsColumn.AllowEdit = false;
-            this.colOzelKod2Adi.StatusBarAciklama = null;
-            this.colOzelKod2Adi.StatusBarKisaYol = null;
-            this.colOzelKod2Adi.StatusBarKisaYolAciklama = null;
-            this.colOzelKod2Adi.Visible = true;
-            this.colOzelKod2Adi.Width = 143;
-            // 
-            // gridBand1
-            // 
-            this.gridBand1.Caption = "Genel Bilgiler";
-            this.gridBand1.Columns.Add(this.colKod);
-            this.gridBand1.Columns.Add(this.colAd);
-            this.gridBand1.Columns.Add(this.colSoyad);
-            this.gridBand1.Columns.Add(this.colCinsiyet);
-            this.gridBand1.Name = "gridBand1";
-            this.gridBand1.VisibleIndex = 0;
-            this.gridBand1.Width = 499;
-            // 
-            // gridBand2
-            // 
-            this.gridBand2.Caption = "Özel Kod";
-            this.gridBand2.Columns.Add(this.colOzelKod1Adi);
-            this.gridBand2.Columns.Add(this.colOzelKod2Adi);
-            this.gridBand2.Name = "gridBand2";
-            this.gridBand2.VisibleIndex = 1;
-            this.gridBand2.Width = 286;
-            // 
-            // gridBand3
-            // 
-            this.gridBand3.Caption = "Ek Bilgiler";
-            this.gridBand3.Columns.Add(this.colDepartmanAdi);
-            this.gridBand3.Columns.Add(this.colPozisyonAdi);
-            this.gridBand3.Columns.Add(this.colAciklama);
-            this.gridBand3.Name = "gridBand3";
-            this.gridBand3.VisibleIndex = 2;
-            this.gridBand3.Width = 678;
+            this.longNavigator.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.longNavigator.Location = new System.Drawing.Point(0, 434);
+            this.longNavigator.Name = "longNavigator";
+            this.longNavigator.Size = new System.Drawing.Size(1058, 24);
+            this.longNavigator.TabIndex = 3;
             // 
             // PersonelListForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1058, 482);
-            this.Controls.Add(this.longNavigator);
             this.Controls.Add(this.grid);
+            this.Controls.Add(this.longNavigator);
             this.IconOptions.ShowIcon = false;
             this.Name = "PersonelListForm";
             this.Text = "Personel Kartları";
             this.Controls.SetChildIndex(this.ribbonControl, 0);
-            this.Controls.SetChildIndex(this.grid, 0);
             this.Controls.SetChildIndex(this.longNavigator, 0);
+            this.Controls.SetChildIndex(this.grid, 0);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablo)).EndInit();

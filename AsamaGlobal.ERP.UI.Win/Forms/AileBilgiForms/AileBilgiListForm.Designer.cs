@@ -33,9 +33,9 @@
             this.tablo = new AsamaGlobal.ERP.UI.Win.UserControls.Grid.MyGridView();
             this.colId = new AsamaGlobal.ERP.UI.Win.UserControls.Grid.MyGridColumn();
             this.colKod = new AsamaGlobal.ERP.UI.Win.UserControls.Grid.MyGridColumn();
-            this.longNavigator = new AsamaGlobal.ERP.UI.Win.UserControls.Navigators.LongNavigator();
             this.colBilgiAdi = new AsamaGlobal.ERP.UI.Win.UserControls.Grid.MyGridColumn();
             this.colAciklama = new AsamaGlobal.ERP.UI.Win.UserControls.Grid.MyGridColumn();
+            this.longNavigator = new AsamaGlobal.ERP.UI.Win.UserControls.Navigators.LongNavigator();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablo)).BeginInit();
@@ -44,14 +44,7 @@
             // ribbonControl
             // 
             this.ribbonControl.ExpandCollapseItem.Id = 0;
-            // 
-            // 
-            // 
-            this.ribbonControl.SearchEditItem.AccessibleName = "Search Item";
-            this.ribbonControl.SearchEditItem.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Left;
-            this.ribbonControl.SearchEditItem.EditWidth = 150;
-            this.ribbonControl.SearchEditItem.Id = -5000;
-            this.ribbonControl.SearchEditItem.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
+            this.ribbonControl.Size = new System.Drawing.Size(914, 135);
             this.ribbonControl.Toolbar.ShowCustomizeItem = false;
             // 
             // btnGonder
@@ -59,14 +52,28 @@
             this.btnGonder.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnGonder.ImageOptions.Image")));
             this.btnGonder.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnGonder.ImageOptions.LargeImage")));
             // 
+            // btnYeniMakbuz
+            // 
+            this.btnYeniMakbuz.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnYeniMakbuz.ImageOptions.Image")));
+            this.btnYeniMakbuz.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnYeniMakbuz.ImageOptions.LargeImage")));
+            // 
+            // btnYeniRapor
+            // 
+            this.btnYeniRapor.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnYeniRapor.ImageOptions.Image")));
+            this.btnYeniRapor.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnYeniRapor.ImageOptions.LargeImage")));
+            // 
+            // barSubItem8
+            // 
+            this.barSubItem8.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barSubItem8.ImageOptions.Image")));
+            // 
             // grid
             // 
             this.grid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grid.Location = new System.Drawing.Point(0, 109);
+            this.grid.Location = new System.Drawing.Point(0, 135);
             this.grid.MainView = this.tablo;
             this.grid.MenuManager = this.ribbonControl;
             this.grid.Name = "grid";
-            this.grid.Size = new System.Drawing.Size(914, 325);
+            this.grid.Size = new System.Drawing.Size(914, 299);
             this.grid.TabIndex = 2;
             this.grid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.tablo});
@@ -134,14 +141,6 @@
             this.colKod.VisibleIndex = 0;
             this.colKod.Width = 120;
             // 
-            // longNavigator
-            // 
-            this.longNavigator.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.longNavigator.Location = new System.Drawing.Point(0, 434);
-            this.longNavigator.Name = "longNavigator";
-            this.longNavigator.Size = new System.Drawing.Size(914, 24);
-            this.longNavigator.TabIndex = 3;
-            // 
             // colBilgiAdi
             // 
             this.colBilgiAdi.Caption = "Bilgi Adı";
@@ -167,6 +166,14 @@
             this.colAciklama.Visible = true;
             this.colAciklama.VisibleIndex = 2;
             this.colAciklama.Width = 450;
+            // 
+            // longNavigator
+            // 
+            this.longNavigator.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.longNavigator.Location = new System.Drawing.Point(0, 434);
+            this.longNavigator.Name = "longNavigator";
+            this.longNavigator.Size = new System.Drawing.Size(914, 24);
+            this.longNavigator.TabIndex = 3;
             // 
             // AileBilgiListForm
             // 

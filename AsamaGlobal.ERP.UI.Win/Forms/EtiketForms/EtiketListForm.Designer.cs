@@ -35,11 +35,11 @@
             this.colId = new AsamaGlobal.ERP.UI.Win.UserControls.Grid.MyGridColumn();
             this.colKod = new AsamaGlobal.ERP.UI.Win.UserControls.Grid.MyGridColumn();
             this.colEtiketAdi = new AsamaGlobal.ERP.UI.Win.UserControls.Grid.MyGridColumn();
-            this.colRenkAdi = new AsamaGlobal.ERP.UI.Win.UserControls.Grid.MyGridColumn();
             this.colKayitTuru = new AsamaGlobal.ERP.UI.Win.UserControls.Grid.MyGridColumn();
-            this.colAciklama = new AsamaGlobal.ERP.UI.Win.UserControls.Grid.MyGridColumn();
+            this.colRenkAdi = new AsamaGlobal.ERP.UI.Win.UserControls.Grid.MyGridColumn();
             this.colOzelKod1Adi = new AsamaGlobal.ERP.UI.Win.UserControls.Grid.MyGridColumn();
             this.colOzelKod2Adi = new AsamaGlobal.ERP.UI.Win.UserControls.Grid.MyGridColumn();
+            this.colAciklama = new AsamaGlobal.ERP.UI.Win.UserControls.Grid.MyGridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablo)).BeginInit();
@@ -170,19 +170,6 @@
             this.colEtiketAdi.VisibleIndex = 1;
             this.colEtiketAdi.Width = 128;
             // 
-            // colRenkAdi
-            // 
-            this.colRenkAdi.Caption = "Renk";
-            this.colRenkAdi.FieldName = "RenkAdi";
-            this.colRenkAdi.Name = "colRenkAdi";
-            this.colRenkAdi.OptionsColumn.AllowEdit = false;
-            this.colRenkAdi.StatusBarAciklama = null;
-            this.colRenkAdi.StatusBarKisaYol = null;
-            this.colRenkAdi.StatusBarKisaYolAciklama = null;
-            this.colRenkAdi.Visible = true;
-            this.colRenkAdi.VisibleIndex = 3;
-            this.colRenkAdi.Width = 133;
-            // 
             // colKayitTuru
             // 
             this.colKayitTuru.Caption = "Kayıt Türü";
@@ -196,18 +183,18 @@
             this.colKayitTuru.VisibleIndex = 2;
             this.colKayitTuru.Width = 146;
             // 
-            // colAciklama
+            // colRenkAdi
             // 
-            this.colAciklama.Caption = "Açıklama";
-            this.colAciklama.FieldName = "Aciklama";
-            this.colAciklama.Name = "colAciklama";
-            this.colAciklama.OptionsColumn.AllowEdit = false;
-            this.colAciklama.StatusBarAciklama = null;
-            this.colAciklama.StatusBarKisaYol = null;
-            this.colAciklama.StatusBarKisaYolAciklama = null;
-            this.colAciklama.Visible = true;
-            this.colAciklama.VisibleIndex = 6;
-            this.colAciklama.Width = 393;
+            this.colRenkAdi.Caption = "Renk";
+            this.colRenkAdi.FieldName = "RenkAdi";
+            this.colRenkAdi.Name = "colRenkAdi";
+            this.colRenkAdi.OptionsColumn.AllowEdit = false;
+            this.colRenkAdi.StatusBarAciklama = null;
+            this.colRenkAdi.StatusBarKisaYol = null;
+            this.colRenkAdi.StatusBarKisaYolAciklama = null;
+            this.colRenkAdi.Visible = true;
+            this.colRenkAdi.VisibleIndex = 3;
+            this.colRenkAdi.Width = 133;
             // 
             // colOzelKod1Adi
             // 
@@ -234,6 +221,19 @@
             this.colOzelKod2Adi.Visible = true;
             this.colOzelKod2Adi.VisibleIndex = 5;
             this.colOzelKod2Adi.Width = 146;
+            // 
+            // colAciklama
+            // 
+            this.colAciklama.Caption = "Açıklama";
+            this.colAciklama.FieldName = "Aciklama";
+            this.colAciklama.Name = "colAciklama";
+            this.colAciklama.OptionsColumn.AllowEdit = false;
+            this.colAciklama.StatusBarAciklama = null;
+            this.colAciklama.StatusBarKisaYol = null;
+            this.colAciklama.StatusBarKisaYolAciklama = null;
+            this.colAciklama.Visible = true;
+            this.colAciklama.VisibleIndex = 6;
+            this.colAciklama.Width = 393;
             // 
             // EtiketListForm
             // 
