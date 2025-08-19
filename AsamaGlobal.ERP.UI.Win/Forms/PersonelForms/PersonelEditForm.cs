@@ -544,6 +544,10 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.PersonelForms
       
             else if (e.Page == pageBelgeler)
             {
+                // Yeni kayıttaysa tabloyu hiç oluşturma!
+                if (BaseIslemTuru == IslemTuru.EntityInsert)
+                    return;
+
                 if (pageBelgeler.Controls.Count == 0)
                 {
                     _personelBelgeTable = new PersonelBelgeTable().AddTable(this);
@@ -554,5 +558,6 @@ namespace AsamaGlobal.ERP.UI.Win.Forms.PersonelForms
                 _personelBelgeTable.Tablo.GridControl.Focus();
             }
         }
+
     }
 }
